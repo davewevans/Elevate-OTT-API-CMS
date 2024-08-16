@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<PublishTrimmed>true</PublishTrimmed>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+		<BlazorCacheBootResources>true</BlazorCacheBootResources>
+		<ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
+		<BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
+		<GenerateMvcApplicationPartsAssemblyAttributes>false</GenerateMvcApplicationPartsAssemblyAttributes>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Blazored.FluentValidation" Version="2.1.0" />
+		<PackageReference Include="Blazored.LocalStorage" Version="4.5.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.5" PrivateAssets="all" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="8.0.5" />
+		<PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.5" />
+		<PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="8.0.5" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Localization" Version="8.0.5" />
+		<PackageReference Include="MudBlazor" Version="6.19.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\OttApiPlatform.AppResources\OttApiPlatform.AppResources.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
+	</ItemGroup>
+
+</Project>

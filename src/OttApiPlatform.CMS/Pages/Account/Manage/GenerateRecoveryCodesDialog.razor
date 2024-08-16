@@ -1,0 +1,21 @@
+﻿<MudDialog>
+    <TitleContent>
+        <MudText Typo="Typo.h6">
+            <MudIcon Icon="@Icons.Material.Filled.SettingsApplications" Class="mr-3 mb-n1" />
+            @Resource.Reset_2FA_Recovery_Codes
+        </MudText>
+    </TitleContent>
+    <DialogContent>
+        <MudAlert Severity="Severity.Error">@Resource.If_you_lose_your_device_and_dont_have_the_recovery_codes_you_will_lose_access_to_your_account</MudAlert>
+        <MudText Style="text-align: justify" Typo="Typo.body2"> @Resource.Generating_new_recovery_codes_does_not_change_the_keys_used_in_authenticator_apps</MudText>
+        <MudText Typo="Typo.body2"> @Resource.If_you_wish_to_change_the_key_used_in_an_authenticator_app_you_should @Resource.Reset_Authenticator_App.</MudText>
+        @if (IsTwoFactorEnabled == false)
+        {
+            <MudAlert Severity="Severity.Warning">@StatusMessage</MudAlert>
+        }
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel" Color="Color.Default" Style="float:right" Class="mr-3" Variant="Variant.Filled">@Resource.Cancel</MudButton>
+        <MudButton ButtonType="ButtonType.Submit" Style="float:right" Variant="Variant.Filled" Color="Color.Error" OnClick="Generate2FaRecoveryCodes">@Resource.Generate</MudButton>
+    </DialogActions>
+</MudDialog>

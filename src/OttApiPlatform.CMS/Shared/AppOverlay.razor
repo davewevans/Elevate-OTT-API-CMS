@@ -1,0 +1,16 @@
+﻿<MudOverlay Visible="OverlayVisible" DarkBackground="false" Style="z-index: 99999" Absolute="true">
+    <MudGrid Style="position: fixed; top: 2%; left: 50%; z-index: 999999">
+        <MudItem>
+            <MudChip Color="Color.Surface"
+                     OnClick="() => AppStateManager.IsCancellationRequested = true"
+                     Icon="@Icons.Material.Filled.Cancel">
+                @Resource.Cancel
+            </MudChip>
+        </MudItem>
+    </MudGrid>
+    <MudGrid Style="position: fixed; top: 2%; left: 47.1%;">
+        <MudItem>
+            <MudProgressCircular Color="Color.Secondary" Indeterminate="true" />
+        </MudItem>
+    </MudGrid>
+</MudOverlay>

@@ -1,0 +1,2232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Abbreviated_Day_Names" xml:space="preserve">
+    <value>أسماء الأيام المختصرة</value>
+  </data>
+  <data name="Abbreviated_Month_Genitive_Names" xml:space="preserve">
+    <value>الاسم المختصر للشهر المضاف</value>
+  </data>
+  <data name="Abbreviated_Month_Names" xml:space="preserve">
+    <value>أسماء الشهور المختصرة</value>
+  </data>
+  <data name="Access" xml:space="preserve">
+    <value>ولوج</value>
+  </data>
+  <data name="Access_Token_TimeSpan" xml:space="preserve">
+    <value>الوصول إلى رمز الوقت الزمني</value>
+  </data>
+  <data name="Account" xml:space="preserve">
+    <value>حساب</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>أجراءات</value>
+  </data>
+  <data name="Activated" xml:space="preserve">
+    <value>غير مفعل</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>يضيف</value>
+  </data>
+  <data name="Add_Applicant" xml:space="preserve">
+    <value>إضافة مقدم الطلب</value>
+  </data>
+  <data name="Add_Authenticator_App" xml:space="preserve">
+    <value>أضف تطبيق Authenticator</value>
+  </data>
+  <data name="Add_New_File" xml:space="preserve">
+    <value>أضف ملف جديد</value>
+  </data>
+  <data name="Add_Reference" xml:space="preserve">
+    <value>المرجع</value>
+  </data>
+  <data name="Add_Role" xml:space="preserve">
+    <value>أضف دورًا</value>
+  </data>
+  <data name="Add_Roles" xml:space="preserve">
+    <value>أضف الأدوار</value>
+  </data>
+  <data name="Add_Selected_Roles" xml:space="preserve">
+    <value>أضف الأدوار المحددة</value>
+  </data>
+  <data name="Add_Tenant" xml:space="preserve">
+    <value>إضافة مستأجر</value>
+  </data>
+  <data name="Add_transcripts" xml:space="preserve">
+    <value>أضف النصوص</value>
+  </data>
+  <data name="Add_User" xml:space="preserve">
+    <value>إضافة مستخدم</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>الكل</value>
+  </data>
+  <data name="Allowed_for_new_users" xml:space="preserve">
+    <value>مسموح للمستخدمين الجدد</value>
+  </data>
+  <data name="Allowed_username_characters" xml:space="preserve">
+    <value>أحرف اسم المستخدم المسموح بها</value>
+  </data>
+  <data name="Already_have_an_account" xml:space="preserve">
+    <value>هل لديك حساب؟</value>
+  </data>
+  <data name="AM_Designator" xml:space="preserve">
+    <value>المحدد النهاري</value>
+  </data>
+  <data name="and" xml:space="preserve">
+    <value>و</value>
+  </data>
+  <data name="Android" xml:space="preserve">
+    <value>ذكري المظهر</value>
+  </data>
+  <data name="Applicant" xml:space="preserve">
+    <value>مقدم الطلب</value>
+  </data>
+  <data name="Applicants" xml:space="preserve">
+    <value>المتقدمون</value>
+  </data>
+  <data name="Apply_for_Military" xml:space="preserve">
+    <value>تقدم للالتحاق بالجيش</value>
+  </data>
+  <data name="App_Info" xml:space="preserve">
+    <value>معلومات التطبيق</value>
+  </data>
+  <data name="April" xml:space="preserve">
+    <value>أبريل</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_change_the_settings" xml:space="preserve">
+    <value>هل أنت متأكد أنك تريد تغيير الإعدادات؟</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_delete_file_name" xml:space="preserve">
+    <value>هل أنت متأكد أنك تريد حذف الملف "{0}"؟</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_delete_role_name" xml:space="preserve">
+    <value>هل أنت متأكد أنك تريد حذف الدور "{0}"؟</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_delete_user_name" xml:space="preserve">
+    <value>هل أنت متأكد أنك تريد حذف المستخدم "{0}"؟</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_remove_role_name" xml:space="preserve">
+    <value>هل أنت متأكد أنك تريد إزالة الدور "{0}"؟</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_save_applicant" xml:space="preserve">
+    <value>هل أنت متأكد أنك تريد حفظ الطلب؟</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_save_role" xml:space="preserve">
+    <value>هل أنت متأكد أنك تريد حفظ الدور؟</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_save_user_profile" xml:space="preserve">
+    <value>هل أنت متأكد أنك تريد حفظ ملف تعريف المستخدم؟</value>
+  </data>
+  <data name="Army" xml:space="preserve">
+    <value>الجيش</value>
+  </data>
+  <data name="Assigned_Roles" xml:space="preserve">
+    <value>المجموعات المعينة</value>
+  </data>
+  <data name="Assign_Permissions" xml:space="preserve">
+    <value>تعيين أذونات</value>
+  </data>
+  <data name="Assign_Roles" xml:space="preserve">
+    <value>تعيين الأدوار</value>
+  </data>
+  <data name="August" xml:space="preserve">
+    <value>شهر اغسطس</value>
+  </data>
+  <data name="Authenticator_App" xml:space="preserve">
+    <value>تطبيق المصادقة</value>
+  </data>
+  <data name="Authenticator_Code" xml:space="preserve">
+    <value>كود المصدق</value>
+  </data>
+  <data name="Authorization" xml:space="preserve">
+    <value>تفويض</value>
+  </data>
+  <data name="Authorizing" xml:space="preserve">
+    <value>جاري منخ الترخيص</value>
+  </data>
+  <data name="Avatar" xml:space="preserve">
+    <value>الصورة الرمزية</value>
+  </data>
+  <data name="Awesome" xml:space="preserve">
+    <value>مذهل!</value>
+  </data>
+  <data name="Azure_File_Storage" xml:space="preserve">
+    <value>تخزين ملفات Azure</value>
+  </data>
+  <data name="before_you_can_log_in_with_a_recovery_code" xml:space="preserve">
+    <value>قبل أن تتمكن من تسجيل الدخول باستخدام رمز الاسترداد.</value>
+  </data>
+  <data name="Biomass" xml:space="preserve">
+    <value>الكتلة الحيوية</value>
+  </data>
+  <data name="Biomass1" xml:space="preserve">
+    <value>الكتلة الحيوية</value>
+  </data>
+  <data name="BMI" xml:space="preserve">
+    <value>مؤشر كتلة الجسم</value>
+  </data>
+  <data name="BMI_Details" xml:space="preserve">
+    <value>مؤشر كتلة الجسم 25.0 أو أكثر يعني زيادة الوزن ، في حين أن النطاق الصحي هو 18.5 إلى 24.9. ينطبق مؤشر كتلة الجسم على معظم البالغين الذين تتراوح أعمارهم بين 18 و 65 عامًا.</value>
+  </data>
+  <data name="BMI_Info" xml:space="preserve">
+    <value>مؤشر كتلة الجسم هو عملية حسابية بسيطة باستخدام طول الشخص ووزنه. الصيغة هي مؤشر كتلة الجسم = كجم / م 2 حيث كجم هو وزن الشخص بالكيلوجرام و م 2 هو ارتفاعهم بالمتر المربع.</value>
+  </data>
+  <data name="Body_Mass_Index" xml:space="preserve">
+    <value>مؤشر كتلة الجسم</value>
+  </data>
+  <data name="Bottom" xml:space="preserve">
+    <value>قاع</value>
+  </data>
+  <data name="Browser_Time_Zone" xml:space="preserve">
+    <value>المنطقة الزمنية للمتصفح</value>
+  </data>
+  <data name="Buy_Now" xml:space="preserve">
+    <value>اشتري الآن</value>
+  </data>
+  <data name="Bytes" xml:space="preserve">
+    <value>بايت</value>
+  </data>
+  <data name="Calcium" xml:space="preserve">
+    <value>الكالسيوم</value>
+  </data>
+  <data name="Calendar" xml:space="preserve">
+    <value>التقويم</value>
+  </data>
+  <data name="Calendar_Week_Rule" xml:space="preserve">
+    <value>قاعدة أسبوع التقويم</value>
+  </data>
+  <data name="Californium" xml:space="preserve">
+    <value>كاليفورنيوم</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>يلغي</value>
+  </data>
+  <data name="Cancel_Upload" xml:space="preserve">
+    <value>إلغاء الرفع</value>
+  </data>
+  <data name="Carbon" xml:space="preserve">
+    <value>كربون</value>
+  </data>
+  <data name="Cerium" xml:space="preserve">
+    <value>السيريوم</value>
+  </data>
+  <data name="Cesium" xml:space="preserve">
+    <value>السيزيوم</value>
+  </data>
+  <data name="Change_Email" xml:space="preserve">
+    <value>تغيير البريد الالكتروني</value>
+  </data>
+  <data name="Change_Password" xml:space="preserve">
+    <value>تغيير كلمة المرور</value>
+  </data>
+  <data name="Change_User_Password" xml:space="preserve">
+    <value>تغيير كلمة مرور المستخدم</value>
+  </data>
+  <data name="Change_your_account_settings" xml:space="preserve">
+    <value>تغيير إعدادات حسابك</value>
+  </data>
+  <data name="Chernobyl_1" xml:space="preserve">
+    <value>تشيرنوبيل -1</value>
+  </data>
+  <data name="Chernobyl_2" xml:space="preserve">
+    <value>تشيرنوبيل -2</value>
+  </data>
+  <data name="Chernobyl_3" xml:space="preserve">
+    <value>تشيرنوبيل 3</value>
+  </data>
+  <data name="Chernobyl_4" xml:space="preserve">
+    <value>تشيرنوبيل -4</value>
+  </data>
+  <data name="Chlorine" xml:space="preserve">
+    <value>الكلور</value>
+  </data>
+  <data name="Chromium" xml:space="preserve">
+    <value>الكروم</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>واضح</value>
+  </data>
+  <data name="Click" xml:space="preserve">
+    <value>انقر</value>
+  </data>
+  <data name="click_here_to_log_in" xml:space="preserve">
+    <value>انقر هنا لتسجيل الدخول</value>
+  </data>
+  <data name="Client_Side_Authorization" xml:space="preserve">
+    <value>التفويض من جانب العميل</value>
+  </data>
+  <data name="Client_Side_Validation" xml:space="preserve">
+    <value>التحقق من جانب العميل</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>قريب</value>
+  </data>
+  <data name="Close_SignalR_Connection" xml:space="preserve">
+    <value>إغلاق اتصال SignalR!</value>
+  </data>
+  <data name="Coal" xml:space="preserve">
+    <value>فحم</value>
+  </data>
+  <data name="Coal1" xml:space="preserve">
+    <value>فحم</value>
+  </data>
+  <data name="Cobalt" xml:space="preserve">
+    <value>كوبالت</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>الشفرة</value>
+  </data>
+  <data name="Code_Samples" xml:space="preserve">
+    <value>نماذج كودات</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>مكتمل</value>
+  </data>
+  <data name="Configure_Authenticator_App" xml:space="preserve">
+    <value>تكوين تطبيق المصادقة</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>يتأكد</value>
+  </data>
+  <data name="Confirm_Email" xml:space="preserve">
+    <value>تأكيد عنوان البريد الإلكتروني</value>
+  </data>
+  <data name="Confirm_Email_Change" xml:space="preserve">
+    <value>تأكيد تغيير البريد الإلكتروني</value>
+  </data>
+  <data name="Confirm_Password" xml:space="preserve">
+    <value>تأكيد كلمة المرور</value>
+  </data>
+  <data name="ContentType" xml:space="preserve">
+    <value>نوع المحتوى</value>
+  </data>
+  <data name="Copernicium" xml:space="preserve">
+    <value>كوبرنسيوم</value>
+  </data>
+  <data name="Copper" xml:space="preserve">
+    <value>نحاس</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>إنشاء</value>
+  </data>
+  <data name="Created_On" xml:space="preserve">
+    <value>تاريخ الإنشاء</value>
+  </data>
+  <data name="Culture_Based_Resources" xml:space="preserve">
+    <value>الموارد المستندة إلى الثقافة</value>
+  </data>
+  <data name="Culture_Code" xml:space="preserve">
+    <value>كود الثقافة</value>
+  </data>
+  <data name="Culture_Currency_Symbol" xml:space="preserve">
+    <value>الثقافة رمز العملة</value>
+  </data>
+  <data name="Culture_DateTime_Pattern" xml:space="preserve">
+    <value>ثقافة التاريخ والوقت نمط</value>
+  </data>
+  <data name="Culture_Info" xml:space="preserve">
+    <value>معلومات الثقافة</value>
+  </data>
+  <data name="Curium" xml:space="preserve">
+    <value>كوريوم</value>
+  </data>
+  <data name="Current_Culture_DateTime_Format" xml:space="preserve">
+    <value>تنسيق وقت تاريخ الثقافة الحالي</value>
+  </data>
+  <data name="Current_Culture_Info" xml:space="preserve">
+    <value>معلومات الثقافة الحالية</value>
+  </data>
+  <data name="Current_Culture_Time_Zone_Info" xml:space="preserve">
+    <value>معلومات المنطقة الزمنية للثقافة الحالية</value>
+  </data>
+  <data name="Current_Documents" xml:space="preserve">
+    <value>المستندات الحالية</value>
+  </data>
+  <data name="Current_password" xml:space="preserve">
+    <value>كلمة المرور الحالي</value>
+  </data>
+  <data name="Current_Transcripts" xml:space="preserve">
+    <value>النصوص الحالية</value>
+  </data>
+  <data name="Danger" xml:space="preserve">
+    <value>خطر</value>
+  </data>
+  <data name="Darmstadtium" xml:space="preserve">
+    <value>دارمشتاتيوم</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>لوحة القيادة</value>
+  </data>
+  <data name="Data_Export_SignalR_Hangfire" xml:space="preserve">
+    <value>تصدير البيانات (SignalR &amp; Hangfire)</value>
+  </data>
+  <data name="DateTime_Format" xml:space="preserve">
+    <value>تنسيق التاريخ والوقت</value>
+  </data>
+  <data name="Date_of_Birth" xml:space="preserve">
+    <value>تاريخ الولادة</value>
+  </data>
+  <data name="Date_Separator" xml:space="preserve">
+    <value>فاصل التاريخ</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>يوم</value>
+  </data>
+  <data name="Day_Names" xml:space="preserve">
+    <value>أسماء اليوم</value>
+  </data>
+  <data name="Deactivated" xml:space="preserve">
+    <value>مفعل</value>
+  </data>
+  <data name="December" xml:space="preserve">
+    <value>ديسمبر</value>
+  </data>
+  <data name="Default_Admin_Credentials" xml:space="preserve">
+    <value>بيانات اعتماد المسؤول الافتراضية</value>
+  </data>
+  <data name="Default_lockout_time_span" xml:space="preserve">
+    <value>الفترة الزمنية الافتراضية للإغلاق</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="Delete_my_Account" xml:space="preserve">
+    <value>احذف حسابي</value>
+  </data>
+  <data name="Delete_Personal_Data" xml:space="preserve">
+    <value>حذف البيانات الشخصية</value>
+  </data>
+  <data name="Deleting_this_data_will_permanently_remove_your_account_and_this_cannot_be_recovered" xml:space="preserve">
+    <value>سيؤدي حذف هذه البيانات إلى إزالة حسابك نهائيًا ، ولا يمكن استرداد ذلك.</value>
+  </data>
+  <data name="Disable_2FA" xml:space="preserve">
+    <value>تعطيل المصادقة الثنائية</value>
+  </data>
+  <data name="Disable_Two-Factor_Authentication" xml:space="preserve">
+    <value>تعطيل المصادقة الثنائية</value>
+  </data>
+  <data name="Disabling_2FA_does_not_change_the_keys_used_in_authenticator_apps" xml:space="preserve">
+    <value>لا يؤدي تعطيل المصادقة الثنائية إلى تغيير المفاتيح المستخدمة في تطبيقات المصادقة</value>
+  </data>
+  <data name="Dismissed" xml:space="preserve">
+    <value>مرفوض</value>
+  </data>
+  <data name="Display_Name" xml:space="preserve">
+    <value>اسم العرض</value>
+  </data>
+  <data name="Documents" xml:space="preserve">
+    <value>وثائق</value>
+  </data>
+  <data name="Dont_have_access_to_your_authenticator_device" xml:space="preserve">
+    <value>ليس لديك حق الوصول إلى جهاز المصادقة الخاص بك؟</value>
+  </data>
+  <data name="Dont_have_an_account" xml:space="preserve">
+    <value>ليس لديك حساب؟</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>تحميل</value>
+  </data>
+  <data name="Downloads" xml:space="preserve">
+    <value>التحميلات</value>
+  </data>
+  <data name="Download_a_two-factor_authenticator_app_like_Microsoft_Authenticator_for" xml:space="preserve">
+    <value>قم بتنزيل تطبيق مصادقة ثنائية مثل Microsoft Authenticator.</value>
+  </data>
+  <data name="Do_you_really_want_to_delete_this_record" xml:space="preserve">
+    <value>هل تريد حقًا حذف هذا السجل؟</value>
+  </data>
+  <data name="Do_you_want_to_remove_this_record" xml:space="preserve">
+    <value>هل تريد إزالة هذا السجل؟</value>
+  </data>
+  <data name="Dubnium" xml:space="preserve">
+    <value>دوبنيوم</value>
+  </data>
+  <data name="Dysprosium" xml:space="preserve">
+    <value>الديسبروسيوم</value>
+  </data>
+  <data name="Earnings" xml:space="preserve">
+    <value>الأرباح</value>
+  </data>
+  <data name="Earning_Report" xml:space="preserve">
+    <value>تقرير الارباح</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="Edit_Applicant" xml:space="preserve">
+    <value>تحرير مقدم الطلب</value>
+  </data>
+  <data name="Edit_Reference" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="Edit_Role" xml:space="preserve">
+    <value>تحرير الدور</value>
+  </data>
+  <data name="Edit_Tenant" xml:space="preserve">
+    <value>تحرير المستأجر</value>
+  </data>
+  <data name="Edit_User" xml:space="preserve">
+    <value>تحرير العضو</value>
+  </data>
+  <data name="Einsteinium" xml:space="preserve">
+    <value>أينشتينيوم</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>بريد الالكتروني</value>
+  </data>
+  <data name="Email_Change_Confirmation" xml:space="preserve">
+    <value>تأكيد تغيير البريد الإلكتروني</value>
+  </data>
+  <data name="Email_Change_Confirmed" xml:space="preserve">
+    <value>تم تأكيد تغيير البريد الإلكتروني</value>
+  </data>
+  <data name="Email_Confirmation" xml:space="preserve">
+    <value>تأكيد البريد الإلكتروني</value>
+  </data>
+  <data name="Email_Confirmed" xml:space="preserve">
+    <value>تم تأكيد البريد الإلكتروني</value>
+  </data>
+  <data name="Employee_broke_a_finger_while_writing_some_code" xml:space="preserve">
+    <value>الموظف كسر إصبعه أثناء كتابة بعض التعليمات البرمجية</value>
+  </data>
+  <data name="enable_QR_code_generation" xml:space="preserve">
+    <value>تمكين توليد رمز الاستجابة السريعة</value>
+  </data>
+  <data name="End" xml:space="preserve">
+    <value>نهاية</value>
+  </data>
+  <data name="End_Slope" xml:space="preserve">
+    <value>نهاية المنحدر</value>
+  </data>
+  <data name="English_Name" xml:space="preserve">
+    <value>الاسم الانجليزي</value>
+  </data>
+  <data name="Enter_the_code_in_the_confirmation_box_below" xml:space="preserve">
+    <value>أدخل الرمز في مربع التأكيد أدناه.</value>
+  </data>
+  <data name="Enter_your_email" xml:space="preserve">
+    <value>أدخل بريدك الإلكتروني.</value>
+  </data>
+  <data name="entries" xml:space="preserve">
+    <value>إدخالات</value>
+  </data>
+  <data name="Erbium" xml:space="preserve">
+    <value>الإربيوم</value>
+  </data>
+  <data name="Error_Pages" xml:space="preserve">
+    <value>صفحات الخطأ</value>
+  </data>
+  <data name="Europium" xml:space="preserve">
+    <value>اليوروبيوم</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>تصدير</value>
+  </data>
+  <data name="ExportAsPdfInBackground" xml:space="preserve">
+    <value>تصدير كملف PDF (مؤجل)!</value>
+  </data>
+  <data name="Exporting_data_may_take_a_while" xml:space="preserve">
+    <value>قد يستغرق تصدير البيانات بعض الوقت.!</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>فاشل</value>
+  </data>
+  <data name="FAQ" xml:space="preserve">
+    <value>التعليمات</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>سمات</value>
+  </data>
+  <data name="February" xml:space="preserve">
+    <value>شهر فبراير</value>
+  </data>
+  <data name="Fermium" xml:space="preserve">
+    <value>فيرميوم</value>
+  </data>
+  <data name="FileName" xml:space="preserve">
+    <value>اسم الملف</value>
+  </data>
+  <data name="File_is_empty" xml:space="preserve">
+    <value>الملف فارغ.</value>
+  </data>
+  <data name="File_Name" xml:space="preserve">
+    <value>اسم الملف</value>
+  </data>
+  <data name="File_Rename" xml:space="preserve">
+    <value>إعادة تسمية الملف</value>
+  </data>
+  <data name="File_Size" xml:space="preserve">
+    <value>حجم الملف</value>
+  </data>
+  <data name="File_Storage_Settings" xml:space="preserve">
+    <value>إعدادات تخزين الملفات</value>
+  </data>
+  <data name="File_Type" xml:space="preserve">
+    <value>نوع الملف</value>
+  </data>
+  <data name="File_upload_has_been_cancelled" xml:space="preserve">
+    <value>تم إلغاء تحميل الملف.</value>
+  </data>
+  <data name="Fire_in_reactor_core" xml:space="preserve">
+    <value>حريق في قلب المفاعل</value>
+  </data>
+  <data name="First" xml:space="preserve">
+    <value>أولا</value>
+  </data>
+  <data name="First_Day_of_Week" xml:space="preserve">
+    <value>اليوم الأول من الأسبوع</value>
+  </data>
+  <data name="First_Name" xml:space="preserve">
+    <value>الاسم الأول</value>
+  </data>
+  <data name="Fluent_Validation" xml:space="preserve">
+    <value>فلوينت فاليديشن</value>
+  </data>
+  <data name="Fluorine" xml:space="preserve">
+    <value>الفلور</value>
+  </data>
+  <data name="Forget_this_browser" xml:space="preserve">
+    <value>ننسى هذا المتصفح</value>
+  </data>
+  <data name="Forgot_password_confirmation" xml:space="preserve">
+    <value>نسيت كلمة المرور</value>
+  </data>
+  <data name="Forgot_your_password" xml:space="preserve">
+    <value>نسيت رقمك السري؟</value>
+  </data>
+  <data name="for_how_to_configure_a_real_email_sender" xml:space="preserve">
+    <value>لمعرفة كيفية تكوين مرسل بريد إلكتروني حقيقي</value>
+  </data>
+  <data name="Fossil" xml:space="preserve">
+    <value>حفرية</value>
+  </data>
+  <data name="Francium" xml:space="preserve">
+    <value>الفرانسيوم</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>الاسم بالكامل</value>
+  </data>
+  <data name="Full_DateTime_Pattern" xml:space="preserve">
+    <value>نمط التاريخ والوقت الكامل</value>
+  </data>
+  <data name="Gas" xml:space="preserve">
+    <value>غاز</value>
+  </data>
+  <data name="Gas1" xml:space="preserve">
+    <value>غاز</value>
+  </data>
+  <data name="Generate" xml:space="preserve">
+    <value>يولد</value>
+  </data>
+  <data name="generate_a_new_set_of_recovery_codes" xml:space="preserve">
+    <value>إنشاء مجموعة جديدة من رموز الاسترداد</value>
+  </data>
+  <data name="Generating_new_recovery_codes_does_not_change_the_keys_used_in_authenticator_apps" xml:space="preserve">
+    <value>لا يؤدي إنشاء رموز استرداد جديدة إلى تغيير المفاتيح المستخدمة في تطبيقات المصادقة.</value>
+  </data>
+  <data name="Geothermal" xml:space="preserve">
+    <value>الحرارة الأرضية</value>
+  </data>
+  <data name="Germany" xml:space="preserve">
+    <value>ألمانيا</value>
+  </data>
+  <data name="Getting_Started" xml:space="preserve">
+    <value>ابدء</value>
+  </data>
+  <data name="Global_Settings" xml:space="preserve">
+    <value>الإعدادات العامة</value>
+  </data>
+  <data name="Global_Spread" xml:space="preserve">
+    <value>انتشار عالمي</value>
+  </data>
+  <data name="Global_Variable" xml:space="preserve">
+    <value>المتغير العالمي</value>
+  </data>
+  <data name="Google_Authenticator_for" xml:space="preserve">
+    <value>Google Authenticator لـ</value>
+  </data>
+  <data name="Got_it" xml:space="preserve">
+    <value>فهمتك!</value>
+  </data>
+  <data name="Graphite_on_roof" xml:space="preserve">
+    <value>الجرافيت على السطح</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>الطول</value>
+  </data>
+  <data name="Hello" xml:space="preserve">
+    <value>أهلا</value>
+  </data>
+  <data name="here" xml:space="preserve">
+    <value>هنا</value>
+  </data>
+  <data name="High" xml:space="preserve">
+    <value>عال</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>الصفحة الرئيسية</value>
+  </data>
+  <data name="Hour" xml:space="preserve">
+    <value>ساعة</value>
+  </data>
+  <data name="Hydro" xml:space="preserve">
+    <value>هيدرو</value>
+  </data>
+  <data name="Identity" xml:space="preserve">
+    <value>الهوية</value>
+  </data>
+  <data name="Identity_Settings" xml:space="preserve">
+    <value>إعدادات الهوية</value>
+  </data>
+  <data name="If_you_do_not_complete_your_authenticator_app_configuration_you_may_lose_access_to_your_account" xml:space="preserve">
+    <value>إذا لم تكمل تكوين تطبيق المصادقة ، فقد تفقد الوصول إلى حسابك.</value>
+  </data>
+  <data name="If_you_lose_your_device_and_dont_have_the_recovery_codes_you_will_lose_access_to_your_account" xml:space="preserve">
+    <value>إذا فقدت جهازك ولم يكن لديك رموز الاسترداد ، فستفقد الوصول إلى حسابك</value>
+  </data>
+  <data name="If_you_reset_your_authenticator_key_your_authenticator_app_will_not_work_until_you_reconfigure_it" xml:space="preserve">
+    <value>إذا قمت بإعادة تعيين مفتاح المصدق الخاص بك ، فلن يعمل تطبيق المصادقة حتى تقوم بإعادة تكوينه.</value>
+  </data>
+  <data name="If_you_wish_to_change_the_key_used_in_an_authenticator_app_you_should" xml:space="preserve">
+    <value>إذا كنت ترغب في تغيير المفتاح المستخدم في تطبيق المصادقة ، فيجب عليك ذلك</value>
+  </data>
+  <data name="Im_sorry_I_can't_display_anything_until_you" xml:space="preserve">
+    <value>أنا آسف ، لا يمكنني عرض أي شيء حتى أنت</value>
+  </data>
+  <data name="Incident_in_plant_number_4" xml:space="preserve">
+    <value>حادثة في المصنع رقم 4</value>
+  </data>
+  <data name="Installation" xml:space="preserve">
+    <value>التركيب</value>
+  </data>
+  <data name="Interpolation_Algorithm" xml:space="preserve">
+    <value>خوارزمية الاستيفاء</value>
+  </data>
+  <data name="into_your_two_factor_authenticator_app._Spaces_and_casing_do_not_matter" xml:space="preserve">
+    <value>في تطبيق المصادقة الثنائية الخاص بك. المساحات والغلاف لا يهم.</value>
+  </data>
+  <data name="Invalid_file_name" xml:space="preserve">
+    <value>اسم الملف غير صالح.</value>
+  </data>
+  <data name="In_Progress" xml:space="preserve">
+    <value>قيد التنفيذ</value>
+  </data>
+  <data name="iOS" xml:space="preserve">
+    <value>نظام أي او اس</value>
+  </data>
+  <data name="Ispum" xml:space="preserve">
+    <value>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي" فتجعلها تبدو (أي الأحرف) وكأنها نص مقروء. العديد من برامح النشر المكتبي وبرامح تحرير صفحات الويب تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج عن النص، وإذا قمت بإدخال "lorem ipsum" في أي محرك بحث ستظهر العديد من المواقع الحديثة العهد في نتائج البحث. على مدى السنين ظهرت نسخ جديدة ومختلفة من نص لوريم إيبسوم، أحياناً عن طريق الصدفة، وأحياناً عن عمد كإدخال بعض العبارات الفكاهية إليها.</value>
+  </data>
+  <data name="Issues_rising" xml:space="preserve">
+    <value>المشاكل المكتشفة</value>
+  </data>
+  <data name="Is_Active_User" xml:space="preserve">
+    <value>مستخدم نشط</value>
+  </data>
+  <data name="Is_Default" xml:space="preserve">
+    <value>افتراضي</value>
+  </data>
+  <data name="Is_Email_Confirmed" xml:space="preserve">
+    <value>هل تم تأكيد البريد الإلكتروني</value>
+  </data>
+  <data name="Is_Static" xml:space="preserve">
+    <value>ثابت</value>
+  </data>
+  <data name="Items_per_page" xml:space="preserve">
+    <value>مواد لكل صفحة</value>
+  </data>
+  <data name="January" xml:space="preserve">
+    <value>كانون الثاني</value>
+  </data>
+  <data name="Job_Title" xml:space="preserve">
+    <value>عنوان وظيفي</value>
+  </data>
+  <data name="Join_the_Military" xml:space="preserve">
+    <value>انضم إلى الجيش</value>
+  </data>
+  <data name="July" xml:space="preserve">
+    <value>تموز</value>
+  </data>
+  <data name="June" xml:space="preserve">
+    <value>يونيو</value>
+  </data>
+  <data name="Last" xml:space="preserve">
+    <value>الاخير</value>
+  </data>
+  <data name="Last_Name" xml:space="preserve">
+    <value>الكنية</value>
+  </data>
+  <data name="Learn_how_to" xml:space="preserve">
+    <value>تعلم كيف</value>
+  </data>
+  <data name="Left" xml:space="preserve">
+    <value>اليسار</value>
+  </data>
+  <data name="Legend_Position" xml:space="preserve">
+    <value>موقف الأسطورة</value>
+  </data>
+  <data name="Live_data_powered_by_SignalR" xml:space="preserve">
+    <value>بيانات حية مدعومة من SignalR</value>
+  </data>
+  <data name="Loading_On_Demand" xml:space="preserve">
+    <value>التحميل عند الطلب</value>
+  </data>
+  <data name="Localization" xml:space="preserve">
+    <value>الموقع</value>
+  </data>
+  <data name="Local_Time" xml:space="preserve">
+    <value>الوقت المحلي</value>
+  </data>
+  <data name="Lockout_Settings" xml:space="preserve">
+    <value>إعدادات التأمين</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="login_lowered" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="Login_out" xml:space="preserve">
+    <value>الخروج...</value>
+  </data>
+  <data name="Login_With_Authenticator_Code" xml:space="preserve">
+    <value>تسجيل الدخول بواسطة رمز التحقق</value>
+  </data>
+  <data name="Login_With_Recovery_Code" xml:space="preserve">
+    <value>تسجيل الدخول بواسطة رمز الاسترداد</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>تسجيل خروج</value>
+  </data>
+  <data name="Log_in" xml:space="preserve">
+    <value>يسجل دخول</value>
+  </data>
+  <data name="log_in_with_a_recovery_code" xml:space="preserve">
+    <value>قم بتسجيل الدخول باستخدام رمز الاسترداد</value>
+  </data>
+  <data name="Long_Date_Pattern" xml:space="preserve">
+    <value>نمط التاريخ الطويل</value>
+  </data>
+  <data name="Long_Time_Pattern" xml:space="preserve">
+    <value>نمط وقت طويل</value>
+  </data>
+  <data name="Lorem" xml:space="preserve">
+    <value>هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي" فتجعلها تبدو (أي الأحرف) وكأنها نص مقروء. العديد من برامح النشر المكتبي وبرامح تحرير صفحات الويب تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج عن النص، وإذا قمت بإدخال "lorem ipsum" في أي محرك بحث ستظهر العديد من المواقع الحديثة العهد في نتائج البحث. على مدى السنين ظهرت نسخ جديدة ومختلفة من نص لوريم إيبسوم، أحياناً عن طريق الصدفة، وأحياناً عن عمد كإدخال بعض العبارات الفكاهية إليها.</value>
+  </data>
+  <data name="Low" xml:space="preserve">
+    <value>منخفض</value>
+  </data>
+  <data name="March" xml:space="preserve">
+    <value>مارس</value>
+  </data>
+  <data name="Master_Details_Form" xml:space="preserve">
+    <value>نموذج التفاصيل الرئيسية</value>
+  </data>
+  <data name="Maximum_Failed_Access_Attempts" xml:space="preserve">
+    <value>الحد الأقصى من محاولات الوصول الفاشلة</value>
+  </data>
+  <data name="May" xml:space="preserve">
+    <value>قد</value>
+  </data>
+  <data name="Medium" xml:space="preserve">
+    <value>متوسط</value>
+  </data>
+  <data name="Military_Applicants" xml:space="preserve">
+    <value>المتقدمون العسكريون</value>
+  </data>
+  <data name="Minor" xml:space="preserve">
+    <value>تحت السن القانوني</value>
+  </data>
+  <data name="Minute" xml:space="preserve">
+    <value>الدقائق</value>
+  </data>
+  <data name="Modified_On" xml:space="preserve">
+    <value>تاريخ التعديل</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>شهر</value>
+  </data>
+  <data name="Month_Day_Pattern" xml:space="preserve">
+    <value>نمط الشهر اليوم</value>
+  </data>
+  <data name="Month_Genitive_Names" xml:space="preserve">
+    <value>الشهر الأسماء المضافة</value>
+  </data>
+  <data name="Month_Names" xml:space="preserve">
+    <value>أسماء الشهور</value>
+  </data>
+  <data name="My_Account" xml:space="preserve">
+    <value>حسابي</value>
+  </data>
+  <data name="My_Claims" xml:space="preserve">
+    <value>مطالباتي</value>
+  </data>
+  <data name="My_Permissions" xml:space="preserve">
+    <value>تصاريحي</value>
+  </data>
+  <data name="My_Profile" xml:space="preserve">
+    <value>ملفي</value>
+  </data>
+  <data name="My_Profile_Picture" xml:space="preserve">
+    <value>صورة ملفي الشخصي</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>اسم</value>
+  </data>
+  <data name="Native_Calendar_Name" xml:space="preserve">
+    <value>اسم التقويم الأصلي</value>
+  </data>
+  <data name="Native_Name" xml:space="preserve">
+    <value>الاسم الأصلي</value>
+  </data>
+  <data name="Natural_Spline" xml:space="preserve">
+    <value>المفتاح الطبيعي</value>
+  </data>
+  <data name="New_Email" xml:space="preserve">
+    <value>بريد إلكتروني جديد</value>
+  </data>
+  <data name="New_Registered_Users_are_Active_by_Default" xml:space="preserve">
+    <value>المستخدمون المسجلون الجدد نشيطون بشكل افتراضي</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>التالي</value>
+  </data>
+  <data name="Normally_this_would_be_emailed" xml:space="preserve">
+    <value>عادة سيتم إرسال هذا بالبريد الإلكتروني</value>
+  </data>
+  <data name="November" xml:space="preserve">
+    <value>شهر نوفمبر</value>
+  </data>
+  <data name="No_data_available" xml:space="preserve">
+    <value>لا تتوافر بيانات.</value>
+  </data>
+  <data name="No_keep_it" xml:space="preserve">
+    <value>لا ، احتفظ بها</value>
+  </data>
+  <data name="Nuclear" xml:space="preserve">
+    <value>نووي</value>
+  </data>
+  <data name="Occupational_injury" xml:space="preserve">
+    <value>إصابة مهنية</value>
+  </data>
+  <data name="October" xml:space="preserve">
+    <value>اكتوبر</value>
+  </data>
+  <data name="Oil" xml:space="preserve">
+    <value>بترول</value>
+  </data>
+  <data name="Oil1" xml:space="preserve">
+    <value>بترول</value>
+  </data>
+  <data name="Once_you_have_scanned_the_QR_code_or_input_the_key_above" xml:space="preserve">
+    <value>بمجرد مسح رمز الاستجابة السريعة ضوئيًا أو إدخال المفتاح أعلاه</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>خيارات</value>
+  </data>
+  <data name="or" xml:space="preserve">
+    <value>أو</value>
+  </data>
+  <data name="out_of" xml:space="preserve">
+    <value>بعيدا عن المكان</value>
+  </data>
+  <data name="Overview" xml:space="preserve">
+    <value>ملخص</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>كلمه السر</value>
+  </data>
+  <data name="Password_Settings" xml:space="preserve">
+    <value>إعدادات كلمة المرور</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>معلق</value>
+  </data>
+  <data name="Periodic" xml:space="preserve">
+    <value>دوري</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>التصاريح</value>
+  </data>
+  <data name="Personal_Data" xml:space="preserve">
+    <value>بيانات شخصية</value>
+  </data>
+  <data name="Phone_Number" xml:space="preserve">
+    <value>رقم الهاتف</value>
+  </data>
+  <data name="Phone_number_is_required" xml:space="preserve">
+    <value>برجاء إدخال رقم الهاتف.</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>يلعب</value>
+  </data>
+  <data name="Please" xml:space="preserve">
+    <value>لو سمحت</value>
+  </data>
+  <data name="Please_check_your_email_to_confirm_your_account" xml:space="preserve">
+    <value>يرجى التحقق من بريدك الإلكتروني لتأكيد حسابك.</value>
+  </data>
+  <data name="Please_check_your_email_to_reset_your_password_or_click" xml:space="preserve">
+    <value>يرجى التحقق من بريدك الإلكتروني لإعادة تعيين كلمة المرور الخاصة بك أو النقر فوق</value>
+  </data>
+  <data name="Please_provide_new_name_for_the_file_or_leave_it_as_is" xml:space="preserve">
+    <value>الرجاء إدخال اسم جديد للملف أو تركه كما هو.</value>
+  </data>
+  <data name="PM_Designator" xml:space="preserve">
+    <value>المحدد المسائي</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>السابق</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>الملف الشخصي</value>
+  </data>
+  <data name="Profile_Picture" xml:space="preserve">
+    <value>الصوره الشخصيه</value>
+  </data>
+  <data name="Proof_of_Concepts" xml:space="preserve">
+    <value>إثبات المفاهيم</value>
+  </data>
+  <data name="Properties" xml:space="preserve">
+    <value>الخصائص</value>
+  </data>
+  <data name="Property" xml:space="preserve">
+    <value>ملكية</value>
+  </data>
+  <data name="Put_these_codes_in_a_safe_place" xml:space="preserve">
+    <value>ضع هذه الرموز في مكان آمن.</value>
+  </data>
+  <data name="QueryString" xml:space="preserve">
+    <value>معايير البحث</value>
+  </data>
+  <data name="Quick_Search" xml:space="preserve">
+    <value>بحث سريع</value>
+  </data>
+  <data name="Randomize" xml:space="preserve">
+    <value>عشوائيا</value>
+  </data>
+  <data name="Realtime_Data" xml:space="preserve">
+    <value>بيانات الوقت الحقيقي</value>
+  </data>
+  <data name="Recent_incidents" xml:space="preserve">
+    <value>الحوادث الأخيرة</value>
+  </data>
+  <data name="Recovery_Code" xml:space="preserve">
+    <value>كود الاسترداد</value>
+  </data>
+  <data name="Recovery_Codes" xml:space="preserve">
+    <value>رموز الاسترداد</value>
+  </data>
+  <data name="Reference" xml:space="preserve">
+    <value>المرجع</value>
+  </data>
+  <data name="References" xml:space="preserve">
+    <value>المراجع</value>
+  </data>
+  <data name="Reference_name_is_required" xml:space="preserve">
+    <value>الاسم مطلوب.</value>
+  </data>
+  <data name="Refresh_Token_TimeSpan" xml:space="preserve">
+    <value>تحديث الرمز المميز بمدة زمنية</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>يسجل</value>
+  </data>
+  <data name="Register_as_a_new_user" xml:space="preserve">
+    <value>سجل كمستخدم جديد</value>
+  </data>
+  <data name="Register_Confirmation" xml:space="preserve">
+    <value>تأكيد التسجيل</value>
+  </data>
+  <data name="Remember_me" xml:space="preserve">
+    <value>تذكرنى؟</value>
+  </data>
+  <data name="Remember_this_machine" xml:space="preserve">
+    <value>تذكر هذه الآلة</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>يزيل</value>
+  </data>
+  <data name="Reporting" xml:space="preserve">
+    <value>استعلامات التقارير</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>التقارير</value>
+  </data>
+  <data name="Report_Details" xml:space="preserve">
+    <value>تفاصيل التقرير</value>
+  </data>
+  <data name="Required_Length" xml:space="preserve">
+    <value>الطول المطلوب</value>
+  </data>
+  <data name="Required_Unique_Characters" xml:space="preserve">
+    <value>مطلوب أحرف فريدة</value>
+  </data>
+  <data name="Require_Confirmed_Account" xml:space="preserve">
+    <value>تتطلب حساب مؤكد</value>
+  </data>
+  <data name="Require_Confirmed_Email" xml:space="preserve">
+    <value>تتطلب بريدًا إلكترونيًا مؤكدًا</value>
+  </data>
+  <data name="Require_Confirmed_Phone_Number" xml:space="preserve">
+    <value>يتطلب رقم هاتف مؤكد</value>
+  </data>
+  <data name="Require_Digits" xml:space="preserve">
+    <value>تتطلب أرقام</value>
+  </data>
+  <data name="Require_Lowercase_Characters" xml:space="preserve">
+    <value>تتطلب أحرفًا صغيرة</value>
+  </data>
+  <data name="Require_Non_Alphanumeric" xml:space="preserve">
+    <value>تتطلب غير أبجدي رقمي</value>
+  </data>
+  <data name="Require_Uppercase_Characters" xml:space="preserve">
+    <value>مطلوب أحرف كبيرة</value>
+  </data>
+  <data name="Resend" xml:space="preserve">
+    <value>إعادة إرسال</value>
+  </data>
+  <data name="Resend_Email_Confirmation" xml:space="preserve">
+    <value>إعادة إرسال تأكيد البريد الإلكتروني</value>
+  </data>
+  <data name="Reset_2FA_App" xml:space="preserve">
+    <value>إعادة تعيين تطبيق المصادقة الثنائية</value>
+  </data>
+  <data name="Reset_2FA_Recovery_Codes" xml:space="preserve">
+    <value>إعادة تعيين رموز استرداد المصادقة الثنائية</value>
+  </data>
+  <data name="Reset_Authenticator_App" xml:space="preserve">
+    <value>إعادة تعيين تطبيق Authenticator</value>
+  </data>
+  <data name="Reset_Authenticator_Key" xml:space="preserve">
+    <value>إعادة تعيين مفتاح المصادقة</value>
+  </data>
+  <data name="Reset_Password" xml:space="preserve">
+    <value>إعادة تعيين كلمة المرور</value>
+  </data>
+  <data name="Reset_Password_Confirmation" xml:space="preserve">
+    <value>إعادة تعيين كلمة المرور تأكيد</value>
+  </data>
+  <data name="Reset_Recovery_Codes" xml:space="preserve">
+    <value>إعادة تعيين رموز الاسترداد</value>
+  </data>
+  <data name="reset_your_authenticator_keys" xml:space="preserve">
+    <value>إعادة تعيين مفاتيح المصادقة الخاصة بك</value>
+  </data>
+  <data name="Reset_your_password" xml:space="preserve">
+    <value>اعد ضبط كلمه السر.</value>
+  </data>
+  <data name="Resource.Issues_is_almost_reaching_100" xml:space="preserve">
+    <value>الموارد ، عدد القضايا يكاد يصل إلى 100</value>
+  </data>
+  <data name="Resources" xml:space="preserve">
+    <value>موارد</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>يعود</value>
+  </data>
+  <data name="RFC1123_Pattern" xml:space="preserve">
+    <value>نمط RFC1123</value>
+  </data>
+  <data name="Right" xml:space="preserve">
+    <value>حق</value>
+  </data>
+  <data name="Roentgen" xml:space="preserve">
+    <value>رونتجن</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>دور</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>المجموعات</value>
+  </data>
+  <data name="Role_Name" xml:space="preserve">
+    <value>اسم الدور</value>
+  </data>
+  <data name="Rows_Per_Page" xml:space="preserve">
+    <value>عدد الصفوف في الصفحة:</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>يحفظ</value>
+  </data>
+  <data name="Scan_the_QR_Code_or_enter_this_key" xml:space="preserve">
+    <value>امسح رمز الاستجابة السريعة ضوئيًا أو أدخل هذا المفتاح</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>بحث</value>
+  </data>
+  <data name="Search_by_Roles" xml:space="preserve">
+    <value>البحث عن طريق الأدوار</value>
+  </data>
+  <data name="see" xml:space="preserve">
+    <value>ارى</value>
+  </data>
+  <data name="Select_Roles" xml:space="preserve">
+    <value>حدد الأدوار</value>
+  </data>
+  <data name="Send_Activation_Email" xml:space="preserve">
+    <value>إرسال بريد إلكتروني للتفعيل</value>
+  </data>
+  <data name="Septemper" xml:space="preserve">
+    <value>سبتمبر</value>
+  </data>
+  <data name="Series_1" xml:space="preserve">
+    <value>السلسلة 1</value>
+  </data>
+  <data name="Series_2" xml:space="preserve">
+    <value>السلسلة 2</value>
+  </data>
+  <data name="Server_Side_Authorization" xml:space="preserve">
+    <value>التخويل من جانب الخادم</value>
+  </data>
+  <data name="Server_Side_Validation" xml:space="preserve">
+    <value>التحقق من جانب الخادم</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>الإعدادات</value>
+  </data>
+  <data name="Setup_Authenticator_App" xml:space="preserve">
+    <value>إعداد تطبيق المصادقة</value>
+  </data>
+  <data name="Set_Random_Password" xml:space="preserve">
+    <value>تعيين كلمة مرور عشوائية</value>
+  </data>
+  <data name="Shortest_Day_Names" xml:space="preserve">
+    <value>أسماء أقصر يوم</value>
+  </data>
+  <data name="Short_Date_Pattern" xml:space="preserve">
+    <value>نمط التاريخ القصير</value>
+  </data>
+  <data name="Short_Time_Pattern" xml:space="preserve">
+    <value>نمط الوقت القصير</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>عرض</value>
+  </data>
+  <data name="Side_Authorization" xml:space="preserve">
+    <value>التفويض الجانبي</value>
+  </data>
+  <data name="Sign_in" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="Sign_in_Settings" xml:space="preserve">
+    <value>تسجيل الدخول الإعدادات</value>
+  </data>
+  <data name="Sign_up" xml:space="preserve">
+    <value>اشتراك</value>
+  </data>
+  <data name="Solar" xml:space="preserve">
+    <value>شمسي</value>
+  </data>
+  <data name="Something_went_wrong" xml:space="preserve">
+    <value>هناك خطأ ما!</value>
+  </data>
+  <data name="Sorry_there's_nothing_at_this_address" xml:space="preserve">
+    <value>عذرا ، لا يوجد شيء في هذا العنوان.</value>
+  </data>
+  <data name="Sortable_DateTime_Pattern" xml:space="preserve">
+    <value>نمط التاريخ والوقت القابل للفرز</value>
+  </data>
+  <data name="SSN" xml:space="preserve">
+    <value>رقم الضمان الاجتماعي</value>
+  </data>
+  <data name="SSNShort" xml:space="preserve">
+    <value>رقم الضمان الاجتماعي</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>يبدأ</value>
+  </data>
+  <data name="Start_SignalR_Connection" xml:space="preserve">
+    <value>بدء اتصال SignalR!</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>حالة</value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>قف</value>
+  </data>
+  <data name="Storage_type_is" xml:space="preserve">
+    <value>نوع التخزين هو</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>يقدم</value>
+  </data>
+  <data name="Succeeded" xml:space="preserve">
+    <value>لقد نجحت!</value>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>الدعم الفني</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>اسم العائلة</value>
+  </data>
+  <data name="Suspend" xml:space="preserve">
+    <value>تعليق</value>
+  </data>
+  <data name="Sweden" xml:space="preserve">
+    <value>السويد</value>
+  </data>
+  <data name="Tenants" xml:space="preserve">
+    <value>المستاجرين</value>
+  </data>
+  <data name="Thank_you_for_confirming_your_email" xml:space="preserve">
+    <value>شكرا لتأكيد بريدك الإلكتروني.</value>
+  </data>
+  <data name="these_docs" xml:space="preserve">
+    <value>هذه المستندات</value>
+  </data>
+  <data name="The_page_you_were_looking_for_doesnt_exist" xml:space="preserve">
+    <value>الصفحة التي تبحث عنها غير موجودة.</value>
+  </data>
+  <data name="The_selected_file_exceeds_the_allowed_maximum_size_limit" xml:space="preserve">
+    <value>الملف المحدد يتجاوز الحد الأقصى للحجم المسموح به.</value>
+  </data>
+  <data name="The_selected_file_extension_is_not_allowed" xml:space="preserve">
+    <value>امتداد الملف المحدد غير مسموح به.</value>
+  </data>
+  <data name="This_action_only_disables_2FA" xml:space="preserve">
+    <value>يؤدي هذا الإجراء إلى تعطيل المصادقة الثنائية فقط.</value>
+  </data>
+  <data name="This_app_does_not_currently_have_a_real_email_sender_registered" xml:space="preserve">
+    <value>لا يحتوي هذا التطبيق حاليًا على مرسل بريد إلكتروني حقيقي مسجل</value>
+  </data>
+  <data name="This_page_allows_you_to_download_or_delete_that_data" xml:space="preserve">
+    <value>تتيح لك هذه الصفحة تنزيل هذه البيانات أو حذفها.</value>
+  </data>
+  <data name="This_process_disables_2FA_until_you_verify_your_authenticator_app" xml:space="preserve">
+    <value>تعمل هذه العملية على تعطيل المصادقة الثنائية حتى تتحقق من تطبيق المصادقة.</value>
+  </data>
+  <data name="Time_Separator" xml:space="preserve">
+    <value>فاصل الوقت</value>
+  </data>
+  <data name="Time_Zone" xml:space="preserve">
+    <value>المنطقة زمنية</value>
+  </data>
+  <data name="Time_Zone_Info" xml:space="preserve">
+    <value>المنطقة زمنية</value>
+  </data>
+  <data name="Time_Zone_OffSet" xml:space="preserve">
+    <value>فرق التوقيت</value>
+  </data>
+  <data name="Tips" xml:space="preserve">
+    <value>نصائح</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>المسمى الوظيفي</value>
+  </data>
+  <data name="Token_Info" xml:space="preserve">
+    <value>معلومات الرمز</value>
+  </data>
+  <data name="Token_Settings" xml:space="preserve">
+    <value>إعدادات الرمز المميز</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>قمة</value>
+  </data>
+  <data name="Total_Cost" xml:space="preserve">
+    <value>التكلفة الإجمالية</value>
+  </data>
+  <data name="to_confirm_your_account" xml:space="preserve">
+    <value>لتأكيد حسابك</value>
+  </data>
+  <data name="to_login" xml:space="preserve">
+    <value>لتسجيل الدخول.</value>
+  </data>
+  <data name="To_use_an_authenticator_app_go_through_the_following_steps" xml:space="preserve">
+    <value>لاستخدام تطبيق المصادقة ، اتبع الخطوات التالية:</value>
+  </data>
+  <data name="Two_Factor_Authentication" xml:space="preserve">
+    <value>توثيق ذو عاملين</value>
+  </data>
+  <data name="Two_Factor_Authentication_works_by_adding_an_additional_layer" xml:space="preserve">
+    <value>تعمل المصادقة الثنائية عن طريق إضافة طبقة أمان إضافية لحساباتك عبر الإنترنت. يتطلب بيانات اعتماد تسجيل دخول إضافية - بخلاف اسم المستخدم وكلمة المرور فقط - للوصول إلى الحساب ، ويتطلب الحصول على بيانات الاعتماد الثانية الوصول إلى شيء يخصك.</value>
+  </data>
+  <data name="UI_Culture_Code" xml:space="preserve">
+    <value>كود ثقافة واجهة المستخدم</value>
+  </data>
+  <data name="Unable_to_upload_an_empty_file" xml:space="preserve">
+    <value>تعذر تحميل ملف فارغ.</value>
+  </data>
+  <data name="Unautorized" xml:space="preserve">
+    <value>غير مصرح</value>
+  </data>
+  <data name="United_States" xml:space="preserve">
+    <value>الولايات المتحدة الأمريكية</value>
+  </data>
+  <data name="Units_of_Time" xml:space="preserve">
+    <value>وحدات زمنية</value>
+  </data>
+  <data name="Universal_Sortable_DateTime_Pattern" xml:space="preserve">
+    <value>نمط التاريخ والوقت العالمي القابل للفرز</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>تحديث</value>
+  </data>
+  <data name="Upload_Avatar" xml:space="preserve">
+    <value>تحميل الصورة الرمزية</value>
+  </data>
+  <data name="Upload_Documents" xml:space="preserve">
+    <value>تحميل المستندات</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>اسم المستخدم</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>المستخدمون</value>
+  </data>
+  <data name="Users_Management" xml:space="preserve">
+    <value>إدارة المستخدمين</value>
+  </data>
+  <data name="User_Account" xml:space="preserve">
+    <value>حساب المستخدم</value>
+  </data>
+  <data name="User_Documents" xml:space="preserve">
+    <value>وثائق المستخدم</value>
+  </data>
+  <data name="User_is_not_found" xml:space="preserve">
+    <value>لم يتم العثور على المستخدم.</value>
+  </data>
+  <data name="User_Profile" xml:space="preserve">
+    <value>ملف تعريفي للمستخدم</value>
+  </data>
+  <data name="User_Settings" xml:space="preserve">
+    <value>إعدادات المستخدم</value>
+  </data>
+  <data name="Use_a_local_account_to_log_in" xml:space="preserve">
+    <value>استخدم حساب محلي لتسجيل الدخول.</value>
+  </data>
+  <data name="Validation_Summary" xml:space="preserve">
+    <value>ملخص التحقق من الصحة</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>قيمة</value>
+  </data>
+  <data name="Verify" xml:space="preserve">
+    <value>تحقق</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>رأي</value>
+  </data>
+  <data name="View_Applicant" xml:space="preserve">
+    <value>عرض مقدم الطلب</value>
+  </data>
+  <data name="Visit_Website" xml:space="preserve">
+    <value>زيارة الموقع</value>
+  </data>
+  <data name="Weight" xml:space="preserve">
+    <value>وزن</value>
+  </data>
+  <data name="Wind" xml:space="preserve">
+    <value>رياح</value>
+  </data>
+  <data name="Year_Month_Pattern" xml:space="preserve">
+    <value>سنة نمط الشهر</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>نعم</value>
+  </data>
+  <data name="Yes_delete_it" xml:space="preserve">
+    <value>نعم ، احذفها</value>
+  </data>
+  <data name="Yes_remove_it" xml:space="preserve">
+    <value>نعم ، قم بإزالته</value>
+  </data>
+  <data name="Yes_rename_it" xml:space="preserve">
+    <value>نعم ، أعد تسميتها</value>
+  </data>
+  <data name="Your_account_contains_personal_data_that_you_have_given_us" xml:space="preserve">
+    <value>يحتوي حسابك على بيانات شخصية قدمتها لنا.</value>
+  </data>
+  <data name="Your_password_has_been_reset" xml:space="preserve">
+    <value>تم إعادة تعيين كلمة المرور الخاصة بك</value>
+  </data>
+  <data name="Your_report_0_is_ready_to_download" xml:space="preserve">
+    <value>تقريرك {0} جاهز للتنزيل.!</value>
+  </data>
+  <data name="Your_report_generation_has_failed" xml:space="preserve">
+    <value>فشل إنشاء تقريرك.!</value>
+  </data>
+  <data name="Your_report_is_being_generated" xml:space="preserve">
+    <value>يتم إنشاء تقريرك.!</value>
+  </data>
+  <data name="Your_report_is_being_initiated" xml:space="preserve">
+    <value>يتم بدء تقريرك.!</value>
+  </data>
+  <data name="Your_report_is_ready_to_download" xml:space="preserve">
+    <value>تقريرك جاهز للتنزيل.!</value>
+  </data>
+  <data name="Your_report__0__is_ready_to_download\" xml:space="preserve">
+    <value>تقريرك {0} جاهز للتنزيل.!</value>
+  </data>
+  <data name="your_two_factor_authentication_app_will_provide_you_with_a_unique_code" xml:space="preserve">
+    <value>سيوفر لك تطبيق المصادقة الثنائية الخاص بك رمزًا فريدًا.</value>
+  </data>
+  <data name="You_are_not_authenticated_to_export_this_report" xml:space="preserve">
+    <value>لم تتم مصادقتك لتصدير هذا التقرير.!</value>
+  </data>
+  <data name="You_are_not_authorized_to_access_this_page" xml:space="preserve">
+    <value>أنت غير مفوض لدخول هذه الصفحة</value>
+  </data>
+  <data name="You_can" xml:space="preserve">
+    <value>تستطيع</value>
+  </data>
+  <data name="You_have_no_recovery_codes_left" xml:space="preserve">
+    <value>ليس لديك رموز استرداد متبقية.</value>
+  </data>
+  <data name="You_have_num_recovery_codes_left" xml:space="preserve">
+    <value>بقي لديك {0} من رموز الاسترداد.</value>
+  </data>
+  <data name="You_have_one_recovery_code_left" xml:space="preserve">
+    <value>بقي لديك رمز استرداد واحد.</value>
+  </data>
+  <data name="You_must" xml:space="preserve">
+    <value>يجب عليك أن</value>
+  </data>
+  <data name="You_should" xml:space="preserve">
+    <value>يجب</value>
+  </data>
+  <data name="File_has_been_uploaded_successfully" xml:space="preserve">
+    <value>تم تحميل الملف بنجاح.</value>
+  </data>
+  <data name="File_upload_was_cancelled" xml:space="preserve">
+    <value>تم إلغاء تحميل الملف.</value>
+  </data>
+  <data name="Upload_File" xml:space="preserve">
+    <value>تحميل الملف</value>
+  </data>
+  <data name="Access_token_timespan_cannot_be_null" xml:space="preserve">
+    <value>لا يمكن أن يكون النطاق الزمني لرمز الوصول فارغا.</value>
+  </data>
+  <data name="Access_token_timespan_is_required" xml:space="preserve">
+    <value>مطلوب فترة زمنية لرمز الوصول.</value>
+  </data>
+  <data name="Allowed_username_characters_are_required" xml:space="preserve">
+    <value>أحرف اسم المستخدم المسموح بها مطلوبة.</value>
+  </data>
+  <data name="An_unknown_failure_has_occurred" xml:space="preserve">
+    <value>حدث فشل غير معروف.</value>
+  </data>
+  <data name="Applicant_has_been_created_successfully" xml:space="preserve">
+    <value>تم إنشاء مقدم الطلب بنجاح</value>
+  </data>
+  <data name="Applicant_has_been_deleted_successfully" xml:space="preserve">
+    <value>تم حذف مقدم الطلب بنجاح.</value>
+  </data>
+  <data name="Applicant_has_been_updated_successfully" xml:space="preserve">
+    <value>تم تحديث مقدم الطلب بنجاح.</value>
+  </data>
+  <data name="A_user_with_this_login_already_exists" xml:space="preserve">
+    <value>مستخدم لديه تسجيل الدخول هذا موجود بالفعل.</value>
+  </data>
+  <data name="Cannot_disable_2FA_for_user_with_Id" xml:space="preserve">
+    <value>لا يمكن تعطيل المصادقة الثنائية للمستخدم الذي لديه المعرف "{0}" لأنه غير ممكن حاليا.</value>
+  </data>
+  <data name="Cannot_generate_recovery_codes" xml:space="preserve">
+    <value>لا يمكن إنشاء رموز استرداد لاسم المستخدم "{0}" لأنها لم يتم تمكين المصادقة الثنائية.</value>
+  </data>
+  <data name="Code_is_required" xml:space="preserve">
+    <value>الرمز مطلوب.</value>
+  </data>
+  <data name="Confirmation_link_to_change_email_has_been_sent" xml:space="preserve">
+    <value>تم إرسال رابط التأكيد لتغيير البريد الإلكتروني. يرجى التحقق من بريدك الإلكتروني.</value>
+  </data>
+  <data name="Confirm_password_is_required" xml:space="preserve">
+    <value>مطلوب تأكيد كلمة المرور.</value>
+  </data>
+  <data name="Confirm_your_email" xml:space="preserve">
+    <value>قم بتأكيد بريدك الإلكتروني</value>
+  </data>
+  <data name="Date_of_Birth_is_required" xml:space="preserve">
+    <value>تاريخ الميلاد مطلوب</value>
+  </data>
+  <data name="Default_lockout_time_Span_is_required" xml:space="preserve">
+    <value>وقت القفل الافتراضي الامتداد مطلوب</value>
+  </data>
+  <data name="Deletion_of_entity_failed" xml:space="preserve">
+    <value>فشل حذف الكيان "{0}" ({1}). {2}.</value>
+  </data>
+  <data name="Email_is_already_taken" xml:space="preserve">
+    <value>البريد الإلكتروني "{0}" مأخوذ بالفعل.</value>
+  </data>
+  <data name="Email_is_invalid" xml:space="preserve">
+    <value>البريد الإلكتروني "{0}" غير صالح.</value>
+  </data>
+  <data name="Entity_with_key_was_not_found" xml:space="preserve">
+    <value>لم يتم العثور على الكيان "{0}" مع المفتاح "{1}".</value>
+  </data>
+  <data name="Error_changing_user_name" xml:space="preserve">
+    <value>خطأ في تغيير اسم المستخدم.</value>
+  </data>
+  <data name="Error_changing_your_user_name" xml:space="preserve">
+    <value>حدث خطأ أثناء تغيير اسم المستخدم الخاص بك.</value>
+  </data>
+  <data name="File_has_not_been_uploaded" xml:space="preserve">
+    <value>لم يتم تحميل الملف.</value>
+  </data>
+  <data name="File_storage_settings_have_been_updated_successfully" xml:space="preserve">
+    <value>تم تحديث إعدادات تخزين الملفات بنجاح.</value>
+  </data>
+  <data name="First_name_is_required" xml:space="preserve">
+    <value>الاسم الأول مطلوب.</value>
+  </data>
+  <data name="Height_is_required" xml:space="preserve">
+    <value>الارتفاع مطلوب.</value>
+  </data>
+  <data name="Identity_settings_have_been_updated_successfully" xml:space="preserve">
+    <value>تم تحديث إعدادات الهوية بنجاح.</value>
+  </data>
+  <data name="Incorrect_password" xml:space="preserve">
+    <value>كلمة المرور غير صحيحة.</value>
+  </data>
+  <data name="Invalid_applicant_Id" xml:space="preserve">
+    <value>هوية مقدم الطلب غير صالحة.</value>
+  </data>
+  <data name="Invalid_authenticator_code_entered" xml:space="preserve">
+    <value>تم إدخال رمز مصادقة غير صالح.</value>
+  </data>
+  <data name="Invalid_client_request" xml:space="preserve">
+    <value>طلب عميل غير صالح.</value>
+  </data>
+  <data name="Invalid_file_storage_Id" xml:space="preserve">
+    <value>معرف تخزين الملفات غير صالح.</value>
+  </data>
+  <data name="Invalid_lockout_settings_Id" xml:space="preserve">
+    <value>معرف إعدادات التأمين غير صالحة.</value>
+  </data>
+  <data name="Invalid_login_attempt" xml:space="preserve">
+    <value>محاولة تسجيل دخول غير صالحة.</value>
+  </data>
+  <data name="Invalid_password_settings_Id" xml:space="preserve">
+    <value>معرف إعدادات كلمة المرور غير صالحة.</value>
+  </data>
+  <data name="Invalid_recovery_code_entered" xml:space="preserve">
+    <value>تم إدخال رمز استرداد غير صالح.</value>
+  </data>
+  <data name="Invalid_report_Id" xml:space="preserve">
+    <value>معرف تقرير غير صالح.</value>
+  </data>
+  <data name="Invalid_role_Id" xml:space="preserve">
+    <value>معرف الدور غير صالح.</value>
+  </data>
+  <data name="Invalid_sign_in_settings_Id" xml:space="preserve">
+    <value>غير صالح تسجيل الدخول إعدادات المعرف.</value>
+  </data>
+  <data name="Invalid_tenant_name" xml:space="preserve">
+    <value>اسم المستأجر غير صالح.</value>
+  </data>
+  <data name="Invalid_token" xml:space="preserve">
+    <value>رمز مميز غير صالح.</value>
+  </data>
+  <data name="Invalid_token_settings_Id" xml:space="preserve">
+    <value>معرف إعدادات الرمز المميز غير صالح.</value>
+  </data>
+  <data name="Invalid_user_Id" xml:space="preserve">
+    <value>معرف المستخدم غير صالح.</value>
+  </data>
+  <data name="Invalid_user_settings_Id" xml:space="preserve">
+    <value>معرف إعدادات المستخدم غير الصالحة</value>
+  </data>
+  <data name="Job_title_is_required" xml:space="preserve">
+    <value>المسمى الوظيفي مطلوب.</value>
+  </data>
+  <data name="Last_name_is_required" xml:space="preserve">
+    <value>الاسم الأخير مطلوب</value>
+  </data>
+  <data name="Lockout_is_not_enabled_for_this_user" xml:space="preserve">
+    <value>لم يتم تمكين التأمين لهذا المستخدم.</value>
+  </data>
+  <data name="Maximum_allowed_number_of_attachments_must_not_exceed_3" xml:space="preserve">
+    <value>يجب ألا يتجاوز الحد الأقصى المسموح به لعدد المرفقات 3.</value>
+  </data>
+  <data name="Max_failed_access_attempt_is_required" xml:space="preserve">
+    <value>مطلوب الحد الأقصى لمحاولة الوصول الفاشلة.</value>
+  </data>
+  <data name="Method_cannot_be_null" xml:space="preserve">
+    <value>لا يمكن أن تكون الطريقة فارغة.</value>
+  </data>
+  <data name="Minimum_allowed_number_of_attachments_must_be_at_least_1" xml:space="preserve">
+    <value>يجب ألا يقل الحد الأدنى المسموح به لعدد المرفقات عن 1.</value>
+  </data>
+  <data name="New_password_is_required" xml:space="preserve">
+    <value>مطلوب كلمة مرور جديدة.</value>
+  </data>
+  <data name="New_password_must_be_at_least_6_characters" xml:space="preserve">
+    <value>يجب أن تتكون كلمة المرور الجديدة من 6 أحرف على الأقل.</value>
+  </data>
+  <data name="New_password_must_not_exceed_200_characters" xml:space="preserve">
+    <value>يجب ألا تتجاوز كلمة المرور الجديدة 200 حرف.</value>
+  </data>
+  <data name="N_A" xml:space="preserve">
+    <value>غير متوفر</value>
+  </data>
+  <data name="Old_password_is_required" xml:space="preserve">
+    <value>كلمة المرور القديمة مطلوبة.</value>
+  </data>
+  <data name="Only_those_between_the_ages_of_18_and_28_are_allowed_for_enlisting" xml:space="preserve">
+    <value>يسمح فقط لمن تتراوح أعمارهم بين 18 و 28 عاما بالتجنيد.</value>
+  </data>
+  <data name="Only_those_whose_BMI_between_18_5_and_24_9_are_allowed_for_enlisting" xml:space="preserve">
+    <value>يسمح فقط لأولئك الذين يتراوح مؤشر كتلة الجسم لديهم بين 18.5 و 24.9 بالتجنيد.</value>
+  </data>
+  <data name="Only_those_whose_heights_between_100_and_250_with_normal_BMI_are_allowed_for_enlisting" xml:space="preserve">
+    <value>يسمح فقط لأولئك الذين تتراوح أطوالهم بين 100 و 250 مع مؤشر كتلة الجسم الطبيعي بالتجنيد.</value>
+  </data>
+  <data name="Only_those_who_weigh_between_50_and_200_with_normal_BMI_are_allowed_for_enlisting" xml:space="preserve">
+    <value>يسمح فقط لأولئك الذين يتراوح وزنهم بين 50 و 200 مع مؤشر كتلة الجسم الطبيعي بالتجنيد.</value>
+  </data>
+  <data name="Optimistic_concurrency_failure" xml:space="preserve">
+    <value>فشل التزامن المتفائل ، تم تعديل الكائن.</value>
+  </data>
+  <data name="Passwords_must_be_at_least_length_characters" xml:space="preserve">
+    <value>يجب أن تتكون كلمات المرور من {0} حرفا على الأقل.</value>
+  </data>
+  <data name="Passwords_must_have_at_least_one_digit" xml:space="preserve">
+    <value>يجب أن تحتوي كلمات المرور على رقم واحد على الأقل ("0'-'9').</value>
+  </data>
+  <data name="Passwords_must_have_at_least_one_lowercase" xml:space="preserve">
+    <value>يجب أن تحتوي كلمات المرور على حرف صغير واحد على الأقل ('a'-'z').</value>
+  </data>
+  <data name="Passwords_must_have_at_least_one_non_alphanumeric_character" xml:space="preserve">
+    <value>يجب أن تحتوي كلمات المرور على حرف واحد غير أبجدي رقمي على الأقل.</value>
+  </data>
+  <data name="Passwords_must_have_at_least_one_uppercase" xml:space="preserve">
+    <value>يجب أن تحتوي كلمات المرور على حرف كبير واحد على الأقل ("A'-'Z").</value>
+  </data>
+  <data name="Password_cannot_contain_password" xml:space="preserve">
+    <value>لا يمكن أن تحتوي كلمة المرور على "كلمة مرور".</value>
+  </data>
+  <data name="Password_cannot_contain_username" xml:space="preserve">
+    <value>لا يمكن أن تحتوي كلمة المرور على اسم مستخدم.</value>
+  </data>
+  <data name="Password_is_required" xml:space="preserve">
+    <value>كلمة المرور مطلوبة.</value>
+  </data>
+  <data name="Password_must_be_at_least_6_characters" xml:space="preserve">
+    <value>يجب أن تتكون كلمة المرور من 6 أحرف على الأقل.</value>
+  </data>
+  <data name="Password_must_not_exceed_200_characters" xml:space="preserve">
+    <value>يجب ألا تتجاوز كلمة المرور 200 حرف.</value>
+  </data>
+  <data name="Password_reset_link_was_sent" xml:space="preserve">
+    <value>تم إرسال رابط إعادة تعيين كلمة المرور. يرجى التحقق من بريدك الإلكتروني.</value>
+  </data>
+  <data name="Please_confirm_your_account_by_clicking_here" xml:space="preserve">
+    <value>يرجى تأكيد حسابك &lt;a href='{0}'&gt;بالضغط هنا&lt;/a&gt;.</value>
+  </data>
+  <data name="Please_confirm_your_email" xml:space="preserve">
+    <value>يرجى تأكيد بريدك الإلكتروني.</value>
+  </data>
+  <data name="Please_reset_your_password_by_clicking_here" xml:space="preserve">
+    <value>يرجى إعادة تعيين كلمة المرور الخاصة بك &lt;a href='{0}'&gt;عن طريق النقر هنا&lt;/a&gt;.</value>
+  </data>
+  <data name="Please_specify_the_application_tenant_mode" xml:space="preserve">
+    <value>يرجى تحديد وضع مستأجر التطبيق.</value>
+  </data>
+  <data name="Profile_picture_is_required" xml:space="preserve">
+    <value>صورة الملف الشخصي مطلوبة.</value>
+  </data>
+  <data name="Recovery_Code_is_required" xml:space="preserve">
+    <value>رمز الاسترداد مطلوب.</value>
+  </data>
+  <data name="Recovery_Code_Redemption_Failed" xml:space="preserve">
+    <value>فشل استرداد رمز الاسترداد</value>
+  </data>
+  <data name="Refresh_token_timespan_cannot_be_null" xml:space="preserve">
+    <value>لا يمكن أن يكون النطاق الزمني للرمز المميز للتحديث فارغا.</value>
+  </data>
+  <data name="Refresh_token_timespan_is_required" xml:space="preserve">
+    <value>مطلوب تحديث النطاق الزمني للرمز المميز.</value>
+  </data>
+  <data name="Refresh_token_timespan_must_be_greater_than_access_token_expiry_time" xml:space="preserve">
+    <value>يجب أن يكون النطاق الزمني لتحديث الرمز المميز أكبر من وقت انتهاء صلاحية الرمز المميز للوصول.</value>
+  </data>
+  <data name="Repeated_Ones_are_not_valid_Social_security_number" xml:space="preserve">
+    <value>111111111 ليس رقم ضمان اجتماعي صالح.</value>
+  </data>
+  <data name="Repeated_Threes_are_not_valid_Social_security_number" xml:space="preserve">
+    <value>333333333 ليس رقم ضمان اجتماعي صالح.</value>
+  </data>
+  <data name="Required_length_is_required" xml:space="preserve">
+    <value>الطول المطلوب مطلوب.</value>
+  </data>
+  <data name="Required_unique_characters_is_required" xml:space="preserve">
+    <value>مطلوب أحرف فريدة مطلوبة.</value>
+  </data>
+  <data name="Reset_your_password1" xml:space="preserve">
+    <value>إعادة تعيين كلمة المرور الخاصة بك</value>
+  </data>
+  <data name="Role_has_been_created_successfully" xml:space="preserve">
+    <value>تم إنشاء الدور بنجاح.</value>
+  </data>
+  <data name="Role_has_been_deleted_successfully" xml:space="preserve">
+    <value>تم حذف الدور بنجاح.</value>
+  </data>
+  <data name="Role_has_been_updated_successfully" xml:space="preserve">
+    <value>تم تحديث الدور بنجاح.</value>
+  </data>
+  <data name="Role_name_is_already_taken" xml:space="preserve">
+    <value>اسم الدور "{0}" مأخوذ بالفعل.</value>
+  </data>
+  <data name="Role_name_is_invalid" xml:space="preserve">
+    <value>اسم الدور "{0}" غير صالح.</value>
+  </data>
+  <data name="Role_name_is_required" xml:space="preserve">
+    <value>اسم الدور مطلوب.</value>
+  </data>
+  <data name="Social_security_number_is_required" xml:space="preserve">
+    <value>رقم الضمان الاجتماعي مطلوب</value>
+  </data>
+  <data name="Social_security_number_must_contain_only_9_digits" xml:space="preserve">
+    <value>يجب أن يحتوي رقم الضمان الاجتماعي على 9 أرقام فقط.</value>
+  </data>
+  <data name="Social_security_number_must_not_contain_consecutive_digits" xml:space="preserve">
+    <value>يجب ألا يحتوي رقم الضمان الاجتماعي على أرقام متتالية.</value>
+  </data>
+  <data name="Storage_type_is_required" xml:space="preserve">
+    <value>نوع التخزين مطلوب.</value>
+  </data>
+  <data name="Surname_is_required" xml:space="preserve">
+    <value>اللقب مطلوب.</value>
+  </data>
+  <data name="Tenant_has_been_created_successfully" xml:space="preserve">
+    <value>تم إنشاء المستأجر بنجاح.</value>
+  </data>
+  <data name="Tenant_has_been_deleted_successfully" xml:space="preserve">
+    <value>تم حذف المستأجر بنجاح.</value>
+  </data>
+  <data name="Tenant_has_been_updated_successfully" xml:space="preserve">
+    <value>تم تحديث المستأجر بنجاح.</value>
+  </data>
+  <data name="Tenant_name_is_required" xml:space="preserve">
+    <value>اسم المستأجر مطلوب.</value>
+  </data>
+  <data name="The_applicant_is_not_found" xml:space="preserve">
+    <value>لم يتم العثور على مقدم الطلب.</value>
+  </data>
+  <data name="The_password_and_confirmation_password_do_not_match" xml:space="preserve">
+    <value>كلمة المرور وكلمة مرور التأكيد غير متطابقة.</value>
+  </data>
+  <data name="The_specified_role_is_already_registered" xml:space="preserve">
+    <value>الدور المحدد مسجل بالفعل.</value>
+  </data>
+  <data name="The_specified_role_is_already_registered_in_the_given_tenant" xml:space="preserve">
+    <value>الدور المحدد مسجل بالفعل في المستأجر المحدد.</value>
+  </data>
+  <data name="The_specified_username_and_email_are_already_registered" xml:space="preserve">
+    <value>اسم المستخدم والبريد الإلكتروني المحددان مسجلان بالفعل.</value>
+  </data>
+  <data name="The_specified_username_and_email_are_already_registered_in_the_given_tenant" xml:space="preserve">
+    <value>اسم المستخدم والبريد الإلكتروني المحددان مسجلان بالفعل في المستأجر المحدد.</value>
+  </data>
+  <data name="The_user_has_no_2FA_enabled" xml:space="preserve">
+    <value>لم يتم تمكين المصادقة الثنائية (2FA) لدى المستخدم.</value>
+  </data>
+  <data name="Token_settings_have_been_updated_successfully" xml:space="preserve">
+    <value>تم تحديث إعدادات الرمز المميز بنجاح.</value>
+  </data>
+  <data name="Two_factor_authentication_code_is_required" xml:space="preserve">
+    <value>مطلوب رمز المصادقة الثنائية.</value>
+  </data>
+  <data name="Two_factor_authentication_code_must_be_at_least_6_character_long" xml:space="preserve">
+    <value>يجب أن يتكون رمز المصادقة الثنائية من 6 أحرف على الأقل.</value>
+  </data>
+  <data name="Two_factor_authentication_code_must_not_exceed_7_characters" xml:space="preserve">
+    <value>يجب ألا يتجاوز رمز المصادقة الثنائية 7 أحرف.</value>
+  </data>
+  <data name="Two_factor_authentication_has_been_disabled" xml:space="preserve">
+    <value>تم تعطيل 2Fa. يمكنك إعادة تمكين المصادقة الثنائية عند إعداد تطبيق مصادقة.</value>
+  </data>
+  <data name="Two_factor_authentication_required" xml:space="preserve">
+    <value>المصادقة الثنائية مطلوبة.</value>
+  </data>
+  <data name="Unable_to_add_static_role" xml:space="preserve">
+    <value>غير قادر على إضافة دور ثابت</value>
+  </data>
+  <data name="Unable_to_create_new_tenant_in_single_tenant_mode" xml:space="preserve">
+    <value>غير قادر على إنشاء مستأجر جديد في وضع مستأجر واحد.</value>
+  </data>
+  <data name="Unable_to_delete_static_role" xml:space="preserve">
+    <value>غير قادر على حذف دور ثابت.</value>
+  </data>
+  <data name="Unable_to_delete_static_user" xml:space="preserve">
+    <value>غير قادر على حذف مستخدم ثابت.</value>
+  </data>
+  <data name="Unable_to_enable_2FA" xml:space="preserve">
+    <value>غير قادر على تمكين المصادقة الثنائية (2FA).</value>
+  </data>
+  <data name="Unable_to_load_applicant" xml:space="preserve">
+    <value>غير قادر على تحميل مقدم الطلب.</value>
+  </data>
+  <data name="Unable_to_load_report" xml:space="preserve">
+    <value>غير قادر على تحميل التقرير.</value>
+  </data>
+  <data name="Unable_to_load_role" xml:space="preserve">
+    <value>غير قادر على تحميل الدور.</value>
+  </data>
+  <data name="Unable_to_load_user" xml:space="preserve">
+    <value>غير قادر على تحميل المستخدم.</value>
+  </data>
+  <data name="Unable_to_reset_authenticator_keys" xml:space="preserve">
+    <value>غير قادر على إعادة تعيين مفاتيح المصادقة.</value>
+  </data>
+  <data name="Unable_to_update_static_role" xml:space="preserve">
+    <value>غير قادر على تحديث دور ثابت</value>
+  </data>
+  <data name="Unable_to_update_static_user" xml:space="preserve">
+    <value>غير قادر على تحديث مستخدم ثابت.</value>
+  </data>
+  <data name="Unexpected_error_occurred_deleting_user_with_Id" xml:space="preserve">
+    <value>حدث خطأ غير متوقع أثناء حذف المستخدم الذي يحمل المعرف "{0}".</value>
+  </data>
+  <data name="Unexpected_error_occurred_disabling_2FA" xml:space="preserve">
+    <value>حدث خطأ غير متوقع في تعطيل المصادقة الثنائية للمستخدم الذي لديه المعرف "{0}".</value>
+  </data>
+  <data name="Username_has_been_confirmed_successfully" xml:space="preserve">
+    <value>تم تأكيد اسم المستخدم بنجاح.</value>
+  </data>
+  <data name="Username_is_already_taken" xml:space="preserve">
+    <value>اسم المستخدم "{0}" مأخوذ بالفعل.</value>
+  </data>
+  <data name="Username_is_invalid" xml:space="preserve">
+    <value>اسم المستخدم "{0}" غير صالح ، ويمكن أن يحتوي فقط على أحرف أو أرقام.</value>
+  </data>
+  <data name="Username_is_required" xml:space="preserve">
+    <value>اسم المستخدم مطلوب.</value>
+  </data>
+  <data name="Username_must_be_at_least_6_characters" xml:space="preserve">
+    <value>يجب أن يتكون اسم المستخدم من 6 أحرف على الأقل.</value>
+  </data>
+  <data name="Username_must_not_exceed_200_characters" xml:space="preserve">
+    <value>يجب ألا يتجاوز اسم المستخدم 200 حرف.</value>
+  </data>
+  <data name="User_already_has_a_password_set" xml:space="preserve">
+    <value>المستخدم لديه بالفعل مجموعة كلمات مرور.</value>
+  </data>
+  <data name="User_already_in_role" xml:space="preserve">
+    <value>المستخدم بالفعل في الدور "{0}".</value>
+  </data>
+  <data name="User_has_been_added_without_files" xml:space="preserve">
+    <value>تمت إضافة المستخدم بدون ملفات.</value>
+  </data>
+  <data name="User_has_been_created_successfully" xml:space="preserve">
+    <value>تم إنشاء المستخدم بنجاح.</value>
+  </data>
+  <data name="User_has_been_deleted_successfully" xml:space="preserve">
+    <value>تم حذف المستخدم بنجاح.</value>
+  </data>
+  <data name="User_has_been_updated_successfully" xml:space="preserve">
+    <value>تم تحديث المستخدم بنجاح.</value>
+  </data>
+  <data name="User_has_been_updated_successfully_without_updating_his_her_roles_as_the_user_is_static_type" xml:space="preserve">
+    <value>تم تحديث المستخدم بنجاح دون تحديث أدواره لأن المستخدم من النوع الثابت.</value>
+  </data>
+  <data name="User_Id_is_required" xml:space="preserve">
+    <value>مطلوب معرف المستخدم.</value>
+  </data>
+  <data name="User_permissions_have_been_updated_successfully" xml:space="preserve">
+    <value>تم تحديث أذونات المستخدم بنجاح.</value>
+  </data>
+  <data name="User_with_Id_deleted" xml:space="preserve">
+    <value>تم حذف المستخدم الذي يحمل المعرف "{0}".</value>
+  </data>
+  <data name="User_with_Id_UserId_logged_in_with_2Fa" xml:space="preserve">
+    <value>قام المستخدم الذي لديه معرف "{0}" بتسجيل الدخول باستخدام المصادقة الثنائية.</value>
+  </data>
+  <data name="value_cannot_be_null" xml:space="preserve">
+    <value>لا يمكن أن تكون {0} فارغة</value>
+  </data>
+  <data name="Verification_code_is_invalid" xml:space="preserve">
+    <value>رمز التحقق غير صالح.</value>
+  </data>
+  <data name="Verification_email_has_been_sent" xml:space="preserve">
+    <value>تم إرسال رسالة التحقق الإلكترونية. يرجى التحقق من بريدك الإلكتروني.</value>
+  </data>
+  <data name="Weight_is_required" xml:space="preserve">
+    <value>الوزن مطلوب.</value>
+  </data>
+  <data name="Your_account_is_deactivated_Please_contact_your_administrator" xml:space="preserve">
+    <value>تم إلغاء تنشيط حسابك. الرجاء الاتصال بالمسؤول.</value>
+  </data>
+  <data name="Your_authenticator_app_has_been_verified" xml:space="preserve">
+    <value>تم التحقق من تطبيق المصادقة الخاص بك.</value>
+  </data>
+  <data name="Your_authenticator_app_key_has_been_reset" xml:space="preserve">
+    <value>تمت إعادة تعيين مفتاح تطبيق المصادقة الخاص بك ، ستحتاج إلى تكوين تطبيق المصادقة الخاص بك باستخدام المفتاح الجديد.</value>
+  </data>
+  <data name="Your_email_has_been_changed_successfully" xml:space="preserve">
+    <value>تم تغيير بريدك الإلكتروني بنجاح.</value>
+  </data>
+  <data name="Your_email_has_been_successfully_changed" xml:space="preserve">
+    <value>تم تغيير بريدك الإلكتروني بنجاح.</value>
+  </data>
+  <data name="Your_email_is_unchanged" xml:space="preserve">
+    <value>بريدك الإلكتروني لم يتغير.</value>
+  </data>
+  <data name="Your_password_has_been_changed" xml:space="preserve">
+    <value>تم تغيير كلمة المرور الخاصة بك.</value>
+  </data>
+  <data name="Your_password_has_been_set" xml:space="preserve">
+    <value>تم تعيين كلمة المرور الخاصة بك.</value>
+  </data>
+  <data name="You_are_locked_out" xml:space="preserve">
+    <value>أنت مقفل.</value>
+  </data>
+  <data name="You_are_not_authorized" xml:space="preserve">
+    <value>أنت غير مصرح لك بالوصول إلى {0}.</value>
+  </data>
+  <data name="You_have_generated_new_recovery_codes" xml:space="preserve">
+    <value>لقد قمت بإنشاء رموز استرداد جديدة.</value>
+  </data>
+  <data name="You_have_successfully_created_a_new_account" xml:space="preserve">
+    <value>لقد قمت بإنشاء حساب جديد بنجاح.</value>
+  </data>
+  <data name="Please_check_your_email_to_reset_your_password" xml:space="preserve">
+    <value>يرجى التحقق من بريدك الإلكتروني لإعادة تعيين كلمة المرور الخاصة بك.</value>
+  </data>
+  <data name="to_reset_your_password" xml:space="preserve">
+    <value>لإعادة تعيين كلمة المرور الخاصة بك</value>
+  </data>
+  <data name="Please_click" xml:space="preserve">
+    <value>الرجاء الضغط</value>
+  </data>
+  <data name="to" xml:space="preserve">
+    <value>ل</value>
+  </data>
+  <data name="Assign_Permissions_to" xml:space="preserve">
+    <value>تعيين أذونات ل</value>
+  </data>
+  <data name="There_are_no_data_to_generate_report" xml:space="preserve">
+    <value>لا توجد بيانات لإنشاء تقرير.</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_save_this_record" xml:space="preserve">
+    <value>هل أنت متأكد من أنك تريد حفظ هذا السجل؟</value>
+  </data>
+  <data name="Consider_switching_your_device_to_light_mode" xml:space="preserve">
+    <value>إذا كنت تواجه مشكلة في مسح رمز الاستجابة السريعة ضوئيا ، فحاول تغيير التطبيق إلى الوضع الفاتح من خلال النقر على زر الظلام / الضوء في قائمة الرأس. قد لا يتم مسح بعض رموز QR بشكل صحيح في الوضع المظلم بسبب مشاكل التباين. من خلال التبديل إلى وضع الإضاءة ، ستكون قراءة رمز الاستجابة السريعة أسهل وسيكون لجهازك وقت أسهل في مسحه ضوئيا.</value>
+  </data>
+  <data name="The_Host_portal_cannot_be_accessed" xml:space="preserve">
+    <value>لا يمكن الوصول إلى البوابة الإلكترونية المضيفة أثناء استخدام قاعدة بيانات منفصلة لكل مستأجر كاستراتيجية عزل بيانات. يرجى التواصل مع المسؤول للحصول على مزيد من المساعدة.</value>
+  </data>
+  <data name="It_is_not_possible_to_create_a_new_tenant_while_in_single_tenant_mode" xml:space="preserve">
+    <value>لا يمكن إنشاء مستأجر جديد أثناء وجوده في وضع المستأجر الفردي. يسمح بإنشاء المستأجرين حصريا في وضع متعدد المستأجرين.</value>
+  </data>
+  <data name="It_is_not_possible_to_create_or_update_or_delete_a_tenant_while_in_single_tenant_mode" xml:space="preserve">
+    <value>لا يمكن إنشاء مستأجر أو تحديثه أو حذفه أثناء وجوده في وضع المستأجر الفردي. يسمح بإدارة المستأجرين حصريا في وضع متعدد المستأجرين.</value>
+  </data>
+  <data name="Tenants_Management" xml:space="preserve">
+    <value>إدارة المستأجرين</value>
+  </data>
+  <data name="My_Tenant" xml:space="preserve">
+    <value>المستأجر الخاص بي</value>
+  </data>
+  <data name="Unable_to_load_tenant" xml:space="preserve">
+    <value>غير قادر على تحميل المستأجر.</value>
+  </data>
+  <data name="Invalid_tenant_Id" xml:space="preserve">
+    <value>معرف المستأجر غير صالح.</value>
+  </data>
+  <data name="The_tenant_is_not_found" xml:space="preserve">
+    <value>لم يتم العثور على المستأجر.</value>
+  </data>
+  <data name="SuperAdmin" xml:space="preserve">
+    <value>المشرف المتميز</value>
+  </data>
+  <data name="A_tenant_with_the_same_name_already_exists__Please_choose_a_different_name" xml:space="preserve">
+    <value>يوجد مستأجر بنفس الاسم بالفعل. الرجاء اختيار اسم مختلف.</value>
+  </data>
+  <data name="Show_Recovery_Codes" xml:space="preserve">
+    <value>إظهار رموز الاسترداد</value>
+  </data>
+  <data name="Enable_Authenticator_App" xml:space="preserve">
+    <value>تمكين تطبيق المصادقة</value>
+  </data>
+  <data name="Enable_2FA" xml:space="preserve">
+    <value>تمكين المصادقة الثنائية</value>
+  </data>
+  <data name="Application_errors_occurred_while_processing_your_request" xml:space="preserve">
+    <value>حدث خطأ (أخطاء) في التطبيق أثناء معالجة طلبك.</value>
+  </data>
+  <data name="Unauthorized_access_detected" xml:space="preserve">
+    <value>تم اكتشاف وصول غير مصرح به.</value>
+  </data>
+  <data name="Access_to_the_requested_resource_is_forbidden" xml:space="preserve">
+    <value>يحظر الوصول إلى المورد المطلوب.</value>
+  </data>
+  <data name="The_request_was_not_processed_due_to_invalid_or_missing_parameters" xml:space="preserve">
+    <value>لم تتم معالجة الطلب بسبب معلمات غير صالحة أو مفقودة.</value>
+  </data>
+  <data name="The_requested_resource_was_not_found" xml:space="preserve">
+    <value>لم يتم العثور على المورد المطلوب.</value>
+  </data>
+  <data name="An_internal_server_error_occurred_while_processing_your_request" xml:space="preserve">
+    <value>حدث خطأ داخلي في الخادم أثناء معالجة طلبك.</value>
+  </data>
+  <data name="An_error_occurred_while_processing_your_request" xml:space="preserve">
+    <value>حدث خطأ أثناء معالجة طلبك.</value>
+  </data>
+  <data name="Model_validation_errors_occurred_while_processing_your_request" xml:space="preserve">
+    <value>حدث خطأ (أخطاء) التحقق من صحة النموذج أثناء معالجة طلبك.</value>
+  </data>
+  <data name="You_are_forbidden" xml:space="preserve">
+    <value>يحظر الوصول إلى {0} بسبب عدم كفاية الأذونات.</value>
+  </data>
+  <data name="The_time_provided_must_be_in_UTC_format" xml:space="preserve">
+    <value>يجب أن يكون الوقت المقدم بتنسيق UTC.</value>
+  </data>
+  <data name="On_Premises_File_Storage" xml:space="preserve">
+    <value>تخزين الملفات المحلي</value>
+  </data>
+  <data name="Reporting_Hub_is_closed" xml:space="preserve">
+    <value>مركز التقارير مغلق.</value>
+  </data>
+  <data name="Reporting_Hub_is_already_closed" xml:space="preserve">
+    <value>مركز التقارير مغلق بالفعل.</value>
+  </data>
+  <data name="Dashboard_Hub_is_closed" xml:space="preserve">
+    <value>مركز لوحة المعلومات مغلق.</value>
+  </data>
+  <data name="Dashboard_Hub_is_being_initialized" xml:space="preserve">
+    <value>يتم تهيئة مركز لوحة المعلومات.</value>
+  </data>
+  <data name="Unable_to_connect_to_the_dashboard_hub_due_to_an_error" xml:space="preserve">
+    <value>تعذر الاتصال بلوحة التحكم بسبب خطأ: {0}</value>
+  </data>
+  <data name="Dashboard_Hub_is_now_connected" xml:space="preserve">
+    <value>مركز لوحة المعلومات متصل الآن.</value>
+  </data>
+  <data name="Unable_to_connect_to_the_reporting_hub_due_to_an_error" xml:space="preserve">
+    <value>تعذر الاتصال بمركز التقارير بسبب خطأ: {0}</value>
+  </data>
+  <data name="Reporting_Hub_is_now_connected" xml:space="preserve">
+    <value>مركز التقارير متصل الآن.</value>
+  </data>
+  <data name="Reporting_Hub_is_being_initialized" xml:space="preserve">
+    <value>تتم تهيئة مركز التقارير.</value>
+  </data>
+  <data name="Reporting_Hub_is_not_active" xml:space="preserve">
+    <value>مركز إعداد التقارير غير نشط.</value>
+  </data>
+  <data name="You_are_not_authorized_to_access_resources_related_to_other_tenants" xml:space="preserve">
+    <value>غير مصرح لك بالوصول إلى الموارد المتعلقة بالمستأجرين الآخرين.</value>
+  </data>
+  <data name="ExportAsPdfOnDemand" xml:space="preserve">
+    <value>تصدير كملف PDF على الفور</value>
+  </data>
+</root>

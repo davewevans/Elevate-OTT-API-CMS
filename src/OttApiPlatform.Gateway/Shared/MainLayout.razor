@@ -1,0 +1,28 @@
+﻿@inherits LayoutComponentBase
+
+<MudThemeProvider Theme="DefaultTheme" @bind-IsDarkMode="@IsDarkMode" />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudAppBar>
+        <MudLink Href="/">
+            <img height="36" width="36" src="/images/brand.svg" />
+        </MudLink>
+        <MudText Typo="Typo.h6" Class="ml-4" Style="letter-spacing: .5rem; font-weight: 300; margin-left: 12px; font-size: 24px; user-select: none;">CMS</MudText>
+        <MudSpacer />
+        <MudIconButton Color="Color.Inherit" OnClick="@((e) => DarkModeToggle())" Size="Size.Medium" Icon="@(IsDarkMode ?"fa fa-sun-o":"fa fa-moon-o")" />
+    </MudAppBar>
+
+    <MudMainContent>
+        <MudContainer MaxWidth="MaxWidth.Small" Class="d-flex align-center" Style="height: 70vh;">
+            <MudPaper Elevation="5" Class="pa-8" Width="100%">
+                @Body
+            </MudPaper>
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>
+
+@code {
+
+}

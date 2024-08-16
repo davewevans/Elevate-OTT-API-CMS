@@ -1,0 +1,39 @@
+﻿@typeparam TItem
+
+@if (Items.Any())
+{
+    @foreach (var item in Items)
+    {
+        <MudChip Color="Color.Error" OnClose="async() =>await RemoveItem(item)">@ItemTemplate(item)</MudChip>
+    }
+}
+
+@code {
+
+    #region Public Properties
+
+    [Parameter] public RenderFragment<TItem> ItemTemplate { get; set; }
+
+    [Parameter] public IList<TItem> Items { get; set; }
+
+    [Parameter] public EventCallback OnValuesChanged { get; set; }
+
+    #endregion Public Properties
+
+    #region Private Methods
+
+    private async Task RemoveItem(TItem item)
+    {
+        Items.Remove(item);
+        await OnValuesChanged.InvokeAsync(null);
+    }
+
+    private async Task ClearItems()
+    {
+        Items.Clear();
+        await OnValuesChanged.InvokeAsync(null);
+    }
+
+    #endregion Private Methods
+
+}

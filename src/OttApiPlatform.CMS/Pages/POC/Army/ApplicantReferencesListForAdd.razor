@@ -1,0 +1,53 @@
+﻿<MudTable Items="@AddedApplicantReferencesList" Filter="new Func<ReferenceItemForAdd,bool>(FilterReferences)">
+    <ToolBarContent>
+        <MudText Typo="Typo.h6">@Resource.References</MudText>
+        <MudSpacer />
+
+        <MudTextField @bind-Value="SearchString"
+                      Immediate="true"
+                      Placeholder="@Resource.Search"
+                      Adornment="Adornment.Start"
+                      AdornmentIcon="@Icons.Material.Filled.Search"
+                      IconSize="Size.Medium" Class="mt-0">
+        </MudTextField>
+
+        <MudFab Style="margin-left:20px;margin-top:10px"
+                Color="Color.Primary"
+                Size="Size.Small"
+                StartIcon="@Icons.Material.Filled.Add"
+                OnClick="AddApplicantReference" />
+
+    </ToolBarContent>
+    <HeaderContent>
+        <MudTh>@Resource.Name</MudTh>
+        <MudTh>@Resource.Job_Title</MudTh>
+        <MudTh>@Resource.Phone_Number</MudTh>
+        <MudTh>@Resource.Options</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Name">@context.Name</MudTd>
+        <MudTd DataLabel="IsStatic">@context.JobTitle</MudTd>
+        <MudTd DataLabel="IsDefault">@context.Phone</MudTd>
+        <MudTd>
+            <MudButtonGroup Color="Color.Primary" Variant="Variant.Text">
+                <MudButton Variant="Variant.Filled"
+                           StartIcon="@Icons.Material.Filled.Edit"
+                           Size="Size.Small"
+                           Color="Color.Default"
+                           OnClick="@(() => EditApplicantReference(context.Id))">
+                    @Resource.Edit
+                </MudButton>
+                <MudButton Variant="Variant.Filled"
+                           StartIcon="@Icons.Material.Filled.Delete"
+                           Size="Size.Small"
+                           Color="Color.Error"
+                           OnClick="@(() => RemoveApplicantReference(context.Id))">
+                    @Resource.Remove
+                </MudButton>
+            </MudButtonGroup>
+        </MudTd>
+    </RowTemplate>
+    <PagerContent>
+        <MudTablePager RowsPerPageString="@Resource.Rows_Per_Page" />
+    </PagerContent>
+</MudTable>

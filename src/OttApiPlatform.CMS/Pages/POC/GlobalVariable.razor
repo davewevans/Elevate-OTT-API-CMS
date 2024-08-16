@@ -1,0 +1,34 @@
+﻿@page "/poc/GlobalVariable"
+
+<MudCard>
+    <MudCardHeader>
+        <CardHeaderContent>
+            <MudText Typo="Typo.h6" Color="Color.Primary" Class="mb-4">
+                @Resource.Global_Variable
+                <MudFab OnClick="@TipsToggle" Label="@Resource.Tips" Color="Color.Secondary" StartIcon="@Icons.Material.Filled.TipsAndUpdates" Size="Size.Small" IconSize="Size.Small" Class="ma-2" />
+                <div Class="relative">
+                    <MudPopover Open="@IsTipsOpen" Class="px-4 pt-4">
+                        <MudElement HtmlTag="h4" Class="mt-4">This page demonstrates the use of global variables in conjunction with a Singleton Service.</MudElement>
+                        <MudDivider />
+                        <MudElement HtmlTag="h4" Class="mt-4">A Play/Stop button is located in the header menu, which is part of the Layout component.</MudElement>
+                        <MudDivider />
+                        <MudElement HtmlTag="h4" Class="mt-4">Clicking on the Play/Stop button sends a boolean value to this page.</MudElement>
+                        <MudDivider />
+                        <MudElement HtmlTag="h4" Class="mt-4">An audio player can be displayed or hidden based on the received value.</MudElement>
+                        <MudDivider />
+                        <MudButton OnClick="@TipsToggle" Variant="Variant.Filled" Color="Color.Error" Class="ml-auto mr-n3 mb-1 mt-4">@Resource.Close</MudButton>
+                    </MudPopover>
+                </div>
+            </MudText>
+        </CardHeaderContent>
+    </MudCardHeader>
+    <MudCardContent>
+        @if (AppStateManager.PlayAudio)
+        {
+            <audio autoplay controls><source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" /></audio>
+        }
+    </MudCardContent>
+    <MudCardActions>
+        @*<MudButton Variant="Variant.Text" Color="Color.Primary">Read More</MudButton>*@
+    </MudCardActions>
+</MudCard>

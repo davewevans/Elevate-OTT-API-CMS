@@ -1,0 +1,41 @@
+﻿@page "/poc/Localization/resources"
+
+<MudCard Elevation="5">
+    <MudCardHeader>
+        <CardHeaderContent>
+            <MudText Typo="Typo.h6" Color="Color.Primary" Class="mb-4">
+                @Resource.Culture_Based_Resources
+                <MudFab OnClick="@TipsToggle" Label="@Resource.Tips" Color="Color.Secondary" StartIcon="@Icons.Material.Filled.TipsAndUpdates" Size="Size.Small" IconSize="Size.Small" Class="ma-2" />
+                <div Class="relative">
+                    <MudPopover Open="@IsTipsOpen" Class="px-4 pt-4">
+                        <MudElement HtmlTag="h4">This page features multilingual resource strings displayed in the language selected by the current user.</MudElement>
+                        <MudDivider />
+                        <MudElement HtmlTag="h4" Class="mt-4">The localized strings can be accessed directly by calling [ResourceName].[Key], which is automatically generated when you add a new .resx file.</MudElement>
+                        <MudDivider />
+                        <MudElement HtmlTag="h4" Class="mt-4">ASP.NET Core localization provides IStringLocalizer that uses .resx files to store localization resources.</MudElement>
+                        <MudDivider />
+                        <MudElement HtmlTag="h4" Class="mt-4">The localized strings can also be accessed indirectly through ILocalizationService, which implements IStringLocalizer by providing the key of the resource string in the .resx file.</MudElement>
+                        <MudDivider />
+                        <MudElement HtmlTag="h4" Class="mt-4">You're not limited to using .resx files. By implementing IStringLocalizer, any data source can be used, such as Excel Spreadsheets, JSON, SQL Databases, and more.</MudElement>
+                        <MudDivider />
+                        <MudButton OnClick="@TipsToggle" Variant="Variant.Filled" Color="Color.Error" Class="ml-auto mr-n3 mb-1 mt-4">@Resource.Close</MudButton>
+                    </MudPopover>
+                </div>
+            </MudText>
+        </CardHeaderContent>
+    </MudCardHeader>
+    <MudCardContent>
+        <MudTabs Elevation="2" Rounded="true" ApplyEffectsToContainer="true" PanelClass="pa-6">
+            <MudTabPanel Style="text-transform:none" Text="[ResourceName].[Key]">
+                <MudText Align="Align.Justify">@Resource.Lorem</MudText>
+                <hr />
+                <MudElement><img style="width:100%" src="/images/code-screenshots/static-resource-class.png" /></MudElement>
+            </MudTabPanel>
+            <MudTabPanel Style="text-transform:none" Text="LocalizationService.GetString(Key)">
+                <MudText Align="Align.Justify">@LocalizationService.GetString("Ispum")</MudText>
+                <hr />
+                <MudElement><img style="width:100%" src="/images/code-screenshots/istringlocalizer-service.png" /></MudElement>
+            </MudTabPanel>
+        </MudTabs>
+    </MudCardContent>
+</MudCard>

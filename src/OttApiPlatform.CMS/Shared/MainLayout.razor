@@ -1,0 +1,46 @@
+﻿@inherits LayoutComponentBase
+
+<MudRTLProvider RightToLeft="@IsRightToLeft">
+    <MudThemeProvider Theme="DefaultTheme" @bind-IsDarkMode="@IsDarkMode" />
+    <MudSnackbarProvider />
+    <MudDialogProvider FullWidth="false"
+                       MaxWidth="MaxWidth.Large"
+                       CloseButton="true"
+                       DisableBackdropClick="true"
+                       NoHeader="false"
+                       Position="DialogPosition.Center"
+                       CloseOnEscapeKey="true" />
+    <AppOverlay OverlayVisible="@AppStateManager.OverlayVisible"/>
+    <MudLayout>
+        <MudAppBar>
+            <AppLogo IsDarkMode="IsDarkMode"/>
+            <MudSpacer/>
+            <HeaderButtons/>
+            <MudDivider Vertical="true" FlexItem="true"/>
+            <MudIconButton Color="Color.Inherit"
+                           OnClick="@(e => DarkModeToggle())"
+                           Size="Size.Medium"
+                           Icon="@(IsDarkMode ? "fa fa-sun-o" : "fa fa-moon-o")"/>
+            <LanguageSwitcher/>
+            <MudHidden Breakpoint="Breakpoint.Xs">
+                <LoginLinks/>
+            </MudHidden>
+        </MudAppBar>
+        <MudDrawer @bind-Open="DrawerOpen" ClipMode="DrawerClipMode.Always">
+            <MudHidden Breakpoint="Breakpoint.MdAndUp">
+                <MudIconButton Icon="@Icons.Material.Outlined.Close" Color="Color.Inherit" OnClick="@DrawerToggle"/>
+            </MudHidden>
+            <NavMenu/>
+        </MudDrawer>
+        <MudMainContent>
+            <GlobalSpinner Visible="AppStateManager.OverlayVisible"></GlobalSpinner>
+            <MudToolBar DisableGutters="true">
+                <MudIconButton Icon="@Icons.Material.Outlined.Menu" Color="Color.Inherit" OnClick="@DrawerToggle" Class="ml-3"/>
+                <MudBreadcrumbs Items="@BreadcrumbService.BreadcrumbItems"></MudBreadcrumbs>
+            </MudToolBar>
+            <MudContainer>
+                @Body
+            </MudContainer>
+        </MudMainContent>
+    </MudLayout>
+</MudRTLProvider>

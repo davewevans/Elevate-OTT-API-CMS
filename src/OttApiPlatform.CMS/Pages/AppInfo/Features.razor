@@ -1,0 +1,164 @@
+﻿@page "/appInfo/features"
+
+<MudCard>
+    <MudCardHeader>
+        <CardHeaderContent>
+            <MudText Typo="Typo.h5" Color="Color.Primary">Features</MudText>
+        </CardHeaderContent>
+        <CardHeaderActions>
+            <MudIconButton Icon="@Icons.Material.Filled.Settings" Color="Color.Default" />
+        </CardHeaderActions>
+    </MudCardHeader>
+    <MudCardContent>
+        <MudGrid>
+            <MudItem xs="6">
+                <MudCard Elevation="25">
+                    <img src="https://CMS.net/assets/img/features/net7.jpg" width="100%" Height="350px" />
+                    <MudCardContent>
+                        <MudAlert Severity="Severity.Info" NoIcon="true" Class="my-2"><MudText Typo="Typo.h6">BASED ON THE LATEST FRAMEWORKS</MudText></MudAlert>
+                        <MudList>
+                            <MudListSubheader>
+                                <MudText Typo="Typo.subtitle2">WRITTEN USING THE MOST STABLE WEB DEVELOPMENT FRAMEWORKS</MudText>
+                            </MudListSubheader>
+                            <MudListItem Text=".NET 7" Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                            <MudListItem Text="Blazor WebAssembly." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                            <MudListItem Text="MudBlazor UI Components Library." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                            <MudListItem Text="SQL Server Database." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                        </MudList>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton Variant="Variant.Text" Color="Color.Primary" OnClick="VisitCMS">Learn More</MudButton>
+                    </MudCardActions>
+                </MudCard>
+                <MudCard Elevation="25" Class="mt-4">
+                    <img src="https://CMS.net/assets/img/features/multi-tenancy.jpg" width="100%" Height="350px" />
+                    <MudCardContent>
+                        <MudAlert Severity="Severity.Info" NoIcon="true" Class="my-2"><MudText Typo="Typo.h6">MULTI-TENANCY</MudText></MudAlert>
+                        <MudList>
+                            <MudListSubheader>
+                                <MudText Typo="Typo.subtitle2">SaaS DEVELOPMENT WILL BECOME EASIER THAN EVER</MudText>
+                            </MudListSubheader>
+                            <MudListItem Text="Multi-tenant and single-tenant modes." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                            <MudListItem Text="Request Header Tenant Resolution Strategy." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                            <MudListItem Text="Separate subdomain for each tenant." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                            <MudListItem Text="Subdomain emulation on localhost machine." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                            <MudListItem Text="Tenant-specific data isolation." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                            <MudListItem Text="Shared database for all tenants." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                            <MudListItem Text="Single database per tenant." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                        </MudList>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton Variant="Variant.Text" Color="Color.Primary" OnClick="VisitCMS">Learn More</MudButton>
+                    </MudCardActions>
+                </MudCard>
+                <MudCard Elevation="25" Class="mt-4">
+                    <img src="https://CMS.net/assets/img/features/multilingual-support.jpg" width="100%" Height="350px" />
+                    <MudCardContent>
+                        <MudAlert Severity="Severity.Info" NoIcon="true" Class="my-2"><MudText Typo="Typo.h6">MULTILINGUAL SUPPORT</MudText></MudAlert>
+                        <MudList>
+                            <MudListSubheader>
+                                <MudText Typo="Typo.subtitle2">MAKE YOUR BUSINESS GO GLOBAL WITH DYNAMIC UI LOCALIZATION</MudText>
+                            </MudListSubheader>
+                            <MudListItem Text="UI Localization." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                            <MudListItem Text="Ability to define new extra languages." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                            <MudListItem Text="Separate resource files for backend localized messages and frontend localized lables." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                            <MudListItem Text="One-click translation using ResXManager Visual Studio extension." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                        </MudList>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton Variant="Variant.Text" Color="Color.Primary" OnClick="VisitCMS">Learn More</MudButton>
+                    </MudCardActions>
+                </MudCard>
+            </MudItem>
+
+            <MudItem xs="6">
+                <MudCard Elevation="25">
+                    <img src="https://CMS.net/assets/img/features/authentication-vs-authorization.jpg" width="100%" Height="350px" />
+                    <MudCardContent>
+                        <MudAlert Severity="Severity.Info" NoIcon="true" Class="my-2"><MudText Typo="Typo.h6">AUTHENTICATION & AUTHORIZATION</MudText></MudAlert>
+                        <MudList>
+                            <MudListSubheader>
+                                <MudText Typo="Typo.subtitle2">OUT OF THE BOX ASP.NET IDENTITY BLAZOR-BASED UI</MudText>
+                            </MudListSubheader>
+                            <MudListItem Text="Based on ASP.NET Identity." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                            <MudListItem Text="Two-Factor Authentication." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                            <MudListItem Text="Sign in, sign up, password reset and account activation via email confirmation." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                            <MudListItem Text="Users and roles administration with permission-based authorization." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                            <MudListItem Text="User settings, sign in settings, password settings and lockout settings." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                        </MudList>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton Variant="Variant.Text" Color="Color.Primary" OnClick="VisitCMS">Learn More</MudButton>
+                    </MudCardActions>
+                </MudCard>
+                <MudCard Elevation="25" Class="mt-4">
+                    <img src="https://CMS.net/assets/img/features/cross-cutting-concerns.jpg" width="100%" Height="350px" />
+                    <MudCardContent>
+                        <MudAlert Severity="Severity.Info" NoIcon="true" Class="my-2"><MudText Typo="Typo.h6">CROSS-CUTTING CONCERNS</MudText></MudAlert>
+                        <MudList>
+                            <MudListSubheader>
+                                <MudText Typo="Typo.subtitle2">NO REPEATED TASKS ANYMORE!</MudText>
+                            </MudListSubheader>
+                            <MudListItem Text="Different types of storage that can be switched between On-Premises Storage and Azure Storage." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                            <MudListItem Text="Client-side and server-side data validation using FluentValidation." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                            <MudListItem Text="Atomic database transactions processing where all commands are encapsulated in one batch." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                            <MudListItem Text="Exception handling for all types of exceptions." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                            <MudListItem Text="Expiration date management for both access/refresh tokens." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                        </MudList>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton Variant="Variant.Text" Color="Color.Primary" OnClick="VisitCMS">Learn More</MudButton>
+                    </MudCardActions>
+                </MudCard>
+                <MudCard Elevation="25" Class="mt-4">
+                    <img src="https://CMS.net/assets/img/features/mudblazor.jpg" width="100%" Height="350px" />
+                    <MudCardContent>
+                        <MudAlert Severity="Severity.Info" NoIcon="true" Class="my-2"><MudText Typo="Typo.h6">BASED ON MUDBLAZOR</MudText></MudAlert>
+                        <MudList>
+                            <MudListSubheader>
+                                <MudText Typo="Typo.subtitle2">THE #1 OPEN SOURCE BLAZOR COMPONENTS UI FRAMEWORK</MudText>
+                            </MudListSubheader>
+                            <MudListItem Text="Community-based open source project." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                            <MudListItem Text="Well-supported." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                            <MudListItem Text="Based on Material Design." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                            <MudListItem Text="Versatile UI components." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                            <MudListItem Text="Responsive design." Icon="@Icons.Material.Filled.Check" IconColor="Color.Secondary" />
+                        </MudList>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton Variant="Variant.Text" Color="Color.Primary" OnClick="VisitMudBlazor">Learn More</MudButton>
+                    </MudCardActions>
+                </MudCard>
+            </MudItem>
+        </MudGrid>
+    </MudCardContent>
+</MudCard>
+
+@code {
+
+    [Inject] private IBreadcrumbService BreadcrumbService { get; set; }
+
+    [Inject] private INavigationService NavigationService { get; set; }
+
+    protected override void OnInitialized()
+    {
+        BreadcrumbService.SetBreadcrumbItems(new List<BreadcrumbItem>
+        {
+            new(Resource.Home, "/"),
+            new(Resource.App_Info, "#", true),
+            new(Resource.Features, "#", true)
+        });
+
+    }
+
+    private void VisitCMS()
+    {
+        NavigationService.NavigateToUrlAsync("https://CMS.net/technical-specifications", openInNewTab: true);
+    }
+
+    private void VisitMudBlazor()
+    {
+        NavigationService.NavigateToUrlAsync("https://mudblazor.com/", openInNewTab: true);
+    }
+
+}

@@ -1,0 +1,2232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Abbreviated_Day_Names" xml:space="preserve">
+    <value>缩写日名称</value>
+  </data>
+  <data name="Abbreviated_Month_Genitive_Names" xml:space="preserve">
+    <value>缩写月天才名称</value>
+  </data>
+  <data name="Abbreviated_Month_Names" xml:space="preserve">
+    <value>缩写月名</value>
+  </data>
+  <data name="Access" xml:space="preserve">
+    <value>访问</value>
+  </data>
+  <data name="Access_Token_TimeSpan" xml:space="preserve">
+    <value>访问令牌时间跨度</value>
+  </data>
+  <data name="Account" xml:space="preserve">
+    <value>帐户</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>行动</value>
+  </data>
+  <data name="Activated" xml:space="preserve">
+    <value>激活</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>加</value>
+  </data>
+  <data name="Add_Applicant" xml:space="preserve">
+    <value>添加申请人</value>
+  </data>
+  <data name="Add_Authenticator_App" xml:space="preserve">
+    <value>添加身份验证器应用</value>
+  </data>
+  <data name="Add_New_File" xml:space="preserve">
+    <value>添加新文件</value>
+  </data>
+  <data name="Add_Reference" xml:space="preserve">
+    <value>参考资料</value>
+  </data>
+  <data name="Add_Role" xml:space="preserve">
+    <value>添加角色</value>
+  </data>
+  <data name="Add_Roles" xml:space="preserve">
+    <value>添加角色</value>
+  </data>
+  <data name="Add_Selected_Roles" xml:space="preserve">
+    <value>添加选定角色</value>
+  </data>
+  <data name="Add_Tenant" xml:space="preserve">
+    <value>添加租户</value>
+  </data>
+  <data name="Add_transcripts" xml:space="preserve">
+    <value>添加成绩单</value>
+  </data>
+  <data name="Add_User" xml:space="preserve">
+    <value>添加用户</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>都</value>
+  </data>
+  <data name="Allowed_for_new_users" xml:space="preserve">
+    <value>允许新用户使用</value>
+  </data>
+  <data name="Allowed_username_characters" xml:space="preserve">
+    <value>允许使用用户名字符</value>
+  </data>
+  <data name="Already_have_an_account" xml:space="preserve">
+    <value>已经有帐户了？</value>
+  </data>
+  <data name="AM_Designator" xml:space="preserve">
+    <value>上午指定</value>
+  </data>
+  <data name="and" xml:space="preserve">
+    <value>和</value>
+  </data>
+  <data name="Android" xml:space="preserve">
+    <value>人造人</value>
+  </data>
+  <data name="Applicant" xml:space="preserve">
+    <value>申请人</value>
+  </data>
+  <data name="Applicants" xml:space="preserve">
+    <value>申请人</value>
+  </data>
+  <data name="Apply_for_Military" xml:space="preserve">
+    <value>申请军事</value>
+  </data>
+  <data name="App_Info" xml:space="preserve">
+    <value>应用信息</value>
+  </data>
+  <data name="April" xml:space="preserve">
+    <value>四月</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_change_the_settings" xml:space="preserve">
+    <value>您确定要更改设置吗？</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_delete_file_name" xml:space="preserve">
+    <value>您确定要删除文件"{0}"吗？</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_delete_role_name" xml:space="preserve">
+    <value>您确定要删除角色"{0}"吗？</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_delete_user_name" xml:space="preserve">
+    <value>您确定要删除用户"{0}"吗？</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_remove_role_name" xml:space="preserve">
+    <value>你确定要删除角色 "{0}" 吗？</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_save_applicant" xml:space="preserve">
+    <value>你确定要拯救申请人吗？</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_save_role" xml:space="preserve">
+    <value>你确定要保存角色吗？</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_save_user_profile" xml:space="preserve">
+    <value>您确定要保存用户配置文件吗？</value>
+  </data>
+  <data name="Army" xml:space="preserve">
+    <value>军队</value>
+  </data>
+  <data name="Assigned_Roles" xml:space="preserve">
+    <value>分配角色</value>
+  </data>
+  <data name="Assign_Permissions" xml:space="preserve">
+    <value>分配权限</value>
+  </data>
+  <data name="Assign_Roles" xml:space="preserve">
+    <value>分配角色</value>
+  </data>
+  <data name="August" xml:space="preserve">
+    <value>八月</value>
+  </data>
+  <data name="Authenticator_App" xml:space="preserve">
+    <value>身份验证器应用程序</value>
+  </data>
+  <data name="Authenticator_Code" xml:space="preserve">
+    <value>身份验证器代码</value>
+  </data>
+  <data name="Authorization" xml:space="preserve">
+    <value>授权</value>
+  </data>
+  <data name="Authorizing" xml:space="preserve">
+    <value>授权</value>
+  </data>
+  <data name="Avatar" xml:space="preserve">
+    <value>化身</value>
+  </data>
+  <data name="Awesome" xml:space="preserve">
+    <value>棒！</value>
+  </data>
+  <data name="Azure_File_Storage" xml:space="preserve">
+    <value>蔚蓝文件存储</value>
+  </data>
+  <data name="before_you_can_log_in_with_a_recovery_code" xml:space="preserve">
+    <value>在使用恢复代码登录之前。</value>
+  </data>
+  <data name="Biomass" xml:space="preserve">
+    <value>生物量</value>
+  </data>
+  <data name="Biomass1" xml:space="preserve">
+    <value>生物量</value>
+  </data>
+  <data name="BMI" xml:space="preserve">
+    <value>BMI</value>
+  </data>
+  <data name="BMI_Details" xml:space="preserve">
+    <value>BMI 25.0 或以上超重，而健康范围为 18.5 至 24.9。BMI 适用于大多数 18-65 岁的成年人。</value>
+  </data>
+  <data name="BMI_Info" xml:space="preserve">
+    <value>身体质量指数是使用一个人的身高和体重进行简单计算的。公式为 BMI = kg/m2，其中公斤是一个人的体重公斤，m2 是其高度在米平方。</value>
+  </data>
+  <data name="Body_Mass_Index" xml:space="preserve">
+    <value>身体质量指数</value>
+  </data>
+  <data name="Bottom" xml:space="preserve">
+    <value>底</value>
+  </data>
+  <data name="Browser_Time_Zone" xml:space="preserve">
+    <value>浏览器时间</value>
+  </data>
+  <data name="Buy_Now" xml:space="preserve">
+    <value>立即购买</value>
+  </data>
+  <data name="Bytes" xml:space="preserve">
+    <value>字节</value>
+  </data>
+  <data name="Calcium" xml:space="preserve">
+    <value>钙</value>
+  </data>
+  <data name="Calendar" xml:space="preserve">
+    <value>日历</value>
+  </data>
+  <data name="Calendar_Week_Rule" xml:space="preserve">
+    <value>日历周规则</value>
+  </data>
+  <data name="Californium" xml:space="preserve">
+    <value>鐦</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Cancel_Upload" xml:space="preserve">
+    <value>取消上传</value>
+  </data>
+  <data name="Carbon" xml:space="preserve">
+    <value>碳</value>
+  </data>
+  <data name="Cerium" xml:space="preserve">
+    <value>铈</value>
+  </data>
+  <data name="Cesium" xml:space="preserve">
+    <value>铯</value>
+  </data>
+  <data name="Change_Email" xml:space="preserve">
+    <value>更改电子邮件</value>
+  </data>
+  <data name="Change_Password" xml:space="preserve">
+    <value>更改密码</value>
+  </data>
+  <data name="Change_User_Password" xml:space="preserve">
+    <value>更改用户密码</value>
+  </data>
+  <data name="Change_your_account_settings" xml:space="preserve">
+    <value>更改帐户设置</value>
+  </data>
+  <data name="Chernobyl_1" xml:space="preserve">
+    <value>切尔诺贝利-1</value>
+  </data>
+  <data name="Chernobyl_2" xml:space="preserve">
+    <value>切尔诺贝利-2</value>
+  </data>
+  <data name="Chernobyl_3" xml:space="preserve">
+    <value>切尔诺贝利-3</value>
+  </data>
+  <data name="Chernobyl_4" xml:space="preserve">
+    <value>切尔诺贝利-4</value>
+  </data>
+  <data name="Chlorine" xml:space="preserve">
+    <value>氯</value>
+  </data>
+  <data name="Chromium" xml:space="preserve">
+    <value>铬</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>清楚</value>
+  </data>
+  <data name="Click" xml:space="preserve">
+    <value>点击</value>
+  </data>
+  <data name="click_here_to_log_in" xml:space="preserve">
+    <value>单击此处登录</value>
+  </data>
+  <data name="Client_Side_Authorization" xml:space="preserve">
+    <value>客户端授权</value>
+  </data>
+  <data name="Client_Side_Validation" xml:space="preserve">
+    <value>客户端验证</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="Close_SignalR_Connection" xml:space="preserve">
+    <value>关闭信号器连接</value>
+  </data>
+  <data name="Coal" xml:space="preserve">
+    <value>煤</value>
+  </data>
+  <data name="Coal1" xml:space="preserve">
+    <value>煤</value>
+  </data>
+  <data name="Cobalt" xml:space="preserve">
+    <value>钴</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>法典</value>
+  </data>
+  <data name="Code_Samples" xml:space="preserve">
+    <value>代码示例</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>已完成！</value>
+  </data>
+  <data name="Configure_Authenticator_App" xml:space="preserve">
+    <value>配置身份验证器应用程序</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>确认</value>
+  </data>
+  <data name="Confirm_Email" xml:space="preserve">
+    <value>确认电子邮件</value>
+  </data>
+  <data name="Confirm_Email_Change" xml:space="preserve">
+    <value>确认电子邮件更改</value>
+  </data>
+  <data name="Confirm_Password" xml:space="preserve">
+    <value>确认密码</value>
+  </data>
+  <data name="ContentType" xml:space="preserve">
+    <value>內容分類</value>
+  </data>
+  <data name="Copernicium" xml:space="preserve">
+    <value>哥白尼</value>
+  </data>
+  <data name="Copper" xml:space="preserve">
+    <value>铜</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>创造</value>
+  </data>
+  <data name="Created_On" xml:space="preserve">
+    <value>创建日期</value>
+  </data>
+  <data name="Culture_Based_Resources" xml:space="preserve">
+    <value>基于文化的资源</value>
+  </data>
+  <data name="Culture_Code" xml:space="preserve">
+    <value>文化规范</value>
+  </data>
+  <data name="Culture_Currency_Symbol" xml:space="preserve">
+    <value>文化货币符号</value>
+  </data>
+  <data name="Culture_DateTime_Pattern" xml:space="preserve">
+    <value>文化日期时间模式</value>
+  </data>
+  <data name="Culture_Info" xml:space="preserve">
+    <value>文化信息</value>
+  </data>
+  <data name="Curium" xml:space="preserve">
+    <value>锔</value>
+  </data>
+  <data name="Current_Culture_DateTime_Format" xml:space="preserve">
+    <value>当前文化日期时间格式</value>
+  </data>
+  <data name="Current_Culture_Info" xml:space="preserve">
+    <value>当前文化信息</value>
+  </data>
+  <data name="Current_Culture_Time_Zone_Info" xml:space="preserve">
+    <value>当前文化时区信息</value>
+  </data>
+  <data name="Current_Documents" xml:space="preserve">
+    <value>当前文档</value>
+  </data>
+  <data name="Current_password" xml:space="preserve">
+    <value>当前密码</value>
+  </data>
+  <data name="Current_Transcripts" xml:space="preserve">
+    <value>当前成绩单</value>
+  </data>
+  <data name="Danger" xml:space="preserve">
+    <value>危险</value>
+  </data>
+  <data name="Darmstadtium" xml:space="preserve">
+    <value>鐽</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>挡泥板</value>
+  </data>
+  <data name="Data_Export_SignalR_Hangfire" xml:space="preserve">
+    <value>数据导出（ SignalR &amp; Hangfire )</value>
+  </data>
+  <data name="DateTime_Format" xml:space="preserve">
+    <value>日期时间格式</value>
+  </data>
+  <data name="Date_of_Birth" xml:space="preserve">
+    <value>出生日期</value>
+  </data>
+  <data name="Date_Separator" xml:space="preserve">
+    <value>日期分离器</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>日</value>
+  </data>
+  <data name="Day_Names" xml:space="preserve">
+    <value>日名称</value>
+  </data>
+  <data name="Deactivated" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="December" xml:space="preserve">
+    <value>十二月</value>
+  </data>
+  <data name="Default_Admin_Credentials" xml:space="preserve">
+    <value>默认管理员凭据</value>
+  </data>
+  <data name="Default_lockout_time_span" xml:space="preserve">
+    <value>默认锁定时间跨度</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Delete_my_Account" xml:space="preserve">
+    <value>删除我的帐户</value>
+  </data>
+  <data name="Delete_Personal_Data" xml:space="preserve">
+    <value>删除个人数据</value>
+  </data>
+  <data name="Deleting_this_data_will_permanently_remove_your_account_and_this_cannot_be_recovered" xml:space="preserve">
+    <value>删除此数据将永久删除您的帐户，并且无法恢复此帐户。</value>
+  </data>
+  <data name="Disable_2FA" xml:space="preserve">
+    <value>禁用双因子身份验证</value>
+  </data>
+  <data name="Disable_Two-Factor_Authentication" xml:space="preserve">
+    <value>禁用双因子身份验证</value>
+  </data>
+  <data name="Disabling_2FA_does_not_change_the_keys_used_in_authenticator_apps" xml:space="preserve">
+    <value>禁用双重身份验证不会改变身份验证器应用中使用的密钥</value>
+  </data>
+  <data name="Dismissed" xml:space="preserve">
+    <value>解雇</value>
+  </data>
+  <data name="Display_Name" xml:space="preserve">
+    <value>显示名称</value>
+  </data>
+  <data name="Documents" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="Dont_have_access_to_your_authenticator_device" xml:space="preserve">
+    <value>无法访问您的身份验证器设备？</value>
+  </data>
+  <data name="Dont_have_an_account" xml:space="preserve">
+    <value>没有帐户？</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>下载</value>
+  </data>
+  <data name="Downloads" xml:space="preserve">
+    <value>下载</value>
+  </data>
+  <data name="Download_a_two-factor_authenticator_app_like_Microsoft_Authenticator_for" xml:space="preserve">
+    <value>下载双因素身份验证器应用程序，如微软身份验证器</value>
+  </data>
+  <data name="Do_you_really_want_to_delete_this_record" xml:space="preserve">
+    <value>你真的想删除这个记录吗？</value>
+  </data>
+  <data name="Do_you_want_to_remove_this_record" xml:space="preserve">
+    <value>您想删除此记录吗？</value>
+  </data>
+  <data name="Dubnium" xml:space="preserve">
+    <value>杜布尼姆</value>
+  </data>
+  <data name="Dysprosium" xml:space="preserve">
+    <value>镝</value>
+  </data>
+  <data name="Earnings" xml:space="preserve">
+    <value>收益</value>
+  </data>
+  <data name="Earning_Report" xml:space="preserve">
+    <value>收入报告</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
+  <data name="Edit_Applicant" xml:space="preserve">
+    <value>编辑申请人</value>
+  </data>
+  <data name="Edit_Reference" xml:space="preserve">
+    <value>编辑索引</value>
+  </data>
+  <data name="Edit_Role" xml:space="preserve">
+    <value>编辑角色</value>
+  </data>
+  <data name="Edit_Tenant" xml:space="preserve">
+    <value>编辑租户</value>
+  </data>
+  <data name="Edit_User" xml:space="preserve">
+    <value>编辑用户</value>
+  </data>
+  <data name="Einsteinium" xml:space="preserve">
+    <value>锿</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>电子邮件</value>
+  </data>
+  <data name="Email_Change_Confirmation" xml:space="preserve">
+    <value>电子邮件更改确认</value>
+  </data>
+  <data name="Email_Change_Confirmed" xml:space="preserve">
+    <value>已确认的电子邮件更改</value>
+  </data>
+  <data name="Email_Confirmation" xml:space="preserve">
+    <value>电子邮件确认</value>
+  </data>
+  <data name="Email_Confirmed" xml:space="preserve">
+    <value>已确认的电子邮件</value>
+  </data>
+  <data name="Employee_broke_a_finger_while_writing_some_code" xml:space="preserve">
+    <value>员工在编写一些代码时摔断了一根手指</value>
+  </data>
+  <data name="enable_QR_code_generation" xml:space="preserve">
+    <value>启用 QR 代码生成</value>
+  </data>
+  <data name="End" xml:space="preserve">
+    <value>结束</value>
+  </data>
+  <data name="End_Slope" xml:space="preserve">
+    <value>结束斜坡</value>
+  </data>
+  <data name="English_Name" xml:space="preserve">
+    <value>英文名称</value>
+  </data>
+  <data name="Enter_the_code_in_the_confirmation_box_below" xml:space="preserve">
+    <value>在下面的确认框中输入代码。</value>
+  </data>
+  <data name="Enter_your_email" xml:space="preserve">
+    <value>输入您的电子邮件。</value>
+  </data>
+  <data name="entries" xml:space="preserve">
+    <value>条目</value>
+  </data>
+  <data name="Erbium" xml:space="preserve">
+    <value>铒</value>
+  </data>
+  <data name="Error_Pages" xml:space="preserve">
+    <value>错误页面</value>
+  </data>
+  <data name="Europium" xml:space="preserve">
+    <value>铕</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>导出！</value>
+  </data>
+  <data name="ExportAsPdfInBackground" xml:space="preserve">
+    <value>导出为PDF （火灾和忘记） ！</value>
+  </data>
+  <data name="Exporting_data_may_take_a_while" xml:space="preserve">
+    <value>可能需要一段时间。</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>已失败！</value>
+  </data>
+  <data name="FAQ" xml:space="preserve">
+    <value>常见问题</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>特征</value>
+  </data>
+  <data name="February" xml:space="preserve">
+    <value>二月</value>
+  </data>
+  <data name="Fermium" xml:space="preserve">
+    <value>镄</value>
+  </data>
+  <data name="FileName" xml:space="preserve">
+    <value>文件名</value>
+  </data>
+  <data name="File_is_empty" xml:space="preserve">
+    <value>文件是空的。</value>
+  </data>
+  <data name="File_Name" xml:space="preserve">
+    <value>文件名</value>
+  </data>
+  <data name="File_Rename" xml:space="preserve">
+    <value>文件重命名</value>
+  </data>
+  <data name="File_Size" xml:space="preserve">
+    <value>文件大小</value>
+  </data>
+  <data name="File_Storage_Settings" xml:space="preserve">
+    <value>文件存储设置</value>
+  </data>
+  <data name="File_Type" xml:space="preserve">
+    <value>文件类型</value>
+  </data>
+  <data name="File_upload_has_been_cancelled" xml:space="preserve">
+    <value>文件上传已取消。</value>
+  </data>
+  <data name="Fire_in_reactor_core" xml:space="preserve">
+    <value>反应堆核心起火</value>
+  </data>
+  <data name="First" xml:space="preserve">
+    <value>第一</value>
+  </data>
+  <data name="First_Day_of_Week" xml:space="preserve">
+    <value>一周的第一天</value>
+  </data>
+  <data name="First_Name" xml:space="preserve">
+    <value>名字</value>
+  </data>
+  <data name="Fluent_Validation" xml:space="preserve">
+    <value>流畅验证</value>
+  </data>
+  <data name="Fluorine" xml:space="preserve">
+    <value>氟</value>
+  </data>
+  <data name="Forget_this_browser" xml:space="preserve">
+    <value>忘记此浏览器</value>
+  </data>
+  <data name="Forgot_password_confirmation" xml:space="preserve">
+    <value>忘记密码确认</value>
+  </data>
+  <data name="Forgot_your_password" xml:space="preserve">
+    <value>忘了密码？</value>
+  </data>
+  <data name="for_how_to_configure_a_real_email_sender" xml:space="preserve">
+    <value>如何配置真正的电子邮件发送者</value>
+  </data>
+  <data name="Fossil" xml:space="preserve">
+    <value>化石</value>
+  </data>
+  <data name="Francium" xml:space="preserve">
+    <value>钫</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>全名</value>
+  </data>
+  <data name="Full_DateTime_Pattern" xml:space="preserve">
+    <value>全日期时间模式</value>
+  </data>
+  <data name="Gas" xml:space="preserve">
+    <value>气</value>
+  </data>
+  <data name="Gas1" xml:space="preserve">
+    <value>气</value>
+  </data>
+  <data name="Generate" xml:space="preserve">
+    <value>生成</value>
+  </data>
+  <data name="generate_a_new_set_of_recovery_codes" xml:space="preserve">
+    <value>生成一组新的恢复代码</value>
+  </data>
+  <data name="Generating_new_recovery_codes_does_not_change_the_keys_used_in_authenticator_apps" xml:space="preserve">
+    <value>生成新的恢复代码不会改变身份验证器应用中使用的密钥。</value>
+  </data>
+  <data name="Geothermal" xml:space="preserve">
+    <value>地热的</value>
+  </data>
+  <data name="Germany" xml:space="preserve">
+    <value>德国</value>
+  </data>
+  <data name="Getting_Started" xml:space="preserve">
+    <value>开始</value>
+  </data>
+  <data name="Global_Settings" xml:space="preserve">
+    <value>全局设置</value>
+  </data>
+  <data name="Global_Spread" xml:space="preserve">
+    <value>全球传播</value>
+  </data>
+  <data name="Global_Variable" xml:space="preserve">
+    <value>全球变量</value>
+  </data>
+  <data name="Google_Authenticator_for" xml:space="preserve">
+    <value>谷歌身份验证器</value>
+  </data>
+  <data name="Got_it" xml:space="preserve">
+    <value>明白了！</value>
+  </data>
+  <data name="Graphite_on_roof" xml:space="preserve">
+    <value>屋顶上的石墨</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>高度</value>
+  </data>
+  <data name="Hello" xml:space="preserve">
+    <value>你好</value>
+  </data>
+  <data name="here" xml:space="preserve">
+    <value>这里</value>
+  </data>
+  <data name="High" xml:space="preserve">
+    <value>高</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>家</value>
+  </data>
+  <data name="Hour" xml:space="preserve">
+    <value>小时</value>
+  </data>
+  <data name="Hydro" xml:space="preserve">
+    <value>水电</value>
+  </data>
+  <data name="Identity" xml:space="preserve">
+    <value>身份</value>
+  </data>
+  <data name="Identity_Settings" xml:space="preserve">
+    <value>标识设置</value>
+  </data>
+  <data name="If_you_do_not_complete_your_authenticator_app_configuration_you_may_lose_access_to_your_account" xml:space="preserve">
+    <value>如果您没有完成身份验证器应用配置，您可能会失去对帐户的访问权限。</value>
+  </data>
+  <data name="If_you_lose_your_device_and_dont_have_the_recovery_codes_you_will_lose_access_to_your_account" xml:space="preserve">
+    <value>如果您丢失了设备，并且没有恢复代码，您将无法访问您的帐户</value>
+  </data>
+  <data name="If_you_reset_your_authenticator_key_your_authenticator_app_will_not_work_until_you_reconfigure_it" xml:space="preserve">
+    <value>如果您重置了身份验证器密钥，则在重新配置之前，您的身份验证器应用将不起作用。</value>
+  </data>
+  <data name="If_you_wish_to_change_the_key_used_in_an_authenticator_app_you_should" xml:space="preserve">
+    <value>如果您想更改身份验证器应用中使用的密钥，您应该更改</value>
+  </data>
+  <data name="Im_sorry_I_can't_display_anything_until_you" xml:space="preserve">
+    <value>对不起，在你之前我什么也展示不了</value>
+  </data>
+  <data name="Incident_in_plant_number_4" xml:space="preserve">
+    <value>工厂 4 号事件</value>
+  </data>
+  <data name="Installation" xml:space="preserve">
+    <value>安装</value>
+  </data>
+  <data name="Interpolation_Algorithm" xml:space="preserve">
+    <value>插值算法</value>
+  </data>
+  <data name="into_your_two_factor_authenticator_app._Spaces_and_casing_do_not_matter" xml:space="preserve">
+    <value>进入您的两个因子身份验证器应用程序。空间和外壳并不重要。</value>
+  </data>
+  <data name="Invalid_file_name" xml:space="preserve">
+    <value>无效文件名。</value>
+  </data>
+  <data name="In_Progress" xml:space="preserve">
+    <value>学习中</value>
+  </data>
+  <data name="iOS" xml:space="preserve">
+    <value>ios</value>
+  </data>
+  <data name="Ispum" xml:space="preserve">
+    <value>塞德 · 维塔 · 亨德雷里特 · 正义埃尼安 · 欧米在乌尔纳 · 埃莱芬德迫在眉睫。莫比 · 阿克 · 里苏斯 · 维尔 · 马萨 · 丁西顿 · 莱西尼亚阿利夸姆 · 奥古 · 利贝罗， 维内纳蒂斯坐在阿梅特 · 内克 · 恩特， 迪格尼西姆 · 内杜姆 · 埃利特。农克调味品 enim 非前埃格斯塔斯洛博蒂斯。塞德 · 费利斯 · 格拉维达 · 尼西 · 布兰迪特 · 波尔塔塞德 · 乌特里克斯 · 菲尼布斯 · 乌兰科默努拉姆 · 康格 · 马莱苏达 · 朗库斯在非瓦里乌斯弧形。库拉比图尔波尔塔伊拉特 id 内克发酵， 乌特菲尼布斯杜伊维内纳蒂斯。福斯 · 特里斯蒂克 · 咒骂普尔维纳尔南康塞特康复兽人， 元素精英 ultrices ac 。洛雷姆 · 伊普苏姆 · 多洛坐在阿梅特， 依斯特 · 阿迪皮斯 · 精英。普林 · 利奥 · 努拉， 法西利斯坐在阿梅特地方拉特 · 塞德， 平淡无奇的非萨皮恩。</value>
+  </data>
+  <data name="Issues_rising" xml:space="preserve">
+    <value>问题上升</value>
+  </data>
+  <data name="Is_Active_User" xml:space="preserve">
+    <value>是活跃用户</value>
+  </data>
+  <data name="Is_Default" xml:space="preserve">
+    <value>是默认的</value>
+  </data>
+  <data name="Is_Email_Confirmed" xml:space="preserve">
+    <value>已确认电子邮件</value>
+  </data>
+  <data name="Is_Static" xml:space="preserve">
+    <value>是静态的</value>
+  </data>
+  <data name="Items_per_page" xml:space="preserve">
+    <value>每页项目</value>
+  </data>
+  <data name="January" xml:space="preserve">
+    <value>一月</value>
+  </data>
+  <data name="Job_Title" xml:space="preserve">
+    <value>职位名称</value>
+  </data>
+  <data name="Join_the_Military" xml:space="preserve">
+    <value>参军</value>
+  </data>
+  <data name="July" xml:space="preserve">
+    <value>七月</value>
+  </data>
+  <data name="June" xml:space="preserve">
+    <value>六月</value>
+  </data>
+  <data name="Last" xml:space="preserve">
+    <value>最后</value>
+  </data>
+  <data name="Last_Name" xml:space="preserve">
+    <value>姓</value>
+  </data>
+  <data name="Learn_how_to" xml:space="preserve">
+    <value>学习如何</value>
+  </data>
+  <data name="Left" xml:space="preserve">
+    <value>左</value>
+  </data>
+  <data name="Legend_Position" xml:space="preserve">
+    <value>传奇位置</value>
+  </data>
+  <data name="Live_data_powered_by_SignalR" xml:space="preserve">
+    <value>由 SignalR 提供支持的实时数据</value>
+  </data>
+  <data name="Loading_On_Demand" xml:space="preserve">
+    <value>按需加载</value>
+  </data>
+  <data name="Localization" xml:space="preserve">
+    <value>地方化</value>
+  </data>
+  <data name="Local_Time" xml:space="preserve">
+    <value>当地时间</value>
+  </data>
+  <data name="Lockout_Settings" xml:space="preserve">
+    <value>锁定设置</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>登录</value>
+  </data>
+  <data name="login_lowered" xml:space="preserve">
+    <value>登录</value>
+  </data>
+  <data name="Login_out" xml:space="preserve">
+    <value>登录...</value>
+  </data>
+  <data name="Login_With_Authenticator_Code" xml:space="preserve">
+    <value>使用 2FA 代码登录</value>
+  </data>
+  <data name="Login_With_Recovery_Code" xml:space="preserve">
+    <value>使用恢复代码登录</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>注销</value>
+  </data>
+  <data name="Log_in" xml:space="preserve">
+    <value>登录</value>
+  </data>
+  <data name="log_in_with_a_recovery_code" xml:space="preserve">
+    <value>使用恢复代码登录</value>
+  </data>
+  <data name="Long_Date_Pattern" xml:space="preserve">
+    <value>长日期模式</value>
+  </data>
+  <data name="Long_Time_Pattern" xml:space="preserve">
+    <value>长时间模式</value>
+  </data>
+  <data name="Lorem" xml:space="preserve">
+    <value>毛里斯 · 库苏斯 · 杜伊在特卢斯 · 格拉维达， 乌特 · 亚库利斯 · 安特 · 马蒂斯。艾尼安 · 布兰迪特 · 福西布斯 · 菲尼布斯埃尼安 · 尤斯梅斯 · 洛雷姆 · 梅图斯乌特维塔 · 努拉 · 阿克 · 毛里斯 · 武尔普坦 · 阿克 · 非兽医。克拉斯在丁西顿奥古， 奎斯 · 埃莱芬德 · 埃斯特。奎斯克岩浆， 元素乌特佩伦特斯克维塔， 波特特奎斯夸姆。普莱森特外阴瓦里乌斯前和苏斯普里特。普拉森特无足轻弹的法西西斯 · 尼西 · 非索代尔斯。努拉姆坐在阿梅特 · 洛雷姆 · 奎斯 · 尼西 · 佩伦特斯克装饰品里。佩伦特斯克最大塞德乌纳维尔尤斯莫德。在埃格斯塔斯 · 奥迪 · 埃斯特 · 格拉维达 · 洛博蒂斯在瓦里乌斯毛里， 俏皮的装饰品。塞德 · 森珀 · 普雷蒂姆 · 镁， 一个秃鹰秃鹰。奎斯克 · 欧 · 康格 · 夸姆， 坐在阿梅特 · 尤斯莫德 · 伊普苏姆。</value>
+  </data>
+  <data name="Low" xml:space="preserve">
+    <value>低</value>
+  </data>
+  <data name="March" xml:space="preserve">
+    <value>三月</value>
+  </data>
+  <data name="Master_Details_Form" xml:space="preserve">
+    <value>主-详细信息表单！</value>
+  </data>
+  <data name="Maximum_Failed_Access_Attempts" xml:space="preserve">
+    <value>最大访问尝试失败</value>
+  </data>
+  <data name="May" xml:space="preserve">
+    <value>五月</value>
+  </data>
+  <data name="Medium" xml:space="preserve">
+    <value>中等</value>
+  </data>
+  <data name="Military_Applicants" xml:space="preserve">
+    <value>军事申请人</value>
+  </data>
+  <data name="Minor" xml:space="preserve">
+    <value>次要</value>
+  </data>
+  <data name="Minute" xml:space="preserve">
+    <value>纪要</value>
+  </data>
+  <data name="Modified_On" xml:space="preserve">
+    <value>修改日期</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>月</value>
+  </data>
+  <data name="Month_Day_Pattern" xml:space="preserve">
+    <value>月日模式</value>
+  </data>
+  <data name="Month_Genitive_Names" xml:space="preserve">
+    <value>月天才名称</value>
+  </data>
+  <data name="Month_Names" xml:space="preserve">
+    <value>月名称</value>
+  </data>
+  <data name="My_Account" xml:space="preserve">
+    <value>我的帐户</value>
+  </data>
+  <data name="My_Claims" xml:space="preserve">
+    <value>我的索赔</value>
+  </data>
+  <data name="My_Permissions" xml:space="preserve">
+    <value>我的权限</value>
+  </data>
+  <data name="My_Profile" xml:space="preserve">
+    <value>我的个人资料</value>
+  </data>
+  <data name="My_Profile_Picture" xml:space="preserve">
+    <value>我的个人资料图片</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>名字</value>
+  </data>
+  <data name="Native_Calendar_Name" xml:space="preserve">
+    <value>本地日历名称</value>
+  </data>
+  <data name="Native_Name" xml:space="preserve">
+    <value>原名</value>
+  </data>
+  <data name="Natural_Spline" xml:space="preserve">
+    <value>天然飞溅</value>
+  </data>
+  <data name="New_Email" xml:space="preserve">
+    <value>新电子邮件</value>
+  </data>
+  <data name="New_Registered_Users_are_Active_by_Default" xml:space="preserve">
+    <value>默认情况下，新注册用户处于活动状态</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>下一个</value>
+  </data>
+  <data name="Normally_this_would_be_emailed" xml:space="preserve">
+    <value>通常，这将通过电子邮件发送</value>
+  </data>
+  <data name="November" xml:space="preserve">
+    <value>十一月</value>
+  </data>
+  <data name="No_data_available" xml:space="preserve">
+    <value>没有可用的数据。</value>
+  </data>
+  <data name="No_keep_it" xml:space="preserve">
+    <value>不，留着它</value>
+  </data>
+  <data name="Nuclear" xml:space="preserve">
+    <value>核</value>
+  </data>
+  <data name="Occupational_injury" xml:space="preserve">
+    <value>工伤</value>
+  </data>
+  <data name="October" xml:space="preserve">
+    <value>十月</value>
+  </data>
+  <data name="Oil" xml:space="preserve">
+    <value>油</value>
+  </data>
+  <data name="Oil1" xml:space="preserve">
+    <value>油</value>
+  </data>
+  <data name="Once_you_have_scanned_the_QR_code_or_input_the_key_above" xml:space="preserve">
+    <value>扫描 QR 代码或输入上面的密钥后</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>选项</value>
+  </data>
+  <data name="or" xml:space="preserve">
+    <value>或</value>
+  </data>
+  <data name="out_of" xml:space="preserve">
+    <value>出</value>
+  </data>
+  <data name="Overview" xml:space="preserve">
+    <value>概述</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>密码</value>
+  </data>
+  <data name="Password_Settings" xml:space="preserve">
+    <value>密码设置</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>待定！</value>
+  </data>
+  <data name="Periodic" xml:space="preserve">
+    <value>周期的</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>权限</value>
+  </data>
+  <data name="Personal_Data" xml:space="preserve">
+    <value>个人数据</value>
+  </data>
+  <data name="Phone_Number" xml:space="preserve">
+    <value>电话号码</value>
+  </data>
+  <data name="Phone_number_is_required" xml:space="preserve">
+    <value>电话号码是必需的。</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>玩</value>
+  </data>
+  <data name="Please" xml:space="preserve">
+    <value>请</value>
+  </data>
+  <data name="Please_check_your_email_to_confirm_your_account" xml:space="preserve">
+    <value>请检查您的电子邮件以确认您的帐户。</value>
+  </data>
+  <data name="Please_check_your_email_to_reset_your_password_or_click" xml:space="preserve">
+    <value>请检查您的电子邮件以重置您的密码或单击</value>
+  </data>
+  <data name="Please_provide_new_name_for_the_file_or_leave_it_as_is" xml:space="preserve">
+    <value>请为文件提供新名称或保留它。</value>
+  </data>
+  <data name="PM_Designator" xml:space="preserve">
+    <value>下午指定</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>以前</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>轮廓</value>
+  </data>
+  <data name="Profile_Picture" xml:space="preserve">
+    <value>配置文件图片</value>
+  </data>
+  <data name="Proof_of_Concepts" xml:space="preserve">
+    <value>概念证明</value>
+  </data>
+  <data name="Properties" xml:space="preserve">
+    <value>性能</value>
+  </data>
+  <data name="Property" xml:space="preserve">
+    <value>财产</value>
+  </data>
+  <data name="Put_these_codes_in_a_safe_place" xml:space="preserve">
+    <value>将这些代码放在一个安全的地方。</value>
+  </data>
+  <data name="QueryString" xml:space="preserve">
+    <value>搜索条件</value>
+  </data>
+  <data name="Quick_Search" xml:space="preserve">
+    <value>快速搜索</value>
+  </data>
+  <data name="Randomize" xml:space="preserve">
+    <value>随机</value>
+  </data>
+  <data name="Realtime_Data" xml:space="preserve">
+    <value>实时</value>
+  </data>
+  <data name="Recent_incidents" xml:space="preserve">
+    <value>最近发生的事件</value>
+  </data>
+  <data name="Recovery_Code" xml:space="preserve">
+    <value>恢复代码</value>
+  </data>
+  <data name="Recovery_Codes" xml:space="preserve">
+    <value>恢复代码</value>
+  </data>
+  <data name="Reference" xml:space="preserve">
+    <value>参考资料</value>
+  </data>
+  <data name="References" xml:space="preserve">
+    <value>参考信息</value>
+  </data>
+  <data name="Reference_name_is_required" xml:space="preserve">
+    <value>名称是必填项！</value>
+  </data>
+  <data name="Refresh_Token_TimeSpan" xml:space="preserve">
+    <value>刷新令牌时间跨度</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>注册</value>
+  </data>
+  <data name="Register_as_a_new_user" xml:space="preserve">
+    <value>注册为新用户</value>
+  </data>
+  <data name="Register_Confirmation" xml:space="preserve">
+    <value>注册确认</value>
+  </data>
+  <data name="Remember_me" xml:space="preserve">
+    <value>还记得我吗？</value>
+  </data>
+  <data name="Remember_this_machine" xml:space="preserve">
+    <value>记住这台机器</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Reporting" xml:space="preserve">
+    <value>报！</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>报告</value>
+  </data>
+  <data name="Report_Details" xml:space="preserve">
+    <value>报告详情</value>
+  </data>
+  <data name="Required_Length" xml:space="preserve">
+    <value>所需长度</value>
+  </data>
+  <data name="Required_Unique_Characters" xml:space="preserve">
+    <value>要求的独特字符</value>
+  </data>
+  <data name="Require_Confirmed_Account" xml:space="preserve">
+    <value>需要确认的帐户</value>
+  </data>
+  <data name="Require_Confirmed_Email" xml:space="preserve">
+    <value>需要确认的电子邮件</value>
+  </data>
+  <data name="Require_Confirmed_Phone_Number" xml:space="preserve">
+    <value>需要确认的电话号码</value>
+  </data>
+  <data name="Require_Digits" xml:space="preserve">
+    <value>需要数字</value>
+  </data>
+  <data name="Require_Lowercase_Characters" xml:space="preserve">
+    <value>要求小写字符</value>
+  </data>
+  <data name="Require_Non_Alphanumeric" xml:space="preserve">
+    <value>要求非字母数字</value>
+  </data>
+  <data name="Require_Uppercase_Characters" xml:space="preserve">
+    <value>需要上壳字符</value>
+  </data>
+  <data name="Resend" xml:space="preserve">
+    <value>发送</value>
+  </data>
+  <data name="Resend_Email_Confirmation" xml:space="preserve">
+    <value>重新发送电子邮件确认</value>
+  </data>
+  <data name="Reset_2FA_App" xml:space="preserve">
+    <value>重置双因素身份验证应用</value>
+  </data>
+  <data name="Reset_2FA_Recovery_Codes" xml:space="preserve">
+    <value>重置双重身份验证恢复代码</value>
+  </data>
+  <data name="Reset_Authenticator_App" xml:space="preserve">
+    <value>重置身份验证器应用</value>
+  </data>
+  <data name="Reset_Authenticator_Key" xml:space="preserve">
+    <value>重置身份验证器密钥</value>
+  </data>
+  <data name="Reset_Password" xml:space="preserve">
+    <value>重置密码</value>
+  </data>
+  <data name="Reset_Password_Confirmation" xml:space="preserve">
+    <value>重置密码确认</value>
+  </data>
+  <data name="Reset_Recovery_Codes" xml:space="preserve">
+    <value>重置恢复代码</value>
+  </data>
+  <data name="reset_your_authenticator_keys" xml:space="preserve">
+    <value>重置身份验证器密钥</value>
+  </data>
+  <data name="Reset_your_password" xml:space="preserve">
+    <value>重置密码。</value>
+  </data>
+  <data name="Resource.Issues_is_almost_reaching_100" xml:space="preserve">
+    <value>资源. 问题几乎达到 100</value>
+  </data>
+  <data name="Resources" xml:space="preserve">
+    <value>资源</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>返回</value>
+  </data>
+  <data name="RFC1123_Pattern" xml:space="preserve">
+    <value>RFC1123 模式</value>
+  </data>
+  <data name="Right" xml:space="preserve">
+    <value>右</value>
+  </data>
+  <data name="Roentgen" xml:space="preserve">
+    <value>伦琴</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>角色</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>角色</value>
+  </data>
+  <data name="Role_Name" xml:space="preserve">
+    <value>角色名称</value>
+  </data>
+  <data name="Rows_Per_Page" xml:space="preserve">
+    <value>每页行：</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>救</value>
+  </data>
+  <data name="Scan_the_QR_Code_or_enter_this_key" xml:space="preserve">
+    <value>扫描 QR 代码或输入此密钥</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="Search_by_Roles" xml:space="preserve">
+    <value>按角色搜索</value>
+  </data>
+  <data name="see" xml:space="preserve">
+    <value>看</value>
+  </data>
+  <data name="Select_Roles" xml:space="preserve">
+    <value>选择角色</value>
+  </data>
+  <data name="Send_Activation_Email" xml:space="preserve">
+    <value>发送激活电子邮件</value>
+  </data>
+  <data name="Septemper" xml:space="preserve">
+    <value>塞普伦珀</value>
+  </data>
+  <data name="Series_1" xml:space="preserve">
+    <value>系列 1</value>
+  </data>
+  <data name="Series_2" xml:space="preserve">
+    <value>系列 2</value>
+  </data>
+  <data name="Server_Side_Authorization" xml:space="preserve">
+    <value>服务器侧授权</value>
+  </data>
+  <data name="Server_Side_Validation" xml:space="preserve">
+    <value>服务器侧验证</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="Setup_Authenticator_App" xml:space="preserve">
+    <value>设置身份验证器应用程序</value>
+  </data>
+  <data name="Set_Random_Password" xml:space="preserve">
+    <value>设置随机密码</value>
+  </data>
+  <data name="Shortest_Day_Names" xml:space="preserve">
+    <value>最短的日名称</value>
+  </data>
+  <data name="Short_Date_Pattern" xml:space="preserve">
+    <value>短日期模式</value>
+  </data>
+  <data name="Short_Time_Pattern" xml:space="preserve">
+    <value>短时间模式</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>展示</value>
+  </data>
+  <data name="Side_Authorization" xml:space="preserve">
+    <value>侧授权</value>
+  </data>
+  <data name="Sign_in" xml:space="preserve">
+    <value>登录</value>
+  </data>
+  <data name="Sign_in_Settings" xml:space="preserve">
+    <value>在"设置"中签名</value>
+  </data>
+  <data name="Sign_up" xml:space="preserve">
+    <value>登记</value>
+  </data>
+  <data name="Solar" xml:space="preserve">
+    <value>太阳的</value>
+  </data>
+  <data name="Something_went_wrong" xml:space="preserve">
+    <value>出事了！</value>
+  </data>
+  <data name="Sorry_there's_nothing_at_this_address" xml:space="preserve">
+    <value>对不起，这个地址什么都没有。</value>
+  </data>
+  <data name="Sortable_DateTime_Pattern" xml:space="preserve">
+    <value>可排序日期时间模式</value>
+  </data>
+  <data name="SSN" xml:space="preserve">
+    <value>社会保障号码</value>
+  </data>
+  <data name="SSNShort" xml:space="preserve">
+    <value>SSN</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>开始</value>
+  </data>
+  <data name="Start_SignalR_Connection" xml:space="preserve">
+    <value>启动信号器连接</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>地位</value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>停</value>
+  </data>
+  <data name="Storage_type_is" xml:space="preserve">
+    <value>存储类型是</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>提交</value>
+  </data>
+  <data name="Succeeded" xml:space="preserve">
+    <value>成功！</value>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>支持</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>姓</value>
+  </data>
+  <data name="Suspend" xml:space="preserve">
+    <value>暂停</value>
+  </data>
+  <data name="Sweden" xml:space="preserve">
+    <value>瑞典</value>
+  </data>
+  <data name="Tenants" xml:space="preserve">
+    <value>租户</value>
+  </data>
+  <data name="Thank_you_for_confirming_your_email" xml:space="preserve">
+    <value>感谢您确认您的电子邮件。</value>
+  </data>
+  <data name="these_docs" xml:space="preserve">
+    <value>这些文档</value>
+  </data>
+  <data name="The_page_you_were_looking_for_doesnt_exist" xml:space="preserve">
+    <value>您要查找的页面不存在。</value>
+  </data>
+  <data name="The_selected_file_exceeds_the_allowed_maximum_size_limit" xml:space="preserve">
+    <value>选定的文件超过允许的最大尺寸限制。</value>
+  </data>
+  <data name="The_selected_file_extension_is_not_allowed" xml:space="preserve">
+    <value>不允许选择文件扩展。</value>
+  </data>
+  <data name="This_action_only_disables_2FA" xml:space="preserve">
+    <value>此操作仅禁用双重身份验证。</value>
+  </data>
+  <data name="This_app_does_not_currently_have_a_real_email_sender_registered" xml:space="preserve">
+    <value>此应用程序目前没有注册真正的电子邮件发送者</value>
+  </data>
+  <data name="This_page_allows_you_to_download_or_delete_that_data" xml:space="preserve">
+    <value>此页面允许您下载或删除该数据。</value>
+  </data>
+  <data name="This_process_disables_2FA_until_you_verify_your_authenticator_app" xml:space="preserve">
+    <value>此过程禁用双重身份验证，直到您验证您的身份验证器应用。</value>
+  </data>
+  <data name="Time_Separator" xml:space="preserve">
+    <value>时间分离器</value>
+  </data>
+  <data name="Time_Zone" xml:space="preserve">
+    <value>时区</value>
+  </data>
+  <data name="Time_Zone_Info" xml:space="preserve">
+    <value>时区</value>
+  </data>
+  <data name="Time_Zone_OffSet" xml:space="preserve">
+    <value>时区偏移！</value>
+  </data>
+  <data name="Tips" xml:space="preserve">
+    <value>技巧</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>标题</value>
+  </data>
+  <data name="Token_Info" xml:space="preserve">
+    <value>令牌信息</value>
+  </data>
+  <data name="Token_Settings" xml:space="preserve">
+    <value>令牌设置</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>返回页首</value>
+  </data>
+  <data name="Total_Cost" xml:space="preserve">
+    <value>总成本</value>
+  </data>
+  <data name="to_confirm_your_account" xml:space="preserve">
+    <value>确认您的帐户</value>
+  </data>
+  <data name="to_login" xml:space="preserve">
+    <value>登录。</value>
+  </data>
+  <data name="To_use_an_authenticator_app_go_through_the_following_steps" xml:space="preserve">
+    <value>要使用身份验证器应用，请经历以下步骤：</value>
+  </data>
+  <data name="Two_Factor_Authentication" xml:space="preserve">
+    <value>双重身份验证</value>
+  </data>
+  <data name="Two_Factor_Authentication_works_by_adding_an_additional_layer" xml:space="preserve">
+    <value>双因素身份验证 （2FA） 的工作原理是为您的在线帐户添加额外的安全层。它需要额外的登录凭据 - 不仅仅是用户名和密码 - 才能获得帐户访问权限，而获得第二个凭据需要访问属于您的东西。</value>
+  </data>
+  <data name="UI_Culture_Code" xml:space="preserve">
+    <value>UI 文化规范</value>
+  </data>
+  <data name="Unable_to_upload_an_empty_file" xml:space="preserve">
+    <value>无法上传空文件。</value>
+  </data>
+  <data name="Unautorized" xml:space="preserve">
+    <value>未自动</value>
+  </data>
+  <data name="United_States" xml:space="preserve">
+    <value>美国</value>
+  </data>
+  <data name="Units_of_Time" xml:space="preserve">
+    <value>时间单位</value>
+  </data>
+  <data name="Universal_Sortable_DateTime_Pattern" xml:space="preserve">
+    <value>通用可排序日期时间模式</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="Upload_Avatar" xml:space="preserve">
+    <value>上传阿凡达</value>
+  </data>
+  <data name="Upload_Documents" xml:space="preserve">
+    <value>上传文档</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>用户名</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>用户</value>
+  </data>
+  <data name="Users_Management" xml:space="preserve">
+    <value>用户管理</value>
+  </data>
+  <data name="User_Account" xml:space="preserve">
+    <value>用户帐户</value>
+  </data>
+  <data name="User_Documents" xml:space="preserve">
+    <value>用户文档</value>
+  </data>
+  <data name="User_is_not_found" xml:space="preserve">
+    <value>找不到用户。</value>
+  </data>
+  <data name="User_Profile" xml:space="preserve">
+    <value>用户配置文件</value>
+  </data>
+  <data name="User_Settings" xml:space="preserve">
+    <value>用户设置</value>
+  </data>
+  <data name="Use_a_local_account_to_log_in" xml:space="preserve">
+    <value>使用本地帐户登录。</value>
+  </data>
+  <data name="Validation_Summary" xml:space="preserve">
+    <value>验证摘要</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>价值</value>
+  </data>
+  <data name="Verify" xml:space="preserve">
+    <value>验证</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>视图</value>
+  </data>
+  <data name="View_Applicant" xml:space="preserve">
+    <value>查看申请人</value>
+  </data>
+  <data name="Visit_Website" xml:space="preserve">
+    <value>访问网站</value>
+  </data>
+  <data name="Weight" xml:space="preserve">
+    <value>重量</value>
+  </data>
+  <data name="Wind" xml:space="preserve">
+    <value>风</value>
+  </data>
+  <data name="Year_Month_Pattern" xml:space="preserve">
+    <value>年月模式</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>是的</value>
+  </data>
+  <data name="Yes_delete_it" xml:space="preserve">
+    <value>是的，删除它</value>
+  </data>
+  <data name="Yes_remove_it" xml:space="preserve">
+    <value>是的，删除它</value>
+  </data>
+  <data name="Yes_rename_it" xml:space="preserve">
+    <value>是的，重命名它</value>
+  </data>
+  <data name="Your_account_contains_personal_data_that_you_have_given_us" xml:space="preserve">
+    <value>您的帐户包含您提供给我们的个人数据。</value>
+  </data>
+  <data name="Your_password_has_been_reset" xml:space="preserve">
+    <value>您的密码已重置</value>
+  </data>
+  <data name="Your_report_0_is_ready_to_download" xml:space="preserve">
+    <value>您的报告{0}已准备好下载。!</value>
+  </data>
+  <data name="Your_report_generation_has_failed" xml:space="preserve">
+    <value>您的报告生成失败！</value>
+  </data>
+  <data name="Your_report_is_being_generated" xml:space="preserve">
+    <value>正在生成您的报告。！</value>
+  </data>
+  <data name="Your_report_is_being_initiated" xml:space="preserve">
+    <value>您的报告正在启动！</value>
+  </data>
+  <data name="Your_report_is_ready_to_download" xml:space="preserve">
+    <value>您的报告已准备就绪，可以下载了！</value>
+  </data>
+  <data name="Your_report__0__is_ready_to_download\" xml:space="preserve">
+    <value>您的报告{0}已准备好下载。!</value>
+  </data>
+  <data name="your_two_factor_authentication_app_will_provide_you_with_a_unique_code" xml:space="preserve">
+    <value>您的两个因子身份验证应用程序将为您提供一个唯一的代码。</value>
+  </data>
+  <data name="You_are_not_authenticated_to_export_this_report" xml:space="preserve">
+    <value>您没有经过身份验证可以导出此报表。!</value>
+  </data>
+  <data name="You_are_not_authorized_to_access_this_page" xml:space="preserve">
+    <value>您未获授权访问此页面</value>
+  </data>
+  <data name="You_can" xml:space="preserve">
+    <value>您可以</value>
+  </data>
+  <data name="You_have_no_recovery_codes_left" xml:space="preserve">
+    <value>您没有剩余的恢复代码。</value>
+  </data>
+  <data name="You_have_num_recovery_codes_left" xml:space="preserve">
+    <value>您还剩下{0}恢复代码。</value>
+  </data>
+  <data name="You_have_one_recovery_code_left" xml:space="preserve">
+    <value>您还剩下一个恢复代码。</value>
+  </data>
+  <data name="You_must" xml:space="preserve">
+    <value>你必须</value>
+  </data>
+  <data name="You_should" xml:space="preserve">
+    <value>你应该</value>
+  </data>
+  <data name="File_has_been_uploaded_successfully" xml:space="preserve">
+    <value>文件已成功上传。</value>
+  </data>
+  <data name="File_upload_was_cancelled" xml:space="preserve">
+    <value>文件上传已取消。</value>
+  </data>
+  <data name="Upload_File" xml:space="preserve">
+    <value>上传文件</value>
+  </data>
+  <data name="Access_token_timespan_cannot_be_null" xml:space="preserve">
+    <value>访问令牌时间跨度不能为 null。</value>
+  </data>
+  <data name="Access_token_timespan_is_required" xml:space="preserve">
+    <value>访问令牌时间跨度是必需的。</value>
+  </data>
+  <data name="Allowed_username_characters_are_required" xml:space="preserve">
+    <value>允许的用户名字符是必需的。</value>
+  </data>
+  <data name="An_unknown_failure_has_occurred" xml:space="preserve">
+    <value>发生了未知故障。</value>
+  </data>
+  <data name="Applicant_has_been_created_successfully" xml:space="preserve">
+    <value>申请人已成功创建</value>
+  </data>
+  <data name="Applicant_has_been_deleted_successfully" xml:space="preserve">
+    <value>已成功删除申请人。</value>
+  </data>
+  <data name="Applicant_has_been_updated_successfully" xml:space="preserve">
+    <value>申请人已成功更新。</value>
+  </data>
+  <data name="A_user_with_this_login_already_exists" xml:space="preserve">
+    <value>具有此登录名的用户已存在。</value>
+  </data>
+  <data name="Cannot_disable_2FA_for_user_with_Id" xml:space="preserve">
+    <value>无法为ID为“{0}”的用户禁用双因素身份验证，因为它当前未启用。</value>
+  </data>
+  <data name="Cannot_generate_recovery_codes" xml:space="preserve">
+    <value>无法为用户名“{0}”生成恢复代码，因为它们未启用双因素身份验证。</value>
+  </data>
+  <data name="Code_is_required" xml:space="preserve">
+    <value>代码是必需的。</value>
+  </data>
+  <data name="Confirmation_link_to_change_email_has_been_sent" xml:space="preserve">
+    <value>已发送更改电子邮件的确认链接。请检查您的电子邮件。</value>
+  </data>
+  <data name="Confirm_password_is_required" xml:space="preserve">
+    <value>确认密码为必填项。</value>
+  </data>
+  <data name="Confirm_your_email" xml:space="preserve">
+    <value>确认您的电子邮件</value>
+  </data>
+  <data name="Date_of_Birth_is_required" xml:space="preserve">
+    <value>出生日期为必填项</value>
+  </data>
+  <data name="Default_lockout_time_Span_is_required" xml:space="preserve">
+    <value>默认锁定时间跨度是必需的</value>
+  </data>
+  <data name="Deletion_of_entity_failed" xml:space="preserve">
+    <value>删除实体“{0}”（{1}） 失败。{2}.</value>
+  </data>
+  <data name="Email_is_already_taken" xml:space="preserve">
+    <value>电子邮件“{0}”已被接收。</value>
+  </data>
+  <data name="Email_is_invalid" xml:space="preserve">
+    <value>电子邮件“{0}”无效。</value>
+  </data>
+  <data name="Entity_with_key_was_not_found" xml:space="preserve">
+    <value>找不到具有键“{1}”的实体“{0}”。</value>
+  </data>
+  <data name="Error_changing_user_name" xml:space="preserve">
+    <value>更改用户名时出错。</value>
+  </data>
+  <data name="Error_changing_your_user_name" xml:space="preserve">
+    <value>更改用户名时出错。</value>
+  </data>
+  <data name="File_has_not_been_uploaded" xml:space="preserve">
+    <value>文件尚未上传。</value>
+  </data>
+  <data name="File_storage_settings_have_been_updated_successfully" xml:space="preserve">
+    <value>已成功更新文件存储设置。</value>
+  </data>
+  <data name="First_name_is_required" xml:space="preserve">
+    <value>名字为必填项。</value>
+  </data>
+  <data name="Height_is_required" xml:space="preserve">
+    <value>高度是必需的。</value>
+  </data>
+  <data name="Identity_settings_have_been_updated_successfully" xml:space="preserve">
+    <value>标识设置已成功更新。</value>
+  </data>
+  <data name="Incorrect_password" xml:space="preserve">
+    <value>密码不正确。</value>
+  </data>
+  <data name="Invalid_applicant_Id" xml:space="preserve">
+    <value>申请人 ID 无效。</value>
+  </data>
+  <data name="Invalid_authenticator_code_entered" xml:space="preserve">
+    <value>输入的验证器代码无效。</value>
+  </data>
+  <data name="Invalid_client_request" xml:space="preserve">
+    <value>无效的客户端请求。</value>
+  </data>
+  <data name="Invalid_file_storage_Id" xml:space="preserve">
+    <value>无效的文件存储 ID。</value>
+  </data>
+  <data name="Invalid_lockout_settings_Id" xml:space="preserve">
+    <value>无效的锁定设置 ID。</value>
+  </data>
+  <data name="Invalid_login_attempt" xml:space="preserve">
+    <value>登录尝试无效。</value>
+  </data>
+  <data name="Invalid_password_settings_Id" xml:space="preserve">
+    <value>密码设置 ID 无效。</value>
+  </data>
+  <data name="Invalid_recovery_code_entered" xml:space="preserve">
+    <value>输入的恢复代码无效。</value>
+  </data>
+  <data name="Invalid_report_Id" xml:space="preserve">
+    <value>无效的报告 ID。</value>
+  </data>
+  <data name="Invalid_role_Id" xml:space="preserve">
+    <value>角色 ID 无效。</value>
+  </data>
+  <data name="Invalid_sign_in_settings_Id" xml:space="preserve">
+    <value>无效的登录设置 ID。</value>
+  </data>
+  <data name="Invalid_tenant_name" xml:space="preserve">
+    <value>租户名称无效。</value>
+  </data>
+  <data name="Invalid_token" xml:space="preserve">
+    <value>令牌无效。</value>
+  </data>
+  <data name="Invalid_token_settings_Id" xml:space="preserve">
+    <value>令牌设置 ID 无效。</value>
+  </data>
+  <data name="Invalid_user_Id" xml:space="preserve">
+    <value>无效的用户 ID。</value>
+  </data>
+  <data name="Invalid_user_settings_Id" xml:space="preserve">
+    <value>无效的用户设置 ID</value>
+  </data>
+  <data name="Job_title_is_required" xml:space="preserve">
+    <value>职称为必填项。</value>
+  </data>
+  <data name="Last_name_is_required" xml:space="preserve">
+    <value>姓氏为必填项</value>
+  </data>
+  <data name="Lockout_is_not_enabled_for_this_user" xml:space="preserve">
+    <value>未为此用户启用锁定。</value>
+  </data>
+  <data name="Maximum_allowed_number_of_attachments_must_not_exceed_3" xml:space="preserve">
+    <value>允许的最大附件数不得超过 3。</value>
+  </data>
+  <data name="Max_failed_access_attempt_is_required" xml:space="preserve">
+    <value>需要最大失败访问尝试次数。</value>
+  </data>
+  <data name="Method_cannot_be_null" xml:space="preserve">
+    <value>方法不能为空。</value>
+  </data>
+  <data name="Minimum_allowed_number_of_attachments_must_be_at_least_1" xml:space="preserve">
+    <value>允许的最小附件数必须至少为 1。</value>
+  </data>
+  <data name="New_password_is_required" xml:space="preserve">
+    <value>需要新密码。</value>
+  </data>
+  <data name="New_password_must_be_at_least_6_characters" xml:space="preserve">
+    <value>新密码必须至少为 6 个字符。</value>
+  </data>
+  <data name="New_password_must_not_exceed_200_characters" xml:space="preserve">
+    <value>新密码不得超过 200 个字符。</value>
+  </data>
+  <data name="N_A" xml:space="preserve">
+    <value>不适用</value>
+  </data>
+  <data name="Old_password_is_required" xml:space="preserve">
+    <value>需要旧密码。</value>
+  </data>
+  <data name="Only_those_between_the_ages_of_18_and_28_are_allowed_for_enlisting" xml:space="preserve">
+    <value>只允许年龄在18至28岁之间的人入伍。</value>
+  </data>
+  <data name="Only_those_whose_BMI_between_18_5_and_24_9_are_allowed_for_enlisting" xml:space="preserve">
+    <value>只有那些BMI在18.5和24.9之间的人才能入伍。</value>
+  </data>
+  <data name="Only_those_whose_heights_between_100_and_250_with_normal_BMI_are_allowed_for_enlisting" xml:space="preserve">
+    <value>只有身高在 100 到 250 之间且 BMI 正常的人才被允许入伍。</value>
+  </data>
+  <data name="Only_those_who_weigh_between_50_and_200_with_normal_BMI_are_allowed_for_enlisting" xml:space="preserve">
+    <value>只有体重在 50 到 200 岁之间且 BMI 正常的人才可以入伍。</value>
+  </data>
+  <data name="Optimistic_concurrency_failure" xml:space="preserve">
+    <value>乐观并发失败，对象已被修改。</value>
+  </data>
+  <data name="Passwords_must_be_at_least_length_characters" xml:space="preserve">
+    <value>密码必须至少为 {0} 个字符。</value>
+  </data>
+  <data name="Passwords_must_have_at_least_one_digit" xml:space="preserve">
+    <value>密码必须至少包含一个数字（“0”-“9”）。</value>
+  </data>
+  <data name="Passwords_must_have_at_least_one_lowercase" xml:space="preserve">
+    <value>密码必须至少有一个小写字母（“a”-“z”）。</value>
+  </data>
+  <data name="Passwords_must_have_at_least_one_non_alphanumeric_character" xml:space="preserve">
+    <value>密码必须至少包含一个非字母数字字符。</value>
+  </data>
+  <data name="Passwords_must_have_at_least_one_uppercase" xml:space="preserve">
+    <value>密码必须至少有一个大写字母（“A”-“Z”）。</value>
+  </data>
+  <data name="Password_cannot_contain_password" xml:space="preserve">
+    <value>密码不能包含“密码”。</value>
+  </data>
+  <data name="Password_cannot_contain_username" xml:space="preserve">
+    <value>密码不能包含用户名。</value>
+  </data>
+  <data name="Password_is_required" xml:space="preserve">
+    <value>密码为必填项。</value>
+  </data>
+  <data name="Password_must_be_at_least_6_characters" xml:space="preserve">
+    <value>密码必须至少为 6 个字符。</value>
+  </data>
+  <data name="Password_must_not_exceed_200_characters" xml:space="preserve">
+    <value>密码不得超过 200 个字符。</value>
+  </data>
+  <data name="Password_reset_link_was_sent" xml:space="preserve">
+    <value>密码重置链接已发送。请检查您的电子邮件。</value>
+  </data>
+  <data name="Please_confirm_your_account_by_clicking_here" xml:space="preserve">
+    <value>请 &lt;a href='{0}'&gt;点击这里&lt;/a&gt;确认您的帐户。</value>
+  </data>
+  <data name="Please_confirm_your_email" xml:space="preserve">
+    <value>请确认您的电子邮件。</value>
+  </data>
+  <data name="Please_reset_your_password_by_clicking_here" xml:space="preserve">
+    <value>请 &lt;a href='{0}'&gt;点击这里&lt;/a&gt;重置您的密码。</value>
+  </data>
+  <data name="Please_specify_the_application_tenant_mode" xml:space="preserve">
+    <value>请指定应用程序租户模式。</value>
+  </data>
+  <data name="Profile_picture_is_required" xml:space="preserve">
+    <value>个人资料图片为必填项。</value>
+  </data>
+  <data name="Recovery_Code_is_required" xml:space="preserve">
+    <value>恢复代码是必需的。</value>
+  </data>
+  <data name="Recovery_Code_Redemption_Failed" xml:space="preserve">
+    <value>恢复代码兑换失败</value>
+  </data>
+  <data name="Refresh_token_timespan_cannot_be_null" xml:space="preserve">
+    <value>刷新令牌时间跨度不能为空。</value>
+  </data>
+  <data name="Refresh_token_timespan_is_required" xml:space="preserve">
+    <value>需要刷新令牌时间跨度。</value>
+  </data>
+  <data name="Refresh_token_timespan_must_be_greater_than_access_token_expiry_time" xml:space="preserve">
+    <value>刷新令牌时间跨度必须大于访问令牌到期时间。</value>
+  </data>
+  <data name="Repeated_Ones_are_not_valid_Social_security_number" xml:space="preserve">
+    <value>111111111不是有效的社会安全号码。</value>
+  </data>
+  <data name="Repeated_Threes_are_not_valid_Social_security_number" xml:space="preserve">
+    <value>333333333不是有效的社会安全号码。</value>
+  </data>
+  <data name="Required_length_is_required" xml:space="preserve">
+    <value>所需长度为必填项。</value>
+  </data>
+  <data name="Required_unique_characters_is_required" xml:space="preserve">
+    <value>必需的唯一字符是必需的。</value>
+  </data>
+  <data name="Reset_your_password1" xml:space="preserve">
+    <value>重置密码</value>
+  </data>
+  <data name="Role_has_been_created_successfully" xml:space="preserve">
+    <value>已成功创建角色。</value>
+  </data>
+  <data name="Role_has_been_deleted_successfully" xml:space="preserve">
+    <value>已成功删除角色。</value>
+  </data>
+  <data name="Role_has_been_updated_successfully" xml:space="preserve">
+    <value>角色已成功更新。</value>
+  </data>
+  <data name="Role_name_is_already_taken" xml:space="preserve">
+    <value>角色名称“{0}”已被占用。</value>
+  </data>
+  <data name="Role_name_is_invalid" xml:space="preserve">
+    <value>角色名称“{0}”无效。</value>
+  </data>
+  <data name="Role_name_is_required" xml:space="preserve">
+    <value>角色名称是必需的。</value>
+  </data>
+  <data name="Social_security_number_is_required" xml:space="preserve">
+    <value>社会安全号码为必填项</value>
+  </data>
+  <data name="Social_security_number_must_contain_only_9_digits" xml:space="preserve">
+    <value>社会安全号码只能包含 9 位数字。</value>
+  </data>
+  <data name="Social_security_number_must_not_contain_consecutive_digits" xml:space="preserve">
+    <value>社会安全号码不得包含连续数字。</value>
+  </data>
+  <data name="Storage_type_is_required" xml:space="preserve">
+    <value>存储类型是必需的。</value>
+  </data>
+  <data name="Surname_is_required" xml:space="preserve">
+    <value>姓氏为必填项。</value>
+  </data>
+  <data name="Tenant_has_been_created_successfully" xml:space="preserve">
+    <value>已成功创建租户。</value>
+  </data>
+  <data name="Tenant_has_been_deleted_successfully" xml:space="preserve">
+    <value>已成功删除租户。</value>
+  </data>
+  <data name="Tenant_has_been_updated_successfully" xml:space="preserve">
+    <value>租户已成功更新。</value>
+  </data>
+  <data name="Tenant_name_is_required" xml:space="preserve">
+    <value>租户名称是必需的。</value>
+  </data>
+  <data name="The_applicant_is_not_found" xml:space="preserve">
+    <value>找不到申请人。</value>
+  </data>
+  <data name="The_password_and_confirmation_password_do_not_match" xml:space="preserve">
+    <value>密码和确认密码不匹配。</value>
+  </data>
+  <data name="The_specified_role_is_already_registered" xml:space="preserve">
+    <value>指定的角色已注册。</value>
+  </data>
+  <data name="The_specified_role_is_already_registered_in_the_given_tenant" xml:space="preserve">
+    <value>指定的角色已在给定租户中注册。</value>
+  </data>
+  <data name="The_specified_username_and_email_are_already_registered" xml:space="preserve">
+    <value>指定的用户名和电子邮件已注册。</value>
+  </data>
+  <data name="The_specified_username_and_email_are_already_registered_in_the_given_tenant" xml:space="preserve">
+    <value>指定的用户名和电子邮件已在给定租户中注册。</value>
+  </data>
+  <data name="The_user_has_no_2FA_enabled" xml:space="preserve">
+    <value>用户未启用 2FA。</value>
+  </data>
+  <data name="Token_settings_have_been_updated_successfully" xml:space="preserve">
+    <value>令牌设置已成功更新。</value>
+  </data>
+  <data name="Two_factor_authentication_code_is_required" xml:space="preserve">
+    <value>需要双因素身份验证代码。</value>
+  </data>
+  <data name="Two_factor_authentication_code_must_be_at_least_6_character_long" xml:space="preserve">
+    <value>双因素身份验证代码的长度必须至少为 6 个字符。</value>
+  </data>
+  <data name="Two_factor_authentication_code_must_not_exceed_7_characters" xml:space="preserve">
+    <value>双因素身份验证代码不得超过 7 个字符。</value>
+  </data>
+  <data name="Two_factor_authentication_has_been_disabled" xml:space="preserve">
+    <value>2Fa 已被禁用。您可以在设置身份验证器应用程序时重新启用双因素身份验证。</value>
+  </data>
+  <data name="Two_factor_authentication_required" xml:space="preserve">
+    <value>需要双因素身份验证。</value>
+  </data>
+  <data name="Unable_to_add_static_role" xml:space="preserve">
+    <value>无法添加静态角色</value>
+  </data>
+  <data name="Unable_to_create_new_tenant_in_single_tenant_mode" xml:space="preserve">
+    <value>无法在单租户模式下创建新租户。</value>
+  </data>
+  <data name="Unable_to_delete_static_role" xml:space="preserve">
+    <value>无法删除静态角色。</value>
+  </data>
+  <data name="Unable_to_delete_static_user" xml:space="preserve">
+    <value>无法删除静态用户。</value>
+  </data>
+  <data name="Unable_to_enable_2FA" xml:space="preserve">
+    <value>无法启用 2FA。</value>
+  </data>
+  <data name="Unable_to_load_applicant" xml:space="preserve">
+    <value>无法加载申请人。</value>
+  </data>
+  <data name="Unable_to_load_report" xml:space="preserve">
+    <value>无法加载报告。</value>
+  </data>
+  <data name="Unable_to_load_role" xml:space="preserve">
+    <value>无法加载角色。</value>
+  </data>
+  <data name="Unable_to_load_user" xml:space="preserve">
+    <value>无法加载用户。</value>
+  </data>
+  <data name="Unable_to_reset_authenticator_keys" xml:space="preserve">
+    <value>无法重置身份验证器密钥。</value>
+  </data>
+  <data name="Unable_to_update_static_role" xml:space="preserve">
+    <value>无法更新静态角色</value>
+  </data>
+  <data name="Unable_to_update_static_user" xml:space="preserve">
+    <value>无法更新静态用户。</value>
+  </data>
+  <data name="Unexpected_error_occurred_deleting_user_with_Id" xml:space="preserve">
+    <value>删除 ID 为“{0}”的用户时发生意外错误。</value>
+  </data>
+  <data name="Unexpected_error_occurred_disabling_2FA" xml:space="preserve">
+    <value>为ID为“{0}”的用户禁用双因素身份验证时发生意外错误。</value>
+  </data>
+  <data name="Username_has_been_confirmed_successfully" xml:space="preserve">
+    <value>用户名已成功确认。</value>
+  </data>
+  <data name="Username_is_already_taken" xml:space="preserve">
+    <value>用户名“{0}”已被占用。</value>
+  </data>
+  <data name="Username_is_invalid" xml:space="preserve">
+    <value>用户名“{0}”无效，只能包含字母或数字。</value>
+  </data>
+  <data name="Username_is_required" xml:space="preserve">
+    <value>用户名为必填项。</value>
+  </data>
+  <data name="Username_must_be_at_least_6_characters" xml:space="preserve">
+    <value>用户名必须至少为 6 个字符。</value>
+  </data>
+  <data name="Username_must_not_exceed_200_characters" xml:space="preserve">
+    <value>用户名不得超过 200 个字符。</value>
+  </data>
+  <data name="User_already_has_a_password_set" xml:space="preserve">
+    <value>用户已设置密码。</value>
+  </data>
+  <data name="User_already_in_role" xml:space="preserve">
+    <value>用户已处于角色“{0}”。</value>
+  </data>
+  <data name="User_has_been_added_without_files" xml:space="preserve">
+    <value>已添加没有文件的用户。</value>
+  </data>
+  <data name="User_has_been_created_successfully" xml:space="preserve">
+    <value>已成功创建用户。</value>
+  </data>
+  <data name="User_has_been_deleted_successfully" xml:space="preserve">
+    <value>已成功删除用户。</value>
+  </data>
+  <data name="User_has_been_updated_successfully" xml:space="preserve">
+    <value>用户已成功更新。</value>
+  </data>
+  <data name="User_has_been_updated_successfully_without_updating_his_her_roles_as_the_user_is_static_type" xml:space="preserve">
+    <value>用户已成功更新，无需更新他/她的角色，因为用户是静态类型。</value>
+  </data>
+  <data name="User_Id_is_required" xml:space="preserve">
+    <value>用户 ID 是必需的。</value>
+  </data>
+  <data name="User_permissions_have_been_updated_successfully" xml:space="preserve">
+    <value>已成功更新用户权限。</value>
+  </data>
+  <data name="User_with_Id_deleted" xml:space="preserve">
+    <value>ID 为“{0}”的用户已被删除。</value>
+  </data>
+  <data name="User_with_Id_UserId_logged_in_with_2Fa" xml:space="preserve">
+    <value>ID为“{0}”的用户使用双因素身份验证登录。</value>
+  </data>
+  <data name="value_cannot_be_null" xml:space="preserve">
+    <value>{0}不能为空</value>
+  </data>
+  <data name="Verification_code_is_invalid" xml:space="preserve">
+    <value>验证码无效。</value>
+  </data>
+  <data name="Verification_email_has_been_sent" xml:space="preserve">
+    <value>验证电子邮件已发送。请检查您的电子邮件。</value>
+  </data>
+  <data name="Weight_is_required" xml:space="preserve">
+    <value>重量为必填项。</value>
+  </data>
+  <data name="Your_account_is_deactivated_Please_contact_your_administrator" xml:space="preserve">
+    <value>您的帐户已停用。请联系您的管理员。</value>
+  </data>
+  <data name="Your_authenticator_app_has_been_verified" xml:space="preserve">
+    <value>您的身份验证器应用已经过验证。</value>
+  </data>
+  <data name="Your_authenticator_app_key_has_been_reset" xml:space="preserve">
+    <value>您的身份验证器应用密钥已重置，您需要使用新密钥配置身份验证器应用程序。</value>
+  </data>
+  <data name="Your_email_has_been_changed_successfully" xml:space="preserve">
+    <value>您的电子邮件已成功更改。</value>
+  </data>
+  <data name="Your_email_has_been_successfully_changed" xml:space="preserve">
+    <value>您的电子邮件已成功更改。</value>
+  </data>
+  <data name="Your_email_is_unchanged" xml:space="preserve">
+    <value>您的电子邮件保持不变。</value>
+  </data>
+  <data name="Your_password_has_been_changed" xml:space="preserve">
+    <value>您的密码已更改。</value>
+  </data>
+  <data name="Your_password_has_been_set" xml:space="preserve">
+    <value>您的密码已设置。</value>
+  </data>
+  <data name="You_are_locked_out" xml:space="preserve">
+    <value>你被锁在外面了。</value>
+  </data>
+  <data name="You_are_not_authorized" xml:space="preserve">
+    <value>您无权访问{0}。</value>
+  </data>
+  <data name="You_have_generated_new_recovery_codes" xml:space="preserve">
+    <value>您已生成新的恢复代码。</value>
+  </data>
+  <data name="You_have_successfully_created_a_new_account" xml:space="preserve">
+    <value>您已成功创建一个新帐户。</value>
+  </data>
+  <data name="Please_check_your_email_to_reset_your_password" xml:space="preserve">
+    <value>请检查您的电子邮件以重置密码。</value>
+  </data>
+  <data name="to_reset_your_password" xml:space="preserve">
+    <value>重置密码</value>
+  </data>
+  <data name="Please_click" xml:space="preserve">
+    <value>请点击</value>
+  </data>
+  <data name="to" xml:space="preserve">
+    <value>自</value>
+  </data>
+  <data name="Assign_Permissions_to" xml:space="preserve">
+    <value>将权限分配给</value>
+  </data>
+  <data name="There_are_no_data_to_generate_report" xml:space="preserve">
+    <value>没有要生成报告的数据。</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_save_this_record" xml:space="preserve">
+    <value>是否确实要保存此记录？</value>
+  </data>
+  <data name="Consider_switching_your_device_to_light_mode" xml:space="preserve">
+    <value>如果您在扫描二维码时遇到问题，请尝试通过点击标题菜单中的深色/浅色按钮将应用程序更改为浅色模式。由于对比度问题，某些二维码可能无法在暗模式下正确扫描。通过切换到浅色模式，二维码将更容易阅读，您的设备将更容易扫描它。</value>
+  </data>
+  <data name="The_Host_portal_cannot_be_accessed" xml:space="preserve">
+    <value>将每个租户的单独数据库用作数据隔离策略时，无法访问主机门户。请联系管理员以获得进一步的帮助。</value>
+  </data>
+  <data name="It_is_not_possible_to_create_a_new_tenant_while_in_single_tenant_mode" xml:space="preserve">
+    <value>在单租户模式下无法创建新租户。在多租户模式下仅允许创建租户。</value>
+  </data>
+  <data name="It_is_not_possible_to_create_or_update_or_delete_a_tenant_while_in_single_tenant_mode" xml:space="preserve">
+    <value>在单租户模式下无法创建、更新或删除租户。在多租户模式下仅允许管理租户。</value>
+  </data>
+  <data name="Tenants_Management" xml:space="preserve">
+    <value>租户管理</value>
+  </data>
+  <data name="My_Tenant" xml:space="preserve">
+    <value>我的租户</value>
+  </data>
+  <data name="Unable_to_load_tenant" xml:space="preserve">
+    <value>无法加载租户。</value>
+  </data>
+  <data name="Invalid_tenant_Id" xml:space="preserve">
+    <value>租户 ID 无效。</value>
+  </data>
+  <data name="The_tenant_is_not_found" xml:space="preserve">
+    <value>找不到租户。</value>
+  </data>
+  <data name="SuperAdmin" xml:space="preserve">
+    <value>超级管理员</value>
+  </data>
+  <data name="A_tenant_with_the_same_name_already_exists__Please_choose_a_different_name" xml:space="preserve">
+    <value>同名的租户已存在。请选择其他名称。</value>
+  </data>
+  <data name="Show_Recovery_Codes" xml:space="preserve">
+    <value>显示恢复代码</value>
+  </data>
+  <data name="Enable_Authenticator_App" xml:space="preserve">
+    <value>启用身份验证器应用</value>
+  </data>
+  <data name="Enable_2FA" xml:space="preserve">
+    <value>启用双因素身份验证</value>
+  </data>
+  <data name="Application_errors_occurred_while_processing_your_request" xml:space="preserve">
+    <value>处理您的请求时发生应用程序错误。</value>
+  </data>
+  <data name="Unauthorized_access_detected" xml:space="preserve">
+    <value>检测到未经授权的访问。</value>
+  </data>
+  <data name="Access_to_the_requested_resource_is_forbidden" xml:space="preserve">
+    <value>禁止访问请求的资源。</value>
+  </data>
+  <data name="The_request_was_not_processed_due_to_invalid_or_missing_parameters" xml:space="preserve">
+    <value>由于参数无效或缺失，请求未得到处理。</value>
+  </data>
+  <data name="The_requested_resource_was_not_found" xml:space="preserve">
+    <value>找不到请求的资源。</value>
+  </data>
+  <data name="An_internal_server_error_occurred_while_processing_your_request" xml:space="preserve">
+    <value>处理您的请求时发生内部服务器错误。</value>
+  </data>
+  <data name="An_error_occurred_while_processing_your_request" xml:space="preserve">
+    <value>处理您的请求时出错。</value>
+  </data>
+  <data name="Model_validation_errors_occurred_while_processing_your_request" xml:space="preserve">
+    <value>处理请求时发生模型验证错误。</value>
+  </data>
+  <data name="You_are_forbidden" xml:space="preserve">
+    <value>由于权限不足，禁止访问{0}。</value>
+  </data>
+  <data name="The_time_provided_must_be_in_UTC_format" xml:space="preserve">
+    <value>提供的时间必须采用 UTC 格式。</value>
+  </data>
+  <data name="On_Premises_File_Storage" xml:space="preserve">
+    <value>本地文件存储</value>
+  </data>
+  <data name="Reporting_Hub_is_closed" xml:space="preserve">
+    <value>报告中心已关闭。</value>
+  </data>
+  <data name="Reporting_Hub_is_already_closed" xml:space="preserve">
+    <value>报告中心已关闭。</value>
+  </data>
+  <data name="Dashboard_Hub_is_closed" xml:space="preserve">
+    <value>仪表板中心已关闭。</value>
+  </data>
+  <data name="Dashboard_Hub_is_being_initialized" xml:space="preserve">
+    <value>仪表板中心正在初始化。</value>
+  </data>
+  <data name="Unable_to_connect_to_the_dashboard_hub_due_to_an_error" xml:space="preserve">
+    <value>由于错误，无法连接到仪表板中心：{0}</value>
+  </data>
+  <data name="Dashboard_Hub_is_now_connected" xml:space="preserve">
+    <value>仪表板中心现已连接。</value>
+  </data>
+  <data name="Unable_to_connect_to_the_reporting_hub_due_to_an_error" xml:space="preserve">
+    <value>由于错误，无法连接到报表中心：{0}</value>
+  </data>
+  <data name="Reporting_Hub_is_now_connected" xml:space="preserve">
+    <value>报表中心现已连接。</value>
+  </data>
+  <data name="Reporting_Hub_is_being_initialized" xml:space="preserve">
+    <value>正在初始化报表中心。</value>
+  </data>
+  <data name="Reporting_Hub_is_not_active" xml:space="preserve">
+    <value>报告中心未处于活动状态。</value>
+  </data>
+  <data name="You_are_not_authorized_to_access_resources_related_to_other_tenants" xml:space="preserve">
+    <value>您无权访问与其他租户相关的资源。</value>
+  </data>
+  <data name="ExportAsPdfOnDemand" xml:space="preserve">
+    <value>立即导出为 PDF</value>
+  </data>
+</root>

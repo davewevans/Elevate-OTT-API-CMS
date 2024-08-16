@@ -1,0 +1,70 @@
+﻿<MudDialog>
+    <TitleContent>
+        <MudText Typo="Typo.h6">
+            <MudIcon Icon="@Icons.Material.Filled.Groups" Class="mr-3 mb-n1" />
+            @Resource.Roles
+        </MudText>
+    </TitleContent>
+    <DialogContent>
+        <MudContainer>
+            <MudTable ServerData="@(new Func<TableState, Task<TableData<RoleItem>>>(ServerReload))" Striped="true" Dense="true" Hover="true" FixedHeader="true" FixedFooter="true" @ref="Table">
+                <ToolBarContent>
+                    <MudButton ButtonType="ButtonType.Button"
+                               OnClick="Submit"
+                               Size="Size.Small"
+                               StartIcon="@Icons.Material.Filled.SelectAll"
+                               Variant="Variant.Filled"
+                               Color="Color.Primary">
+                        @Resource.Add_Selected_Roles
+                    </MudButton>
+                    <MudSpacer />
+                    <MudTextField T="string"
+                                  Immediate="true"
+                                  ValueChanged="@(FilterRoles)"
+                                  Placeholder="@Resource.Search"
+                                  Adornment="Adornment.Start"
+                                  AdornmentIcon="@Icons.Material.Filled.Search"
+                                  IconSize="Size.Small">
+                    </MudTextField>
+                </ToolBarContent>
+                <HeaderContent>
+                    <MudTh><MudCheckBox T="bool" CheckedChanged="@(SelectAllVisibleRows)"></MudCheckBox></MudTh>
+                    <MudTh><MudTableSortLabel SortLabel="Name" T="RoleItem" InitialDirection="SortDirection.Ascending">@Resource.Name</MudTableSortLabel></MudTh>
+                    <MudTh><MudTableSortLabel SortLabel="IsStatic" T="RoleItem">@Resource.Is_Static</MudTableSortLabel></MudTh>
+                    <MudTh><MudTableSortLabel SortLabel="IsDefault" T="RoleItem">@Resource.Is_Default</MudTableSortLabel></MudTh>
+                    <MudTh><MudTableSortLabel SortLabel="CreatedOn" T="RoleItem">@Resource.Created_On</MudTableSortLabel></MudTh>
+                </HeaderContent>
+                <RowTemplate>
+
+                    <MudTd DataLabel="Select"><MudCheckBox T="bool" Checked="@context.Checked" CheckedChanged="@(() => AddToSelectedUserRoles(context))"></MudCheckBox></MudTd>
+                    <MudTd DataLabel="Name">@context.Name</MudTd>
+                    <MudTd DataLabel="IsStatic">@context.IsStatic</MudTd>
+                    <MudTd DataLabel="IsDefault">@context.IsDefault</MudTd>
+                    <MudTd DataLabel="CreatedOn">@context.CreatedOn</MudTd>
+                </RowTemplate>
+                <PagerContent>
+                    <MudTablePager RowsPerPageString="@Resource.Rows_Per_Page" />
+                    <MudCard Elevation="5">
+                        <MudChipSet AllClosable="true" OnClose="Closed">
+                            @foreach (var roleItem in SelectedUserRoles)
+                            {
+                                <MudChip Text="@roleItem.Name"></MudChip>
+                            }
+                        </MudChipSet>
+                    </MudCard>
+                </PagerContent>
+                <FooterContent>
+                </FooterContent>
+            </MudTable>
+        </MudContainer>
+    </DialogContent>
+    <DialogActions>
+        <MudButton ButtonType="ButtonType.Button"
+                   OnClick="Submit"
+                   FullWidth="true"
+                   Variant="Variant.Filled"
+                   Color="Color.Primary">
+            @Resource.Add_Selected_Roles
+        </MudButton>
+    </DialogActions>
+</MudDialog>

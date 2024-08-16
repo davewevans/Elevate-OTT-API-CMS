@@ -1,0 +1,80 @@
+﻿@page "/poc/authorization/serverSideAuthorization/ViewApplicant/{applicantId}"
+
+<MudText Typo="Typo.h5" Color="Color.Primary" Class="mb-4">@Resource.View_Applicant</MudText>
+<MudCard>
+    <MudCardContent>
+        <MudNumericField Disabled="true"
+                         Label="@Resource.SSN"
+                         Variant="Variant.Outlined"
+                         @bind-Value="ApplicantForEditVm.Ssn"
+                         For="@(() => ApplicantForEditVm.Ssn)" />
+
+        <MudTextField Disabled="true"
+                      Label="@Resource.First_Name"
+                      Variant="Variant.Outlined"
+                      @bind-Value="ApplicantForEditVm.FirstName"
+                      For="@(() => ApplicantForEditVm.FirstName)" />
+
+        <MudTextField Disabled="true"
+                      Label="@Resource.Last_Name"
+                      Variant="Variant.Outlined"
+                      @bind-Value="ApplicantForEditVm.LastName"
+                      For="@(() => ApplicantForEditVm.LastName)" />
+
+        <MudDatePicker Disabled="true"
+                       Label="@Resource.Date_of_Birth"
+                       Variant="Variant.Outlined"
+                       @bind-Date="ApplicantForEditVm.DateOfBirth"
+                       For="@(() => ApplicantForEditVm.DateOfBirth)"
+                       Rounded="true"
+                       Elevation="12"
+                       ShowWeekNumbers="true"
+                       Editable="true"
+                       OpenTo="OpenTo.Year"
+                       MaxDate="@DateTime.Now.AddYears(-18)" />
+        <MudCard>
+            <MudCardHeader>
+                <CardHeaderContent>
+                    <MudText Typo="Typo.h6">@Resource.Body_Mass_Index</MudText>
+                </CardHeaderContent>
+            </MudCardHeader>
+            <MudCardContent>
+                <MudGrid>
+                    <MudItem xs="6">
+                        <MudNumericField Disabled="true"
+                                         Label="@Resource.Height"
+                                         Variant="Variant.Outlined" @bind-Value="ApplicantForEditVm.Height"
+                                         For="@(() => ApplicantForEditVm.Height)" />
+
+                        <MudNumericField Disabled="true"
+                                         Label="@Resource.Weight"
+                                         Variant="Variant.Outlined" @bind-Value="ApplicantForEditVm.Weight"
+                                         For="@(() => ApplicantForEditVm.Weight)" />
+
+                        <MudNumericField Disabled="true"
+                                         Label="@Resource.BMI"
+                                         Variant="Variant.Outlined" @bind-Value="ApplicantForEditVm.Bmi"
+                                         For="@(() => ApplicantForEditVm.Bmi)" />
+                        <br />
+                        <MudAlert Elevation="2" Severity="Severity.Info">@Resource.BMI_Info</MudAlert>
+                        <br />
+                        <MudAlert Elevation="2" Severity="Severity.Info">@Resource.BMI_Details</MudAlert>
+                    </MudItem>
+                    <MudItem xs="6">
+                        <MudPaper Class="d-flex align-center justify-center mud-width-full py-8">
+                            <img width="95%" src="/images/bmi.jpg" />
+                        </MudPaper>
+                    </MudItem>
+                </MudGrid>
+            </MudCardContent>
+            <MudCardActions Class="pb-4 pl-4">
+                <MudButton Link="/poc/authorization/serverSideAuthorization/applicants"
+                           Variant="Variant.Filled"
+                           EndIcon="@Icons.Material.Outlined.ArrowBack"
+                           Color="Color.Primary">
+                    @Resource.Return
+                </MudButton>
+            </MudCardActions>
+        </MudCard>
+    </MudCardContent>
+</MudCard>

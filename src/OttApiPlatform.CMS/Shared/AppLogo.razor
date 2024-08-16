@@ -1,0 +1,17 @@
+﻿<MudLink Href="/">
+    <MudHidden Invert="true" Breakpoint="Breakpoint.Always">
+        <img height="36" width="36" src=@(IsDarkMode ? "/brand.svg" :"/brand-blue.svg") />
+    </MudHidden>
+</MudLink>
+<MudHidden Invert="true" Breakpoint="Breakpoint.MdAndUp">
+    <MudText Typo="Typo.h6"
+             Class="ml-4"
+             Style="letter-spacing: .5rem; font-weight: 300; margin-left: 12px; font-size: 24px; user-select: none;">
+        CMS
+    </MudText>
+</MudHidden>
+@code {
+
+    [Parameter] public bool IsDarkMode { get; set; }
+
+}

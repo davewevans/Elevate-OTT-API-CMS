@@ -1,0 +1,389 @@
+﻿@page "/howto"
+@layout LandingPageLayout
+
+<MudText Typo="Typo.h5" Color="Color.Primary" Class="mb-4">Installation</MudText>
+<MudGrid>
+    <MudItem xs="12" sm="12" md="10">
+        <MudText Typo="Typo.h6" GutterBottom="true">Getting Started</MudText>
+        <MudExpansionPanels Elevation="25">
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="What type of architecture design is used in CMS?">
+                <MudText Typo="Typo.body2" Class="mb-2">CMS uses Clean Architecture, which is an architecture that emphasizes the separation of concerns and the independence of the layers within an application. This type of architecture helps developers to maintain a clear and organized project structure that is scalable and easy to modify. In Clean Architecture, the application is divided into several layers including the Presentation layer, Application layer, Domain layer, and Infrastructure layer.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">CMS's use of Clean Architecture allows for a clean separation of concerns, making it easy to modify and test the application's functionality. Each layer in the architecture is independent and can be modified without affecting the other layers. This type of design pattern is especially useful for large projects that require frequent updates and modifications.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">CMS also includes several architectural features, such as the use of interfaces and dependency injection, which further enhances the modularity and maintainability of the application.</MudText>
+            </MudExpansionPanel>
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="What are the types of application settings that should be considered before running CMS?">
+                <MudText Typo="Typo.body2" Class="mb-2">To ensure the smooth operation of CMS, you should consider the following application settings located in the AppOptions section within the <code>appsettings.json</code> file:</MudText>
+                <MudList>
+                    <MudListItem Icon="@Icons.Material.Filled.Check">
+                        <MudText Typo="Typo.body2" Class="mb-2">Identity Options</MudText>
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Filled.Check">
+                        <MudText Typo="Typo.body2" Class="mb-2">Token Options</MudText>
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Filled.Check">
+                        <MudText Typo="Typo.body2" Class="mb-2">File Storage Options</MudText>
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Filled.Check">
+                        <MudText Typo="Typo.body2" Class="mb-2">Tenant Mode Options</MudText>
+                    </MudListItem>
+                </MudList>
+            </MudExpansionPanel>
+            <MudExpansionPanel Style="font-weight: 500" Class="mb-2" Text="Where can modifications be made to the default Application Settings in CMS?">
+                <MudText Typo="Typo.body2" Class="mb-2">You can modify application settings in two ways:</MudText>
+                <MudList>
+                    <MudListItem Icon="@Icons.Material.Filled.Check">
+                        <MudText Typo="Typo.body2" Class="mb-2">From the Settings Menu within the CMS GUI environment.</MudText>
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Filled.Check">
+                        <MudText Typo="Typo.body2" Class="mb-2">By changing the values in the AppOptions section in the <code>appsettings.json</code> file within the <code>OttApiPlatform.WebAPI</code> project.</MudText>
+                    </MudListItem>
+                </MudList>
+            </MudExpansionPanel>
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="Can I set up unique application settings for individual tenants in CMS?">
+                <MudText Typo="Typo.body2" Class="mb-2">Absolutely! You have the ability to adjust the Application Settings for each tenant through the Settings Menu in the CMS GUI environment.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">However, it is important to note that all tenants share the same default application settings which are preconfigured in the AppOptions section of the <code>appsettings.json</code> file within the <code>OttApiPlatform.WebAPI</code> project.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">Once you modify the application settings for a specific tenant through the Settings Menu in the CMS GUI environment, the new values will be saved in the database along with the ID value of that tenant.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">The system will retrieve the tenant application settings from the database when the tenant user logs into the tenant portal. In case the tenant-related settings are not found in the database, the system will fallback to the default tenant settings from appsettings.json.</MudText>
+            </MudExpansionPanel>
+        </MudExpansionPanels>
+        <MudText Typo="Typo.h6" GutterBottom="true" Class="mt-8">Multitenancy</MudText>
+        <MudExpansionPanels Elevation="25">
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="Which strategies for isolating tenant data does CMS support?">
+                <MudText Typo="Typo.body2" Class="mb-2">CMS provides powerful support for tenant data isolation, which ensures that each tenant can only access and manipulate their own data. CMS supports two primary strategies for data isolation: a shared database for all tenants, and a separate database for each tenant.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">In the first strategy, each tenant's data is logically separated by a unique identifier within a common database. In contrast, the second strategy physically separates each tenant's data into their own separate database.</MudText>
+            </MudExpansionPanel>
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="What tenant resolution strategy does CMS support?">
+                <MudText Typo="Typo.body2" Class="mb-2">CMS supports the REQUEST HEADER strategy for resolving tenants. This approach uses a header named Bp-Tenant that represents the subdomain portion of the request URL. Once the header is received in the CMS Web API application, it serves the request for the corresponding tenant.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">This makes it easy to manage multiple tenants with ease, providing a powerful organizational tool that streamlines the development process.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">With CMS, you can rest assured that tenant resolution is quick and easy, allowing you to focus on developing your application rather than worrying about complicated tenant management.</MudText>
+            </MudExpansionPanel>
+            <MudExpansionPanel Style="font-weight: 500" Class="mb-2" Text="What are the two tenant modes supported by CMS?">
+                <MudText Typo="Typo.body2" Class="mb-2">CMS supports single-tenant mode and multi-tenant mode.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">In single-tenant mode, each tenant has its own instance of the software application and database, which cannot be shared with other tenants. This means that each tenant has complete control over their own instance of the application, but it also means that there may be a higher cost and maintenance required to manage each individual instance.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">In contrast, multi-tenant mode allows multiple tenants to share the same instance of the software application and database. This approach can provide cost savings and simplified maintenance, but it also means that tenants may have less control over their own instance of the application, and data security may require additional measures to ensure data is properly segregated.</MudText>
+            </MudExpansionPanel>
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="How can I switch between single-tenant mode and multi-tenant mode in CMS?">
+                <MudText Typo="Typo.body2" Class="mb-2">To switch between single-tenant and multi-tenant modes in CMS, you need to modify the <code>AppOptions:TenantOptions</code> section in the <code>appsettings.json</code> file.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">To enable single-tenant mode, set the value to 1. This means that the application will run in a single-tenant mode where only one tenant can access the system.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">To enable multi-tenant mode, set the value to 2. This will allow multiple tenants to access the system simultaneously.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">Keep in mind that in multi-tenant mode, it's important to note that each tenant will have access to their individual data and settings. Conversely, in single-tenant mode, all tenants will share the same data and settings.</MudText>
+            </MudExpansionPanel>
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="What do the terms Host and Tenant mean in the context of a SaaS/Multi-tenant CMS application?">
+                <MudText Typo="Typo.body2" Class="mb-2">In a SaaS/Multi-tenant CMS application, the <code>Host</code> refers to the company that owns and manages the system. They are responsible for managing the subscription of tenants and providing them with access to the service. On the other hand, the <code>Tenant</code> refers to the customer who pays for and uses the service provided by the host. Each tenant is a separate entity with its own data, settings, and permissions within the application.</MudText>
+            </MudExpansionPanel>
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="Can I configure my localhost machine to run as a multi-tenant server to allow OttApiPlatform.CMS project to run on the browser using wildcard subdomains such as demo-tenant.localhost:4333?">
+                <MudText Typo="Typo.body2" Class="mb-2">Yes, you can. To configure CMS in this way, follow these steps.</MudText>
+                <MudList>
+                    <MudListItem Icon="@Icons.Material.Filled.Check">
+                        <MudText Typo="Typo.body2" Class="mb-2">Open the CMS project in Visual Studio and right-click on the solution. Select <code>Open Folder in File Explorer</code> and navigate to .vs\OttApiPlatform\config\ applicationhost.config.</MudText>
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Filled.Check">
+                        <MudText Typo="Typo.body2" Class="mb-2">Close Visual Studio and open the <code>applicationhost.config</code> file in any code editor.</MudText>
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Filled.Check">
+                        <MudText Typo="Typo.body2" Class="mb-2">Press CTRL+F and search for [site name="OttApiPlatform.CMS"](without brackets).</MudText>
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Filled.Check">
+                        <MudText Typo="Typo.body2" Class="mb-2">Remove the <code>localhost</code> portion from the file as shown in the following screenshot.</MudText>
+                    </MudListItem>
+                    <img width="100%" src="https://CMS.net/assets/img/code-screenshots/applicationhost.png" />
+                    <MudListItem Icon="@Icons.Material.Filled.Check">
+                        <MudText Typo="Typo.body2" Class="mb-2">Save the changes.</MudText>
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Filled.Check">
+                        <MudText Typo="Typo.body2" Class="mb-2">After editing the file, The site block should look like the following screenshot.</MudText>
+                    </MudListItem>
+                    <img width="100%" src="https://CMS.net/assets/img/code-screenshots/applicationhost-without-localhost.png" />
+                    <MudListItem Icon="@Icons.Material.Filled.Check">
+                        <MudText Typo="Typo.body2" Class="mb-2">Reopen Visual Studio as Administrator and open CMS solution.</MudText>
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Filled.Check">
+                        <MudText Typo="Typo.body2" Class="mb-2">Right-click on the solution and select <code>Set Startup Projects</code>.</MudText>
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Filled.Check">
+                        <MudText Typo="Typo.body2" Class="mb-2">Choose to run CMS, WebApi, and HostApp projects as startup projects.</MudText>
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Filled.Check">
+                        <MudText Typo="Typo.body2" Class="mb-2">Finally, hit F5 to run the solution.Last but not least, hit F5.</MudText>
+                    </MudListItem>
+                </MudList>
+            </MudExpansionPanel>
+        </MudExpansionPanels>
+        <MudText Typo="Typo.h6" GutterBottom="true" Class="mt-8">Identity Options</MudText>
+        <MudExpansionPanels Elevation="25">
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="What can be done with Identity Settings?">
+                <MudChip Label="true" Class="mt-4">UserOptions</MudChip>
+                <MudSimpleTable Hover="true">
+                    <thead>
+
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                AllowedUserNameCharacters
+                            </td>
+                            <td>
+                                Gets or sets the list of allowed characters in the username used to validate user names. Defaults to abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._&#64;+
+                            </td>
+                        </tr>
+                    </tbody>
+                </MudSimpleTable>
+
+                <MudChip Label="true" Class="mt-4">SignInOptions</MudChip>
+                <MudSimpleTable Hover="true">
+                    <thead>
+
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                RequireConfirmedEmail
+                            </td>
+                            <td>
+                                Gets or sets a flag indicating whether a confirmed email address is required to sign in. Defaults to false.
+                            </td>
+                        </tr>
+                    </tbody>
+                </MudSimpleTable>
+
+                <MudChip Label="true" Class="mt-4">PasswordOptions</MudChip>
+                <MudSimpleTable Hover="true">
+                    <thead>
+
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                RequireDigit
+                            </td>
+                            <td>
+                                Gets or sets a flag indicating if passwords must contain a digit. Defaults to true.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                RequiredLength
+                            </td>
+                            <td>
+                                Gets or sets the minimum length a password must be. Defaults to 6.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                RequireLowercase
+                            </td>
+                            <td>
+                                Gets or sets a flag indicating if passwords must contain a lower case ASCII character. Defaults to true.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                RequireNonAlphanumeric
+                            </td>
+                            <td>
+                                Gets or sets a flag indicating if passwords must contain a non-alphanumeric character. Defaults to true.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                RequireUppercase
+                            </td>
+                            <td>
+                                Gets or sets a flag indicating if passwords must contain a upper case ASCII character. Defaults to true.
+                            </td>
+                        </tr>
+                    </tbody>
+                </MudSimpleTable>
+                <MudChip Label="true" Class="mt-4">LockoutOptions</MudChip>
+                <MudSimpleTable Hover="true">
+                    <thead>
+
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                AllowedForNewUsers
+                            </td>
+                            <td>
+                                Gets or sets a flag indicating whether a new user can be locked out. Defaults to true.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                DefaultLockoutTimeSpan
+                            </td>
+                            <td>
+                                Gets or sets the TimeSpan a user is locked out for when a lockout occurs. Defaults to 5 minutes.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                MaxFailedAccessAttempts
+                            </td>
+                            <td>
+                                Gets or sets the number of failed access attempts allowed before a user is locked out, assuming lock out is enabled. Defaults to 5.
+                            </td>
+                        </tr>
+                    </tbody>
+                </MudSimpleTable>
+            </MudExpansionPanel>
+        </MudExpansionPanels>
+        <MudText Typo="Typo.h6" GutterBottom="true" Class="mt-8">Token Options</MudText>
+        <MudExpansionPanels Elevation="25">
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="What can be done with Token Settings?">
+                <MudSimpleTable Hover="true">
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                AccessTokenTimeSpan
+                            </td>
+                            <td>
+                                Gets or sets the TimeSpan an access token is valid. When the TimeSpan is expired. Defaults to 7 days.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                RefreshTokenTimeSpan
+                            </td>
+                            <td>
+                                Gets or sets the TimeSpan a refresh token is valid. Defaults to 7 days.
+                            </td>
+                        </tr>
+                    </tbody>
+                </MudSimpleTable>
+            </MudExpansionPanel>
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="What is the difference between Access Token and Refresh Token in CMS?">
+                <MudText Typo="Typo.body2" Class="mb-2">Access tokens are used in secure applications to ensure a user has access to the appropriate resources. These tokens typically have a limited lifetime to limit the amount of time an attacker can use a stolen token and prevent stale information. When access tokens expire or become invalid, applications need a new access token without prompting the user. To solve this problem, OAuth 2.0 introduced a refresh token. A refresh token allows an application to obtain a new access token without prompting the user.</MudText>
+            </MudExpansionPanel>
+        </MudExpansionPanels>
+        <MudText Typo="Typo.h6" GutterBottom="true" Class="mt-8">File Storage Options</MudText>
+        <MudExpansionPanels Elevation="25">
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="What can be done with File Storage Settings?">
+                <MudSimpleTable Hover="true">
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                StorageType
+                            </td>
+                            <td>
+                                Gets or sets the storage type value. Defaults to 0 which represents On-Premises Storage.
+                            </td>
+                        </tr>
+                    </tbody>
+                </MudSimpleTable>
+            </MudExpansionPanel>
+            <MudExpansionPanels Elevation="25">
+                <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="What storage providers are supported by CMS?">
+                    <MudText Typo="Typo.body2" Class="mb-2">CMS supports On-Premises Storage and Azure Storage.</MudText>
+                </MudExpansionPanel>
+            </MudExpansionPanels>
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="What is the difference between On-Premises Storage and Cloud Storage?">
+                <MudText Typo="Typo.body2" Class="mb-2">On-Premises storage and cloud storage reside in two different locations. On-premise storage utilizes in-house hardware and software. That is, the hardware is owned and managed by the enterprise versus a cloud service provider.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">Cloud storage resides in remote servers, across town or across the country. It is typically provided by one of the large cloud computing companies such as AWS, Microsoft Azure, or Google Cloud.</MudText>
+            </MudExpansionPanel>
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="How can I run Azure BLOB Storage along with CMS on my localhost machine?">
+                <MudText Typo="Typo.body2" Class="mb-2">To run Azure BLOB Storage along with CMS on your localhost machine, you can use the Azurite emulator, which provides a local environment for testing Azure blob, queue storage, and table storage applications. Follow these steps:</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">The Azurite open-source emulator provides a free local environment for testing your Azure blob, queue storage, and table storage applications. When you're satisfied with how your application is working locally, switch to using an Azure Storage account in the cloud. The emulator provides cross-platform support on Windows, Linux, and macOS.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">Follow the following instructions in order to run Azurite emulator on your localhost machine.</MudText>
+                <MudList>
+                    <MudListItem Icon="@Icons.Material.Outlined.Cloud">
+                        <MudText Typo="Typo.body2" Class="mb-2">Install <MudLink Typo="Typo.body2" Href="https://nodejs.org" Target="_blank">Node.js version 8.0 or later.</MudLink></MudText>
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Outlined.Cloud">
+                        <MudText Typo="Typo.body2" Class="mb-2">Use the npm command <code>npm install -g azurite</code> to install Azurite.</MudText>
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Outlined.Cloud">
+                        <MudText Typo="Typo.body2" Class="mb-2">Start Azurite from the command line using the command <code>azurite</code>.</MudText>
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Outlined.Cloud">
+                        <MudText Typo="Typo.body2" Class="mb-2">Run CMS and upload a new avatar picture to update your profile.</MudText>
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Outlined.Cloud">
+                        <MudText Typo="Typo.body2" Class="mb-2">Refresh the page and inspect the image path by right-clicking on the avatar picture.</MudText>
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Outlined.Cloud">
+                        <MudText Typo="Typo.body2" Class="mb-2">You should see that the image path points to the Azure BLOB server address, which is <code>http://127.0.0.1:10000/devstoreaccount1</code>.</MudText>
+                    </MudListItem>
+                </MudList>
+            </MudExpansionPanel>
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="How can I run CMS with a real Azure Storage account in the cloud?">
+                <MudText Typo="Typo.body2" Class="mb-2">To run CMS with a real Azure Storage account in the cloud, you need to follow these steps:</MudText>
+                <MudList>
+                    <MudListItem Icon="@Icons.Material.Outlined.Cloud">
+                        <MudText Typo="Typo.body2" Class="mb-2">Login to your Azure account and obtain a new connection string for Azure BLOB storage.</MudText>
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Outlined.Cloud">
+                        <MudText Typo="Typo.body2" Class="mb-2">Open the <code>appsettings.json</code> file located within the <code>OttApiPlatform.WebAPI</code> project.</MudText>
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Outlined.Cloud">
+                        <MudText Typo="Typo.body2" Class="mb-2">Find the <code>ConnectionStrings:AzureStorageConnection</code> section in the <code>appsettings.json</code> file.</MudText>
+                    </MudListItem> <MudListItem Icon="@Icons.Material.Outlined.Cloud">
+                        <MudText Typo="Typo.body2" Class="mb-2">Replace the <code>"UseDevelopmentStorage=true"</code> value with the real connection string that you've obtained from your Azure account.</MudText>
+                    </MudListItem>
+                </MudList>
+                <MudText Typo="Typo.body2" Class="mb-2">By following these steps, you'll be able to run CMS with your Azure Storage account in the cloud.</MudText>
+            </MudExpansionPanel>
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="Can I add a new storage provider in CMS?">
+                <MudText Typo="Typo.body2" Class="mb-2">Yes! CMS supports adding multiple storage providers. Simply create a new service class, for example, <code>AwsStorageService</code> that implements the <code>IFileStorageService</code> interface.</MudText>
+            </MudExpansionPanel>
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="How can I adjust the maximum file upload size limit in CMS?">
+                <MudText Typo="Typo.body2" Class="mb-2">To change the maximum file upload size limit in CMS, you should update three places:</MudText>
+                <MudListItem Icon="@Icons.Material.Outlined.UploadFile">
+                    <MudText Typo="Typo.body2" Class="mb-2">Update the <code>maxAllowedContentLength</code> value in web.config file located within the <code>OttApiPlatform.WebAPI</code> project as shown in the following code snippet.</MudText>
+                    <img width="100%" src="https://CMS.net/assets/img/code-screenshots/file-size-webconfig.png" />
+                </MudListItem>
+                <MudListItem Icon="@Icons.Material.Outlined.UploadFile">
+                    <MudText Typo="Typo.body2" Class="mb-2">Update the <code>ValueLengthLimit</code> and <code>MultipartBodyLengthLimit</code> values in the <code>Startup.cs</code> file located within the <code>OttApiPlatform.WebAPI</code> project as shown in the following code snippet.</MudText>
+                    <img width="100%" src="https://CMS.net/assets/img/code-screenshots/file-size-startup.png" />
+                </MudListItem>
+                <MudListItem Icon="@Icons.Material.Outlined.UploadFile">
+                    <MudText Typo="Typo.body2" Class="mb-2">Update the MaxFileSize value in the Shared/BpUploadFile.razor.cs file located within the  <code>OttApiPlatform.CMS</code> project as shown in the following code snippet.</MudText>
+                    <img width="100%" src="https://CMS.net/assets/img/code-screenshots/file-size-bpuploadfile.png" />
+                </MudListItem>
+            </MudExpansionPanel>
+        </MudExpansionPanels>
+    </MudItem>
+</MudGrid>
+@code {
+
+    [Inject] private IBreadcrumbService BreadcrumbService { get; set; }
+
+    protected override void OnInitialized()
+    {
+        BreadcrumbService.SetBreadcrumbItems(new List<BreadcrumbItem>
+        {
+            new(Resource.Home, "/"),
+            new(Resource.App_Info, "#", true),
+            new(Resource.Installation, "#", true)
+        });
+    }
+
+}

@@ -1,0 +1,45 @@
+﻿<EditForm Model="UserAvatarForEditVm" OnValidSubmit="UpdateUserAvatar">
+    <EditContextApiExceptionFallback @ref="EditContextApiExceptionFallback" />
+    <FluentValidationValidator />
+    <MudCard>
+        <MudCardHeader>
+            <CardHeaderContent>
+                <MudText Typo="Typo.h6">@Resource.My_Profile_Picture</MudText>
+            </CardHeaderContent>
+        </MudCardHeader>
+        <MudCardContent>
+            <MudPaper Class="pa-2" Outlined="true">
+                <AvatarViewer AvatarImageSrc="@AvatarImageSrc" AvatarUri="@UserAvatarForEditVm.AvatarUri" OnAvatarCleared="() => UserAvatarForEditVm.AvatarUri=null"></AvatarViewer>
+            </MudPaper>
+        </MudCardContent>
+        <MudCardActions Class="d-flex justify-center">
+            <div class="form-group">
+                <BpFileUpload @ref="BpFileUploadReference" ButtonId="avatarInput"
+                              UploadFileButtonIcon="@Icons.Material.Filled.CloudUpload"
+                              UploadFileButtonName="@Resource.Upload_Avatar"
+                              ShowRenameFileDialog="false"
+                              AllowedExtensions=".jpg,.png,.jpg,.bmp"
+                              AllowedFileSize="5242880"
+                              OnFileSelected="AvatarSelected"
+                              OnFileUnSelected="AvatarUnSelected"
+                              OnImageSrcChanged="GetBase64StringImageUrl" />
+                <ValidationMessage For="@(() => UserAvatarForEditVm.AvatarUri)" />
+            </div>
+        </MudCardActions>
+        <MudCardActions Class="pb-4 pl-4">
+            <MudButton ButtonType="ButtonType.Submit"
+                       Variant="Variant.Filled"
+                       Color="Color.Primary"
+                       Class="ml-auto"
+                       FullWidth="true">@Resource.Save</MudButton>
+        </MudCardActions>
+        <MudDivider />
+        <MudExpansionPanels>
+            <MudExpansionPanel Text="@Resource.Validation_Summary" IsExpanded="true" Disabled="true" HideIcon="true">
+                <MudText Color="@Color.Error">
+                    <ValidationSummary />
+                </MudText>
+            </MudExpansionPanel>
+        </MudExpansionPanels>
+    </MudCard>
+</EditForm>

@@ -1,0 +1,87 @@
+﻿@page "/poc/Localization/properties/cultureInfo"
+
+<MudCard Elevation="5">
+    <MudCardHeader>
+        <CardHeaderContent>
+            <MudText Typo="Typo.h6" Color="Color.Primary" Class="mb-4">
+                @Resource.Culture_Info
+                <MudFab OnClick="@TipsToggle" Label="@Resource.Tips" Color="Color.Secondary" StartIcon="@Icons.Material.Filled.TipsAndUpdates" Size="Size.Small" IconSize="Size.Small" Class="ma-2" />
+                <div Class="relative">
+                    <MudPopover Open="@IsTipsOpen" Class="px-4 pt-4">
+                        <MudElement HtmlTag="h4">This page displays information in the language selected by the user based on their Current Culture settings.</MudElement>
+                        <MudButton OnClick="@TipsToggle" Variant="Variant.Filled" Color="Color.Error" Class="ml-auto mr-n3 mb-1 mt-4">@Resource.Close</MudButton>
+                    </MudPopover>
+                </div>
+            </MudText>
+        </CardHeaderContent>
+    </MudCardHeader>
+    <MudCardContent>
+        <MudSimpleTable Hover="true">
+            <thead>
+                <tr>
+                    <th>@Resource.Property</th>
+                    <th>@Resource.Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Resource.Display_Name</td>
+                    <td>@CultureInfo.CurrentUICulture.DisplayName</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Native_Name</td>
+                    <td>@CultureInfo.CurrentUICulture.NativeName</td>
+                </tr>
+
+                <tr>
+                    <td>@Resource.English_Name</td>
+                    <td>@CultureInfo.CurrentUICulture.EnglishName</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Culture_Code</td>
+
+                    <td>@CultureInfo.CurrentCulture.Name</td>
+                </tr>
+                <tr>
+                    <td>@Resource.UI_Culture_Code</td>
+
+                    <td>@CultureInfo.CurrentUICulture.Name</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Culture_Currency_Symbol</td>
+
+                    <td>@CultureInfo.CurrentUICulture.NumberFormat.CurrencySymbol</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Culture_DateTime_Pattern</td>
+                    <td>@CultureInfo.CurrentUICulture.DateTimeFormat.FullDateTimePattern</td>
+                </tr>
+            </tbody>
+        </MudSimpleTable>
+    </MudCardContent>
+</MudCard>
+
+@code {
+
+    [Inject] private IBreadcrumbService BreadcrumbService { get; set; }
+
+    private bool IsTipsOpen { get; set; }
+
+    private void TipsToggle()
+    {
+        IsTipsOpen = !IsTipsOpen;
+    }
+
+    protected override void OnInitialized()
+    {
+        BreadcrumbService.SetBreadcrumbItems(new List<BreadcrumbItem>
+        {
+            new(Resource.Home, "/"),
+            new(Resource.Proof_of_Concepts, "#", true),
+            new(Resource.Localization, "#", true),
+            new(Resource.Properties, "#", true),
+            new(Resource.Culture_Info, "#", true)
+        });
+    }
+
+}

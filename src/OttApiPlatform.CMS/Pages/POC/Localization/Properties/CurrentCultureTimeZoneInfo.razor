@@ -1,0 +1,68 @@
+﻿@page "/poc/Localization/properties/cultureTimeZoneInfo"
+
+<MudCard Elevation="5">
+    <MudCardHeader>
+        <CardHeaderContent>
+            <MudText Typo="Typo.h6" Color="Color.Primary" Class="mb-4">
+                @Resource.Time_Zone_Info
+                <MudFab OnClick="@TipsToggle" Label="@Resource.Tips" Color="Color.Secondary" StartIcon="@Icons.Material.Filled.TipsAndUpdates" Size="Size.Small" IconSize="Size.Small" Class="ma-2" />
+                <div Class="relative">
+                    <MudPopover Open="@IsTipsOpen" Class="px-4 pt-4">
+                        <MudElement HtmlTag="h4">On this page, the Time Zone information is displayed in the language selected by the user based on their Current Culture.</MudElement>
+                        <MudButton OnClick="@TipsToggle" Variant="Variant.Filled" Color="Color.Error" Class="ml-auto mr-n3 mb-1 mt-4">@Resource.Close</MudButton>
+                    </MudPopover>
+                </div>
+            </MudText>
+        </CardHeaderContent>
+    </MudCardHeader>
+    <MudCardContent>
+        <MudSimpleTable Hover="true">
+            <thead>
+                <tr>
+                    <th>@Resource.Property</th>
+                    <th>@Resource.Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Resource.Browser_Time_Zone</td>
+                    <td>@TimeZoneInfo.Local.DisplayName</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Time_Zone_OffSet</td>
+                    <td>@TimeZoneInfo.Local.GetUtcOffset(DateTime.Now)</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Local_Time</td>
+                    <td>@TimeOnly.FromDateTime(DateTime.Now)</td>
+                </tr>
+            </tbody>
+        </MudSimpleTable>
+    </MudCardContent>
+</MudCard>
+
+@code {
+
+    [Inject]
+    private IBreadcrumbService BreadcrumbService { get; set; }
+
+    private bool IsTipsOpen { get; set; }
+
+    private void TipsToggle()
+    {
+        IsTipsOpen = !IsTipsOpen;
+    }
+
+    protected override void OnInitialized()
+    {
+        BreadcrumbService.SetBreadcrumbItems(new List<BreadcrumbItem>
+        {
+            new(Resource.Home, "/"),
+            new(Resource.Proof_of_Concepts, "#", true),
+            new(Resource.Localization, "#", true),
+            new(Resource.Properties, "#", true),
+            new(Resource.Time_Zone_Info, "#", true)
+        });
+    }
+
+}

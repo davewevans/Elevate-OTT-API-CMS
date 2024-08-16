@@ -1,0 +1,33 @@
+﻿<MudHidden Breakpoint="Breakpoint.SmAndDown">
+
+    <MudTooltip Text="Official YouTube Channel" Delay="1000">
+        <MudIconButton OnClick="@(e => NavigationService.NavigateToUrlAsync("https://www.youtube.com/watch?v=rcSpC_1RIoM&list=PLGFVwQ6UMec9ZlP-BxQFvYJnbCbw4f545", true))" Color="Color.Warning" Size="Size.Medium" Icon="@Icons.Material.Filled.Tv">
+        </MudIconButton>
+    </MudTooltip>
+                
+    <MudTooltip Text="Big thanks with much love to MudBlazor team for their awesome Blazor UI Components." Delay="1000">
+        <MudIconButton OnClick="@(e => NavigationService.NavigateToUrlAsync("https://mudblazor.com/", true))" Color="Color.Secondary" Size="Size.Medium" Icon="@Icons.Material.Filled.FavoriteBorder">
+        </MudIconButton>
+    </MudTooltip>
+
+    <MudToggleIconButton Toggled="@AppStateManager.PlayAudio"
+                         ToggledChanged="OnSoundToggledChanged"
+                         Icon="@Icons.Material.Outlined.PlayCircle"
+                         Color="@Color.Info"
+                         Title="@Resource.Play"
+                         ToggledIcon="@Icons.Material.Outlined.StopCircle" 
+                         ToggledColor="@Color.Secondary" 
+                         ToggledTitle="@Resource.Stop"/>
+    <MudIconButton>
+        <MudLink Target="_blank" Href="https://OttApiPlatformwebapi.azurewebsites.net/swagger/index.html">
+            <img height="28" width="28" class="mt-2" src="swagger-icon.svg"/>
+        </MudLink>
+    </MudIconButton>
+    <MudTooltip Text="@Resource.Buy_Now" Delay="1000">
+        <MudIconButton OnClick="@(e => NavigationService.NavigateToUrlAsync("https://CMS.net/pricing", true))"
+                       Color="Color.Secondary"
+                       Size="Size.Medium"
+                       Icon="@Icons.Material.Outlined.ShoppingCart">
+        </MudIconButton>
+    </MudTooltip>
+</MudHidden>

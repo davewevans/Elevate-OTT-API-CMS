@@ -1,0 +1,155 @@
+﻿@page "/poc/Localization/properties/cultureDateTimeFormat"
+
+<MudCard Elevation="5">
+    <MudCardHeader>
+        <CardHeaderContent>
+            <MudText Typo="Typo.h6" Color="Color.Primary" Class="mb-4">
+                @Resource.DateTime_Format
+                <MudFab OnClick="@TipsToggle" Label="@Resource.Tips" Color="Color.Secondary" StartIcon="@Icons.Material.Filled.TipsAndUpdates" Size="Size.Small" IconSize="Size.Small" Class="ma-2" />
+                <div Class="relative">
+                    <MudPopover Open="@IsTipsOpen" Class="px-4 pt-4">
+                        <MudElement HtmlTag="h4">The DateTime format displayed on this page is based on the current culture, and will be shown in the language chosen by the user.</MudElement>
+                        <MudButton OnClick="@TipsToggle" Variant="Variant.Filled" Color="Color.Error" Class="ml-auto mr-n3 mb-1 mt-4">@Resource.Close</MudButton>
+                    </MudPopover>
+                </div>
+            </MudText>
+        </CardHeaderContent>
+    </MudCardHeader>
+    <MudCardContent>
+        <MudSimpleTable Hover="true" FixedHeader="true" Style="height:650px">
+            <thead>
+                <tr>
+                    <th>@Resource.Property</th>
+                    <th>@Resource.Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Resource.AM_Designator</td>
+                    <td>@CultureInfo.CurrentUICulture.DateTimeFormat.AMDesignator</td>
+                </tr>
+                <tr>
+                    <td>@Resource.PM_Designator</td>
+                    <td>@CultureInfo.CurrentUICulture.DateTimeFormat.PMDesignator</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Calendar</td>
+                    <td>@CultureInfo.CurrentUICulture.DateTimeFormat.Calendar</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Date_Separator</td>
+                    <td>@CultureInfo.CurrentUICulture.DateTimeFormat.DateSeparator</td>
+                </tr>
+                <tr>
+                    <td>@Resource.First_Day_of_Week</td>
+                    <td>@CultureInfo.CurrentUICulture.DateTimeFormat.FirstDayOfWeek</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Calendar_Week_Rule</td>
+                    <td>@CultureInfo.CurrentUICulture.DateTimeFormat.CalendarWeekRule</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Full_DateTime_Pattern</td>
+                    <td>@CultureInfo.CurrentUICulture.DateTimeFormat.FullDateTimePattern</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Long_Date_Pattern</td>
+                    <td>@CultureInfo.CurrentUICulture.DateTimeFormat.LongDatePattern</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Long_Time_Pattern</td>
+                    <td>@CultureInfo.CurrentUICulture.DateTimeFormat.LongTimePattern</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Month_Day_Pattern</td>
+                    <td>@CultureInfo.CurrentUICulture.DateTimeFormat.MonthDayPattern</td>
+                </tr>
+                <tr>
+                    <td>@Resource.RFC1123_Pattern</td>
+                    <td>@CultureInfo.CurrentUICulture.DateTimeFormat.RFC1123Pattern</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Short_Date_Pattern</td>
+                    <td>@CultureInfo.CurrentUICulture.DateTimeFormat.ShortDatePattern</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Short_Time_Pattern</td>
+                    <td>@CultureInfo.CurrentUICulture.DateTimeFormat.ShortTimePattern</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Sortable_DateTime_Pattern</td>
+                    <td>@CultureInfo.CurrentUICulture.DateTimeFormat.SortableDateTimePattern</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Time_Separator</td>
+                    <td>@CultureInfo.CurrentUICulture.DateTimeFormat.TimeSeparator</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Universal_Sortable_DateTime_Pattern</td>
+                    <td>@CultureInfo.CurrentUICulture.DateTimeFormat.UniversalSortableDateTimePattern</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Year_Month_Pattern</td>
+                    <td>@CultureInfo.CurrentUICulture.DateTimeFormat.YearMonthPattern</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Abbreviated_Day_Names</td>
+                    <td>@string.Join(", ", CultureInfo.CurrentUICulture.DateTimeFormat.AbbreviatedDayNames)</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Shortest_Day_Names</td>
+                    <td>@string.Join(", ", CultureInfo.CurrentUICulture.DateTimeFormat.ShortestDayNames)</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Day_Names</td>
+                    <td>@string.Join(", ", CultureInfo.CurrentUICulture.DateTimeFormat.DayNames)</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Abbreviated_Month_Names</td>
+                    <td>@string.Join(", ", CultureInfo.CurrentUICulture.DateTimeFormat.AbbreviatedMonthNames)</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Month_Names</td>
+                    <td>@string.Join(", ", CultureInfo.CurrentUICulture.DateTimeFormat.MonthNames)</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Native_Calendar_Name</td>
+                    <td>@CultureInfo.CurrentUICulture.DateTimeFormat.</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Abbreviated_Month_Genitive_Names</td>
+                    <td>@string.Join(", ", CultureInfo.CurrentUICulture.DateTimeFormat.AbbreviatedMonthGenitiveNames)</td>
+                </tr>
+                <tr>
+                    <td>@Resource.Month_Genitive_Names</td>
+                    <td>@string.Join(", ", CultureInfo.CurrentUICulture.DateTimeFormat.MonthGenitiveNames)</td>
+                </tr>
+            </tbody>
+        </MudSimpleTable>
+    </MudCardContent>
+</MudCard>
+
+@code {
+
+    [Inject] private IBreadcrumbService BreadcrumbService { get; set; }
+
+    private bool IsTipsOpen { get; set; }
+
+    private void TipsToggle()
+    {
+        IsTipsOpen = !IsTipsOpen;
+    }
+
+    protected override void OnInitialized()
+    {
+        BreadcrumbService.SetBreadcrumbItems(new List<BreadcrumbItem>
+        {
+            new(Resource.Home, "/"),
+            new(Resource.Proof_of_Concepts, "#", true),
+            new(Resource.Localization, "#", true),
+            new(Resource.Properties, "#", true),
+            new(Resource.DateTime_Format, "#", true)
+        });
+    }
+
+}

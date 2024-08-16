@@ -1,0 +1,37 @@
+﻿<MudTable Items="@AttachmentsList" Filter="new Func<AssignedUserAttachmentItem,bool>(FilterAttachments)">
+    <ToolBarContent>
+        <MudText Typo="Typo.subtitle2">@Resource.Current_Documents</MudText>
+        <MudSpacer />
+        <MudTextField @bind-Value="SearchText"
+                      Immediate="true"
+                      Placeholder="@Resource.Search"
+                      Adornment="Adornment.Start"
+                      AdornmentIcon="@Icons.Material.Filled.Search"
+                      IconSize="Size.Medium"
+                      Class="mt-0">
+        </MudTextField>
+    </ToolBarContent>
+    <HeaderContent>
+        <MudTh>@Resource.File_Name</MudTh>
+        <MudTh>@Resource.Downloads</MudTh>
+        <MudTh>@Resource.Options</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="FileName">@context.FileName</MudTd>
+        <MudTd DataLabel="FileUri">
+            <MudLink Href="@context.FileUri" Target="_blank">@Resource.Download</MudLink>
+        </MudTd>
+        <MudTd>
+            <MudButton Variant="Variant.Filled"
+                       StartIcon="@Icons.Material.Filled.Delete"
+                       Size="Size.Small"
+                       Color="Color.Error"
+                       OnClick="@(() => RemoveAttachment(context))">
+                @Resource.Remove
+            </MudButton>
+        </MudTd>
+    </RowTemplate>
+    <PagerContent>
+        <MudTablePager RowsPerPageString="@Resource.Rows_Per_Page" />
+    </PagerContent>
+</MudTable>

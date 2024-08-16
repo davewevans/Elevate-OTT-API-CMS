@@ -1,0 +1,86 @@
+﻿@page "/identity/users"
+@attribute [Authorize]
+
+<MudTable ServerData="@(new Func<TableState, Task<TableData<UserItem>>>(ServerReload))" Striped="true" Dense="true" Hover="true" FixedHeader="true" FixedFooter="true" @ref="Table">
+    <ToolBarContent>
+        <MudText Typo="Typo.h5" Color="Color.Primary">@Resource.Users</MudText>
+        <MudButton Class="ml-4" OnClick="@ShowRolesLookup" Variant="Variant.Filled" Color="Color.Primary">@Resource.Search_by_Roles</MudButton>
+        <MudSpacer />
+        <MudTextField T="string"
+                      Immediate="true"
+                      ValueChanged="@(FilterUsers)"
+                      Placeholder="@Resource.Search"
+                      Adornment="Adornment.Start"
+                      AdornmentIcon="@Icons.Material.Filled.Search"
+                      IconSize="Size.Small"
+                      Class="mt-0">
+        </MudTextField>
+
+        <MudFab Style="margin-left: 20px; margin-top: 10px"
+                Color="Color.Primary"
+                Size="Size.Small"
+                StartIcon="@Icons.Material.Filled.Add"
+                OnClick="AddUser" />
+    </ToolBarContent>
+    <HeaderContent>
+        <MudTh Style="width: 300px;"><MudTableSortLabel SortLabel="Name" T="UserItem">@Resource.Name</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortLabel="UserName" T="UserItem" InitialDirection="SortDirection.Ascending">@Resource.Username</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortLabel="EmailConfirmed" T="UserItem">@Resource.Is_Email_Confirmed</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortLabel="IsSuspended" T="UserItem">@Resource.Status</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortLabel="CreatedOn" T="UserItem">@Resource.Created_On</MudTableSortLabel></MudTh>
+        <MudTh>@Resource.Options</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Name">
+            <PersonCard FullName="@context.FullName"
+                        AvatarUri="@context.AvatarUri"
+                        JobTitle="@context.JobTitle"/>
+        </MudTd>
+        <MudTd DataLabel="UserName">@context.UserName</MudTd>
+        <MudTd DataLabel="EmailConfirmed">@context.EmailConfirmed</MudTd>
+        <MudTd DataLabel="IsSuspended">@(context.IsSuspended ? Resource.Deactivated : Resource.Activated)</MudTd>
+            <MudTd DataLabel="CreatedOn">@context.CreatedOn</MudTd>
+            <MudTd>
+                <MudButtonGroup Color="Color.Primary" Variant="Variant.Text">
+                    <MudButton Variant="Variant.Filled"
+                           StartIcon="@Icons.Material.Filled.AccountTree"
+                           Size="Size.Small"
+                           Color="Color.Default"
+                           Disabled="@(context.IsStatic || context.IsSuperAdmin)"
+                           OnClick="@(() => ShowPermissionsLookupDialog(context.Id,context.UserName))">
+                        @Resource.Permissions
+                    </MudButton>
+
+                    <MudButton Variant="Variant.Filled"
+                               StartIcon="@Icons.Material.Filled.Edit"
+                               Size="Size.Small"
+                               Color="Color.Default"
+                               OnClick="@(() => EditUser(context.Id))">
+                        @Resource.Edit
+                    </MudButton>
+
+                    <MudButton Variant="Variant.Filled"
+                           StartIcon="@Icons.Material.Filled.Delete"
+                           Size="Size.Small"
+                           Color="Color.Error"
+                           Disabled="context.IsStatic"
+                           OnClick="@(() => DeleteUser(context.Id))">
+                        @Resource.Delete
+                    </MudButton>
+                </MudButtonGroup>
+            </MudTd>
+        </RowTemplate>
+        <PagerContent>
+            <MudTablePager RowsPerPageString="@Resource.Rows_Per_Page" />
+        </PagerContent>
+        <FooterContent>
+        </FooterContent>
+    </MudTable>
+@if (RoleItems.Any())
+{
+    <MultipleValuesSelector Items="@RoleItems" TItem="RoleItem" OnValuesChanged="@(async () => await Table.ReloadServerData())">
+        <ItemTemplate Context="roleItem">
+            @roleItem.Name
+        </ItemTemplate>
+    </MultipleValuesSelector>
+}

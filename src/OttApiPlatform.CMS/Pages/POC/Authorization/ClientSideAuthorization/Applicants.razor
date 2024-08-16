@@ -1,0 +1,81 @@
+﻿@page "/poc/authorization/clientSideAuthorization/applicants"
+@attribute [Authorize(Roles = "Admin,Full-Privileged-Officer,Read-Only-Officer")]
+
+<MudTable Context="applicant" ServerData="@(new Func<TableState, Task<TableData<ApplicantItem>>>(ServerReload))" Striped="true" Dense="true" Hover="true" FixedHeader="true" FixedFooter="true" @ref="Table">
+    <ToolBarContent>
+        <MudText Typo="Typo.h5" Color="Color.Primary">@Resource.Military_Applicants</MudText>
+        <MudSpacer />
+        <MudTextField T="string"
+                      Immediate="true"
+                      ValueChanged="@(FilterApplicants)"
+                      Placeholder="@Resource.Search"
+                      Adornment="Adornment.Start"
+                      AdornmentIcon="@Icons.Material.Filled.Search"
+                      IconSize="Size.Small" Class="mt-0">
+        </MudTextField>
+        <AuthorizeView>
+            @if (context.User.HasPermission("Applicants.CreateApplicant") || context.User.IsInRole("Admin"))
+            {
+                <MudFab Style="margin-left: 20px; margin-top: 10px"
+                    Color="Color.Primary"
+                    Size="Size.Small"
+                    StartIcon="@Icons.Material.Filled.Add"
+                    OnClick="AddApplicant" />
+            }
+        </AuthorizeView>
+    </ToolBarContent>
+    <HeaderContent>
+        <MudTh><MudTableSortLabel SortLabel="Ssn" T="ApplicantItem" InitialDirection="SortDirection.Ascending">@Resource.SSNShort</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortLabel="FirstName" T="ApplicantItem">@Resource.First_Name</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortLabel="LastName" T="ApplicantItem">@Resource.Last_Name</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortLabel="DateOfBirth" T="ApplicantItem">@Resource.Date_of_Birth</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortLabel="Height" T="ApplicantItem">@Resource.Height</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortLabel="Weight" T="ApplicantItem">@Resource.Weight</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortLabel="CreatedOn" T="ApplicantItem">@Resource.Created_On</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortLabel="ModifiedOn" T="ApplicantItem">@Resource.Modified_On</MudTableSortLabel></MudTh>
+        <MudTh>@Resource.Options</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Ssn">@applicant.Ssn</MudTd>
+        <MudTd DataLabel="FirstName">@applicant.FirstName</MudTd>
+        <MudTd DataLabel="LastName">@applicant.LastName</MudTd>
+        <MudTd DataLabel="DateOfBirth">@applicant.DateOfBirth</MudTd>
+        <MudTd DataLabel="Height">@applicant.Height</MudTd>
+        <MudTd DataLabel="Weight">@applicant.Weight</MudTd>
+        <MudTd DataLabel="CreatedOn">@applicant.CreatedOn</MudTd>
+        <MudTd DataLabel="ModifiedOn">@applicant.ModifiedOn</MudTd>
+        <MudTd>
+            <AuthorizeView>
+                <MudButtonGroup Color="Color.Primary" Variant="Variant.Text">
+                    @if (context.User.HasPermission("Applicants.GetApplicant") || context.User.IsInRole("Admin"))
+                    {
+                        <MudButton Variant="Variant.Filled"
+                               StartIcon="@Icons.Material.Filled.ViewModule"
+                               Size="Size.Small"
+                               Color="Color.Default"
+                               OnClick="@(() => ViewApplicant(applicant.Id))">@Resource.View</MudButton>
+                    }
+                    @if (context.User.HasPermission("Applicants.UpdateApplicant") || context.User.IsInRole("Admin"))
+                    {
+                        <MudButton Variant="Variant.Filled"
+                               StartIcon="@Icons.Material.Filled.Edit"
+                               Size="Size.Small"
+                               Color="Color.Default"
+                               OnClick="@(() => EditApplicant(applicant.Id))">@Resource.Edit</MudButton>
+                    }
+                    @if (context.User.HasPermission("Applicants.DeleteApplicant") || context.User.IsInRole("Admin"))
+                    {
+                        <MudButton Variant="Variant.Filled"
+                               StartIcon="@Icons.Material.Filled.Delete"
+                               Size="Size.Small"
+                               Color="Color.Error"
+                               OnClick="@(() => DeleteApplicant(applicant.Id))">@Resource.Delete</MudButton>
+                    }
+                </MudButtonGroup>
+            </AuthorizeView>
+        </MudTd>
+    </RowTemplate>
+    <PagerContent>
+        <MudTablePager RowsPerPageString="@Resource.Rows_Per_Page" />
+    </PagerContent>
+</MudTable>

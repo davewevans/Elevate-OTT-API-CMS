@@ -1,0 +1,57 @@
+﻿@if (!Hidden)
+{
+    <InputFile id="@ButtonId" OnChange="UploadFiles" hidden />
+    <MudGrid>
+        <MudItem xs="12">
+            <MudProgressLinear Color="Color.Info" Value="ProgressValue" Min="0" Max="@MinProgressValue" Class="my-7" />
+            <MudButton HtmlTag="label"
+                   Variant="Variant.Filled"
+                   Color="Color.Primary"
+                   StartIcon="@UploadFileButtonIcon"
+                   Style="margin-right:4px;margin-top:4px"
+                   Disabled="CancelAllowed"
+                   for="@ButtonId">
+                @UploadFileButtonName
+            </MudButton>
+            @if (ShowRemoveFileUploadComponentButton && !CancelAllowed)
+            {
+                <MudButton Variant="Variant.Filled"
+                   Color="Color.Warning"
+                   StartIcon="@Icons.Material.Filled.Remove"
+                   Disabled="@CancelAllowed"
+                   OnClick=HideFileUploadComponent
+                   Style="margin-right:4px;margin-top:4px">
+                    @Resource.Remove
+                </MudButton>
+            }
+            @if (ClearAllowed && ShowClearFileButton)
+            {
+                <MudButton HtmlTag="label"
+                   Variant="Variant.Filled"
+                   Color="Color.Error"
+                   StartIcon="@Icons.Material.Filled.Clear"
+                   OnClick=ClearFile
+                   Style="margin-right:4px;margin-top:4px">
+                    @Resource.Clear
+                </MudButton>
+            }
+            @if (!FileInfoBoxHidden)
+            {
+                <MudList>
+                    <MudListItem Icon="@Icons.Material.Filled.AttachFile" @key="@FileUploadMetaData.Name">
+                        <code>@FileUploadMetaData.Name</code>
+                    </MudListItem>
+
+                    <MudListItem Icon="@Icons.Material.Filled.Extension" @key="@FileUploadMetaData.Type">
+                        <code>@FileUploadMetaData.Type</code>
+                    </MudListItem>
+
+                    <MudListItem Icon="@Icons.Material.Filled.Cloud" @key="@FileUploadMetaData.Size">
+                        <code>@FileUploadMetaData.Size</code>
+                    </MudListItem>
+                </MudList>
+            }
+            <MudDivider DividerType="DividerType.FullWidth" Class="my-6" />
+        </MudItem>
+    </MudGrid>
+}

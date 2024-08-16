@@ -1,0 +1,54 @@
+﻿<MudPaper Elevation="25" Class="pa-4">
+    <MudChart ChartType="ChartType.Line" ChartSeries="@Series" XAxisLabels="@XAxisLabels" Width="100%" Height="350" ChartOptions="_options"></MudChart>
+</MudPaper>
+
+<MudPaper Class="pa-4 mt-2 d-flex justify-center">
+    <MudButton Variant="Variant.Filled" OnClick="RandomizeData">@Resource.Randomize</MudButton>
+    <MudMenu Variant="Variant.Filled" Color="Color.Primary" Label="@Resource.Interpolation_Algorithm" FullWidth="true">
+        <MudMenuItem OnClick="() => OnClickMenu(InterpolationOption.NaturalSpline)">@Resource.Natural_Spline</MudMenuItem>
+        <MudMenuItem OnClick="() => OnClickMenu(InterpolationOption.EndSlope)">@Resource.End_Slope</MudMenuItem>
+        <MudMenuItem OnClick="() => OnClickMenu(InterpolationOption.Periodic)">@Resource.Periodic</MudMenuItem>
+    </MudMenu>
+</MudPaper>
+@code {
+
+    private ChartOptions _options = new();
+
+    public List<ChartSeries> Series = new()
+    {
+        new ChartSeries() { Name = Resource.Series_1, Data = new double[] { 90, 79, 72, 69, 62, 62, 55, 65, 70 } },
+        new ChartSeries() { Name = Resource.Series_2, Data = new double[] { 35, 41, 35, 51, 49, 62, 69, 91, 148 } },
+    };
+
+    public string[] XAxisLabels = { Resource.January, Resource.February, Resource.March, Resource.April, Resource.May, Resource.June, Resource.July, Resource.August, Resource.Septemper };
+
+    Random _random = new();
+    protected override void OnInitialized()
+    {
+        _options.InterpolationOption = InterpolationOption.NaturalSpline;
+        _options.YAxisFormat = "c2";
+    }
+
+    public void RandomizeData()
+    {
+        var newSeries = new List<ChartSeries>()
+        {
+            new () { Name = Resource.Series_1, Data = new double[9] },
+            new () { Name = Resource.Series_2, Data = new double[9] },
+        };
+        for (int i = 0; i < 9; i++)
+        {
+            newSeries[0].Data[i] = _random.NextDouble() * 100;
+            newSeries[1].Data[i] = _random.NextDouble() * 100;
+        }
+        Series = newSeries;
+        StateHasChanged();
+    }
+
+    void OnClickMenu(InterpolationOption interpolationOption)
+    {
+        _options.InterpolationOption = interpolationOption;
+        StateHasChanged();
+    }
+
+}

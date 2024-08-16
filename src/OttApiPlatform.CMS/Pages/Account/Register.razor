@@ -1,0 +1,50 @@
+﻿@layout AccountLayout
+@page "/account/register"
+
+<EditForm Model="@RegisterCommand" OnValidSubmit="RegisterUser">
+    <EditContextApiExceptionFallback @ref="EditContextApiExceptionFallback" />
+    <FluentValidationValidator />
+    <MudText Typo="Typo.h4" GutterBottom="true">@Resource.Sign_up</MudText>
+    <MudText>
+        @Resource.Already_have_an_account <MudLink Href="/account/login">@Resource.Sign_in</MudLink>
+    </MudText>
+
+    <MudTextField Label="@Resource.Email"
+                  Variant="Variant.Outlined"
+                  @bind-Value="RegisterCommand.Email"
+                  For="@(() => RegisterCommand.Email)" />
+
+    <MudTextField Label="@Resource.Password"
+                  Variant="Variant.Outlined"
+                  @bind-Value="RegisterCommand.Password"
+                  For="@(() => RegisterCommand.Password)"
+                  InputType="@PasswordInput"
+                  Adornment="Adornment.End"
+                  AdornmentIcon="@PasswordInputIcon"
+                  OnAdornmentClick="TogglePasswordVisibility" />
+
+    <MudTextField Label="@Resource.Confirm_Password"
+                  Variant="Variant.Outlined"
+                  @bind-Value="RegisterCommand.ConfirmPassword"
+                  For="@(() => RegisterCommand.ConfirmPassword)"
+                  InputType="@PasswordInput"
+                  Adornment="Adornment.End"
+                  AdornmentIcon="@PasswordInputIcon"
+                  OnAdornmentClick="TogglePasswordVisibility" />
+    <MudDivider />
+    <MudButton ButtonType="ButtonType.Submit"
+               Style="margin-top:4px"
+               Variant="Variant.Filled"
+               Color="Color.Primary"
+               Size="Size.Large"
+               FullWidth="true">
+        @Resource.Register
+    </MudButton>
+    <MudExpansionPanels>
+        <MudExpansionPanel Text="@Resource.Validation_Summary" IsExpanded="true" Disabled="true" HideIcon="true">
+            <MudText Color="@Color.Error">
+                <ValidationSummary />
+            </MudText>
+        </MudExpansionPanel>
+    </MudExpansionPanels>
+</EditForm>

@@ -1,0 +1,20 @@
+﻿@inherits LayoutComponentBase
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+<MudLayout>
+    <MudAppBar>
+        <MudLink Href="/">
+            <img height="36" width="36" src="/brand.svg" />
+        </MudLink>
+        <MudText Typo="Typo.h6" Class="ml-4" Style="letter-spacing: .5rem; font-weight: 300; margin-left: 12px; font-size: 24px; user-select: none;">Installation</MudText>
+        <MudSpacer />
+    </MudAppBar>
+    <MudMainContent>
+        <MudContainer MaxWidth="MaxWidth.False">
+            <GlobalSpinner></GlobalSpinner>
+            @Body
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>

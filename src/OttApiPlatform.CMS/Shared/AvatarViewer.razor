@@ -1,0 +1,28 @@
+﻿<div class="d-flex justify-center mb-4">
+    <MudAvatar Style="height: 200px; width: 200px;">
+        @if (string.IsNullOrWhiteSpace(AvatarImageSrc) && string.IsNullOrWhiteSpace(AvatarUri))
+        {
+            <MudImage Src="/user.png"></MudImage>
+        }
+        else
+        {
+            <MudImage Src="@(AvatarImageSrc ?? AvatarUri)"></MudImage>
+        }
+    </MudAvatar>
+</div>
+@if (!string.IsNullOrWhiteSpace(AvatarUri) && string.IsNullOrWhiteSpace(AvatarImageSrc))
+{
+    <MudText Align="Align.Center">
+        <MudFab OnClick="async ()=>{AvatarUri=null; await OnAvatarCleared.InvokeAsync();}" Color="Color.Warning" Size="Size.Small" StartIcon="@Icons.Material.Filled.Remove" />
+    </MudText>
+}
+
+@code {
+
+    [Parameter] public string AvatarUri { get; set; }
+
+    [Parameter] public string AvatarImageSrc { get; set; }
+
+    [Parameter] public EventCallback OnAvatarCleared { get; set; }
+
+}

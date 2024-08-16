@@ -1,0 +1,19 @@
+﻿@layout AccountLayout
+@page "/account/RegisterConfirmation"
+@page "/account/RegisterConfirmation/{DisplayConfirmAccountLink:bool}/{emailConfirmationUrl}"
+
+<MudText Typo="Typo.h4" GutterBottom="true">@Resource.Email_Confirmation</MudText>
+@if (DisplayConfirmAccountLink)
+{
+    <MudText Typo="Typo.body2" Style="text-align:justify">
+        @Resource.This_app_does_not_currently_have_a_real_email_sender_registered, @Resource.see <MudLink Href="https://aka.ms/aspaccountconf">@Resource.these_docs</MudLink> @Resource.for_how_to_configure_a_real_email_sender.
+        @Resource.Normally_this_would_be_emailed. @Resource.Click <MudLink Href="javascript:void(0)" OnClick="ConfirmAccount">@Resource.here</MudLink> @Resource.to_confirm_your_account.
+    </MudText>
+}
+else
+{
+    <MudText Typo="Typo.body2">
+        @Resource.Please_check_your_email_to_confirm_your_account
+    </MudText>
+}
+<MudButton Variant="Variant.Filled" Style="margin-top:4px"><a href="https://aka.ms/aspaccountconf">Learn More</a></MudButton>

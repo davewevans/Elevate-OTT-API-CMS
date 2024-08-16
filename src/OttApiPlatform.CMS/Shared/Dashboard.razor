@@ -1,0 +1,149 @@
+﻿<MudText Typo="Typo.h5" Color="Color.Primary" Class="mb-4">@Resource.Dashboard<MudChip Label="true" Color="Color.Default">@Resource.Live_data_powered_by_SignalR</MudChip></MudText>
+<MudGrid>
+    <MudItem xs="12" sm="6" md="3">
+        <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4" Style="height: 100px;">
+            <MudIcon Icon="@Icons.Material.Filled.Euro" Color="Color.Primary" Class="mx-4" Style="width: 54px; height: 54px;"></MudIcon>
+            <div>
+                <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1">@Resource.Total_Cost</MudText>
+                <MudText Typo="Typo.h5">@HeadlinesResponse?.TotalCost</MudText>
+            </div>
+        </MudPaper>
+    </MudItem>
+    <MudItem xs="12" sm="6" md="3">
+        <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4" Style="height: 100px;">
+            <MudIcon Icon="@Icons.Material.Filled.Layers" Color="Color.Secondary" Class="mx-4" Style="width: 54px; height: 54px;"></MudIcon>
+            <div>
+                <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1">@Resource.Graphite_on_roof</MudText>
+                <MudText Typo="Typo.h5">@HeadlinesResponse?.GraphiteOnRoof</MudText>
+            </div>
+        </MudPaper>
+    </MudItem>
+    <MudItem xs="12" sm="6" md="3">
+        <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4" Style="height: 100px;">
+            <MudIcon Icon="@Icons.Material.Filled.Public" Color="Color.Success" Class="mx-4" Style="width: 54px; height: 54px;"></MudIcon>
+            <div>
+                <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1">@Resource.Global_Spread</MudText>
+                <MudText Typo="Typo.h5">@HeadlinesResponse?.GlobalSpread</MudText>
+            </div>
+        </MudPaper>
+    </MudItem>
+    <MudItem xs="12" sm="6" md="3">
+        <MudPaper Elevation="25" Class="d-flex flex-row pt-6 pb-4" Style="height: 100px;">
+            <MudIcon Icon="@Icons.Custom.Uncategorized.Radioactive" Color="Color.Warning" Class="mx-4" Style="width: 54px; height: 54px;"></MudIcon>
+            <div>
+                <MudText Typo="Typo.subtitle1" Class="mud-text-secondary mb-n1">@Resource.Roentgen</MudText>
+                <MudText Typo="Typo.h5">@HeadlinesResponse?.Roentgen</MudText>
+            </div>
+        </MudPaper>
+    </MudItem>
+
+    <MudItem xs="12" sm="4">
+        <PieChart />
+    </MudItem>
+    <MudItem xs="12" sm="4">
+        <LegendPositionDonutChart />
+    </MudItem>
+    <MudItem xs="12" sm="4">
+        <BasicDonutChart />
+    </MudItem>
+    <MudItem xs="6">
+        <LineChart1 />
+    </MudItem>
+    <MudItem xs="6">
+        <LineChart2 />
+    </MudItem>
+    <MudItem xs="6">
+        <LineChart3 />
+    </MudItem>
+    <MudItem xs="6">
+        <BarChart />
+    </MudItem>
+
+    <MudItem xs="12" sm="12" md="6">
+        <MudCard Elevation="25" Style="height: 100%;">
+            <MudCardHeader>
+                <CardHeaderContent>
+                    <MudText Typo="Typo.h6">@Resource.Earning_Report</MudText>
+                </CardHeaderContent>
+            </MudCardHeader>
+            <MudCardContent Class="px-0">
+                <MudSimpleTable Elevation="0" Hover="true">
+                    <thead>
+                        <tr>
+                            <th>@Resource.Name</th>
+                            <th>@Resource.Recent_incidents</th>
+                            <th>@Resource.Earnings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var report in _earningReports.OrderBy(x => x.Name))
+                        {
+                            <tr>
+                                <td>
+                                    <div class="d-flex flex-row">
+                                        <MudAvatar Image="@report.Avatar" Class="mud-elevation-25" />
+                                        <div class="ml-6">
+                                            <MudText Typo="Typo.subtitle2">@report.Name</MudText>
+                                            <MudText Typo="Typo.body2">@report.Title</MudText>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><MudChip Label="true" Color="@report.Severity" Size="Size.Small" Class="ml-auto mud-elevation-25">@report.SeverityTitle</MudChip></td>
+                                <td><MudText>@report.Salary</MudText></td>
+                            </tr>
+                        }
+                    </tbody>
+                </MudSimpleTable>
+            </MudCardContent>
+        </MudCard>
+    </MudItem>
+    <MudItem xs="12" sm="12" md="6">
+        <MudCard Elevation="25" Style="height: 100%;">
+            <MudCardHeader>
+                <CardHeaderContent>
+                    <MudText Typo="Typo.h6">@Resource.Recent_incidents</MudText>
+                </CardHeaderContent>
+            </MudCardHeader>
+            <MudCardContent Class="px-0">
+                <MudList Clickable="true">
+                    <MudListItem>
+                        <div class="d-flex flex-row">
+                            <MudAvatar Class="mud-elevation-25">
+                                <MudIcon Icon="@Icons.Custom.Brands.GitHub" Class="mx-4" />
+                            </MudAvatar>
+                            <div class="ml-6">
+                                <MudText Typo="Typo.subtitle2">@Resource.Issues_rising</MudText>
+                                <MudText Typo="Typo.body2">@Resource.Resource_Issues_is_almost_reaching_100</MudText>
+                            </div>
+                            <MudChip Label="true" Color="Color.Error" Size="Size.Small" Class="ml-auto mud-elevation-25">@Resource.Danger</MudChip>
+                        </div>
+                    </MudListItem>
+                    <MudListItem>
+                        <div class="d-flex flex-row">
+                            <MudAvatar Class="mud-elevation-25">
+                                <MudIcon Icon="@Icons.Custom.Uncategorized.Radioactive" Class="mx-4" />
+                            </MudAvatar>
+                            <div class="ml-6">
+                                <MudText Typo="Typo.subtitle2">@Resource.Incident_in_plant_number_4</MudText>
+                                <MudText Typo="Typo.body2">@Resource.Fire_in_reactor_core</MudText>
+                            </div>
+                            <MudChip Label="true" Color="Color.Info" Size="Size.Small" Class="ml-auto mud-elevation-25">@Resource.Minor</MudChip>
+                        </div>
+                    </MudListItem>
+                    <MudListItem>
+                        <div class="d-flex flex-row">
+                            <MudAvatar Class="mud-elevation-25">
+                                <MudIcon Icon="@Icons.Material.Filled.Person" Class="mx-4" />
+                            </MudAvatar>
+                            <div class="ml-6">
+                                <MudText Typo="Typo.subtitle2">@Resource.Occupational_injury</MudText>
+                                <MudText Typo="Typo.body2">@Resource.Employee_broke_a_finger_while_writing_some_code</MudText>
+                            </div>
+                            <MudChip Label="true" Color="Color.Success" Size="Size.Small" Class="ml-auto mud-elevation-25">@Resource.Dismissed</MudChip>
+                        </div>
+                    </MudListItem>
+                </MudList>
+            </MudCardContent>
+        </MudCard>
+    </MudItem>
+</MudGrid>

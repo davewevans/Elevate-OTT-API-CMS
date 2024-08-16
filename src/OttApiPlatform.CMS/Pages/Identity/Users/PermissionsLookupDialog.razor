@@ -1,0 +1,67 @@
+﻿<MudDialog Style="max-height:90%; min-width:30%;overflow-y: scroll;">
+    <TitleContent>
+        <MudText Typo="Typo.h6">
+            <MudIcon Icon="@Icons.Material.Filled.AccountTree" Class="mr-3 mb-n1" />
+            @Resource.Assign_Permissions_to <MudChip Text="purple" Color="Color.Primary" Label="true">@UserName.ToUpper()</MudChip>
+        </MudText>
+    </TitleContent>
+    <DialogContent>
+        <MudContainer>
+            <MudSwitch T="bool"
+                       Checked="LoadingOnDemand"
+                       CheckedChanged="InitializeTree"
+                       Label="@Resource.Loading_On_Demand"
+                       Color="Color.Info" />
+            <MudDivider />
+            @if (LoadingOnDemand)
+            {
+                <MudTreeView @bind-SelectedValues="SelectedPermissionItemsForView"
+                         Items="PermissionItems"
+                         ServerData="LoadServerData"
+                         MultiSelection="true">
+                    <ItemTemplate Context="permissionItem">
+                        <MudTreeViewItem CanExpand="true"
+                                     SelectedChanged=" (e)=>UpdateSelectedPermissions(e,permissionItem)"
+                                     Selected="SelectedPermissionItemsForView.Any(sp=>sp.Id==permissionItem.Id)"
+                                     Items="@permissionItem.Permissions.ToHashSet()"
+                                     Value="@permissionItem"
+                                     Text="@permissionItem.Name"
+                                     Icon="@(permissionItem.IsCustomPermission ? Icons.TwoTone.ColorLens : Icons.Material.Filled.Security)"
+                                     LoadingIconColor="Color.Info" />
+                    </ItemTemplate>
+                </MudTreeView>
+            }
+            else
+            {
+                <MudTreeView @bind-SelectedValues="SelectedPermissionItemsForView"
+                         Items="PermissionItems"
+                         MultiSelection="true">
+                    <ItemTemplate Context="permissionItem">
+                        <MudTreeViewItem CanExpand="@permissionItem.HasChildren"
+                                     Selected="SelectedPermissionItemsForView.Any(sp=>sp.Id==permissionItem.Id)"
+                                     Items="@permissionItem.Permissions.ToHashSet()"
+                                     Value="@permissionItem"
+                                     Text="@permissionItem.Name"
+                                     Icon="@(permissionItem.IsCustomPermission ? Icons.TwoTone.ColorLens : Icons.Material.Filled.Security)"
+                                     LoadingIconColor="Color.Info" />
+                    </ItemTemplate>
+                </MudTreeView>
+            }
+        </MudContainer>
+    </DialogContent>
+    <DialogActions>
+        <MudButton ButtonType="ButtonType.Button"
+                   OnClick="SubmitForm"
+                   Style="float: right"
+                   Variant="Variant.Filled"
+                   Color="Color.Error">
+            @Resource.Save
+        </MudButton>
+        <MudButton OnClick="Cancel"
+                   Color="Color.Default"
+                   Style="float: right"
+                   Variant="Variant.Filled">
+            @Resource.Cancel
+        </MudButton>
+    </DialogActions>
+</MudDialog>

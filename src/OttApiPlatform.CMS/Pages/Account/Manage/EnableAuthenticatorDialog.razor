@@ -1,0 +1,58 @@
+﻿<EditForm Model="EnableAuthenticatorCommand" OnValidSubmit="EnableAuthenticatorApp">
+    <EditContextApiExceptionFallback @ref="EditContextApiExceptionFallback" />
+    <FluentValidationValidator />
+    <MudDialog Options="new DialogOptions {FullScreen = true}">
+        <TitleContent>
+            <MudText Typo="Typo.h6">
+                <MudIcon Icon="@Icons.Material.Filled.SettingsApplications" Class="mr-3 mb-n1" />
+                @Resource.Configure_Authenticator_App
+            </MudText>
+        </TitleContent>
+        <DialogContent>
+            <MudContainer>
+                <MudAlert Severity="Severity.Error" NoIcon="true">@Resource.Consider_switching_your_device_to_light_mode</MudAlert>
+                <MudAlert Severity="Severity.Info" NoIcon="true">@Resource.To_use_an_authenticator_app_go_through_the_following_steps</MudAlert>
+                <ol class="list">
+                    <li>
+                        <p>
+                            @Resource.Download_a_two_factor_authenticator_app_like_Microsoft_Authenticator_for
+                            <MudLink Href="https://go.microsoft.com/fwlink/?Linkid=825072" Typo="Typo.body2">@Resource.Android</MudLink> @Resource.and
+                            <MudLink Href="https://go.microsoft.com/fwlink/?Linkid=825073" Typo="Typo.body2">@Resource.iOS</MudLink> @Resource.or
+                            @Resource.Google_Authenticator_for
+                            <MudLink Href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&amp;hl=en" Typo="Typo.body2">@Resource.Android</MudLink> @Resource.and
+                            <MudLink Href="https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8" Typo="Typo.body2">@Resource.iOS</MudLink>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            @Resource.Scan_the_QR_Code_or_enter_this_key <kbd>@LoadSharedKeyAndQrCodeUriResponse.SharedKey</kbd> @Resource.into_your_two_factor_authenticator_app__Spaces_and_casing_do_not_matter
+                        </p>
+                        <div class="alert alert-info">@Resource.Learn_how_to <MudLink Href="https://go.microsoft.com/fwlink/?Linkid=852423" Typo="Typo.body2">@Resource.enable_QR_code_generation</MudLink>.</div>
+                        <div id="qrCode"></div>
+                        @*<div id="qrCodeData">@((MarkupString)sharedKeyAndQrCodeUriResponse.AuthenticatorUri)</div>*@
+                    </li>
+                    <li>
+                        <p>
+                            @Resource.Once_you_have_scanned_the_QR_code_or_input_the_key_above, @Resource.your_two_factor_authentication_app_will_provide_you_with_a_unique_code
+                            @Resource.Enter_the_code_in_the_confirmation_box_below
+                        </p>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <MudTextField Label="@Resource.Code" Variant="Variant.Outlined" @bind-Value="@EnableAuthenticatorCommand.Code" For="@(() => EnableAuthenticatorCommand.Code)" />
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </MudContainer>
+        </DialogContent>
+        <DialogActions>
+            <MudButton OnClick="Cancel" Color="Color.Default" Style="float:right" Class="mr-3" Variant="Variant.Filled">@Resource.Cancel</MudButton>
+            <MudButton ButtonType="ButtonType.Submit" Style="float:right" Variant="Variant.Filled" Color="Color.Error">@Resource.Verify</MudButton>
+        </DialogActions>
+    </MudDialog>
+    <MudExpansionPanel Text="@Resource.Validation_Summary" IsExpanded="true" Disabled="true" HideIcon="true">
+        <MudText Color="@Color.Error">
+            <ValidationSummary />
+        </MudText>
+    </MudExpansionPanel>
+</EditForm>

@@ -1,0 +1,100 @@
+﻿<MudCard>
+    <MudCardHeader>
+        <CardHeaderContent>
+            <MudText Typo="Typo.h6">@Resource.Two_Factor_Authentication</MudText>
+        </CardHeaderContent>
+        <CardHeaderActions>
+            <MudIconButton Icon="@Icons.Material.Filled.Settings" Color="Color.Default" />
+        </CardHeaderActions>
+    </MudCardHeader>
+    <MudCardContent>
+        <MudText Typo="Typo.body2">@Resource.Two_Factor_Authentication_works_by_adding_an_additional_layer</MudText>
+    </MudCardContent>
+    <MudCardActions>
+        <MudGrid>
+            @if (TwoFactorAuthenticationStateResponse != null)
+            {
+                @if (TwoFactorAuthenticationStateResponse.Is2FaEnabled)
+                {
+                    @switch (TwoFactorAuthenticationStateResponse.RecoveryCodesLeft)
+                    {
+                        case 0:
+                            <MudGrid>
+                                <MudItem xs="12">
+                                    <MudAlert Severity="@Severity.Error">@Resource.You_have_no_recovery_codes_left</MudAlert>
+                                </MudItem>
+
+                                <MudItem xs="12">
+                                    <MudText Typo="@Typo.body2">@Resource.You_must <MudLink Href="javascript:void(0)" OnClick="@GenerateRecoveryCodes" Typo="@Typo.body2">@Resource.generate_a_new_set_of_recovery_codes</MudLink>@Resource.before_you_can_log_in_with_a_recovery_code</MudText>
+                                </MudItem>
+                            </MudGrid>
+                            break;
+                        case 1:
+                            <MudGrid>
+                                <MudItem xs="12">
+                                    <MudAlert Severity="@Severity.Info">@Resource.You_have_one_recovery_code_left</MudAlert>
+                                </MudItem>
+
+                                <MudItem xs="12">
+                                    <MudText Typo="@Typo.body2">@Resource.You_can <MudLink Href="javascript:void(0)" OnClick="@GenerateRecoveryCodes" Typo="@Typo.body2">@Resource.generate_a_new_set_of_recovery_codes</MudLink>.</MudText>
+                                </MudItem>
+                            </MudGrid>
+                            break;
+                        case <= 3:
+                            <MudItem xs="12">
+                                <MudAlert Severity="@Severity.Warning">@string.Format(Resource.You_have_num_recovery_codes_left, TwoFactorAuthenticationStateResponse.RecoveryCodesLeft)</MudAlert>
+                            </MudItem>
+
+                            <MudItem xs="12">
+                                <MudText Typo="@Typo.body2">@Resource.You_should <MudLink Href="javascript:void(0)" OnClick="@GenerateRecoveryCodes" Typo="@Typo.body2">@Resource.generate_a_new_set_of_recovery_codes</MudLink>.</MudText>
+                            </MudItem>
+                            break;
+                    }
+
+                    @*@if (TwoFactorAuthenticationStateResponse.IsMachineRemembered)
+                    {
+                        <MudItem xs="12">
+                            <MudButton Variant="Variant.Filled" Color="Color.Secondary">@Resource.Forget_this_browser</MudButton>
+                        </MudItem>
+                    }*@
+
+                    <MudItem xs="3">
+                        <MudButton OnClick="DisableAuthenticator" Variant="Variant.Text" Color="Color.Error">@Resource.Disable_2FA</MudButton>
+                    </MudItem>
+                    <MudItem xs="3">
+                        <MudButton OnClick="ResetAuthenticator" Variant="Variant.Text" Color="Color.Warning">@Resource.Reset_Authenticator_App</MudButton>
+                    </MudItem>
+                    <MudItem xs="3">
+                        <MudButton OnClick="GenerateRecoveryCodes" Variant="Variant.Text" Color="Color.Info">@Resource.Reset_Recovery_Codes</MudButton>
+                    </MudItem>
+                }
+                else if (!TwoFactorAuthenticationStateResponse.HasAuthenticator)
+                {
+                    <MudItem xs="3">
+                        <MudButton OnClick="EnableAuthenticator" Variant="Variant.Text" Color="Color.Primary">@Resource.Add_Authenticator_App</MudButton>
+                    </MudItem>
+                
+                }
+                else
+                {
+                    <MudItem xs="3">
+                        <MudButton OnClick="EnableAuthenticator" Variant="Variant.Text" Color="Color.Primary">@Resource.Enable_2FA</MudButton>
+                    </MudItem>
+
+                    <MudItem xs="3">
+                        <MudButton OnClick="ResetAuthenticator" Variant="Variant.Text" Color="Color.Warning">@Resource.Reset_Authenticator_App</MudButton>
+                    </MudItem>
+                }
+
+            }
+        </MudGrid>
+    </MudCardActions>
+    <MudDivider />
+    <MudExpansionPanels>
+        <MudExpansionPanel Text="@Resource.Validation_Summary" IsExpanded="true" Disabled="true" HideIcon="true">
+            <MudText Color="@Color.Error">
+
+            </MudText>
+        </MudExpansionPanel>
+    </MudExpansionPanels>
+</MudCard>

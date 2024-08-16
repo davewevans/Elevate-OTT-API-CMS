@@ -1,0 +1,32 @@
+﻿@if (UserForEdit != null)
+{
+    <EditForm Model="@UserForEdit" OnValidSubmit="UpdateUserProfile">
+        <EditContextApiExceptionFallback @ref="EditContextApiExceptionFallback" />
+        <FluentValidationValidator />
+        <MudCard>
+            <MudCardHeader>
+                <CardHeaderContent>
+                    <MudText Typo="Typo.h6">@Resource.My_Profile</MudText>
+                </CardHeaderContent>
+            </MudCardHeader>
+            <MudCardContent>
+                <MudTextField Disabled="true" Label="@Resource.Email" Variant="Variant.Outlined" @bind-Value="UserForEdit.Email" />
+                <MudTextField Label="@Resource.Name" Variant="Variant.Outlined" @bind-Value="UserForEdit.Name" For="@(() => UserForEdit.Name)" />
+                <MudTextField Label="@Resource.Surname" Variant="Variant.Outlined" @bind-Value="UserForEdit.Surname" For="@(() => UserForEdit.Surname)" />
+                <MudTextField Label="@Resource.Job_Title" Variant="Variant.Outlined" @bind-Value="UserForEdit.JobTitle" For="@(() => UserForEdit.JobTitle)" />
+                <MudTextField Label="@Resource.Phone_Number" Variant="Variant.Outlined" @bind-Value="UserForEdit.PhoneNumber" For="@(() => UserForEdit.PhoneNumber)" />
+            </MudCardContent>
+            <MudCardActions Class="pb-4 pl-4">
+                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto" FullWidth="true">@Resource.Save</MudButton>
+            </MudCardActions>
+            <MudDivider />
+            <MudExpansionPanels>
+                <MudExpansionPanel Text="@Resource.Validation_Summary" IsExpanded="true" Disabled="true" HideIcon="true">
+                    <MudText Color="@Color.Error">
+                        <ValidationSummary />
+                    </MudText>
+                </MudExpansionPanel>
+            </MudExpansionPanels>
+        </MudCard>
+    </EditForm>
+}

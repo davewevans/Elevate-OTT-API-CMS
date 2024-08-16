@@ -1,0 +1,56 @@
+﻿<EditForm Model="ReferenceItemForEdit" OnValidSubmit="SubmitForm">
+    <MudDialog>
+        <TitleContent>
+            <MudText Typo="Typo.h6">
+                <MudIcon Icon="@Icons.Material.Filled.Groups" Class="mr-3 mb-n1" />
+                @Resource.Edit_Reference
+            </MudText>
+        </TitleContent>
+        <DialogContent>
+            <MudContainer>
+                <FluentValidationValidator />
+                <MudCard>
+                    <MudCardContent>
+                        <MudTextField Label="@Resource.First_Name" Variant="Variant.Outlined"
+                                      @bind-Value="ReferenceItemForEdit.Name"
+                                      For="@(() => ReferenceItemForEdit.Name)" />
+
+                        <MudTextField Label="@Resource.Job_Title"
+                                      Variant="Variant.Outlined"
+                                      @bind-Value="ReferenceItemForEdit.JobTitle"
+                                      For="@(() => ReferenceItemForEdit.JobTitle)" />
+
+                        <MudTextField Label="@Resource.Phone_Number"
+                                      Variant="Variant.Outlined"
+                                      @bind-Value="ReferenceItemForEdit.Phone"
+                                      For="@(() => ReferenceItemForEdit.Phone)" />
+                    </MudCardContent>
+                    <MudCardActions Class="pb-4 pl-4">
+                        <MudButton ButtonType="ButtonType.Submit"
+                                   Variant="Variant.Filled"
+                                   Color="Color.Primary"
+                                   FullWidth="true">
+                            @Resource.Save
+                        </MudButton>
+                    </MudCardActions>
+                    <MudDivider />
+                    <MudExpansionPanels>
+                        <MudExpansionPanel Text="@Resource.Validation_Summary" IsExpanded="true" Disabled="true" HideIcon="true">
+                            <MudText Color="@Color.Error">
+                                <ValidationSummary />
+                            </MudText>
+                        </MudExpansionPanel>
+                    </MudExpansionPanels>
+                </MudCard>
+            </MudContainer>
+        </DialogContent>
+    </MudDialog>
+</EditForm>
+<MudButton ButtonType="ButtonType.Button"
+           OnClick="Cancel"
+           Variant="Variant.Filled"
+           Color="Color.Default"
+           FullWidth="true">
+    @Resource.Cancel
+</MudButton>
+

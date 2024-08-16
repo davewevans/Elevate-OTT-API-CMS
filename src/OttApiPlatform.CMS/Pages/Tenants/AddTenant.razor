@@ -1,0 +1,27 @@
+﻿@page "/tenants/AddTenant"
+@attribute [Authorize]
+
+<MudText Typo="Typo.h5" Color="Color.Primary" Class="mb-4">@Resource.Add_Tenant</MudText>
+<EditForm Model="CreateTenantCommand" OnValidSubmit="SubmitForm">
+    <EditContextApiExceptionFallback @ref="EditContextApiExceptionFallback" />
+    <FluentValidationValidator />
+    <MudCard Elevation="25">
+        <MudCardContent>
+            <MudTextField Label="@Resource.Name"
+                          Variant="Variant.Outlined"
+                          @bind-Value="CreateTenantCommand.Name"
+                          For="@(() => CreateTenantCommand.Name)" />
+        </MudCardContent>
+        <MudCardActions Class="pb-4 pl-4">
+            <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto" FullWidth="true">@Resource.Save</MudButton>
+        </MudCardActions>
+        <MudDivider />
+        <MudExpansionPanels>
+            <MudExpansionPanel Text="@Resource.Validation_Summary" IsExpanded="true" Disabled="true" HideIcon="true">
+                <MudText Color="@Color.Error">
+                    <ValidationSummary />
+                </MudText>
+            </MudExpansionPanel>
+        </MudExpansionPanels>
+    </MudCard>
+</EditForm>

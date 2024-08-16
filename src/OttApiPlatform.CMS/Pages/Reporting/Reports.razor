@@ -1,0 +1,93 @@
+﻿@page "/reporting/reports"
+@attribute [Authorize]
+
+<MudTable Context="report" ServerData="@(new Func<TableState, Task<TableData<ReportItem>>>(ServerReload))" Striped="true" Dense="true" Hover="true" FixedHeader="true" FixedFooter="true" @ref="Table">
+    <ToolBarContent>
+        <MudText Typo="Typo.h5" Color="Color.Primary">@Resource.Reports</MudText>
+        <MudSpacer />
+        <MudSelect Label="@Resource.Status"
+                   T="ReportStatus"
+                   ValueChanged="@((e)=> { FilterReports(SearchString, e); })"
+                   OpenIcon="@Icons.Material.Filled.QueryStats"
+                   AdornmentColor="Color.Secondary"
+                   Class="mt-0 mr-4">
+            @foreach (ReportStatus item in Enum.GetValues(typeof(ReportStatus)))
+            {
+                <MudSelectItem Value="@item">@GetReportStatus(item)</MudSelectItem>
+            }
+        </MudSelect>
+        <MudTextField T="string"
+                      Immediate="true"
+                      ValueChanged="@(searchString => { FilterReports(searchString, SelectedReportStatus); })"
+                      Placeholder="@Resource.Search"
+                      Adornment="Adornment.Start"
+                      AdornmentIcon="@Icons.Material.Filled.Search"
+                      IconSize="Size.Small" Class="mt-0"></MudTextField>
+    </ToolBarContent>
+    <HeaderContent>
+        <MudTh><MudTableSortLabel SortLabel="Title" T="ReportItem">@Resource.Title</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortLabel="FileName" T="ReportItem">@Resource.FileName</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortLabel="ContentType" T="ReportItem">@Resource.ContentType</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortLabel="QueryString" T="ReportItem">@Resource.QueryString</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortLabel="Status" T="ReportItem">@Resource.Status</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortLabel="CreatedOn" T="ReportItem" InitialDirection="SortDirection.Descending">@Resource.Created_On</MudTableSortLabel></MudTh>
+        <MudTh>@Resource.Options</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Title">@report.Title</MudTd>
+        <MudTd DataLabel="FileName">@report.FileName</MudTd>
+        <MudTd DataLabel="ContentType">@report.ContentType</MudTd>
+        <MudTd DataLabel="QueryString"><small>@report.QueryString</small> </MudTd>
+        @switch (report.Status)
+        {
+            case ReportStatus.Pending:
+                <MudTd DataLabel="Status">
+                    <MudButton Variant="Variant.Filled" Size="Size.Small" Color="Color.Info">@Resource.Pending</MudButton>
+                </MudTd>
+                break;
+            case ReportStatus.InProgress:
+                <MudTd DataLabel="Status">
+                    <MudButton Variant="Variant.Filled" Size="Size.Small" Color="Color.Primary">@Resource.In_Progress</MudButton>
+                </MudTd>
+                break;
+            case ReportStatus.Completed:
+                <MudTd DataLabel="Status">
+                    <MudButton Variant="Variant.Filled" Size="Size.Small" Color="Color.Success">@Resource.Completed</MudButton>
+                </MudTd>
+                break;
+            case ReportStatus.Failed:
+                <MudTd DataLabel="Status">
+                    <MudButton Variant="Variant.Filled" Size="Size.Small" Color="Color.Error">@Resource.Failed</MudButton>
+                </MudTd>
+                break;
+        }
+        <MudTd DataLabel="CreatedOn">@report.CreatedOn</MudTd>
+        <MudTd>
+            <MudButtonGroup Color="Color.Primary" Variant="Variant.Text">
+                @switch (report.Status)
+                {
+                    case ReportStatus.Completed:
+                        <MudButton Variant="Variant.Filled"
+                                   StartIcon="@Icons.Material.Filled.ViewModule"
+                                   Size="Size.Small"
+                                   Color="Color.Default"
+                                   OnClick="@(async () => await ViewReport(report.Id))">
+                            @Resource.View
+                        </MudButton>
+                        <MudButton Variant="Variant.Filled"
+                           StartIcon="@Icons.Material.Filled.Download"
+                           Size="Size.Small"
+                           Color="Color.Default"
+                           OnClick="@(async () => await DownloadReport($"{report.FileName}", report.FileUri))">
+                            @Resource.Download
+                        </MudButton>
+                        break;
+                }
+            </MudButtonGroup>
+        </MudTd>
+    </RowTemplate>
+    <PagerContent>
+        <MudTablePager RowsPerPageString="@Resource.Rows_Per_Page" />
+    </PagerContent>
+</MudTable>
+

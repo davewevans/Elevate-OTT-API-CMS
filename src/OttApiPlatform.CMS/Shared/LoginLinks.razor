@@ -1,0 +1,47 @@
+﻿@inject NavigationManager NavigationManager
+
+<AuthorizeView>
+    <Authorized>
+        @{
+            var avatarUri = context.User.Claims.FirstOrDefault(c => c.Type == "AvatarUri")?.Value;
+            var editMyTenantHref = $"/account/editMyTenant/{NavigationManager.GetSubDomain()}";
+        }
+        <MudMenu AnchorOrigin="Origin.BottomLeft" Dense="true" Class="mt-1 ml-4">
+            <ActivatorContent>
+                @if (!string.IsNullOrWhiteSpace(avatarUri))
+                {
+                    <MudAvatar>
+                        <MudImage Src="@avatarUri"></MudImage>
+                    </MudAvatar>
+                }
+                else
+                {
+                    <MudAvatar>
+                        <MudImage Src="/user.png"></MudImage>
+                    </MudAvatar>
+                }
+            </ActivatorContent>
+            <ChildContent>
+                <PersonCard FullName="@context.User.Claims.FirstOrDefault(c=>c.Type == "FullName")?.Value"
+                            AvatarUri="@avatarUri"
+                            JobTitle="@context.User.Claims.FirstOrDefault(c=>c.Type == "JobTitle")?.Value"
+                            Class="mt-n2" />
+                <MudDivider Class="mb-2" />
+                <MudListItem Text="@Resource.Account" Icon="@Icons.Material.Outlined.Person" Href="/account/manage/index" />
+                @if (context.User.HasClaim(c => c.Type == "TenantMode" && c.Value.ToLower() == "MultiTenant".ToLower()))
+                {
+                    @if (context.User.HasClaim(c => c.Type == "IsSuperAdmin" && c.Value.ToLower() == "true") && 
+                         !context.User.HasClaim(c => c.Type == "IsHostUser" && c.Value.ToLower() == "true"))
+                    {
+                        <MudListItem Text="@Resource.My_Tenant" Icon="@Icons.Material.Outlined.Shop" Href="@editMyTenantHref" />
+                    }
+                }
+                <MudListItem Text="@Resource.Logout" Icon="@Icons.Material.Outlined.Login" Href="/account/Logout" />
+            </ChildContent>
+        </MudMenu>
+    </Authorized>
+    <NotAuthorized>
+        <MudChip Href="/account/login" Icon="@Icons.Material.Filled.Login" Color="Color.Info">@Resource.Login</MudChip>
+        <MudChip Href="/account/register" Icon="@Icons.Material.Filled.PersonAdd" Color="Color.Success">@Resource.Register</MudChip>
+    </NotAuthorized>
+</AuthorizeView>

@@ -1,0 +1,6 @@
+﻿<MudMenu StartIcon="@Icons.Material.Filled.Translate" Label="@_cultureValue" EndIcon="@Icons.Material.Filled.KeyboardArrowDown" MaxHeight="500" FullWidth="true" IconColor="Color.Secondary" Color="Color.Default" Variant="Variant.Filled">
+    @foreach (var item in _cultures)
+    {
+        <MudMenuItem OnClick="() => SetCultureInfo(item)">@item.DisplayName</MudMenuItem>
+    }
+</MudMenu>

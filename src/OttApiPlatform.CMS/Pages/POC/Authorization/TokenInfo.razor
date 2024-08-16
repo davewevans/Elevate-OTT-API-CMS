@@ -1,0 +1,68 @@
+﻿@page "/poc/authorization/tokenInfo"
+
+<AuthorizeView>
+    <Authorized>
+        <MudCard Elevation="5">
+            <MudCardHeader>
+                <CardHeaderContent>
+                    <MudText Typo="Typo.h5" Color="Color.Primary" Class="mb-4">@Resource.Token_Info</MudText>
+                </CardHeaderContent>
+                <CardHeaderActions>
+                    <MudChip Color="Color.Secondary">Hello @context.User.Identity?.Name</MudChip>
+                </CardHeaderActions>
+            </MudCardHeader>
+            <MudCardContent>
+                <MudTabs Elevation="2" Rounded="true" ApplyEffectsToContainer="true" PanelClass="pa-6">
+                    <MudTabPanel Text="@Resource.My_Claims">
+                        <MudList>
+                            <MudListSubheader>
+                                <MudTextField Label="@Resource.Search"
+                                              @bind-Value="@SearchClaim"
+                                              AdornmentIcon="@Icons.Material.Filled.Brush"
+                                              Adornment="Adornment.End" Immediate="true" Variant="Variant.Outlined" />
+                            </MudListSubheader>
+
+                            @foreach (var claim in context.User.Claims.Where(c => c.Type != "permissions"))
+                            {
+                                <MudListItem @key="Guid.NewGuid()" Icon="@Icons.Material.Filled.Security">
+                                    <MudButton Variant="Variant.Filled" Color="Color.Primary">
+                                        <MudHighlighter Text="@claim.Type" HighlightedText="@SearchClaim" />
+                                    </MudButton>
+                                    <MudButton Variant="Variant.Filled" Color="Color.Info">
+                                        <MudHighlighter Text="@(string.IsNullOrWhiteSpace(claim.Value) ? "N/A" : claim.Value)" HighlightedText="@SearchClaim" />
+                                    </MudButton>
+                                </MudListItem>
+                            }
+                        </MudList>
+                    </MudTabPanel>
+                    <MudTabPanel Text="@Resource.My_Permissions">
+                        <MudList>
+                            <MudListSubheader>
+                                <MudTextField Label="Search"
+                                              @bind-Value="@SearchPermissions"
+                                              AdornmentIcon="@Icons.Material.Filled.Brush"
+                                              Adornment="Adornment.End" Immediate="true" Variant="Variant.Outlined" />
+                            </MudListSubheader>
+                            @foreach (var claim in context.User.Claims.Where(c => c.Type == "permissions"))
+                            {
+                                @foreach (var permission in claim.Value.Filter(new List<char>() { '[', '"', ']' }).Split(',').OrderBy(c => c))
+                                {
+                                    <MudListItem @key="Guid.NewGuid()" Icon="@Icons.Material.Filled.Security">
+                                        <MudButton Variant="Variant.Filled" Color="Color.Info">
+                                            <MudHighlighter Text="@permission" HighlightedText="@SearchPermissions" />
+                                        </MudButton>
+                                    </MudListItem>
+                                }
+                            }
+                        </MudList>
+                    </MudTabPanel>
+                </MudTabs>
+            </MudCardContent>
+        </MudCard>
+    </Authorized>
+    <NotAuthorized>
+        <MudCard Elevation="5">
+            <MudAlert Severity="Severity.Error">@Resource.Im_sorry_I_can_t_display_anything_until_you <MudLink Href="account/login">@Resource.login_lowered</MudLink>.</MudAlert>
+        </MudCard>
+    </NotAuthorized>
+</AuthorizeView>

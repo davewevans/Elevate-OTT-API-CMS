@@ -1,0 +1,17 @@
+﻿<MudDialog>
+    <TitleContent>
+        <MudText Typo="Typo.h6">
+            <MudIcon Icon="@Icons.Material.Filled.SettingsApplications" Class="mr-3 mb-n1" />
+            @Resource.Reset_2FA_App
+        </MudText>
+    </TitleContent>
+    <DialogContent>
+        <MudAlert Severity="Severity.Warning">@Resource.If_you_reset_your_authenticator_key_your_authenticator_app_will_not_work_until_you_reconfigure_it</MudAlert>
+        <MudText Typo="Typo.body2"> @Resource.This_process_disables_2FA_until_you_verify_your_authenticator_app</MudText>
+        <MudText Typo="Typo.body2"> @Resource.If_you_do_not_complete_your_authenticator_app_configuration_you_may_lose_access_to_your_account</MudText>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel" Color="Color.Default" Style="float:right" Class="mr-3" Variant="Variant.Filled">@Resource.Cancel</MudButton>
+        <MudButton ButtonType="ButtonType.Submit" Style="float:right" Variant="Variant.Filled" Color="Color.Error" OnClick="ResetAuthenticatorApp">@Resource.Reset_Authenticator_App</MudButton>
+    </DialogActions>
+</MudDialog>

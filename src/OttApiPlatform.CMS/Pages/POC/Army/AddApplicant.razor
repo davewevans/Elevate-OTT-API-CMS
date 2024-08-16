@@ -1,0 +1,154 @@
+﻿@page "/poc/army/AddApplicant"
+@attribute [Authorize(Roles = "Admin,Full-Privileged-Officer,Read-Only-Officer")]
+
+<MudText Typo="Typo.h5" Color="Color.Primary" Class="mb-4">
+    @Resource.Apply_for_Military
+    <MudFab OnClick="@TipsToggle" Label="@Resource.Tips" Color="Color.Secondary" StartIcon="@Icons.Material.Filled.TipsAndUpdates" Size="Size.Small" IconSize="Size.Small" Class="ma-2" />
+    <div Class="relative">
+        <MudPopover Open="@IsTipsOpen" Class="px-4 pt-4">
+            <MudElement HtmlTag="h4">This is a sample form for military enlistment.</MudElement>
+            <MudDivider />
+            <MudElement HtmlTag="h4" Class="mt-4">This form contains conditional validation rules.</MudElement>
+            <MudDivider />
+            <MudElement HtmlTag="h4" Class="mt-4">Validation Rule #2: Social security number cannot have consecutive digits, e.g., 123456789.</MudElement>
+            <MudDivider />
+            <MudElement HtmlTag="h4" Class="mt-4">Validation Rule #3: 111111111 is not a valid social security number.</MudElement>
+            <MudDivider />
+            <MudElement HtmlTag="h4" Class="mt-4">Validation Rule #4: 333333333 is not a valid social security number.</MudElement>
+            <MudDivider />
+            <MudElement HtmlTag="h4" Class="mt-4">Validation Rule #5: Social security number must contain exactly 9 digits.</MudElement>
+            <MudDivider />
+            <MudElement htmltag="h4" class="mt-4">Validation Rule #6: Social security number cannot contain characters.</MudElement>
+            <MudDivider />
+            <MudElement HtmlTag="h4" Class="mt-4">Validation Rule #8: Only individuals aged between 18 and 28 are eligible for enlisting.</MudElement>
+            <MudDivider />
+            <MudElement HtmlTag="h4" Class="mt-4">Validation Rule #9: Only individuals weighing between 50 and 200 with a normal BMI are eligible for enlisting.</MudElement>
+            <MudDivider />
+            <MudButton OnClick="@TipsToggle" Variant="Variant.Filled" Color="Color.Error" Class="ml-auto mr-n3 mb-1 mt-4">@Resource.Close</MudButton>
+        </MudPopover>
+    </div>
+</MudText>
+
+<EditForm Model="CreateApplicantCommand" OnValidSubmit="SubmitForm">
+    <EditContextApiExceptionFallback @ref="EditContextApiExceptionFallback" />
+    <FluentValidationValidator />
+    <MudCard>
+        <MudCardContent>
+            <MudTabs KeepPanelsAlive="true" Elevation="25" Color="Color.Transparent" Rounded="true" PanelClass="mt-6">
+                <MudTabPanel Text="@Resource.Applicant" Icon="@Icons.Material.Filled.Photo">
+                    <MudGrid>
+                        <MudItem xs="6">
+                            <MudTextField Label="@Resource.SSN"
+                                          Mask="@(new PatternMask("000000000"))"
+                                          Variant="Variant.Outlined"
+                                          @bind-Value="CreateApplicantCommand.Ssn"
+                                          For="@(() => CreateApplicantCommand.Ssn)" />
+
+                            <MudTextField Label="@Resource.First_Name"
+                                          Variant="Variant.Outlined"
+                                          @bind-Value="CreateApplicantCommand.FirstName"
+                                          For="@(() => CreateApplicantCommand.FirstName)" />
+
+                            <MudTextField Label="@Resource.Last_Name"
+                                          Variant="Variant.Outlined"
+                                          @bind-Value="CreateApplicantCommand.LastName"
+                                          For="@(() => CreateApplicantCommand.LastName)" />
+
+                            <MudDatePicker Label="@Resource.Date_of_Birth"
+                                           Variant="Variant.Outlined"
+                                           @bind-Date="CreateApplicantCommand.DateOfBirth"
+                                           For="@(() => CreateApplicantCommand.DateOfBirth)"
+                                           Rounded="true"
+                                           Elevation="12"
+                                           ShowWeekNumbers="true"
+                                           Editable="true"
+                                           OpenTo="OpenTo.Year"
+                                           MaxDate="@DateTime.Now.AddYears(-18)" />
+
+                            <MudText Typo="Typo.h6">@Resource.Body_Mass_Index</MudText>
+
+                            <MudTextField Label="@Resource.Height"
+                                          Variant="Variant.Outlined"
+                                          @bind-Value="CreateApplicantCommand.Height"
+                                          For="@(() => CreateApplicantCommand.Height)" />
+
+                            <MudTextField Label="@Resource.Weight"
+                                          Variant="Variant.Outlined"
+                                          @bind-Value="CreateApplicantCommand.Weight"
+                                          For="@(() => CreateApplicantCommand.Weight)" />
+
+                            <MudTextField Label="@Resource.BMI"
+                                          Variant="Variant.Outlined"
+                                          @bind-Value="CreateApplicantCommand.Bmi"
+                                          For="@(() => CreateApplicantCommand.Bmi)"
+                                          Disabled="true" />
+                            <br />
+                            <MudAlert Elevation="2"
+                                      Severity="Severity.Info">
+                                @Resource.BMI_Info
+                            </MudAlert>
+                            <br />
+                            <MudAlert Elevation="2"
+                                      Severity="Severity.Info">
+                                @Resource.BMI_Details
+                            </MudAlert>
+                        </MudItem>
+                        <MudItem xs="6">
+                            <MudPaper Class="d-flex align-center justify-center mud-width-full py-8">
+                                <img width="95%" src="/images/bmi.jpg" />
+                            </MudPaper>
+                        </MudItem>
+                    </MudGrid>
+                </MudTabPanel>
+                <MudTabPanel Text="@Resource.References" Icon="@Icons.Material.Filled.GroupWork">
+                    <MudCard Elevation="25">
+                        <MudCardContent>
+                            <ApplicantReferencesListForAdd OnApplicantReferencesChanged="UpdateApplicantReferences" />
+                        </MudCardContent>
+                    </MudCard>
+                </MudTabPanel>
+                <MudTabPanel Text="@Resource.Code_Samples" Icon="@Icons.Material.Filled.GroupWork">
+                    <MudCard Elevation="25">
+                        <MudCardContent>
+                            <MudTabs Elevation="25" Rounded="true" ApplyEffectsToContainer="true" PanelClass="pa-6">
+                                <MudTabPanel Text="Razor">
+                                    <MudElement><img style="width:100%" src="/images/code-screenshots/add-applicant-razor-code.png" /></MudElement>
+                                </MudTabPanel>
+                                <MudTabPanel Text="Code-Behind">
+                                    <MudElement><img style="width:100%" src="/images/code-screenshots/add-applicant-code-behind.png" /></MudElement>
+                                </MudTabPanel>
+                                <MudTabPanel Text="API">
+                                    <MudElement><img style="width:100%" src="/images/code-screenshots/add-applicant-api-code.png" /></MudElement>
+                                </MudTabPanel>
+                                <MudTabPanel Text="Command">
+                                    <MudElement><img style="width:100%" src="/images/code-screenshots/add-applicant-command-code.png" /></MudElement>
+                                </MudTabPanel>
+                                <MudTabPanel Text="Command Validator">
+                                    <MudElement><img style="width:100%" src="/images/code-screenshots/add-applicant-command-validator-code.png" /></MudElement>
+                                </MudTabPanel>
+                                <MudTabPanel Text="Use Case">
+                                    <MudElement><img style="width:100%" src="/images/code-screenshots/add-applicant-usecase-code.png" /></MudElement>
+                                </MudTabPanel>
+                            </MudTabs>
+                        </MudCardContent>
+                    </MudCard>
+                </MudTabPanel>
+            </MudTabs>
+        </MudCardContent>
+        <MudCardActions Class="pb-4 pl-4">
+            <MudButton ButtonType="ButtonType.Submit"
+                       Variant="Variant.Filled"
+                       Color="Color.Primary"
+                       Class="ml-auto"
+                       FullWidth="true">@Resource.Save</MudButton>
+        </MudCardActions>
+        <MudDivider />
+        <MudExpansionPanels>
+            <MudExpansionPanel Text="@Resource.Validation_Summary" IsExpanded="true" Disabled="true" HideIcon="true">
+                <MudText Color="@Color.Error">
+                    <ValidationSummary />
+                </MudText>
+            </MudExpansionPanel>
+        </MudExpansionPanels>
+    </MudCard>
+</EditForm>

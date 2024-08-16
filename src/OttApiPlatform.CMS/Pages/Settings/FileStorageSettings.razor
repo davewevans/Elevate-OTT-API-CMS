@@ -1,0 +1,21 @@
+﻿@page "/settings/fileStorageSettings"
+@attribute [Authorize]
+
+<MudText Typo="Typo.h5" Color="Color.Primary" Class="mb-4">@Resource.File_Storage_Settings</MudText>
+<EditForm Model="FileStorageSettingsForEditVm" OnValidSubmit="SubmitForm">
+    <EditContextApiExceptionFallback @ref="EditContextApiExceptionFallback" />
+    <MudHidden @bind-Value="FileStorageSettingsForEditVm.Id" />
+    <MudCard>
+        <MudCardContent>
+            <MudToggleIconButton Toggled="@StorageType" ToggledChanged="OnToggledChanged"
+                                 Icon="@Icons.Material.Outlined.Computer" Color="@Color.Info" Title="Off"
+                                 ToggledIcon="@Icons.Material.Outlined.Cloud" ToggledColor="@Color.Secondary"
+                                 ToggledTitle="On" />
+
+            <span>@Resource.Storage_type_is @(StorageType ? Resource.Azure_File_Storage : Resource.On_Premises_File_Storage)</span>
+        </MudCardContent>
+        <MudCardActions Class="pb-4 pl-4">
+            <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto" FullWidth="true">@Resource.Save</MudButton>
+        </MudCardActions>
+    </MudCard>
+</EditForm>

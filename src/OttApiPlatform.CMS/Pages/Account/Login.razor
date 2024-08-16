@@ -1,0 +1,54 @@
+﻿@layout AccountLayout
+@page "/account/Login"
+
+<EditForm Model="@LoginCommand" OnValidSubmit="LoginUser">
+    <EditContextApiExceptionFallback @ref="EditContextApiExceptionFallback" />
+    <FluentValidationValidator />
+    <MudText Typo="Typo.h4" GutterBottom="true">@Resource.Login</MudText>
+    <MudText>
+        @Resource.Dont_have_an_account <MudLink Href="/account/register">@Resource.Register</MudLink>
+    </MudText>
+
+    <MudTextField Label="@Resource.Email"
+                  Variant="Variant.Outlined"
+                  @bind-Value="LoginCommand.Email"
+                  For="@(() => LoginCommand.Email)" />
+
+    <MudTextField Label="@Resource.Password"
+                  Variant="Variant.Outlined"
+                  @bind-Value="LoginCommand.Password"
+                  For="@(() => LoginCommand.Password)"
+                  InputType="@PasswordInput"
+                  Adornment="Adornment.End"
+                  AdornmentIcon="@PasswordInputIcon"
+                  OnAdornmentClick="TogglePasswordVisibility" />
+
+    <div class="d-flex justify-space-between align-center">
+        <MudChip Color="Color.Primary" Label="true">@Resource.Username: admin@demo</MudChip>
+        <MudChip Color="Color.Secondary" Label="true">@Resource.Password: 123456</MudChip>
+    </div>
+
+    <MudDivider />
+    <div class="d-flex justify-space-between align-center">
+        <MudLink Href="/account/resendEmailConfirmation">@Resource.Resend_Email_Confirmation</MudLink>
+        <MudLink Href="/account/forgotPassword">@Resource.Forgot_your_password</MudLink>
+    </div>
+    <MudDivider />
+
+    <MudButton ButtonType="ButtonType.Submit"
+               Style="margin-top:4px"
+               Variant="Variant.Filled"
+               Color="Color.Primary"
+               Size="Size.Large"
+               FullWidth="true">
+        @Resource.Sign_in
+    </MudButton>
+
+    <MudExpansionPanels>
+        <MudExpansionPanel Text="@Resource.Validation_Summary" IsExpanded="true" Disabled="true" HideIcon="true">
+            <MudText Color="@Color.Error">
+                <ValidationSummary />
+            </MudText>
+        </MudExpansionPanel>
+    </MudExpansionPanels>
+</EditForm>

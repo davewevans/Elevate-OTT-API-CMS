@@ -1,0 +1,42 @@
+﻿<MudTable Items="@RoleItems" Filter="new Func<RoleItem,bool>(FilterRoles)">
+    <ToolBarContent>
+        <MudText Typo="Typo.h6">@Resource.Roles</MudText>
+        <MudSpacer />
+        <MudTextField @bind-Value="SearchText"
+                      Immediate="true"
+                      Placeholder="@Resource.Search"
+                      Adornment="Adornment.Start"
+                      AdornmentIcon="@Icons.Material.Filled.Search"
+                      IconSize="Size.Medium"
+                      Class="mt-0">
+        </MudTextField>
+
+        <MudFab Style="margin-left:20px;margin-top:10px"
+                Color="Color.Primary"
+                Size="Size.Small"
+                StartIcon="@Icons.Material.Filled.Add"
+                OnClick="ShowRolesLookupDialog" />
+    </ToolBarContent>
+    <HeaderContent>
+        <MudTh>@Resource.Name</MudTh>
+        <MudTh>@Resource.Is_Static</MudTh>
+        <MudTh>@Resource.Is_Default</MudTh>
+        <MudTh>@Resource.Options</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Name">@context.Name</MudTd>
+        <MudTd DataLabel="IsStatic">@context.IsStatic</MudTd>
+        <MudTd DataLabel="IsDefault">@context.IsDefault</MudTd>
+        <MudTd>
+            <MudButton Variant="Variant.Filled"
+                       StartIcon="@Icons.Material.Filled.Delete"
+                       Size="Size.Small"
+                       Color="Color.Error"
+                       OnClick="@(() => RemoveRole(context))">@Resource.Remove</MudButton>
+        </MudTd>
+    </RowTemplate>
+    <PagerContent>
+        <MudTablePager RowsPerPageString="@Resource.Rows_Per_Page" />
+    </PagerContent>
+</MudTable>
+

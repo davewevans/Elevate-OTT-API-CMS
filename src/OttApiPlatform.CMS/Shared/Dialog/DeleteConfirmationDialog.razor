@@ -1,0 +1,9 @@
+﻿<MudDialog Options="new DialogOptions() { CloseButton = true, MaxWidth = MaxWidth.ExtraSmall }">
+    <DialogContent>
+        <MudText>@Resource.Do_you_really_want_to_delete_this_record</MudText>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">@Resource.Cancel</MudButton>
+        <MudButton Color="@Color.Error" Variant="Variant.Filled" OnClick="Submit">@Resource.Delete</MudButton>
+    </DialogActions>
+</MudDialog>

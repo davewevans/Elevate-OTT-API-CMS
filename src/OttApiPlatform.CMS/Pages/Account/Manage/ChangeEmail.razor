@@ -1,0 +1,29 @@
+﻿@if (!string.IsNullOrEmpty(Email))
+{
+    <EditForm Model="ChangeEmailCommand" OnValidSubmit="Submit">
+        <EditContextApiExceptionFallback @ref="EditContextApiExceptionFallback" />
+        <FluentValidationValidator />
+        <MudCard>
+            <MudCardHeader>
+                <CardHeaderContent>
+                    <MudText Typo="Typo.h6">@Resource.Change_Email</MudText>
+                </CardHeaderContent>
+            </MudCardHeader>
+            <MudCardContent>
+                <MudTextField Disabled="true" Label="@Resource.Email" Variant="Variant.Outlined" @bind-Value="@Email" />
+                <MudTextField Label="@Resource.New_Email" Variant="Variant.Outlined" @bind-Value="ChangeEmailCommand.NewEmail" For="@(() => ChangeEmailCommand.NewEmail)" />
+            </MudCardContent>
+            <MudCardActions Class="pb-4 pl-4">
+                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto" FullWidth="true">@Resource.Save</MudButton>
+            </MudCardActions>
+            <MudDivider />
+            <MudExpansionPanels>
+                <MudExpansionPanel Text="@Resource.Validation_Summary" IsExpanded="true" Disabled="true" HideIcon="true">
+                    <MudText Color="@Color.Error">
+                        <ValidationSummary />
+                    </MudText>
+                </MudExpansionPanel>
+            </MudExpansionPanels>
+        </MudCard>
+    </EditForm>
+}

@@ -1,0 +1,7 @@
+﻿@layout AccountLayout
+@page "/account/EmailConfirmed"
+
+<MudText Typo="Typo.h4" GutterBottom="true">@Resource.Email_Confirmed</MudText>
+<MudText Typo="Typo.body2" Style="text-align:justify">
+    @Resource.Thank_you_for_confirming_your_email @Resource.Click <MudLink Href="javascript:void(0)" OnClick="RedirectToLogin">@Resource.here</MudLink> @Resource.to_login.
+</MudText>

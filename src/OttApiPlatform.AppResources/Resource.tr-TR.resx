@@ -1,0 +1,2232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Abbreviated_Day_Names" xml:space="preserve">
+    <value>Kısaltılmış Gün Adları</value>
+  </data>
+  <data name="Abbreviated_Month_Genitive_Names" xml:space="preserve">
+    <value>Kısaltılmış Ay Genitive Adları</value>
+  </data>
+  <data name="Abbreviated_Month_Names" xml:space="preserve">
+    <value>Kısaltılmış Ay Adları</value>
+  </data>
+  <data name="Access" xml:space="preserve">
+    <value>Erişim</value>
+  </data>
+  <data name="Access_Token_TimeSpan" xml:space="preserve">
+    <value>Erişim Belirteci Zaman Aralığı</value>
+  </data>
+  <data name="Account" xml:space="preserve">
+    <value>Hesap</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Eylemler</value>
+  </data>
+  <data name="Activated" xml:space="preserve">
+    <value>Aktif</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Eklemek</value>
+  </data>
+  <data name="Add_Applicant" xml:space="preserve">
+    <value>Başvuran Ekle</value>
+  </data>
+  <data name="Add_Authenticator_App" xml:space="preserve">
+    <value>Kimlik Doğrulayıcı Uygulaması Ekle</value>
+  </data>
+  <data name="Add_New_File" xml:space="preserve">
+    <value>Yeni Dosya Ekle</value>
+  </data>
+  <data name="Add_Reference" xml:space="preserve">
+    <value>Referans ekle</value>
+  </data>
+  <data name="Add_Role" xml:space="preserve">
+    <value>Rol Ekle</value>
+  </data>
+  <data name="Add_Roles" xml:space="preserve">
+    <value>Rol Ekle</value>
+  </data>
+  <data name="Add_Selected_Roles" xml:space="preserve">
+    <value>Seçili Rolleri Ekle</value>
+  </data>
+  <data name="Add_Tenant" xml:space="preserve">
+    <value>Kiracı Ekle</value>
+  </data>
+  <data name="Add_transcripts" xml:space="preserve">
+    <value>Transkript Ekle</value>
+  </data>
+  <data name="Add_User" xml:space="preserve">
+    <value>Kullanıcı Ekle</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Tüm</value>
+  </data>
+  <data name="Allowed_for_new_users" xml:space="preserve">
+    <value>Yeni kullanıcılar için izin verildi</value>
+  </data>
+  <data name="Allowed_username_characters" xml:space="preserve">
+    <value>İzin verilen kullanıcı adı karakterleri</value>
+  </data>
+  <data name="Already_have_an_account" xml:space="preserve">
+    <value>Zaten bir hesabınız var mı?</value>
+  </data>
+  <data name="AM_Designator" xml:space="preserve">
+    <value>Atama</value>
+  </data>
+  <data name="and" xml:space="preserve">
+    <value>ve</value>
+  </data>
+  <data name="Android" xml:space="preserve">
+    <value>Android</value>
+  </data>
+  <data name="Applicant" xml:space="preserve">
+    <value>Başvuran</value>
+  </data>
+  <data name="Applicants" xml:space="preserve">
+    <value>Başvuru</value>
+  </data>
+  <data name="Apply_for_Military" xml:space="preserve">
+    <value>Askeriyeye Başvurun</value>
+  </data>
+  <data name="App_Info" xml:space="preserve">
+    <value>Uygulama Bilgileri</value>
+  </data>
+  <data name="April" xml:space="preserve">
+    <value>Nisan</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_change_the_settings" xml:space="preserve">
+    <value>Ayarları değiştirmek istediğinizden emin misiniz?</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_delete_file_name" xml:space="preserve">
+    <value>'{0}' dosyasını silmek istediğinizden emin misiniz?</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_delete_role_name" xml:space="preserve">
+    <value>'{0}' rolünü silmek istediğinizden emin misiniz?</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_delete_user_name" xml:space="preserve">
+    <value>'{0}' kullanıcısını silmek istediğinizden emin misiniz?</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_remove_role_name" xml:space="preserve">
+    <value>'{0}' rolünü kaldırmak istediğinizden emin misiniz?</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_save_applicant" xml:space="preserve">
+    <value>Başvuranı kaydetmek istediğinizden emin misiniz?</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_save_role" xml:space="preserve">
+    <value>Rol kaydetmek istediğinizden emin misiniz?</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_save_user_profile" xml:space="preserve">
+    <value>Kullanıcı profilini kaydetmek istediğinizden emin misiniz?</value>
+  </data>
+  <data name="Army" xml:space="preserve">
+    <value>Ordu</value>
+  </data>
+  <data name="Assigned_Roles" xml:space="preserve">
+    <value>Atanan Roller</value>
+  </data>
+  <data name="Assign_Permissions" xml:space="preserve">
+    <value>İzinleri Ata</value>
+  </data>
+  <data name="Assign_Roles" xml:space="preserve">
+    <value>Rol Ata</value>
+  </data>
+  <data name="August" xml:space="preserve">
+    <value>Ağustos</value>
+  </data>
+  <data name="Authenticator_App" xml:space="preserve">
+    <value>Kimlik Doğrulayıcı Uygulaması</value>
+  </data>
+  <data name="Authenticator_Code" xml:space="preserve">
+    <value>Kimlik Doğrulayıcı Kodu</value>
+  </data>
+  <data name="Authorization" xml:space="preserve">
+    <value>İzin</value>
+  </data>
+  <data name="Authorizing" xml:space="preserve">
+    <value>Yetkilendirme</value>
+  </data>
+  <data name="Avatar" xml:space="preserve">
+    <value>Avatar</value>
+  </data>
+  <data name="Awesome" xml:space="preserve">
+    <value>Harika!</value>
+  </data>
+  <data name="Azure_File_Storage" xml:space="preserve">
+    <value>Azure Dosya Depolama</value>
+  </data>
+  <data name="before_you_can_log_in_with_a_recovery_code" xml:space="preserve">
+    <value>kurtarma koduyla oturum açmadan önce.</value>
+  </data>
+  <data name="Biomass" xml:space="preserve">
+    <value>Biyokütle</value>
+  </data>
+  <data name="Biomass1" xml:space="preserve">
+    <value>Biyokütle</value>
+  </data>
+  <data name="BMI" xml:space="preserve">
+    <value>BMI</value>
+  </data>
+  <data name="BMI_Details" xml:space="preserve">
+    <value>25.0 veya daha fazla bir BMI fazla kiloluyken, sağlıklı aralık 18.5 ila 24.9'dur. VKİ çoğu yetişkin için 18-65 yaş için geçerlidir.</value>
+  </data>
+  <data name="BMI_Info" xml:space="preserve">
+    <value>Vücut Kitle İndeksi, bir kişinin boyunu ve ağırlığını kullanan basit bir hesaplamadır. Formül BMI = kg/m2'dir, burada kg bir kişinin kilogram ağırlığıdır ve m2 metre kare olarak yükseklikleridir.</value>
+  </data>
+  <data name="Body_Mass_Index" xml:space="preserve">
+    <value>Vücut Kitle İndeksi</value>
+  </data>
+  <data name="Bottom" xml:space="preserve">
+    <value>Dip</value>
+  </data>
+  <data name="Browser_Time_Zone" xml:space="preserve">
+    <value>Tarayıcı Zaman Dilimi</value>
+  </data>
+  <data name="Buy_Now" xml:space="preserve">
+    <value>Şimdi Satın Al</value>
+  </data>
+  <data name="Bytes" xml:space="preserve">
+    <value>Bayt</value>
+  </data>
+  <data name="Calcium" xml:space="preserve">
+    <value>Kalsiyum</value>
+  </data>
+  <data name="Calendar" xml:space="preserve">
+    <value>Takvim</value>
+  </data>
+  <data name="Calendar_Week_Rule" xml:space="preserve">
+    <value>Takvim Haftası Kuralı</value>
+  </data>
+  <data name="Californium" xml:space="preserve">
+    <value>Kaliforniyum</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+  <data name="Cancel_Upload" xml:space="preserve">
+    <value>Karşıya Yüklemeyi İptal Et</value>
+  </data>
+  <data name="Carbon" xml:space="preserve">
+    <value>Karbon</value>
+  </data>
+  <data name="Cerium" xml:space="preserve">
+    <value>Seryum</value>
+  </data>
+  <data name="Cesium" xml:space="preserve">
+    <value>Sezyum</value>
+  </data>
+  <data name="Change_Email" xml:space="preserve">
+    <value>E-postayı Değiştir</value>
+  </data>
+  <data name="Change_Password" xml:space="preserve">
+    <value>Parolayı Değiştir</value>
+  </data>
+  <data name="Change_User_Password" xml:space="preserve">
+    <value>Kullanıcı Parolasını Değiştir</value>
+  </data>
+  <data name="Change_your_account_settings" xml:space="preserve">
+    <value>Hesap Ayarlarınızı Değiştirme</value>
+  </data>
+  <data name="Chernobyl_1" xml:space="preserve">
+    <value>Çernobil-1</value>
+  </data>
+  <data name="Chernobyl_2" xml:space="preserve">
+    <value>Çernobil-2</value>
+  </data>
+  <data name="Chernobyl_3" xml:space="preserve">
+    <value>Çernobil-3</value>
+  </data>
+  <data name="Chernobyl_4" xml:space="preserve">
+    <value>Çernobil-4</value>
+  </data>
+  <data name="Chlorine" xml:space="preserve">
+    <value>Klor</value>
+  </data>
+  <data name="Chromium" xml:space="preserve">
+    <value>Krom</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Berrak</value>
+  </data>
+  <data name="Click" xml:space="preserve">
+    <value>Tık</value>
+  </data>
+  <data name="click_here_to_log_in" xml:space="preserve">
+    <value>Giriş yapmak için burayı tıklatın</value>
+  </data>
+  <data name="Client_Side_Authorization" xml:space="preserve">
+    <value>İstemci Tarafı Yetkilendirmesi</value>
+  </data>
+  <data name="Client_Side_Validation" xml:space="preserve">
+    <value>İstemci Tarafı Doğrulaması</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Kapatmak</value>
+  </data>
+  <data name="Close_SignalR_Connection" xml:space="preserve">
+    <value>SignalR Bağlantısını Kapatın!</value>
+  </data>
+  <data name="Coal" xml:space="preserve">
+    <value>Kömür</value>
+  </data>
+  <data name="Coal1" xml:space="preserve">
+    <value>Kömür</value>
+  </data>
+  <data name="Cobalt" xml:space="preserve">
+    <value>Kobalt</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Kod</value>
+  </data>
+  <data name="Code_Samples" xml:space="preserve">
+    <value>Kod Örnekleri</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>Tamamlandı!</value>
+  </data>
+  <data name="Configure_Authenticator_App" xml:space="preserve">
+    <value>Authenticator Uygulamasını Yapılandırma</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Onaylamak</value>
+  </data>
+  <data name="Confirm_Email" xml:space="preserve">
+    <value>E-postayı Onayla</value>
+  </data>
+  <data name="Confirm_Email_Change" xml:space="preserve">
+    <value>E-posta Değişikliğini Onayla</value>
+  </data>
+  <data name="Confirm_Password" xml:space="preserve">
+    <value>Parolayı Onayla</value>
+  </data>
+  <data name="ContentType" xml:space="preserve">
+    <value>İçerik türü</value>
+  </data>
+  <data name="Copernicium" xml:space="preserve">
+    <value>Kopernik</value>
+  </data>
+  <data name="Copper" xml:space="preserve">
+    <value>Bakır</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Yaratmak</value>
+  </data>
+  <data name="Created_On" xml:space="preserve">
+    <value>Oluşturma Tarihi</value>
+  </data>
+  <data name="Culture_Based_Resources" xml:space="preserve">
+    <value>Kültür Tabanlı Kaynaklar</value>
+  </data>
+  <data name="Culture_Code" xml:space="preserve">
+    <value>Kültür Kodu</value>
+  </data>
+  <data name="Culture_Currency_Symbol" xml:space="preserve">
+    <value>Kültür Para Birimi Simgesi</value>
+  </data>
+  <data name="Culture_DateTime_Pattern" xml:space="preserve">
+    <value>Kültür DateTime Deseni</value>
+  </data>
+  <data name="Culture_Info" xml:space="preserve">
+    <value>Kültür Bilgisi</value>
+  </data>
+  <data name="Curium" xml:space="preserve">
+    <value>Curium</value>
+  </data>
+  <data name="Current_Culture_DateTime_Format" xml:space="preserve">
+    <value>Geçerli Kültür DateTime Biçimi</value>
+  </data>
+  <data name="Current_Culture_Info" xml:space="preserve">
+    <value>Geçerli Kültür Bilgisi</value>
+  </data>
+  <data name="Current_Culture_Time_Zone_Info" xml:space="preserve">
+    <value>Geçerli Kültür Saat Dilimi Bilgisi</value>
+  </data>
+  <data name="Current_Documents" xml:space="preserve">
+    <value>Geçerli Belgeler</value>
+  </data>
+  <data name="Current_password" xml:space="preserve">
+    <value>Geçerli Parola</value>
+  </data>
+  <data name="Current_Transcripts" xml:space="preserve">
+    <value>Geçerli Transkriptler</value>
+  </data>
+  <data name="Danger" xml:space="preserve">
+    <value>Tehlike</value>
+  </data>
+  <data name="Darmstadtium" xml:space="preserve">
+    <value>Darmstadtium</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Tablo</value>
+  </data>
+  <data name="Data_Export_SignalR_Hangfire" xml:space="preserve">
+    <value>Veri Aktarımı (SignalR &amp; Hangfire)!</value>
+  </data>
+  <data name="DateTime_Format" xml:space="preserve">
+    <value>DateTime Biçimi</value>
+  </data>
+  <data name="Date_of_Birth" xml:space="preserve">
+    <value>Doğum tarihi</value>
+  </data>
+  <data name="Date_Separator" xml:space="preserve">
+    <value>Tarih Ayırıcı</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>Gün</value>
+  </data>
+  <data name="Day_Names" xml:space="preserve">
+    <value>Gün Adları</value>
+  </data>
+  <data name="Deactivated" xml:space="preserve">
+    <value>Devre dışı</value>
+  </data>
+  <data name="December" xml:space="preserve">
+    <value>Aralık</value>
+  </data>
+  <data name="Default_Admin_Credentials" xml:space="preserve">
+    <value>Varsayılan Yönetici Kimlik Bilgileri</value>
+  </data>
+  <data name="Default_lockout_time_span" xml:space="preserve">
+    <value>Varsayılan kilitleme süresi</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Silmek</value>
+  </data>
+  <data name="Delete_my_Account" xml:space="preserve">
+    <value>Hesabımı Sil</value>
+  </data>
+  <data name="Delete_Personal_Data" xml:space="preserve">
+    <value>Kişisel Verileri Sil</value>
+  </data>
+  <data name="Deleting_this_data_will_permanently_remove_your_account_and_this_cannot_be_recovered" xml:space="preserve">
+    <value>Bu verileri silmek hesabınızı kalıcı olarak kaldırır ve bu kurtarılamaz.</value>
+  </data>
+  <data name="Disable_2FA" xml:space="preserve">
+    <value>İki Faktörlü Kimlik Doğrulamayı Devre Dışı Bırak</value>
+  </data>
+  <data name="Disable_Two-Factor_Authentication" xml:space="preserve">
+    <value>İki Faktörlü Kimlik Doğrulamayı Devre Dışı Bırak</value>
+  </data>
+  <data name="Disabling_2FA_does_not_change_the_keys_used_in_authenticator_apps" xml:space="preserve">
+    <value>İki Faktörlü Kimlik Doğrulamayı Devre Dışı Bırakma, kimlik doğrulayıcı uygulamalarında kullanılan anahtarları değiştirmez</value>
+  </data>
+  <data name="Dismissed" xml:space="preserve">
+    <value>Görevden Alındı</value>
+  </data>
+  <data name="Display_Name" xml:space="preserve">
+    <value>Görünen Ad</value>
+  </data>
+  <data name="Documents" xml:space="preserve">
+    <value>Evrak</value>
+  </data>
+  <data name="Dont_have_access_to_your_authenticator_device" xml:space="preserve">
+    <value>Kimlik doğrulayıcı cihazınıza erişiminiz yok mu?</value>
+  </data>
+  <data name="Dont_have_an_account" xml:space="preserve">
+    <value>Hesabınız yok mu?</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>İndirmek</value>
+  </data>
+  <data name="Downloads" xml:space="preserve">
+    <value>Indirme</value>
+  </data>
+  <data name="Download_a_two-factor_authenticator_app_like_Microsoft_Authenticator_for" xml:space="preserve">
+    <value>Microsoft Authenticator gibi iki faktörlü bir kimlik doğrulayıcı uygulaması indirin</value>
+  </data>
+  <data name="Do_you_really_want_to_delete_this_record" xml:space="preserve">
+    <value>Bu kaydı gerçekten silmek istiyor musunuz?</value>
+  </data>
+  <data name="Do_you_want_to_remove_this_record" xml:space="preserve">
+    <value>Bu kaydı kaldırmak istiyor musunuz?</value>
+  </data>
+  <data name="Dubnium" xml:space="preserve">
+    <value>Dubniyum</value>
+  </data>
+  <data name="Dysprosium" xml:space="preserve">
+    <value>Disprosyum</value>
+  </data>
+  <data name="Earnings" xml:space="preserve">
+    <value>Kazanç</value>
+  </data>
+  <data name="Earning_Report" xml:space="preserve">
+    <value>Kazanç Raporu</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Düzenlemek</value>
+  </data>
+  <data name="Edit_Applicant" xml:space="preserve">
+    <value>Başvuranı Düzenle</value>
+  </data>
+  <data name="Edit_Reference" xml:space="preserve">
+    <value>Referansı düzenle</value>
+  </data>
+  <data name="Edit_Role" xml:space="preserve">
+    <value>Rolü Düzenle</value>
+  </data>
+  <data name="Edit_Tenant" xml:space="preserve">
+    <value>Kiracıyı Düzenle</value>
+  </data>
+  <data name="Edit_User" xml:space="preserve">
+    <value>Kullanıcıyı Düzenle</value>
+  </data>
+  <data name="Einsteinium" xml:space="preserve">
+    <value>Aynştaynyum</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-posta</value>
+  </data>
+  <data name="Email_Change_Confirmation" xml:space="preserve">
+    <value>E-posta Değişikliği Onayı</value>
+  </data>
+  <data name="Email_Change_Confirmed" xml:space="preserve">
+    <value>E-posta Değişikliği Onaylandı</value>
+  </data>
+  <data name="Email_Confirmation" xml:space="preserve">
+    <value>E-posta Onayı</value>
+  </data>
+  <data name="Email_Confirmed" xml:space="preserve">
+    <value>Onaylanan E-posta</value>
+  </data>
+  <data name="Employee_broke_a_finger_while_writing_some_code" xml:space="preserve">
+    <value>Çalışan bazı kod yazarken parmağını kırdı</value>
+  </data>
+  <data name="enable_QR_code_generation" xml:space="preserve">
+    <value>QR kod oluşturmayı etkinleştirme</value>
+  </data>
+  <data name="End" xml:space="preserve">
+    <value>Son</value>
+  </data>
+  <data name="End_Slope" xml:space="preserve">
+    <value>Bitiş Eğimi</value>
+  </data>
+  <data name="English_Name" xml:space="preserve">
+    <value>İngilizce Adı</value>
+  </data>
+  <data name="Enter_the_code_in_the_confirmation_box_below" xml:space="preserve">
+    <value>Kodu aşağıdaki onay kutusuna girin.</value>
+  </data>
+  <data name="Enter_your_email" xml:space="preserve">
+    <value>E-postanızı girin.</value>
+  </data>
+  <data name="entries" xml:space="preserve">
+    <value>Giriş</value>
+  </data>
+  <data name="Erbium" xml:space="preserve">
+    <value>Erbiyum</value>
+  </data>
+  <data name="Error_Pages" xml:space="preserve">
+    <value>Hata Sayfaları</value>
+  </data>
+  <data name="Europium" xml:space="preserve">
+    <value>Europyum</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>İhracat</value>
+  </data>
+  <data name="ExportAsPdfInBackground" xml:space="preserve">
+    <value>PDF olarak dışa aktar (Ateşle ve unut!)</value>
+  </data>
+  <data name="Exporting_data_may_take_a_while" xml:space="preserve">
+    <value>Verilerin dışa aktarması biraz zaman alabilir.!</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>İşlem Başarısız</value>
+  </data>
+  <data name="FAQ" xml:space="preserve">
+    <value>SSS</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>Özellik</value>
+  </data>
+  <data name="February" xml:space="preserve">
+    <value>Şubat</value>
+  </data>
+  <data name="Fermium" xml:space="preserve">
+    <value>Fermiyum</value>
+  </data>
+  <data name="FileName" xml:space="preserve">
+    <value>Dosya Adı</value>
+  </data>
+  <data name="File_is_empty" xml:space="preserve">
+    <value>Dosya boş.</value>
+  </data>
+  <data name="File_Name" xml:space="preserve">
+    <value>Dosya adı</value>
+  </data>
+  <data name="File_Rename" xml:space="preserve">
+    <value>Dosya Yeniden Adlandırma</value>
+  </data>
+  <data name="File_Size" xml:space="preserve">
+    <value>Dosya Boyutu</value>
+  </data>
+  <data name="File_Storage_Settings" xml:space="preserve">
+    <value>Dosya Depolama Ayarları</value>
+  </data>
+  <data name="File_Type" xml:space="preserve">
+    <value>Dosya Türü</value>
+  </data>
+  <data name="File_upload_has_been_cancelled" xml:space="preserve">
+    <value>Dosya yükleme iptal edildi.</value>
+  </data>
+  <data name="Fire_in_reactor_core" xml:space="preserve">
+    <value>Reaktör çekirdeğinde yangın</value>
+  </data>
+  <data name="First" xml:space="preserve">
+    <value>Birinci</value>
+  </data>
+  <data name="First_Day_of_Week" xml:space="preserve">
+    <value>Haftanın İlk Günü</value>
+  </data>
+  <data name="First_Name" xml:space="preserve">
+    <value>Ad</value>
+  </data>
+  <data name="Fluent_Validation" xml:space="preserve">
+    <value>Akıcı Doğrulama</value>
+  </data>
+  <data name="Fluorine" xml:space="preserve">
+    <value>Flor</value>
+  </data>
+  <data name="Forget_this_browser" xml:space="preserve">
+    <value>Bu tarayıcıyı unutun</value>
+  </data>
+  <data name="Forgot_password_confirmation" xml:space="preserve">
+    <value>Parola onay onaysını unuttum</value>
+  </data>
+  <data name="Forgot_your_password" xml:space="preserve">
+    <value>Şifreni mi unuttun?</value>
+  </data>
+  <data name="for_how_to_configure_a_real_email_sender" xml:space="preserve">
+    <value>gerçek bir e-posta göndereni yapılandırma için</value>
+  </data>
+  <data name="Fossil" xml:space="preserve">
+    <value>Fosil</value>
+  </data>
+  <data name="Francium" xml:space="preserve">
+    <value>Fransiyum</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>Tam Ad</value>
+  </data>
+  <data name="Full_DateTime_Pattern" xml:space="preserve">
+    <value>Tam DateTime Deseni</value>
+  </data>
+  <data name="Gas" xml:space="preserve">
+    <value>Gaz</value>
+  </data>
+  <data name="Gas1" xml:space="preserve">
+    <value>Gaz</value>
+  </data>
+  <data name="Generate" xml:space="preserve">
+    <value>Oluşturmak</value>
+  </data>
+  <data name="generate_a_new_set_of_recovery_codes" xml:space="preserve">
+    <value>yeni bir kurtarma kodları kümesi oluşturma</value>
+  </data>
+  <data name="Generating_new_recovery_codes_does_not_change_the_keys_used_in_authenticator_apps" xml:space="preserve">
+    <value>Yeni kurtarma kodları oluşturmak, kimlik doğrulayıcı uygulamalarında kullanılan anahtarları değiştirmez.</value>
+  </data>
+  <data name="Geothermal" xml:space="preserve">
+    <value>Jeotermal</value>
+  </data>
+  <data name="Germany" xml:space="preserve">
+    <value>Almanya</value>
+  </data>
+  <data name="Getting_Started" xml:space="preserve">
+    <value>Başlarken</value>
+  </data>
+  <data name="Global_Settings" xml:space="preserve">
+    <value>Genel Ayarlar</value>
+  </data>
+  <data name="Global_Spread" xml:space="preserve">
+    <value>Küresel Yayılma</value>
+  </data>
+  <data name="Global_Variable" xml:space="preserve">
+    <value>Evrensel değişken</value>
+  </data>
+  <data name="Google_Authenticator_for" xml:space="preserve">
+    <value>için Google Authenticator</value>
+  </data>
+  <data name="Got_it" xml:space="preserve">
+    <value>Anladım!</value>
+  </data>
+  <data name="Graphite_on_roof" xml:space="preserve">
+    <value>Çatıda grafit</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>Yükseklik</value>
+  </data>
+  <data name="Hello" xml:space="preserve">
+    <value>Merhaba</value>
+  </data>
+  <data name="here" xml:space="preserve">
+    <value>burada</value>
+  </data>
+  <data name="High" xml:space="preserve">
+    <value>Yüksek</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Ev</value>
+  </data>
+  <data name="Hour" xml:space="preserve">
+    <value>Saat</value>
+  </data>
+  <data name="Hydro" xml:space="preserve">
+    <value>Hidro</value>
+  </data>
+  <data name="Identity" xml:space="preserve">
+    <value>Kimlik</value>
+  </data>
+  <data name="Identity_Settings" xml:space="preserve">
+    <value>Kimlik Ayarları</value>
+  </data>
+  <data name="If_you_do_not_complete_your_authenticator_app_configuration_you_may_lose_access_to_your_account" xml:space="preserve">
+    <value>Kimlik doğrulayıcı uygulama yapılandırmanızı tamamlamazsanız hesabınıza erişiminizi kaybedebilirsiniz.</value>
+  </data>
+  <data name="If_you_lose_your_device_and_dont_have_the_recovery_codes_you_will_lose_access_to_your_account" xml:space="preserve">
+    <value>Cihazınızı kaybederseniz ve kurtarma kodlarına sahip değilseniz hesabınıza erişiminizi kaybedersiniz</value>
+  </data>
+  <data name="If_you_reset_your_authenticator_key_your_authenticator_app_will_not_work_until_you_reconfigure_it" xml:space="preserve">
+    <value>Kimlik doğrulayıcı anahtarınızı sıfırlarsanız, kimlik doğrulayıcı uygulamanız siz yeniden yapılandırana kadar çalışmaz.</value>
+  </data>
+  <data name="If_you_wish_to_change_the_key_used_in_an_authenticator_app_you_should" xml:space="preserve">
+    <value>Bir kimlik doğrulayıcı uygulamasında kullanılan anahtarı değiştirmek istiyorsanız,</value>
+  </data>
+  <data name="Im_sorry_I_can't_display_anything_until_you" xml:space="preserve">
+    <value>Üzgünüm, sen.</value>
+  </data>
+  <data name="Incident_in_plant_number_4" xml:space="preserve">
+    <value>4 numaralı fabrikada olay</value>
+  </data>
+  <data name="Installation" xml:space="preserve">
+    <value>Kurma</value>
+  </data>
+  <data name="Interpolation_Algorithm" xml:space="preserve">
+    <value>İnterpolasyon Algoritması</value>
+  </data>
+  <data name="into_your_two_factor_authenticator_app._Spaces_and_casing_do_not_matter" xml:space="preserve">
+    <value>iki faktörlü kimlik doğrulayıcı uygulamanıza dahil edin. Boşluklar ve muhafaza önemli değil.</value>
+  </data>
+  <data name="Invalid_file_name" xml:space="preserve">
+    <value>Geçersiz dosya adı.</value>
+  </data>
+  <data name="In_Progress" xml:space="preserve">
+    <value>Devam ediyor</value>
+  </data>
+  <data name="iOS" xml:space="preserve">
+    <value>Ios</value>
+  </data>
+  <data name="Ispum" xml:space="preserve">
+    <value>Sed vitae hendrerit justo. Urna eleifend imperdiet bir vel ipsum içinde Aenean eu mi. Morbi ac risus vel massa tincidunt lacinia. Aliquam augue libero, venenatis otur amet neque non, dignissim interdum elit. Nunc condimentum enim non ante egestas lobortis. Sed ac felis gravida nisi blandit porta. Sed ultrices finibus ullamcorper. Nullam congue malesuada rhoncus. Varius olmayan arcu'da. Curabitur porta erat id neque fermentum, ut finibus dui venenatis. Fusce tristique cursus pulvinar. Nam consectetur convallis orci, bir elementum elit ultrices ac. Lorem ipsum dolor otur amet, kutsama adipiscing elit. Proin leo nulla, facilisis sit amet placerat sed, mülayim non sapien.</value>
+  </data>
+  <data name="Issues_rising" xml:space="preserve">
+    <value>Yükselen sorunlar</value>
+  </data>
+  <data name="Is_Active_User" xml:space="preserve">
+    <value>Etkin Kullanıcı mı</value>
+  </data>
+  <data name="Is_Default" xml:space="preserve">
+    <value>Varsayılandır</value>
+  </data>
+  <data name="Is_Email_Confirmed" xml:space="preserve">
+    <value>E-posta Onaylandı mı</value>
+  </data>
+  <data name="Is_Static" xml:space="preserve">
+    <value>Statik mi</value>
+  </data>
+  <data name="Items_per_page" xml:space="preserve">
+    <value>Sayfa başına öğeler</value>
+  </data>
+  <data name="January" xml:space="preserve">
+    <value>Ocak</value>
+  </data>
+  <data name="Job_Title" xml:space="preserve">
+    <value>İş Unvanı</value>
+  </data>
+  <data name="Join_the_Military" xml:space="preserve">
+    <value>Orduya Katılın</value>
+  </data>
+  <data name="July" xml:space="preserve">
+    <value>Temmuz</value>
+  </data>
+  <data name="June" xml:space="preserve">
+    <value>Haziran</value>
+  </data>
+  <data name="Last" xml:space="preserve">
+    <value>Son</value>
+  </data>
+  <data name="Last_Name" xml:space="preserve">
+    <value>Soyadı</value>
+  </data>
+  <data name="Learn_how_to" xml:space="preserve">
+    <value>Nasıl</value>
+  </data>
+  <data name="Left" xml:space="preserve">
+    <value>Sol</value>
+  </data>
+  <data name="Legend_Position" xml:space="preserve">
+    <value>Gösterge Konumu</value>
+  </data>
+  <data name="Live_data_powered_by_SignalR" xml:space="preserve">
+    <value>SignalR tarafından desteklenen canlı veriler</value>
+  </data>
+  <data name="Loading_On_Demand" xml:space="preserve">
+    <value>İsteğe Bağlı Yükleme</value>
+  </data>
+  <data name="Localization" xml:space="preserve">
+    <value>Yerelleştirme</value>
+  </data>
+  <data name="Local_Time" xml:space="preserve">
+    <value>Yerel saat</value>
+  </data>
+  <data name="Lockout_Settings" xml:space="preserve">
+    <value>Kilitleme Ayarları</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Oturum açma</value>
+  </data>
+  <data name="login_lowered" xml:space="preserve">
+    <value>Oturum açma</value>
+  </data>
+  <data name="Login_out" xml:space="preserve">
+    <value>Çıkış yap...</value>
+  </data>
+  <data name="Login_With_Authenticator_Code" xml:space="preserve">
+    <value>2FA Kodu ile giriş yapın</value>
+  </data>
+  <data name="Login_With_Recovery_Code" xml:space="preserve">
+    <value>Kurtarma Kodu ile giriş yapın</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Oturum kapatma</value>
+  </data>
+  <data name="Log_in" xml:space="preserve">
+    <value>Oturum aç</value>
+  </data>
+  <data name="log_in_with_a_recovery_code" xml:space="preserve">
+    <value>kurtarma koduyla oturum açma</value>
+  </data>
+  <data name="Long_Date_Pattern" xml:space="preserve">
+    <value>Uzun Tarih Deseni</value>
+  </data>
+  <data name="Long_Time_Pattern" xml:space="preserve">
+    <value>Uzun Zaman Deseni</value>
+  </data>
+  <data name="Lorem" xml:space="preserve">
+    <value>Mauris cursus dui tellus gravida, ut iaculis ante mattis. Aenean mülayim faucibus finibus. Aenean euismod lorem metus. Ut vitae nulla ac mauris vulputate accumsan ac non velit. Tincidunt augue'de cras, quis eleifend est. Quisque magna diam, elementum ut pellentesque vitae, porttitor quis quam. Praesent vulputate varius ex et suscipit. Praesent imperdiet facilisis nisi non sodales. Nullam otur amet lorem quis nisi pellentesque ornare. Pellentesque maximus sed urna vel euismod. Egestas odio id est gravida lobortis'te. Bir varius mauris, quis ornare metus. Sed semper pretium magna, bir vulputate lorem vulputate vitae. Quisque ab congue quam, otur amet euismod ipsum.</value>
+  </data>
+  <data name="Low" xml:space="preserve">
+    <value>Alçak</value>
+  </data>
+  <data name="March" xml:space="preserve">
+    <value>Mart</value>
+  </data>
+  <data name="Master_Details_Form" xml:space="preserve">
+    <value>Usta - Detay Formu!</value>
+  </data>
+  <data name="Maximum_Failed_Access_Attempts" xml:space="preserve">
+    <value>En Fazla Başarısız Erişim Denemesi Sayısı</value>
+  </data>
+  <data name="May" xml:space="preserve">
+    <value>Mayıs</value>
+  </data>
+  <data name="Medium" xml:space="preserve">
+    <value>Orta</value>
+  </data>
+  <data name="Military_Applicants" xml:space="preserve">
+    <value>Askeri Başvuru Sahipleri</value>
+  </data>
+  <data name="Minor" xml:space="preserve">
+    <value>Küçük</value>
+  </data>
+  <data name="Minute" xml:space="preserve">
+    <value>Tutanak</value>
+  </data>
+  <data name="Modified_On" xml:space="preserve">
+    <value>Değişiklik Tarihi</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Ay</value>
+  </data>
+  <data name="Month_Day_Pattern" xml:space="preserve">
+    <value>Ay Günü Deseni</value>
+  </data>
+  <data name="Month_Genitive_Names" xml:space="preserve">
+    <value>Aylık Genel Adlar</value>
+  </data>
+  <data name="Month_Names" xml:space="preserve">
+    <value>Ay Adları</value>
+  </data>
+  <data name="My_Account" xml:space="preserve">
+    <value>Hesabım</value>
+  </data>
+  <data name="My_Claims" xml:space="preserve">
+    <value>Taleplerim</value>
+  </data>
+  <data name="My_Permissions" xml:space="preserve">
+    <value>İzinlerim</value>
+  </data>
+  <data name="My_Profile" xml:space="preserve">
+    <value>Profilim</value>
+  </data>
+  <data name="My_Profile_Picture" xml:space="preserve">
+    <value>Profil Resmim</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Ad</value>
+  </data>
+  <data name="Native_Calendar_Name" xml:space="preserve">
+    <value>Yerel Takvim Adı</value>
+  </data>
+  <data name="Native_Name" xml:space="preserve">
+    <value>Yerel Ad</value>
+  </data>
+  <data name="Natural_Spline" xml:space="preserve">
+    <value>Doğal Spline</value>
+  </data>
+  <data name="New_Email" xml:space="preserve">
+    <value>Yeni E-posta</value>
+  </data>
+  <data name="New_Registered_Users_are_Active_by_Default" xml:space="preserve">
+    <value>Yeni Kayıtlı Kullanıcılar Varsayılan Olarak Etkindir</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Önümüzdeki</value>
+  </data>
+  <data name="Normally_this_would_be_emailed" xml:space="preserve">
+    <value>Normalde bu e-postayla gönderilirdi.</value>
+  </data>
+  <data name="November" xml:space="preserve">
+    <value>Kasım</value>
+  </data>
+  <data name="No_data_available" xml:space="preserve">
+    <value>Kullanılabilir veri yok.</value>
+  </data>
+  <data name="No_keep_it" xml:space="preserve">
+    <value>Hayır, sende kalsın.</value>
+  </data>
+  <data name="Nuclear" xml:space="preserve">
+    <value>Nükleer</value>
+  </data>
+  <data name="Occupational_injury" xml:space="preserve">
+    <value>Mesleki yaralanma</value>
+  </data>
+  <data name="October" xml:space="preserve">
+    <value>Ekim</value>
+  </data>
+  <data name="Oil" xml:space="preserve">
+    <value>Yağ</value>
+  </data>
+  <data name="Oil1" xml:space="preserve">
+    <value>Yağ</value>
+  </data>
+  <data name="Once_you_have_scanned_the_QR_code_or_input_the_key_above" xml:space="preserve">
+    <value>QR kodunu taradıktan veya yukarıdaki anahtarı girdikten sonra</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Seçenekler</value>
+  </data>
+  <data name="or" xml:space="preserve">
+    <value>veya</value>
+  </data>
+  <data name="out_of" xml:space="preserve">
+    <value>dışında</value>
+  </data>
+  <data name="Overview" xml:space="preserve">
+    <value>Genel bakış</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Parola</value>
+  </data>
+  <data name="Password_Settings" xml:space="preserve">
+    <value>Parola Ayarları</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>Bekleyen İşlem</value>
+  </data>
+  <data name="Periodic" xml:space="preserve">
+    <value>Periyodik</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>İzinler</value>
+  </data>
+  <data name="Personal_Data" xml:space="preserve">
+    <value>Kişisel veri</value>
+  </data>
+  <data name="Phone_Number" xml:space="preserve">
+    <value>Telefon numarası</value>
+  </data>
+  <data name="Phone_number_is_required" xml:space="preserve">
+    <value>Telefon numarası gerekli</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>Oynamak</value>
+  </data>
+  <data name="Please" xml:space="preserve">
+    <value>Lütfen</value>
+  </data>
+  <data name="Please_check_your_email_to_confirm_your_account" xml:space="preserve">
+    <value>Hesabınızı onaylamak için lütfen e-postanızı kontrol edin.</value>
+  </data>
+  <data name="Please_check_your_email_to_reset_your_password_or_click" xml:space="preserve">
+    <value>Şifrenizi sıfırlamak için lütfen e-postanızı kontrol edin veya</value>
+  </data>
+  <data name="Please_provide_new_name_for_the_file_or_leave_it_as_is" xml:space="preserve">
+    <value>Lütfen dosya için yeni bir ad girin veya olduğu gibi bırakın.</value>
+  </data>
+  <data name="PM_Designator" xml:space="preserve">
+    <value>PM Atama</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Önceki</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="Profile_Picture" xml:space="preserve">
+    <value>Profil Resmi</value>
+  </data>
+  <data name="Proof_of_Concepts" xml:space="preserve">
+    <value>Kavramların Kanıtı</value>
+  </data>
+  <data name="Properties" xml:space="preserve">
+    <value>Özellikler</value>
+  </data>
+  <data name="Property" xml:space="preserve">
+    <value>Mülk</value>
+  </data>
+  <data name="Put_these_codes_in_a_safe_place" xml:space="preserve">
+    <value>Bu kodları güvenli bir yere koyun.</value>
+  </data>
+  <data name="QueryString" xml:space="preserve">
+    <value>Arama kriteri</value>
+  </data>
+  <data name="Quick_Search" xml:space="preserve">
+    <value>Hızlı Arama</value>
+  </data>
+  <data name="Randomize" xml:space="preserve">
+    <value>Rastgele hale</value>
+  </data>
+  <data name="Realtime_Data" xml:space="preserve">
+    <value>Gerçek Zamanlı</value>
+  </data>
+  <data name="Recent_incidents" xml:space="preserve">
+    <value>Son olaylar</value>
+  </data>
+  <data name="Recovery_Code" xml:space="preserve">
+    <value>Kurtarma Kodu</value>
+  </data>
+  <data name="Recovery_Codes" xml:space="preserve">
+    <value>Kurtarma Kodları</value>
+  </data>
+  <data name="Reference" xml:space="preserve">
+    <value>Referans</value>
+  </data>
+  <data name="References" xml:space="preserve">
+    <value>Referanslar</value>
+  </data>
+  <data name="Reference_name_is_required" xml:space="preserve">
+    <value>İsim Gereklidir!</value>
+  </data>
+  <data name="Refresh_Token_TimeSpan" xml:space="preserve">
+    <value>Belirteç Zaman Aralığı'nın Yenilen</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Kaydolmak</value>
+  </data>
+  <data name="Register_as_a_new_user" xml:space="preserve">
+    <value>Yeni kullanıcı olarak kaydolun</value>
+  </data>
+  <data name="Register_Confirmation" xml:space="preserve">
+    <value>Kayıt Onayı</value>
+  </data>
+  <data name="Remember_me" xml:space="preserve">
+    <value>Beni hatırladın mı?</value>
+  </data>
+  <data name="Remember_this_machine" xml:space="preserve">
+    <value>Bu makineyi hatırla.</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Kaldırmak</value>
+  </data>
+  <data name="Reporting" xml:space="preserve">
+    <value>Reporlama</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>Raporlar</value>
+  </data>
+  <data name="Report_Details" xml:space="preserve">
+    <value>Rapor Detayları</value>
+  </data>
+  <data name="Required_Length" xml:space="preserve">
+    <value>Gerekli Uzunluk</value>
+  </data>
+  <data name="Required_Unique_Characters" xml:space="preserve">
+    <value>Gerekli Benzersiz Karakterler</value>
+  </data>
+  <data name="Require_Confirmed_Account" xml:space="preserve">
+    <value>Onaylanmış Hesap Gerektir</value>
+  </data>
+  <data name="Require_Confirmed_Email" xml:space="preserve">
+    <value>Onaylanmış E-posta gerektir</value>
+  </data>
+  <data name="Require_Confirmed_Phone_Number" xml:space="preserve">
+    <value>Onaylanmış Telefon Numarası Gerektir</value>
+  </data>
+  <data name="Require_Digits" xml:space="preserve">
+    <value>Basamak Gerektir</value>
+  </data>
+  <data name="Require_Lowercase_Characters" xml:space="preserve">
+    <value>Küçük HarfLi Karakterler Gerektir</value>
+  </data>
+  <data name="Require_Non_Alphanumeric" xml:space="preserve">
+    <value>Alfasayısal Olmayan Gerektir</value>
+  </data>
+  <data name="Require_Uppercase_Characters" xml:space="preserve">
+    <value>Büyük Harf Gerektir</value>
+  </data>
+  <data name="Resend" xml:space="preserve">
+    <value>Yeniden Dele</value>
+  </data>
+  <data name="Resend_Email_Confirmation" xml:space="preserve">
+    <value>E-posta Onaylarını Yeniden Gönder</value>
+  </data>
+  <data name="Reset_2FA_App" xml:space="preserve">
+    <value>İki Faktörlü Kimlik Doğrulama Uygulamasını Sıfırla</value>
+  </data>
+  <data name="Reset_2FA_Recovery_Codes" xml:space="preserve">
+    <value>İki Faktörlü Kimlik Doğrulama Kurtarma Kodlarını Sıfırla</value>
+  </data>
+  <data name="Reset_Authenticator_App" xml:space="preserve">
+    <value>Kimlik Doğrulayıcı Uygulamasını Sıfırla</value>
+  </data>
+  <data name="Reset_Authenticator_Key" xml:space="preserve">
+    <value>Kimlik Doğrulayıcı Anahtarını Sıfırla</value>
+  </data>
+  <data name="Reset_Password" xml:space="preserve">
+    <value>Parolayı Sıfırla</value>
+  </data>
+  <data name="Reset_Password_Confirmation" xml:space="preserve">
+    <value>Parola Onaylarını Sıfırla</value>
+  </data>
+  <data name="Reset_Recovery_Codes" xml:space="preserve">
+    <value>Kurtarma Kodlarını Sıfırla</value>
+  </data>
+  <data name="reset_your_authenticator_keys" xml:space="preserve">
+    <value>kimlik doğrulayıcı anahtarlarınızı sıfırlama</value>
+  </data>
+  <data name="Reset_your_password" xml:space="preserve">
+    <value>Parolanızı sıfırlayın.</value>
+  </data>
+  <data name="Resource.Issues_is_almost_reaching_100" xml:space="preserve">
+    <value>Resource.Issues neredeyse 100'e ulaşıyor</value>
+  </data>
+  <data name="Resources" xml:space="preserve">
+    <value>Kaynaklar</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>Dönmek</value>
+  </data>
+  <data name="RFC1123_Pattern" xml:space="preserve">
+    <value>RFC1123 Deseni</value>
+  </data>
+  <data name="Right" xml:space="preserve">
+    <value>Sağ</value>
+  </data>
+  <data name="Roentgen" xml:space="preserve">
+    <value>Röntgen</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Rol</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Rolleri</value>
+  </data>
+  <data name="Role_Name" xml:space="preserve">
+    <value>Rol Adı</value>
+  </data>
+  <data name="Rows_Per_Page" xml:space="preserve">
+    <value>Sayfa başına satırlar:</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Kurtarmak</value>
+  </data>
+  <data name="Scan_the_QR_Code_or_enter_this_key" xml:space="preserve">
+    <value>QR Kodunu tarayın veya bu anahtarı girin</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Aramak</value>
+  </data>
+  <data name="Search_by_Roles" xml:space="preserve">
+    <value>Rollere Göre Ara</value>
+  </data>
+  <data name="see" xml:space="preserve">
+    <value>görmek</value>
+  </data>
+  <data name="Select_Roles" xml:space="preserve">
+    <value>Rol Seç</value>
+  </data>
+  <data name="Send_Activation_Email" xml:space="preserve">
+    <value>Etkinleştirme E-postası Gönder</value>
+  </data>
+  <data name="Septemper" xml:space="preserve">
+    <value>Septemper</value>
+  </data>
+  <data name="Series_1" xml:space="preserve">
+    <value>Seri 1</value>
+  </data>
+  <data name="Series_2" xml:space="preserve">
+    <value>Seri 2</value>
+  </data>
+  <data name="Server_Side_Authorization" xml:space="preserve">
+    <value>Sunucu Tarafı Yetkilendirmesi</value>
+  </data>
+  <data name="Server_Side_Validation" xml:space="preserve">
+    <value>Sunucu Tarafı Doğrulaması</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Ayarlar</value>
+  </data>
+  <data name="Setup_Authenticator_App" xml:space="preserve">
+    <value>Kimlik Doğrulayıcı Uygulamasını Kur</value>
+  </data>
+  <data name="Set_Random_Password" xml:space="preserve">
+    <value>Rasgele Parola Ayarla</value>
+  </data>
+  <data name="Shortest_Day_Names" xml:space="preserve">
+    <value>En Kısa Gün Adları</value>
+  </data>
+  <data name="Short_Date_Pattern" xml:space="preserve">
+    <value>Kısa Tarih Deseni</value>
+  </data>
+  <data name="Short_Time_Pattern" xml:space="preserve">
+    <value>Kısa Zaman Deseni</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>Gösteren</value>
+  </data>
+  <data name="Side_Authorization" xml:space="preserve">
+    <value>Yan Yetkilendirme</value>
+  </data>
+  <data name="Sign_in" xml:space="preserve">
+    <value>Oturum Aç</value>
+  </data>
+  <data name="Sign_in_Settings" xml:space="preserve">
+    <value>Ayarlar'da oturum aç</value>
+  </data>
+  <data name="Sign_up" xml:space="preserve">
+    <value>Kaydol</value>
+  </data>
+  <data name="Solar" xml:space="preserve">
+    <value>Güneş</value>
+  </data>
+  <data name="Something_went_wrong" xml:space="preserve">
+    <value>Bir şeyler ters gitti!</value>
+  </data>
+  <data name="Sorry_there's_nothing_at_this_address" xml:space="preserve">
+    <value>Üzgünüm, bu adreste hiçbir şey yok.</value>
+  </data>
+  <data name="Sortable_DateTime_Pattern" xml:space="preserve">
+    <value>Sıralanabilir DateTime Deseni</value>
+  </data>
+  <data name="SSN" xml:space="preserve">
+    <value>Sosyal Güvenlik Numarası</value>
+  </data>
+  <data name="SSNShort" xml:space="preserve">
+    <value>SSN</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Başlamak</value>
+  </data>
+  <data name="Start_SignalR_Connection" xml:space="preserve">
+    <value>SignalR Bağlantısını Başlat!</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Durum</value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>Durmak</value>
+  </data>
+  <data name="Storage_type_is" xml:space="preserve">
+    <value>Depolama türü</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Gönder</value>
+  </data>
+  <data name="Succeeded" xml:space="preserve">
+    <value>Başarılı</value>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>Destek</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>Soyadı</value>
+  </data>
+  <data name="Suspend" xml:space="preserve">
+    <value>Asmak</value>
+  </data>
+  <data name="Sweden" xml:space="preserve">
+    <value>İsveç</value>
+  </data>
+  <data name="Tenants" xml:space="preserve">
+    <value>Kiracı</value>
+  </data>
+  <data name="Thank_you_for_confirming_your_email" xml:space="preserve">
+    <value>E-postanızı onayladığınız için teşekkür ederiz.</value>
+  </data>
+  <data name="these_docs" xml:space="preserve">
+    <value>bu belgeler</value>
+  </data>
+  <data name="The_page_you_were_looking_for_doesnt_exist" xml:space="preserve">
+    <value>Aradığınız sayfa yok.</value>
+  </data>
+  <data name="The_selected_file_exceeds_the_allowed_maximum_size_limit" xml:space="preserve">
+    <value>Seçili dosya izin verilen en büyük boyut sınırını aşıyor.</value>
+  </data>
+  <data name="The_selected_file_extension_is_not_allowed" xml:space="preserve">
+    <value>Seçili dosya uzantısına izin verilmiyor.</value>
+  </data>
+  <data name="This_action_only_disables_2FA" xml:space="preserve">
+    <value>Bu eylem yalnızca İki Faktörlü Kimlik Doğrulama'yı devre dışı bırakır.</value>
+  </data>
+  <data name="This_app_does_not_currently_have_a_real_email_sender_registered" xml:space="preserve">
+    <value>Bu uygulama şu anda kayıtlı gerçek bir e-posta gönderene sahip değil</value>
+  </data>
+  <data name="This_page_allows_you_to_download_or_delete_that_data" xml:space="preserve">
+    <value>Bu sayfa, bu verileri indirmenize veya silmenize olanak tanır.</value>
+  </data>
+  <data name="This_process_disables_2FA_until_you_verify_your_authenticator_app" xml:space="preserve">
+    <value>Bu işlem, kimlik doğrulayıcı uygulamanızı doğrulayın ayana kadar İki Faktörlü Kimlik Doğrulama'ı devre dışı bırakır.</value>
+  </data>
+  <data name="Time_Separator" xml:space="preserve">
+    <value>Zaman Ayırıcı</value>
+  </data>
+  <data name="Time_Zone" xml:space="preserve">
+    <value>Zaman Dilimi</value>
+  </data>
+  <data name="Time_Zone_Info" xml:space="preserve">
+    <value>Zaman Dilimi</value>
+  </data>
+  <data name="Time_Zone_OffSet" xml:space="preserve">
+    <value>Zaman Dilimi</value>
+  </data>
+  <data name="Tips" xml:space="preserve">
+    <value>Ipuç -ları</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Başlık</value>
+  </data>
+  <data name="Token_Info" xml:space="preserve">
+    <value>Belirteç Bilgisi</value>
+  </data>
+  <data name="Token_Settings" xml:space="preserve">
+    <value>Belirteç Ayarları</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>Sayfanın Üstü</value>
+  </data>
+  <data name="Total_Cost" xml:space="preserve">
+    <value>Toplam Maliyet</value>
+  </data>
+  <data name="to_confirm_your_account" xml:space="preserve">
+    <value>hesabınızı onaylamak için</value>
+  </data>
+  <data name="to_login" xml:space="preserve">
+    <value>oturum açma.</value>
+  </data>
+  <data name="To_use_an_authenticator_app_go_through_the_following_steps" xml:space="preserve">
+    <value>Kimlik doğrulayıcı uygulaması kullanmak için aşağıdaki adımları izleyin:</value>
+  </data>
+  <data name="Two_Factor_Authentication" xml:space="preserve">
+    <value>İki Faktörlü Kimlik Doğrulama</value>
+  </data>
+  <data name="Two_Factor_Authentication_works_by_adding_an_additional_layer" xml:space="preserve">
+    <value>İki Faktörlü Kimlik Doğrulama (2FA), çevrimiçi hesaplarınıza ek bir güvenlik katmanı ekleyerek çalışır. Hesap erişimi elde etmek için yalnızca kullanıcı adı ve parolanın ötesinde ek bir giriş kimliği gerektirir ve bu ikinci kimlik bilgilerini almak size ait olan bir şeye erişim gerektirir.</value>
+  </data>
+  <data name="UI_Culture_Code" xml:space="preserve">
+    <value>Kullanıcı Arabirimi Kültür Kodu</value>
+  </data>
+  <data name="Unable_to_upload_an_empty_file" xml:space="preserve">
+    <value>Boş bir dosya yüklenemiyor.</value>
+  </data>
+  <data name="Unautorized" xml:space="preserve">
+    <value>Kimliksiz</value>
+  </data>
+  <data name="United_States" xml:space="preserve">
+    <value>Amerika Birleşik Devletleri</value>
+  </data>
+  <data name="Units_of_Time" xml:space="preserve">
+    <value>Zaman Birimleri</value>
+  </data>
+  <data name="Universal_Sortable_DateTime_Pattern" xml:space="preserve">
+    <value>Evrensel Sıralanabilir DateTime Deseni</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Güncelleştirmek</value>
+  </data>
+  <data name="Upload_Avatar" xml:space="preserve">
+    <value>Avatar Yükle</value>
+  </data>
+  <data name="Upload_Documents" xml:space="preserve">
+    <value>Belgeleri Karşıya Yükle</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Kullanıcı adı</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Kullanıcı</value>
+  </data>
+  <data name="Users_Management" xml:space="preserve">
+    <value>Kullanıcı Yönetimi</value>
+  </data>
+  <data name="User_Account" xml:space="preserve">
+    <value>Kullanıcı Hesabı</value>
+  </data>
+  <data name="User_Documents" xml:space="preserve">
+    <value>Kullanıcı Belgeleri</value>
+  </data>
+  <data name="User_is_not_found" xml:space="preserve">
+    <value>Kullanıcı bulunamadı.</value>
+  </data>
+  <data name="User_Profile" xml:space="preserve">
+    <value>Kullanıcı Profili</value>
+  </data>
+  <data name="User_Settings" xml:space="preserve">
+    <value>Kullanıcı Ayarları</value>
+  </data>
+  <data name="Use_a_local_account_to_log_in" xml:space="preserve">
+    <value>Oturum açmak için yerel bir hesap kullanın.</value>
+  </data>
+  <data name="Validation_Summary" xml:space="preserve">
+    <value>Doğrulama Özeti</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Değer</value>
+  </data>
+  <data name="Verify" xml:space="preserve">
+    <value>Doğrulamak</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Görünüm</value>
+  </data>
+  <data name="View_Applicant" xml:space="preserve">
+    <value>Başvuranı Görüntüle</value>
+  </data>
+  <data name="Visit_Website" xml:space="preserve">
+    <value>Web Sitesini Ziyaret Edin</value>
+  </data>
+  <data name="Weight" xml:space="preserve">
+    <value>Ağırlık</value>
+  </data>
+  <data name="Wind" xml:space="preserve">
+    <value>Rüzgar</value>
+  </data>
+  <data name="Year_Month_Pattern" xml:space="preserve">
+    <value>Yıl Ayı Deseni</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Evet</value>
+  </data>
+  <data name="Yes_delete_it" xml:space="preserve">
+    <value>Evet, sil</value>
+  </data>
+  <data name="Yes_remove_it" xml:space="preserve">
+    <value>Evet, kaldır.</value>
+  </data>
+  <data name="Yes_rename_it" xml:space="preserve">
+    <value>Evet, yeniden adlandır</value>
+  </data>
+  <data name="Your_account_contains_personal_data_that_you_have_given_us" xml:space="preserve">
+    <value>Hesabınız bize verdiğiniz kişisel verileri içerir.</value>
+  </data>
+  <data name="Your_password_has_been_reset" xml:space="preserve">
+    <value>Parolanız sıfırlandı</value>
+  </data>
+  <data name="Your_report_0_is_ready_to_download" xml:space="preserve">
+    <value>{0} raporunuz indirilmeye hazır.!</value>
+  </data>
+  <data name="Your_report_generation_has_failed" xml:space="preserve">
+    <value>Rapor oluşturma işleminiz başarısız oldu.!</value>
+  </data>
+  <data name="Your_report_is_being_generated" xml:space="preserve">
+    <value>Rapor dosyanız üretiliyor.</value>
+  </data>
+  <data name="Your_report_is_being_initiated" xml:space="preserve">
+    <value>Raporunuz başlatılıyor.!</value>
+  </data>
+  <data name="Your_report_is_ready_to_download" xml:space="preserve">
+    <value>Raporunuz indirilmeye hazır.!</value>
+  </data>
+  <data name="Your_report__0__is_ready_to_download\" xml:space="preserve">
+    <value>{0} raporunuz indirilmeye hazır.!</value>
+  </data>
+  <data name="your_two_factor_authentication_app_will_provide_you_with_a_unique_code" xml:space="preserve">
+    <value>iki faktörlü kimlik doğrulama uygulamanız size benzersiz bir kod sağlayacaktır.</value>
+  </data>
+  <data name="You_are_not_authenticated_to_export_this_report" xml:space="preserve">
+    <value>Bu raporu dışa aktarma yetkiniz yok.!</value>
+  </data>
+  <data name="You_are_not_authorized_to_access_this_page" xml:space="preserve">
+    <value>Bu sayfaya erişme yetkiniz yok</value>
+  </data>
+  <data name="You_can" xml:space="preserve">
+    <value>Şunları yapabilirsiniz</value>
+  </data>
+  <data name="You_have_no_recovery_codes_left" xml:space="preserve">
+    <value>Kurtarma kodun kalmadı.</value>
+  </data>
+  <data name="You_have_num_recovery_codes_left" xml:space="preserve">
+    <value>Kurtarma kodların {0} kaldı.</value>
+  </data>
+  <data name="You_have_one_recovery_code_left" xml:space="preserve">
+    <value>Bir kurtarma kodunuz kaldı.</value>
+  </data>
+  <data name="You_must" xml:space="preserve">
+    <value>Bunu yapmalısın.</value>
+  </data>
+  <data name="You_should" xml:space="preserve">
+    <value>Bunu yapmalısın.</value>
+  </data>
+  <data name="File_has_been_uploaded_successfully" xml:space="preserve">
+    <value>Dosya başarıyla yüklendi.</value>
+  </data>
+  <data name="File_upload_was_cancelled" xml:space="preserve">
+    <value>Dosya yükleme işlemi iptal edildi.</value>
+  </data>
+  <data name="Upload_File" xml:space="preserve">
+    <value>Dosya Yükle</value>
+  </data>
+  <data name="Access_token_timespan_cannot_be_null" xml:space="preserve">
+    <value>Erişim belirteci zaman aralığı boş olamaz.</value>
+  </data>
+  <data name="Access_token_timespan_is_required" xml:space="preserve">
+    <value>Erişim belirteci zaman aralığı gereklidir.</value>
+  </data>
+  <data name="Allowed_username_characters_are_required" xml:space="preserve">
+    <value>İzin verilen kullanıcı adı karakterleri gereklidir.</value>
+  </data>
+  <data name="An_unknown_failure_has_occurred" xml:space="preserve">
+    <value>Bilinmeyen bir hata oluştu.</value>
+  </data>
+  <data name="Applicant_has_been_created_successfully" xml:space="preserve">
+    <value>Başvuru sahibi başarıyla oluşturuldu</value>
+  </data>
+  <data name="Applicant_has_been_deleted_successfully" xml:space="preserve">
+    <value>Başvuru sahibi başarıyla silinmiştir.</value>
+  </data>
+  <data name="Applicant_has_been_updated_successfully" xml:space="preserve">
+    <value>Başvuru sahibi başarıyla güncellenmiştir.</value>
+  </data>
+  <data name="A_user_with_this_login_already_exists" xml:space="preserve">
+    <value>Bu oturum açma bilgilerine sahip bir kullanıcı zaten var.</value>
+  </data>
+  <data name="Cannot_disable_2FA_for_user_with_Id" xml:space="preserve">
+    <value>Şu anda etkin olmadığı için '{0}' kimliğine sahip kullanıcı için İki Faktörlü Kimlik Doğrulama devre dışı bırakılamıyor.</value>
+  </data>
+  <data name="Cannot_generate_recovery_codes" xml:space="preserve">
+    <value>İki Faktörlü Kimlik Doğrulama etkin olmadığından '{0}' kullanıcı adı için kurtarma kodları oluşturulamıyor.</value>
+  </data>
+  <data name="Code_is_required" xml:space="preserve">
+    <value>Kod gereklidir.</value>
+  </data>
+  <data name="Confirmation_link_to_change_email_has_been_sent" xml:space="preserve">
+    <value>Değişiklik e-postası için onay bağlantısı gönderildi. Lütfen e-postanızı kontrol edin.</value>
+  </data>
+  <data name="Confirm_password_is_required" xml:space="preserve">
+    <value>Şifrenin gerekli olduğunu onaylayın.</value>
+  </data>
+  <data name="Confirm_your_email" xml:space="preserve">
+    <value>E-postanızı onaylayın</value>
+  </data>
+  <data name="Date_of_Birth_is_required" xml:space="preserve">
+    <value>Doğum Tarihi gereklidir</value>
+  </data>
+  <data name="Default_lockout_time_Span_is_required" xml:space="preserve">
+    <value>Varsayılan kilitleme süresi Aralığı gereklidir</value>
+  </data>
+  <data name="Deletion_of_entity_failed" xml:space="preserve">
+    <value>"{0}" ({1}) varlığının silinmesi başarısız oldu. {2}.</value>
+  </data>
+  <data name="Email_is_already_taken" xml:space="preserve">
+    <value>'{0}' e-postası zaten alınmış.</value>
+  </data>
+  <data name="Email_is_invalid" xml:space="preserve">
+    <value>'{0}' e-postası geçersiz.</value>
+  </data>
+  <data name="Entity_with_key_was_not_found" xml:space="preserve">
+    <value>"{0}" anahtarına sahip "{1}" varlığı bulunamadı.</value>
+  </data>
+  <data name="Error_changing_user_name" xml:space="preserve">
+    <value>Kullanıcı adı değiştirilirken hata oluştu.</value>
+  </data>
+  <data name="Error_changing_your_user_name" xml:space="preserve">
+    <value>Kullanıcı adınızı değiştirirken hata oluştu.</value>
+  </data>
+  <data name="File_has_not_been_uploaded" xml:space="preserve">
+    <value>Dosya yüklenmedi.</value>
+  </data>
+  <data name="File_storage_settings_have_been_updated_successfully" xml:space="preserve">
+    <value>Dosya depolama ayarları başarıyla güncelleştirildi.</value>
+  </data>
+  <data name="First_name_is_required" xml:space="preserve">
+    <value>Ad gereklidir.</value>
+  </data>
+  <data name="Height_is_required" xml:space="preserve">
+    <value>Yükseklik gereklidir.</value>
+  </data>
+  <data name="Identity_settings_have_been_updated_successfully" xml:space="preserve">
+    <value>Kimlik ayarları başarıyla güncelleştirildi.</value>
+  </data>
+  <data name="Incorrect_password" xml:space="preserve">
+    <value>Yanlış şifre.</value>
+  </data>
+  <data name="Invalid_applicant_Id" xml:space="preserve">
+    <value>Geçersiz başvuru sahibi kimliği.</value>
+  </data>
+  <data name="Invalid_authenticator_code_entered" xml:space="preserve">
+    <value>Geçersiz kimlik doğrulayıcı kodu girildi.</value>
+  </data>
+  <data name="Invalid_client_request" xml:space="preserve">
+    <value>Geçersiz istemci isteği.</value>
+  </data>
+  <data name="Invalid_file_storage_Id" xml:space="preserve">
+    <value>Geçersiz dosya depolama kimliği.</value>
+  </data>
+  <data name="Invalid_lockout_settings_Id" xml:space="preserve">
+    <value>Geçersiz kilitleme ayarları Kimliği.</value>
+  </data>
+  <data name="Invalid_login_attempt" xml:space="preserve">
+    <value>Geçersiz giriş denemesi.</value>
+  </data>
+  <data name="Invalid_password_settings_Id" xml:space="preserve">
+    <value>Geçersiz şifre ayarları Kimliği.</value>
+  </data>
+  <data name="Invalid_recovery_code_entered" xml:space="preserve">
+    <value>Geçersiz kurtarma kodu girildi.</value>
+  </data>
+  <data name="Invalid_report_Id" xml:space="preserve">
+    <value>Geçersiz rapor kimliği.</value>
+  </data>
+  <data name="Invalid_role_Id" xml:space="preserve">
+    <value>Geçersiz rol kimliği.</value>
+  </data>
+  <data name="Invalid_sign_in_settings_Id" xml:space="preserve">
+    <value>Geçersiz oturum açma ayarları Kimliği.</value>
+  </data>
+  <data name="Invalid_tenant_name" xml:space="preserve">
+    <value>Geçersiz kiracı adı.</value>
+  </data>
+  <data name="Invalid_token" xml:space="preserve">
+    <value>Geçersiz belirteç.</value>
+  </data>
+  <data name="Invalid_token_settings_Id" xml:space="preserve">
+    <value>Geçersiz jeton ayarları Kimliği.</value>
+  </data>
+  <data name="Invalid_user_Id" xml:space="preserve">
+    <value>Geçersiz kullanıcı kimliği.</value>
+  </data>
+  <data name="Invalid_user_settings_Id" xml:space="preserve">
+    <value>Geçersiz kullanıcı ayarları Kimliği</value>
+  </data>
+  <data name="Job_title_is_required" xml:space="preserve">
+    <value>İş unvanı gereklidir.</value>
+  </data>
+  <data name="Last_name_is_required" xml:space="preserve">
+    <value>Soyadı gereklidir</value>
+  </data>
+  <data name="Lockout_is_not_enabled_for_this_user" xml:space="preserve">
+    <value>Bu kullanıcı için kilitleme etkin değil.</value>
+  </data>
+  <data name="Maximum_allowed_number_of_attachments_must_not_exceed_3" xml:space="preserve">
+    <value>İzin verilen maksimum ek sayısı 3'ü geçmemelidir.</value>
+  </data>
+  <data name="Max_failed_access_attempt_is_required" xml:space="preserve">
+    <value>Maksimum başarısız erişim girişimi gereklidir.</value>
+  </data>
+  <data name="Method_cannot_be_null" xml:space="preserve">
+    <value>Yöntem null olamaz.</value>
+  </data>
+  <data name="Minimum_allowed_number_of_attachments_must_be_at_least_1" xml:space="preserve">
+    <value>İzin verilen minimum ek sayısı en az 1 olmalıdır.</value>
+  </data>
+  <data name="New_password_is_required" xml:space="preserve">
+    <value>Yeni şifre gereklidir.</value>
+  </data>
+  <data name="New_password_must_be_at_least_6_characters" xml:space="preserve">
+    <value>Yeni şifre en az 6 karakter uzunluğunda olmalıdır.</value>
+  </data>
+  <data name="New_password_must_not_exceed_200_characters" xml:space="preserve">
+    <value>Yeni parola 200 karakteri geçmemelidir.</value>
+  </data>
+  <data name="N_A" xml:space="preserve">
+    <value>YOK</value>
+  </data>
+  <data name="Old_password_is_required" xml:space="preserve">
+    <value>Eski şifre gereklidir.</value>
+  </data>
+  <data name="Only_those_between_the_ages_of_18_and_28_are_allowed_for_enlisting" xml:space="preserve">
+    <value>Sadece 18 ila 28 yaşları arasındakilerin askere alınmasına izin verilir.</value>
+  </data>
+  <data name="Only_those_whose_BMI_between_18_5_and_24_9_are_allowed_for_enlisting" xml:space="preserve">
+    <value>Sadece VKİ'si 18.5 ila 24.9 arasında olanların kaydolmasına izin verilir.</value>
+  </data>
+  <data name="Only_those_whose_heights_between_100_and_250_with_normal_BMI_are_allowed_for_enlisting" xml:space="preserve">
+    <value>Sadece normal VKİ'li 100 ila 250 arasındaki boyları olanların kaydolmasına izin verilir.</value>
+  </data>
+  <data name="Only_those_who_weigh_between_50_and_200_with_normal_BMI_are_allowed_for_enlisting" xml:space="preserve">
+    <value>Sadece normal VKİ'si olan 50 ila 200 arasında olanların kaydolmasına izin verilir.</value>
+  </data>
+  <data name="Optimistic_concurrency_failure" xml:space="preserve">
+    <value>İyimser eşzamanlılık hatası, nesne değiştirildi.</value>
+  </data>
+  <data name="Passwords_must_be_at_least_length_characters" xml:space="preserve">
+    <value>Parolalar en az {0} karakterden oluşmalıdır.</value>
+  </data>
+  <data name="Passwords_must_have_at_least_one_digit" xml:space="preserve">
+    <value>Şifreler en az bir haneye ('0'-'9') sahip olmalıdır.</value>
+  </data>
+  <data name="Passwords_must_have_at_least_one_lowercase" xml:space="preserve">
+    <value>Parolalar en az bir küçük harf ("a"-"z") içermelidir.</value>
+  </data>
+  <data name="Passwords_must_have_at_least_one_non_alphanumeric_character" xml:space="preserve">
+    <value>Parolalar alfasayısal olmayan en az bir karaktere sahip olmalıdır.</value>
+  </data>
+  <data name="Passwords_must_have_at_least_one_uppercase" xml:space="preserve">
+    <value>Parolalar en az bir büyük harf ("A"-"Z") olmalıdır.</value>
+  </data>
+  <data name="Password_cannot_contain_password" xml:space="preserve">
+    <value>Parola 'parola' içeremez.</value>
+  </data>
+  <data name="Password_cannot_contain_username" xml:space="preserve">
+    <value>Parola kullanıcı adı içeremez.</value>
+  </data>
+  <data name="Password_is_required" xml:space="preserve">
+    <value>Şifre gereklidir.</value>
+  </data>
+  <data name="Password_must_be_at_least_6_characters" xml:space="preserve">
+    <value>Şifre en az 6 karakterden oluşmalıdır.</value>
+  </data>
+  <data name="Password_must_not_exceed_200_characters" xml:space="preserve">
+    <value>Parola 200 karakteri geçmemelidir.</value>
+  </data>
+  <data name="Password_reset_link_was_sent" xml:space="preserve">
+    <value>Parola sıfırlama bağlantısı gönderildi. Lütfen e-postanızı kontrol edin.</value>
+  </data>
+  <data name="Please_confirm_your_account_by_clicking_here" xml:space="preserve">
+    <value>Lütfen &lt;a href='{0}'&gt;buraya tıklayarak&lt;/a&gt; hesabınızı onaylayın.</value>
+  </data>
+  <data name="Please_confirm_your_email" xml:space="preserve">
+    <value>Lütfen e-postanızı onaylayın.</value>
+  </data>
+  <data name="Please_reset_your_password_by_clicking_here" xml:space="preserve">
+    <value>Lütfen &lt;a href='{0}'&gt;buraya tıklayarak&lt;/a&gt; şifrenizi sıfırlayın.</value>
+  </data>
+  <data name="Please_specify_the_application_tenant_mode" xml:space="preserve">
+    <value>Lütfen uygulama kiracı modunu belirtin.</value>
+  </data>
+  <data name="Profile_picture_is_required" xml:space="preserve">
+    <value>Profil resmi gereklidir.</value>
+  </data>
+  <data name="Recovery_Code_is_required" xml:space="preserve">
+    <value>Kurtarma Kodu gereklidir.</value>
+  </data>
+  <data name="Recovery_Code_Redemption_Failed" xml:space="preserve">
+    <value>Kurtarma Kodu Kullanımı Başarısız Oldu</value>
+  </data>
+  <data name="Refresh_token_timespan_cannot_be_null" xml:space="preserve">
+    <value>Yenileme belirteci zaman aralığı boş olamaz.</value>
+  </data>
+  <data name="Refresh_token_timespan_is_required" xml:space="preserve">
+    <value>Yenileme belirteci zaman aralığı gereklidir.</value>
+  </data>
+  <data name="Refresh_token_timespan_must_be_greater_than_access_token_expiry_time" xml:space="preserve">
+    <value>Yenileme belirteci zaman aralığı, erişim belirteci sona erme süresinden daha büyük olmalıdır.</value>
+  </data>
+  <data name="Repeated_Ones_are_not_valid_Social_security_number" xml:space="preserve">
+    <value>111111111 geçerli bir Sosyal Güvenlik numarası değildir.</value>
+  </data>
+  <data name="Repeated_Threes_are_not_valid_Social_security_number" xml:space="preserve">
+    <value>333333333 geçerli bir Sosyal Güvenlik numarası değildir.</value>
+  </data>
+  <data name="Required_length_is_required" xml:space="preserve">
+    <value>Gerekli uzunluk gereklidir.</value>
+  </data>
+  <data name="Required_unique_characters_is_required" xml:space="preserve">
+    <value>Gerekli benzersiz karakterler gereklidir.</value>
+  </data>
+  <data name="Reset_your_password1" xml:space="preserve">
+    <value>Parolanızı sıfırlama</value>
+  </data>
+  <data name="Role_has_been_created_successfully" xml:space="preserve">
+    <value>Rol başarıyla oluşturuldu.</value>
+  </data>
+  <data name="Role_has_been_deleted_successfully" xml:space="preserve">
+    <value>Rol başarıyla silindi.</value>
+  </data>
+  <data name="Role_has_been_updated_successfully" xml:space="preserve">
+    <value>Rol başarıyla güncelleştirildi.</value>
+  </data>
+  <data name="Role_name_is_already_taken" xml:space="preserve">
+    <value>'{0}' rol adı zaten alınmış.</value>
+  </data>
+  <data name="Role_name_is_invalid" xml:space="preserve">
+    <value>Rol adı '{0}' geçersiz.</value>
+  </data>
+  <data name="Role_name_is_required" xml:space="preserve">
+    <value>Rol adı gereklidir.</value>
+  </data>
+  <data name="Social_security_number_is_required" xml:space="preserve">
+    <value>Sosyal güvenlik numarası gereklidir</value>
+  </data>
+  <data name="Social_security_number_must_contain_only_9_digits" xml:space="preserve">
+    <value>Sosyal güvenlik numarası yalnızca 9 basamaklı olmalıdır.</value>
+  </data>
+  <data name="Social_security_number_must_not_contain_consecutive_digits" xml:space="preserve">
+    <value>Sosyal güvenlik numarası ardışık rakamlar içermemelidir.</value>
+  </data>
+  <data name="Storage_type_is_required" xml:space="preserve">
+    <value>Depolama türü gereklidir.</value>
+  </data>
+  <data name="Surname_is_required" xml:space="preserve">
+    <value>Soyadı gereklidir.</value>
+  </data>
+  <data name="Tenant_has_been_created_successfully" xml:space="preserve">
+    <value>Kiracı başarıyla oluşturuldu.</value>
+  </data>
+  <data name="Tenant_has_been_deleted_successfully" xml:space="preserve">
+    <value>Kiracı başarıyla silindi.</value>
+  </data>
+  <data name="Tenant_has_been_updated_successfully" xml:space="preserve">
+    <value>Kiracı başarıyla güncelleştirildi.</value>
+  </data>
+  <data name="Tenant_name_is_required" xml:space="preserve">
+    <value>Kiracı adı gereklidir.</value>
+  </data>
+  <data name="The_applicant_is_not_found" xml:space="preserve">
+    <value>Başvuru sahibi bulunamadı.</value>
+  </data>
+  <data name="The_password_and_confirmation_password_do_not_match" xml:space="preserve">
+    <value>Parola ve onay parolası eşleşmiyor.</value>
+  </data>
+  <data name="The_specified_role_is_already_registered" xml:space="preserve">
+    <value>Belirtilen rol zaten kayıtlı.</value>
+  </data>
+  <data name="The_specified_role_is_already_registered_in_the_given_tenant" xml:space="preserve">
+    <value>Belirtilen rol, verilen kiracıda zaten kayıtlıdır.</value>
+  </data>
+  <data name="The_specified_username_and_email_are_already_registered" xml:space="preserve">
+    <value>Belirtilen kullanıcı adı ve e-posta adresi zaten kayıtlı.</value>
+  </data>
+  <data name="The_specified_username_and_email_are_already_registered_in_the_given_tenant" xml:space="preserve">
+    <value>Belirtilen kullanıcı adı ve e-posta adresi verilen kiracıda zaten kayıtlıdır.</value>
+  </data>
+  <data name="The_user_has_no_2FA_enabled" xml:space="preserve">
+    <value>Kullanıcının etkin bir 2FA'sı yok.</value>
+  </data>
+  <data name="Token_settings_have_been_updated_successfully" xml:space="preserve">
+    <value>Belirteç ayarları başarıyla güncelleştirildi.</value>
+  </data>
+  <data name="Two_factor_authentication_code_is_required" xml:space="preserve">
+    <value>İki faktörlü kimlik doğrulama kodu gereklidir.</value>
+  </data>
+  <data name="Two_factor_authentication_code_must_be_at_least_6_character_long" xml:space="preserve">
+    <value>İki faktörlü kimlik doğrulama kodu en az 6 karakter uzunluğunda olmalıdır.</value>
+  </data>
+  <data name="Two_factor_authentication_code_must_not_exceed_7_characters" xml:space="preserve">
+    <value>İki faktörlü kimlik doğrulama kodu 7 karakteri geçmemelidir.</value>
+  </data>
+  <data name="Two_factor_authentication_has_been_disabled" xml:space="preserve">
+    <value>2Fa devre dışı bırakıldı. Bir kimlik doğrulayıcı uygulaması ayarlarken İki Faktörlü Kimlik Doğrulama'yı yeniden etkinleştirebilirsiniz.</value>
+  </data>
+  <data name="Two_factor_authentication_required" xml:space="preserve">
+    <value>İki faktörlü kimlik doğrulama gereklidir.</value>
+  </data>
+  <data name="Unable_to_add_static_role" xml:space="preserve">
+    <value>Statik rol eklenemiyor</value>
+  </data>
+  <data name="Unable_to_create_new_tenant_in_single_tenant_mode" xml:space="preserve">
+    <value>Tek kiracı modunda yeni kiracı oluşturulamıyor.</value>
+  </data>
+  <data name="Unable_to_delete_static_role" xml:space="preserve">
+    <value>Statik rol silinemiyor.</value>
+  </data>
+  <data name="Unable_to_delete_static_user" xml:space="preserve">
+    <value>Statik kullanıcı silinemiyor.</value>
+  </data>
+  <data name="Unable_to_enable_2FA" xml:space="preserve">
+    <value>2FA etkinleştirilemiyor.</value>
+  </data>
+  <data name="Unable_to_load_applicant" xml:space="preserve">
+    <value>Başvuru sahibi yüklenemiyor.</value>
+  </data>
+  <data name="Unable_to_load_report" xml:space="preserve">
+    <value>Rapor yüklenemiyor.</value>
+  </data>
+  <data name="Unable_to_load_role" xml:space="preserve">
+    <value>Rol yüklenemiyor.</value>
+  </data>
+  <data name="Unable_to_load_user" xml:space="preserve">
+    <value>Kullanıcı yüklenemiyor.</value>
+  </data>
+  <data name="Unable_to_reset_authenticator_keys" xml:space="preserve">
+    <value>Kimlik doğrulayıcı anahtarları sıfırlanamıyor.</value>
+  </data>
+  <data name="Unable_to_update_static_role" xml:space="preserve">
+    <value>Statik rol güncelleştirilemiyor</value>
+  </data>
+  <data name="Unable_to_update_static_user" xml:space="preserve">
+    <value>Statik kullanıcı güncelleştirilemiyor.</value>
+  </data>
+  <data name="Unexpected_error_occurred_deleting_user_with_Id" xml:space="preserve">
+    <value>'{0}' kimliğine sahip kullanıcı silindiğinde beklenmeyen bir hata oluştu.</value>
+  </data>
+  <data name="Unexpected_error_occurred_disabling_2FA" xml:space="preserve">
+    <value>'{0}' kimliğine sahip kullanıcı için İki Faktörlü Kimlik Doğrulama devre dışı bırakılan beklenmeyen bir hata oluştu.</value>
+  </data>
+  <data name="Username_has_been_confirmed_successfully" xml:space="preserve">
+    <value>Kullanıcı adı başarıyla onaylandı.</value>
+  </data>
+  <data name="Username_is_already_taken" xml:space="preserve">
+    <value>'{0}' kullanıcı adı zaten alınmış.</value>
+  </data>
+  <data name="Username_is_invalid" xml:space="preserve">
+    <value>'{0}' kullanıcı adı geçersizdir, yalnızca harf veya rakam içerebilir.</value>
+  </data>
+  <data name="Username_is_required" xml:space="preserve">
+    <value>Kullanıcı adı gereklidir.</value>
+  </data>
+  <data name="Username_must_be_at_least_6_characters" xml:space="preserve">
+    <value>Kullanıcı adı en az 6 karakterden oluşmalıdır.</value>
+  </data>
+  <data name="Username_must_not_exceed_200_characters" xml:space="preserve">
+    <value>Kullanıcı adı 200 karakteri geçmemelidir.</value>
+  </data>
+  <data name="User_already_has_a_password_set" xml:space="preserve">
+    <value>Kullanıcının zaten ayarlanmış bir parolası var.</value>
+  </data>
+  <data name="User_already_in_role" xml:space="preserve">
+    <value>Kullanıcı zaten '{0}' rolünde.</value>
+  </data>
+  <data name="User_has_been_added_without_files" xml:space="preserve">
+    <value>Kullanıcı dosya olmadan eklendi.</value>
+  </data>
+  <data name="User_has_been_created_successfully" xml:space="preserve">
+    <value>Kullanıcı başarıyla oluşturuldu.</value>
+  </data>
+  <data name="User_has_been_deleted_successfully" xml:space="preserve">
+    <value>Kullanıcı başarıyla silindi.</value>
+  </data>
+  <data name="User_has_been_updated_successfully" xml:space="preserve">
+    <value>Kullanıcı başarıyla güncelleştirildi.</value>
+  </data>
+  <data name="User_has_been_updated_successfully_without_updating_his_her_roles_as_the_user_is_static_type" xml:space="preserve">
+    <value>Kullanıcı, statik tür olduğu için rollerini güncellemeden başarıyla güncelleştirilmiştir.</value>
+  </data>
+  <data name="User_Id_is_required" xml:space="preserve">
+    <value>Kullanıcı Kimliği gereklidir.</value>
+  </data>
+  <data name="User_permissions_have_been_updated_successfully" xml:space="preserve">
+    <value>Kullanıcı izinleri başarıyla güncelleştirildi.</value>
+  </data>
+  <data name="User_with_Id_deleted" xml:space="preserve">
+    <value>'{0}' kimliğine sahip kullanıcı silindi.</value>
+  </data>
+  <data name="User_with_Id_UserId_logged_in_with_2Fa" xml:space="preserve">
+    <value>'{0}' kimliğine sahip kullanıcı İki Faktörlü Kimlik Doğrulama ile oturum açtı.</value>
+  </data>
+  <data name="value_cannot_be_null" xml:space="preserve">
+    <value>{0} null olamaz</value>
+  </data>
+  <data name="Verification_code_is_invalid" xml:space="preserve">
+    <value>Doğrulama kodu geçersiz.</value>
+  </data>
+  <data name="Verification_email_has_been_sent" xml:space="preserve">
+    <value>Doğrulama e-postası gönderildi. Lütfen e-postanızı kontrol edin.</value>
+  </data>
+  <data name="Weight_is_required" xml:space="preserve">
+    <value>Ağırlık gereklidir.</value>
+  </data>
+  <data name="Your_account_is_deactivated_Please_contact_your_administrator" xml:space="preserve">
+    <value>Hesabınız devre dışı bırakıldı. Lütfen yöneticinize başvurun.</value>
+  </data>
+  <data name="Your_authenticator_app_has_been_verified" xml:space="preserve">
+    <value>Kimlik doğrulayıcı uygulamanız doğrulandı.</value>
+  </data>
+  <data name="Your_authenticator_app_key_has_been_reset" xml:space="preserve">
+    <value>Kimlik doğrulayıcı uygulama anahtarınız sıfırlandı, yeni anahtarı kullanarak kimlik doğrulayıcı uygulamanızı yapılandırmanız gerekir.</value>
+  </data>
+  <data name="Your_email_has_been_changed_successfully" xml:space="preserve">
+    <value>E-postanız başarıyla değiştirildi.</value>
+  </data>
+  <data name="Your_email_has_been_successfully_changed" xml:space="preserve">
+    <value>E-postanız başarıyla değiştirildi.</value>
+  </data>
+  <data name="Your_email_is_unchanged" xml:space="preserve">
+    <value>E-postanız değişmez.</value>
+  </data>
+  <data name="Your_password_has_been_changed" xml:space="preserve">
+    <value>Şifreniz değiştirildi.</value>
+  </data>
+  <data name="Your_password_has_been_set" xml:space="preserve">
+    <value>Şifreniz belirlendi.</value>
+  </data>
+  <data name="You_are_locked_out" xml:space="preserve">
+    <value>Kilitlendiniz.</value>
+  </data>
+  <data name="You_are_not_authorized" xml:space="preserve">
+    <value>{0} erişme yetkiniz yok.</value>
+  </data>
+  <data name="You_have_generated_new_recovery_codes" xml:space="preserve">
+    <value>Yeni kurtarma kodları oluşturdunuz.</value>
+  </data>
+  <data name="You_have_successfully_created_a_new_account" xml:space="preserve">
+    <value>Başarıyla yeni bir hesap oluşturdunuz.</value>
+  </data>
+  <data name="Please_check_your_email_to_reset_your_password" xml:space="preserve">
+    <value>Şifrenizi sıfırlamak için lütfen e-postanızı kontrol edin.</value>
+  </data>
+  <data name="to_reset_your_password" xml:space="preserve">
+    <value>şifrenizi sıfırlamak için</value>
+  </data>
+  <data name="Please_click" xml:space="preserve">
+    <value>Lütfen tıklayınız</value>
+  </data>
+  <data name="to" xml:space="preserve">
+    <value>Hedef</value>
+  </data>
+  <data name="Assign_Permissions_to" xml:space="preserve">
+    <value>İzinleri atama</value>
+  </data>
+  <data name="There_are_no_data_to_generate_report" xml:space="preserve">
+    <value>Rapor oluşturmak için veri yok.</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_save_this_record" xml:space="preserve">
+    <value>Bu kaydı kaydetmek istediğinizden emin misiniz?</value>
+  </data>
+  <data name="Consider_switching_your_device_to_light_mode" xml:space="preserve">
+    <value>QR kodunu taramada sorun yaşıyorsanız başlık menüsündeki koyu/açık düğmesine dokunarak uygulamayı ışık moduna geçirmeyi deneyin. Bazı QR kodları, kontrast sorunları nedeniyle karanlık modda düzgün tarama yapamayabilir. Işık moduna geçerek, QR kodunun okunması daha kolay olacak ve cihazınız onu taramak için daha kolay bir zamana sahip olacaktır.</value>
+  </data>
+  <data name="The_Host_portal_cannot_be_accessed" xml:space="preserve">
+    <value>Veri yalıtım stratejisi olarak kiracı başına ayrı bir veritabanı kullanılırken Ana bilgisayar portalına erişilemez. Daha fazla yardım için lütfen yöneticiye ulaşın.</value>
+  </data>
+  <data name="It_is_not_possible_to_create_a_new_tenant_while_in_single_tenant_mode" xml:space="preserve">
+    <value>Tek kiracı modundayken yeni bir kiracı oluşturmak mümkün değildir. Kiracıların oluşturulmasına yalnızca çok kiracılı modda izin verilir.</value>
+  </data>
+  <data name="It_is_not_possible_to_create_or_update_or_delete_a_tenant_while_in_single_tenant_mode" xml:space="preserve">
+    <value>Tek kiracı modundayken kiracı oluşturmak, güncelleştirmek veya silmek mümkün değildir. Kiracıların yönetimine yalnızca çok kiracılı modda izin verilir.</value>
+  </data>
+  <data name="Tenants_Management" xml:space="preserve">
+    <value>Kiracı Yönetimi</value>
+  </data>
+  <data name="My_Tenant" xml:space="preserve">
+    <value>Kiracım</value>
+  </data>
+  <data name="Unable_to_load_tenant" xml:space="preserve">
+    <value>Kiracı yüklenemiyor.</value>
+  </data>
+  <data name="Invalid_tenant_Id" xml:space="preserve">
+    <value>Geçersiz kiracı kimliği.</value>
+  </data>
+  <data name="The_tenant_is_not_found" xml:space="preserve">
+    <value>Kiracı bulunamadı.</value>
+  </data>
+  <data name="SuperAdmin" xml:space="preserve">
+    <value>Süper Yönetici</value>
+  </data>
+  <data name="A_tenant_with_the_same_name_already_exists__Please_choose_a_different_name" xml:space="preserve">
+    <value>Aynı ada sahip bir kiracı zaten var. Lütfen farklı bir isim seçin.</value>
+  </data>
+  <data name="Show_Recovery_Codes" xml:space="preserve">
+    <value>Kurtarma kodlarını göster</value>
+  </data>
+  <data name="Enable_Authenticator_App" xml:space="preserve">
+    <value>Kimlik Doğrulayıcı Uygulamasını Etkinleştir</value>
+  </data>
+  <data name="Enable_2FA" xml:space="preserve">
+    <value>İki Faktörlü Kimlik Doğrulamayı Etkinleştir</value>
+  </data>
+  <data name="Application_errors_occurred_while_processing_your_request" xml:space="preserve">
+    <value>İsteğiniz işlenirken uygulama hataları oluştu.</value>
+  </data>
+  <data name="Unauthorized_access_detected" xml:space="preserve">
+    <value>Yetkisiz erişim algılandı.</value>
+  </data>
+  <data name="Access_to_the_requested_resource_is_forbidden" xml:space="preserve">
+    <value>İstenen kaynağa erişim yasaktır.</value>
+  </data>
+  <data name="The_request_was_not_processed_due_to_invalid_or_missing_parameters" xml:space="preserve">
+    <value>Geçersiz veya eksik parametreler nedeniyle istek işlenmedi.</value>
+  </data>
+  <data name="The_requested_resource_was_not_found" xml:space="preserve">
+    <value>İstenen kaynak bulunamadı.</value>
+  </data>
+  <data name="An_internal_server_error_occurred_while_processing_your_request" xml:space="preserve">
+    <value>İsteğiniz işlenirken bir iç sunucu hatası oluştu.</value>
+  </data>
+  <data name="An_error_occurred_while_processing_your_request" xml:space="preserve">
+    <value>İsteğiniz işlenirken bir hata oluştu.</value>
+  </data>
+  <data name="Model_validation_errors_occurred_while_processing_your_request" xml:space="preserve">
+    <value>İsteğiniz işlenirken model doğrulama hataları oluştu.</value>
+  </data>
+  <data name="You_are_forbidden" xml:space="preserve">
+    <value>{0} erişim, yetersiz izinler nedeniyle yasaklanmıştır.</value>
+  </data>
+  <data name="The_time_provided_must_be_in_UTC_format" xml:space="preserve">
+    <value>Sağlanan süre UTC biçiminde olmalıdır.</value>
+  </data>
+  <data name="On_Premises_File_Storage" xml:space="preserve">
+    <value>Şirket İçi Dosya Depolama</value>
+  </data>
+  <data name="Reporting_Hub_is_closed" xml:space="preserve">
+    <value>Raporlama Merkezi kapatıldı.</value>
+  </data>
+  <data name="Reporting_Hub_is_already_closed" xml:space="preserve">
+    <value>Raporlama Merkezi zaten kapalı.</value>
+  </data>
+  <data name="Dashboard_Hub_is_closed" xml:space="preserve">
+    <value>Pano Hub'ı kapalı.</value>
+  </data>
+  <data name="Dashboard_Hub_is_being_initialized" xml:space="preserve">
+    <value>Pano Hub'ı başlatılıyor.</value>
+  </data>
+  <data name="Unable_to_connect_to_the_dashboard_hub_due_to_an_error" xml:space="preserve">
+    <value>Bir hata nedeniyle pano hub'ına bağlanılamıyor: {0}</value>
+  </data>
+  <data name="Dashboard_Hub_is_now_connected" xml:space="preserve">
+    <value>Pano Hub'ı artık bağlı.</value>
+  </data>
+  <data name="Unable_to_connect_to_the_reporting_hub_due_to_an_error" xml:space="preserve">
+    <value>Bir hata nedeniyle raporlama hub'ına bağlanılamıyor: {0}</value>
+  </data>
+  <data name="Reporting_Hub_is_now_connected" xml:space="preserve">
+    <value>Raporlama Merkezi artık bağlanmıştır.</value>
+  </data>
+  <data name="Reporting_Hub_is_being_initialized" xml:space="preserve">
+    <value>Raporlama Merkezi başlatılıyor.</value>
+  </data>
+  <data name="Reporting_Hub_is_not_active" xml:space="preserve">
+    <value>Raporlama Merkezi etkin değil.</value>
+  </data>
+  <data name="You_are_not_authorized_to_access_resources_related_to_other_tenants" xml:space="preserve">
+    <value>Diğer kiracılarla ilgili kaynaklara erişme yetkiniz yoktur.</value>
+  </data>
+  <data name="ExportAsPdfOnDemand" xml:space="preserve">
+    <value>Hemen PDF Olarak Dışa Aktar</value>
+  </data>
+</root>

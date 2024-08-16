@@ -1,0 +1,2232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Abbreviated_Day_Names" xml:space="preserve">
+    <value>Nume de zi prescurtate</value>
+  </data>
+  <data name="Abbreviated_Month_Genitive_Names" xml:space="preserve">
+    <value>Abreviat Luna Nume genitive</value>
+  </data>
+  <data name="Abbreviated_Month_Names" xml:space="preserve">
+    <value>Nume de lună prescurtate</value>
+  </data>
+  <data name="Access" xml:space="preserve">
+    <value>Acces</value>
+  </data>
+  <data name="Access_Token_TimeSpan" xml:space="preserve">
+    <value>Accesați token-ul Timespan</value>
+  </data>
+  <data name="Account" xml:space="preserve">
+    <value>Cont</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Acțiuni</value>
+  </data>
+  <data name="Activated" xml:space="preserve">
+    <value>Activat</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Adăuga</value>
+  </data>
+  <data name="Add_Applicant" xml:space="preserve">
+    <value>Adăugați solicitantul</value>
+  </data>
+  <data name="Add_Authenticator_App" xml:space="preserve">
+    <value>Adăugarea aplicației De autentificare</value>
+  </data>
+  <data name="Add_New_File" xml:space="preserve">
+    <value>Adăugare fișier nou</value>
+  </data>
+  <data name="Add_Reference" xml:space="preserve">
+    <value>Adăugare referință</value>
+  </data>
+  <data name="Add_Role" xml:space="preserve">
+    <value>Adăugare rol</value>
+  </data>
+  <data name="Add_Roles" xml:space="preserve">
+    <value>Adăugarea rolurilor</value>
+  </data>
+  <data name="Add_Selected_Roles" xml:space="preserve">
+    <value>Adăugarea rolurilor selectate</value>
+  </data>
+  <data name="Add_Tenant" xml:space="preserve">
+    <value>Adăugare entitate găzduită</value>
+  </data>
+  <data name="Add_transcripts" xml:space="preserve">
+    <value>Adăugarea transcrierilor</value>
+  </data>
+  <data name="Add_User" xml:space="preserve">
+    <value>Adăugare utilizator</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Tot</value>
+  </data>
+  <data name="Allowed_for_new_users" xml:space="preserve">
+    <value>Permis pentru utilizatorii noi</value>
+  </data>
+  <data name="Allowed_username_characters" xml:space="preserve">
+    <value>Caractere de nume de utilizator permise</value>
+  </data>
+  <data name="Already_have_an_account" xml:space="preserve">
+    <value>Aveți deja un cont?</value>
+  </data>
+  <data name="AM_Designator" xml:space="preserve">
+    <value>AM Designator</value>
+  </data>
+  <data name="and" xml:space="preserve">
+    <value>și</value>
+  </data>
+  <data name="Android" xml:space="preserve">
+    <value>Android</value>
+  </data>
+  <data name="Applicant" xml:space="preserve">
+    <value>Solicitant</value>
+  </data>
+  <data name="Applicants" xml:space="preserve">
+    <value>Solicitanţii</value>
+  </data>
+  <data name="Apply_for_Military" xml:space="preserve">
+    <value>Aplică pentru militare</value>
+  </data>
+  <data name="App_Info" xml:space="preserve">
+    <value>Informații despre aplicație</value>
+  </data>
+  <data name="April" xml:space="preserve">
+    <value>Aprilie</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_change_the_settings" xml:space="preserve">
+    <value>Sunteți sigur că doriți să modificați setările?</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_delete_file_name" xml:space="preserve">
+    <value>Sunteți sigur că doriți să ștergeți fișierul "{0}"?</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_delete_role_name" xml:space="preserve">
+    <value>Sunteți sigur că doriți să ștergeți rolul "{0}"?</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_delete_user_name" xml:space="preserve">
+    <value>Sunteți sigur că doriți să ștergeți utilizatorul "{0}"?</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_remove_role_name" xml:space="preserve">
+    <value>Sunteți sigur că doriți să eliminați rolul "{0}"?</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_save_applicant" xml:space="preserve">
+    <value>Sunteți sigur că doriți să salvați solicitantul?</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_save_role" xml:space="preserve">
+    <value>Ești sigur că vrei să salvezi rolul?</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_save_user_profile" xml:space="preserve">
+    <value>Sunteți sigur că doriți să salvați profilul de utilizator?</value>
+  </data>
+  <data name="Army" xml:space="preserve">
+    <value>Armată</value>
+  </data>
+  <data name="Assigned_Roles" xml:space="preserve">
+    <value>Roluri atribuite</value>
+  </data>
+  <data name="Assign_Permissions" xml:space="preserve">
+    <value>Atribuirea permisiunilor</value>
+  </data>
+  <data name="Assign_Roles" xml:space="preserve">
+    <value>Atribuirea rolurilor</value>
+  </data>
+  <data name="August" xml:space="preserve">
+    <value>August</value>
+  </data>
+  <data name="Authenticator_App" xml:space="preserve">
+    <value>Aplicația de autentificare</value>
+  </data>
+  <data name="Authenticator_Code" xml:space="preserve">
+    <value>Codul autentificatorului</value>
+  </data>
+  <data name="Authorization" xml:space="preserve">
+    <value>Autorizație</value>
+  </data>
+  <data name="Authorizing" xml:space="preserve">
+    <value>Autorizare</value>
+  </data>
+  <data name="Avatar" xml:space="preserve">
+    <value>Avatar</value>
+  </data>
+  <data name="Awesome" xml:space="preserve">
+    <value>Nemaipomenit!</value>
+  </data>
+  <data name="Azure_File_Storage" xml:space="preserve">
+    <value>Stocare fișiere Azure</value>
+  </data>
+  <data name="before_you_can_log_in_with_a_recovery_code" xml:space="preserve">
+    <value>înainte de a vă putea conecta cu un cod de recuperare.</value>
+  </data>
+  <data name="Biomass" xml:space="preserve">
+    <value>Biomasă</value>
+  </data>
+  <data name="Biomass1" xml:space="preserve">
+    <value>Biomasă</value>
+  </data>
+  <data name="BMI" xml:space="preserve">
+    <value>IMC</value>
+  </data>
+  <data name="BMI_Details" xml:space="preserve">
+    <value>Un IMC de 25,0 sau mai mult este supraponderal, în timp ce intervalul sănătos este de 18,5 până la 24,9. IMC se aplică majorității adulților cu vârsta cuprinsă între 18 și 65 de ani.</value>
+  </data>
+  <data name="BMI_Info" xml:space="preserve">
+    <value>Indicele de masă corporală este un calcul simplu folosind înălțimea și greutatea unei persoane. Formula este IMC = kg/m2 unde kg este greutatea unei persoane în kilograme, iar m2 este înălțimea lor în metri pătrați.</value>
+  </data>
+  <data name="Body_Mass_Index" xml:space="preserve">
+    <value>Indicele de masă corporală</value>
+  </data>
+  <data name="Bottom" xml:space="preserve">
+    <value>Fund</value>
+  </data>
+  <data name="Browser_Time_Zone" xml:space="preserve">
+    <value>Fusul orar al browserului</value>
+  </data>
+  <data name="Buy_Now" xml:space="preserve">
+    <value>Cumpără acum</value>
+  </data>
+  <data name="Bytes" xml:space="preserve">
+    <value>Octeţi</value>
+  </data>
+  <data name="Calcium" xml:space="preserve">
+    <value>Calciu</value>
+  </data>
+  <data name="Calendar" xml:space="preserve">
+    <value>Calendar</value>
+  </data>
+  <data name="Calendar_Week_Rule" xml:space="preserve">
+    <value>Regula săptămânii calendaristice</value>
+  </data>
+  <data name="Californium" xml:space="preserve">
+    <value>Californiu</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Anula</value>
+  </data>
+  <data name="Cancel_Upload" xml:space="preserve">
+    <value>Anulați încărcarea</value>
+  </data>
+  <data name="Carbon" xml:space="preserve">
+    <value>Carbon</value>
+  </data>
+  <data name="Cerium" xml:space="preserve">
+    <value>Ceriu</value>
+  </data>
+  <data name="Cesium" xml:space="preserve">
+    <value>Cesiu</value>
+  </data>
+  <data name="Change_Email" xml:space="preserve">
+    <value>Modificarea e-mailului</value>
+  </data>
+  <data name="Change_Password" xml:space="preserve">
+    <value>Schimbați parola</value>
+  </data>
+  <data name="Change_User_Password" xml:space="preserve">
+    <value>Modificarea parolei de utilizator</value>
+  </data>
+  <data name="Change_your_account_settings" xml:space="preserve">
+    <value>Modificarea setărilor contului</value>
+  </data>
+  <data name="Chernobyl_1" xml:space="preserve">
+    <value>Cernobîl-1</value>
+  </data>
+  <data name="Chernobyl_2" xml:space="preserve">
+    <value>Cernobîl-2</value>
+  </data>
+  <data name="Chernobyl_3" xml:space="preserve">
+    <value>Cernobîl-3</value>
+  </data>
+  <data name="Chernobyl_4" xml:space="preserve">
+    <value>Cernobîl-4</value>
+  </data>
+  <data name="Chlorine" xml:space="preserve">
+    <value>Clor</value>
+  </data>
+  <data name="Chromium" xml:space="preserve">
+    <value>Crom</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Clar</value>
+  </data>
+  <data name="Click" xml:space="preserve">
+    <value>Clic</value>
+  </data>
+  <data name="click_here_to_log_in" xml:space="preserve">
+    <value>click aici pentru a vă conecta</value>
+  </data>
+  <data name="Client_Side_Authorization" xml:space="preserve">
+    <value>Autorizare pe partea clientului</value>
+  </data>
+  <data name="Client_Side_Validation" xml:space="preserve">
+    <value>Validare pe partea client</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Închide</value>
+  </data>
+  <data name="Close_SignalR_Connection" xml:space="preserve">
+    <value>Închideți conexiunea SignalR</value>
+  </data>
+  <data name="Coal" xml:space="preserve">
+    <value>Cărbune</value>
+  </data>
+  <data name="Coal1" xml:space="preserve">
+    <value>Cărbune</value>
+  </data>
+  <data name="Cobalt" xml:space="preserve">
+    <value>Cobalt</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Cod</value>
+  </data>
+  <data name="Code_Samples" xml:space="preserve">
+    <value>Mostre de cod</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>Completat</value>
+  </data>
+  <data name="Configure_Authenticator_App" xml:space="preserve">
+    <value>Configurarea aplicației de autentificare</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirma</value>
+  </data>
+  <data name="Confirm_Email" xml:space="preserve">
+    <value>Confirmați e-mailul</value>
+  </data>
+  <data name="Confirm_Email_Change" xml:space="preserve">
+    <value>Confirmați schimbarea e-mailului</value>
+  </data>
+  <data name="Confirm_Password" xml:space="preserve">
+    <value>Confirmați parola</value>
+  </data>
+  <data name="ContentType" xml:space="preserve">
+    <value>Tip de conținut</value>
+  </data>
+  <data name="Copernicium" xml:space="preserve">
+    <value>Coperniciu</value>
+  </data>
+  <data name="Copper" xml:space="preserve">
+    <value>Cupru</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Crea</value>
+  </data>
+  <data name="Created_On" xml:space="preserve">
+    <value>Data creării</value>
+  </data>
+  <data name="Culture_Based_Resources" xml:space="preserve">
+    <value>Resurse bazate pe cultură</value>
+  </data>
+  <data name="Culture_Code" xml:space="preserve">
+    <value>Codul culturii</value>
+  </data>
+  <data name="Culture_Currency_Symbol" xml:space="preserve">
+    <value>Simbol monedă cultură</value>
+  </data>
+  <data name="Culture_DateTime_Pattern" xml:space="preserve">
+    <value>Cultura DateTime Model</value>
+  </data>
+  <data name="Culture_Info" xml:space="preserve">
+    <value>Cultura Info</value>
+  </data>
+  <data name="Curium" xml:space="preserve">
+    <value>Curiu</value>
+  </data>
+  <data name="Current_Culture_DateTime_Format" xml:space="preserve">
+    <value>Cultura curentă DateTime Format</value>
+  </data>
+  <data name="Current_Culture_Info" xml:space="preserve">
+    <value>Curent Cultura Info</value>
+  </data>
+  <data name="Current_Culture_Time_Zone_Info" xml:space="preserve">
+    <value>Curent Cultura Fusul orar Info</value>
+  </data>
+  <data name="Current_Documents" xml:space="preserve">
+    <value>Documente curente</value>
+  </data>
+  <data name="Current_password" xml:space="preserve">
+    <value>Parola curentă</value>
+  </data>
+  <data name="Current_Transcripts" xml:space="preserve">
+    <value>Transcrieri curente</value>
+  </data>
+  <data name="Danger" xml:space="preserve">
+    <value>Pericol</value>
+  </data>
+  <data name="Darmstadtium" xml:space="preserve">
+    <value>Darmstadtiu</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Tablou</value>
+  </data>
+  <data name="Data_Export_SignalR_Hangfire" xml:space="preserve">
+    <value>Export de date (SignalR &amp; Hangfire)</value>
+  </data>
+  <data name="DateTime_Format" xml:space="preserve">
+    <value>Formatul DateTime</value>
+  </data>
+  <data name="Date_of_Birth" xml:space="preserve">
+    <value>Data naşterii</value>
+  </data>
+  <data name="Date_Separator" xml:space="preserve">
+    <value>Separator de dată</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>Zi</value>
+  </data>
+  <data name="Day_Names" xml:space="preserve">
+    <value>Nume de zi</value>
+  </data>
+  <data name="Deactivated" xml:space="preserve">
+    <value>Dezactivat</value>
+  </data>
+  <data name="December" xml:space="preserve">
+    <value>Decembrie</value>
+  </data>
+  <data name="Default_Admin_Credentials" xml:space="preserve">
+    <value>Acreditări de administrator implicite</value>
+  </data>
+  <data name="Default_lockout_time_span" xml:space="preserve">
+    <value>Intervalul de timp implicit de blocare</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Șterge</value>
+  </data>
+  <data name="Delete_my_Account" xml:space="preserve">
+    <value>Ștergeți-mi contul</value>
+  </data>
+  <data name="Delete_Personal_Data" xml:space="preserve">
+    <value>Ștergerea datelor cu caracter personal</value>
+  </data>
+  <data name="Deleting_this_data_will_permanently_remove_your_account_and_this_cannot_be_recovered" xml:space="preserve">
+    <value>Ștergerea acestor date vă va elimina definitiv contul, iar acest lucru nu poate fi recuperat.</value>
+  </data>
+  <data name="Disable_2FA" xml:space="preserve">
+    <value>Dezactivați autentificarea cu doi factori</value>
+  </data>
+  <data name="Disable_Two-Factor_Authentication" xml:space="preserve">
+    <value>Dezactivați autentificarea cu doi factori</value>
+  </data>
+  <data name="Disabling_2FA_does_not_change_the_keys_used_in_authenticator_apps" xml:space="preserve">
+    <value>Dezactivarea autentificării cu doi factori nu modifică cheile utilizate în aplicațiile de autentificare</value>
+  </data>
+  <data name="Dismissed" xml:space="preserve">
+    <value>Respins</value>
+  </data>
+  <data name="Display_Name" xml:space="preserve">
+    <value>Nume afișat</value>
+  </data>
+  <data name="Documents" xml:space="preserve">
+    <value>Documente</value>
+  </data>
+  <data name="Dont_have_access_to_your_authenticator_device" xml:space="preserve">
+    <value>Nu aveți acces la dispozitivul de autentificare?</value>
+  </data>
+  <data name="Dont_have_an_account" xml:space="preserve">
+    <value>Nu aveți un cont?</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Descărca</value>
+  </data>
+  <data name="Downloads" xml:space="preserve">
+    <value>Descărcări</value>
+  </data>
+  <data name="Download_a_two-factor_authenticator_app_like_Microsoft_Authenticator_for" xml:space="preserve">
+    <value>Descărcați o aplicație de autentificare cu doi factori, cum ar fi Microsoft Authenticator pentru</value>
+  </data>
+  <data name="Do_you_really_want_to_delete_this_record" xml:space="preserve">
+    <value>Chiar doriți să ștergeți această înregistrare?</value>
+  </data>
+  <data name="Do_you_want_to_remove_this_record" xml:space="preserve">
+    <value>Doriți să eliminați această înregistrare?</value>
+  </data>
+  <data name="Dubnium" xml:space="preserve">
+    <value>Dubniu</value>
+  </data>
+  <data name="Dysprosium" xml:space="preserve">
+    <value>Disprosiu</value>
+  </data>
+  <data name="Earnings" xml:space="preserve">
+    <value>Plată</value>
+  </data>
+  <data name="Earning_Report" xml:space="preserve">
+    <value>Raport de câștig</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Editare</value>
+  </data>
+  <data name="Edit_Applicant" xml:space="preserve">
+    <value>Editare solicitant</value>
+  </data>
+  <data name="Edit_Reference" xml:space="preserve">
+    <value>Editare referință</value>
+  </data>
+  <data name="Edit_Role" xml:space="preserve">
+    <value>Editare rol</value>
+  </data>
+  <data name="Edit_Tenant" xml:space="preserve">
+    <value>Editare entitate găzduită</value>
+  </data>
+  <data name="Edit_User" xml:space="preserve">
+    <value>Editare utilizator</value>
+  </data>
+  <data name="Einsteinium" xml:space="preserve">
+    <value>Einsteiniu</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="Email_Change_Confirmation" xml:space="preserve">
+    <value>Confirmarea schimbării e-mailului</value>
+  </data>
+  <data name="Email_Change_Confirmed" xml:space="preserve">
+    <value>Schimbarea e-mailului confirmată</value>
+  </data>
+  <data name="Email_Confirmation" xml:space="preserve">
+    <value>Confirmarea e-mailului</value>
+  </data>
+  <data name="Email_Confirmed" xml:space="preserve">
+    <value>E-mail confirmat</value>
+  </data>
+  <data name="Employee_broke_a_finger_while_writing_some_code" xml:space="preserve">
+    <value>Angajatul a rupt un deget în timp ce scrieți un cod</value>
+  </data>
+  <data name="enable_QR_code_generation" xml:space="preserve">
+    <value>activați generarea de coduri QR</value>
+  </data>
+  <data name="End" xml:space="preserve">
+    <value>Capăt</value>
+  </data>
+  <data name="End_Slope" xml:space="preserve">
+    <value>Panta finală</value>
+  </data>
+  <data name="English_Name" xml:space="preserve">
+    <value>Nume în limba engleză</value>
+  </data>
+  <data name="Enter_the_code_in_the_confirmation_box_below" xml:space="preserve">
+    <value>Introduceți codul în caseta de confirmare de mai jos.</value>
+  </data>
+  <data name="Enter_your_email" xml:space="preserve">
+    <value>Introduceți adresa de e-mail.</value>
+  </data>
+  <data name="entries" xml:space="preserve">
+    <value>Intrări</value>
+  </data>
+  <data name="Erbium" xml:space="preserve">
+    <value>Erbiu</value>
+  </data>
+  <data name="Error_Pages" xml:space="preserve">
+    <value>Pagini de eroare</value>
+  </data>
+  <data name="Europium" xml:space="preserve">
+    <value>Europiu</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="ExportAsPdfInBackground" xml:space="preserve">
+    <value>Export ca PDF (Incendiu și uitat)</value>
+  </data>
+  <data name="Exporting_data_may_take_a_while" xml:space="preserve">
+    <value>Exportul datelor poate dura ceva timp.</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>Nu a reușit</value>
+  </data>
+  <data name="FAQ" xml:space="preserve">
+    <value>FAQ</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>Caracteristici</value>
+  </data>
+  <data name="February" xml:space="preserve">
+    <value>Februarie</value>
+  </data>
+  <data name="Fermium" xml:space="preserve">
+    <value>Fermiu</value>
+  </data>
+  <data name="FileName" xml:space="preserve">
+    <value>Nume fișier</value>
+  </data>
+  <data name="File_is_empty" xml:space="preserve">
+    <value>Fișierul este gol.</value>
+  </data>
+  <data name="File_Name" xml:space="preserve">
+    <value>Nume fișier</value>
+  </data>
+  <data name="File_Rename" xml:space="preserve">
+    <value>Redenumire fișier</value>
+  </data>
+  <data name="File_Size" xml:space="preserve">
+    <value>Dimensiune fișier</value>
+  </data>
+  <data name="File_Storage_Settings" xml:space="preserve">
+    <value>Setări de stocare a fișierelor</value>
+  </data>
+  <data name="File_Type" xml:space="preserve">
+    <value>Tip de fișier</value>
+  </data>
+  <data name="File_upload_has_been_cancelled" xml:space="preserve">
+    <value>Încărcarea fișierelor a fost anulată.</value>
+  </data>
+  <data name="Fire_in_reactor_core" xml:space="preserve">
+    <value>Incendiu în miezul reactorului</value>
+  </data>
+  <data name="First" xml:space="preserve">
+    <value>Prim</value>
+  </data>
+  <data name="First_Day_of_Week" xml:space="preserve">
+    <value>Prima zi a săptămânii</value>
+  </data>
+  <data name="First_Name" xml:space="preserve">
+    <value>Prenume</value>
+  </data>
+  <data name="Fluent_Validation" xml:space="preserve">
+    <value>Validare fluentă</value>
+  </data>
+  <data name="Fluorine" xml:space="preserve">
+    <value>Fluor</value>
+  </data>
+  <data name="Forget_this_browser" xml:space="preserve">
+    <value>Uitați de acest browser</value>
+  </data>
+  <data name="Forgot_password_confirmation" xml:space="preserve">
+    <value>Ați uitat confirmarea parolei</value>
+  </data>
+  <data name="Forgot_your_password" xml:space="preserve">
+    <value>Ai uitat parola?</value>
+  </data>
+  <data name="for_how_to_configure_a_real_email_sender" xml:space="preserve">
+    <value>pentru configurarea unui expeditor de e-mail real</value>
+  </data>
+  <data name="Fossil" xml:space="preserve">
+    <value>Fosilă</value>
+  </data>
+  <data name="Francium" xml:space="preserve">
+    <value>Franciu</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>Numele complet</value>
+  </data>
+  <data name="Full_DateTime_Pattern" xml:space="preserve">
+    <value>Model DateTime complet</value>
+  </data>
+  <data name="Gas" xml:space="preserve">
+    <value>Gaz</value>
+  </data>
+  <data name="Gas1" xml:space="preserve">
+    <value>Gaz</value>
+  </data>
+  <data name="Generate" xml:space="preserve">
+    <value>Genera</value>
+  </data>
+  <data name="generate_a_new_set_of_recovery_codes" xml:space="preserve">
+    <value>generați un nou set de coduri de recuperare</value>
+  </data>
+  <data name="Generating_new_recovery_codes_does_not_change_the_keys_used_in_authenticator_apps" xml:space="preserve">
+    <value>Generarea de noi coduri de recuperare nu modifică cheile utilizate în aplicațiile de autentificare.</value>
+  </data>
+  <data name="Geothermal" xml:space="preserve">
+    <value>Geotermale</value>
+  </data>
+  <data name="Germany" xml:space="preserve">
+    <value>Germania</value>
+  </data>
+  <data name="Getting_Started" xml:space="preserve">
+    <value>Introducere</value>
+  </data>
+  <data name="Global_Settings" xml:space="preserve">
+    <value>Setări globale</value>
+  </data>
+  <data name="Global_Spread" xml:space="preserve">
+    <value>Răspândire globală</value>
+  </data>
+  <data name="Global_Variable" xml:space="preserve">
+    <value>Variabilă globală</value>
+  </data>
+  <data name="Google_Authenticator_for" xml:space="preserve">
+    <value>Google Authenticator pentru</value>
+  </data>
+  <data name="Got_it" xml:space="preserve">
+    <value>Am înţeles!</value>
+  </data>
+  <data name="Graphite_on_roof" xml:space="preserve">
+    <value>Grafit pe acoperiș</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>Înălțime</value>
+  </data>
+  <data name="Hello" xml:space="preserve">
+    <value>Bună ziua</value>
+  </data>
+  <data name="here" xml:space="preserve">
+    <value>aici</value>
+  </data>
+  <data name="High" xml:space="preserve">
+    <value>Înalt</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Domiciliu</value>
+  </data>
+  <data name="Hour" xml:space="preserve">
+    <value>Oră</value>
+  </data>
+  <data name="Hydro" xml:space="preserve">
+    <value>Hidro</value>
+  </data>
+  <data name="Identity" xml:space="preserve">
+    <value>Identitate</value>
+  </data>
+  <data name="Identity_Settings" xml:space="preserve">
+    <value>Setări de identitate</value>
+  </data>
+  <data name="If_you_do_not_complete_your_authenticator_app_configuration_you_may_lose_access_to_your_account" xml:space="preserve">
+    <value>Dacă nu finalizați configurația aplicației de autentificare, este posibil să pierdeți accesul la contul dvs.</value>
+  </data>
+  <data name="If_you_lose_your_device_and_dont_have_the_recovery_codes_you_will_lose_access_to_your_account" xml:space="preserve">
+    <value>Dacă vă pierdeți dispozitivul și nu aveți codurile de recuperare, veți pierde accesul la contul dvs.</value>
+  </data>
+  <data name="If_you_reset_your_authenticator_key_your_authenticator_app_will_not_work_until_you_reconfigure_it" xml:space="preserve">
+    <value>Dacă resetați cheia de autentificare, aplicația de autentificare nu va funcționa până când nu o reconfigurați.</value>
+  </data>
+  <data name="If_you_wish_to_change_the_key_used_in_an_authenticator_app_you_should" xml:space="preserve">
+    <value>Dacă doriți să schimbați cheia utilizată într-o aplicație de autentificare, ar trebui să</value>
+  </data>
+  <data name="Im_sorry_I_can't_display_anything_until_you" xml:space="preserve">
+    <value>Îmi pare rău, eu nu pot afișa nimic până când nu vă</value>
+  </data>
+  <data name="Incident_in_plant_number_4" xml:space="preserve">
+    <value>Incident în instalația numărul 4</value>
+  </data>
+  <data name="Installation" xml:space="preserve">
+    <value>Instalare</value>
+  </data>
+  <data name="Interpolation_Algorithm" xml:space="preserve">
+    <value>Algoritmul de interpolare</value>
+  </data>
+  <data name="into_your_two_factor_authenticator_app._Spaces_and_casing_do_not_matter" xml:space="preserve">
+    <value>în aplicația de autentificare cu doi factori. Spațiile și carcasa nu contează.</value>
+  </data>
+  <data name="Invalid_file_name" xml:space="preserve">
+    <value>Nume de fișier nevalid.</value>
+  </data>
+  <data name="In_Progress" xml:space="preserve">
+    <value>Prelucrare</value>
+  </data>
+  <data name="iOS" xml:space="preserve">
+    <value>Ios</value>
+  </data>
+  <data name="Ispum" xml:space="preserve">
+    <value>Sed vitae hendrerit justo. Aenean eu mi in urna eleifend imperdiet a vel ipsum. Morbi ac risus vel massa tincidunt lacinia. Aliquam augue libero, venenatis sit amet neque non, dignissim interdum elit. Nunc condimentum enim non ante egestas lobortis. Sed ac felis gravida nisi blandit porta. Sed ultrices finibus ullamcorper. Nullam congue malesuada rhoncus. În non varius arcu. Curabitur porta erat id neque fermentum, ut finibus dui venenatis. Fusce tristique cursus pulvinar. Nam consectetur convallis orci, a elementum elit ultrices ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin leo nulla, facilisis sit amet placerat sed, blandit non sapien.</value>
+  </data>
+  <data name="Issues_rising" xml:space="preserve">
+    <value>Probleme în creștere</value>
+  </data>
+  <data name="Is_Active_User" xml:space="preserve">
+    <value>Este utilizator activ</value>
+  </data>
+  <data name="Is_Default" xml:space="preserve">
+    <value>Este implicit</value>
+  </data>
+  <data name="Is_Email_Confirmed" xml:space="preserve">
+    <value>Este confirmat e-mailul</value>
+  </data>
+  <data name="Is_Static" xml:space="preserve">
+    <value>Este statică</value>
+  </data>
+  <data name="Items_per_page" xml:space="preserve">
+    <value>Elemente pe pagină</value>
+  </data>
+  <data name="January" xml:space="preserve">
+    <value>Ianuarie</value>
+  </data>
+  <data name="Job_Title" xml:space="preserve">
+    <value>Titlul postului</value>
+  </data>
+  <data name="Join_the_Military" xml:space="preserve">
+    <value>Alăturați-vă armatei</value>
+  </data>
+  <data name="July" xml:space="preserve">
+    <value>Iulie</value>
+  </data>
+  <data name="June" xml:space="preserve">
+    <value>Iunie</value>
+  </data>
+  <data name="Last" xml:space="preserve">
+    <value>Ultim</value>
+  </data>
+  <data name="Last_Name" xml:space="preserve">
+    <value>Nume de familie</value>
+  </data>
+  <data name="Learn_how_to" xml:space="preserve">
+    <value>Aflați cum să</value>
+  </data>
+  <data name="Left" xml:space="preserve">
+    <value>Stânga</value>
+  </data>
+  <data name="Legend_Position" xml:space="preserve">
+    <value>Poziția legendei</value>
+  </data>
+  <data name="Live_data_powered_by_SignalR" xml:space="preserve">
+    <value>Date live alimentate de SignalR</value>
+  </data>
+  <data name="Loading_On_Demand" xml:space="preserve">
+    <value>Încărcarea la cerere</value>
+  </data>
+  <data name="Localization" xml:space="preserve">
+    <value>Localizare</value>
+  </data>
+  <data name="Local_Time" xml:space="preserve">
+    <value>Ora locală</value>
+  </data>
+  <data name="Lockout_Settings" xml:space="preserve">
+    <value>Setări lockout</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="login_lowered" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Login_out" xml:space="preserve">
+    <value>Login out ...</value>
+  </data>
+  <data name="Login_With_Authenticator_Code" xml:space="preserve">
+    <value>Autentifică-te cu codul de autentificare</value>
+  </data>
+  <data name="Login_With_Recovery_Code" xml:space="preserve">
+    <value>Conectați-vă cu codul de recuperare</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Deconectare</value>
+  </data>
+  <data name="Log_in" xml:space="preserve">
+    <value>Conectează-te</value>
+  </data>
+  <data name="log_in_with_a_recovery_code" xml:space="preserve">
+    <value>conectați-vă cu un cod de recuperare</value>
+  </data>
+  <data name="Long_Date_Pattern" xml:space="preserve">
+    <value>Model de dată lungă</value>
+  </data>
+  <data name="Long_Time_Pattern" xml:space="preserve">
+    <value>Model de lungă durată</value>
+  </data>
+  <data name="Lorem" xml:space="preserve">
+    <value>Mauris cursus dui in tellus gravida, ut iaculis ante mattis. Aenean blandit faucibus finibus. Enean euismod lorem metus. Ut vitae nulla ac mauris vulputate accumsan ac non velit. Cras la tincidunt augue, quis eleifend est. Quisque magna diam, elementum ut pellentesque vitae, porttitor quis quam. Preesent vulputate varius ex et suscipit. Preesent imperdiet facilisis nisi non sodales. Nullam sit amet lorem quis nisi pellentesque ornare. Pellentesque maximus sed urna vel euismod. In egestas odio id est gravida lobortis. Într-un mauris varius, quis ornare metus. Sed semper pretium magna, un vulputat lorem vulputate vitae. Quisque eu congue quam, sit amet euismod ipsum.</value>
+  </data>
+  <data name="Low" xml:space="preserve">
+    <value>Jos</value>
+  </data>
+  <data name="March" xml:space="preserve">
+    <value>Martie</value>
+  </data>
+  <data name="Master_Details_Form" xml:space="preserve">
+    <value>Formular master-detalii</value>
+  </data>
+  <data name="Maximum_Failed_Access_Attempts" xml:space="preserve">
+    <value>Încercări maxime de acces nereușite</value>
+  </data>
+  <data name="May" xml:space="preserve">
+    <value>Mai</value>
+  </data>
+  <data name="Medium" xml:space="preserve">
+    <value>Medie</value>
+  </data>
+  <data name="Military_Applicants" xml:space="preserve">
+    <value>Aplicanți militari</value>
+  </data>
+  <data name="Minor" xml:space="preserve">
+    <value>Minor</value>
+  </data>
+  <data name="Minute" xml:space="preserve">
+    <value>Minute</value>
+  </data>
+  <data name="Modified_On" xml:space="preserve">
+    <value>Data modificării</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Lună</value>
+  </data>
+  <data name="Month_Day_Pattern" xml:space="preserve">
+    <value>Luna Ziua model</value>
+  </data>
+  <data name="Month_Genitive_Names" xml:space="preserve">
+    <value>Luna Nume genitive</value>
+  </data>
+  <data name="Month_Names" xml:space="preserve">
+    <value>Nume de luni</value>
+  </data>
+  <data name="My_Account" xml:space="preserve">
+    <value>Contul meu</value>
+  </data>
+  <data name="My_Claims" xml:space="preserve">
+    <value>Revendicările mele</value>
+  </data>
+  <data name="My_Permissions" xml:space="preserve">
+    <value>Permisiunile mele</value>
+  </data>
+  <data name="My_Profile" xml:space="preserve">
+    <value>Profilul meu</value>
+  </data>
+  <data name="My_Profile_Picture" xml:space="preserve">
+    <value>Fotografia mea de profil</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nume</value>
+  </data>
+  <data name="Native_Calendar_Name" xml:space="preserve">
+    <value>Nume calendar nativ</value>
+  </data>
+  <data name="Native_Name" xml:space="preserve">
+    <value>Nume nativ</value>
+  </data>
+  <data name="Natural_Spline" xml:space="preserve">
+    <value>Spline naturale</value>
+  </data>
+  <data name="New_Email" xml:space="preserve">
+    <value>E-mail nou</value>
+  </data>
+  <data name="New_Registered_Users_are_Active_by_Default" xml:space="preserve">
+    <value>Utilizatorii noi înregistrați sunt activi în mod implicit</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Următor</value>
+  </data>
+  <data name="Normally_this_would_be_emailed" xml:space="preserve">
+    <value>În mod normal, acest lucru ar fi trimis prin e-mail</value>
+  </data>
+  <data name="November" xml:space="preserve">
+    <value>Noiembrie</value>
+  </data>
+  <data name="No_data_available" xml:space="preserve">
+    <value>Nu există date disponibile.</value>
+  </data>
+  <data name="No_keep_it" xml:space="preserve">
+    <value>Nu, păstrați-l</value>
+  </data>
+  <data name="Nuclear" xml:space="preserve">
+    <value>Atomic</value>
+  </data>
+  <data name="Occupational_injury" xml:space="preserve">
+    <value>Vătămarea profesională</value>
+  </data>
+  <data name="October" xml:space="preserve">
+    <value>Octombrie</value>
+  </data>
+  <data name="Oil" xml:space="preserve">
+    <value>Ulei</value>
+  </data>
+  <data name="Oil1" xml:space="preserve">
+    <value>Ulei</value>
+  </data>
+  <data name="Once_you_have_scanned_the_QR_code_or_input_the_key_above" xml:space="preserve">
+    <value>După ce ați scanat codul QR sau ați introdus cheia de mai sus</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Opțiuni</value>
+  </data>
+  <data name="or" xml:space="preserve">
+    <value>sau</value>
+  </data>
+  <data name="out_of" xml:space="preserve">
+    <value>din</value>
+  </data>
+  <data name="Overview" xml:space="preserve">
+    <value>Prezentare generală</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Parolă</value>
+  </data>
+  <data name="Password_Settings" xml:space="preserve">
+    <value>Setări parolă</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>Până</value>
+  </data>
+  <data name="Periodic" xml:space="preserve">
+    <value>Periodice</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>Permisiuni</value>
+  </data>
+  <data name="Personal_Data" xml:space="preserve">
+    <value>Date personale</value>
+  </data>
+  <data name="Phone_Number" xml:space="preserve">
+    <value>Număr de telefon</value>
+  </data>
+  <data name="Phone_number_is_required" xml:space="preserve">
+    <value>Numărul de telefon este necesar.</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>Juca</value>
+  </data>
+  <data name="Please" xml:space="preserve">
+    <value>Vă rog</value>
+  </data>
+  <data name="Please_check_your_email_to_confirm_your_account" xml:space="preserve">
+    <value>Vă rugăm să verificați e-mailul pentru a vă confirma contul.</value>
+  </data>
+  <data name="Please_check_your_email_to_reset_your_password_or_click" xml:space="preserve">
+    <value>Vă rugăm să verificați e-mailul pentru a vă reseta parola sau faceți clic pe</value>
+  </data>
+  <data name="Please_check_your_email_to_reset_your_password" xml:space="preserve">
+    <value>Vă rugăm să verificați e-mailul pentru a vă reseta parola.</value>
+  </data>
+  <data name="Please_provide_new_name_for_the_file_or_leave_it_as_is" xml:space="preserve">
+    <value>Vă rugăm să furnizați un nume nou pentru fișier sau să-l lăsați așa cum este.</value>
+  </data>
+  <data name="PM_Designator" xml:space="preserve">
+    <value>PM Designator</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Precedent</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="Profile_Picture" xml:space="preserve">
+    <value>Imagine de profil</value>
+  </data>
+  <data name="Proof_of_Concepts" xml:space="preserve">
+    <value>Dovada conceptelor</value>
+  </data>
+  <data name="Properties" xml:space="preserve">
+    <value>Proprietăți</value>
+  </data>
+  <data name="Property" xml:space="preserve">
+    <value>Proprietate</value>
+  </data>
+  <data name="Put_these_codes_in_a_safe_place" xml:space="preserve">
+    <value>Puneți aceste coduri într-un loc sigur.</value>
+  </data>
+  <data name="QueryString" xml:space="preserve">
+    <value>Criterii de căutare</value>
+  </data>
+  <data name="Quick_Search" xml:space="preserve">
+    <value>Căutare rapidă</value>
+  </data>
+  <data name="Randomize" xml:space="preserve">
+    <value>Aleator</value>
+  </data>
+  <data name="Realtime_Data" xml:space="preserve">
+    <value>Date în timp real</value>
+  </data>
+  <data name="Recent_incidents" xml:space="preserve">
+    <value>Incidente recente</value>
+  </data>
+  <data name="Recovery_Code" xml:space="preserve">
+    <value>Codul de recuperare</value>
+  </data>
+  <data name="Recovery_Codes" xml:space="preserve">
+    <value>Coduri de recuperare</value>
+  </data>
+  <data name="Reference" xml:space="preserve">
+    <value>Referință</value>
+  </data>
+  <data name="References" xml:space="preserve">
+    <value>Referinţe</value>
+  </data>
+  <data name="Reference_name_is_required" xml:space="preserve">
+    <value>Este necesar numele de referință.</value>
+  </data>
+  <data name="Refresh_Token_TimeSpan" xml:space="preserve">
+    <value>Refresh Token Timespan</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Înregistrează-te</value>
+  </data>
+  <data name="Register_as_a_new_user" xml:space="preserve">
+    <value>Înregistrați-vă ca utilizator nou</value>
+  </data>
+  <data name="Register_Confirmation" xml:space="preserve">
+    <value>Confirmarea înregistrării</value>
+  </data>
+  <data name="Remember_me" xml:space="preserve">
+    <value>Amintiți-vă de mine?</value>
+  </data>
+  <data name="Remember_this_machine" xml:space="preserve">
+    <value>Amintiți-vă această mașină</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Depărta</value>
+  </data>
+  <data name="Reporting" xml:space="preserve">
+    <value>Raportare</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>Rapoarte</value>
+  </data>
+  <data name="Report_Details" xml:space="preserve">
+    <value>Detalii raport</value>
+  </data>
+  <data name="Required_Length" xml:space="preserve">
+    <value>Lungimea necesară</value>
+  </data>
+  <data name="Required_Unique_Characters" xml:space="preserve">
+    <value>Caractere unice necesare</value>
+  </data>
+  <data name="Require_Confirmed_Account" xml:space="preserve">
+    <value>Solicitați un cont confirmat</value>
+  </data>
+  <data name="Require_Confirmed_Email" xml:space="preserve">
+    <value>Necesită e-mail confirmat</value>
+  </data>
+  <data name="Require_Confirmed_Phone_Number" xml:space="preserve">
+    <value>Solicitați un număr de telefon confirmat</value>
+  </data>
+  <data name="Require_Digits" xml:space="preserve">
+    <value>Necesită cifre</value>
+  </data>
+  <data name="Require_Lowercase_Characters" xml:space="preserve">
+    <value>Necesită caractere minuscule</value>
+  </data>
+  <data name="Require_Non_Alphanumeric" xml:space="preserve">
+    <value>Necesită non-alfanumerice</value>
+  </data>
+  <data name="Require_Uppercase_Characters" xml:space="preserve">
+    <value>Necesită caractere majuscule</value>
+  </data>
+  <data name="Resend" xml:space="preserve">
+    <value>Retrimite</value>
+  </data>
+  <data name="Resend_Email_Confirmation" xml:space="preserve">
+    <value>Retrimiteți confirmarea prin e-mail</value>
+  </data>
+  <data name="Reset_2FA_App" xml:space="preserve">
+    <value>Resetarea aplicației de autentificare cu doi factori</value>
+  </data>
+  <data name="Reset_2FA_Recovery_Codes" xml:space="preserve">
+    <value>Resetarea codurilor de recuperare a autentificării cu doi factori</value>
+  </data>
+  <data name="Reset_Authenticator_App" xml:space="preserve">
+    <value>Resetarea aplicației De autentificare</value>
+  </data>
+  <data name="Reset_Authenticator_Key" xml:space="preserve">
+    <value>Resetarea cheii de autentificare</value>
+  </data>
+  <data name="Reset_Password" xml:space="preserve">
+    <value>Resetare parolă</value>
+  </data>
+  <data name="Reset_Password_Confirmation" xml:space="preserve">
+    <value>Resetarea confirmării parolei</value>
+  </data>
+  <data name="Reset_Recovery_Codes" xml:space="preserve">
+    <value>Resetarea codurilor de recuperare</value>
+  </data>
+  <data name="reset_your_authenticator_keys" xml:space="preserve">
+    <value>resetați cheile de autentificare</value>
+  </data>
+  <data name="Reset_your_password" xml:space="preserve">
+    <value>Resetați parola.</value>
+  </data>
+  <data name="Resource.Issues_is_almost_reaching_100" xml:space="preserve">
+    <value>Resource.Issues este aproape ajunge la 100</value>
+  </data>
+  <data name="Resources" xml:space="preserve">
+    <value>Resurse</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>Restitui</value>
+  </data>
+  <data name="RFC1123_Pattern" xml:space="preserve">
+    <value>Model RFC1123</value>
+  </data>
+  <data name="Right" xml:space="preserve">
+    <value>Dreapta</value>
+  </data>
+  <data name="Roentgen" xml:space="preserve">
+    <value>Roentgen</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Rol</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>Roluri</value>
+  </data>
+  <data name="Role_Name" xml:space="preserve">
+    <value>Nume rol</value>
+  </data>
+  <data name="Rows_Per_Page" xml:space="preserve">
+    <value>Rânduri pe pagină:</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Salva</value>
+  </data>
+  <data name="Scan_the_QR_Code_or_enter_this_key" xml:space="preserve">
+    <value>Scanați codul QR sau introduceți această cheie</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Căutare</value>
+  </data>
+  <data name="Search_by_Roles" xml:space="preserve">
+    <value>Căutarea după roluri</value>
+  </data>
+  <data name="see" xml:space="preserve">
+    <value>vedea</value>
+  </data>
+  <data name="Select_Roles" xml:space="preserve">
+    <value>Selectați roluri</value>
+  </data>
+  <data name="Send_Activation_Email" xml:space="preserve">
+    <value>Trimiteți e-mail de activare</value>
+  </data>
+  <data name="Septemper" xml:space="preserve">
+    <value>Septemper</value>
+  </data>
+  <data name="Series_1" xml:space="preserve">
+    <value>Seria 1</value>
+  </data>
+  <data name="Series_2" xml:space="preserve">
+    <value>Seria 2</value>
+  </data>
+  <data name="Server_Side_Authorization" xml:space="preserve">
+    <value>Autorizare pe partea de server</value>
+  </data>
+  <data name="Server_Side_Validation" xml:space="preserve">
+    <value>Validarea pe partea serverului</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Setări</value>
+  </data>
+  <data name="Setup_Authenticator_App" xml:space="preserve">
+    <value>Configurarea aplicației Autentificator</value>
+  </data>
+  <data name="Set_Random_Password" xml:space="preserve">
+    <value>Setarea parolei aleatorii</value>
+  </data>
+  <data name="Shortest_Day_Names" xml:space="preserve">
+    <value>Cele mai scurte nume de zi</value>
+  </data>
+  <data name="Short_Date_Pattern" xml:space="preserve">
+    <value>Model de dată scurtă</value>
+  </data>
+  <data name="Short_Time_Pattern" xml:space="preserve">
+    <value>Model de timp scurt</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>Arată</value>
+  </data>
+  <data name="Side_Authorization" xml:space="preserve">
+    <value>Autorizarea laterală</value>
+  </data>
+  <data name="Sign_in" xml:space="preserve">
+    <value>Conectează-te</value>
+  </data>
+  <data name="Sign_in_Settings" xml:space="preserve">
+    <value>Conectați-vă la Setări</value>
+  </data>
+  <data name="Sign_up" xml:space="preserve">
+    <value>Înscrie-te</value>
+  </data>
+  <data name="Solar" xml:space="preserve">
+    <value>Solar</value>
+  </data>
+  <data name="Something_went_wrong" xml:space="preserve">
+    <value>Ceva nu a mers bine!</value>
+  </data>
+  <data name="Sorry_there's_nothing_at_this_address" xml:space="preserve">
+    <value>Ne pare rău, nu e nimic la această adresă.</value>
+  </data>
+  <data name="Sortable_DateTime_Pattern" xml:space="preserve">
+    <value>Model DateTime sortabil</value>
+  </data>
+  <data name="SSN" xml:space="preserve">
+    <value>Numărul de securitate socială</value>
+  </data>
+  <data name="SSNShort" xml:space="preserve">
+    <value>SSN</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Porni</value>
+  </data>
+  <data name="Start_SignalR_Connection" xml:space="preserve">
+    <value>Porniți conexiunea SignalR</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Stare</value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>Opreşte-te</value>
+  </data>
+  <data name="Storage_type_is" xml:space="preserve">
+    <value>Tipul de stocare este</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Prezinte</value>
+  </data>
+  <data name="Succeeded" xml:space="preserve">
+    <value>Reuşit</value>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>Sprijini</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>Nume de familie</value>
+  </data>
+  <data name="Suspend" xml:space="preserve">
+    <value>Suspenda</value>
+  </data>
+  <data name="Sweden" xml:space="preserve">
+    <value>Suedia</value>
+  </data>
+  <data name="Tenants" xml:space="preserve">
+    <value>Chiriaşilor</value>
+  </data>
+  <data name="Thank_you_for_confirming_your_email" xml:space="preserve">
+    <value>Vă mulțumim pentru confirmarea e-mail.</value>
+  </data>
+  <data name="these_docs" xml:space="preserve">
+    <value>aceste documente</value>
+  </data>
+  <data name="The_page_you_were_looking_for_doesnt_exist" xml:space="preserve">
+    <value>Pagina pe care o căutați nu există.</value>
+  </data>
+  <data name="The_selected_file_exceeds_the_allowed_maximum_size_limit" xml:space="preserve">
+    <value>Fișierul selectat depășește limita maximă de dimensiune permisă.</value>
+  </data>
+  <data name="The_selected_file_extension_is_not_allowed" xml:space="preserve">
+    <value>Extensia de fișier selectată nu este permisă.</value>
+  </data>
+  <data name="This_action_only_disables_2FA" xml:space="preserve">
+    <value>Această acțiune dezactivează doar autentificarea cu doi factori.</value>
+  </data>
+  <data name="This_app_does_not_currently_have_a_real_email_sender_registered" xml:space="preserve">
+    <value>Această aplicație nu are în prezent un expeditor de e-mail real înregistrat</value>
+  </data>
+  <data name="This_page_allows_you_to_download_or_delete_that_data" xml:space="preserve">
+    <value>Această pagină vă permite să descărcați sau să ștergeți datele respective.</value>
+  </data>
+  <data name="This_process_disables_2FA_until_you_verify_your_authenticator_app" xml:space="preserve">
+    <value>Acest proces dezactivează autentificarea cu doi factori până când verificați aplicația de autentificare.</value>
+  </data>
+  <data name="Time_Separator" xml:space="preserve">
+    <value>Separator de timp</value>
+  </data>
+  <data name="Time_Zone" xml:space="preserve">
+    <value>Fus orar</value>
+  </data>
+  <data name="Time_Zone_Info" xml:space="preserve">
+    <value>Informații despre fusul orar</value>
+  </data>
+  <data name="Time_Zone_OffSet" xml:space="preserve">
+    <value>Fus orar OffSet</value>
+  </data>
+  <data name="Tips" xml:space="preserve">
+    <value>Sfaturi</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Titlu</value>
+  </data>
+  <data name="Token_Info" xml:space="preserve">
+    <value>Informații token</value>
+  </data>
+  <data name="Token_Settings" xml:space="preserve">
+    <value>Setări token</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>Culme</value>
+  </data>
+  <data name="Total_Cost" xml:space="preserve">
+    <value>Costul total</value>
+  </data>
+  <data name="to_confirm_your_account" xml:space="preserve">
+    <value>pentru a-ți confirma contul</value>
+  </data>
+  <data name="to_login" xml:space="preserve">
+    <value>pentru a vă autentifica.</value>
+  </data>
+  <data name="To_use_an_authenticator_app_go_through_the_following_steps" xml:space="preserve">
+    <value>Pentru a utiliza o aplicație de autentificare, parcurgeți următorii pași:</value>
+  </data>
+  <data name="Two_Factor_Authentication" xml:space="preserve">
+    <value>Autentificare cu doi factori</value>
+  </data>
+  <data name="Two_Factor_Authentication_works_by_adding_an_additional_layer" xml:space="preserve">
+    <value>Autentificarea cu doi factori (2FA) funcționează prin adăugarea unui nivel suplimentar de securitate la conturile dvs. Este nevoie de o acreditare de conectare suplimentară - dincolo de numele de utilizator și parola - pentru a obține acces la cont, iar obținerea celei de-a doua acreditări necesită acces la ceva care vă aparține.</value>
+  </data>
+  <data name="UI_Culture_Code" xml:space="preserve">
+    <value>Codul culturii UI</value>
+  </data>
+  <data name="Unable_to_upload_an_empty_file" xml:space="preserve">
+    <value>Imposibil de încărcat un fișier gol.</value>
+  </data>
+  <data name="Unautorized" xml:space="preserve">
+    <value>Neautorizat</value>
+  </data>
+  <data name="United_States" xml:space="preserve">
+    <value>Statele Unite</value>
+  </data>
+  <data name="Units_of_Time" xml:space="preserve">
+    <value>Unități de timp</value>
+  </data>
+  <data name="Universal_Sortable_DateTime_Pattern" xml:space="preserve">
+    <value>Model DateTime sortabil universal</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Actualiza</value>
+  </data>
+  <data name="Upload_Avatar" xml:space="preserve">
+    <value>Încărcați Avatar</value>
+  </data>
+  <data name="Upload_Documents" xml:space="preserve">
+    <value>Încărcarea documentelor</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Nume de utilizator</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Utilizatorii</value>
+  </data>
+  <data name="Users_Management" xml:space="preserve">
+    <value>Gestionarea utilizatorilor</value>
+  </data>
+  <data name="User_Account" xml:space="preserve">
+    <value>Cont de utilizator</value>
+  </data>
+  <data name="User_Documents" xml:space="preserve">
+    <value>Documente utilizator</value>
+  </data>
+  <data name="User_is_not_found" xml:space="preserve">
+    <value>Utilizatorul nu este găsit.</value>
+  </data>
+  <data name="User_Profile" xml:space="preserve">
+    <value>Profil utilizator</value>
+  </data>
+  <data name="User_Settings" xml:space="preserve">
+    <value>Setări utilizator</value>
+  </data>
+  <data name="Use_a_local_account_to_log_in" xml:space="preserve">
+    <value>Utilizați un cont local pentru a vă conecta.</value>
+  </data>
+  <data name="Validation_Summary" xml:space="preserve">
+    <value>Rezumat validare</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Valoare</value>
+  </data>
+  <data name="Verify" xml:space="preserve">
+    <value>Verifica</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Vedere</value>
+  </data>
+  <data name="View_Applicant" xml:space="preserve">
+    <value>Vezi solicitantului</value>
+  </data>
+  <data name="Visit_Website" xml:space="preserve">
+    <value>Vizitați site-ul web</value>
+  </data>
+  <data name="Weight" xml:space="preserve">
+    <value>Greutate</value>
+  </data>
+  <data name="Wind" xml:space="preserve">
+    <value>Vânt</value>
+  </data>
+  <data name="Year_Month_Pattern" xml:space="preserve">
+    <value>Anul Luna model</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Da</value>
+  </data>
+  <data name="Yes_delete_it" xml:space="preserve">
+    <value>Da, ștergeți-l</value>
+  </data>
+  <data name="Yes_remove_it" xml:space="preserve">
+    <value>Da, eliminați-l</value>
+  </data>
+  <data name="Yes_rename_it" xml:space="preserve">
+    <value>Da, redenumiți-l</value>
+  </data>
+  <data name="Your_account_contains_personal_data_that_you_have_given_us" xml:space="preserve">
+    <value>Contul dumneavoastră conține date cu caracter personal pe care ni le-ați furnizat.</value>
+  </data>
+  <data name="Your_password_has_been_reset" xml:space="preserve">
+    <value>Parola a fost resetată</value>
+  </data>
+  <data name="Your_report_0_is_ready_to_download" xml:space="preserve">
+    <value>raportul {0} este gata de descărcare.</value>
+  </data>
+  <data name="Your_report_generation_has_failed" xml:space="preserve">
+    <value>Generarea raportului nu a reușit.</value>
+  </data>
+  <data name="Your_report_is_being_generated" xml:space="preserve">
+    <value>Raportul este generat.</value>
+  </data>
+  <data name="Your_report_is_being_initiated" xml:space="preserve">
+    <value>Raportul dumneavoastră este în curs de inițiere.</value>
+  </data>
+  <data name="Your_report_is_ready_to_download" xml:space="preserve">
+    <value>Raportul este gata de descărcare.</value>
+  </data>
+  <data name="Your_report__0__is_ready_to_download\" xml:space="preserve">
+    <value>raportul {0} este gata de descărcare.</value>
+  </data>
+  <data name="your_two_factor_authentication_app_will_provide_you_with_a_unique_code" xml:space="preserve">
+    <value>aplicația de autentificare cu doi factori vă va oferi un cod unic.</value>
+  </data>
+  <data name="You_are_not_authenticated_to_export_this_report" xml:space="preserve">
+    <value>Nu sunteți autentificat pentru a exporta acest raport.</value>
+  </data>
+  <data name="You_are_not_authorized_to_access_this_page" xml:space="preserve">
+    <value>Nu sunteți autorizat să accesați această pagină</value>
+  </data>
+  <data name="You_can" xml:space="preserve">
+    <value>Poţi</value>
+  </data>
+  <data name="You_have_no_recovery_codes_left" xml:space="preserve">
+    <value>Nu mai aveți coduri de recuperare.</value>
+  </data>
+  <data name="You_have_num_recovery_codes_left" xml:space="preserve">
+    <value>Mai aveți {0} coduri de recuperare.</value>
+  </data>
+  <data name="You_have_one_recovery_code_left" xml:space="preserve">
+    <value>Mai aveți un cod de recuperare.</value>
+  </data>
+  <data name="You_must" xml:space="preserve">
+    <value>Trebuie să</value>
+  </data>
+  <data name="You_should" xml:space="preserve">
+    <value>Ar trebui să</value>
+  </data>
+  <data name="File_has_been_uploaded_successfully" xml:space="preserve">
+    <value>Fișierul a fost încărcat cu succes.</value>
+  </data>
+  <data name="File_upload_was_cancelled" xml:space="preserve">
+    <value>Încărcarea fișierelor a fost anulată.</value>
+  </data>
+  <data name="Upload_File" xml:space="preserve">
+    <value>Încărcați fișierul</value>
+  </data>
+  <data name="Access_token_timespan_cannot_be_null" xml:space="preserve">
+    <value>Simbolul de acces timespan nu poate fi nul.</value>
+  </data>
+  <data name="Access_token_timespan_is_required" xml:space="preserve">
+    <value>Este necesar un interval de timp pentru simbolul de acces.</value>
+  </data>
+  <data name="Allowed_username_characters_are_required" xml:space="preserve">
+    <value>Sunt necesare caractere de nume de utilizator permise.</value>
+  </data>
+  <data name="An_unknown_failure_has_occurred" xml:space="preserve">
+    <value>S-a produs o defecțiune necunoscută.</value>
+  </data>
+  <data name="Applicant_has_been_created_successfully" xml:space="preserve">
+    <value>Solicitantul a fost creat cu succes</value>
+  </data>
+  <data name="Applicant_has_been_deleted_successfully" xml:space="preserve">
+    <value>Solicitantul a fost șters cu succes.</value>
+  </data>
+  <data name="Applicant_has_been_updated_successfully" xml:space="preserve">
+    <value>Solicitantul a fost actualizat cu succes.</value>
+  </data>
+  <data name="A_user_with_this_login_already_exists" xml:space="preserve">
+    <value>Un utilizator cu această autentificare există deja.</value>
+  </data>
+  <data name="Cannot_disable_2FA_for_user_with_Id" xml:space="preserve">
+    <value>Imposibil de dezactivat autentificarea cu doi factori pentru utilizator cu ID-ul "{0}", deoarece nu este activat în prezent.</value>
+  </data>
+  <data name="Cannot_generate_recovery_codes" xml:space="preserve">
+    <value>Nu se poate genera coduri de recuperare pentru numele de utilizator "{0}", deoarece acestea nu au autentificarea cu doi factori activată.</value>
+  </data>
+  <data name="Code_is_required" xml:space="preserve">
+    <value>Codul este necesar.</value>
+  </data>
+  <data name="Confirmation_link_to_change_email_has_been_sent" xml:space="preserve">
+    <value>A fost trimis un link de confirmare pentru modificarea e-mailului. Vă rugăm să verificați e-mailul.</value>
+  </data>
+  <data name="Confirm_password_is_required" xml:space="preserve">
+    <value>Confirmați că este necesară parola.</value>
+  </data>
+  <data name="Confirm_your_email" xml:space="preserve">
+    <value>Confirmați-vă e-mailul</value>
+  </data>
+  <data name="Date_of_Birth_is_required" xml:space="preserve">
+    <value>Data nașterii este necesară</value>
+  </data>
+  <data name="Default_lockout_time_Span_is_required" xml:space="preserve">
+    <value>Este necesar un interval de timp de blocare implicit</value>
+  </data>
+  <data name="Deletion_of_entity_failed" xml:space="preserve">
+    <value>Ștergerea entității "{0}" ({1}) nu a reușit. {2}.</value>
+  </data>
+  <data name="Email_is_already_taken" xml:space="preserve">
+    <value>E-mail "{0}" este deja luată.</value>
+  </data>
+  <data name="Email_is_invalid" xml:space="preserve">
+    <value>E-mail "{0}" nu este validă.</value>
+  </data>
+  <data name="Entity_with_key_was_not_found" xml:space="preserve">
+    <value>Entitatea "{0}" cu cheie "{1}" nu a fost găsită.</value>
+  </data>
+  <data name="Error_changing_user_name" xml:space="preserve">
+    <value>Eroare la schimbarea numelui de utilizator.</value>
+  </data>
+  <data name="Error_changing_your_user_name" xml:space="preserve">
+    <value>Eroare la schimbarea numelui de utilizator.</value>
+  </data>
+  <data name="File_has_not_been_uploaded" xml:space="preserve">
+    <value>Fișierul nu a fost încărcat.</value>
+  </data>
+  <data name="File_storage_settings_have_been_updated_successfully" xml:space="preserve">
+    <value>Setările de stocare a fișierelor au fost actualizate cu succes.</value>
+  </data>
+  <data name="First_name_is_required" xml:space="preserve">
+    <value>Prenumele este necesar.</value>
+  </data>
+  <data name="Height_is_required" xml:space="preserve">
+    <value>Înălțimea este necesară.</value>
+  </data>
+  <data name="Identity_settings_have_been_updated_successfully" xml:space="preserve">
+    <value>Setările de identitate au fost actualizate cu succes.</value>
+  </data>
+  <data name="Incorrect_password" xml:space="preserve">
+    <value>Parolă incorectă.</value>
+  </data>
+  <data name="Invalid_applicant_Id" xml:space="preserve">
+    <value>ID-ul solicitantului nevalid.</value>
+  </data>
+  <data name="Invalid_authenticator_code_entered" xml:space="preserve">
+    <value>Cod de autentificare nevalid introdus.</value>
+  </data>
+  <data name="Invalid_client_request" xml:space="preserve">
+    <value>Solicitare client nevalidă.</value>
+  </data>
+  <data name="Invalid_file_storage_Id" xml:space="preserve">
+    <value>Id-ul de stocare a fișierelor nevalide.</value>
+  </data>
+  <data name="Invalid_lockout_settings_Id" xml:space="preserve">
+    <value>Id setări de blocare nevalide.</value>
+  </data>
+  <data name="Invalid_login_attempt" xml:space="preserve">
+    <value>Încercare de conectare nevalidă.</value>
+  </data>
+  <data name="Invalid_password_settings_Id" xml:space="preserve">
+    <value>Id setări parolă nevalidă.</value>
+  </data>
+  <data name="Invalid_recovery_code_entered" xml:space="preserve">
+    <value>Cod de recuperare nevalid introdus.</value>
+  </data>
+  <data name="Invalid_report_Id" xml:space="preserve">
+    <value>Id raport nevalid.</value>
+  </data>
+  <data name="Invalid_role_Id" xml:space="preserve">
+    <value>ID rol nevalid.</value>
+  </data>
+  <data name="Invalid_sign_in_settings_Id" xml:space="preserve">
+    <value>Id setări de conectare nevalide.</value>
+  </data>
+  <data name="Invalid_tenant_name" xml:space="preserve">
+    <value>Nume de entitate găzduită nevalidă.</value>
+  </data>
+  <data name="Invalid_token" xml:space="preserve">
+    <value>Simbol nevalid.</value>
+  </data>
+  <data name="Invalid_token_settings_Id" xml:space="preserve">
+    <value>Setări nevalide token Id.</value>
+  </data>
+  <data name="Invalid_user_Id" xml:space="preserve">
+    <value>ID de utilizator nevalid.</value>
+  </data>
+  <data name="Invalid_user_settings_Id" xml:space="preserve">
+    <value>Id setări utilizator nevalide</value>
+  </data>
+  <data name="Job_title_is_required" xml:space="preserve">
+    <value>Titlul postului este necesar.</value>
+  </data>
+  <data name="Last_name_is_required" xml:space="preserve">
+    <value>Este necesar numele de familie</value>
+  </data>
+  <data name="Lockout_is_not_enabled_for_this_user" xml:space="preserve">
+    <value>Lockout nu este activat pentru acest utilizator.</value>
+  </data>
+  <data name="Maximum_allowed_number_of_attachments_must_not_exceed_3" xml:space="preserve">
+    <value>Numărul maxim admis de atașamente nu trebuie să depășească 3.</value>
+  </data>
+  <data name="Max_failed_access_attempt_is_required" xml:space="preserve">
+    <value>Este necesară încercarea de acces max nereușită.</value>
+  </data>
+  <data name="Method_cannot_be_null" xml:space="preserve">
+    <value>Metoda nu poate fi nulă.</value>
+  </data>
+  <data name="Minimum_allowed_number_of_attachments_must_be_at_least_1" xml:space="preserve">
+    <value>Numărul minim permis de atașamente trebuie să fie de cel puțin 1.</value>
+  </data>
+  <data name="New_password_is_required" xml:space="preserve">
+    <value>Este necesară o parolă nouă.</value>
+  </data>
+  <data name="New_password_must_be_at_least_6_characters" xml:space="preserve">
+    <value>Noua parolă trebuie să fie de cel puțin 6 caractere.</value>
+  </data>
+  <data name="New_password_must_not_exceed_200_characters" xml:space="preserve">
+    <value>Noua parolă nu trebuie să depășească 200 de caractere.</value>
+  </data>
+  <data name="N_A" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="Old_password_is_required" xml:space="preserve">
+    <value>Este necesară o parolă veche.</value>
+  </data>
+  <data name="Only_those_between_the_ages_of_18_and_28_are_allowed_for_enlisting" xml:space="preserve">
+    <value>Doar cei cu vârste cuprinse între 18 și 28 de ani au voie să se înscrie.</value>
+  </data>
+  <data name="Only_those_whose_BMI_between_18_5_and_24_9_are_allowed_for_enlisting" xml:space="preserve">
+    <value>Numai cei ale căror IMC între 18,5 și 24,9 sunt permise pentru înrolare.</value>
+  </data>
+  <data name="Only_those_whose_heights_between_100_and_250_with_normal_BMI_are_allowed_for_enlisting" xml:space="preserve">
+    <value>Numai cei ale căror înălțimi între 100 și 250 cu IMC normal sunt permise pentru înrolare.</value>
+  </data>
+  <data name="Only_those_who_weigh_between_50_and_200_with_normal_BMI_are_allowed_for_enlisting" xml:space="preserve">
+    <value>Doar cei care cântăresc între 50 și 200 cu IMC normal au voie să se înroleze.</value>
+  </data>
+  <data name="Optimistic_concurrency_failure" xml:space="preserve">
+    <value>Eșec optimist de concurență, obiectul a fost modificat.</value>
+  </data>
+  <data name="Passwords_must_be_at_least_length_characters" xml:space="preserve">
+    <value>Parolele trebuie să fie de cel puțin {0} caractere.</value>
+  </data>
+  <data name="Passwords_must_have_at_least_one_digit" xml:space="preserve">
+    <value>Parolele trebuie să aibă cel puțin o cifră ("0'-'9').</value>
+  </data>
+  <data name="Passwords_must_have_at_least_one_lowercase" xml:space="preserve">
+    <value>Parolele trebuie să aibă cel puțin o literă mică ("a'-'z").</value>
+  </data>
+  <data name="Passwords_must_have_at_least_one_non_alphanumeric_character" xml:space="preserve">
+    <value>Parolele trebuie să aibă cel puțin un caracter non alfanumeric.</value>
+  </data>
+  <data name="Passwords_must_have_at_least_one_uppercase" xml:space="preserve">
+    <value>Parolele trebuie să aibă cel puțin o majuscule ("A'-'Z").</value>
+  </data>
+  <data name="Password_cannot_contain_password" xml:space="preserve">
+    <value>Parola nu poate conține "parolă".</value>
+  </data>
+  <data name="Password_cannot_contain_username" xml:space="preserve">
+    <value>Parola nu poate conține nume de utilizator.</value>
+  </data>
+  <data name="Password_is_required" xml:space="preserve">
+    <value>Parola este necesară.</value>
+  </data>
+  <data name="Password_must_be_at_least_6_characters" xml:space="preserve">
+    <value>Parola trebuie să fie de cel puțin 6 caractere.</value>
+  </data>
+  <data name="Password_must_not_exceed_200_characters" xml:space="preserve">
+    <value>Parola nu trebuie să depășească 200 de caractere.</value>
+  </data>
+  <data name="Password_reset_link_was_sent" xml:space="preserve">
+    <value>Link-ul de resetare a parolei a fost trimis. Vă rugăm să verificați e-mailul.</value>
+  </data>
+  <data name="Please_confirm_your_account_by_clicking_here" xml:space="preserve">
+    <value>Vă rugăm să vă confirmați contul &lt;a href='{0}'&gt;făcând clic aici&lt;/a&gt;.</value>
+  </data>
+  <data name="Please_confirm_your_email" xml:space="preserve">
+    <value>Vă rugăm să confirmați e-mailul.</value>
+  </data>
+  <data name="Please_reset_your_password_by_clicking_here" xml:space="preserve">
+    <value>Vă rugăm să resetați parola &lt;a href='{0}'&gt;făcând clic aici&lt;/a&gt;.</value>
+  </data>
+  <data name="Please_specify_the_application_tenant_mode" xml:space="preserve">
+    <value>Vă rugăm să specificați modul de entitate găzduită a aplicației.</value>
+  </data>
+  <data name="Profile_picture_is_required" xml:space="preserve">
+    <value>Este necesară o fotografie de profil.</value>
+  </data>
+  <data name="Recovery_Code_is_required" xml:space="preserve">
+    <value>Codul de recuperare este necesar.</value>
+  </data>
+  <data name="Recovery_Code_Redemption_Failed" xml:space="preserve">
+    <value>Răscumpărarea codului de recuperare nu a reușit</value>
+  </data>
+  <data name="Refresh_token_timespan_cannot_be_null" xml:space="preserve">
+    <value>Refresh token timespan nu poate fi nul.</value>
+  </data>
+  <data name="Refresh_token_timespan_is_required" xml:space="preserve">
+    <value>Refresh token timespan este necesară.</value>
+  </data>
+  <data name="Refresh_token_timespan_must_be_greater_than_access_token_expiry_time" xml:space="preserve">
+    <value>Refresh token timespan trebuie să fie mai mare decât timpul de expirare a token-ului de acces.</value>
+  </data>
+  <data name="Repeated_Ones_are_not_valid_Social_security_number" xml:space="preserve">
+    <value>111111111 nu este un număr valid de securitate socială.</value>
+  </data>
+  <data name="Repeated_Threes_are_not_valid_Social_security_number" xml:space="preserve">
+    <value>333333333 nu este un număr valid de securitate socială.</value>
+  </data>
+  <data name="Required_length_is_required" xml:space="preserve">
+    <value>Lungimea necesară este necesară.</value>
+  </data>
+  <data name="Required_unique_characters_is_required" xml:space="preserve">
+    <value>Caractere unice necesare este necesară.</value>
+  </data>
+  <data name="Reset_your_password1" xml:space="preserve">
+    <value>Resetarea parolei</value>
+  </data>
+  <data name="Role_has_been_created_successfully" xml:space="preserve">
+    <value>Rolul a fost creat cu succes.</value>
+  </data>
+  <data name="Role_has_been_deleted_successfully" xml:space="preserve">
+    <value>Rolul a fost șters cu succes.</value>
+  </data>
+  <data name="Role_has_been_updated_successfully" xml:space="preserve">
+    <value>Rolul a fost actualizat cu succes.</value>
+  </data>
+  <data name="Role_name_is_already_taken" xml:space="preserve">
+    <value>Numele de rol "{0}" este deja luat.</value>
+  </data>
+  <data name="Role_name_is_invalid" xml:space="preserve">
+    <value>Numele rolului "{0}" nu este valid.</value>
+  </data>
+  <data name="Role_name_is_required" xml:space="preserve">
+    <value>Numele rolului este necesar.</value>
+  </data>
+  <data name="Social_security_number_is_required" xml:space="preserve">
+    <value>Numărul de securitate socială este necesar</value>
+  </data>
+  <data name="Social_security_number_must_contain_only_9_digits" xml:space="preserve">
+    <value>Numărul de securitate socială trebuie să conțină doar 9 cifre.</value>
+  </data>
+  <data name="Social_security_number_must_not_contain_consecutive_digits" xml:space="preserve">
+    <value>Numărul de securitate socială nu trebuie să conțină cifre consecutive.</value>
+  </data>
+  <data name="Storage_type_is_required" xml:space="preserve">
+    <value>Este necesar un tip de stocare.</value>
+  </data>
+  <data name="Surname_is_required" xml:space="preserve">
+    <value>Numele de familie este necesar.</value>
+  </data>
+  <data name="Tenant_has_been_created_successfully" xml:space="preserve">
+    <value>Chiriaș a fost creat cu succes.</value>
+  </data>
+  <data name="Tenant_has_been_deleted_successfully" xml:space="preserve">
+    <value>Entitatea găzduită a fost ștearsă cu succes.</value>
+  </data>
+  <data name="Tenant_has_been_updated_successfully" xml:space="preserve">
+    <value>Entitate găzduită a fost actualizat cu succes.</value>
+  </data>
+  <data name="Tenant_name_is_required" xml:space="preserve">
+    <value>Este necesar numele entității găzduite.</value>
+  </data>
+  <data name="The_applicant_is_not_found" xml:space="preserve">
+    <value>Solicitantul nu este găsit.</value>
+  </data>
+  <data name="The_password_and_confirmation_password_do_not_match" xml:space="preserve">
+    <value>Parola și parola de confirmare nu se potrivesc.</value>
+  </data>
+  <data name="The_specified_role_is_already_registered" xml:space="preserve">
+    <value>Rolul specificat este deja înregistrat.</value>
+  </data>
+  <data name="The_specified_role_is_already_registered_in_the_given_tenant" xml:space="preserve">
+    <value>Rolul specificat este deja înregistrat în entitatea găzduită dată.</value>
+  </data>
+  <data name="The_specified_username_and_email_are_already_registered" xml:space="preserve">
+    <value>Numele de utilizator și e-mailul specificate sunt deja înregistrate.</value>
+  </data>
+  <data name="The_specified_username_and_email_are_already_registered_in_the_given_tenant" xml:space="preserve">
+    <value>Numele de utilizator și e-mailul specificate sunt deja înregistrate în entitatea găzduită dată.</value>
+  </data>
+  <data name="The_user_has_no_2FA_enabled" xml:space="preserve">
+    <value>Utilizatorul nu are 2FA activat.</value>
+  </data>
+  <data name="Token_settings_have_been_updated_successfully" xml:space="preserve">
+    <value>Setările tokenului au fost actualizate cu succes.</value>
+  </data>
+  <data name="Two_factor_authentication_code_is_required" xml:space="preserve">
+    <value>Este necesar un cod de autentificare cu doi factori.</value>
+  </data>
+  <data name="Two_factor_authentication_code_must_be_at_least_6_character_long" xml:space="preserve">
+    <value>Codul de autentificare cu doi factori trebuie să aibă cel puțin 6 caractere.</value>
+  </data>
+  <data name="Two_factor_authentication_code_must_not_exceed_7_characters" xml:space="preserve">
+    <value>Codul de autentificare cu doi factori nu trebuie să depășească 7 caractere.</value>
+  </data>
+  <data name="Two_factor_authentication_has_been_disabled" xml:space="preserve">
+    <value>2Fa a fost dezactivat. Puteți reactiva autentificarea cu doi factori atunci când configurați o aplicație de autentificare.</value>
+  </data>
+  <data name="Two_factor_authentication_required" xml:space="preserve">
+    <value>Este necesară autentificarea cu doi factori.</value>
+  </data>
+  <data name="Unable_to_add_static_role" xml:space="preserve">
+    <value>Imposibil de adăugat rol static</value>
+  </data>
+  <data name="Unable_to_create_new_tenant_in_single_tenant_mode" xml:space="preserve">
+    <value>Imposibil de creat entitate găzduită nouă în modul de entitate găzduită unică.</value>
+  </data>
+  <data name="Unable_to_delete_static_role" xml:space="preserve">
+    <value>Imposibil de șters rolul static.</value>
+  </data>
+  <data name="Unable_to_delete_static_user" xml:space="preserve">
+    <value>Imposibil de șters utilizatorul static.</value>
+  </data>
+  <data name="Unable_to_enable_2FA" xml:space="preserve">
+    <value>Imposibil de activat 2FA.</value>
+  </data>
+  <data name="Unable_to_load_applicant" xml:space="preserve">
+    <value>Imposibilitatea de a încărca solicitantului.</value>
+  </data>
+  <data name="Unable_to_load_report" xml:space="preserve">
+    <value>Imposibil de încărcat raport.</value>
+  </data>
+  <data name="Unable_to_load_role" xml:space="preserve">
+    <value>Imposibil de încărcat rol.</value>
+  </data>
+  <data name="Unable_to_load_user" xml:space="preserve">
+    <value>Imposibil de încărcat utilizatorul.</value>
+  </data>
+  <data name="Unable_to_reset_authenticator_keys" xml:space="preserve">
+    <value>Imposibil de resetat cheile de autentificare.</value>
+  </data>
+  <data name="Unable_to_update_static_role" xml:space="preserve">
+    <value>Imposibil de actualizat rolul static</value>
+  </data>
+  <data name="Unable_to_update_static_user" xml:space="preserve">
+    <value>Imposibil de actualizat utilizator static.</value>
+  </data>
+  <data name="Unexpected_error_occurred_deleting_user_with_Id" xml:space="preserve">
+    <value>Eroare neașteptată a apărut ștergerea utilizatorului cu ID-ul "{0}".</value>
+  </data>
+  <data name="Unexpected_error_occurred_disabling_2FA" xml:space="preserve">
+    <value>Eroare neașteptată a apărut dezactivarea autentificarea cu doi factori pentru utilizator cu ID-ul '{0}'.</value>
+  </data>
+  <data name="Username_has_been_confirmed_successfully" xml:space="preserve">
+    <value>Numele de utilizator a fost confirmat cu succes.</value>
+  </data>
+  <data name="Username_is_already_taken" xml:space="preserve">
+    <value>Numele de utilizator "{0}" este deja luat.</value>
+  </data>
+  <data name="Username_is_invalid" xml:space="preserve">
+    <value>Numele de utilizator "{0}" nu este valid, poate conține numai litere sau cifre.</value>
+  </data>
+  <data name="Username_is_required" xml:space="preserve">
+    <value>Numele de utilizator este necesar.</value>
+  </data>
+  <data name="Username_must_be_at_least_6_characters" xml:space="preserve">
+    <value>Numele de utilizator trebuie să fie de cel puțin 6 caractere.</value>
+  </data>
+  <data name="Username_must_not_exceed_200_characters" xml:space="preserve">
+    <value>Numele de utilizator nu trebuie să depășească 200 de caractere.</value>
+  </data>
+  <data name="User_already_has_a_password_set" xml:space="preserve">
+    <value>Utilizatorul are deja un set de parole.</value>
+  </data>
+  <data name="User_already_in_role" xml:space="preserve">
+    <value>Utilizator deja în rolul "{0}".</value>
+  </data>
+  <data name="User_has_been_added_without_files" xml:space="preserve">
+    <value>Utilizatorul a fost adăugat fără fișiere.</value>
+  </data>
+  <data name="User_has_been_created_successfully" xml:space="preserve">
+    <value>Utilizatorul a fost creat cu succes.</value>
+  </data>
+  <data name="User_has_been_deleted_successfully" xml:space="preserve">
+    <value>Utilizatorul a fost șters cu succes.</value>
+  </data>
+  <data name="User_has_been_updated_successfully" xml:space="preserve">
+    <value>Utilizatorul a fost actualizat cu succes.</value>
+  </data>
+  <data name="User_has_been_updated_successfully_without_updating_his_her_roles_as_the_user_is_static_type" xml:space="preserve">
+    <value>Utilizatorul a fost actualizat cu succes fără a actualiza rolurile sale ca utilizatorul este de tip static.</value>
+  </data>
+  <data name="User_Id_is_required" xml:space="preserve">
+    <value>Id-ul de utilizator este necesar.</value>
+  </data>
+  <data name="User_permissions_have_been_updated_successfully" xml:space="preserve">
+    <value>Permisiunile de utilizator au fost actualizate cu succes.</value>
+  </data>
+  <data name="User_with_Id_deleted" xml:space="preserve">
+    <value>Utilizatorul cu ID-ul "{0}" a fost șters.</value>
+  </data>
+  <data name="User_with_Id_UserId_logged_in_with_2Fa" xml:space="preserve">
+    <value>Utilizator cu ID-ul "{0}" conectat cu autentificare cu doi factori.</value>
+  </data>
+  <data name="value_cannot_be_null" xml:space="preserve">
+    <value>{0} nu poate fi nulă</value>
+  </data>
+  <data name="Verification_code_is_invalid" xml:space="preserve">
+    <value>Codul de verificare nu este valid.</value>
+  </data>
+  <data name="Verification_email_has_been_sent" xml:space="preserve">
+    <value>E-mailul de verificare a fost trimis. Vă rugăm să verificați e-mailul.</value>
+  </data>
+  <data name="Weight_is_required" xml:space="preserve">
+    <value>Greutatea este necesară.</value>
+  </data>
+  <data name="Your_account_is_deactivated_Please_contact_your_administrator" xml:space="preserve">
+    <value>Contul tău este dezactivat. Vă rugăm să contactați administratorul.</value>
+  </data>
+  <data name="Your_authenticator_app_has_been_verified" xml:space="preserve">
+    <value>Aplicația de autentificare a fost verificată.</value>
+  </data>
+  <data name="Your_authenticator_app_key_has_been_reset" xml:space="preserve">
+    <value>Cheia aplicației de autentificare a fost resetată, va trebui să configurați aplicația de autentificare utilizând noua cheie.</value>
+  </data>
+  <data name="Your_email_has_been_changed_successfully" xml:space="preserve">
+    <value>E-mailul tău a fost schimbat cu succes.</value>
+  </data>
+  <data name="Your_email_has_been_successfully_changed" xml:space="preserve">
+    <value>E-mailul tău a fost modificat cu succes.</value>
+  </data>
+  <data name="Your_email_is_unchanged" xml:space="preserve">
+    <value>Adresa ta de e-mail este neschimbată.</value>
+  </data>
+  <data name="Your_password_has_been_changed" xml:space="preserve">
+    <value>Parola a fost schimbată.</value>
+  </data>
+  <data name="Your_password_has_been_set" xml:space="preserve">
+    <value>Parola a fost setată.</value>
+  </data>
+  <data name="You_are_locked_out" xml:space="preserve">
+    <value>Ești blocat.</value>
+  </data>
+  <data name="You_are_not_authorized" xml:space="preserve">
+    <value>Nu sunteți autorizat să accesați {0}.</value>
+  </data>
+  <data name="You_have_generated_new_recovery_codes" xml:space="preserve">
+    <value>Ați generat noi coduri de recuperare.</value>
+  </data>
+  <data name="You_have_successfully_created_a_new_account" xml:space="preserve">
+    <value>Ați creat cu succes un cont nou.</value>
+  </data>
+  <data name="to_reset_your_password" xml:space="preserve">
+    <value>pentru a reseta parola</value>
+  </data>
+  <data name="Please_click" xml:space="preserve">
+    <value>Vă rugăm să faceți clic pe</value>
+  </data>
+  <data name="to" xml:space="preserve">
+    <value>spre</value>
+  </data>
+  <data name="Assign_Permissions_to" xml:space="preserve">
+    <value>Atribuirea permisiunilor către</value>
+  </data>
+  <data name="There_are_no_data_to_generate_report" xml:space="preserve">
+    <value>Nu există date pentru a genera raport.</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_save_this_record" xml:space="preserve">
+    <value>Sunteți sigur că doriți să salvați această înregistrare?</value>
+  </data>
+  <data name="Consider_switching_your_device_to_light_mode" xml:space="preserve">
+    <value>Dacă întâmpinați probleme la scanarea codului QR, încercați să schimbați aplicația în modul lumină atingând butonul întuneric/lumină din meniul antet. Este posibil ca unele coduri QR să nu fie scanate corect în modul întunecat din cauza problemelor de contrast. Prin trecerea la modul luminos, codul QR va fi mai ușor de citit, iar dispozitivul va avea un timp mai ușor de scanare.</value>
+  </data>
+  <data name="The_Host_portal_cannot_be_accessed" xml:space="preserve">
+    <value>Portalul gazdă nu poate fi accesat în timp ce utilizați o bază de date separată per entitate găzduită ca strategie de izolare a datelor. Vă rugăm să contactați administratorul pentru asistență suplimentară.</value>
+  </data>
+  <data name="It_is_not_possible_to_create_a_new_tenant_while_in_single_tenant_mode" xml:space="preserve">
+    <value>Nu este posibil să creați o entitate găzduită nouă în timp ce în modul de entitate găzduită unică. Crearea de chiriași este permisă exclusiv în modul multi-chiriaș.</value>
+  </data>
+  <data name="It_is_not_possible_to_create_or_update_or_delete_a_tenant_while_in_single_tenant_mode" xml:space="preserve">
+    <value>Nu este posibil să creați, să actualizați sau să ștergeți o entitate găzduită în timp ce vă aflați în modul de entitate găzduită unică. Gestionarea entităților găzduite este permisă exclusiv în modul cu mai multe entități găzduite.</value>
+  </data>
+  <data name="Tenants_Management" xml:space="preserve">
+    <value>Managementul chiriașilor</value>
+  </data>
+  <data name="My_Tenant" xml:space="preserve">
+    <value>Chiriașul meu</value>
+  </data>
+  <data name="Invalid_tenant_Id" xml:space="preserve">
+    <value>ID de entitate găzduită nevalidă.</value>
+  </data>
+  <data name="Unable_to_load_tenant" xml:space="preserve">
+    <value>Imposibil de încărcat entitate găzduită.</value>
+  </data>
+  <data name="The_tenant_is_not_found" xml:space="preserve">
+    <value>Chiriașul nu este găsit.</value>
+  </data>
+  <data name="SuperAdmin" xml:space="preserve">
+    <value>Super Admin</value>
+  </data>
+  <data name="A_tenant_with_the_same_name_already_exists__Please_choose_a_different_name" xml:space="preserve">
+    <value>Un chiriaș cu același nume există deja. Vă rugăm să alegeți un alt nume.</value>
+  </data>
+  <data name="Show_Recovery_Codes" xml:space="preserve">
+    <value>Afișarea codurilor de recuperare</value>
+  </data>
+  <data name="Enable_Authenticator_App" xml:space="preserve">
+    <value>Activați aplicația Authenticator</value>
+  </data>
+  <data name="Enable_2FA" xml:space="preserve">
+    <value>Activați autentificarea cu doi factori</value>
+  </data>
+  <data name="Application_errors_occurred_while_processing_your_request" xml:space="preserve">
+    <value>Erori de aplicație au apărut în timpul procesării solicitării dvs.</value>
+  </data>
+  <data name="Unauthorized_access_detected" xml:space="preserve">
+    <value>Acces neautorizat detectat.</value>
+  </data>
+  <data name="Access_to_the_requested_resource_is_forbidden" xml:space="preserve">
+    <value>Accesul la resursa solicitată este interzis.</value>
+  </data>
+  <data name="The_request_was_not_processed_due_to_invalid_or_missing_parameters" xml:space="preserve">
+    <value>Solicitarea nu a fost procesată din cauza parametrilor nevalidi sau lipsiți.</value>
+  </data>
+  <data name="The_requested_resource_was_not_found" xml:space="preserve">
+    <value>Resursa solicitată nu a fost găsită.</value>
+  </data>
+  <data name="An_internal_server_error_occurred_while_processing_your_request" xml:space="preserve">
+    <value>A apărut o eroare internă de server în timpul procesării solicitării.</value>
+  </data>
+  <data name="An_error_occurred_while_processing_your_request" xml:space="preserve">
+    <value>A apărut o eroare în timpul procesării solicitării dvs.</value>
+  </data>
+  <data name="Model_validation_errors_occurred_while_processing_your_request" xml:space="preserve">
+    <value>Eroarea (erorile) de validare a modelului a apărut în timpul procesării solicitării dvs.</value>
+  </data>
+  <data name="You_are_forbidden" xml:space="preserve">
+    <value>Accesul la {0} este interzis din cauza permisiunilor insuficiente.</value>
+  </data>
+  <data name="The_time_provided_must_be_in_UTC_format" xml:space="preserve">
+    <value>Ora furnizată trebuie să fie în format UTC.</value>
+  </data>
+  <data name="On_Premises_File_Storage" xml:space="preserve">
+    <value>Stocare de fișiere locală</value>
+  </data>
+  <data name="Reporting_Hub_is_closed" xml:space="preserve">
+    <value>Hubul de raportare este închis.</value>
+  </data>
+  <data name="Reporting_Hub_is_already_closed" xml:space="preserve">
+    <value>Centrul de raportare este deja închis.</value>
+  </data>
+  <data name="Dashboard_Hub_is_closed" xml:space="preserve">
+    <value>Hub-ul tabloului de bord este închis.</value>
+  </data>
+  <data name="Dashboard_Hub_is_being_initialized" xml:space="preserve">
+    <value>Hub-ul tabloului de bord este inițializat.</value>
+  </data>
+  <data name="Unable_to_connect_to_the_dashboard_hub_due_to_an_error" xml:space="preserve">
+    <value>Imposibil de conectat la hubul tabloului de bord din cauza unei erori: {0}</value>
+  </data>
+  <data name="Dashboard_Hub_is_now_connected" xml:space="preserve">
+    <value>Hubul tabloului de bord este acum conectat.</value>
+  </data>
+  <data name="Unable_to_connect_to_the_reporting_hub_due_to_an_error" xml:space="preserve">
+    <value>Imposibil de conectat la hubul de raportare din cauza unei erori: {0}</value>
+  </data>
+  <data name="Reporting_Hub_is_now_connected" xml:space="preserve">
+    <value>Hubul de raportare este acum conectat.</value>
+  </data>
+  <data name="Reporting_Hub_is_being_initialized" xml:space="preserve">
+    <value>Hubul de raportare este inițializat.</value>
+  </data>
+  <data name="Reporting_Hub_is_not_active" xml:space="preserve">
+    <value>Reporting Hub nu este activ.</value>
+  </data>
+  <data name="You_are_not_authorized_to_access_resources_related_to_other_tenants" xml:space="preserve">
+    <value>Nu sunteți autorizat să accesați resurse legate de alte entități găzduite.</value>
+  </data>
+  <data name="ExportAsPdfOnDemand" xml:space="preserve">
+    <value>Exportați imediat ca PDF</value>
+  </data>
+</root>

@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>CMS | Elevate OTT</title>
+    <meta name="description" content="CMS | Elevate OTT">
+    <base href="/" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="_content/MudBlazor/MudBlazor.min.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="manifest.json" rel="manifest" />
+</head>
+<body>
+    <div id="app">
+        <style>
+            @keyframes slide {
+                0% {
+                    transform: translateX(-25%);
+                }
+
+                100% {
+                    transform: translateX(25%);
+                }
+            }
+
+            .mud-wasm {
+                animation: slide 3s ease-in-out infinite alternate;
+                background-image: linear-gradient(-60deg,#594ae2 50%,#7467ef 50%);
+                bottom: 0;
+                left: -50%;
+                opacity: .5;
+                position: fixed;
+                right: -50%;
+                top: 0;
+                z-index: -1
+            }
+
+            .mud-wasm-cont {
+                left: 50%;
+                padding: 10vmin;
+                position: fixed;
+                text-align: center;
+                top: 50%;
+                transform: translate(-50%,-50%)
+            }
+        </style>
+        <div style="height:100%;width:100%;margin:0;position:fixed;">
+            <div class="mud-wasm"></div>
+            <div class="mud-wasm" style="animation-direction:alternate-reverse;animation-duration:4s;"></div>
+            <div class="mud-wasm" style="animation-duration:5s;"></div>
+            <div class="mud-wasm-cont ">
+                <img src="brand-blue.svg" />
+            </div>
+        </div>
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    <script src="_content/MudBlazor/MudBlazor.min.js"></script>
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <script src="https://use.fontawesome.com/bae3fdbbaf.js"></script>
+    <script src="js/utilities.js"></script>
+    <script src="js/qrcode.js"></script>
+    <script type="text/javascript">
+        function generateQrCode(authenticatorUri) {
+            new QRCode(document.getElementById("qrCode"),
+                {
+                    text: authenticatorUri,
+                    width: 250,
+                    height: 250
+                });
+        }
+    </script>
+    <script>navigator.serviceWorker.register('service-worker.js');</script>
+</body>
+</html>

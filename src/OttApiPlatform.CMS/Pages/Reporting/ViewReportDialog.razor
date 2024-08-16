@@ -1,0 +1,56 @@
+﻿<MudDialog>
+    <DialogContent>
+        <MudTextField Label="@Resource.Title" Disabled="true" Variant="Variant.Outlined" @bind-Value="ReportForEdit.Title" />
+        <MudTextField Label="@Resource.FileName" Disabled="true" Variant="Variant.Outlined" @bind-Value="ReportForEdit.FileName" />
+        <MudTextField Label="@Resource.ContentType" Disabled="true" Variant="Variant.Outlined" @bind-Value="ReportForEdit.ContentType" />
+        <MudTextField Label="@Resource.QueryString" Disabled="true" Variant="Variant.Outlined" @bind-Value="ReportForEdit.QueryString" />
+        @switch (ReportForEdit.Status)
+        {
+            case ReportStatus.Pending:
+                <MudTextField Label="@Resource.Status" Disabled="true" Variant="Variant.Outlined" Value="@Resource.Pending" />
+                break;
+            case ReportStatus.InProgress:
+                <MudTextField Label="@Resource.Status" Disabled="true" Variant="Variant.Outlined" Value="@Resource.In_Progress" />
+                break;
+            case ReportStatus.Completed:
+                <MudTextField Label="@Resource.Status" Disabled="true" Variant="Variant.Outlined" Value="@Resource.Completed" />
+                break;
+            case ReportStatus.Failed:
+                <MudTextField Label="@Resource.Status" Disabled="true" Variant="Variant.Outlined" Value="@Resource.Failed" />
+                break;
+        }
+        <MudDivider Style="margin-bottom:10px"></MudDivider>
+
+        <MudButton Variant="Variant.Filled"
+                   StartIcon="@Icons.Material.Filled.Download"
+                   FullWidth="true"
+                   Color="Color.Primary"
+                   OnClick="@(async () => await DownloadReport($"{ReportForEdit.FileName}.pdf", ReportForEdit.FileUri))">
+            @Resource.Download
+        </MudButton>
+
+    </DialogContent>
+    <DialogActions>
+        <MudButton Variant="Variant.Filled"
+                   FullWidth="true"
+                   Color="Color.Default"
+                   OnClick="Close">@Resource.Close</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+
+    [Inject] private IJSRuntime Js { get; set; }
+
+    [CascadingParameter] private MudDialogInstance MudDialog { get; set; }
+
+    [Parameter] public ReportForEdit ReportForEdit { get; set; } = new();
+
+    private async Task DownloadReport(string reportFileName, string reportFileUri)
+    {
+        await Js.InvokeVoidAsync("triggerFileDownload", reportFileName, reportFileUri);
+    }
+
+    void Close() => MudDialog.Close(DialogResult.Ok(true));
+
+}

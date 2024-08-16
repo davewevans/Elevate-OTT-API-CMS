@@ -1,0 +1,192 @@
+﻿@page "/identity/users/EditUser/{userId}"
+@attribute [Authorize]
+
+<MudText Typo="Typo.h5" Color="Color.Primary" Class="mb-4">@Resource.Edit_User <MudChip Text="purple" Color="Color.Primary" Label="true">@($"{UserForEditVm.UserName?.ToUpper()}")</MudChip></MudText>
+<EditForm Model="UserForEditVm" OnValidSubmit="SubmitForm">
+    <EditContextApiExceptionFallback @ref="EditContextApiExceptionFallback" />
+    <FluentValidationValidator />
+    <MudCard>
+            <MudCardContent>
+                <MudTabs KeepPanelsAlive="true" Elevation="25" Color="Color.Transparent" Rounded="true" PanelClass="mt-6">
+                    <MudTabPanel Text="@Resource.Avatar" Icon="@Icons.Material.Filled.Photo">
+                        <MudCard Elevation="25">
+                            <MudCardHeader>
+                                <CardHeaderContent>
+                                    <MudText Typo="Typo.h6">@Resource.Profile_Picture</MudText>
+                                </CardHeaderContent>
+                            </MudCardHeader>
+                            <MudCardContent>
+                                <MudPaper Class="pa-2" Outlined="true">
+                                    <AvatarViewer AvatarImageSrc="@AvatarImageSrc" AvatarUri="@UserForEditVm.AvatarUri" OnAvatarCleared="() => UserForEditVm.AvatarUri=null"></AvatarViewer>
+                                    <MudText Align="Align.Center">@($"{UserForEditVm.Name} {UserForEditVm.Surname}")</MudText>
+                                    <MudText Align="Align.Center">@UserForEditVm.JobTitle</MudText>
+                                </MudPaper>
+                            </MudCardContent>
+                            <MudCardActions Class="d-flex justify-center">
+                                <div class="form-group">
+                                    <BpFileUpload @ref="BpFileUploadReference" ButtonId="avatarInput"
+                                                  UploadFileButtonIcon="@Icons.Material.Filled.CloudUpload"
+                                                  UploadFileButtonName="@Resource.Upload_Avatar"
+                                                  ShowRenameFileDialog="false"
+                                                  AllowedExtensions=".jpg,.png,.jpg,.bmp"
+                                                  AllowedFileSize="5242880"
+                                                  OnFileSelected="AvatarSelected"
+                                                  OnFileUnSelected="AvatarUnSelected"
+                                                  OnImageSrcChanged="GetBase64StringImageUrl" />
+                                    <ValidationMessage For="@(() => UserForEditVm.AvatarUri)" />
+                                </div>
+                            </MudCardActions>
+                        </MudCard>
+                    </MudTabPanel>
+                    <MudTabPanel Text="@Resource.Profile" Icon="@Icons.Material.Filled.Person">
+                        <MudCard Elevation="25">
+                            <MudCardHeader>
+                                <CardHeaderContent>
+                                    <MudText Typo="Typo.h6">@Resource.User_Profile</MudText>
+                                </CardHeaderContent>
+                            </MudCardHeader>
+                            <MudCardContent>
+                                <MudTextField Label="@Resource.Name"
+                                              Variant="Variant.Outlined"
+                                @bind-Value="UserForEditVm.Name"
+                                              For="@(() => UserForEditVm.Name)" />
+
+                                <MudTextField Label="@Resource.Surname"
+                                              Variant="Variant.Outlined"
+                                @bind-Value="UserForEditVm.Surname"
+                                              For="@(() => UserForEditVm.Surname)" />
+
+                                <MudTextField Label="@Resource.Job_Title"
+                                              Variant="Variant.Outlined"
+                                @bind-Value="UserForEditVm.JobTitle"
+                                              For="@(() => UserForEditVm.JobTitle)" />
+
+                                <MudTextField Label="@Resource.Phone_Number"
+                                              Variant="Variant.Outlined"
+                                @bind-Value="UserForEditVm.PhoneNumber"
+                                              For="@(() => UserForEditVm.PhoneNumber)" />
+                            </MudCardContent>
+                        </MudCard>
+                    </MudTabPanel>
+                    <MudTabPanel Text="@Resource.Account" Icon="@Icons.Material.Filled.Mail">
+                        <MudCard Elevation="25">
+                            <MudCardHeader>
+                                <CardHeaderContent>
+                                    <MudText Typo="Typo.h6">@Resource.User_Account</MudText>
+                                </CardHeaderContent>
+                            </MudCardHeader>
+                            <MudCardContent>
+                                <MudTextField Label="@Resource.Email"
+                                              Disabled="true"
+                                              Variant="Variant.Outlined"
+                                @bind-Value="@CurrentEmail" />
+
+                                <MudTextField Label="@Resource.New_Email"
+                                              ValueChanged="@(CanSendActivationEmail)"
+                                              Variant="Variant.Outlined"
+                                              T="string"
+                                              For="@(() => UserForEditVm.Email)" />
+
+                                <MudSwitch @bind-Checked="@UserForEditVm.MustSendActivationEmail"
+                                           Disabled="SendActivationEmailDisabled && CurrentEmail == UserForEditVm.Email"
+                                           Label="@Resource.Send_Activation_Email"
+                                           Color="Color.Info" />
+
+                                <MudSwitch @bind-Checked="@UserForEditVm.IsSuperAdmin"
+                                           Label="@Resource.SuperAdmin"
+                                           T="bool"
+                                           Color="Color.Warning" />
+
+                                <MudSwitch @bind-Checked="@UserForEditVm.IsSuspended"
+                                           Label="@Resource.Suspend"
+                                           T="bool"
+                                           Color="Color.Error" />
+
+                            </MudCardContent>
+                        </MudCard>
+                    </MudTabPanel>
+
+                    @*  <MudTabPanel Text="@Resource.Password" Icon="@Icons.Material.Filled.VpnKey">
+                <MudCard Elevation="25">
+                <MudCardHeader>
+                <CardHeaderContent>
+                <MudText Typo="Typo.h6">@Resource.Change_User_Password</MudText>
+                </CardHeaderContent>
+                </MudCardHeader>
+                <MudCardContent>
+                <MudSwitch @bind-Checked="@UserForEditVm.SetRandomPassword" Label="@Resource.Set_Random_Password" Color="Color.Info" />
+                <MudTextField Label="@Resource.Password"
+                Variant="Variant.Outlined"
+                @bind-Value="UserForEditVm.Password"
+                For="@(() => UserForEditVm.Password)"
+                InputType="@PasswordInput"
+                Adornment="Adornment.End"
+                AdornmentIcon="@PasswordInputIcon"
+                Disabled="UserForEditVm.SetRandomPassword"
+                OnAdornmentClick="TogglePasswordVisibility" />
+                <MudTextField Label="@Resource.Confirm_Password"
+                Variant="Variant.Outlined"
+                @bind-Value="UserForEditVm.ConfirmPassword"
+                For="@(() => UserForEditVm.ConfirmPassword)"
+                InputType="@PasswordInput"
+                Adornment="Adornment.End"
+                AdornmentIcon="@PasswordInputIcon"
+                Disabled="UserForEditVm.SetRandomPassword"
+                OnAdornmentClick="TogglePasswordVisibility" />
+                </MudCardContent>
+                </MudCard>
+                </MudTabPanel>*@
+
+                    <MudTabPanel Text="@Resource.Roles" Icon="@Icons.Material.Filled.GroupWork" Disabled="UserForEditVm.IsStatic">
+                        <MudCard Elevation="25">
+                            <MudCardHeader>
+                                <CardHeaderContent>
+                                    <MudText Typo="Typo.h6">@Resource.Assign_Roles</MudText>
+                                </CardHeaderContent>
+                            </MudCardHeader>
+                            <MudCardContent>
+                                <UserRolesForEdit RoleItems="AssignedUserRoles" OnAssignedRolesChanged="UpdateUserRoles"></UserRolesForEdit>
+                            </MudCardContent>
+                        </MudCard>
+                    </MudTabPanel>
+                    <MudTabPanel Text="@Resource.Documents" Icon="@Icons.Material.Filled.AttachFile">
+                        <MudCard Elevation="25">
+                            <MudCardHeader>
+                                <CardHeaderContent>
+                                    <MudText Typo="Typo.h6">@Resource.User_Documents</MudText>
+                                </CardHeaderContent>
+                            </MudCardHeader>
+                            <MudCardContent>
+                                <BpMultipleFileUpload @ref="BpMultipleFileUploadReference" UploadFileButtonIcon="@Icons.Material.Filled.CloudUpload"
+                                                      UploadFileButtonName="@Resource.Upload_File"
+                                                      ShowRenameFileDialog="true"
+                                                      MaxFileSize="524288000"
+                                                      OnFileSelected="AttachmentSelected"
+                                                      OnFileUnSelected="AttachmentUnSelected" />
+
+                                <ValidationMessage For="@(() => UserForEditVm.NumberOfAttachments)" />
+                                <UserAttachmentsForEdit AttachmentsList="UserAttachmentList"
+                                                        OnAttachmentRemoved="RemoveFromUserCurrentAttachments">
+                                </UserAttachmentsForEdit>
+                            </MudCardContent>
+                        </MudCard>
+                    </MudTabPanel>
+                </MudTabs>
+            </MudCardContent>
+            <MudCardActions Class="pb-4 pl-4">
+                <MudButton ButtonType="ButtonType.Submit"
+                           Variant="Variant.Filled"
+                           Color="Color.Primary"
+                           Class="ml-auto"
+                           FullWidth="true">@Resource.Save</MudButton>
+            </MudCardActions>
+            <MudDivider />
+            <MudExpansionPanels>
+                <MudExpansionPanel Text="@Resource.Validation_Summary" IsExpanded="true" Disabled="true" HideIcon="true">
+                    <MudText Color="@Color.Error">
+                        <ValidationSummary />
+                    </MudText>
+                </MudExpansionPanel>
+            </MudExpansionPanels>
+        </MudCard>
+</EditForm>

@@ -1,0 +1,47 @@
+﻿<MudHidden Breakpoint="Breakpoint.SmAndUp">
+    <MudGrid Spacing="0">
+        <MudItem xs="3">
+            <MudTooltip Placement="Placement.Right" Text="Official YouTube Channel" Delay="1000">
+                <MudIconButton OnClick="@(e => NavigationService.NavigateToUrlAsync("https://www.youtube.com/watch?v=rcSpC_1RIoM&list=PLGFVwQ6UMec9ZlP-BxQFvYJnbCbw4f545",true))" 
+                               Color="Color.Warning" 
+                               Size="Size.Medium"
+                               Icon="@Icons.Material.Filled.Tv">
+                </MudIconButton>
+            </MudTooltip>
+        </MudItem>
+        <MudItem xs="3">
+            <MudIconButton OnClick="@(() => NavigationService.NavigateToUrlAsync("https://OttApiPlatformwebapi.azurewebsites.net/swagger/index.html", true))"
+                           Color="Color.Success"
+                           Size="Size.Medium"
+                           Icon="@Icons.Material.Outlined.Api">
+            </MudIconButton>
+        </MudItem>
+        <MudItem xs="3">
+            <MudToggleIconButton Toggled="@AppStateManager.PlayAudio"
+                                 ToggledChanged="OnSoundToggledChanged"
+                                 Icon="@Icons.Material.Outlined.PlayCircle" 
+                                 Color="@Color.Info" Title="@Resource.Play"
+                                 ToggledIcon="@Icons.Material.Outlined.StopCircle"
+                                 ToggledColor="@Color.Secondary"
+                                 ToggledTitle="@Resource.Stop" />
+        </MudItem>
+        <MudItem xs="3">
+            <MudTooltip Text="@Resource.Buy_Now" Delay="1000">
+                <MudIconButton OnClick="@(() => NavigationService.NavigateToUrlAsync("https://CMS.net/pricing", true))" Color="Color.Primary" Size="Size.Medium" Icon="@Icons.Material.Outlined.ShoppingCart"></MudIconButton>
+            </MudTooltip>
+        </MudItem>
+    </MudGrid>
+</MudHidden>
+
+@code {
+
+    [Inject] private INavigationService NavigationService { get; set; }
+
+    [Inject] private IAppStateManager AppStateManager { get; set; }
+
+    private void OnSoundToggledChanged(bool toggled)
+    {
+        AppStateManager.PlayAudio = toggled;
+    }
+
+}

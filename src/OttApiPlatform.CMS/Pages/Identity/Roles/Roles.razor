@@ -1,0 +1,60 @@
+﻿@page "/identity/roles"
+@attribute [Authorize]
+
+<MudTable ServerData="@(new Func<TableState, Task<TableData<RoleItem>>>(ServerReload))" Striped="true" Dense="true" Hover="true" FixedHeader="true" FixedFooter="true" @ref="Table">
+    <ToolBarContent>
+        <MudText Typo="Typo.h5" Color="Color.Primary">@Resource.Roles</MudText>
+        <MudSpacer /> 
+        <MudTextField T="string"
+                      Immediate="true"
+                      ValueChanged="@(FilterRoles)"
+                      Placeholder="@Resource.Search"
+                      Adornment="Adornment.Start"
+                      AdornmentIcon="@Icons.Material.Filled.Search"
+                      IconSize="Size.Small" Class="mt-0">
+        </MudTextField>
+
+        <MudFab Style="margin-left:20px;margin-top:10px"
+                Color="Color.Primary"
+                Size="Size.Small"
+                StartIcon="@Icons.Material.Filled.Add"
+                OnClick="AddRole" />
+    </ToolBarContent>
+    <HeaderContent>
+        <MudTh><MudTableSortLabel SortLabel="Name" T="RoleItem" InitialDirection="SortDirection.Ascending">@Resource.Name</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortLabel="IsStatic" T="RoleItem">@Resource.Is_Static</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortLabel="IsDefault" T="RoleItem">@Resource.Is_Default</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortLabel="CreatedOn" T="RoleItem">@Resource.Created_On</MudTableSortLabel></MudTh>
+        <MudTh>@Resource.Options</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Name">@context.Name</MudTd>
+        <MudTd DataLabel="IsStatic">@context.IsStatic</MudTd>
+        <MudTd DataLabel="IsDefault">@context.IsDefault</MudTd>
+        <MudTd DataLabel="CreatedOn">@context.CreatedOn</MudTd>
+        <MudTd>
+            <MudButtonGroup Color="Color.Primary" Variant="Variant.Text">
+                <MudButton Variant="Variant.Filled"
+                           StartIcon="@Icons.Material.Filled.Edit"
+                           Size="Size.Small"
+                           Color="Color.Default"
+                           Disabled="context.IsStatic"
+                           OnClick="@(() => EditRole(context.Id))">
+                    @Resource.Edit
+                </MudButton>
+
+                <MudButton Variant="Variant.Filled"
+                           StartIcon="@Icons.Material.Filled.Delete"
+                           Size="Size.Small"
+                           Color="Color.Error"
+                           Disabled="context.IsStatic"
+                           OnClick="@(() => DeleteRole(context.Id))">
+                    @Resource.Delete
+                </MudButton>
+            </MudButtonGroup>
+        </MudTd>
+    </RowTemplate>
+    <PagerContent>
+        <MudTablePager RowsPerPageString="@Resource.Rows_Per_Page" />
+    </PagerContent>
+</MudTable>

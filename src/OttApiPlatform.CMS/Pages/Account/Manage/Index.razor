@@ -1,0 +1,24 @@
+﻿@page "/account/manage/index"
+@attribute [Authorize]
+
+<MudText Typo="Typo.h5" Color="Color.Primary" Class="mb-4">@Resource.My_Account</MudText>
+<MudTabs KeepPanelsAlive="true" Elevation="25" Color="Color.Transparent" Rounded="true" PanelClass="mt-6">
+    <MudTabPanel Text="@Resource.Avatar" Icon="@Icons.Material.Filled.Photo">
+        <Avatar />
+    </MudTabPanel>
+    <MudTabPanel Text="@Resource.Profile" Icon="@Icons.Material.Filled.Person">
+        <Profile />
+    </MudTabPanel>
+    <MudTabPanel Text="@Resource.Email" Icon="@Icons.Material.Filled.Mail">
+        <ChangeEmail />
+    </MudTabPanel>
+    <MudTabPanel Text="@Resource.Password" Icon="@Icons.Material.Filled.VpnKey">
+        <ChangePassword />
+    </MudTabPanel>
+    <MudTabPanel Text="@Resource.Personal_Data" Icon="@Icons.Material.Filled.PrivacyTip">
+        <PersonalData />
+    </MudTabPanel>
+    <MudTabPanel Text="@Resource.Two_Factor_Authentication" Icon="@Icons.Material.Filled.Security">
+        <TwoFactorAuthentication />
+    </MudTabPanel>
+</MudTabs>

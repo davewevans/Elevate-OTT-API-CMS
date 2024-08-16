@@ -1,0 +1,31 @@
+﻿@layout AccountLayout
+@page "/account/resendEmailConfirmation"
+
+<EditForm Model="@ResendEmailConfirmationCommand" OnValidSubmit="ResendConfirmation">
+    <EditContextApiExceptionFallback @ref="EditContextApiExceptionFallback" />
+    <FluentValidationValidator />
+    <MudText Typo="Typo.h4" GutterBottom="true">@Resource.Resend_Email_Confirmation</MudText>
+
+    <MudTextField Label="@Resource.Email"
+                  Variant="Variant.Outlined"
+                  @bind-Value="ResendEmailConfirmationCommand.Email"
+                  For="@(() => ResendEmailConfirmationCommand.Email)" />
+    <MudDivider />
+
+    <MudButton ButtonType="ButtonType.Submit"
+               Style="margin-top: 4px"
+               Variant="Variant.Filled"
+               Color="Color.Primary"
+               Size="Size.Large"
+               FullWidth="true">
+        @Resource.Resend
+    </MudButton>
+    <MudExpansionPanels>
+        <MudExpansionPanel Text="@Resource.Validation_Summary" IsExpanded="true" Disabled="true" HideIcon="true">
+            <MudText Color="@Color.Error">
+                <ValidationSummary />
+            </MudText>
+        </MudExpansionPanel>
+    </MudExpansionPanels>
+    <MudLink Href="/account/register">@Resource.Register</MudLink> | <MudLink Href="/account/login">@Resource.Sign_in</MudLink>
+</EditForm>

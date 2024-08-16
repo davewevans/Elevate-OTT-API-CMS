@@ -1,0 +1,18 @@
+﻿.validation-message {
+    color: #f44336;
+    margin: 0;
+    font-size: .8rem;
+    margin-top: 3px;
+    text-align: start;
+    font-weight: 400;
+    line-height: 1.66;
+    letter-spacing: .03333em;
+}
+
+.mud-snackbar-location-bottom-left {
+    bottom: 50px !important;
+}
+
+.mud-snackbar-location-bottom-right {
+    bottom: 50px !important;
+}

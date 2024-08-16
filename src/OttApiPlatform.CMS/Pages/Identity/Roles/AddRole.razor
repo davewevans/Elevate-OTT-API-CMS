@@ -1,0 +1,98 @@
+﻿@page "/identity/roles/AddRole"
+@attribute [Authorize]
+
+<MudText Typo="Typo.h5" Color="Color.Primary" Class="mb-4">@Resource.Add_Role</MudText>
+<EditForm Model="CreateRoleCommand" OnValidSubmit="SubmitForm">
+    <EditContextApiExceptionFallback @ref="EditContextApiExceptionFallback" />
+    <FluentValidationValidator />
+    <MudCard>
+        <MudCardContent>
+            <MudTabs KeepPanelsAlive="true" Elevation="25" Color="Color.Transparent" Rounded="true" PanelClass="mt-6">
+                <MudTabPanel Text="@Resource.Role" Icon="@Icons.Material.Filled.Group">
+                    <MudCard Elevation="25">
+                        <MudCardHeader>
+                            <CardHeaderContent>
+                                <MudText Typo="Typo.h6">@Resource.Add_Role</MudText>
+                            </CardHeaderContent>
+                        </MudCardHeader>
+                        <MudCardContent>
+                            <MudTextField Label="@Resource.Role_Name"
+                                          Variant="Variant.Outlined"
+                                          @bind-Value="CreateRoleCommand.Name"
+                                          For="@(() => CreateRoleCommand.Name)" />
+
+                            <MudSwitch @bind-Checked="@CreateRoleCommand.IsDefault"
+                                       Label="@Resource.Is_Default"
+                                       Color="Color.Info" />
+                        </MudCardContent>
+                    </MudCard>
+                </MudTabPanel>
+                <MudTabPanel Text="@Resource.Permissions" Icon="@Icons.Material.Filled.AccountTree">
+                    <MudCard Elevation="25">
+                        <MudCardHeader>
+                            <CardHeaderContent>
+                                <MudText Typo="Typo.h6">@Resource.Assign_Permissions_to <MudChip Text="purple" Color="Color.Primary" Label="true">@(CreateRoleCommand.Name?.ToUpper())</MudChip></MudText>
+                                </CardHeaderContent>
+                            </MudCardHeader>
+                            <MudCardContent>
+                                <MudSwitch T="bool"
+                                       Checked="LoadingOnDemand"
+                                       CheckedChanged="InitializeTree"
+                                       Label="@Resource.Loading_On_Demand"
+                                       Color="Color.Info" />
+                                <MudDivider />
+                            @if (LoadingOnDemand)
+                            {
+                                <MudTreeView @bind-SelectedValues="SelectedPermissionItems"
+                                         Items="PermissionItems"
+                                         ServerData="LoadServerData"
+                                         MultiSelection="true">
+                                    <ItemTemplate Context="permissionItem">
+                                        <MudTreeViewItem CanExpand="true"
+                                                         Items="@permissionItem.Permissions.ToHashSet()"
+                                                         Value="@permissionItem"
+                                                         Text="@permissionItem.Name"
+                                                         Icon="@(permissionItem.IsCustomPermission ? Icons.Material.TwoTone.ColorLens : Icons.Material.Filled.Security)"
+                                                         LoadingIconColor="Color.Info" />
+                                    </ItemTemplate>
+                                </MudTreeView>
+                            }
+                            else
+                            {
+                                <MudTreeView @bind-SelectedValues="SelectedPermissionItems"
+                                         Items="PermissionItems"
+                                         MultiSelection="true">
+                                    <ItemTemplate Context="permissionItem">
+                                        <MudTreeViewItem CanExpand="@permissionItem.HasChildren"
+                                                         Items="@permissionItem.Permissions.ToHashSet()"
+                                                         Value="@permissionItem"
+                                                         Text="@permissionItem.Name"
+                                                         Icon="@(permissionItem.IsCustomPermission ? Icons.Material.TwoTone.ColorLens : Icons.Material.Filled.Security)"
+                                                         LoadingIconColor="Color.Info" />
+                                    </ItemTemplate>
+                                </MudTreeView>
+                            }
+                        </MudCardContent>
+                    </MudCard>
+                </MudTabPanel>
+            </MudTabs>
+        </MudCardContent>
+        <MudCardActions Class="pb-4 pl-4">
+            <MudButton ButtonType="ButtonType.Submit"
+                       Variant="Variant.Filled"
+                       Color="Color.Primary"
+                       Class="ml-auto"
+                       FullWidth="true">
+                @Resource.Save
+            </MudButton>
+        </MudCardActions>
+        <MudDivider />
+        <MudExpansionPanels>
+            <MudExpansionPanel Text="@Resource.Validation_Summary" IsExpanded="true" Disabled="true" HideIcon="true">
+                <MudText Color="@Color.Error">
+                    <ValidationSummary />
+                </MudText>
+            </MudExpansionPanel>
+        </MudExpansionPanels>
+    </MudCard>
+</EditForm>

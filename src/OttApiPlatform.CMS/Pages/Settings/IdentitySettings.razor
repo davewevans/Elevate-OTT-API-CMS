@@ -1,0 +1,91 @@
+﻿@page "/settings/identitySettings"
+@attribute [Authorize]
+
+<MudText Typo="Typo.h5" Color="Color.Primary" Class="mb-4">@Resource.Identity_Settings</MudText>
+<EditForm Model="IdentitySettingsForEditVm" OnValidSubmit="SubmitForm">
+    <EditContextApiExceptionFallback @ref="EditContextApiExceptionFallback" />
+    <FluentValidationValidator />
+    <MudHidden @bind-Value="IdentitySettingsForEditVm.UserSettingsForEdit.Id" />
+    <MudHidden @bind-Value="IdentitySettingsForEditVm.LockoutSettingsForEdit.Id" />
+    <MudHidden @bind-Value="IdentitySettingsForEditVm.PasswordSettingsForEdit.Id" />
+    <MudCard>
+        <MudCardContent>
+            <MudHidden @bind-Value="IdentitySettingsForEditVm.SignInSettingsForEdit.Id" />
+            <MudTabs KeepPanelsAlive="true" Elevation="25" Color="Color.Transparent" Rounded="true" PanelClass="mt-6">
+                <MudTabPanel Text="@Resource.User_Settings" Icon="@Icons.Material.Filled.Person">
+                    <MudCard Elevation="25">
+                        <MudCardHeader>
+                            <CardHeaderContent>
+                                <MudText Typo="Typo.h6">@Resource.User_Settings</MudText>
+                            </CardHeaderContent>
+                        </MudCardHeader>
+                        <MudCardContent>
+                            <MudTextField Label="@Resource.Allowed_username_characters"
+                                          Variant="Variant.Outlined"
+                                          @bind-Value="IdentitySettingsForEditVm.UserSettingsForEdit.AllowedUserNameCharacters"
+                                          For="@(() => IdentitySettingsForEditVm.UserSettingsForEdit.AllowedUserNameCharacters)" />
+
+                            <MudSwitch @bind-Checked="@IdentitySettingsForEditVm.UserSettingsForEdit.NewUsersActiveByDefault"
+                                       Label="@Resource.New_Registered_Users_are_Active_by_Default"
+                                       Color="Color.Info" />
+                        </MudCardContent>
+                    </MudCard>
+                </MudTabPanel>
+                <MudTabPanel Text="@Resource.Sign_in_Settings" Icon="@Icons.Material.Filled.Forward">
+                    <MudCard Elevation="25">
+                        <MudCardHeader>
+                            <CardHeaderContent>
+                                <MudText Typo="Typo.h6">@Resource.Sign_in_Settings</MudText>
+                            </CardHeaderContent>
+                        </MudCardHeader>
+                        <MudCardContent>
+                            <MudSwitch @bind-Checked="@IdentitySettingsForEditVm.SignInSettingsForEdit.RequireConfirmedAccount" Label="@Resource.Require_Confirmed_Account" Color="Color.Info" />
+                        </MudCardContent>
+                    </MudCard>
+                </MudTabPanel>
+                <MudTabPanel Text="@Resource.Password_Settings" Icon="@Icons.Material.Filled.VpnKey">
+                    <MudCard Elevation="25">
+                        <MudCardHeader>
+                            <CardHeaderContent>
+                                <MudText Typo="Typo.h6">@Resource.Password_Settings</MudText>
+                            </CardHeaderContent>
+                        </MudCardHeader>
+                        <MudCardContent>
+                            <MudTextField InputType="InputType.Number" Label="@Resource.Required_Length" Variant="Variant.Outlined" @bind-Value="IdentitySettingsForEditVm.PasswordSettingsForEdit.RequiredLength" For="@(() => IdentitySettingsForEditVm.PasswordSettingsForEdit.RequiredLength)" />
+                            <MudTextField InputType="InputType.Number" Label="@Resource.Required_Unique_Characters" Variant="Variant.Outlined" @bind-Value="IdentitySettingsForEditVm.PasswordSettingsForEdit.RequiredUniqueChars" For="@(() => IdentitySettingsForEditVm.PasswordSettingsForEdit.RequiredUniqueChars)" />
+                            <MudSwitch @bind-Checked="@IdentitySettingsForEditVm.PasswordSettingsForEdit.RequireDigit" Label="@Resource.Require_Digits" Color="Color.Info" />
+                            <MudSwitch @bind-Checked="@IdentitySettingsForEditVm.PasswordSettingsForEdit.RequireLowercase" Label="@Resource.Require_Lowercase_Characters" Color="Color.Info" />
+                            <MudSwitch @bind-Checked="@IdentitySettingsForEditVm.PasswordSettingsForEdit.RequireNonAlphanumeric" Label="@Resource.Require_Non_Alphanumeric" Color="Color.Info" />
+                            <MudSwitch @bind-Checked="@IdentitySettingsForEditVm.PasswordSettingsForEdit.RequireUppercase" Label="@Resource.Require_Uppercase_Characters" Color="Color.Info" />
+                        </MudCardContent>
+                    </MudCard>
+                </MudTabPanel>
+                <MudTabPanel Text="@Resource.Lockout_Settings" Icon="@Icons.Material.Filled.LockOpen">
+                    <MudCard Elevation="25">
+                        <MudCardHeader>
+                            <CardHeaderContent>
+                                <MudText Typo="Typo.h6">@Resource.Lockout_Settings</MudText>
+                            </CardHeaderContent>
+                        </MudCardHeader>
+                        <MudCardContent>
+                            <MudSwitch @bind-Checked="@IdentitySettingsForEditVm.LockoutSettingsForEdit.AllowedForNewUsers" Label="@Resource.Allowed_for_new_users" Color="Color.Info" />
+                            <MudTextField InputType="InputType.Number" Label="@Resource.Default_lockout_time_span" Variant="Variant.Outlined" @bind-Value="IdentitySettingsForEditVm.LockoutSettingsForEdit.DefaultLockoutTimeSpan" For="@(() => IdentitySettingsForEditVm.LockoutSettingsForEdit.DefaultLockoutTimeSpan)" />
+                            <MudTextField InputType="InputType.Number" Label="@Resource.Maximum_Failed_Access_Attempts" Variant="Variant.Outlined" @bind-Value="IdentitySettingsForEditVm.LockoutSettingsForEdit.MaxFailedAccessAttempts" For="@(() => IdentitySettingsForEditVm.LockoutSettingsForEdit.MaxFailedAccessAttempts)" />
+                        </MudCardContent>
+                    </MudCard>
+                </MudTabPanel>
+            </MudTabs>
+        </MudCardContent>
+        <MudCardActions Class="pb-4 pl-4">
+            <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto" FullWidth="true">@Resource.Save</MudButton>
+        </MudCardActions>
+        <MudDivider />
+        <MudExpansionPanels>
+            <MudExpansionPanel Text="@Resource.Validation_Summary" IsExpanded="true" Disabled="true" HideIcon="true">
+                <MudText Color="@Color.Error">
+                    <ValidationSummary />
+                </MudText>
+            </MudExpansionPanel>
+        </MudExpansionPanels>
+    </MudCard>
+</EditForm>

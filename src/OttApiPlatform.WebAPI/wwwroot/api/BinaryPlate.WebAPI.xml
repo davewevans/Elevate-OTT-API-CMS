@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OttApiPlatform.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="P:OttApiPlatform.WebAPI.Controllers.ApiController.Mediator">
+            <summary>
+            A protected property to access the instance of IMediator.
+            </summary>
+        </member>
+        <member name="M:OttApiPlatform.WebAPI.Controllers.ApiController.TryGetResult``1(OttApiPlatform.Application.Common.Models.Envelope{``0})">
+            <summary>
+            Tries to get the result from the specified envelope.
+            </summary>
+            <typeparam name="T">The type of the payload in the envelope.</typeparam>
+            <param name="envelope">The envelope containing the payload.</param>
+            <returns>An IActionResult representing the result.</returns>
+        </member>
+        <member name="M:OttApiPlatform.WebAPI.Extensions.AuthMiddlewareExtensions.UseAuth(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Adds authentication and authorization middleware to the application pipeline.
+            </summary>
+            <param name="app">The <see cref="T:Microsoft.AspNetCore.Builder.IApplicationBuilder"/> instance.</param>
+            <returns>The <see cref="T:Microsoft.AspNetCore.Builder.IApplicationBuilder"/> instance.</returns>
+        </member>
+        <member name="M:OttApiPlatform.WebAPI.Extensions.ChallengeMiddlewareExtension.UseChallenge(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            This middleware intercepts unauthorized requests caused by the built-in [Authorize]
+            attribute and sends HTTP 401 Unauthorized status codes.
+            </summary>
+            <param name="builder">The <see cref="T:Microsoft.AspNetCore.Builder.IApplicationBuilder"/> instance.</param>
+            <returns>
+            The <see cref="T:Microsoft.AspNetCore.Builder.IApplicationBuilder"/> instance with the ChallengeMiddleware added to the
+            middleware pipeline.
+            </returns>
+        </member>
+        <member name="M:OttApiPlatform.WebAPI.Extensions.SwaggerMiddlewareExtensions.AddSwaggerApi(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Adds Swagger documentation to the specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.
+            </summary>
+            <param name="services">
+            The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/> to add the Swagger documentation to.
+            </param>
+            <returns>The modified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.</returns>
+        </member>
+        <member name="M:OttApiPlatform.WebAPI.Extensions.SwaggerMiddlewareExtensions.UseSwaggerApi(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Configures Swagger and Swagger UI for the specified <see cref="T:Microsoft.AspNetCore.Builder.IApplicationBuilder"/>.
+            </summary>
+            <param name="app">
+            The <see cref="T:Microsoft.AspNetCore.Builder.IApplicationBuilder"/> to configure Swagger and Swagger UI for.
+            </param>
+            <returns>The modified <see cref="T:Microsoft.AspNetCore.Builder.IApplicationBuilder"/>.</returns>
+        </member>
+        <member name="T:OttApiPlatform.WebAPI.Filters.BpAuthorizeAttribute">
+            <summary>
+            Custom authorization attribute used to check if the current user has permission to access a resource.
+            </summary>
+        </member>
+        <member name="M:OttApiPlatform.WebAPI.Filters.BpAuthorizeAttribute.OnAuthorization(Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext)">
+            <summary>
+            Checks if the current user has permission to access a resource.
+            </summary>
+            <param name="context">The context for the authorization filter.</param>
+        </member>
+        <member name="T:OttApiPlatform.WebAPI.Filters.BpHostAuthorizeAttribute">
+            <summary>
+            Custom authorization attribute used to check if the current host user has permission to access a resource.
+            </summary>
+        </member>
+        <member name="M:OttApiPlatform.WebAPI.Filters.BpHostAuthorizeAttribute.OnAuthorization(Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext)">
+            <summary>
+            Overrides the default authorization behavior to check if the user is a host user.
+            </summary>
+            <param name="context">The context for the authorization filter.</param>
+        </member>
+        <member name="T:OttApiPlatform.WebAPI.Filters.BpTenantAuthorizeAttribute">
+            <summary>
+            Custom authorization attribute used to check if the current tenant user has permission to access
+            a resource.
+            </summary>
+        </member>
+        <member name="M:OttApiPlatform.WebAPI.Filters.BpTenantAuthorizeAttribute.OnAuthorization(Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext)">
+            <summary>
+            Overrides the default authorization behavior to check if the user is a tenant user.
+            </summary>
+            <param name="context">The context for the authorization filter.</param>
+        </member>
+        <member name="M:OttApiPlatform.WebAPI.Managers.TimerManager.Execute(System.Object)">
+            <summary>
+            Execute timer service.
+            </summary>
+            <param name="stateInfo"></param>
+        </member>
+        <member name="M:OttApiPlatform.WebAPI.Middleware.BpExceptionHandlerMiddleware.UseBpExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.Boolean,System.Boolean)">
+            <summary>
+            Adds a global exception handler middleware to the pipeline that handles exceptions thrown
+            from the application and sends a properly formatted response to the client.
+            </summary>
+            <param name="app">The IApplicationBuilder instance.</param>
+            <param name="loggingEnabled">A boolean indicating whether logging is enabled or not.</param>
+            <param name="debuggingEnabled">A boolean indicating whether debugging is enabled or not.</param>
+        </member>
+        <member name="T:OttApiPlatform.WebAPI.Middleware.ChallengeMiddleware">
+            <summary>
+            This middleware enforce tenant access control and intercepts unauthorized requests.
+            </summary>
+        </member>
+        <member name="T:OttApiPlatform.WebAPI.Models.ApiErrorResponse">
+            <summary>
+            Represents an API error response.
+            </summary>
+        </member>
+        <member name="P:OttApiPlatform.WebAPI.Models.ApiErrorResponse.Title">
+            <summary>
+            Gets or sets the title of the error.
+            </summary>
+        </member>
+        <member name="P:OttApiPlatform.WebAPI.Models.ApiErrorResponse.Status">
+            <summary>
+            Gets or sets the HTTP status code of the response.
+            </summary>
+        </member>
+        <member name="P:OttApiPlatform.WebAPI.Models.ApiErrorResponse.Type">
+            <summary>
+            Gets or sets the type of the error.
+            </summary>
+        </member>
+        <member name="P:OttApiPlatform.WebAPI.Models.ApiErrorResponse.Instance">
+            <summary>
+            Gets or sets the instance of the error.
+            </summary>
+        </member>
+        <member name="P:OttApiPlatform.WebAPI.Models.ApiErrorResponse.ErrorMessage">
+            <summary>
+            Gets or sets the error message.
+            </summary>
+        </member>
+        <member name="P:OttApiPlatform.WebAPI.Models.ApiErrorResponse.InnerException">
+            <summary>
+            Gets or sets the inner exception that caused the error.
+            </summary>
+        </member>
+        <member name="P:OttApiPlatform.WebAPI.Models.ApiErrorResponse.StackTrace">
+            <summary>
+            Gets or sets representation of the onDemand frames on the call stack at the time when the
+            current exception was thrown.
+            </summary>
+        </member>
+        <member name="P:OttApiPlatform.WebAPI.Models.ApiErrorResponse.ValidationErrors">
+            <summary>
+            Gets or sets the list of validation errors.
+            </summary>
+        </member>
+        <member name="M:OttApiPlatform.WebAPI.Models.ApiSuccessResponse`1.#ctor(OttApiPlatform.Application.Common.Models.Envelope{`0},Microsoft.AspNetCore.Http.PathString)">
+            <summary>
+            Initializes a new instance of the <see cref="T:OttApiPlatform.WebAPI.Models.ApiSuccessResponse`1"/> class.
+            </summary>
+            <param name="response">The envelope containing the response payload.</param>
+            <param name="path">The request path.</param>
+        </member>
+        <member name="P:OttApiPlatform.WebAPI.Models.ApiSuccessResponse`1.Status">
+            <summary>
+            Gets or sets the HTTP status code.
+            </summary>
+        </member>
+        <member name="P:OttApiPlatform.WebAPI.Models.ApiSuccessResponse`1.Type">
+            <summary>
+            Gets or sets the type of the response.
+            </summary>
+        </member>
+        <member name="P:OttApiPlatform.WebAPI.Models.ApiSuccessResponse`1.Instance">
+            <summary>
+            Gets or sets the instance of the request.
+            </summary>
+        </member>
+        <member name="P:OttApiPlatform.WebAPI.Models.ApiSuccessResponse`1.Payload">
+            <summary>
+            Gets or sets the response payload.
+            </summary>
+        </member>
+        <member name="T:OttApiPlatform.WebAPI.Models.SwaggerParameterAppender">
+            <summary>
+            Adds required header parameters to Swagger operations.
+            </summary>
+        </member>
+        <member name="T:OttApiPlatform.WebAPI.Models.ValidationError">
+            <summary>
+            Represents an error in validation.
+            </summary>
+        </member>
+        <member name="P:OttApiPlatform.WebAPI.Models.ValidationError.Name">
+            <summary>
+            Gets or sets the name of the property that failed validation.
+            </summary>
+        </member>
+        <member name="P:OttApiPlatform.WebAPI.Models.ValidationError.Reason">
+            <summary>
+            Gets or sets the reason why the property failed validation.
+            </summary>
+        </member>
+    </members>
+</doc>

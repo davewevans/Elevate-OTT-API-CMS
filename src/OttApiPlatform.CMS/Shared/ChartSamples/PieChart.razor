@@ -1,0 +1,72 @@
+﻿<MudPaper Elevation="25" Class="pa-4">
+    <MudChart ChartType="ChartType.Pie" InputData="@_data" @bind-SelectedIndex="_index" InputLabels="@_labels" Width="300px" Height="300px" />
+</MudPaper>
+<MudPaper Class="pa-4 mt-2 d-flex justify-center">
+    <MudButton OnClick="AddDataSize" Variant="Variant.Filled" Color="Color.Primary">@Resource.Add</MudButton>
+    <MudButton OnClick="RandomizeData" Variant="Variant.Filled" Class="mx-4">@Resource.Randomize</MudButton>
+    <MudButton OnClick="RemoveDataSize" Variant="Variant.Filled" Color="Color.Secondary">@Resource.Remove</MudButton>
+</MudPaper>
+
+@code {
+
+    private int _index = -1; //default value cannot be 0 -> first selectedindex is 0.
+
+    int _dataSize = 4;
+
+    double[] _data = { 77, 25, 20, 5 };
+
+    string[] _labels = {
+        Resource.Calcium,
+        Resource.Californium,
+        Resource.Carbon,
+        Resource.Cerium,
+        Resource.Cesium,
+        Resource.Chlorine,
+        Resource.Chromium,
+        Resource.Cobalt,
+        Resource.Copernicium,
+        Resource.Copper,
+        Resource.Curium,
+        Resource.Darmstadtium,
+        Resource.Dubnium,
+        Resource.Dysprosium,
+        Resource.Einsteinium,
+        Resource.Erbium,
+        Resource.Europium,
+        Resource.Fermium,
+        Resource.Fluorine,
+        Resource.Francium
+    };
+
+    Random _random = new Random();
+
+    void RandomizeData()
+    {
+        var newData = new double[_dataSize];
+
+        for (var i = 0; i < newData.Length; i++)
+            newData[i] = _random.NextDouble() * 100;
+
+        _data = newData;
+
+        StateHasChanged();
+    }
+
+    void AddDataSize()
+    {
+        if (_dataSize < 20)
+        {
+            _dataSize += 1;
+            RandomizeData();
+        }
+    }
+    void RemoveDataSize()
+    {
+        if (_dataSize > 0)
+        {
+            _dataSize -= 1;
+            RandomizeData();
+        }
+    }
+
+}

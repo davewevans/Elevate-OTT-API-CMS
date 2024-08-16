@@ -1,0 +1,35 @@
+﻿@page "/"
+@attribute [Authorize]
+<MudTabs Elevation="2" KeepPanelsAlive="false" Rounded="true" ApplyEffectsToContainer="true" PanelClass="pa-6">
+    <MudTabPanel Text="@Resource.Realtime_Data">
+        <Dashboard />
+    </MudTabPanel>
+    <MudTabPanel OnClick="CloseHubConnection" Text="@Resource.Data_Export_SignalR_Hangfire">
+        <OttApiPlatform.CMS.Pages.POC.Army.Applicants />
+    </MudTabPanel>
+    <MudTabPanel OnClick="CloseHubConnection" Text="@Resource.Master_Details_Form">
+        <AddApplicant />
+    </MudTabPanel>
+    <MudTabPanel OnClick="CloseHubConnection" Text="@Resource.Global_Settings">
+        <MudTabs KeepPanelsAlive="false" Elevation="4" Rounded="true" Color="@Color.Primary">
+            <MudTabPanel Text="@Resource.Identity_Settings">
+                <div class="mt-2">
+                    <IdentitySettings />
+                </div>
+            </MudTabPanel>
+            <MudTabPanel Text="@Resource.Token_Settings">
+                <div class="mt-2">
+                    <TokenSettings />
+                </div>
+            </MudTabPanel>
+            <MudTabPanel Text="@Resource.File_Storage_Settings">
+                <div class="mt-2">
+                    <FileStorageSettings />
+                </div>
+            </MudTabPanel>
+        </MudTabs>
+    </MudTabPanel>
+    <MudTabPanel OnClick="CloseHubConnection" Text="@Resource.Resources">
+        <Resources />
+    </MudTabPanel>
+</MudTabs>

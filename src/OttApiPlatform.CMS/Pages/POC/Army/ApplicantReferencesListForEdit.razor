@@ -1,0 +1,55 @@
+﻿<MudTable ServerData="@(new Func<TableState, Task<TableData<ApplicantReferenceItem>>>(ServerReload))" Striped="true" Dense="true" Hover="true" FixedHeader="true" FixedFooter="true" @ref="Table">
+    <ToolBarContent>
+        <MudText Typo="Typo.h5" Color="Color.Primary">@Resource.References</MudText>
+        <MudSpacer />
+
+        <MudTextField T="string"
+                      Immediate="true"
+                      TextChanged="@FilterApplicantReferences"
+                      Placeholder="@Resource.Search"
+                      Adornment="Adornment.Start"
+                      AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Small" Class="mt-0">
+        </MudTextField>
+
+        <MudFab Style="margin-left:20px;margin-top:10px"
+                Color="Color.Primary"
+                Size="Size.Small"
+                StartIcon="@Icons.Material.Filled.Add" OnClick="AddApplicantReference" />
+    </ToolBarContent>
+    <HeaderContent>
+        <MudTh><MudTableSortLabel SortLabel="Name" T="ApplicantReferenceItem">@Resource.Name</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortLabel="JobTitle" T="ApplicantReferenceItem">@Resource.Job_Title</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortLabel="Phone" T="ApplicantReferenceItem">@Resource.Phone_Number</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortLabel="CreatedOn" T="ApplicantReferenceItem">@Resource.Created_On</MudTableSortLabel></MudTh>
+        <MudTh>@Resource.Options</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd Style=@(context.IsAddedOrModified ? "color:crimson" : "" ) DataLabel="Name">@context.Name</MudTd>
+        <MudTd Style=@(context.IsAddedOrModified ? "color:crimson" : "" ) DataLabel="JobTitle">@context.JobTitle</MudTd>
+        <MudTd Style=@(context.IsAddedOrModified ? "color:crimson" : "" ) DataLabel="Phone">@context.Phone</MudTd>
+        <MudTd Style=@(context.IsAddedOrModified ? "color:crimson" : "" ) DataLabel="CreatedOn">@context.CreatedOn</MudTd>
+        <MudTd>
+            <MudButtonGroup Color="Color.Primary" Variant="Variant.Text">
+
+                <MudButton Variant="Variant.Filled"
+                           StartIcon="@Icons.Material.Filled.Edit"
+                           Size="Size.Small"
+                           Color="Color.Default"
+                           OnClick="@(() => EditApplicantReference(context.Id))">
+                    @Resource.Edit
+                </MudButton>
+
+                <MudButton Variant="Variant.Filled"
+                           StartIcon="@Icons.Material.Filled.Delete"
+                           Size="Size.Small"
+                           Color="Color.Error"
+                           OnClick="@(() => RemoveApplicantReference(context.Id))">
+                    @Resource.Remove
+                </MudButton>
+            </MudButtonGroup>
+        </MudTd>
+    </RowTemplate>
+    <PagerContent>
+        <MudTablePager RowsPerPageString="@Resource.Rows_Per_Page" />
+    </PagerContent>
+</MudTable>

@@ -1,0 +1,16 @@
+﻿<MudDialog>
+    <TitleContent>
+        <MudText Typo="Typo.h6">
+            <MudIcon Icon="@Icons.Material.Filled.SettingsApplications" Class="mr-3 mb-n1" />
+            @Resource.Disable_Two_Factor_Authentication
+        </MudText>
+    </TitleContent>
+    <DialogContent>
+        <MudAlert Severity="Severity.Info">@Resource.This_action_only_disables_2FA</MudAlert>
+        <MudText Typo="Typo.body2"> @Resource.Disabling_2FA_does_not_change_the_keys_used_in_authenticator_apps. @Resource.If_you_wish_to_change_the_key_used_in_an_authenticator_app_you_should @Resource.reset_your_authenticator_keys.</MudText>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel" Color="Color.Default" Style="float:right" Class="mr-3" Variant="Variant.Filled">@Resource.Cancel</MudButton>
+        <MudButton ButtonType="ButtonType.Submit" Style="float:right" Variant="Variant.Filled" Color="Color.Error" OnClick="DisableAuthenticatorApp">@Resource.Disable_2FA</MudButton>
+    </DialogActions>
+</MudDialog>

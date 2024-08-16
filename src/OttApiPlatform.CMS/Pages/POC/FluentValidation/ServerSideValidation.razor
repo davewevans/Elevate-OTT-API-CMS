@@ -1,0 +1,108 @@
+﻿@page "/poc/fluentValidation/ServerSideValidation"
+
+<MudText Typo="Typo.h5" Color="Color.Primary" Class="mb-4">
+    @Resource.Server_Side_Validation
+    <MudFab OnClick="@TipsToggle" Label="@Resource.Tips" Color="Color.Secondary" StartIcon="@Icons.Material.Filled.TipsAndUpdates" Size="Size.Small" IconSize="Size.Small" Class="ma-2" />
+    <div Class="relative">
+        <MudPopover Open="@IsTipsOpen" Class="px-4 pt-4">
+            <MudElement HtmlTag="h4" Class="mt-4">Server-side validation is the only validation method supported by this form.</MudElement>
+            <MudDivider />
+            <MudElement HtmlTag="h4" Class="mt-4">This form includes conditional validation rules.</MudElement>
+            <MudDivider />
+            <MudElement HtmlTag="h4" Class="mt-4">During server-side validation, the user's input is sent to the server and validated using a Command Validator.</MudElement>
+            <MudDivider />
+            <MudElement HtmlTag="h4" Class="mt-4">The Command Validator uses the <MudLink Typo="Typo.body2" Target="blank" Href="https://fluentvalidation.net/">Fluent Validation library</MudLink> to implement a set of validation rules.</MudElement>
+            <MudDivider />
+            <MudElement HtmlTag="h4" Class="mt-4">After validation on the server, dynamically generated error messages appear below each related field to provide feedback to the user.</MudElement>
+            <MudDivider />
+            <MudElement HtmlTag="h4" Class="mt-4">It's recommended to use server-side validation to protect against malicious users who could bypass your client-side Blazor app and submit harmful input to the server.</MudElement>
+            <MudDivider />
+            <MudButton OnClick="@TipsToggle" Variant="Variant.Filled" Color="Color.Error" Class="ml-auto mr-n3 mb-1 mt-4">@Resource.Close</MudButton>
+        </MudPopover>
+    </div>
+</MudText>
+<EditForm Model="CreateApplicantCommand" OnValidSubmit="SubmitForm">
+    <EditContextApiExceptionFallback @ref="EditContextApiExceptionFallback" />
+    <MudCard>
+        <MudCardContent>
+            <MudNumericField Label="@Resource.SSN"
+                             Variant="Variant.Outlined"
+                             @bind-Value="CreateApplicantCommand.Ssn"
+                             For="@(() => CreateApplicantCommand.Ssn)" />
+
+            <MudTextField Label="@Resource.First_Name"
+                          Variant="Variant.Outlined"
+                          @bind-Value="CreateApplicantCommand.FirstName"
+                          For="@(() => CreateApplicantCommand.FirstName)" />
+
+            <MudTextField Label="@Resource.Last_Name"
+                          Variant="Variant.Outlined"
+                          @bind-Value="CreateApplicantCommand.LastName"
+                          For="@(() => CreateApplicantCommand.LastName)" />
+
+            <MudDatePicker Label="@Resource.Date_of_Birth"
+                           Variant="Variant.Outlined"
+                           @bind-Date="CreateApplicantCommand.DateOfBirth"
+                           For="@(() => CreateApplicantCommand.DateOfBirth)"
+                           Rounded="true"
+                           Elevation="12"
+                           ShowWeekNumbers="true"
+                           Editable="true"
+                           OpenTo="OpenTo.Year" />
+            <MudCard>
+                <MudCardHeader>
+                    <CardHeaderContent>
+                        <MudText Typo="Typo.h6">@Resource.Body_Mass_Index</MudText>
+                    </CardHeaderContent>
+                </MudCardHeader>
+                <MudCardContent>
+                    <MudGrid>
+                        <MudItem xs="6">
+                            <MudNumericField Label="@Resource.Height"
+                                             Variant="Variant.Outlined"
+                                             @bind-Value="CreateApplicantCommand.Height"
+                                             For="@(() => CreateApplicantCommand.Height)" />
+
+                            <MudNumericField Label="@Resource.Weight"
+                                             Variant="Variant.Outlined"
+                                             @bind-Value="CreateApplicantCommand.Weight"
+                                             For="@(() => CreateApplicantCommand.Weight)" />
+
+                            <MudNumericField Label="@Resource.BMI"
+                                             Variant="Variant.Outlined"
+                                             @bind-Value="CreateApplicantCommand.Bmi"
+                                             For="@(() => CreateApplicantCommand.Bmi)"
+                                             Disabled="true" />
+                            <br />
+                            <MudAlert Elevation="2" Severity="Severity.Info">@Resource.BMI_Info</MudAlert>
+                            <br />
+                            <MudAlert Elevation="2" Severity="Severity.Info">@Resource.BMI_Details</MudAlert>
+                        </MudItem>
+                        <MudItem xs="6">
+                            <MudPaper Class="d-flex align-center justify-center mud-width-full py-8">
+                                <img width="95%" src="/images/bmi.jpg" />
+                            </MudPaper>
+                        </MudItem>
+                    </MudGrid>
+                </MudCardContent>
+            </MudCard>
+        </MudCardContent>
+        <MudCardActions Class="pb-4 pl-4">
+            <MudButton ButtonType="ButtonType.Submit"
+                       Variant="Variant.Filled"
+                       Color="Color.Primary"
+                       Class="ml-auto"
+                       FullWidth="true">
+                @Resource.Save
+            </MudButton>
+        </MudCardActions>
+        <MudDivider />
+        <MudExpansionPanels>
+            <MudExpansionPanel Text="@Resource.Validation_Summary" IsExpanded="true" Disabled="true" HideIcon="true">
+                <MudText Color="@Color.Error">
+                    <ValidationSummary />
+                </MudText>
+            </MudExpansionPanel>
+        </MudExpansionPanels>
+    </MudCard>
+</EditForm>

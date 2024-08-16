@@ -1,0 +1,117 @@
+﻿<AuthorizeView>
+    <Authorized>
+        <MudLink Underline="Underline.None" Href="account/manage/index">
+
+        <PersonCard FullName="@context.User.Claims.FirstOrDefault(c=>c.Type == "FullName")?.Value"
+                    AvatarUri="@context.User.Claims.FirstOrDefault(c=>c.Type == "AvatarUri")?.Value"
+                    JobTitle="@context.User.Claims.FirstOrDefault(c=>c.Type == "JobTitle")?.Value" />
+        </MudLink>
+    </Authorized>
+    <NotAuthorized>
+        <MudHidden Breakpoint="Breakpoint.SmAndUp">
+            <MudGrid>
+                <MudItem xs="6">
+                    <MudChip Href="/account/login"
+                             Icon="@Icons.Material.Filled.Login"
+                             Color="Color.Info">
+                        @Resource.Login
+                    </MudChip>
+                </MudItem>
+                <MudItem xs="6">
+                    <MudChip Href="/account/register"
+                             Icon="@Icons.Material.Filled.PersonAdd"
+                             Color="Color.Success">
+                        @Resource.Register
+                    </MudChip>
+                </MudItem>
+            </MudGrid>
+        </MudHidden>
+    </NotAuthorized>
+</AuthorizeView>
+
+<MobileButtons />
+
+<MudNavMenu>
+    <AuthorizeView>
+        @if (context.User.HasClaim(c => c.Type == "TenantMode" && c.Value.ToLower() == "MultiTenant".ToLower()))
+        {
+            @if (context.User.HasClaim(c => c.Type == "IsHostUser" && c.Value.ToLower() == "true") && context.User.HasPermission("Tenants"))
+            {
+                <MudNavGroup Title="@Resource.Tenants_Management" Icon="@Icons.Material.Outlined.AccountTree" IconColor="Color.Primary" Expanded="true">
+                    <MudNavLink Href="tenants" Icon="@Icons.Material.Outlined.Group">@Resource.Tenants</MudNavLink>
+                </MudNavGroup>
+            }
+        }
+    </AuthorizeView>
+    <MudNavGroup Title="@Resource.Users_Management" Icon="@Icons.Material.Outlined.Security" IconColor="Color.Primary" Expanded="true">
+        <MudNavLink Href="identity/users" Icon="@Icons.Material.Outlined.Group">@Resource.Users</MudNavLink>
+        <MudNavLink Href="identity/roles" Icon="@Icons.Material.Outlined.GroupWork">@Resource.Roles</MudNavLink>
+    </MudNavGroup>
+
+    <MudNavGroup Title="@Resource.Settings" Icon="@Icons.Material.Outlined.Settings" IconColor="Color.Primary" Expanded="true">
+        <MudNavLink Href="settings/identitySettings" Icon="@Icons.Material.Outlined.AdminPanelSettings">@Resource.Identity_Settings</MudNavLink>
+        <MudNavLink Href="settings/tokenSettings" Icon="@Icons.Material.Outlined.Lock">@Resource.Token_Settings</MudNavLink>
+        <MudNavLink Href="settings/fileStorageSettings" Icon="@Icons.Material.Outlined.Cloud">@Resource.File_Storage_Settings</MudNavLink>
+    </MudNavGroup>
+
+    <MudNavGroup Title="@Resource.Reporting" Icon="@Icons.Material.Outlined.PictureAsPdf" IconColor="Color.Primary" Expanded="true">
+        <MudNavLink Href="/reporting/reports" Icon="@Icons.Material.Outlined.QueryStats">@Resource.Reports</MudNavLink>
+    </MudNavGroup>
+
+    <MudNavGroup Title="@Resource.Proof_of_Concepts" Icon="@Icons.Material.Outlined.Movie" IconColor="Color.Primary" Expanded="false">
+        <MudNavGroup Title="@Resource.Army" Icon="@Icons.Material.Outlined.Warning" IconColor="Color.Primary" Expanded="false">
+            <MudNavLink Href="/poc/army/AddApplicant" Icon="@Icons.Material.Outlined.MilitaryTech">@Resource.Join_the_Military</MudNavLink>
+            <MudNavLink Href="/poc/army/applicants/" Icon="@Icons.Material.Outlined.Groups">@Resource.Military_Applicants</MudNavLink>
+        </MudNavGroup>
+
+        <MudNavGroup Title="@Resource.Fluent_Validation" Icon="@Icons.Material.Outlined.FactCheck" IconColor="Color.Primary" Expanded="false">
+            <MudNavLink Href="/poc/fluentValidation/clientSideValidation" Icon="@Icons.Material.Outlined.Web">@Resource.Client_Side_Validation</MudNavLink>
+            <MudNavLink Href="/poc/fluentValidation/serverSideValidation" Icon="@Icons.Material.Outlined.Dns">@Resource.Server_Side_Validation</MudNavLink>
+        </MudNavGroup>
+
+        <MudNavGroup Title="@Resource.Authorization" Icon="@Icons.Material.Outlined.AdminPanelSettings" IconColor="Color.Primary" Expanded="false">
+            <MudNavLink Href="/poc/authorization/overview" Icon="@Icons.Material.Outlined.Info">@Resource.Overview</MudNavLink>
+            <MudNavLink Href="/poc/authorization/tokenInfo" Icon="@Icons.Material.Outlined.GeneratingTokens">@Resource.Token_Info</MudNavLink>
+            <MudNavLink Href="/poc/authorization/clientSideAuthorization/applicants/" Icon="@Icons.Material.Outlined.Web">@Resource.Client_Side_Authorization</MudNavLink>
+            <MudNavLink Href="/poc/authorization/serverSideAuthorization/applicants/" Icon="@Icons.Material.Outlined.Dns">@Resource.Server_Side_Authorization</MudNavLink>
+        </MudNavGroup>
+
+        <MudNavGroup Title="@Resource.Localization" Icon="@Icons.Material.Outlined.Language" IconColor="Color.Primary" Expanded="false">
+            <MudNavGroup Title=@Resource.Properties Icon="@Icons.Material.Outlined.TableRows" IconColor="Color.Primary" Expanded="false">
+                <MudNavLink Href="/poc/Localization/properties/cultureInfo" Icon="@Icons.Material.Outlined.Flag">@Resource.Culture_Info</MudNavLink>
+                <MudNavLink Href="/poc/Localization/properties/cultureTimeZoneInfo" Icon="@Icons.Material.Outlined.Map">@Resource.Time_Zone_Info</MudNavLink>
+                <MudNavLink Href="/poc/Localization/properties/cultureDateTimeFormat" Icon="@Icons.Material.Outlined.CalendarViewMonth">@Resource.DateTime_Format</MudNavLink>
+            </MudNavGroup>
+            <MudNavLink Href="/poc/Localization/resources" Icon="@Icons.Material.Outlined.Translate">@Resource.Resources</MudNavLink>
+        </MudNavGroup>
+
+        <MudNavGroup Title="@Resource.Error_Pages" Icon="@Icons.Material.Outlined.ErrorOutline" IconColor="Color.Primary" Expanded="false">
+            <MudNavLink Href="pages/error/401" Icon="@Icons.Material.Outlined.FrontHand">401</MudNavLink>
+            <MudNavLink Href="pages/error/404" Icon="@Icons.Material.Outlined.BrokenImage">404</MudNavLink>
+        </MudNavGroup>
+
+        <MudNavLink Href="/poc/GlobalVariable" Icon="@Icons.Material.Outlined.AirplaneTicket">@Resource.Global_Variable</MudNavLink>
+    </MudNavGroup>
+
+    <MudNavGroup Title="@Resource.App_Info" Icon="@Icons.Material.Outlined.HelpOutline" IconColor="Color.Primary" Expanded="false">
+        <MudNavLink Href="https://CMS.net/faq" Target="_blank" Icon="@Icons.Material.Outlined.QuestionAnswer">@Resource.FAQ</MudNavLink>
+        <MudNavLink Href="appInfo/features" Icon="@Icons.Material.Outlined.Checklist">@Resource.Features</MudNavLink>
+        <MudNavLink Href="appInfo/installation" Icon="@Icons.Material.Outlined.GetApp">@Resource.Installation</MudNavLink>
+    </MudNavGroup>
+</MudNavMenu>
+
+@*This is a sample code on how to hide/show the nav menu items according to user's permissions*@
+
+<AuthorizeView>
+    <Authorized>
+        <MudNavMenu>
+            @if (context.User.HasPermission("TestPermission"))
+            {
+                <MudNavGroup Title="@Resource.Users_Management" Icon="@Icons.Material.Outlined.Security" IconColor="Color.Primary" Expanded="true">
+                    <MudNavLink Href="users" Icon="@Icons.Material.Outlined.Group">TestMenuItem01</MudNavLink>
+                    <MudNavLink Href="roles" Icon="@Icons.Material.Outlined.GroupWork">TestMenuItem02</MudNavLink>
+                </MudNavGroup>
+            }
+        </MudNavMenu>
+    </Authorized>
+</AuthorizeView>

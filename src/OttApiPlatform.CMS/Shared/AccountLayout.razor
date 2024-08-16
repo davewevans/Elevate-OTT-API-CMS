@@ -1,0 +1,33 @@
+﻿@inherits LayoutComponentBase
+
+<MudRTLProvider RightToLeft="@IsRightToLeft">
+    <MudThemeProvider Theme="DefaultTheme" @bind-IsDarkMode="@IsDarkMode" />
+    <MudSnackbarProvider />
+    <MudDialogProvider FullWidth="false"
+                       MaxWidth="MaxWidth.Large"
+                       CloseButton="true"
+                       DisableBackdropClick="true"
+                       NoHeader="false"
+                       Position="DialogPosition.Center"
+                       CloseOnEscapeKey="true" />
+    <AppOverlay OverlayVisible="@AppStateManager.OverlayVisible"/>
+    <MudLayout>
+        <MudAppBar>
+            <AppLogo IsDarkMode="IsDarkMode"/>
+            <MudSpacer/>
+            <MudIconButton Color="Color.Inherit"
+                           OnClick="@(e => DarkModeToggle())"
+                           Size="Size.Medium"
+                           Icon="@(IsDarkMode ? "fa fa-sun-o" : "fa fa-moon-o")"/>
+            <LanguageSwitcher/>
+        </MudAppBar>
+        <MudMainContent>
+            <GlobalSpinner Visible="AppStateManager.OverlayVisible"></GlobalSpinner>
+            <MudContainer MaxWidth="MaxWidth.Small" Class="d-flex align-center" Style="height: 100vh;">
+                <MudPaper Elevation="25" Class="pa-8" Width="100%" MaxWidth="500px">
+                    @Body
+                </MudPaper>
+            </MudContainer>
+        </MudMainContent>
+    </MudLayout>
+</MudRTLProvider>

@@ -1,0 +1,2232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Abbreviated_Day_Names" xml:space="preserve">
+    <value>संक्षिप्त दिन के नाम</value>
+  </data>
+  <data name="Abbreviated_Month_Genitive_Names" xml:space="preserve">
+    <value>संक्षिप्त महीने जीनिव नाम</value>
+  </data>
+  <data name="Abbreviated_Month_Names" xml:space="preserve">
+    <value>संक्षिप्त महीने के नाम</value>
+  </data>
+  <data name="Access" xml:space="preserve">
+    <value>प्रवेश</value>
+  </data>
+  <data name="Access_Token_TimeSpan" xml:space="preserve">
+    <value>टोकन टाइम्सपैन तक पहुंचें</value>
+  </data>
+  <data name="Account" xml:space="preserve">
+    <value>खाता</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>कार्यों</value>
+  </data>
+  <data name="Activated" xml:space="preserve">
+    <value>सक्रिय</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>जोड़ना</value>
+  </data>
+  <data name="Add_Applicant" xml:space="preserve">
+    <value>आवेदक जोड़ें</value>
+  </data>
+  <data name="Add_Authenticator_App" xml:space="preserve">
+    <value>प्रमाणक ऐप जोड़ें</value>
+  </data>
+  <data name="Add_New_File" xml:space="preserve">
+    <value>नई फ़ाइल जोड़ें</value>
+  </data>
+  <data name="Add_Reference" xml:space="preserve">
+    <value>Reference संदर्भ</value>
+  </data>
+  <data name="Add_Role" xml:space="preserve">
+    <value>भूमिका जोड़ें</value>
+  </data>
+  <data name="Add_Roles" xml:space="preserve">
+    <value>भूमिकाएं जोड़ें</value>
+  </data>
+  <data name="Add_Selected_Roles" xml:space="preserve">
+    <value>चयनित भूमिकाएं जोड़ें</value>
+  </data>
+  <data name="Add_Tenant" xml:space="preserve">
+    <value>किरायेदार जोड़ें</value>
+  </data>
+  <data name="Add_transcripts" xml:space="preserve">
+    <value>ट्रांसक्रिप्ट जोड़ें</value>
+  </data>
+  <data name="Add_User" xml:space="preserve">
+    <value>उपयोगकर्ता जोड़ें</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>सब</value>
+  </data>
+  <data name="Allowed_for_new_users" xml:space="preserve">
+    <value>नए उपयोगकर्ताओं के लिए अनुमति</value>
+  </data>
+  <data name="Allowed_username_characters" xml:space="preserve">
+    <value>उपयोगकर्ता नाम वर्णों की अनुमति</value>
+  </data>
+  <data name="Already_have_an_account" xml:space="preserve">
+    <value>पहले से ही एक खाता है?</value>
+  </data>
+  <data name="AM_Designator" xml:space="preserve">
+    <value>AM नामित</value>
+  </data>
+  <data name="and" xml:space="preserve">
+    <value>और</value>
+  </data>
+  <data name="Android" xml:space="preserve">
+    <value>यंत्र-मानव</value>
+  </data>
+  <data name="Applicant" xml:space="preserve">
+    <value>आवेदक</value>
+  </data>
+  <data name="Applicants" xml:space="preserve">
+    <value>आवेदकों</value>
+  </data>
+  <data name="Apply_for_Military" xml:space="preserve">
+    <value>सेना के लिए आवेदन करें</value>
+  </data>
+  <data name="App_Info" xml:space="preserve">
+    <value>ऐप जानकारी</value>
+  </data>
+  <data name="April" xml:space="preserve">
+    <value>अप्रैल</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_change_the_settings" xml:space="preserve">
+    <value>क्या आप सुनिश्चित हैं कि आप सेटिंग्स को बदलना चाहते हैं?</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_delete_file_name" xml:space="preserve">
+    <value>क्या आप सुनिश्चित हैं कि आप फ़ाइल '{0}' को हटाना चाहते हैं?</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_delete_role_name" xml:space="preserve">
+    <value>क्या आप सुनिश्चित हैं कि आप भूमिका '{0}' को हटाना चाहते हैं?</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_delete_user_name" xml:space="preserve">
+    <value>क्या आप सुनिश्चित हैं कि आप उपयोगकर्ता '{0}' को हटाना चाहते हैं?</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_remove_role_name" xml:space="preserve">
+    <value>क्या आप सुनिश्चित हैं कि आप भूमिका '{0}' को हटाना चाहते हैं?</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_save_applicant" xml:space="preserve">
+    <value>क्या आप सुनिश्चित हैं कि आप आवेदक को बचाना चाहते हैं?</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_save_role" xml:space="preserve">
+    <value>क्या आप सुनिश्चित हैं कि आप भूमिका को बचाना चाहते हैं?</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_save_user_profile" xml:space="preserve">
+    <value>क्या आप सुनिश्चित हैं कि आप उपयोगकर्ता प्रोफ़ाइल को सहेजना चाहते हैं?</value>
+  </data>
+  <data name="Army" xml:space="preserve">
+    <value>सेना</value>
+  </data>
+  <data name="Assigned_Roles" xml:space="preserve">
+    <value>सौंपी गई भूमिकाएं</value>
+  </data>
+  <data name="Assign_Permissions" xml:space="preserve">
+    <value>अनुमतियां असाइन करें</value>
+  </data>
+  <data name="Assign_Roles" xml:space="preserve">
+    <value>भूमिकाएं असाइन करें</value>
+  </data>
+  <data name="August" xml:space="preserve">
+    <value>अगस्त</value>
+  </data>
+  <data name="Authenticator_App" xml:space="preserve">
+    <value>प्रमाणक ऐप</value>
+  </data>
+  <data name="Authenticator_Code" xml:space="preserve">
+    <value>प्रमाणक कोड</value>
+  </data>
+  <data name="Authorization" xml:space="preserve">
+    <value>प्राधिकरण</value>
+  </data>
+  <data name="Authorizing" xml:space="preserve">
+    <value>प्राधिकृत</value>
+  </data>
+  <data name="Avatar" xml:space="preserve">
+    <value>अवतार</value>
+  </data>
+  <data name="Awesome" xml:space="preserve">
+    <value>ग़जब का!</value>
+  </data>
+  <data name="Azure_File_Storage" xml:space="preserve">
+    <value>नीला फ़ाइल भंडारण</value>
+  </data>
+  <data name="before_you_can_log_in_with_a_recovery_code" xml:space="preserve">
+    <value>इससे पहले कि आप एक वसूली कोड के साथ लॉग इन कर सकते हैं।</value>
+  </data>
+  <data name="Biomass" xml:space="preserve">
+    <value>बायोमास</value>
+  </data>
+  <data name="Biomass1" xml:space="preserve">
+    <value>बायोमास</value>
+  </data>
+  <data name="BMI" xml:space="preserve">
+    <value>बीएमआई</value>
+  </data>
+  <data name="BMI_Details" xml:space="preserve">
+    <value>25.0 या उससे अधिक का बीएमआई अधिक वजन है, जबकि स्वस्थ सीमा 18.5 से 24.9 है। बीएमआई ज्यादातर वयस्कों के लिए 18-65 साल लागू होता है ।</value>
+  </data>
+  <data name="BMI_Info" xml:space="preserve">
+    <value>बॉडी मास इंडेक्स एक व्यक्ति की ऊंचाई और वजन का उपयोग करके एक सरल गणना है। सूत्र बीएमआई = किलो/एम2 है जहां किलोग्राम किलोग्राम में एक व्यक्ति का वजन होता है और एम 2 मीटर चुकता में उनकी ऊंचाई होती है ।</value>
+  </data>
+  <data name="Body_Mass_Index" xml:space="preserve">
+    <value>बॉडी मास इंडेक्स</value>
+  </data>
+  <data name="Bottom" xml:space="preserve">
+    <value>नीचे</value>
+  </data>
+  <data name="Browser_Time_Zone" xml:space="preserve">
+    <value>ब्राउज़र समय क्षेत्र!</value>
+  </data>
+  <data name="Buy_Now" xml:space="preserve">
+    <value>अब खरीदें</value>
+  </data>
+  <data name="Bytes" xml:space="preserve">
+    <value>बाइट्स</value>
+  </data>
+  <data name="Calcium" xml:space="preserve">
+    <value>चूना</value>
+  </data>
+  <data name="Calendar" xml:space="preserve">
+    <value>कैलेंडर</value>
+  </data>
+  <data name="Calendar_Week_Rule" xml:space="preserve">
+    <value>कैलेंडर वीक नियम</value>
+  </data>
+  <data name="Californium" xml:space="preserve">
+    <value>कैलिफोरनियम</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>रद्द करना</value>
+  </data>
+  <data name="Cancel_Upload" xml:space="preserve">
+    <value>अपलोड रद्द करें</value>
+  </data>
+  <data name="Carbon" xml:space="preserve">
+    <value>कार्बन</value>
+  </data>
+  <data name="Cerium" xml:space="preserve">
+    <value>सेरियम</value>
+  </data>
+  <data name="Cesium" xml:space="preserve">
+    <value>सीज़ियम</value>
+  </data>
+  <data name="Change_Email" xml:space="preserve">
+    <value>ईमेल बदलें</value>
+  </data>
+  <data name="Change_Password" xml:space="preserve">
+    <value>पासवर्ड बदलें</value>
+  </data>
+  <data name="Change_User_Password" xml:space="preserve">
+    <value>यूजर पासवर्ड बदलें</value>
+  </data>
+  <data name="Change_your_account_settings" xml:space="preserve">
+    <value>अपनी खाता सेटिंग बदलें</value>
+  </data>
+  <data name="Chernobyl_1" xml:space="preserve">
+    <value>चेरनोबिल-1</value>
+  </data>
+  <data name="Chernobyl_2" xml:space="preserve">
+    <value>चेरनोबिल-2</value>
+  </data>
+  <data name="Chernobyl_3" xml:space="preserve">
+    <value>चेरनोबिल-3</value>
+  </data>
+  <data name="Chernobyl_4" xml:space="preserve">
+    <value>चेरनोबिल-4</value>
+  </data>
+  <data name="Chlorine" xml:space="preserve">
+    <value>क्लोरीन</value>
+  </data>
+  <data name="Chromium" xml:space="preserve">
+    <value>क्रोमियम</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>स्पष्ट</value>
+  </data>
+  <data name="Click" xml:space="preserve">
+    <value>क्लिक करना</value>
+  </data>
+  <data name="click_here_to_log_in" xml:space="preserve">
+    <value>लॉग इन करने के लिए यहां क्लिक करें</value>
+  </data>
+  <data name="Client_Side_Authorization" xml:space="preserve">
+    <value>क्लाइंट-साइड प्राधिकरण</value>
+  </data>
+  <data name="Client_Side_Validation" xml:space="preserve">
+    <value>क्लाइंट-साइड सत्यापन</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>बंद करना</value>
+  </data>
+  <data name="Close_SignalR_Connection" xml:space="preserve">
+    <value>बंद SignalR कनेक्शन!</value>
+  </data>
+  <data name="Coal" xml:space="preserve">
+    <value>कोयला</value>
+  </data>
+  <data name="Coal1" xml:space="preserve">
+    <value>कोयला</value>
+  </data>
+  <data name="Cobalt" xml:space="preserve">
+    <value>कोबाल्ट</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>कोड</value>
+  </data>
+  <data name="Code_Samples" xml:space="preserve">
+    <value>कोड नमूने</value>
+  </data>
+  <data name="Completed" xml:space="preserve">
+    <value>पूरा हो गया</value>
+  </data>
+  <data name="Configure_Authenticator_App" xml:space="preserve">
+    <value>कॉन्फिगर ऑथेंटिकेटर ऐप</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>पुष्टि</value>
+  </data>
+  <data name="Confirm_Email" xml:space="preserve">
+    <value>ईमेल की पुष्टि करें</value>
+  </data>
+  <data name="Confirm_Email_Change" xml:space="preserve">
+    <value>ईमेल परिवर्तन की पुष्टि करें</value>
+  </data>
+  <data name="Confirm_Password" xml:space="preserve">
+    <value>पासवर्ड की पुष्टि करें</value>
+  </data>
+  <data name="ContentType" xml:space="preserve">
+    <value>सामग्री के प्रकार</value>
+  </data>
+  <data name="Copernicium" xml:space="preserve">
+    <value>कोपरनिकियम</value>
+  </data>
+  <data name="Copper" xml:space="preserve">
+    <value>तांबा</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>बनाना</value>
+  </data>
+  <data name="Created_On" xml:space="preserve">
+    <value>सृजन तिथि</value>
+  </data>
+  <data name="Culture_Based_Resources" xml:space="preserve">
+    <value>संस्कृति आधारित संसाधन</value>
+  </data>
+  <data name="Culture_Code" xml:space="preserve">
+    <value>संस्कृति कोड</value>
+  </data>
+  <data name="Culture_Currency_Symbol" xml:space="preserve">
+    <value>संस्कृति मुद्रा प्रतीक</value>
+  </data>
+  <data name="Culture_DateTime_Pattern" xml:space="preserve">
+    <value>संस्कृति तिथिटाइम पैटर्न</value>
+  </data>
+  <data name="Culture_Info" xml:space="preserve">
+    <value>संस्कृति की जानकारी</value>
+  </data>
+  <data name="Curium" xml:space="preserve">
+    <value>क्यूरियम</value>
+  </data>
+  <data name="Current_Culture_DateTime_Format" xml:space="preserve">
+    <value>वर्तमान संस्कृति तिथिटाइम प्रारूप</value>
+  </data>
+  <data name="Current_Culture_Info" xml:space="preserve">
+    <value>वर्तमान संस्कृति जानकारी</value>
+  </data>
+  <data name="Current_Culture_Time_Zone_Info" xml:space="preserve">
+    <value>वर्तमान संस्कृति समय क्षेत्र जानकारी</value>
+  </data>
+  <data name="Current_Documents" xml:space="preserve">
+    <value>वर्तमान दस्तावेज</value>
+  </data>
+  <data name="Current_password" xml:space="preserve">
+    <value>वर्तमान पासवर्ड</value>
+  </data>
+  <data name="Current_Transcripts" xml:space="preserve">
+    <value>वर्तमान ट्रांसक्रिप्ट</value>
+  </data>
+  <data name="Danger" xml:space="preserve">
+    <value>ख़तरा</value>
+  </data>
+  <data name="Darmstadtium" xml:space="preserve">
+    <value>डार्मस्टेडियम</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>डैशबोर्ड</value>
+  </data>
+  <data name="Data_Export_SignalR_Hangfire" xml:space="preserve">
+    <value>डेटा निर्यात (सिग्नलआर और हैंगफायर)!</value>
+  </data>
+  <data name="DateTime_Format" xml:space="preserve">
+    <value>डेटटाइम फॉर्मेट</value>
+  </data>
+  <data name="Date_of_Birth" xml:space="preserve">
+    <value>जन्म तिथि</value>
+  </data>
+  <data name="Date_Separator" xml:space="preserve">
+    <value>तिथि विभाजक</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>दिन</value>
+  </data>
+  <data name="Day_Names" xml:space="preserve">
+    <value>दिन के नाम</value>
+  </data>
+  <data name="Deactivated" xml:space="preserve">
+    <value>निष्क्रिय</value>
+  </data>
+  <data name="December" xml:space="preserve">
+    <value>दिसंबर</value>
+  </data>
+  <data name="Default_Admin_Credentials" xml:space="preserve">
+    <value>डिफॉल्ट एडमिन क्रेडेंशियल्स</value>
+  </data>
+  <data name="Default_lockout_time_span" xml:space="preserve">
+    <value>डिफ़ॉल्ट तालाबंदी समय अवधि</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>मिटाना</value>
+  </data>
+  <data name="Delete_my_Account" xml:space="preserve">
+    <value>मेरा खाता हटाएं</value>
+  </data>
+  <data name="Delete_Personal_Data" xml:space="preserve">
+    <value>व्यक्तिगत डेटा हटाएं</value>
+  </data>
+  <data name="Deleting_this_data_will_permanently_remove_your_account_and_this_cannot_be_recovered" xml:space="preserve">
+    <value>इस डेटा को हटाने से आपका खाता स्थायी रूप से निकाल देगा, और इसे बरामद नहीं किया जा सकता है।</value>
+  </data>
+  <data name="Disable_2FA" xml:space="preserve">
+    <value>दो कारक प्रमाणीकरण को अक्षम करें</value>
+  </data>
+  <data name="Disable_Two-Factor_Authentication" xml:space="preserve">
+    <value>दो कारक प्रमाणीकरण को अक्षम करें</value>
+  </data>
+  <data name="Disabling_2FA_does_not_change_the_keys_used_in_authenticator_apps" xml:space="preserve">
+    <value>दो-कारक प्रमाणीकरण को अक्षम करना प्रमाणक ऐप्स में उपयोग की जाने वाली चाबियों को नहीं बदलता है</value>
+  </data>
+  <data name="Dismissed" xml:space="preserve">
+    <value>खारिज कर दिया</value>
+  </data>
+  <data name="Display_Name" xml:space="preserve">
+    <value>डिस्प्ले का नाम</value>
+  </data>
+  <data name="Documents" xml:space="preserve">
+    <value>दस्तावेज़</value>
+  </data>
+  <data name="Dont_have_access_to_your_authenticator_device" xml:space="preserve">
+    <value>आपके प्रमाणक डिवाइस तक पहुंच नहीं है?</value>
+  </data>
+  <data name="Dont_have_an_account" xml:space="preserve">
+    <value>खाता नहीं है?</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>डाउनलोड</value>
+  </data>
+  <data name="Downloads" xml:space="preserve">
+    <value>डाउनलोड</value>
+  </data>
+  <data name="Download_a_two-factor_authenticator_app_like_Microsoft_Authenticator_for" xml:space="preserve">
+    <value>माइक्रोसॉफ्ट ऑथेंटिकेटर की तरह एक दो कारक प्रमाणक एप्लिकेशन डाउनलोड करें</value>
+  </data>
+  <data name="Do_you_really_want_to_delete_this_record" xml:space="preserve">
+    <value>क्या आप वास्तव में इस रिकॉर्ड को हटाना चाहते हैं?</value>
+  </data>
+  <data name="Do_you_want_to_remove_this_record" xml:space="preserve">
+    <value>क्या आप इस रिकॉर्ड को हटाना चाहते हैं?</value>
+  </data>
+  <data name="Dubnium" xml:space="preserve">
+    <value>डबनियम</value>
+  </data>
+  <data name="Dysprosium" xml:space="preserve">
+    <value>डिस्प्रोसियम</value>
+  </data>
+  <data name="Earnings" xml:space="preserve">
+    <value>कमाई</value>
+  </data>
+  <data name="Earning_Report" xml:space="preserve">
+    <value>कमाई रिपोर्ट</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>संपादन करना</value>
+  </data>
+  <data name="Edit_Applicant" xml:space="preserve">
+    <value>आवेदक को संपादित करें</value>
+  </data>
+  <data name="Edit_Reference" xml:space="preserve">
+    <value>Reference संदर्भ</value>
+  </data>
+  <data name="Edit_Role" xml:space="preserve">
+    <value>भूमिका संपादित करें</value>
+  </data>
+  <data name="Edit_Tenant" xml:space="preserve">
+    <value>किरायेदार संपादित करें</value>
+  </data>
+  <data name="Edit_User" xml:space="preserve">
+    <value>उपयोगकर्ता को संपादित करें</value>
+  </data>
+  <data name="Einsteinium" xml:space="preserve">
+    <value>आइंस्टीनियम</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>ईमेल</value>
+  </data>
+  <data name="Email_Change_Confirmation" xml:space="preserve">
+    <value>ईमेल परिवर्तन पुष्टि</value>
+  </data>
+  <data name="Email_Change_Confirmed" xml:space="preserve">
+    <value>ईमेल परिवर्तन की पुष्टि</value>
+  </data>
+  <data name="Email_Confirmation" xml:space="preserve">
+    <value>ईमेल पुष्टि</value>
+  </data>
+  <data name="Email_Confirmed" xml:space="preserve">
+    <value>ईमेल की पुष्टि</value>
+  </data>
+  <data name="Employee_broke_a_finger_while_writing_some_code" xml:space="preserve">
+    <value>कर्मचारी एक उंगली तोड़ दिया, जबकि कुछ कोड लिख</value>
+  </data>
+  <data name="enable_QR_code_generation" xml:space="preserve">
+    <value>क्यूआर कोड जनरेशन को सक्षम करें</value>
+  </data>
+  <data name="End" xml:space="preserve">
+    <value>समाप्ति</value>
+  </data>
+  <data name="End_Slope" xml:space="preserve">
+    <value>अंत ढलान</value>
+  </data>
+  <data name="English_Name" xml:space="preserve">
+    <value>अंग्रेजी नाम</value>
+  </data>
+  <data name="Enter_the_code_in_the_confirmation_box_below" xml:space="preserve">
+    <value>नीचे कन्फर्मेशन बॉक्स में कोड डालें।</value>
+  </data>
+  <data name="Enter_your_email" xml:space="preserve">
+    <value>अपना ईमेल दर्ज करें।</value>
+  </data>
+  <data name="entries" xml:space="preserve">
+    <value>प्रविष्टियों</value>
+  </data>
+  <data name="Erbium" xml:space="preserve">
+    <value>एर्बियम</value>
+  </data>
+  <data name="Error_Pages" xml:space="preserve">
+    <value>त्रुटि पेज</value>
+  </data>
+  <data name="Europium" xml:space="preserve">
+    <value>यूरोपियम</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>निर्यात करें</value>
+  </data>
+  <data name="ExportAsPdfInBackground" xml:space="preserve">
+    <value>पीडीएफ के रूप में निर्यात (आग और भूल गए!</value>
+  </data>
+  <data name="Exporting_data_may_take_a_while" xml:space="preserve">
+    <value>इसमें थोड़ा सा समय लग सकता है</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>असफल!</value>
+  </data>
+  <data name="FAQ" xml:space="preserve">
+    <value>अक्सर पूछे जाने वाले प्रश्न</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>सुविधाऐं</value>
+  </data>
+  <data name="February" xml:space="preserve">
+    <value>फ़रवरी</value>
+  </data>
+  <data name="Fermium" xml:space="preserve">
+    <value>फर्मियम</value>
+  </data>
+  <data name="FileName" xml:space="preserve">
+    <value>फ़ाइल नाम</value>
+  </data>
+  <data name="File_is_empty" xml:space="preserve">
+    <value>फाइल खाली है।</value>
+  </data>
+  <data name="File_Name" xml:space="preserve">
+    <value>फाइल नाम</value>
+  </data>
+  <data name="File_Rename" xml:space="preserve">
+    <value>फाइल नाम बदलें</value>
+  </data>
+  <data name="File_Size" xml:space="preserve">
+    <value>फाइल साइज</value>
+  </data>
+  <data name="File_Storage_Settings" xml:space="preserve">
+    <value>फ़ाइल स्टोरेज सेटिंग्स</value>
+  </data>
+  <data name="File_Type" xml:space="preserve">
+    <value>फाइल टाइप</value>
+  </data>
+  <data name="File_upload_has_been_cancelled" xml:space="preserve">
+    <value>फाइल अपलोड कर दी गई है।</value>
+  </data>
+  <data name="Fire_in_reactor_core" xml:space="preserve">
+    <value>रिएक्टर कोर में आग</value>
+  </data>
+  <data name="First" xml:space="preserve">
+    <value>पहला</value>
+  </data>
+  <data name="First_Day_of_Week" xml:space="preserve">
+    <value>सप्ताह का पहला दिन</value>
+  </data>
+  <data name="First_Name" xml:space="preserve">
+    <value>प्रथम नाम</value>
+  </data>
+  <data name="Fluent_Validation" xml:space="preserve">
+    <value>धाराप्रवाह सत्यापन</value>
+  </data>
+  <data name="Fluorine" xml:space="preserve">
+    <value>फ्लोरीन</value>
+  </data>
+  <data name="Forget_this_browser" xml:space="preserve">
+    <value>इस ब्राउज़र को भूल जाओ</value>
+  </data>
+  <data name="Forgot_password_confirmation" xml:space="preserve">
+    <value>पासवर्ड की पुष्टि भूल गया</value>
+  </data>
+  <data name="Forgot_your_password" xml:space="preserve">
+    <value>अपना पासवर्ड भूल गए?</value>
+  </data>
+  <data name="for_how_to_configure_a_real_email_sender" xml:space="preserve">
+    <value>एक असली ईमेल प्रेषक को कैसे कॉन्फ़िगर करने के लिए</value>
+  </data>
+  <data name="Fossil" xml:space="preserve">
+    <value>जीवाश्म</value>
+  </data>
+  <data name="Francium" xml:space="preserve">
+    <value>फ्रैंसियम</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>पूरा नाम</value>
+  </data>
+  <data name="Full_DateTime_Pattern" xml:space="preserve">
+    <value>पूर्ण तिथि समय पैटर्न</value>
+  </data>
+  <data name="Gas" xml:space="preserve">
+    <value>गैस</value>
+  </data>
+  <data name="Gas1" xml:space="preserve">
+    <value>गैस</value>
+  </data>
+  <data name="Generate" xml:space="preserve">
+    <value>पैदा करना</value>
+  </data>
+  <data name="generate_a_new_set_of_recovery_codes" xml:space="preserve">
+    <value>रिकवरी कोड का एक नया सेट जेनरेट करें</value>
+  </data>
+  <data name="Generating_new_recovery_codes_does_not_change_the_keys_used_in_authenticator_apps" xml:space="preserve">
+    <value>नए रिकवरी कोड जेनरेट करने से ऑथेंटिकेटर ऐप्स में इस्तेमाल होने वाली चाबियां नहीं बदलती हैं ।</value>
+  </data>
+  <data name="Geothermal" xml:space="preserve">
+    <value>जियोथर्मल</value>
+  </data>
+  <data name="Germany" xml:space="preserve">
+    <value>जर्मनी</value>
+  </data>
+  <data name="Getting_Started" xml:space="preserve">
+    <value>शुरू हो रही है</value>
+  </data>
+  <data name="Global_Settings" xml:space="preserve">
+    <value>वैश्विक विन्यास</value>
+  </data>
+  <data name="Global_Spread" xml:space="preserve">
+    <value>ग्लोबल स्प्रेड</value>
+  </data>
+  <data name="Global_Variable" xml:space="preserve">
+    <value>ग्लोबल वेरिएबल</value>
+  </data>
+  <data name="Google_Authenticator_for" xml:space="preserve">
+    <value>गूगल प्रमाणक के लिए</value>
+  </data>
+  <data name="Got_it" xml:space="preserve">
+    <value>अब समझ में आया!</value>
+  </data>
+  <data name="Graphite_on_roof" xml:space="preserve">
+    <value>छत पर ग्रेफाइट</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>ऊँचाई</value>
+  </data>
+  <data name="Hello" xml:space="preserve">
+    <value>नमस्कार</value>
+  </data>
+  <data name="here" xml:space="preserve">
+    <value>यहाँ</value>
+  </data>
+  <data name="High" xml:space="preserve">
+    <value>उच्च</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>घर</value>
+  </data>
+  <data name="Hour" xml:space="preserve">
+    <value>घंटा</value>
+  </data>
+  <data name="Hydro" xml:space="preserve">
+    <value>पन</value>
+  </data>
+  <data name="Identity" xml:space="preserve">
+    <value>पहचान</value>
+  </data>
+  <data name="Identity_Settings" xml:space="preserve">
+    <value>पहचान सेटिंग्स</value>
+  </data>
+  <data name="If_you_do_not_complete_your_authenticator_app_configuration_you_may_lose_access_to_your_account" xml:space="preserve">
+    <value>यदि आप अपना प्रमाणक ऐप कॉन्फ़िगरेशन पूरा नहीं करते हैं तो आप अपने खाते तक पहुंच खो सकते हैं।</value>
+  </data>
+  <data name="If_you_lose_your_device_and_dont_have_the_recovery_codes_you_will_lose_access_to_your_account" xml:space="preserve">
+    <value>यदि आप अपना डिवाइस खो देते हैं और रिकवरी कोड नहीं है तो आप अपने खाते तक पहुंच खो देंगे</value>
+  </data>
+  <data name="If_you_reset_your_authenticator_key_your_authenticator_app_will_not_work_until_you_reconfigure_it" xml:space="preserve">
+    <value>यदि आप अपनी प्रमाणक कुंजी को रीसेट करते हैं तो आपका प्रमाणक ऐप तब तक काम नहीं करेगा जब तक आप इसे फिर से कॉन्फ़िगर नहीं करते।</value>
+  </data>
+  <data name="If_you_wish_to_change_the_key_used_in_an_authenticator_app_you_should" xml:space="preserve">
+    <value>यदि आप एक प्रमाणक ऐप में उपयोग की जाने वाली कुंजी को बदलना चाहते हैं तो आपको</value>
+  </data>
+  <data name="Im_sorry_I_can't_display_anything_until_you" xml:space="preserve">
+    <value>मैं माफी चाहता हूं, मैं कुछ भी प्रदर्शित नहीं कर सकता जब तक आप</value>
+  </data>
+  <data name="Incident_in_plant_number_4" xml:space="preserve">
+    <value>प्लांट नंबर 4 में हुई घटना</value>
+  </data>
+  <data name="Installation" xml:space="preserve">
+    <value>संस्थापन</value>
+  </data>
+  <data name="Interpolation_Algorithm" xml:space="preserve">
+    <value>इंटरपोलेशन एल्गोरिदम</value>
+  </data>
+  <data name="into_your_two_factor_authenticator_app._Spaces_and_casing_do_not_matter" xml:space="preserve">
+    <value>अपने दो कारक प्रमाणक एप्लिकेशन में। रिक्त स्थान और आवरण कोई फर्क नहीं पड़ता।</value>
+  </data>
+  <data name="Invalid_file_name" xml:space="preserve">
+    <value>अमान्य फ़ाइल नाम।</value>
+  </data>
+  <data name="In_Progress" xml:space="preserve">
+    <value>प्रगति में</value>
+  </data>
+  <data name="iOS" xml:space="preserve">
+    <value>आईओएस</value>
+  </data>
+  <data name="Ispum" xml:space="preserve">
+    <value>सेड विटाई हेंडररिट जस्टो। यूनाना एलिफेंड इम्पेर्ट ए वेल इप्सम में एनेआन ईयू एमआई। मोरबी एसी रिसस वेल मस्सा टिंसिडंट लैसिनिया। अलीक्वाम ऑग लाइबेरो, वेनेटिस बैठो एकेट नेक गैर, डिग्निसिम इंटरडम एलिट। Nunc मसालों का enim गैर पूर्व egestas लोबोर्टिस। सेड एसी फेलिस ग्रेविडा निसी ब्लैंडिट पोर्टा। सेड्स अल्स्ट्रिक्स फिनिबस उलामकॉर्पर। Nullam congue मालसुडा rhoncus । नॉन वेरियस आर्कू में। कुराबितूर पोर्टा ईट आईडी नेक किण्वनम, यूटी फिनिबस डुई वेनेनाटिस। फ्यूस ट्राइस्टिक कर्सस पुलविनर। नाम अभिषेक कंवलिस ऑर्सी, एक तत्व elit ultrices एसी । Lorem ipsum dolor बैठो amet, अभिषेक adipiscing elit । प्रोइन लियो नल्ला, फेसिलिस बैठते हैं अमीत प्लेसरेट सेड, ब्लैंडिट नॉन सैपियन।</value>
+  </data>
+  <data name="Issues_rising" xml:space="preserve">
+    <value>मुद्दे बढ़ते जा रहे हैं</value>
+  </data>
+  <data name="Is_Active_User" xml:space="preserve">
+    <value>सक्रिय उपयोगकर्ता है</value>
+  </data>
+  <data name="Is_Default" xml:space="preserve">
+    <value>डिफ़ॉल्ट है</value>
+  </data>
+  <data name="Is_Email_Confirmed" xml:space="preserve">
+    <value>ईमेल की पुष्टि की है</value>
+  </data>
+  <data name="Is_Static" xml:space="preserve">
+    <value>स्थिर है</value>
+  </data>
+  <data name="Items_per_page" xml:space="preserve">
+    <value>प्रति पृष्ठ आइटम</value>
+  </data>
+  <data name="January" xml:space="preserve">
+    <value>जनवरी</value>
+  </data>
+  <data name="Job_Title" xml:space="preserve">
+    <value>नौकरी का शीर्षक</value>
+  </data>
+  <data name="Join_the_Military" xml:space="preserve">
+    <value>सेना में शामिल हों</value>
+  </data>
+  <data name="July" xml:space="preserve">
+    <value>जुलाई</value>
+  </data>
+  <data name="June" xml:space="preserve">
+    <value>जून</value>
+  </data>
+  <data name="Last" xml:space="preserve">
+    <value>पिछला</value>
+  </data>
+  <data name="Last_Name" xml:space="preserve">
+    <value>कुलनाम</value>
+  </data>
+  <data name="Learn_how_to" xml:space="preserve">
+    <value>जानें कैसे करें</value>
+  </data>
+  <data name="Left" xml:space="preserve">
+    <value>बाएँ</value>
+  </data>
+  <data name="Legend_Position" xml:space="preserve">
+    <value>लीजेंड स्थिति</value>
+  </data>
+  <data name="Live_data_powered_by_SignalR" xml:space="preserve">
+    <value>SignalR द्वारा संचालित लाइव डेटा</value>
+  </data>
+  <data name="Loading_On_Demand" xml:space="preserve">
+    <value>मांग पर लोड हो रहा है</value>
+  </data>
+  <data name="Localization" xml:space="preserve">
+    <value>स्थान-निर्धारण</value>
+  </data>
+  <data name="Local_Time" xml:space="preserve">
+    <value>स्थानीय समय</value>
+  </data>
+  <data name="Lockout_Settings" xml:space="preserve">
+    <value>तालाबंदी सेटिंग्स</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>लॉगिन</value>
+  </data>
+  <data name="login_lowered" xml:space="preserve">
+    <value>लॉगिन</value>
+  </data>
+  <data name="Login_out" xml:space="preserve">
+    <value>लॉगइन आउट...</value>
+  </data>
+  <data name="Login_With_Authenticator_Code" xml:space="preserve">
+    <value>2FA कोड के साथ लॉगिन करें</value>
+  </data>
+  <data name="Login_With_Recovery_Code" xml:space="preserve">
+    <value>रिकवरी कोड के साथ लॉगइन करें</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>लॉगआउट</value>
+  </data>
+  <data name="Log_in" xml:space="preserve">
+    <value>लॉग इन करो</value>
+  </data>
+  <data name="log_in_with_a_recovery_code" xml:space="preserve">
+    <value>रिकवरी कोड के साथ लॉग इन करें</value>
+  </data>
+  <data name="Long_Date_Pattern" xml:space="preserve">
+    <value>लंबी तिथि पैटर्न</value>
+  </data>
+  <data name="Long_Time_Pattern" xml:space="preserve">
+    <value>लंबे समय पैटर्न</value>
+  </data>
+  <data name="Lorem" xml:space="preserve">
+    <value>मौरिस कर्सस डुई में टेल्स ग्रेविडा, यूटी iaculis पूर्व मैटिस । एनेस ब्लैंडिट फॉसिबस फिनिबस। एनीन यूस्मोड लोरेम मेटस। यूटी विटाने नला एसी मौरिस वल्पुटे एसी नॉन वेलिट। tincidunt augue पर Cras, quis eleifend est । क्विस्क मैग्ना डायम, एलिमेंटम यूटी पेरेंटेस्क विटाए, पोर्टिटर क्विस क्वाम। प्रेजेंट वल्पुटेट वेरियस एक्स एट सुसिपिट। प्राजेंट इम्पेर्ट फौकियास निसी नॉन सोडेल्स। Nullam बैठो amet lorem quis nisi पेलेटेस्क ornare । पेलेटेस्क मैक्सिमस सेड उर्ना वेल यूस्मोड। एगेस्टास ओडिओ आईडी एस्ट ग्रेविडा लोबोर्टिस में। एक वेरियस मौरिस में, क्विस ऑर्नारे मेटस। सेड सेपर प्रीटियम मैग्ना, एक वल्पुटेरेट लोरम वल्पुटेविट विटा। Quisque यूरोपीय संघ congue quam, बैठो amet euismod ipsum ।</value>
+  </data>
+  <data name="Low" xml:space="preserve">
+    <value>नीचा</value>
+  </data>
+  <data name="March" xml:space="preserve">
+    <value>मार्च</value>
+  </data>
+  <data name="Master_Details_Form" xml:space="preserve">
+    <value>मास्टर - विवरण फॉर्म!</value>
+  </data>
+  <data name="Maximum_Failed_Access_Attempts" xml:space="preserve">
+    <value>अधिकतम असफल पहुंच प्रयास</value>
+  </data>
+  <data name="May" xml:space="preserve">
+    <value>मई</value>
+  </data>
+  <data name="Medium" xml:space="preserve">
+    <value>मध्यम</value>
+  </data>
+  <data name="Military_Applicants" xml:space="preserve">
+    <value>सैन्य आवेदक</value>
+  </data>
+  <data name="Minor" xml:space="preserve">
+    <value>नाबालिग</value>
+  </data>
+  <data name="Minute" xml:space="preserve">
+    <value>मिनट</value>
+  </data>
+  <data name="Modified_On" xml:space="preserve">
+    <value>संशोधन तिथि</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>महीना</value>
+  </data>
+  <data name="Month_Day_Pattern" xml:space="preserve">
+    <value>महीने के दिन पैटर्न</value>
+  </data>
+  <data name="Month_Genitive_Names" xml:space="preserve">
+    <value>महीने जेनेटिव नाम</value>
+  </data>
+  <data name="Month_Names" xml:space="preserve">
+    <value>महीने के नाम</value>
+  </data>
+  <data name="My_Account" xml:space="preserve">
+    <value>मेरा खाता</value>
+  </data>
+  <data name="My_Claims" xml:space="preserve">
+    <value>मेरे दावे</value>
+  </data>
+  <data name="My_Permissions" xml:space="preserve">
+    <value>मेरी अनुमतियां</value>
+  </data>
+  <data name="My_Profile" xml:space="preserve">
+    <value>मेरा प्रोफाइल</value>
+  </data>
+  <data name="My_Profile_Picture" xml:space="preserve">
+    <value>मेरी प्रोफाइल पिक्चर</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>नाम</value>
+  </data>
+  <data name="Native_Calendar_Name" xml:space="preserve">
+    <value>देशी कैलेंडर नाम</value>
+  </data>
+  <data name="Native_Name" xml:space="preserve">
+    <value>देशी नाम</value>
+  </data>
+  <data name="Natural_Spline" xml:space="preserve">
+    <value>प्राकृतिक स्प्लीन</value>
+  </data>
+  <data name="New_Email" xml:space="preserve">
+    <value>नया ईमेल</value>
+  </data>
+  <data name="New_Registered_Users_are_Active_by_Default" xml:space="preserve">
+    <value>नए पंजीकृत उपयोगकर्ता डिफ़ॉल्ट रूप से सक्रिय हैं</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>अगला</value>
+  </data>
+  <data name="Normally_this_would_be_emailed" xml:space="preserve">
+    <value>आम तौर पर यह ईमेल किया जाएगा</value>
+  </data>
+  <data name="November" xml:space="preserve">
+    <value>नवंबर</value>
+  </data>
+  <data name="No_data_available" xml:space="preserve">
+    <value>कोई डेटा उपलब्ध नहीं है।</value>
+  </data>
+  <data name="No_keep_it" xml:space="preserve">
+    <value>नहीं, इसे रखें</value>
+  </data>
+  <data name="Nuclear" xml:space="preserve">
+    <value>नाभिकीय</value>
+  </data>
+  <data name="Occupational_injury" xml:space="preserve">
+    <value>व्यावसायिक चोट</value>
+  </data>
+  <data name="October" xml:space="preserve">
+    <value>अक्टूबर</value>
+  </data>
+  <data name="Oil" xml:space="preserve">
+    <value>तेल</value>
+  </data>
+  <data name="Oil1" xml:space="preserve">
+    <value>तेल</value>
+  </data>
+  <data name="Once_you_have_scanned_the_QR_code_or_input_the_key_above" xml:space="preserve">
+    <value>एक बार जब आप क्यूआर कोड स्कैन कर लेते हैं या ऊपर दी गई कुंजी को इनपुट करते हैं</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>विकल्प</value>
+  </data>
+  <data name="or" xml:space="preserve">
+    <value>नहीं तो</value>
+  </data>
+  <data name="out_of" xml:space="preserve">
+    <value>में से</value>
+  </data>
+  <data name="Overview" xml:space="preserve">
+    <value>सिंहावलोकन</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>पासवर्ड</value>
+  </data>
+  <data name="Password_Settings" xml:space="preserve">
+    <value>पासवर्ड सेटिंग्स</value>
+  </data>
+  <data name="Pending" xml:space="preserve">
+    <value>अपने अंत में लंबित</value>
+  </data>
+  <data name="Periodic" xml:space="preserve">
+    <value>नियतकालिक</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>अनुमतियाँ</value>
+  </data>
+  <data name="Personal_Data" xml:space="preserve">
+    <value>व्यक्तिगत डेटा</value>
+  </data>
+  <data name="Phone_Number" xml:space="preserve">
+    <value>फोन संख्या</value>
+  </data>
+  <data name="Phone_number_is_required" xml:space="preserve">
+    <value>आईडी नंबर आवश्यक है</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>खेल</value>
+  </data>
+  <data name="Please" xml:space="preserve">
+    <value>कृपया</value>
+  </data>
+  <data name="Please_check_your_email_to_confirm_your_account" xml:space="preserve">
+    <value>कृपया अपने खाते की पुष्टि करने के लिए अपना ईमेल चेक करें।</value>
+  </data>
+  <data name="Please_check_your_email_to_reset_your_password_or_click" xml:space="preserve">
+    <value>कृपया अपना पासवर्ड रीसेट करने या क्लिक करने के लिए अपना ईमेल देखें</value>
+  </data>
+  <data name="Please_provide_new_name_for_the_file_or_leave_it_as_is" xml:space="preserve">
+    <value>कृपया फ़ाइल के लिए नया नाम प्रदान करें या इसे छोड़ दें।</value>
+  </data>
+  <data name="PM_Designator" xml:space="preserve">
+    <value>प्रधानमंत्री मनोनीत</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>पिछला</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>रूपरेखा</value>
+  </data>
+  <data name="Profile_Picture" xml:space="preserve">
+    <value>प्रोफाइल पिक्चर</value>
+  </data>
+  <data name="Proof_of_Concepts" xml:space="preserve">
+    <value>अवधारणाओं का प्रमाण</value>
+  </data>
+  <data name="Properties" xml:space="preserve">
+    <value>गुण</value>
+  </data>
+  <data name="Property" xml:space="preserve">
+    <value>जायदाद</value>
+  </data>
+  <data name="Put_these_codes_in_a_safe_place" xml:space="preserve">
+    <value>इन कोड को सुरक्षित स्थान पर रखें।</value>
+  </data>
+  <data name="QueryString" xml:space="preserve">
+    <value>खोज मानदंड!</value>
+  </data>
+  <data name="Quick_Search" xml:space="preserve">
+    <value>त्वरित खोज</value>
+  </data>
+  <data name="Randomize" xml:space="preserve">
+    <value>बेतरतीब ढंग से</value>
+  </data>
+  <data name="Realtime_Data" xml:space="preserve">
+    <value>रीयलटाइम डेटा!</value>
+  </data>
+  <data name="Recent_incidents" xml:space="preserve">
+    <value>हाल की घटनाएं</value>
+  </data>
+  <data name="Recovery_Code" xml:space="preserve">
+    <value>रिकवरी कोड</value>
+  </data>
+  <data name="Recovery_Codes" xml:space="preserve">
+    <value>रिकवरी कोड</value>
+  </data>
+  <data name="Reference" xml:space="preserve">
+    <value>Reference संदर्भ</value>
+  </data>
+  <data name="References" xml:space="preserve">
+    <value>संदर्भ</value>
+  </data>
+  <data name="Reference_name_is_required" xml:space="preserve">
+    <value>नाम आवश्यक है!</value>
+  </data>
+  <data name="Refresh_Token_TimeSpan" xml:space="preserve">
+    <value>ताज़ा टोकन टाइम्सपैन</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>पंजीकृत करें</value>
+  </data>
+  <data name="Register_as_a_new_user" xml:space="preserve">
+    <value>एक नए उपयोगकर्ता के रूप में रजिस्टर करें</value>
+  </data>
+  <data name="Register_Confirmation" xml:space="preserve">
+    <value>रजिस्टर पुष्टि</value>
+  </data>
+  <data name="Remember_me" xml:space="preserve">
+    <value>मुझे याद है?</value>
+  </data>
+  <data name="Remember_this_machine" xml:space="preserve">
+    <value>इस मशीन को याद रखें</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>हटाना</value>
+  </data>
+  <data name="Reporting" xml:space="preserve">
+    <value>रिपोर्टिंग</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>रिपोर्ट</value>
+  </data>
+  <data name="Report_Details" xml:space="preserve">
+    <value>रिपोर्ट विवरण!</value>
+  </data>
+  <data name="Required_Length" xml:space="preserve">
+    <value>आवश्यक लंबाई</value>
+  </data>
+  <data name="Required_Unique_Characters" xml:space="preserve">
+    <value>आवश्यक अद्वितीय वर्ण</value>
+  </data>
+  <data name="Require_Confirmed_Account" xml:space="preserve">
+    <value>कन्फर्म अकाउंट की आवश्यकता है</value>
+  </data>
+  <data name="Require_Confirmed_Email" xml:space="preserve">
+    <value>पुष्टि की ईमेल की आवश्यकता है</value>
+  </data>
+  <data name="Require_Confirmed_Phone_Number" xml:space="preserve">
+    <value>कन्फर्म फोन नंबर की आवश्यकता</value>
+  </data>
+  <data name="Require_Digits" xml:space="preserve">
+    <value>अंकों की आवश्यकता है</value>
+  </data>
+  <data name="Require_Lowercase_Characters" xml:space="preserve">
+    <value>लोअरकेस वर्णों की आवश्यकता होती है</value>
+  </data>
+  <data name="Require_Non_Alphanumeric" xml:space="preserve">
+    <value>गैर-अल्फान्यूमेरिक की आवश्यकता होती है</value>
+  </data>
+  <data name="Require_Uppercase_Characters" xml:space="preserve">
+    <value>अपरकेस वर्णों की आवश्यकता होती है</value>
+  </data>
+  <data name="Resend" xml:space="preserve">
+    <value>भेजें</value>
+  </data>
+  <data name="Resend_Email_Confirmation" xml:space="preserve">
+    <value>ईमेल पुष्टि को फिर से भेजें</value>
+  </data>
+  <data name="Reset_2FA_App" xml:space="preserve">
+    <value>रीसेट टू-फैक्टर ऑथेंटिकेशन ऐप</value>
+  </data>
+  <data name="Reset_2FA_Recovery_Codes" xml:space="preserve">
+    <value>रीसेट दो कारक प्रमाणीकरण रिकवरी कोड</value>
+  </data>
+  <data name="Reset_Authenticator_App" xml:space="preserve">
+    <value>रीसेट ऑथेंटिकेटर ऐप</value>
+  </data>
+  <data name="Reset_Authenticator_Key" xml:space="preserve">
+    <value>रीसेट ऑथेंटिकेटर कुंजी</value>
+  </data>
+  <data name="Reset_Password" xml:space="preserve">
+    <value>रीसेट पासवर्ड</value>
+  </data>
+  <data name="Reset_Password_Confirmation" xml:space="preserve">
+    <value>पासवर्ड पुष्टि रीसेट करें</value>
+  </data>
+  <data name="Reset_Recovery_Codes" xml:space="preserve">
+    <value>रिकवरी कोड रीसेट करें</value>
+  </data>
+  <data name="reset_your_authenticator_keys" xml:space="preserve">
+    <value>अपनी प्रमाणक कुंजी रीसेट करें</value>
+  </data>
+  <data name="Reset_your_password" xml:space="preserve">
+    <value>अपना पासवर्ड रीसेट करें।</value>
+  </data>
+  <data name="Resource.Issues_is_almost_reaching_100" xml:space="preserve">
+    <value>संसाधन. मुद्दे लगभग १०० तक पहुंच गया है</value>
+  </data>
+  <data name="Resources" xml:space="preserve">
+    <value>संसाधन</value>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>लौटना</value>
+  </data>
+  <data name="RFC1123_Pattern" xml:space="preserve">
+    <value>आरएफसी1123 पैटर्न</value>
+  </data>
+  <data name="Right" xml:space="preserve">
+    <value>दाएँ</value>
+  </data>
+  <data name="Roentgen" xml:space="preserve">
+    <value>रोएंटजेन</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>भूमिका</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>भूमिकाओं</value>
+  </data>
+  <data name="Role_Name" xml:space="preserve">
+    <value>रोल का नाम</value>
+  </data>
+  <data name="Rows_Per_Page" xml:space="preserve">
+    <value>प्रति पृष्ठ पंक्तियां:</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>रक्षा कर</value>
+  </data>
+  <data name="Scan_the_QR_Code_or_enter_this_key" xml:space="preserve">
+    <value>क्यूआर कोड स्कैन करें या इस कुंजी को दर्ज करें</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>ढूँढ</value>
+  </data>
+  <data name="Search_by_Roles" xml:space="preserve">
+    <value>भूमिकाओं द्वारा खोजें</value>
+  </data>
+  <data name="see" xml:space="preserve">
+    <value>देखना</value>
+  </data>
+  <data name="Select_Roles" xml:space="preserve">
+    <value>भूमिकाओं का चयन करें</value>
+  </data>
+  <data name="Send_Activation_Email" xml:space="preserve">
+    <value>एक्टिवेशन ईमेल भेजें</value>
+  </data>
+  <data name="Septemper" xml:space="preserve">
+    <value>सेप्टेम्पर</value>
+  </data>
+  <data name="Series_1" xml:space="preserve">
+    <value>सीरीज 1</value>
+  </data>
+  <data name="Series_2" xml:space="preserve">
+    <value>सीरीज 2</value>
+  </data>
+  <data name="Server_Side_Authorization" xml:space="preserve">
+    <value>सर्वर-साइड प्राधिकरण</value>
+  </data>
+  <data name="Server_Side_Validation" xml:space="preserve">
+    <value>सर्वर साइड सत्यापन</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>सेटिंग्स</value>
+  </data>
+  <data name="Setup_Authenticator_App" xml:space="preserve">
+    <value>सेटअप प्रमाणक ऐप</value>
+  </data>
+  <data name="Set_Random_Password" xml:space="preserve">
+    <value>रैंडम पासवर्ड सेट करें</value>
+  </data>
+  <data name="Shortest_Day_Names" xml:space="preserve">
+    <value>सबसे कम दिन के नाम</value>
+  </data>
+  <data name="Short_Date_Pattern" xml:space="preserve">
+    <value>शॉर्ट डेट पैटर्न</value>
+  </data>
+  <data name="Short_Time_Pattern" xml:space="preserve">
+    <value>शॉर्ट टाइम पैटर्न</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>प्रदर्शन</value>
+  </data>
+  <data name="Side_Authorization" xml:space="preserve">
+    <value>साइड ऑथोराइजेशन</value>
+  </data>
+  <data name="Sign_in" xml:space="preserve">
+    <value>साइन इन करें</value>
+  </data>
+  <data name="Sign_in_Settings" xml:space="preserve">
+    <value>सेटिंग में साइन इन करें</value>
+  </data>
+  <data name="Sign_up" xml:space="preserve">
+    <value>नाम लिखो</value>
+  </data>
+  <data name="Solar" xml:space="preserve">
+    <value>सौर</value>
+  </data>
+  <data name="Something_went_wrong" xml:space="preserve">
+    <value>कुछ गलत हो गया!</value>
+  </data>
+  <data name="Sorry_there's_nothing_at_this_address" xml:space="preserve">
+    <value>क्षमा करें, इस पते पर कुछ भी नहीं है।</value>
+  </data>
+  <data name="Sortable_DateTime_Pattern" xml:space="preserve">
+    <value>सॉर्ट करने योग्य डेटटाइम पैटर्न</value>
+  </data>
+  <data name="SSN" xml:space="preserve">
+    <value>सामाजिक सुरक्षा संख्या</value>
+  </data>
+  <data name="SSNShort" xml:space="preserve">
+    <value>एसएसएन</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>निकल</value>
+  </data>
+  <data name="Start_SignalR_Connection" xml:space="preserve">
+    <value>सिग्नलर कनेक्शन शुरू करें!</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>ओहदा</value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>रुको</value>
+  </data>
+  <data name="Storage_type_is" xml:space="preserve">
+    <value>भंडारण प्रकार है</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>जमा करें</value>
+  </data>
+  <data name="Succeeded" xml:space="preserve">
+    <value>सफल हुए</value>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>सहारा</value>
+  </data>
+  <data name="Surname" xml:space="preserve">
+    <value>कुलनाम</value>
+  </data>
+  <data name="Suspend" xml:space="preserve">
+    <value>लटकाना</value>
+  </data>
+  <data name="Sweden" xml:space="preserve">
+    <value>स्वीडन</value>
+  </data>
+  <data name="Tenants" xml:space="preserve">
+    <value>किरायेदारों</value>
+  </data>
+  <data name="Thank_you_for_confirming_your_email" xml:space="preserve">
+    <value>आपके ईमेल की पुष्टि करने के लिए धन्यवाद।</value>
+  </data>
+  <data name="these_docs" xml:space="preserve">
+    <value>ये डॉक्स</value>
+  </data>
+  <data name="The_page_you_were_looking_for_doesnt_exist" xml:space="preserve">
+    <value>आप जिस पृष्ठ की तलाश कर रहे थे, वह मौजूद नहीं है।</value>
+  </data>
+  <data name="The_selected_file_exceeds_the_allowed_maximum_size_limit" xml:space="preserve">
+    <value>चयनित फ़ाइल अनुनद अधिकतम आकार सीमा से अधिक है।</value>
+  </data>
+  <data name="The_selected_file_extension_is_not_allowed" xml:space="preserve">
+    <value>चयनित फ़ाइल एक्सटेंशन की अनुमति नहीं है।</value>
+  </data>
+  <data name="This_action_only_disables_2FA" xml:space="preserve">
+    <value>यह क्रिया केवल दो-कारक प्रमाणीकरण को अक्षम करती है।</value>
+  </data>
+  <data name="This_app_does_not_currently_have_a_real_email_sender_registered" xml:space="preserve">
+    <value>इस एप्लिकेशन को वर्तमान में एक असली ईमेल प्रेषक पंजीकृत नहीं है</value>
+  </data>
+  <data name="This_page_allows_you_to_download_or_delete_that_data" xml:space="preserve">
+    <value>यह पृष्ठ आपको उस डेटा को डाउनलोड या हटाने की अनुमति देता है।</value>
+  </data>
+  <data name="This_process_disables_2FA_until_you_verify_your_authenticator_app" xml:space="preserve">
+    <value>यह प्रक्रिया दो-कारक प्रमाणीकरण को तब तक अक्षम करती है जब तक आप अपने प्रमाणक ऐप को सत्यापित नहीं करते।</value>
+  </data>
+  <data name="Time_Separator" xml:space="preserve">
+    <value>टाइम सेपरेटर</value>
+  </data>
+  <data name="Time_Zone" xml:space="preserve">
+    <value>टाइम जोन</value>
+  </data>
+  <data name="Time_Zone_Info" xml:space="preserve">
+    <value>टाइम जोन</value>
+  </data>
+  <data name="Time_Zone_OffSet" xml:space="preserve">
+    <value>समय क्षेत्र ऑफसेट!</value>
+  </data>
+  <data name="Tips" xml:space="preserve">
+    <value>युक्तियाँ</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>शीर्षक</value>
+  </data>
+  <data name="Token_Info" xml:space="preserve">
+    <value>टोकन जानकारी</value>
+  </data>
+  <data name="Token_Settings" xml:space="preserve">
+    <value>टोकन सेटिंग्स</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>लट्टू</value>
+  </data>
+  <data name="Total_Cost" xml:space="preserve">
+    <value>कुल लागत</value>
+  </data>
+  <data name="to_confirm_your_account" xml:space="preserve">
+    <value>अपने खाते की पुष्टि करने के लिए</value>
+  </data>
+  <data name="to_login" xml:space="preserve">
+    <value>लॉगिन करने के लिए।</value>
+  </data>
+  <data name="To_use_an_authenticator_app_go_through_the_following_steps" xml:space="preserve">
+    <value>एक प्रमाणक ऐप का उपयोग करने के लिए निम्नलिखित चरणों के माध्यम से जाना:</value>
+  </data>
+  <data name="Two_Factor_Authentication" xml:space="preserve">
+    <value>दो कारक प्रमाणीकरण</value>
+  </data>
+  <data name="Two_Factor_Authentication_works_by_adding_an_additional_layer" xml:space="preserve">
+    <value>टू-फैक्टर ऑथेंटिकेशन (2FA) आपके ऑनलाइन खातों में सुरक्षा की एक अतिरिक्त परत जोड़कर काम करता है। इसके लिए एक अतिरिक्त लॉगिन क्रेडेंशियल की आवश्यकता होती है - सिर्फ उपयोगकर्ता नाम और पासवर्ड से परे - खाता एक्सेस हासिल करने के लिए, और उस दूसरे क्रेडेंशियल को प्राप्त करने के लिए आपके लिए किसी चीज तक पहुंच की आवश्यकता होती है।</value>
+  </data>
+  <data name="UI_Culture_Code" xml:space="preserve">
+    <value>यूआई कल्चर कोड</value>
+  </data>
+  <data name="Unable_to_upload_an_empty_file" xml:space="preserve">
+    <value>खाली फ़ाइल अपलोड करने में असमर्थ।</value>
+  </data>
+  <data name="Unautorized" xml:space="preserve">
+    <value>बिनाऑटोराइज्ड</value>
+  </data>
+  <data name="United_States" xml:space="preserve">
+    <value>संयुक्त राज्य</value>
+  </data>
+  <data name="Units_of_Time" xml:space="preserve">
+    <value>समय की इकाइयां</value>
+  </data>
+  <data name="Universal_Sortable_DateTime_Pattern" xml:space="preserve">
+    <value>यूनिवर्सल सॉर्टेबल डेटटाइम पैटर्न</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>आधुनिकीकरणअ</value>
+  </data>
+  <data name="Upload_Avatar" xml:space="preserve">
+    <value>अवतार अपलोड करें</value>
+  </data>
+  <data name="Upload_Documents" xml:space="preserve">
+    <value>दस्तावेज अपलोड करें</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>उपयोगकर्ता नाम</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>उपयोगकर्ताओं</value>
+  </data>
+  <data name="Users_Management" xml:space="preserve">
+    <value>उपयोगकर्ता प्रबंधन</value>
+  </data>
+  <data name="User_Account" xml:space="preserve">
+    <value>उपयोगकर्ता खाता</value>
+  </data>
+  <data name="User_Documents" xml:space="preserve">
+    <value>उपयोगकर्ता दस्तावेज</value>
+  </data>
+  <data name="User_is_not_found" xml:space="preserve">
+    <value>उपयोगकर्ता नहीं मिला है।</value>
+  </data>
+  <data name="User_Profile" xml:space="preserve">
+    <value>यूजर प्रोफाइल</value>
+  </data>
+  <data name="User_Settings" xml:space="preserve">
+    <value>उपयोगकर्ता सेटिंग</value>
+  </data>
+  <data name="Use_a_local_account_to_log_in" xml:space="preserve">
+    <value>लॉग इन करने के लिए स्थानीय खाते का उपयोग करें.</value>
+  </data>
+  <data name="Validation_Summary" xml:space="preserve">
+    <value>सत्यापन सारांश</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>मूल्य</value>
+  </data>
+  <data name="Verify" xml:space="preserve">
+    <value>जाँचना</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>देखना</value>
+  </data>
+  <data name="View_Applicant" xml:space="preserve">
+    <value>देखें आवेदक</value>
+  </data>
+  <data name="Visit_Website" xml:space="preserve">
+    <value>वेबसाइट पर जाएं</value>
+  </data>
+  <data name="Weight" xml:space="preserve">
+    <value>वजन</value>
+  </data>
+  <data name="Wind" xml:space="preserve">
+    <value>हवा</value>
+  </data>
+  <data name="Year_Month_Pattern" xml:space="preserve">
+    <value>वर्ष माह पैटर्न</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>हाँ</value>
+  </data>
+  <data name="Yes_delete_it" xml:space="preserve">
+    <value>हां, इसे हटा दें</value>
+  </data>
+  <data name="Yes_remove_it" xml:space="preserve">
+    <value>हां, इसे हटा दें</value>
+  </data>
+  <data name="Yes_rename_it" xml:space="preserve">
+    <value>हां, इसका नाम बदलें</value>
+  </data>
+  <data name="Your_account_contains_personal_data_that_you_have_given_us" xml:space="preserve">
+    <value>आपके खाते में व्यक्तिगत डेटा होता है जो आपने हमें दिया है।</value>
+  </data>
+  <data name="Your_password_has_been_reset" xml:space="preserve">
+    <value>आपका पासवर्ड रीसेट कर दिया गया है</value>
+  </data>
+  <data name="Your_report_0_is_ready_to_download" xml:space="preserve">
+    <value>आपकी रिपोर्ट {0} डाउनलोड करने के लिए तैयार है.!</value>
+  </data>
+  <data name="Your_report_generation_has_failed" xml:space="preserve">
+    <value>आपकी रिपोर्ट जनरेशन फेल हो गई। बधाई!</value>
+  </data>
+  <data name="Your_report_is_being_generated" xml:space="preserve">
+    <value>आपकी रिपोर्ट जनरेट हो रही है। बधाई!</value>
+  </data>
+  <data name="Your_report_is_being_initiated" xml:space="preserve">
+    <value>आपकी रिपोर्ट का इन्तजार है। बधाई!</value>
+  </data>
+  <data name="Your_report_is_ready_to_download" xml:space="preserve">
+    <value>आपकी रिपोर्ट डाउनलोड करने के लिए तैयार है।!</value>
+  </data>
+  <data name="Your_report__0__is_ready_to_download\" xml:space="preserve">
+    <value>आपकी रिपोर्ट {0} डाउनलोड करने के लिए तैयार है.!</value>
+  </data>
+  <data name="your_two_factor_authentication_app_will_provide_you_with_a_unique_code" xml:space="preserve">
+    <value>आपका दो कारक प्रमाणीकरण ऐप आपको एक अद्वितीय कोड प्रदान करेगा।</value>
+  </data>
+  <data name="You_are_not_authenticated_to_export_this_report" xml:space="preserve">
+    <value>आप इस रिपोर्ट को निर्यात करने के लिए प्रमाणित नहीं कर रहे हैं!</value>
+  </data>
+  <data name="You_are_not_authorized_to_access_this_page" xml:space="preserve">
+    <value>आप इस पृष्ठ तक पहुंचने के लिए अधिकृत नहीं हैं</value>
+  </data>
+  <data name="You_can" xml:space="preserve">
+    <value>तुमसे हो सकता है</value>
+  </data>
+  <data name="You_have_no_recovery_codes_left" xml:space="preserve">
+    <value>आपके पास कोई रिकवरी कोड नहीं बचा है।</value>
+  </data>
+  <data name="You_have_num_recovery_codes_left" xml:space="preserve">
+    <value>आपके पास {0} रिकवरी कोड बचे हैं।</value>
+  </data>
+  <data name="You_have_one_recovery_code_left" xml:space="preserve">
+    <value>आपके पास एक रिकवरी कोड बचा है।</value>
+  </data>
+  <data name="You_must" xml:space="preserve">
+    <value>तुम्हे अवश्य करना चाहिए</value>
+  </data>
+  <data name="You_should" xml:space="preserve">
+    <value>आपको चाहिए</value>
+  </data>
+  <data name="File_has_been_uploaded_successfully" xml:space="preserve">
+    <value>फ़ाइल सफलतापूर्वक अपलोड की गई है.</value>
+  </data>
+  <data name="File_upload_was_cancelled" xml:space="preserve">
+    <value>फ़ाइल अपलोड रद्द कर दिया गया.</value>
+  </data>
+  <data name="Upload_File" xml:space="preserve">
+    <value>फ़ाइल अपलोड करें</value>
+  </data>
+  <data name="Access_token_timespan_cannot_be_null" xml:space="preserve">
+    <value>Access टोकन टाइमस्पैन शून्य नहीं हो सकता.</value>
+  </data>
+  <data name="Access_token_timespan_is_required" xml:space="preserve">
+    <value>एक्सेस टोकन टाइमस्पैन आवश्यक है।</value>
+  </data>
+  <data name="Allowed_username_characters_are_required" xml:space="preserve">
+    <value>अनुमत उपयोगकर्ता नाम वर्ण आवश्यक हैं.</value>
+  </data>
+  <data name="An_unknown_failure_has_occurred" xml:space="preserve">
+    <value>एक अज्ञात विफलता हुई है।</value>
+  </data>
+  <data name="Applicant_has_been_created_successfully" xml:space="preserve">
+    <value>आवेदक सफलतापूर्वक बनाया गया है</value>
+  </data>
+  <data name="Applicant_has_been_deleted_successfully" xml:space="preserve">
+    <value>आवेदक सफलतापूर्वक हटा दिया गया है.</value>
+  </data>
+  <data name="Applicant_has_been_updated_successfully" xml:space="preserve">
+    <value>आवेदक सफलतापूर्वक अद्यतन किया गया है.</value>
+  </data>
+  <data name="A_user_with_this_login_already_exists" xml:space="preserve">
+    <value>इस लॉगिन के साथ एक उपयोगकर्ता पहले से मौजूद है।</value>
+  </data>
+  <data name="Cannot_disable_2FA_for_user_with_Id" xml:space="preserve">
+    <value>ID '{0}' वाले उपयोगकर्ता के लिए टू-फैक्टर प्रमाणीकरण अक्षम नहीं कर सकता क्योंकि यह वर्तमान में सक्षम नहीं है.</value>
+  </data>
+  <data name="Cannot_generate_recovery_codes" xml:space="preserve">
+    <value>उपयोगकर्ता नाम '{0}' के लिए पुनर्प्राप्ति कोड जनरेट नहीं कर सकता क्योंकि उनके पास टू-फैक्टर प्रमाणीकरण सक्षम नहीं है.</value>
+  </data>
+  <data name="Code_is_required" xml:space="preserve">
+    <value>कोड आवश्यक है।</value>
+  </data>
+  <data name="Confirmation_link_to_change_email_has_been_sent" xml:space="preserve">
+    <value>ईमेल बदलने के लिए पुष्टिकरण लिंक भेजा गया है। कृपया अपने ईमेल की जाँच करें।</value>
+  </data>
+  <data name="Confirm_password_is_required" xml:space="preserve">
+    <value>पासवर्ड की पुष्टि करें.</value>
+  </data>
+  <data name="Confirm_your_email" xml:space="preserve">
+    <value>अपने ईमेल की पुष्टि करें</value>
+  </data>
+  <data name="Date_of_Birth_is_required" xml:space="preserve">
+    <value>जन्म तिथि आवश्यक है</value>
+  </data>
+  <data name="Default_lockout_time_Span_is_required" xml:space="preserve">
+    <value>डिफ़ॉल्ट तालाबंदी समय अवधि आवश्यक है</value>
+  </data>
+  <data name="Deletion_of_entity_failed" xml:space="preserve">
+    <value>एंटिटी "{0}" ({1}) का विलोपन विफल रहा. {2}.</value>
+  </data>
+  <data name="Email_is_already_taken" xml:space="preserve">
+    <value>ईमेल '{0}' पहले से ही लिया गया है।</value>
+  </data>
+  <data name="Email_is_invalid" xml:space="preserve">
+    <value>ईमेल '{0}' अमान्य है।</value>
+  </data>
+  <data name="Entity_with_key_was_not_found" xml:space="preserve">
+    <value>कुंजी "{1}" के साथ एंटिटी "{0}" नहीं मिला.</value>
+  </data>
+  <data name="Error_changing_user_name" xml:space="preserve">
+    <value>उपयोगकर्ता नाम बदलने में त्रुटि.</value>
+  </data>
+  <data name="Error_changing_your_user_name" xml:space="preserve">
+    <value>अपना उपयोगकर्ता नाम बदलने में त्रुटि.</value>
+  </data>
+  <data name="File_has_not_been_uploaded" xml:space="preserve">
+    <value>फ़ाइल अपलोड नहीं की गई है.</value>
+  </data>
+  <data name="File_storage_settings_have_been_updated_successfully" xml:space="preserve">
+    <value>फ़ाइल संग्रहण सेटिंग्स सफलतापूर्वक अद्यतन की गई हैं.</value>
+  </data>
+  <data name="First_name_is_required" xml:space="preserve">
+    <value>पहला नाम आवश्यक है।</value>
+  </data>
+  <data name="Height_is_required" xml:space="preserve">
+    <value>ऊंचाई की आवश्यकता है।</value>
+  </data>
+  <data name="Identity_settings_have_been_updated_successfully" xml:space="preserve">
+    <value>पहचान सेटिंग्स सफलतापूर्वक अद्यतन की गई हैं.</value>
+  </data>
+  <data name="Incorrect_password" xml:space="preserve">
+    <value>गलत पासवर्ड.</value>
+  </data>
+  <data name="Invalid_applicant_Id" xml:space="preserve">
+    <value>अमान्य आवेदक आईडी।</value>
+  </data>
+  <data name="Invalid_authenticator_code_entered" xml:space="preserve">
+    <value>अमान्य प्रमाणक कोड दर्ज किया गया.</value>
+  </data>
+  <data name="Invalid_client_request" xml:space="preserve">
+    <value>अमान्य क्लाइंट अनुरोध.</value>
+  </data>
+  <data name="Invalid_file_storage_Id" xml:space="preserve">
+    <value>अमान्य फ़ाइल संग्रहण आईडी.</value>
+  </data>
+  <data name="Invalid_lockout_settings_Id" xml:space="preserve">
+    <value>अमान्य लॉकआउट सेटिंग्स आईडी.</value>
+  </data>
+  <data name="Invalid_login_attempt" xml:space="preserve">
+    <value>अमान्य लॉगिन प्रयास.</value>
+  </data>
+  <data name="Invalid_password_settings_Id" xml:space="preserve">
+    <value>अमान्य पासवर्ड सेटिंग्स ID.</value>
+  </data>
+  <data name="Invalid_recovery_code_entered" xml:space="preserve">
+    <value>अमान्य पुनर्प्राप्ति कोड दर्ज किया गया.</value>
+  </data>
+  <data name="Invalid_report_Id" xml:space="preserve">
+    <value>अमान्य रिपोर्ट आईडी.</value>
+  </data>
+  <data name="Invalid_role_Id" xml:space="preserve">
+    <value>अमान्य भूमिका ID.</value>
+  </data>
+  <data name="Invalid_sign_in_settings_Id" xml:space="preserve">
+    <value>अमान्य साइन इन सेटिंग्स ID.</value>
+  </data>
+  <data name="Invalid_tenant_name" xml:space="preserve">
+    <value>अमान्य किरायेदार का नाम.</value>
+  </data>
+  <data name="Invalid_token" xml:space="preserve">
+    <value>अमान्य टोकन.</value>
+  </data>
+  <data name="Invalid_token_settings_Id" xml:space="preserve">
+    <value>अमान्य टोकन सेटिंग्स आईडी.</value>
+  </data>
+  <data name="Invalid_user_Id" xml:space="preserve">
+    <value>अमान्य उपयोगकर्ता ID.</value>
+  </data>
+  <data name="Invalid_user_settings_Id" xml:space="preserve">
+    <value>अमान्य उपयोगकर्ता सेटिंग्स ID</value>
+  </data>
+  <data name="Job_title_is_required" xml:space="preserve">
+    <value>नौकरी का शीर्षक आवश्यक है।</value>
+  </data>
+  <data name="Last_name_is_required" xml:space="preserve">
+    <value>अंतिम नाम आवश्यक है</value>
+  </data>
+  <data name="Lockout_is_not_enabled_for_this_user" xml:space="preserve">
+    <value>इस उपयोगकर्ता के लिए लॉकआउट सक्षम नहीं है.</value>
+  </data>
+  <data name="Maximum_allowed_number_of_attachments_must_not_exceed_3" xml:space="preserve">
+    <value>अनुलग्नकों की अधिकतम अनुमत संख्या 3 से अधिक नहीं होनी चाहिए.</value>
+  </data>
+  <data name="Max_failed_access_attempt_is_required" xml:space="preserve">
+    <value>अधिकतम असफल पहुँच प्रयास आवश्यक है.</value>
+  </data>
+  <data name="Method_cannot_be_null" xml:space="preserve">
+    <value>विधि शून्य नहीं हो सकती.</value>
+  </data>
+  <data name="Minimum_allowed_number_of_attachments_must_be_at_least_1" xml:space="preserve">
+    <value>अनुलग्नकों की न्यूनतम अनुमत संख्या कम से कम 1 होनी चाहिए.</value>
+  </data>
+  <data name="New_password_is_required" xml:space="preserve">
+    <value>नया पासवर्ड आवश्यक है.</value>
+  </data>
+  <data name="New_password_must_be_at_least_6_characters" xml:space="preserve">
+    <value>नया पासवर्ड कम से कम 6 वर्णों का होना आवश्यक है.</value>
+  </data>
+  <data name="New_password_must_not_exceed_200_characters" xml:space="preserve">
+    <value>नया पासवर्ड 200 वर्णों से अधिक नहीं होना चाहिए.</value>
+  </data>
+  <data name="N_A" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="Old_password_is_required" xml:space="preserve">
+    <value>पुराना पासवर्ड आवश्यक है।</value>
+  </data>
+  <data name="Only_those_between_the_ages_of_18_and_28_are_allowed_for_enlisting" xml:space="preserve">
+    <value>केवल 18 से 28 वर्ष की आयु के बीच के लोगों को भर्ती करने की अनुमति है।</value>
+  </data>
+  <data name="Only_those_whose_BMI_between_18_5_and_24_9_are_allowed_for_enlisting" xml:space="preserve">
+    <value>केवल उन लोगों को सूचीबद्ध करने की अनुमति है जिनका बीएमआई 18.5 और 24.9 के बीच है।</value>
+  </data>
+  <data name="Only_those_whose_heights_between_100_and_250_with_normal_BMI_are_allowed_for_enlisting" xml:space="preserve">
+    <value>केवल उन लोगों को भर्ती करने की अनुमति है जिनकी ऊंचाई सामान्य बीएमआई के साथ 100 से 250 के बीच है।</value>
+  </data>
+  <data name="Only_those_who_weigh_between_50_and_200_with_normal_BMI_are_allowed_for_enlisting" xml:space="preserve">
+    <value>केवल सामान्य बीएमआई वाले 50 से 200 के बीच वजन वाले लोगों को भर्ती करने की अनुमति है।</value>
+  </data>
+  <data name="Optimistic_concurrency_failure" xml:space="preserve">
+    <value>आशावादी सामंजस्य विफलता, वस्तु को संशोधित किया गया है।</value>
+  </data>
+  <data name="Passwords_must_be_at_least_length_characters" xml:space="preserve">
+    <value>पासवर्ड कम से कम {0} वर्णों का होना चाहिए.</value>
+  </data>
+  <data name="Passwords_must_have_at_least_one_digit" xml:space="preserve">
+    <value>पासवर्ड में कम से कम एक अंक ('0'-'9') होना चाहिए।</value>
+  </data>
+  <data name="Passwords_must_have_at_least_one_lowercase" xml:space="preserve">
+    <value>पासवर्ड में कम से कम एक लोअरकेस ('a'-'z') होना चाहिए.</value>
+  </data>
+  <data name="Passwords_must_have_at_least_one_non_alphanumeric_character" xml:space="preserve">
+    <value>पासवर्ड में कम से कम एक गैर अल्फ़ान्यूमेरिक वर्ण होना चाहिए.</value>
+  </data>
+  <data name="Passwords_must_have_at_least_one_uppercase" xml:space="preserve">
+    <value>पासवर्ड में कम से कम एक अपरकेस ('A'-'Z') होना चाहिए.</value>
+  </data>
+  <data name="Password_cannot_contain_password" xml:space="preserve">
+    <value>पासवर्ड में 'पासवर्ड' नहीं हो सकता.</value>
+  </data>
+  <data name="Password_cannot_contain_username" xml:space="preserve">
+    <value>पासवर्ड में उपयोगकर्ता नाम नहीं हो सकता.</value>
+  </data>
+  <data name="Password_is_required" xml:space="preserve">
+    <value>पासवर्ड आवश्यक है.</value>
+  </data>
+  <data name="Password_must_be_at_least_6_characters" xml:space="preserve">
+    <value>पासवर्ड कम से कम 6 वर्णों का होना चाहिए.</value>
+  </data>
+  <data name="Password_must_not_exceed_200_characters" xml:space="preserve">
+    <value>पासवर्ड 200 वर्णों से अधिक नहीं होना चाहिए.</value>
+  </data>
+  <data name="Password_reset_link_was_sent" xml:space="preserve">
+    <value>पासवर्ड रीसेट लिंक भेजा गया था. कृपया अपने ईमेल की जाँच करें।</value>
+  </data>
+  <data name="Please_confirm_your_account_by_clicking_here" xml:space="preserve">
+    <value>कृपया &lt;a href='{0}'&gt;यहाँ क्लिक करके&lt;/a&gt; अपने खाते की पुष्टि करें.</value>
+  </data>
+  <data name="Please_confirm_your_email" xml:space="preserve">
+    <value>कृपया अपने ईमेल की पुष्टि करें।</value>
+  </data>
+  <data name="Please_reset_your_password_by_clicking_here" xml:space="preserve">
+    <value>कृपया &lt;a href='{0}'&gt;यहाँ क्लिक करके&lt;/a&gt; अपना पासवर्ड रीसेट करें.</value>
+  </data>
+  <data name="Please_specify_the_application_tenant_mode" xml:space="preserve">
+    <value>कृपया अनुप्रयोग किरायेदार मोड निर्दिष्ट करें.</value>
+  </data>
+  <data name="Profile_picture_is_required" xml:space="preserve">
+    <value>प्रोफ़ाइल चित्र आवश्यक है.</value>
+  </data>
+  <data name="Recovery_Code_is_required" xml:space="preserve">
+    <value>पुनर्प्राप्ति कोड आवश्यक है.</value>
+  </data>
+  <data name="Recovery_Code_Redemption_Failed" xml:space="preserve">
+    <value>पुनर्प्राप्ति कोड मोचन विफल</value>
+  </data>
+  <data name="Refresh_token_timespan_cannot_be_null" xml:space="preserve">
+    <value>ताज़ा टोकन टाइमस्पैन शून्य नहीं हो सकता.</value>
+  </data>
+  <data name="Refresh_token_timespan_is_required" xml:space="preserve">
+    <value>टोकन टाइमस्पैन ताज़ा करना आवश्यक है.</value>
+  </data>
+  <data name="Refresh_token_timespan_must_be_greater_than_access_token_expiry_time" xml:space="preserve">
+    <value>ताज़ा करें टोकन समय अवधि पहुँच टोकन समाप्ति समय से अधिक होना चाहिए.</value>
+  </data>
+  <data name="Repeated_Ones_are_not_valid_Social_security_number" xml:space="preserve">
+    <value>111111111 एक मान्य सामाजिक सुरक्षा संख्या नहीं है।</value>
+  </data>
+  <data name="Repeated_Threes_are_not_valid_Social_security_number" xml:space="preserve">
+    <value>333333333 एक मान्य सामाजिक सुरक्षा संख्या नहीं है।</value>
+  </data>
+  <data name="Required_length_is_required" xml:space="preserve">
+    <value>आवश्यक लंबाई की आवश्यकता है।</value>
+  </data>
+  <data name="Required_unique_characters_is_required" xml:space="preserve">
+    <value>आवश्यक अद्वितीय वर्णों की आवश्यकता है.</value>
+  </data>
+  <data name="Reset_your_password1" xml:space="preserve">
+    <value>अपना पासवर्ड रीसेट करें</value>
+  </data>
+  <data name="Role_has_been_created_successfully" xml:space="preserve">
+    <value>भूमिका सफलतापूर्वक बनाई गई है.</value>
+  </data>
+  <data name="Role_has_been_deleted_successfully" xml:space="preserve">
+    <value>भूमिका सफलतापूर्वक हटा दी गई है.</value>
+  </data>
+  <data name="Role_has_been_updated_successfully" xml:space="preserve">
+    <value>भूमिका सफलतापूर्वक अद्यतन की गई है.</value>
+  </data>
+  <data name="Role_name_is_already_taken" xml:space="preserve">
+    <value>रोल का नाम '{0}' पहले से ही लिया गया है।</value>
+  </data>
+  <data name="Role_name_is_invalid" xml:space="preserve">
+    <value>भूमिका नाम '{0}' अमान्य है.</value>
+  </data>
+  <data name="Role_name_is_required" xml:space="preserve">
+    <value>भूमिका नाम आवश्यक है.</value>
+  </data>
+  <data name="Social_security_number_is_required" xml:space="preserve">
+    <value>सामाजिक सुरक्षा संख्या आवश्यक है</value>
+  </data>
+  <data name="Social_security_number_must_contain_only_9_digits" xml:space="preserve">
+    <value>सामाजिक सुरक्षा संख्या में केवल 9 अंक होने चाहिए।</value>
+  </data>
+  <data name="Social_security_number_must_not_contain_consecutive_digits" xml:space="preserve">
+    <value>सामाजिक सुरक्षा संख्या में लगातार अंक नहीं होने चाहिए।</value>
+  </data>
+  <data name="Storage_type_is_required" xml:space="preserve">
+    <value>भंडारण प्रकार आवश्यक है।</value>
+  </data>
+  <data name="Surname_is_required" xml:space="preserve">
+    <value>उपनाम आवश्यक है।</value>
+  </data>
+  <data name="Tenant_has_been_created_successfully" xml:space="preserve">
+    <value>किरायेदार सफलतापूर्वक बनाया गया है.</value>
+  </data>
+  <data name="Tenant_has_been_deleted_successfully" xml:space="preserve">
+    <value>किरायेदार सफलतापूर्वक हटा दिया गया है.</value>
+  </data>
+  <data name="Tenant_has_been_updated_successfully" xml:space="preserve">
+    <value>किरायेदार सफलतापूर्वक अद्यतन किया गया है.</value>
+  </data>
+  <data name="Tenant_name_is_required" xml:space="preserve">
+    <value>किरायेदार का नाम आवश्यक है।</value>
+  </data>
+  <data name="The_applicant_is_not_found" xml:space="preserve">
+    <value>आवेदक नहीं मिला है।</value>
+  </data>
+  <data name="The_password_and_confirmation_password_do_not_match" xml:space="preserve">
+    <value>पासवर्ड और पुष्टिकरण पासवर्ड मेल नहीं खाते.</value>
+  </data>
+  <data name="The_specified_role_is_already_registered" xml:space="preserve">
+    <value>निर्दिष्ट भूमिका पहले से पंजीकृत है.</value>
+  </data>
+  <data name="The_specified_role_is_already_registered_in_the_given_tenant" xml:space="preserve">
+    <value>निर्दिष्ट भूमिका पहले से ही दिए गए किरायेदार में पंजीकृत है।</value>
+  </data>
+  <data name="The_specified_username_and_email_are_already_registered" xml:space="preserve">
+    <value>निर्दिष्ट उपयोगकर्ता नाम और ईमेल पहले से पंजीकृत हैं।</value>
+  </data>
+  <data name="The_specified_username_and_email_are_already_registered_in_the_given_tenant" xml:space="preserve">
+    <value>निर्दिष्ट उपयोगकर्ता नाम और ईमेल पहले से ही दिए गए किरायेदार में पंजीकृत हैं।</value>
+  </data>
+  <data name="The_user_has_no_2FA_enabled" xml:space="preserve">
+    <value>उपयोगकर्ता के पास कोई 2FA सक्षम नहीं है।</value>
+  </data>
+  <data name="Token_settings_have_been_updated_successfully" xml:space="preserve">
+    <value>टोकन सेटिंग्स सफलतापूर्वक अद्यतन की गई हैं.</value>
+  </data>
+  <data name="Two_factor_authentication_code_is_required" xml:space="preserve">
+    <value>दो कारक प्रमाणीकरण कोड आवश्यक है।</value>
+  </data>
+  <data name="Two_factor_authentication_code_must_be_at_least_6_character_long" xml:space="preserve">
+    <value>दो कारक प्रमाणीकरण कोड कम से कम 6 वर्ण लंबा होना चाहिए।</value>
+  </data>
+  <data name="Two_factor_authentication_code_must_not_exceed_7_characters" xml:space="preserve">
+    <value>दो कारक प्रमाणीकरण कोड 7 वर्णों से अधिक नहीं होना चाहिए।</value>
+  </data>
+  <data name="Two_factor_authentication_has_been_disabled" xml:space="preserve">
+    <value>2Fa अक्षम कर दिया गया है. जब आप कोई प्रमाणक ऐप्लिकेशन सेटअप करते हैं, तो आप टू-फैक्टर ऑथेंटिकेशन को री-फ़ॉर्ब कर सकते हैं.</value>
+  </data>
+  <data name="Two_factor_authentication_required" xml:space="preserve">
+    <value>दो-कारक प्रमाणीकरण आवश्यक है।</value>
+  </data>
+  <data name="Unable_to_add_static_role" xml:space="preserve">
+    <value>स्थिर भूमिका जोड़ने में असमर्थ</value>
+  </data>
+  <data name="Unable_to_create_new_tenant_in_single_tenant_mode" xml:space="preserve">
+    <value>एकल किरायेदार मोड में नया किरायेदार बनाने में असमर्थ.</value>
+  </data>
+  <data name="Unable_to_delete_static_role" xml:space="preserve">
+    <value>स्थिर भूमिका को हटाने में असमर्थ.</value>
+  </data>
+  <data name="Unable_to_delete_static_user" xml:space="preserve">
+    <value>स्थिर उपयोगकर्ता को हटाने में असमर्थ.</value>
+  </data>
+  <data name="Unable_to_enable_2FA" xml:space="preserve">
+    <value>2FA सक्षम करने में असमर्थ.</value>
+  </data>
+  <data name="Unable_to_load_applicant" xml:space="preserve">
+    <value>आवेदक लोड करने में असमर्थ.</value>
+  </data>
+  <data name="Unable_to_load_report" xml:space="preserve">
+    <value>रिपोर्ट लोड करने में असमर्थ.</value>
+  </data>
+  <data name="Unable_to_load_role" xml:space="preserve">
+    <value>भूमिका लोड करने में असमर्थ.</value>
+  </data>
+  <data name="Unable_to_load_user" xml:space="preserve">
+    <value>उपयोगकर्ता लोड करने में असमर्थ.</value>
+  </data>
+  <data name="Unable_to_reset_authenticator_keys" xml:space="preserve">
+    <value>प्रमाणक कुंजियों को रीसेट करने में असमर्थ.</value>
+  </data>
+  <data name="Unable_to_update_static_role" xml:space="preserve">
+    <value>स्थिर भूमिका अद्यतन करने में असमर्थ</value>
+  </data>
+  <data name="Unable_to_update_static_user" xml:space="preserve">
+    <value>स्थिर उपयोगकर्ता अद्यतन करने में असमर्थ.</value>
+  </data>
+  <data name="Unexpected_error_occurred_deleting_user_with_Id" xml:space="preserve">
+    <value>ID '{0}' के साथ उपयोगकर्ता को हटाने में अनपेक्षित त्रुटि उत्पन्न हुई.</value>
+  </data>
+  <data name="Unexpected_error_occurred_disabling_2FA" xml:space="preserve">
+    <value>ID '{0}' वाले उपयोगकर्ता के लिए टू-फैक्टर प्रमाणीकरण अक्षम करने में अनपेक्षित त्रुटि उत्पन्न हुई.</value>
+  </data>
+  <data name="Username_has_been_confirmed_successfully" xml:space="preserve">
+    <value>उपयोगकर्ता नाम की सफलतापूर्वक पुष्टि की गई है.</value>
+  </data>
+  <data name="Username_is_already_taken" xml:space="preserve">
+    <value>उपयोगकर्ता नाम '{0}' पहले से ही लिया गया है।</value>
+  </data>
+  <data name="Username_is_invalid" xml:space="preserve">
+    <value>उपयोगकर्ता नाम '{0}' अमान्य है, इसमें केवल अक्षर या अंक हो सकते हैं।</value>
+  </data>
+  <data name="Username_is_required" xml:space="preserve">
+    <value>उपयोगकर्ता नाम आवश्यक है।</value>
+  </data>
+  <data name="Username_must_be_at_least_6_characters" xml:space="preserve">
+    <value>उपयोगकर्ता नाम कम से कम 6 वर्ण होना चाहिए.</value>
+  </data>
+  <data name="Username_must_not_exceed_200_characters" xml:space="preserve">
+    <value>उपयोगकर्ता नाम 200 वर्णों से अधिक नहीं होना चाहिए.</value>
+  </data>
+  <data name="User_already_has_a_password_set" xml:space="preserve">
+    <value>उपयोगकर्ता के पास पहले से ही पासवर्ड सेट है.</value>
+  </data>
+  <data name="User_already_in_role" xml:space="preserve">
+    <value>उपयोगकर्ता पहले से ही '{0}' भूमिका में है।</value>
+  </data>
+  <data name="User_has_been_added_without_files" xml:space="preserve">
+    <value>उपयोगकर्ता फ़ाइलों के बिना जोड़ा गया है।</value>
+  </data>
+  <data name="User_has_been_created_successfully" xml:space="preserve">
+    <value>उपयोगकर्ता सफलतापूर्वक बनाया गया है.</value>
+  </data>
+  <data name="User_has_been_deleted_successfully" xml:space="preserve">
+    <value>उपयोगकर्ता सफलतापूर्वक हटा दिया गया है.</value>
+  </data>
+  <data name="User_has_been_updated_successfully" xml:space="preserve">
+    <value>उपयोगकर्ता सफलतापूर्वक अद्यतन किया गया है।</value>
+  </data>
+  <data name="User_has_been_updated_successfully_without_updating_his_her_roles_as_the_user_is_static_type" xml:space="preserve">
+    <value>उपयोगकर्ता को उसकी भूमिकाओं को अपडेट किए बिना सफलतापूर्वक अपडेट किया गया है क्योंकि उपयोगकर्ता स्थिर प्रकार है।</value>
+  </data>
+  <data name="User_Id_is_required" xml:space="preserve">
+    <value>उपयोगकर्ता आईडी आवश्यक है।</value>
+  </data>
+  <data name="User_permissions_have_been_updated_successfully" xml:space="preserve">
+    <value>उपयोगकर्ता अनुमतियाँ सफलतापूर्वक अद्यतन की गई हैं.</value>
+  </data>
+  <data name="User_with_Id_deleted" xml:space="preserve">
+    <value>आईडी '{0}' वाले यूजर को डिलीट कर दिया गया है।</value>
+  </data>
+  <data name="User_with_Id_UserId_logged_in_with_2Fa" xml:space="preserve">
+    <value>आईडी '{0}' वाले उपयोगकर्ता ने टू-फैक्टर प्रमाणीकरण के साथ लॉग इन किया।</value>
+  </data>
+  <data name="value_cannot_be_null" xml:space="preserve">
+    <value>{0} शून्य नहीं हो सकता</value>
+  </data>
+  <data name="Verification_code_is_invalid" xml:space="preserve">
+    <value>सत्यापन कोड अमान्य है.</value>
+  </data>
+  <data name="Verification_email_has_been_sent" xml:space="preserve">
+    <value>सत्यापन ईमेल भेज दिया गया है। कृपया अपने ईमेल की जाँच करें।</value>
+  </data>
+  <data name="Weight_is_required" xml:space="preserve">
+    <value>वजन आवश्यक है।</value>
+  </data>
+  <data name="Your_account_is_deactivated_Please_contact_your_administrator" xml:space="preserve">
+    <value>आपका खाता निष्क्रिय कर दिया गया है. कृपया अपने व्यवस्थापक से संपर्क करें.</value>
+  </data>
+  <data name="Your_authenticator_app_has_been_verified" xml:space="preserve">
+    <value>आपका प्रमाणीकरणकर्ता ऐप सत्यापित किया जा चुका है.</value>
+  </data>
+  <data name="Your_authenticator_app_key_has_been_reset" xml:space="preserve">
+    <value>आपकी प्रमाणक ऐप कुंजी रीसेट हो गई है, आपको नई कुंजी का उपयोग करके अपने प्रमाणीकरणकर्ता ऐप को कॉन्फ़िगर करना होगा।</value>
+  </data>
+  <data name="Your_email_has_been_changed_successfully" xml:space="preserve">
+    <value>आपका ईमेल सफलतापूर्वक बदल दिया गया है.</value>
+  </data>
+  <data name="Your_email_has_been_successfully_changed" xml:space="preserve">
+    <value>आपका ईमेल सफलतापूर्वक बदल दिया गया है.</value>
+  </data>
+  <data name="Your_email_is_unchanged" xml:space="preserve">
+    <value>आपका ईमेल अपरिवर्तित है.</value>
+  </data>
+  <data name="Your_password_has_been_changed" xml:space="preserve">
+    <value>आपका पासवर्ड बदल दिया गया है.</value>
+  </data>
+  <data name="Your_password_has_been_set" xml:space="preserve">
+    <value>आपका पासवर्ड सेट किया गया है.</value>
+  </data>
+  <data name="You_are_locked_out" xml:space="preserve">
+    <value>आपको बंद कर दिया गया है।</value>
+  </data>
+  <data name="You_are_not_authorized" xml:space="preserve">
+    <value>आप {0} तक पहुँचने के लिए अधिकृत नहीं हैं.</value>
+  </data>
+  <data name="You_have_generated_new_recovery_codes" xml:space="preserve">
+    <value>आपने नए पुनर्प्राप्ति कोड बनाए हैं.</value>
+  </data>
+  <data name="You_have_successfully_created_a_new_account" xml:space="preserve">
+    <value>आपने सफलतापूर्वक एक नया खाता बनाया है.</value>
+  </data>
+  <data name="Please_check_your_email_to_reset_your_password" xml:space="preserve">
+    <value>अपना पासवर्ड रीसेट करने के लिए कृपया अपना ईमेल चेक करें.</value>
+  </data>
+  <data name="to_reset_your_password" xml:space="preserve">
+    <value>अपना पासवर्ड रीसेट करने के लिए</value>
+  </data>
+  <data name="Please_click" xml:space="preserve">
+    <value>कृपया क्लिक करें</value>
+  </data>
+  <data name="to" xml:space="preserve">
+    <value>तक</value>
+  </data>
+  <data name="Assign_Permissions_to" xml:space="preserve">
+    <value>अनुमतियाँ असाइन करें</value>
+  </data>
+  <data name="There_are_no_data_to_generate_report" xml:space="preserve">
+    <value>रिपोर्ट जनरेट करने के लिए कोई डेटा नहीं है.</value>
+  </data>
+  <data name="Are_you_sure_you_want_to_save_this_record" xml:space="preserve">
+    <value>क्या आप वाकई इस रिकॉर्ड को सहेजना चाहते हैं?</value>
+  </data>
+  <data name="Consider_switching_your_device_to_light_mode" xml:space="preserve">
+    <value>यदि आपको क्यूआर कोड स्कैन करने में समस्या हो रही है, तो हेडर मेनू में डार्क/लाइट बटन पर टैप करके ऐप को लाइट मोड में बदलने का प्रयास करें। कुछ क्यूआर कोड कंट्रास्ट समस्याओं के कारण डार्क मोड में ठीक से स्कैन नहीं हो सकते हैं। लाइट मोड पर स्विच करने से क्यूआर कोड को पढ़ने में आसानी होगी और आपके डिवाइस को स्कैन करने में आसानी होगी।</value>
+  </data>
+  <data name="The_Host_portal_cannot_be_accessed" xml:space="preserve">
+    <value>डेटा अलगाव रणनीति के रूप में प्रति किरायेदार एक अलग डेटाबेस का उपयोग करते समय होस्ट पोर्टल तक नहीं पहुंचा जा सकता है। कृपया आगे की सहायता के लिए व्यवस्थापक से संपर्क करें.</value>
+  </data>
+  <data name="It_is_not_possible_to_create_a_new_tenant_while_in_single_tenant_mode" xml:space="preserve">
+    <value>एकल किरायेदार मोड में रहते हुए एक नया किरायेदार बनाना संभव नहीं है। किरायेदारों के निर्माण को विशेष रूप से बहु-किरायेदार मोड में अनुमति दी गई है।</value>
+  </data>
+  <data name="It_is_not_possible_to_create_or_update_or_delete_a_tenant_while_in_single_tenant_mode" xml:space="preserve">
+    <value>एकल किरायेदार मोड में रहते हुए किरायेदार को बनाना, अपडेट करना या हटाना संभव नहीं है। किरायेदारों के प्रबंधन को विशेष रूप से बहु-किरायेदार मोड में अनुमति दी जाती है।</value>
+  </data>
+  <data name="Tenants_Management" xml:space="preserve">
+    <value>किरायेदारों का प्रबंधन</value>
+  </data>
+  <data name="My_Tenant" xml:space="preserve">
+    <value>मेरा किरायेदार</value>
+  </data>
+  <data name="Unable_to_load_tenant" xml:space="preserve">
+    <value>किरायेदार लोड करने में असमर्थ.</value>
+  </data>
+  <data name="Invalid_tenant_Id" xml:space="preserve">
+    <value>अमान्य किरायेदार ID.</value>
+  </data>
+  <data name="The_tenant_is_not_found" xml:space="preserve">
+    <value>किरायेदार नहीं मिला।</value>
+  </data>
+  <data name="SuperAdmin" xml:space="preserve">
+    <value>सुपर व्यवस्थापक</value>
+  </data>
+  <data name="A_tenant_with_the_same_name_already_exists__Please_choose_a_different_name" xml:space="preserve">
+    <value>समान नाम का एक किरायेदार पहले से मौजूद है। कृपया कोई भिन्न नाम चुनें.</value>
+  </data>
+  <data name="Show_Recovery_Codes" xml:space="preserve">
+    <value>पुनर्प्राप्ति कोड दिखाएँ</value>
+  </data>
+  <data name="Enable_Authenticator_App" xml:space="preserve">
+    <value>प्रमाणक अनुप्रयोग सक्षम करें</value>
+  </data>
+  <data name="Enable_2FA" xml:space="preserve">
+    <value>टू-फैक्टर प्रमाणीकरण सक्षम करें</value>
+  </data>
+  <data name="Application_errors_occurred_while_processing_your_request" xml:space="preserve">
+    <value>आपके अनुरोध को संसाधित करते समय अनुप्रयोग त्रुटि उत्पन्न हुई.</value>
+  </data>
+  <data name="Unauthorized_access_detected" xml:space="preserve">
+    <value>अनधिकृत पहुँच का पता चला.</value>
+  </data>
+  <data name="Access_to_the_requested_resource_is_forbidden" xml:space="preserve">
+    <value>अनुरोधित संसाधन तक पहुँच निषिद्ध है.</value>
+  </data>
+  <data name="The_request_was_not_processed_due_to_invalid_or_missing_parameters" xml:space="preserve">
+    <value>अमान्य या अनुपलब्ध पैरामीटर के कारण अनुरोध संसाधित नहीं किया गया था.</value>
+  </data>
+  <data name="The_requested_resource_was_not_found" xml:space="preserve">
+    <value>अनुरोधित संसाधन नहीं मिला.</value>
+  </data>
+  <data name="An_internal_server_error_occurred_while_processing_your_request" xml:space="preserve">
+    <value>आपके अनुरोध को संसाधित करते समय कोई आंतरिक सर्वर त्रुटि उत्पन्न हुई.</value>
+  </data>
+  <data name="An_error_occurred_while_processing_your_request" xml:space="preserve">
+    <value>आपके अनुरोध को संसाधित करते समय कोई त्रुटि उत्पन्न हुई.</value>
+  </data>
+  <data name="Model_validation_errors_occurred_while_processing_your_request" xml:space="preserve">
+    <value>आपके अनुरोध को संसाधित करते समय मॉडल सत्यापन त्रुटि उत्पन्न हुई.</value>
+  </data>
+  <data name="You_are_forbidden" xml:space="preserve">
+    <value>अपर्याप्त अनुमतियों के कारण {0} तक पहुँच निषिद्ध है.</value>
+  </data>
+  <data name="The_time_provided_must_be_in_UTC_format" xml:space="preserve">
+    <value>प्रदान किया गया समय UTC स्वरूप में होना चाहिए.</value>
+  </data>
+  <data name="On_Premises_File_Storage" xml:space="preserve">
+    <value>ऑन-प्रिमाइसेस फ़ाइल संग्रहण</value>
+  </data>
+  <data name="Reporting_Hub_is_closed" xml:space="preserve">
+    <value>रिपोर्टिंग हब बंद है.</value>
+  </data>
+  <data name="Reporting_Hub_is_already_closed" xml:space="preserve">
+    <value>रिपोर्टिंग हब पहले से ही बंद है.</value>
+  </data>
+  <data name="Dashboard_Hub_is_closed" xml:space="preserve">
+    <value>डैशबोर्ड हब बंद है.</value>
+  </data>
+  <data name="Dashboard_Hub_is_being_initialized" xml:space="preserve">
+    <value>डैशबोर्ड हब प्रारंभ किया जा रहा है.</value>
+  </data>
+  <data name="Unable_to_connect_to_the_dashboard_hub_due_to_an_error" xml:space="preserve">
+    <value>किसी त्रुटि के कारण डैशबोर्ड हब से कनेक्ट करने में असमर्थ: {0}</value>
+  </data>
+  <data name="Dashboard_Hub_is_now_connected" xml:space="preserve">
+    <value>डैशबोर्ड हब अब कनेक्ट डे है.</value>
+  </data>
+  <data name="Unable_to_connect_to_the_reporting_hub_due_to_an_error" xml:space="preserve">
+    <value>किसी त्रुटि के कारण रिपोर्टिंग हब से कनेक्ट करने में असमर्थ: {0}</value>
+  </data>
+  <data name="Reporting_Hub_is_now_connected" xml:space="preserve">
+    <value>रिपोर्टिंग हब अब कनेक्ट डे है.</value>
+  </data>
+  <data name="Reporting_Hub_is_being_initialized" xml:space="preserve">
+    <value>रिपोर्टिंग हब प्रारंभ किया जा रहा है.</value>
+  </data>
+  <data name="Reporting_Hub_is_not_active" xml:space="preserve">
+    <value>रिपोर्टिंग हब सक्रिय नहीं है.</value>
+  </data>
+  <data name="You_are_not_authorized_to_access_resources_related_to_other_tenants" xml:space="preserve">
+    <value>आप अन्य किरायेदारों से संबंधित संसाधनों तक पहुंचने के लिए अधिकृत नहीं हैं।</value>
+  </data>
+  <data name="ExportAsPdfOnDemand" xml:space="preserve">
+    <value>तुरंत पीडीएफ के रूप में निर्यात करें</value>
+  </data>
+</root>

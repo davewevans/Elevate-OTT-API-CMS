@@ -1,0 +1,167 @@
+﻿@page "/poc/authorization/overview"
+
+<MudText Typo="Typo.h5" Color="Color.Primary" Class="mb-2">Overview</MudText>
+<MudGrid>
+    <MudItem xs="12" sm="12" md="10">
+        <MudText Typo="Typo.h6" GutterBottom="true">General</MudText>
+        <MudExpansionPanels Elevation="25">
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="What is the library used for authentication and authorization in CMS?">
+                <MudText Typo="Typo.body2">CMS uses ASP.NET Core Identity as the main membership management system.</MudText>
+            </MudExpansionPanel>
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="How CMS plays significant role in leveraging ASP.NET Core Identity?">
+                <MudText Typo="Typo.body2" Class="mb-2">There are so many added values that CMS provides to the developers, one of which is the out-of-the box RESTful API's that leverage most of the ASP.NET Core Identity functionalities. These API's can be consumed by any client applications no matter what programming language they written in.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">Another added value is the ready-made GUI provided by CMS which will make a huge difference in developing any business application. Creating GUI from scratch has always been a challenging task especially, when they created for managing users, roles and assigning permissions.</MudText>
+                <MudText Typo="Typo.body2">These added values will definitely reduce the estimated development time, cost and effort to the minimum possible and enable the developers to keep their minds focused on the business domain instead of distracting them on security concerns.</MudText>
+            </MudExpansionPanel>
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="Why CMS uses QR Code Authentication as a second step in 2FA and how does it differ from SMS-Based Authentication?">
+                <MudText Typo="Typo.body2" Class="mb-2">Well, how many times you were unable to receive the SMS verification code to your phone because of connectivity issues with your mobile network operator? Probably so many times and that's why CMS uses QR code scanning approach in 2FA. This insure that your application's users will get verified every time they want to login to the system. All they need to do is to download and install the <MudLink Typo="Typo.body2" Target="blank" Href="https://play.google.com/store/apps/details?id=com.authenticator.authservice2">Authenticator App</MudLink> on their devices so that they can get verified by scanning the QR Verification Code.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">Generally, SMS-Based Authentication is not safe for several reasons mention in this <MudLink Typo="Typo.body2" Target="blank" Href="https://www.kaspersky.com/blog/2fa-practical-guide/24219/">article</MudLink>.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">Anyways, CMS can be extended easily to deal with SMS Verification Code.</MudText>
+            </MudExpansionPanel>
+        </MudExpansionPanels>
+
+        <MudText Typo="Typo.h6" GutterBottom="true" Class="mt-8">Two-Factor Authentication</MudText>
+        <MudExpansionPanels Elevation="25">
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="What's behind the hype about Two-Factor Authentication (2FA)?">
+                <MudText Typo="Typo.body2" Class="mb-2">Please refer to this <MudLink Typo="Typo.body2" Target="blank" Href="https://authy.com/what-is-2fa/">article</MudLink> for more information.</MudText>
+            </MudExpansionPanel>
+        </MudExpansionPanels>
+        <MudExpansionPanels Elevation="25">
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="Why CMS uses QR Code Authentication as a second step in 2FA and how does it differ from SMS-Based Authentication?">
+                <MudText Typo="Typo.body2" Class="mb-2">Well, how many times you were unable to receive the SMS verification code to your phone because of connectivity issues with your mobile network operator? Probably so many times and that's why CMS uses QR code scanning approach in 2FA. This insure that your application's users will get verified every time they want to login to the system. All they need to do is to download and install the <MudLink Typo="Typo.body2" Target="blank" Href="https://play.google.com/store/apps/details?id=com.authenticator.authservice2">Authenticator App</MudLink> on their devices so that they can get verified by scanning the QR Verification Code.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">Generally, SMS-Based Authentication is not safe for several reasons mentioned in this <MudLink Typo="Typo.body2" Target="blank" Href="https://www.kaspersky.com/blog/2fa-practical-guide/24219/">article</MudLink>.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">Anyways, CMS can be extended easily to deal with SMS-Based Authentication.</MudText>
+            </MudExpansionPanel>
+        </MudExpansionPanels>
+
+        <MudText Typo="Typo.h6" GutterBottom="true" Class="mt-8">Role-Based Authorization Control vs Claims-Based Authorization</MudText>
+        <MudExpansionPanels Elevation="25">
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="What is Role-Based Authorization Control (RBAC) and Claims-Based Authorization Control (CBAC)?">
+                <MudText Typo="Typo.body2">Please watch this <MudLink Typo="Typo.body2" Target="blank" Href="https://www.youtube.com/watch?v=Uw2ujXvN3i4">video</MudLink> which illustrates what they are and how and when they should be used.</MudText>
+            </MudExpansionPanel>
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="What are the supported authorization methods in CMS?">
+                <MudText Typo="Typo.body2">CMS supports both RBAC and CBAC. You can use one of them or both of them to authenticate your application's users depending on your app security requirements.</MudText>
+            </MudExpansionPanel>
+        </MudExpansionPanels>
+        <MudText Typo="Typo.h6" GutterBottom="true" Class="mt-8">Client-Side Authorization vs Server-Side Authorization</MudText>
+        <MudExpansionPanels Elevation="25">
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="What is Client-Side Authorization?">
+                <MudText Typo="Typo.body2" Class="mb-2">Client-Side Authorization performs authorization check within client code by validating the credentials of the logged in user at different levels as shown below.</MudText>
+
+                <MudText Typo="Typo.subtitle2" Class="mb-2">Router Level</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">In Blazor WASM, We use <code>[Authoriz[e]</code>] attribute to protect routable components (i.e components with <code><span>&#64;</span>page</code>  directive). We reach these components via the router and authorization is performed while being routed to these components.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">We can also specify the eligible roles to access a routable component in the [Authorize] attribute, e.g., <code>[Authorize(Roles="admin,accountant")]</code> </MudText>
+
+                <MudText Typo="Typo.subtitle2" Class="mb-2">Tag Level</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">In Blazor WASM, We use conditional logic to show/hide components/tags according to the assigned roles for the logged in user.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">e.g., <code><span>&#64;</span>if (User.IsInRole("admin"))</code>.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">Also, we use conditional logic to show/hide components/tags according to the logged in user permissions/claims.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">e.g., <code><span>&#64;</span>if (Claims.Any(c => c.Type == "permissions" && c.Value.Contains("Applicants.UpdateApplicant")))</code>.</MudText>
+                <MudAlert Severity="Severity.Warning" Class="mb-2">
+                    <MudText Typo="Typo.body2" Class="mb-2">Client-Side Authorization method is the first line of defense against malicious users but it's not secure enough to guarantee the highest level of data protection.</MudText>
+                </MudAlert>
+                <MudAlert Severity="Severity.Success">
+                    <MudText Typo="Typo.body2" Class="mb-2">Applying Server-Side Authorization method as a second line of defense will guarantee the highest level of data protection against any malicious users or malicious code.</MudText>
+                </MudAlert>
+            </MudExpansionPanel>
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="What is Server-Side Authorization?">
+                <MudText Typo="Typo.body2" Class="mb-2">Server-side authentication takes place when the server receives a request from the client. When requested, the server will validate the client user JWT token against the requested API.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">The user is eligible to access the requested API if they have the relevant roles.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">In .NET apps, server-side authorization can be done by decorating the API controller with [Authorize] attribute, e.g., <code>[Authorize(Roles="admin,accountant")]</code></MudText>
+            </MudExpansionPanel>
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="Do CMS supports both Client-Side Authorization and Server-Side Authorization?">
+                <MudText Typo="Typo.body2">Both Client-Side Authorization and Server-Side Authorization is supported in CMS. We highly recommend using both of them to gain the highest level of security and data protection.</MudText>
+            </MudExpansionPanel>
+            <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="Where can I test the authorization methods in CMS?">
+                <MudText Typo="Typo.body2" Class="mb-2">From User Management, go to Users List, you will notice the following demo users.</MudText>
+                <MudList>
+                    <MudListItem Icon="@Icons.Material.Filled.Check"><MudText Typo="Typo.body2" Class="mb-2">john@demo.com who's asigned to Full-Privileged-Officer role.</MudText></MudListItem>
+                    <MudListItem Icon="@Icons.Material.Filled.Check"><MudText Typo="Typo.body2" Class="mb-2">mandy@demo.com who's asigned to Read-Only-Officer role.</MudText></MudListItem>
+                </MudList>
+                <MudText Typo="Typo.body2" Class="mb-2">Execute the following test case.</MudText>
+                <MudList>
+                    <MudList>
+                        <MudListItem Icon="@Icons.Material.Filled.Check"><MudText Typo="Typo.body2" Class="mb-2">Login as john@demo.com / password: 123456.</MudText></MudListItem>
+                        <MudListItem Icon="@Icons.Material.Filled.Check"><MudText Typo="Typo.body2" Class="mb-2">Go to Proof of Concepts &#8594; Authorization &#8594; Client-Side Authorization &#8594; Applicants.</MudText></MudListItem>
+                        <MudListItem Icon="@Icons.Material.Filled.Check"><MudText Typo="Typo.body2" Class="mb-2">You shall notice that you can perform add, view, edit and delete operations..</MudText></MudListItem>
+                        <MudListItem Icon="@Icons.Material.Filled.Check"><MudText Typo="Typo.body2" Class="mb-2">Go to Proof of Concepts &#8594; Authorization &#8594; Server-Side Authorization &#8594; Applicants.</MudText></MudListItem>
+                        <MudListItem Icon="@Icons.Material.Filled.Check"><MudText Typo="Typo.body2" Class="mb-2">You shall also notice that you can perform add, view, edit and delete operations..</MudText></MudListItem>
+                        <MudListItem Icon="@Icons.Material.Filled.Check"><MudText Typo="Typo.body2" Class="mb-2">Login as mandy@demo.com / password: 123456..</MudText></MudListItem>
+                        <MudListItem Icon="@Icons.Material.Filled.Check"><MudText Typo="Typo.body2" Class="mb-2">Go to Proof of Concepts &#8594; Authorization &#8594; Client-Side Authorization &#8594; Applicants.</MudText></MudListItem>
+                        <MudListItem Icon="@Icons.Material.Filled.Check"><MudText Typo="Typo.body2" Class="mb-2">You shall notice that you can only perform view operation..</MudText></MudListItem>
+                        <MudListItem Icon="@Icons.Material.Filled.Check"><MudText Typo="Typo.body2" Class="mb-2">Navigate to poc/authorization/clientSideAuthorization/addApplicant/.</MudText></MudListItem>
+                        <MudListItem Icon="@Icons.Material.Filled.Check"><MudText Typo="Typo.body2" Class="mb-2">The system shall transfer you to 401 error page indicating that you are not authorized to access this page..</MudText></MudListItem>
+                        <MudListItem Icon="@Icons.Material.Filled.Check"><MudText Typo="Typo.body2" Class="mb-2">Go to Proof of Concepts &#8594; Authorization &#8594; Server-Side Authorization &#8594; Applicants.</MudText></MudListItem>
+                        <MudListItem Icon="@Icons.Material.Filled.Check"><MudText Typo="Typo.body2" Class="mb-2">You shall notice that the system displays add, view, edit and delete operations..</MudText></MudListItem>
+                        <MudListItem Icon="@Icons.Material.Filled.Check"><MudText Typo="Typo.body2" Class="mb-2">You shall be able to view any applicant profile but when you chooses to edit some profile, once you click on save button, the server will respond with a message indicating that You are forbidden to access api/applicants/UpdateApplicant..</MudText></MudListItem>
+                    </MudList>
+                </MudList>
+            </MudExpansionPanel>
+        </MudExpansionPanels>
+        <MudText Typo="Typo.h6" GutterBottom="true" Class="mt-8">Dynamic Authorization</MudText>
+        <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="I'm already familiar with Server/Client-Side Authorization, so what's the new?">
+            <MudText Typo="Typo.body2" Class="mb-2">We devised a new outstanding feature that enables both developers and app admins to create and assign permissions to users in more flexible and dynamic way.</MudText>
+            <MudText Typo="Typo.body2" Class="mb-2">Before we dive into the details, let's just take a look at the following problematic scenario.</MudText>
+            <MudAlert Severity="Severity.Error" Class="mb-2">
+                <MudText Typo="Typo.body2">The developer implemented a new API called Applicants with CRUD operations.</MudText>
+            </MudAlert>
+            <MudAlert Severity="Severity.Error" Class="mb-2">
+                <MudText Typo="Typo.body2" Class="mb-2">The developer decorated each endpoint with [Authorize] attribute and mapped the relevant roles with each endpoint as per customer request. See the following image.</MudText>
+                <img width="100%" src="/images/code-screenshots/applicants-api-hard-coded-roles.png" />
+            </MudAlert>
+            <MudAlert Severity="Severity.Error" Class="mb-2">
+                <MudText Typo="Typo.body2">The developer published a new release to the production server.</MudText>
+            </MudAlert>
+            <MudAlert Severity="Severity.Error" Class="mb-2">
+                <MudText Typo="Typo.body2">After few days, the developer received a change request from the customer indicating that a new role called CEO that has access to everything should be granted full access permission to the Applicants API.</MudText>
+            </MudAlert>
+            <MudAlert Severity="Severity.Error" Class="mb-2">
+                <MudText Typo="Typo.body2" Class="mb-2">The developer mapped the new CEO role with all endpoints and published another release to the production server. See the following image.</MudText>
+                <img width="100%" src="/images/code-screenshots/applicants-api-hard-coded-ceo.png" />
+            </MudAlert>
+            <MudText Typo="Typo.body2" Class="mb-2">I guess you noticed the issue in the aforementioned scenario, the developer had to publish two releases to meat the customer's security requirements.</MudText>
+            <MudText Typo="Typo.body2" Class="mb-2">With CMS, you don't need to publish a new release to the server each time you need to add a new role. All you have to do is to decorate all of your API's only once with [BPAuthorize] attribute. See the following image.</MudText>
+            <img width="100%" src="/images/code-screenshots/applicants-api-with-dynamic-authorize.png" />
+            <MudText Typo="Typo.subtitle2" Class="mb-2 mt-4">How [BPAuthorize] attribute works behind the scenes?</MudText>
+            <MudText Typo="Typo.body2" Class="mb-2">CMS is smart enough to recognize what permissions should be created and how to map these permissions dynamically with the relevant API's without developer intervention.</MudText>
+            <MudText Typo="Typo.body2" Class="mb-2">Once you run CMS, it will scan all the API's that have been decorated with [BPAuthorize] attribute to derive and persist the permission hierarchy based on a fixed naming convention. See the following screenshot.</MudText>
+            <img width="100%" src="/images/code-screenshots/AspNetPermissions.png" />
+            <MudText Typo="Typo.subtitle2" Class="mb-2">How to make some endpoint within any API decorated with [BPAuthorize] attribute publicly accessible?</MudText>
+            <MudText Typo="Typo.body2" Class="mb-2">That's so simple. Suppose that you want to make api/Applicants/CreateApplicant accessible by non-registered users. How to do this? Simply, decorate the CreateApplicant endpoint with [AllowAnonymous] attribute. See the following screenshot.</MudText>
+            <img width="100%" src="/images/code-screenshots/applicants-api-with-allow-anonymous.png" />
+        </MudExpansionPanel>
+        <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="How to assign permissions to users and roles within the CMS environment?">
+            <MudList>
+                <MudListSubheader>
+                    Assign Permissions to User
+                </MudListSubheader>
+                <MudListItem Icon="@Icons.Material.Filled.Bookmark"><MudText Typo="Typo.body2" Class="mb-2">Navigate to User Management &#8594; Users.</MudText></MudListItem>
+                <MudListItem Icon="@Icons.Material.Filled.Bookmark"><MudText Typo="Typo.body2" Class="mb-2">From the Users list, select the required user and click on Permissions button.</MudText></MudListItem>
+                <MudListItem Icon="@Icons.Material.Filled.Bookmark"><MudText Typo="Typo.body2" Class="mb-2">Select the required permissions from the tree list and click on save button.</MudText></MudListItem>
+                <MudListSubheader>
+                    Assign Permissions to Role
+                </MudListSubheader>
+                <MudListItem Icon="@Icons.Material.Filled.Bookmark"><MudText Typo="Typo.body2" Class="mb-2">Navigate to User Management &#8594; Roles &#8594; Add/Edit Role.</MudText></MudListItem>
+                <MudListItem Icon="@Icons.Material.Filled.Bookmark"><MudText Typo="Typo.body2" Class="mb-2">Click on Permissions tab.</MudText></MudListItem>
+                <MudListItem Icon="@Icons.Material.Filled.Bookmark"><MudText Typo="Typo.body2" Class="mb-2">Select the required permissions from the tree list and click on save button.</MudText></MudListItem>
+            </MudList>
+        </MudExpansionPanel>
+    </MudItem>
+</MudGrid>
+
+@code {
+
+    [Inject] private IBreadcrumbService BreadcrumbService { get; set; }
+
+    protected override void OnInitialized()
+    {
+        BreadcrumbService.SetBreadcrumbItems(new List<BreadcrumbItem>
+        {
+            new(Resource.Home, "/"),
+            new(Resource.Proof_of_Concepts, "#", true),
+            new(Resource.Authorization, "#", true),
+            new(Resource.Overview, "#", true)
+        });
+    }
+
+}
