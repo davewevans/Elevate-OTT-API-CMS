@@ -16,6 +16,8 @@
 
 
   <ItemGroup>
+    <PackageReference Include="Azure.Communication.Email" Version="1.0.1" />
+    <PackageReference Include="Azure.ResourceManager.Communication" Version="1.2.0" />
     <PackageReference Include="Azure.Storage.Blobs" Version="12.20.0" />
     <PackageReference Include="Bogus" Version="35.5.1" />
     <PackageReference Include="EntityFrameworkCore.Extensions" Version="5.0.0" />
