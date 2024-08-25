@@ -100,7 +100,7 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
                         var registerResponse = new RegisterResponse
                         {
                             RequireConfirmedAccount = true,
-                            DisplayConfirmAccountLink = true,
+                            DisplayConfirmAccountLink = false,
                             Email = user.Email,
                             EmailConfirmationUrl = HttpUtility.UrlEncode(callbackUrl),
                             AuthResponse = null,

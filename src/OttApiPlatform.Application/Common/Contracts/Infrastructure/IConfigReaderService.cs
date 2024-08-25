@@ -57,6 +57,7 @@ public interface IConfigReaderService
     /// </summary>
     AppTenantOptions GetAppTenantOptions();
 
+
     /// <summary>
     /// Gets the subdomain.
     /// </summary>

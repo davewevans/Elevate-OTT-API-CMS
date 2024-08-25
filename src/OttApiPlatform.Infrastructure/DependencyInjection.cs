@@ -1,3 +1,5 @@
+using OttApiPlatform.Infrastructure.Service;
+
 namespace OttApiPlatform.Infrastructure;
 
 public static class DependencyInjection

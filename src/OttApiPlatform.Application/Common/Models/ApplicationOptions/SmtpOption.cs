@@ -17,6 +17,16 @@ public class SmtpOption
     #region Public Properties
 
     /// <summary>
+    /// Gets or sets Azure connections services connection string.
+    /// </summary>
+    public string AzureCommunicationServicesConnectionString { get; set; }
+
+    /// <summary>
+    /// Gets or sets sender.
+    /// </summary>
+    public string Sender { get; set; }
+
+    /// <summary>
     /// Gets or sets the email address used as the "From" field in emails sent via SMTP.
     /// </summary>
     public string From { get; set; }
