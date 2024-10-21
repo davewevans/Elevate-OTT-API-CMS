@@ -37,6 +37,8 @@ public class AccountController : ApiController
     [HttpPost("Register")]
     public async Task<IActionResult> Register(RegisterCommand request)
     {
+        await Mediator.Send(new CreateTenantCommand());
+
         var response = await Mediator.Send(request);
         return TryGetResult(response);
     }

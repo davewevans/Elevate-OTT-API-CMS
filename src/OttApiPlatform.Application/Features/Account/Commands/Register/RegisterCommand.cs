@@ -1,4 +1,9 @@
-﻿namespace OttApiPlatform.Application.Features.Account.Commands.Register;
+﻿using OttApiPlatform.Application.Features.Tenants.Commands.CreateTenant;
+using MediatR;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace OttApiPlatform.Application.Features.Account.Commands.Register;
 
 public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
 {
@@ -36,6 +41,7 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
         private readonly IApplicationDbContext _dbContext;
         private readonly IAuthenticationService _authenticationService;
         private readonly IAppSettingsReaderService _appSettingsReaderService;
+        private readonly IMediator _mediator;
 
         #endregion Private Fields
 
@@ -46,7 +52,8 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
                                       ITenantResolver tenantResolver,
                                       IApplicationDbContext dbContext,
                                       IAuthenticationService authenticationService,
-                                      IAppSettingsReaderService appSettingsReaderService)
+                                      IAppSettingsReaderService appSettingsReaderService,
+                                      IMediator mediator)
         {
             _userManager = userManager;
             _roleManager = roleManager;
@@ -54,6 +61,7 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
             _dbContext = dbContext;
             _authenticationService = authenticationService;
             _appSettingsReaderService = appSettingsReaderService;
+            _mediator = mediator;
         }
 
         #endregion Public Constructors
@@ -78,6 +86,8 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
             if (!createUserResult.Succeeded)
                 return Envelope<RegisterResponse>.Result.AddErrors(createUserResult.Errors.ToApplicationResult(),
                                                                    HttpStatusCode.InternalServerError);
+
+            return await CreateTenantAndAssignToUserAsync(request, cancellationToken, user);
 
             // Attempt to register the new user as a super admin if they are not already registered
             // as one.
@@ -158,6 +168,39 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
         #endregion Public Methods
 
         #region Private Methods
+
+        /// <summary>
+        /// If the application is in multi-tenant mode, generate a unique tenant name by removing all non-alphanumeric characters
+        /// from the email address and appending a timestamp postfix. Then, create a new tenant using this name. If the tenant
+        /// creation fails, return an internal server error response. Otherwise, set the user's TenantId to the newly created tenant's ID.
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        private async Task<Envelope<RegisterResponse>> CreateTenantAndAssignToUserAsync(RegisterCommand request, CancellationToken cancellationToken,
+            ApplicationUser user)
+        {
+            if (_tenantResolver.TenantMode != TenantMode.MultiTenant) return Envelope<RegisterResponse>.Result.Ok();
+            var postfix = $"{DateTime.Now.Year}{DateTime.Now.Month}{DateTime.Now.Day}{DateTime.Now.Hour}{DateTime.Now.Minute}{DateTime.Now.Second}{DateTime.Now.Millisecond}";
+            var cleanedEmail = EmailHelper.RemoveNonAlphanumericCharacters(request.Email);
+            var tenantName = $"{cleanedEmail}_{postfix}";
+            var createTenantCommand = new CreateTenantCommand
+            {
+                Name = tenantName,
+            };
+
+            var createTenantResponse = await _mediator.Send(createTenantCommand, cancellationToken);
+
+            if (createTenantResponse.IsError)
+                return Envelope<RegisterResponse>.Result.AddErrors(createTenantResponse.ValidationErrors,
+                    HttpStatusCode.InternalServerError);
+            
+            user.TenantId = _tenantResolver.GetTenantId();
+            await _userManager.UpdateAsync(user);
+
+            return Envelope<RegisterResponse>.Result.Ok();
+        }
 
         private void AssignDefaultRolesToUser(ApplicationUser user)
         {

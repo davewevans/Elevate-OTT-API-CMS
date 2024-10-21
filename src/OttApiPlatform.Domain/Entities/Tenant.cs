@@ -17,6 +17,16 @@ public class Tenant : IAuditable
     /// </summary>
     public string Name { get; set; }
 
+    public string LicenseKey { get; set; }
+
+    public string ChannelName { get; set; }
+
+    public string SubDomain { get; set; }
+
+    public string CustomDomain { get; set; }
+
+    public string StorageFileNamePrefix { get; set; }
+
     public string CreatedBy { get; set; }
 
     public DateTime CreatedOn { get; set; }

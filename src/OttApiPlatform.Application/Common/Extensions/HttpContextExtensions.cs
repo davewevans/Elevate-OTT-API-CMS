@@ -127,5 +127,17 @@ public static class HttpContextExtensions
         };
     }
 
+    /// <summary>
+    /// Retrieves the tenant name from the "X-Tenant" request header in the <see cref="HttpContext"/>.
+    /// </summary>
+    /// <param name="httpContextAccessor">The <see cref="IHttpContextAccessor"/> instance.</param>
+    /// <returns>The tenant name as a string, or an empty string if the header is not present or empty.</returns>
+    public static string GetTenantFromRequestHeader(this IHttpContextAccessor httpContextAccessor)
+    {
+        var tenantName = httpContextAccessor.HttpContext.Request.Headers["X-Tenant"];
+
+        return (tenantName.Count == 0) ? string.Empty : tenantName;
+    }
+
     #endregion Public Methods
 }
