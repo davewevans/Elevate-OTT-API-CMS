@@ -6,9 +6,7 @@ public class CreateTenantCommandValidator : AbstractValidator<CreateTenantComman
 
     public CreateTenantCommandValidator()
     {
-        //RuleFor(v => v.Name).Cascade(CascadeMode.Stop)
-        //                    .NotEmpty()
-        //                    .WithMessage(Resource.Tenant_name_is_required);
+        
     }
 
     #endregion Public Constructors

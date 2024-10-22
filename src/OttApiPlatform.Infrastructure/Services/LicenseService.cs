@@ -30,15 +30,18 @@ public class LicenseService : ILicenseService
         System.Text.Encoder enc = System.Text.Encoding.Unicode.GetEncoder();
         byte[] unicodeText = new byte[productIdentifier.Length * 2];
         enc.GetBytes(productIdentifier.ToCharArray(), 0, productIdentifier.Length, unicodeText, 0, true);
-        MD5 md5 = new MD5CryptoServiceProvider();
-        byte[] result = md5.ComputeHash(unicodeText);
 
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < result.Length; i++)
+        using (MD5 md5 = MD5.Create())
         {
-            sb.Append(result[i].ToString("X2"));
+            byte[] result = md5.ComputeHash(unicodeText);
+
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < result.Length; i++)
+            {
+                sb.Append(result[i].ToString("X2"));
+            }
+            return sb.ToString();
         }
-        return sb.ToString();
     }
 
     private string FormatLicenseKey(string productIdentifier)
