@@ -109,10 +109,10 @@
             {
                 var subDomain = NavigationManager.GetSubDomain();
 
-                HubConnection = new HubConnectionBuilder().WithUrl($"{ApiUrlProvider.BaseHubUrl}/Hubs/DashboardHub?Bp-Tenant={subDomain}&Accept-Language={CultureInfo.CurrentCulture}",
+                HubConnection = new HubConnectionBuilder().WithUrl($"{ApiUrlProvider.BaseHubUrl}/Hubs/DashboardHub?X-Tenant={subDomain}&Accept-Language={CultureInfo.CurrentCulture}",
                                                                    options =>
                                                                    {
-                                                                       //options.Headers.Add("Bp-Tenant", subDomain); //Doesn't Work
+                                                                       //options.Headers.Add("X-Tenant", subDomain); //Doesn't Work
                                                                        options.AccessTokenProvider = () => AccessTokenProvider.TryGetAccessToken();
                                                                    })
                                                           .Build();

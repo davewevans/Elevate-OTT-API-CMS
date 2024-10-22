@@ -37,10 +37,10 @@ public class MultiTenancyMiddleware
             // If the TenantMode is MultiTenant.
             case TenantMode.MultiTenant:
                 {
-                    // Get the tenant name value of the Bp-Tenant header from the request.
+                    // Get the tenant name value of the X-Tenant header from the request.
                     var tenantName = GetTenantName(httpContext);
 
-                    // If the Bp-Tenant header is not present in the request, set the tenant ID to
+                    // If the X-Tenant header is not present in the request, set the tenant ID to
                     // null and the tenant name to an empty string.
                     if (tenantName is null)
                     {
@@ -119,7 +119,7 @@ public class MultiTenancyMiddleware
 
     private string GetTenantName(HttpContext httpContext)
     {
-        return httpContext.Request.Headers["Bp-Tenant"];
+        return httpContext.Request.Headers["X-Tenant"];
     }
 
     #endregion Private Methods

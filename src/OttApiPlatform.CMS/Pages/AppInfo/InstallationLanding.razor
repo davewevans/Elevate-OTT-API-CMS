@@ -53,7 +53,7 @@
                 <MudText Typo="Typo.body2" Class="mb-2">In the first strategy, each tenant's data is logically separated by a unique identifier within a common database. In contrast, the second strategy physically separates each tenant's data into their own separate database.</MudText>
             </MudExpansionPanel>
             <MudExpansionPanel Style="font-weight:500" Class="mb-2" Text="What tenant resolution strategy does CMS support?">
-                <MudText Typo="Typo.body2" Class="mb-2">CMS supports the REQUEST HEADER strategy for resolving tenants. This approach uses a header named Bp-Tenant that represents the subdomain portion of the request URL. Once the header is received in the CMS Web API application, it serves the request for the corresponding tenant.</MudText>
+                <MudText Typo="Typo.body2" Class="mb-2">CMS supports the REQUEST HEADER strategy for resolving tenants. This approach uses a header named X-Tenant that represents the subdomain portion of the request URL. Once the header is received in the CMS Web API application, it serves the request for the corresponding tenant.</MudText>
                 <MudText Typo="Typo.body2" Class="mb-2">This makes it easy to manage multiple tenants with ease, providing a powerful organizational tool that streamlines the development process.</MudText>
                 <MudText Typo="Typo.body2" Class="mb-2">With CMS, you can rest assured that tenant resolution is quick and easy, allowing you to focus on developing your application rather than worrying about complicated tenant management.</MudText>
             </MudExpansionPanel>

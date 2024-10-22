@@ -59,10 +59,10 @@ public class ChallengeMiddleware
     {
         var isSignalRRequest = context.Request.Headers.TryGetValue("x-signalr-user-agent", out _);
 
-        // Get the Bp-Tenant header from the request.
-        var bpTenantHeader = context.Request.Headers["Bp-Tenant"];
+        // Get the X-Tenant header from the request.
+        var bpTenantHeader = context.Request.Headers["X-Tenant"];
 
-        // Get the value of the Bp-Tenant header.
+        // Get the value of the X-Tenant header.
         var tenantHeader = bpTenantHeader.FirstOrDefault();
 
         if (!context.User.IsAuthenticated() || isSignalRRequest || tenantHeader is null)

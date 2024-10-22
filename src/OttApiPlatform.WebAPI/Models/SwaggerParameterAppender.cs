@@ -12,10 +12,10 @@ public class SwaggerParameterAppender : IOperationFilter
         // Ensure that the operation has parameters.
         operation.Parameters ??= new List<OpenApiParameter>();
 
-        // Add a new parameter for Bp-Tenant header.
+        // Add a new parameter for X-Tenant header.
         operation.Parameters.Add(new OpenApiParameter
         {
-            Name = "Bp-Tenant",
+            Name = "X-Tenant",
             In = ParameterLocation.Header,
             Schema = new OpenApiSchema
             {

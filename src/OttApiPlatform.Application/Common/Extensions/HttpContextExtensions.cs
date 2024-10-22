@@ -74,8 +74,8 @@ public static class HttpContextExtensions
     /// <param name="httpContextAccessor">The <see cref="IHttpContextAccessor"/> instance.</param>
     /// <returns>
     /// The tenant name as a string, or an empty string if it is not found. If the
-    /// "Bp-TenantByGatewayClient" header is present, returns its value. Otherwise, returns the
-    /// value of the "Bp-Tenant" header.
+    /// "X-TenantByGatewayClient" header is present, returns its value. Otherwise, returns the
+    /// value of the "X-Tenant" header.
     /// </returns>
     /// <exception cref="ArgumentNullException"></exception>
     public static string GetTenantName(this IHttpContextAccessor httpContextAccessor)
@@ -84,20 +84,20 @@ public static class HttpContextExtensions
         if (httpContextAccessor.HttpContext == null)
             return string.Empty;
 
-        // Retrieve the value of the Bp-Tenant header created by the host owner through the Tenant
+        // Retrieve the value of the X-Tenant header created by the host owner through the Tenant
         // Portal Client App.
-        var tenantName = httpContextAccessor.HttpContext.Request.Headers["Bp-Tenant"];
+        var tenantName = httpContextAccessor.HttpContext.Request.Headers["X-Tenant"];
 
-        // Retrieve the value of the Bp-TenantByGatewayClient header created by an external user
+        // Retrieve the value of the X-TenantByGatewayClient header created by an external user
         // through the Tenant Gateway Client App.
-        var tenantNameByGatewayClient = httpContextAccessor.HttpContext.Request.Headers["Bp-TenantByGatewayClient"];
+        var tenantNameByGatewayClient = httpContextAccessor.HttpContext.Request.Headers["X-TenantByGatewayClient"];
 
-        // Check if the Bp-TenantByGatewayClient header has a value and is not empty
+        // Check if the X-TenantByGatewayClient header has a value and is not empty
         if (tenantNameByGatewayClient.Count != 0 && !string.IsNullOrWhiteSpace(tenantNameByGatewayClient))
             return tenantNameByGatewayClient;
 
-        // If the Bp-TenantByGatewayClient header is empty or not present, return the value of the
-        // Bp-Tenant header
+        // If the X-TenantByGatewayClient header is empty or not present, return the value of the
+        // X-Tenant header
         return tenantNameByGatewayClient.Count == 0 ? tenantName : tenantNameByGatewayClient;
     }
 

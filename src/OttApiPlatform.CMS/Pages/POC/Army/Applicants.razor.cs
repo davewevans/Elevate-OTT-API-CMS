@@ -305,10 +305,10 @@ public partial class Applicants : IAsyncDisposable
 
             var subDomain = NavigationManager.GetSubDomain();
 
-            HubConnection = new HubConnectionBuilder().WithUrl($"{ApiUrlProvider.BaseHubUrl}/Hubs/DataExportHub?Bp-Tenant={subDomain}&Accept-Language={CultureInfo.CurrentCulture}",
+            HubConnection = new HubConnectionBuilder().WithUrl($"{ApiUrlProvider.BaseHubUrl}/Hubs/DataExportHub?X-Tenant={subDomain}&Accept-Language={CultureInfo.CurrentCulture}",
                                                                options =>
                                                                {
-                                                                   //options.Headers.Add("Bp-Tenant", subDomain); //Doesn't Work
+                                                                   //options.Headers.Add("X-Tenant", subDomain); //Doesn't Work
                                                                    //options.Headers.Add("Accept-Language", culture); //Doesn't Work.
                                                                    options.AccessTokenProvider = () => AccessTokenProvider.TryGetAccessToken();
                                                                }).Build();

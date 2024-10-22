@@ -1,5 +1,7 @@
 namespace OttApiPlatform.CMS.Services;
 
+// ref: https://github.com/jsakamoto/Toolbelt.Blazor.HttpClientInterceptor
+
 public class HttpInterceptor : DelegatingHandler
 {
     #region Private Fields
@@ -67,7 +69,7 @@ public class HttpInterceptor : DelegatingHandler
         var subDomain = _navigationManager.GetSubDomain();
 
         if (subDomain != null)
-            request.Headers.Add("Bp-Tenant", subDomain);
+            request.Headers.Add("X-Tenant", subDomain);
 
         var accessToken = await _accessTokenProvider.TryGetAccessToken();
 

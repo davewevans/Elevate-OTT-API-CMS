@@ -57,6 +57,11 @@ public interface IConfigReaderService
     /// </summary>
     AppTenantOptions GetAppTenantOptions();
 
+    /// <summary>
+    /// Gets the options for the license info.
+    /// </summary>
+    /// <returns></returns>
+    LicenseInfoOptions GetLicenseInfoOptions();
 
     /// <summary>
     /// Gets the subdomain.

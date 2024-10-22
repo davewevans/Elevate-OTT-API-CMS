@@ -51,8 +51,8 @@ public class SignalRContextProvider : ISignalRContextProvider
         ThrowExceptionIfNull(hubCallerContext);
 
         // Retrieve the HttpContext from the given HubCallerContext and retrieve the value of the
-        // "Bp-Tenant" query parameter Return the value as a string.
-        return hubCallerContext.GetHttpContext()?.Request.Query["Bp-Tenant"].ToString();
+        // "X-Tenant" query parameter Return the value as a string.
+        return hubCallerContext.GetHttpContext()?.Request.Query["X-Tenant"].ToString();
     }
 
     public string GetUserName(HubCallerContext hubCallerContext)

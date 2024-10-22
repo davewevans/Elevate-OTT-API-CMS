@@ -8,6 +8,7 @@ public class ConfigReaderService : IConfigReaderService
     private readonly JwtOptions _jwtOptionsSnapshot;
     private readonly SmtpOption _smtpOptionSnapshot;
     private readonly ClientAppOptions _clientAppOptionsSnapshot;
+    private readonly LicenseInfoOptions _licenseInfoOptionsSnapshot;
     private readonly IHttpContextAccessor _httpContextAccessor;
 
     #endregion Private Fields
@@ -18,12 +19,14 @@ public class ConfigReaderService : IConfigReaderService
                                IOptionsSnapshot<JwtOptions> jwtOptionsSnapshot,
                                IOptionsSnapshot<ClientAppOptions> clientAppOptionsSnapshot,
                                IOptionsSnapshot<SmtpOption> smtpOptionSnapshot,
+                               IOptionsSnapshot<LicenseInfoOptions> licenseInfoOptionsSnapshot,
                                IHttpContextAccessor httpContextAccessor)
     {
         _appOptionsSnapshot = appOptionsSnapshot.Value;
         _jwtOptionsSnapshot = jwtOptionsSnapshot.Value;
         _clientAppOptionsSnapshot = clientAppOptionsSnapshot.Value;
         _smtpOptionSnapshot = smtpOptionSnapshot.Value;
+        _licenseInfoOptionsSnapshot = licenseInfoOptionsSnapshot.Value;
         _httpContextAccessor = httpContextAccessor;
     }
 
@@ -84,6 +87,11 @@ public class ConfigReaderService : IConfigReaderService
     public string GetSubDomain()
     {
         return _httpContextAccessor.GetTenantName();
+    }
+
+    public LicenseInfoOptions GetLicenseInfoOptions()
+    {
+        return _licenseInfoOptionsSnapshot;
     }
 
     #endregion Public Methods

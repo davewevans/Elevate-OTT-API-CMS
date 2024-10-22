@@ -2,6 +2,7 @@
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
+using OttApiPlatform.Application.Common.Contracts;
 
 namespace OttApiPlatform.Application.Features.Account.Commands.Register;
 
@@ -41,6 +42,7 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
         private readonly IApplicationDbContext _dbContext;
         private readonly IAuthenticationService _authenticationService;
         private readonly IAppSettingsReaderService _appSettingsReaderService;
+        private readonly ILicenseService _licenseService;
         private readonly IMediator _mediator;
 
         #endregion Private Fields
@@ -53,6 +55,7 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
                                       IApplicationDbContext dbContext,
                                       IAuthenticationService authenticationService,
                                       IAppSettingsReaderService appSettingsReaderService,
+                                      ILicenseService licenseService,
                                       IMediator mediator)
         {
             _userManager = userManager;
@@ -61,6 +64,7 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
             _dbContext = dbContext;
             _authenticationService = authenticationService;
             _appSettingsReaderService = appSettingsReaderService;
+            _licenseService = licenseService;
             _mediator = mediator;
         }
 
@@ -182,12 +186,16 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
             ApplicationUser user)
         {
             if (_tenantResolver.TenantMode != TenantMode.MultiTenant) return Envelope<RegisterResponse>.Result.Ok();
+            var tenantId = Guid.NewGuid();
             var postfix = $"{DateTime.Now.Year}{DateTime.Now.Month}{DateTime.Now.Day}{DateTime.Now.Hour}{DateTime.Now.Minute}{DateTime.Now.Second}{DateTime.Now.Millisecond}";
-            var cleanedEmail = EmailHelper.RemoveNonAlphanumericCharacters(request.Email);
-            var tenantName = $"{cleanedEmail}_{postfix}";
+            var cleanedEmail = EmailHelper.RemoveNonAlphanumericCharacters(request.Email); var tenantName = $"{cleanedEmail}_{postfix}";
+            
             var createTenantCommand = new CreateTenantCommand
             {
+                Id = tenantId,
                 Name = tenantName,
+                LicenseKey = _licenseService.GenerateLicenseForTenant(tenantId),
+                StorageFileNamePrefix = tenantId.ToString().Replace("-", "")
             };
 
             var createTenantResponse = await _mediator.Send(createTenantCommand, cancellationToken);

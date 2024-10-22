@@ -36,7 +36,7 @@ public class HttpService : IHttpService
 
     public void SetTenantHeader(string value)
     {
-        TenantHeader = new TenantHeader() { Key = "Bp-TenantByGatewayClient", Value = value };
+        TenantHeader = new TenantHeader() { Key = "X-TenantByGatewayClient", Value = value };
     }
 
     public async Task<ApiResponseWrapper<TResponse>> Get<TResponse>(string url)

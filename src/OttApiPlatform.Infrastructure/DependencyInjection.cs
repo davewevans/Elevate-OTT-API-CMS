@@ -1,3 +1,4 @@
+using OttApiPlatform.Application.Common.Contracts;
 using OttApiPlatform.Infrastructure.Service;
 
 namespace OttApiPlatform.Infrastructure;
@@ -118,6 +119,7 @@ public static class DependencyInjection
         services.AddScoped<IBackgroundReportingService, BackgroundReportingService>();
         services.AddScoped<IOnDemandReportingService, OnDemandReportingService>();
         services.AddScoped<IHtmlReportBuilderService, HtmlReportBuilderService>();
+        services.AddScoped<ILicenseService, LicenseService>();
 
         return services;
     }
