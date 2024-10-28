@@ -2229,4 +2229,10 @@
   <data name="ExportAsPdfOnDemand" xml:space="preserve">
     <value>तुरंत पीडीएफ के रूप में निर्यात करें</value>
   </data>
+  <data name="User_email_has_been_confirmed_successfully" xml:space="preserve">
+    <value>उपयोगकर्ता ईमेल की सफलतापूर्वक पुष्टि की गई है।</value>
+  </data>
+  <data name="Tenant_creation_failed" xml:space="preserve">
+    <value>टेनेंट निर्माण विफल रहा.</value>
+  </data>
 </root>

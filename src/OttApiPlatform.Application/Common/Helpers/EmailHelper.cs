@@ -19,13 +19,12 @@ namespace OttApiPlatform.Application.Common.Helpers
                 throw new ArgumentException("Invalid email format", nameof(email));
 
             var localPart = emailParts[0];
-            var domainPart = emailParts[1];
 
             // Remove non-alphanumeric characters from the local part
             var cleanedLocalPart = Regex.Replace(localPart, "[^a-zA-Z0-9]", "");
 
             // Return the cleaned email
-            return $"{cleanedLocalPart}@{domainPart}";
+            return $"{ cleanedLocalPart }";
         }
     }
 }

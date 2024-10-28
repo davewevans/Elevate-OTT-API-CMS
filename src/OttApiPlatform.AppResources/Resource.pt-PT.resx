@@ -2229,4 +2229,10 @@
   <data name="ExportAsPdfOnDemand" xml:space="preserve">
     <value>Exportar como PDF imediatamente</value>
   </data>
+  <data name="User_email_has_been_confirmed_successfully" xml:space="preserve">
+    <value>O e-mail do usuário foi confirmado com sucesso.</value>
+  </data>
+  <data name="Tenant_creation_failed" xml:space="preserve">
+    <value>Falha na criação do locatário.</value>
+  </data>
 </root>

@@ -3,6 +3,7 @@ using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
 using OttApiPlatform.Application.Common.Contracts;
+using Azure.Core;
 
 namespace OttApiPlatform.Application.Features.Account.Commands.Register;
 
@@ -36,6 +37,7 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
     {
         #region Private Fields
 
+        private readonly ILogger _logger;
         private readonly ApplicationUserManager _userManager;
         private readonly ApplicationRoleManager _roleManager;
         private readonly ITenantResolver _tenantResolver;
@@ -49,7 +51,8 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
 
         #region Public Constructors
 
-        public RegisterCommandHandler(ApplicationUserManager userManager,
+        public RegisterCommandHandler(ILogger<RegisterCommandHandler> logger,
+            ApplicationUserManager userManager,
                                       ApplicationRoleManager roleManager,
                                       ITenantResolver tenantResolver,
                                       IApplicationDbContext dbContext,
@@ -58,6 +61,7 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
                                       ILicenseService licenseService,
                                       IMediator mediator)
         {
+            _logger = logger;
             _userManager = userManager;
             _roleManager = roleManager;
             _tenantResolver = tenantResolver;
@@ -91,7 +95,12 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
                 return Envelope<RegisterResponse>.Result.AddErrors(createUserResult.Errors.ToApplicationResult(),
                                                                    HttpStatusCode.InternalServerError);
 
-            return await CreateTenantAndAssignToUserAsync(request, cancellationToken, user);
+            // Create tenant and assign to user
+            var createTenantResult = await CreateTenantAndAssignToUserAsync(request, user, cancellationToken);
+
+            // If tenant creation failed, return a server error response.
+            if (!createTenantResult.IsSuccess)
+                return Envelope<RegisterResponse>.Result.ServerError(Resource.Tenant_creation_failed);
 
             // Attempt to register the new user as a super admin if they are not already registered
             // as one.
@@ -182,32 +191,44 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
         /// <param name="cancellationToken"></param>
         /// <param name="user"></param>
         /// <returns></returns>
-        private async Task<Envelope<RegisterResponse>> CreateTenantAndAssignToUserAsync(RegisterCommand request, CancellationToken cancellationToken,
-            ApplicationUser user)
+        private async Task<CreateTenantResult> CreateTenantAndAssignToUserAsync(RegisterCommand request, ApplicationUser user, CancellationToken cancellationToken)
         {
-            if (_tenantResolver.TenantMode != TenantMode.MultiTenant) return Envelope<RegisterResponse>.Result.Ok();
-            var tenantId = Guid.NewGuid();
+            var result = new CreateTenantResult();
+
+            if (_tenantResolver.TenantMode != TenantMode.MultiTenant)
+            {
+                result.IsSuccess = true;
+                return result;
+            }
+
+            var currentTenantId = _tenantResolver.GetTenantId();
+            var tenantId = currentTenantId == Guid.Empty || currentTenantId is null ? Guid.NewGuid() : currentTenantId;
             var postfix = $"{DateTime.Now.Year}{DateTime.Now.Month}{DateTime.Now.Day}{DateTime.Now.Hour}{DateTime.Now.Minute}{DateTime.Now.Second}{DateTime.Now.Millisecond}";
-            var cleanedEmail = EmailHelper.RemoveNonAlphanumericCharacters(request.Email); var tenantName = $"{cleanedEmail}_{postfix}";
-            
+            var cleanedEmail = EmailHelper.RemoveNonAlphanumericCharacters(request.Email);
+            var tenantName = $"{cleanedEmail}_{postfix}";
+
             var createTenantCommand = new CreateTenantCommand
             {
-                Id = tenantId,
+                Id = tenantId.Value,
                 Name = tenantName,
-                LicenseKey = _licenseService.GenerateLicenseForTenant(tenantId),
+                LicenseKey = _licenseService.GenerateLicenseForTenant(tenantId.Value),
                 StorageFileNamePrefix = tenantId.ToString().Replace("-", "")
             };
 
             var createTenantResponse = await _mediator.Send(createTenantCommand, cancellationToken);
 
             if (createTenantResponse.IsError)
-                return Envelope<RegisterResponse>.Result.AddErrors(createTenantResponse.ValidationErrors,
-                    HttpStatusCode.InternalServerError);
-            
+            {
+                result.IsSuccess = false;
+                _logger.LogError("Tenant creation failed: {Error}", string.Join(", ", createTenantResponse.ValidationErrors.Select(kv => $"{kv.Key}: {kv.Value}")));
+                return result;
+            }
+
             user.TenantId = _tenantResolver.GetTenantId();
             await _userManager.UpdateAsync(user);
 
-            return Envelope<RegisterResponse>.Result.Ok();
+            result.IsSuccess = true;
+            return result;
         }
 
         private void AssignDefaultRolesToUser(ApplicationUser user)

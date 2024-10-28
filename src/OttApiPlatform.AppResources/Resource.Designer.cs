@@ -5037,6 +5037,15 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tenant creation failed..
+        /// </summary>
+        public static string Tenant_creation_failed {
+            get {
+                return ResourceManager.GetString("Tenant_creation_failed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tenant has been created successfully..
         /// </summary>
         public static string Tenant_has_been_created_successfully {
