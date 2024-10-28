@@ -2229,4 +2229,10 @@
   <data name="ExportAsPdfOnDemand" xml:space="preserve">
     <value>Sofort als PDF exportieren</value>
   </data>
+  <data name="User_email_has_been_confirmed_successfully" xml:space="preserve">
+    <value>Die E-Mail-Adresse des Benutzers wurde erfolgreich bestätigt.</value>
+  </data>
+  <data name="Tenant_creation_failed" xml:space="preserve">
+    <value>Fehler bei der Mandantenerstellung.</value>
+  </data>
 </root>

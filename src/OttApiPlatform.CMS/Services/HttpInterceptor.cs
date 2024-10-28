@@ -1,3 +1,5 @@
+using Utils =  OttApiPlatform.CMS.Utilities;
+
 namespace OttApiPlatform.CMS.Services;
 
 // ref: https://github.com/jsakamoto/Toolbelt.Blazor.HttpClientInterceptor
@@ -11,6 +13,7 @@ public class HttpInterceptor : DelegatingHandler
     private readonly IAccessTokenProvider _accessTokenProvider;
     private readonly IAppStateManager _appStateManager;
     private readonly IReturnUrlProvider _returnUrlProvider;
+    private readonly ILocalStorageService _localStorageService;
 
     private CancellationTokenSource _tokenSource;
 
@@ -22,12 +25,14 @@ public class HttpInterceptor : DelegatingHandler
                            IRefreshTokenService refreshTokenService,
                            IAccessTokenProvider accessTokenProvider,
                            IAppStateManager appStateManager,
-                           IReturnUrlProvider returnUrlProvider)
+                           IReturnUrlProvider returnUrlProvider,
+                           ILocalStorageService localStorageService)
     {
         _navigationManager = navigationManager;
         _refreshTokenService = refreshTokenService;
         _accessTokenProvider = accessTokenProvider;
         _appStateManager = appStateManager;
+        _localStorageService = localStorageService;
 
         _tokenSource = new CancellationTokenSource();
 
@@ -53,10 +58,21 @@ public class HttpInterceptor : DelegatingHandler
 
         var response = await base.SendAsync(request, _tokenSource.Token);
 
-        if (response.StatusCode is HttpStatusCode.Unauthorized or HttpStatusCode.Forbidden)
+        switch (response.StatusCode)
         {
-            await _returnUrlProvider.SetReturnUrl(_navigationManager.Uri);
-            _navigationManager.NavigateTo("/pages/error/401");
+            case HttpStatusCode.Unauthorized:
+            case HttpStatusCode.Forbidden:
+                await _returnUrlProvider.SetReturnUrl(_navigationManager.Uri);
+                _navigationManager.NavigateTo("/pages/error/401");
+                break;
+            case HttpStatusCode.NotFound:
+                await _returnUrlProvider.SetReturnUrl(_navigationManager.Uri);
+                _navigationManager.NavigateTo("/pages/error/404");
+                break;
+            case HttpStatusCode.InternalServerError:
+                await _returnUrlProvider.SetReturnUrl(_navigationManager.Uri);
+                _navigationManager.NavigateTo("/pages/error/500");
+                break;
         }
 
         _appStateManager.OverlayVisible = false;
@@ -69,7 +85,12 @@ public class HttpInterceptor : DelegatingHandler
         var subDomain = _navigationManager.GetSubDomain();
 
         if (subDomain != null)
-            request.Headers.Add("X-Tenant", subDomain);
+            request.Headers.Add("Subdmain", subDomain);
+
+        string tenantId = await _localStorageService.GetItemAsync<string>(Utils.Constants.TenantIdStorageKey);
+
+        if (!string.IsNullOrWhiteSpace(tenantId))
+            request.Headers.Add("X-Tenant", tenantId);
 
         var accessToken = await _accessTokenProvider.TryGetAccessToken();
 

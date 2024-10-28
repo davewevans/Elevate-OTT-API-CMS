@@ -2229,4 +2229,10 @@
   <data name="ExportAsPdfOnDemand" xml:space="preserve">
     <value>Exportați imediat ca PDF</value>
   </data>
+  <data name="User_email_has_been_confirmed_successfully" xml:space="preserve">
+    <value>E-mailul utilizatorului a fost confirmat cu succes.</value>
+  </data>
+  <data name="Tenant_creation_failed" xml:space="preserve">
+    <value>Crearea entității găzduite a eșuat.</value>
+  </data>
 </root>

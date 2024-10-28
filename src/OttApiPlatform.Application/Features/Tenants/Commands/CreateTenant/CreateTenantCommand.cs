@@ -10,8 +10,6 @@ public class CreateTenantCommand : IRequest<Envelope<CreateTenantResponse>>
 
     public string LicenseKey { get; set; }
 
-    public string ChannelName { get; set; }
-
     public string SubDomain { get; set; }
 
     public string CustomDomain { get; set; }
@@ -26,7 +24,7 @@ public class CreateTenantCommand : IRequest<Envelope<CreateTenantResponse>>
     {
         return new()
         {
-            Id = Id,
+            Id = Id == Guid.Empty ? Guid.NewGuid() : Id,
             Name = Name,
             LicenseKey = LicenseKey,
             SubDomain = SubDomain,

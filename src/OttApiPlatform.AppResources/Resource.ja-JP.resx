@@ -2229,4 +2229,10 @@
   <data name="ExportAsPdfOnDemand" xml:space="preserve">
     <value>すぐにPDFとしてエクスポート</value>
   </data>
+  <data name="User_email_has_been_confirmed_successfully" xml:space="preserve">
+    <value>ユーザーの電子メールが正常に確認されました。</value>
+  </data>
+  <data name="Tenant_creation_failed" xml:space="preserve">
+    <value>テナントの作成に失敗しました。</value>
+  </data>
 </root>

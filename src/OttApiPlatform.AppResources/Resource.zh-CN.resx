@@ -2229,4 +2229,10 @@
   <data name="ExportAsPdfOnDemand" xml:space="preserve">
     <value>立即导出为 PDF</value>
   </data>
+  <data name="User_email_has_been_confirmed_successfully" xml:space="preserve">
+    <value>用户电子邮件已成功确认。</value>
+  </data>
+  <data name="Tenant_creation_failed" xml:space="preserve">
+    <value>租户创建失败。</value>
+  </data>
 </root>

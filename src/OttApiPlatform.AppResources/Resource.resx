@@ -2235,4 +2235,7 @@
   <data name="User_email_has_been_confirmed_successfully" xml:space="preserve">
 	  <value>User email has been confirmed successfully.</value>
   </data>
+  <data name="Tenant_creation_failed" xml:space="preserve">
+    <value>Tenant creation failed.</value>
+  </data>
 </root>

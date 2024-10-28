@@ -19,8 +19,6 @@ public class Tenant : IAuditable
 
     public string LicenseKey { get; set; }
 
-    public string ChannelName { get; set; }
-
     public string SubDomain { get; set; }
 
     public string CustomDomain { get; set; }
