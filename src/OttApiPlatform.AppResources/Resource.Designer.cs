@@ -1060,6 +1060,15 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Company/Organization name is required..
+        /// </summary>
+        public static string CompanyName_is_required {
+            get {
+                return ResourceManager.GetString("CompanyName_is_required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Completed.
         /// </summary>
         public static string Completed {
@@ -4961,6 +4970,15 @@ namespace OttApiPlatform.AppResources {
         public static string Storage_type_is_required {
             get {
                 return ResourceManager.GetString("Storage_type_is_required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sub domain should only contain alphanumeric characters and hyphens..
+        /// </summary>
+        public static string SubDomain_should_only_contain_alphanumeric_characters_and_hyphens {
+            get {
+                return ResourceManager.GetString("SubDomain_should_only_contain_alphanumeric_characters_and_hyphens", resourceCulture);
             }
         }
         

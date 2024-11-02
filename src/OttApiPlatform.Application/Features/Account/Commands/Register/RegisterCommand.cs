@@ -15,6 +15,8 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
     public string Password { get; set; }
     public string ConfirmPassword { get; set; }
     public string ReturnUrl { get; set; }
+    public string CompanyName { get; set; }
+    public string SubDomain { get; set; }
 
     #endregion Public Properties
 
@@ -101,6 +103,8 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
             // If tenant creation failed, return a server error response.
             if (!createTenantResult.IsSuccess)
                 return Envelope<RegisterResponse>.Result.ServerError(Resource.Tenant_creation_failed);
+
+            // Create account info for the tenant
 
             // Attempt to register the new user as a super admin if they are not already registered
             // as one.

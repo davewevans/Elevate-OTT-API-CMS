@@ -26,10 +26,10 @@ public class CreateTenantCommand : IRequest<Envelope<CreateTenantResponse>>
         {
             Id = Id == Guid.Empty ? Guid.NewGuid() : Id,
             Name = Name,
-            LicenseKey = LicenseKey,
-            SubDomain = SubDomain,
-            CustomDomain = CustomDomain,
-            StorageFileNamePrefix = StorageFileNamePrefix,
+            //LicenseKey = LicenseKey,
+            //SubDomain = SubDomain,
+            //CustomDomain = CustomDomain,
+            //StorageFileNamePrefix = StorageFileNamePrefix,
         };
     }
 

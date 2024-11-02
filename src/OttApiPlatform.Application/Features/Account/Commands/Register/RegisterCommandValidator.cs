@@ -29,6 +29,15 @@ public class RegisterCommandValidator : AbstractValidator<RegisterCommand>
                                        .WithMessage(Resource.Confirm_password_is_required)
                                        .Equal(v => v.Password)
                                        .WithMessage(Resource.The_password_and_confirmation_password_do_not_match);
+        
+        RuleFor(v => v.CompanyName).Cascade(CascadeMode.Stop)
+            .NotEmpty()
+            .WithMessage(Resource.CompanyName_is_required);
+
+        RuleFor(v => v.SubDomain).Cascade(CascadeMode.Stop)
+            .NotEmpty()
+                                    .Matches(@"^[a-zA-Z0-9-]+$")
+                                    .WithMessage(Resource.SubDomain_should_only_contain_alphanumeric_characters_and_hyphens);
     }
 
     #endregion Public Constructors
