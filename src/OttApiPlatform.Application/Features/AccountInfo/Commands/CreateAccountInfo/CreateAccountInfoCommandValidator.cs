@@ -26,9 +26,9 @@ public class CreateAccountInfoCommandValidator : AbstractValidator<CreateAccount
             .WithMessage(Resource.SubDomain_should_only_contain_alphanumeric_characters_and_hyphens);
 
         RuleFor(v => v.CustomDomain)
-            .NotEmpty()
             .Matches(@"^[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*$")
-            .WithMessage("CustomDomain should be a valid domain name.");
+            .WithMessage("CustomDomain should be a valid domain name.")
+            .When(v => !string.IsNullOrEmpty(v.CustomDomain));
 
         RuleFor(v => v.StorageFileNamePrefix)
             .NotEmpty()

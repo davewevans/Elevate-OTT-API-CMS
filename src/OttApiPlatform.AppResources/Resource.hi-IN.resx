@@ -2241,4 +2241,7 @@
   <data name="SubDomain_should_only_contain_alphanumeric_characters_and_hyphens" xml:space="preserve">
     <value>उप डोमेन में केवल अल्फ़ान्यूमेरिक वर्ण और हाइफ़न होने चाहिए।</value>
   </data>
+  <data name="Account_info_creation_failed" xml:space="preserve">
+    <value>खाता जानकारी बनाना विफल रहा.</value>
+  </data>
 </root>

@@ -2241,4 +2241,7 @@
   <data name="SubDomain_should_only_contain_alphanumeric_characters_and_hyphens" xml:space="preserve">
     <value>Alt alan adı yalnızca alfasayısal karakterler ve kısa çizgiler içermelidir.</value>
   </data>
+  <data name="Account_info_creation_failed" xml:space="preserve">
+    <value>Hesap bilgileri oluşturulamadı.</value>
+  </data>
 </root>

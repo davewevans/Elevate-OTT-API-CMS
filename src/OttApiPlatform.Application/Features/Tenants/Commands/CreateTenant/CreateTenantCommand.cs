@@ -8,14 +8,6 @@ public class CreateTenantCommand : IRequest<Envelope<CreateTenantResponse>>
 
     public string Name { get; set; }
 
-    public string LicenseKey { get; set; }
-
-    public string SubDomain { get; set; }
-
-    public string CustomDomain { get; set; }
-
-    public string StorageFileNamePrefix { get; set; }
-
     #endregion Public Properties
 
     #region Public Methods
@@ -25,11 +17,7 @@ public class CreateTenantCommand : IRequest<Envelope<CreateTenantResponse>>
         return new()
         {
             Id = Id == Guid.Empty ? Guid.NewGuid() : Id,
-            Name = Name,
-            //LicenseKey = LicenseKey,
-            //SubDomain = SubDomain,
-            //CustomDomain = CustomDomain,
-            //StorageFileNamePrefix = StorageFileNamePrefix,
+            Name = Name
         };
     }
 

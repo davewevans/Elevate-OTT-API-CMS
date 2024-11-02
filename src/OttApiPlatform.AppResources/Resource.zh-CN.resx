@@ -2241,4 +2241,7 @@
   <data name="SubDomain_should_only_contain_alphanumeric_characters_and_hyphens" xml:space="preserve">
     <value>子域应仅包含字母数字字符和连字符。</value>
   </data>
+  <data name="Account_info_creation_failed" xml:space="preserve">
+    <value>帐户信息创建失败。</value>
+  </data>
 </root>

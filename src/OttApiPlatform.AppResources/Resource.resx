@@ -2244,4 +2244,7 @@
   <data name="SubDomain_should_only_contain_alphanumeric_characters_and_hyphens" xml:space="preserve">
     <value>Sub domain should only contain alphanumeric characters and hyphens.</value>
   </data>
+  <data name="Account_info_creation_failed" xml:space="preserve">
+    <value>Account info creation failed.</value>
+  </data>
 </root>

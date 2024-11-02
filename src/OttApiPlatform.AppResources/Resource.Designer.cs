@@ -160,6 +160,15 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Account info creation failed..
+        /// </summary>
+        public static string Account_info_creation_failed {
+            get {
+                return ResourceManager.GetString("Account_info_creation_failed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Actions.
         /// </summary>
         public static string Actions {

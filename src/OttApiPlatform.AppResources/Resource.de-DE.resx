@@ -2241,4 +2241,7 @@
   <data name="SubDomain_should_only_contain_alphanumeric_characters_and_hyphens" xml:space="preserve">
     <value>Die Subdomain sollte nur alphanumerische Zeichen und Bindestriche enthalten.</value>
   </data>
+  <data name="Account_info_creation_failed" xml:space="preserve">
+    <value>Fehler beim Erstellen von Kontoinformationen.</value>
+  </data>
 </root>
