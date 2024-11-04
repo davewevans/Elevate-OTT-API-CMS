@@ -48,5 +48,22 @@ public static class StringExtensions
         return input;
     }
 
+    /// <summary>
+    /// Removes all non-alphanumeric characters and spaces from the input string.
+    /// </summary>
+    /// <param name="input"></param>
+    /// <returns></returns>
+    /// <exception cref="ArgumentException"></exception>
+    public static string RemoveNonAlphanumericCharsAndSpaces(this string input)
+    {
+        if (string.IsNullOrEmpty(input))
+            throw new ArgumentException("Value cannot be null or empty", nameof(input));
+
+        // Remove non-alphanumeric characters and spaces from the input string.
+        var cleanedInput = Regex.Replace(input, "[^a-zA-Z0-9]", "");
+        
+        return $"{cleanedInput.Replace(" ", "")}";
+    }
+
     #endregion Public Methods
 }
