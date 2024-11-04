@@ -26,7 +26,7 @@
     </ToolBarContent>
     <HeaderContent>
         <MudTh><MudTableSortLabel SortLabel="Title" T="ReportItem">@Resource.Title</MudTableSortLabel></MudTh>
-        <MudTh><MudTableSortLabel SortLabel="FileName" T="ReportItem">@Resource.FileName</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortLabel="FileFullName" T="ReportItem">@Resource.FileName</MudTableSortLabel></MudTh>
         <MudTh><MudTableSortLabel SortLabel="ContentType" T="ReportItem">@Resource.ContentType</MudTableSortLabel></MudTh>
         <MudTh><MudTableSortLabel SortLabel="QueryString" T="ReportItem">@Resource.QueryString</MudTableSortLabel></MudTh>
         <MudTh><MudTableSortLabel SortLabel="Status" T="ReportItem">@Resource.Status</MudTableSortLabel></MudTh>
@@ -35,7 +35,7 @@
     </HeaderContent>
     <RowTemplate>
         <MudTd DataLabel="Title">@report.Title</MudTd>
-        <MudTd DataLabel="FileName">@report.FileName</MudTd>
+        <MudTd DataLabel="FileFullName">@report.FileName</MudTd>
         <MudTd DataLabel="ContentType">@report.ContentType</MudTd>
         <MudTd DataLabel="QueryString"><small>@report.QueryString</small> </MudTd>
         @switch (report.Status)

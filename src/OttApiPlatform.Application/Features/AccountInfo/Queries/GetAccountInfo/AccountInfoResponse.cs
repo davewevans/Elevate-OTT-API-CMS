@@ -9,7 +9,7 @@ public class AccountInfoResponse
 {
     #region Public Properties
 
-    public string CompanyName { get; set; }
+    public string ChannelName { get; set; }
     public string LicenseKey { get; set; }
     public string SubDomain { get; set; }
     public string CustomDomain { get; set; }
@@ -30,7 +30,7 @@ public class AccountInfoResponse
     {
         return new AccountInfoResponse
         {
-            CompanyName = accountInfo.CompanyName,
+            ChannelName = accountInfo.ChannelName,
             LicenseKey = accountInfo.LicenseKey,
             SubDomain = accountInfo.SubDomain,
             CustomDomain = accountInfo.CustomDomain,

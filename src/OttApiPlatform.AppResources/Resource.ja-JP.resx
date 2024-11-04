@@ -2235,13 +2235,28 @@
   <data name="Tenant_creation_failed" xml:space="preserve">
     <value>テナントの作成に失敗しました。</value>
   </data>
-  <data name="CompanyName_is_required" xml:space="preserve">
-    <value>会社名/組織名は必須です。</value>
-  </data>
   <data name="SubDomain_should_only_contain_alphanumeric_characters_and_hyphens" xml:space="preserve">
     <value>サブドメインには、英数字とハイフンのみを含める必要があります。</value>
   </data>
   <data name="Account_info_creation_failed" xml:space="preserve">
     <value>アカウント情報の作成に失敗しました。</value>
+  </data>
+  <data name="SubDomain" xml:space="preserve">
+    <value>サブドメイン</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>会社/組織/チャネル名</value>
+  </data>
+  <data name="CompanyName_is_required" xml:space="preserve">
+    <value>会社名/組織名/チャネル名が必要です。</value>
+  </data>
+  <data name="Channel_Name" xml:space="preserve">
+    <value>チャンネル名</value>
+  </data>
+  <data name="Channel_name_required" xml:space="preserve">
+    <value>チャンネル名は必須です。</value>
+  </data>
+  <data name="Register_button_text" xml:space="preserve">
+    <value>無料トライアルを開始</value>
   </data>
 </root>

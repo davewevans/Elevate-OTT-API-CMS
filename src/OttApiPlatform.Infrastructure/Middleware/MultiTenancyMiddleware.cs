@@ -1,4 +1,7 @@
-﻿namespace OttApiPlatform.Infrastructure.Middleware;
+﻿using Newtonsoft.Json;
+using OttApiPlatform.Application.Features.Account.Commands.ConfirmEmail;
+
+namespace OttApiPlatform.Infrastructure.Middleware;
 
 /// <summary>
 /// Middleware for handling tenant resolution logic.
@@ -37,6 +40,13 @@ public class MultiTenancyMiddleware
             // If the TenantMode is MultiTenant.
             case TenantMode.MultiTenant:
                 {
+                    // Check if the request is for email confirmation
+                    if (httpContext.Request.Path.StartsWithSegments("/api/account/ConfirmEmail"))
+                    {
+                        await SetTenantIdForConfirmEmailRequest(httpContext, dbContext, tenantResolver);
+                        break;
+                    }
+                    
                     // Get the tenant name value of the X-Tenant header from the request.
                     var tenantName = GetTenantName(httpContext);
 
@@ -81,6 +91,34 @@ public class MultiTenancyMiddleware
 
         // Call the next middleware in the pipeline.
         await _next(httpContext);
+    }
+
+    private static async Task SetTenantIdForConfirmEmailRequest(HttpContext httpContext, IApplicationDbContext dbContext,
+        ITenantResolver tenantResolver)
+    {
+        // Enable buffering to allow the request body to be read multiple times
+        httpContext.Request.EnableBuffering();
+
+        // Extract UserId from the POST request body
+        var requestBody = await new StreamReader(httpContext.Request.Body).ReadToEndAsync();
+        var confirmEmailRequest = JsonConvert.DeserializeObject<ConfirmEmailCommand>(requestBody);
+
+        if (confirmEmailRequest != null && !string.IsNullOrEmpty(confirmEmailRequest.UserId))
+        {
+            // Query the database for the user
+            var user = await dbContext.Users
+                .IgnoreQueryFilters()
+                .FirstOrDefaultAsync(u => u.Id == confirmEmailRequest.UserId);
+
+            if (user != null)
+            {
+                // Set the TenantId to the user's TenantId
+                tenantResolver.SetTenantId(user.TenantId);
+            }
+        }
+
+        // Reset the request body stream position to the beginning
+        httpContext.Request.Body.Position = 0;
     }
 
     #endregion Public Methods

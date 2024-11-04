@@ -11,13 +11,15 @@ namespace OttApiPlatform.Application.Features.Account.Commands.Register;
 public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
 {
     #region Public Properties
-
+    public string FullName { get; set; }
+    public string PhoneNumber { get; set; }
     public string Email { get; set; }
     public string Password { get; set; }
     public string ConfirmPassword { get; set; }
     public string ReturnUrl { get; set; }
-    public string CompanyName { get; set; }
+    public string ChannelName { get; set; }
     public string SubDomain { get; set; }
+    public bool AcceptTerms { get; set; }
 
     #endregion Public Properties
 
@@ -25,11 +27,32 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
 
     public ApplicationUser MapToEntity()
     {
+        var (firstName, lastName) = ExtractFirstAndLastName(FullName);
+
         return new()
         {
             UserName = Email,
             Email = Email,
+            Name = firstName,
+            Surname = lastName
         };
+    }
+
+    private (string FirstName, string LastName) ExtractFirstAndLastName(string fullName)
+    {
+        if (string.IsNullOrWhiteSpace(fullName))
+        {
+            return (string.Empty, string.Empty);
+        }
+
+        var nameParts = fullName.Trim().Split(' ');
+
+        if (nameParts.Length == 1)
+        {
+            return (nameParts[0], string.Empty);
+        }
+
+        return (nameParts[0], nameParts[^1]);
     }
 
     #endregion Public Methods
@@ -112,15 +135,14 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
             if (!createAccountInfoResult.IsSuccess)
                 return Envelope<RegisterResponse>.Result.ServerError(Resource.Account_info_creation_failed);
 
-
             // Attempt to register the new user as a super admin if they are not already registered
             // as one.
-            var registerAsSuperAdminEnvelope = await RegisterAsSuperAdminIfNotExist(user);
+            //var registerAsSuperAdminEnvelope = await RegisterAsSuperAdminIfNotExist(user);
 
-            // If registration as super admin is not successful, return a server error response.
-            if (registerAsSuperAdminEnvelope.IsError)
-                return Envelope<RegisterResponse>.Result.AddErrors(createUserResult.Errors.ToApplicationResult(),
-                                                                   HttpStatusCode.InternalServerError);
+            //// If registration as super admin is not successful, return a server error response.
+            //if (registerAsSuperAdminEnvelope.IsError)
+            //    return Envelope<RegisterResponse>.Result.AddErrors(createUserResult.Errors.ToApplicationResult(),
+            //                                                       HttpStatusCode.InternalServerError);
 
             // Check if email confirmation is required for registration.
             switch (_userManager.Options.SignIn.RequireConfirmedAccount)
@@ -158,7 +180,7 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
 
                         // if the response from Login method has an error.
                         if (loginResponse.IsError)
-                            return loginResponse.ValidationErrors.Any()
+                            return loginResponse.ValidationErrors.Count > 0
                                 ? Envelope<RegisterResponse>.Result.AddErrors(loginResponse.ValidationErrors,
                                                                               HttpStatusCode.InternalServerError,
                                                                               rollbackDisabled: true)
@@ -233,7 +255,7 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
                 return result;
             }
 
-            _tenantResolver.SetTenantId(tenantId);
+            //_tenantResolver.SetTenantId(tenantId);
             user.TenantId = tenantId;
             await _userManager.UpdateAsync(user);
 
@@ -261,7 +283,7 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
 
             var createAccountInfoCommand = new CreateAccountInfoCommand
             {
-                CompanyName = request.CompanyName,
+                ChannelName = request.ChannelName,
                 LicenseKey = _licenseService.GenerateLicenseForTenant(tenantId.Value),
                 SubDomain = request.SubDomain,
                 TenantId = tenantId.Value,

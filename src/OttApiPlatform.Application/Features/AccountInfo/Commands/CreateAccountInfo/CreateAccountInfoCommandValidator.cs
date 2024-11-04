@@ -11,9 +11,9 @@ public class CreateAccountInfoCommandValidator : AbstractValidator<CreateAccount
 
     public CreateAccountInfoCommandValidator()
     {
-        RuleFor(v => v.CompanyName)
+        RuleFor(v => v.ChannelName)
             .NotEmpty()
-            .WithMessage(Resource.CompanyName_is_required);
+            .WithMessage(Resource.Channel_name_required);
 
         RuleFor(v => v.LicenseKey)
             .NotEmpty()

@@ -9,7 +9,7 @@ public class CreateAccountInfoCommand : IRequest<Envelope<CreateAccountInfoRespo
 {
     #region Public Properties
 
-    public string CompanyName { get; set; }
+    public string ChannelName { get; set; }
     public string LicenseKey { get; set; }
     public string SubDomain { get; set; }
     public string CustomDomain { get; set; }
@@ -43,7 +43,7 @@ public class CreateAccountInfoCommand : IRequest<Envelope<CreateAccountInfoRespo
         {
             var accountInfo = new Domain.Entities.AccountInfo
             {
-                CompanyName = request.CompanyName,
+                ChannelName = request.ChannelName,
                 LicenseKey = request.LicenseKey,
                 SubDomain = request.SubDomain,
                 CustomDomain = request.CustomDomain,

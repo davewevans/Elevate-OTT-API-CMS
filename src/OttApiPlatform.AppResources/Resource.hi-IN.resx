@@ -2235,13 +2235,28 @@
   <data name="Tenant_creation_failed" xml:space="preserve">
     <value>टेनेंट निर्माण विफल रहा.</value>
   </data>
-  <data name="CompanyName_is_required" xml:space="preserve">
-    <value>कंपनी/संगठन का नाम आवश्यक है.</value>
-  </data>
   <data name="SubDomain_should_only_contain_alphanumeric_characters_and_hyphens" xml:space="preserve">
     <value>उप डोमेन में केवल अल्फ़ान्यूमेरिक वर्ण और हाइफ़न होने चाहिए।</value>
   </data>
   <data name="Account_info_creation_failed" xml:space="preserve">
     <value>खाता जानकारी बनाना विफल रहा.</value>
+  </data>
+  <data name="SubDomain" xml:space="preserve">
+    <value>उप डोमेन</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>कंपनी/संगठन/चैनल का नाम</value>
+  </data>
+  <data name="CompanyName_is_required" xml:space="preserve">
+    <value>कंपनी/संगठन/चैनल का नाम आवश्यक है।</value>
+  </data>
+  <data name="Channel_Name" xml:space="preserve">
+    <value>चैनल का नाम</value>
+  </data>
+  <data name="Channel_name_required" xml:space="preserve">
+    <value>चैनल नाम आवश्यक है.</value>
+  </data>
+  <data name="Register_button_text" xml:space="preserve">
+    <value>मेरा नि: शुल्क परीक्षण शुरू करें</value>
   </data>
 </root>

@@ -473,9 +473,9 @@ namespace OttApiPlatform.Infrastructure.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Tenants_Name",
                 table: "Tenants",
-                column: "Name",
+                column: "FullName",
                 unique: true,
-                filter: "[Name] IS NOT NULL");
+                filter: "[FullName] IS NOT NULL");
         }
 
         /// <inheritdoc />
