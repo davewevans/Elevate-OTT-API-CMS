@@ -237,8 +237,8 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
 
             var tenantId = Guid.NewGuid();
             var postfix = $"{DateTime.Now.Year}{DateTime.Now.Month}{DateTime.Now.Day}{DateTime.Now.Hour}{DateTime.Now.Minute}{DateTime.Now.Second}{DateTime.Now.Millisecond}";
-            var cleanedEmail = EmailHelper.RemoveNonAlphanumericCharacters(request.Email);
-            var tenantName = $"{cleanedEmail}_{postfix}";
+            var cleanedChannelName = request.ChannelName.RemoveNonAlphanumericCharsAndSpaces().ToLower();
+            var tenantName = $"{cleanedChannelName}_{postfix}";
 
             var createTenantCommand = new CreateTenantCommand
             {
