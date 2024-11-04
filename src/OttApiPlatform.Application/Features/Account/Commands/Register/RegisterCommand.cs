@@ -4,19 +4,22 @@ using System.Threading;
 using System.Threading.Tasks;
 using OttApiPlatform.Application.Common.Contracts;
 using Azure.Core;
+using OttApiPlatform.Application.Features.AccountInfo.Commands.CreateAccountInfo;
 
 namespace OttApiPlatform.Application.Features.Account.Commands.Register;
 
 public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
 {
     #region Public Properties
-
+    public string FullName { get; set; }
+    public string PhoneNumber { get; set; }
     public string Email { get; set; }
     public string Password { get; set; }
     public string ConfirmPassword { get; set; }
     public string ReturnUrl { get; set; }
-    public string CompanyName { get; set; }
+    public string ChannelName { get; set; }
     public string SubDomain { get; set; }
+    public bool AcceptTerms { get; set; }
 
     #endregion Public Properties
 
@@ -24,11 +27,32 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
 
     public ApplicationUser MapToEntity()
     {
+        var (firstName, lastName) = ExtractFirstAndLastName(FullName);
+
         return new()
         {
             UserName = Email,
             Email = Email,
+            Name = firstName,
+            Surname = lastName
         };
+    }
+
+    private (string FirstName, string LastName) ExtractFirstAndLastName(string fullName)
+    {
+        if (string.IsNullOrWhiteSpace(fullName))
+        {
+            return (string.Empty, string.Empty);
+        }
+
+        var nameParts = fullName.Trim().Split(' ');
+
+        if (nameParts.Length == 1)
+        {
+            return (nameParts[0], string.Empty);
+        }
+
+        return (nameParts[0], nameParts[^1]);
     }
 
     #endregion Public Methods
@@ -105,15 +129,20 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
                 return Envelope<RegisterResponse>.Result.ServerError(Resource.Tenant_creation_failed);
 
             // Create account info for the tenant
+            var createAccountInfoResult = await CreateAccountInfoForTenantAsync(request, cancellationToken);
+
+            // If account info creation failed, return a server error response.
+            if (!createAccountInfoResult.IsSuccess)
+                return Envelope<RegisterResponse>.Result.ServerError(Resource.Account_info_creation_failed);
 
             // Attempt to register the new user as a super admin if they are not already registered
             // as one.
-            var registerAsSuperAdminEnvelope = await RegisterAsSuperAdminIfNotExist(user);
+            //var registerAsSuperAdminEnvelope = await RegisterAsSuperAdminIfNotExist(user);
 
-            // If registration as super admin is not successful, return a server error response.
-            if (registerAsSuperAdminEnvelope.IsError)
-                return Envelope<RegisterResponse>.Result.AddErrors(createUserResult.Errors.ToApplicationResult(),
-                                                                   HttpStatusCode.InternalServerError);
+            //// If registration as super admin is not successful, return a server error response.
+            //if (registerAsSuperAdminEnvelope.IsError)
+            //    return Envelope<RegisterResponse>.Result.AddErrors(createUserResult.Errors.ToApplicationResult(),
+            //                                                       HttpStatusCode.InternalServerError);
 
             // Check if email confirmation is required for registration.
             switch (_userManager.Options.SignIn.RequireConfirmedAccount)
@@ -151,7 +180,7 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
 
                         // if the response from Login method has an error.
                         if (loginResponse.IsError)
-                            return loginResponse.ValidationErrors.Any()
+                            return loginResponse.ValidationErrors.Count > 0
                                 ? Envelope<RegisterResponse>.Result.AddErrors(loginResponse.ValidationErrors,
                                                                               HttpStatusCode.InternalServerError,
                                                                               rollbackDisabled: true)
@@ -189,7 +218,8 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
         /// <summary>
         /// If the application is in multi-tenant mode, generate a unique tenant name by removing all non-alphanumeric characters
         /// from the email address and appending a timestamp postfix. Then, create a new tenant using this name. If the tenant
-        /// creation fails, return an internal server error response. Otherwise, set the user's TenantId to the newly created tenant's ID.
+        /// creation fails, log the error and return a result indicating failure. Otherwise, set the user's TenantId to the newly created tenant's ID
+        /// and update the user in the database.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="cancellationToken"></param>
@@ -205,18 +235,15 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
                 return result;
             }
 
-            var currentTenantId = _tenantResolver.GetTenantId();
-            var tenantId = currentTenantId == Guid.Empty || currentTenantId is null ? Guid.NewGuid() : currentTenantId;
+            var tenantId = Guid.NewGuid();
             var postfix = $"{DateTime.Now.Year}{DateTime.Now.Month}{DateTime.Now.Day}{DateTime.Now.Hour}{DateTime.Now.Minute}{DateTime.Now.Second}{DateTime.Now.Millisecond}";
             var cleanedEmail = EmailHelper.RemoveNonAlphanumericCharacters(request.Email);
             var tenantName = $"{cleanedEmail}_{postfix}";
 
             var createTenantCommand = new CreateTenantCommand
             {
-                Id = tenantId.Value,
+                Id = tenantId,
                 Name = tenantName,
-                LicenseKey = _licenseService.GenerateLicenseForTenant(tenantId.Value),
-                StorageFileNamePrefix = tenantId.ToString().Replace("-", "")
             };
 
             var createTenantResponse = await _mediator.Send(createTenantCommand, cancellationToken);
@@ -228,8 +255,49 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
                 return result;
             }
 
-            user.TenantId = _tenantResolver.GetTenantId();
+            //_tenantResolver.SetTenantId(tenantId);
+            user.TenantId = tenantId;
             await _userManager.UpdateAsync(user);
+
+            result.IsSuccess = true;
+            return result;
+        }
+
+        /// <summary>
+        /// Creates account information for a tenant. If the tenant ID is invalid, returns a result indicating failure.
+        /// Otherwise, generates a license key for the tenant, creates the account information, and logs any errors if the creation fails.
+        /// </summary>
+        /// <param name="request">The registration command containing user and tenant details.</param>
+        /// <param name="cancellationToken">Cancellation token to cancel the operation.</param>
+        /// <returns>A task that represents the asynchronous operation. The task result contains the tenant creation result.</returns>
+        private async Task<CreateTenantResult> CreateAccountInfoForTenantAsync(RegisterCommand request, CancellationToken cancellationToken)
+        {
+            var result = new CreateTenantResult();
+
+            var tenantId = _tenantResolver.GetTenantId();
+            if (tenantId == Guid.Empty || tenantId is null)
+            {
+                result.IsSuccess = false;
+                return result;
+            }
+
+            var createAccountInfoCommand = new CreateAccountInfoCommand
+            {
+                ChannelName = request.ChannelName,
+                LicenseKey = _licenseService.GenerateLicenseForTenant(tenantId.Value),
+                SubDomain = request.SubDomain,
+                TenantId = tenantId.Value,
+                StorageFileNamePrefix = tenantId.ToString().Replace("-", "")
+            };
+
+            var createAccountInfoResponse = await _mediator.Send(createAccountInfoCommand, cancellationToken);
+
+            if (createAccountInfoResponse.IsError)
+            {
+                result.IsSuccess = false;
+                _logger.LogError("AccountInfo creation failed: {Error}", string.Join(", ", createAccountInfoResponse.ValidationErrors.Select(kv => $"{kv.Key}: {kv.Value}")));
+                return result;
+            }
 
             result.IsSuccess = true;
             return result;

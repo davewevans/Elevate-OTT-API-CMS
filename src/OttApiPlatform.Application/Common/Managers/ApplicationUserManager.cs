@@ -218,7 +218,7 @@ public class ApplicationUserManager : UserManager<ApplicationUser>
         await _notificationService.SendEmailAsync(user.Email,
                                                  Resource.Confirm_your_email,
                                                  string.Format(Resource.Please_confirm_your_account_by_clicking_here,
-                                                               HtmlEncoder.Default.Encode(callbackUrl)));
+                                                     HtmlEncoder.Default.Encode(callbackUrl)));
 
         // Return the callback URL for the activation email.
         return callbackUrl;
@@ -255,7 +255,7 @@ public class ApplicationUserManager : UserManager<ApplicationUser>
             await _notificationService.SendEmailAsync(newEmail,
                                                      Resource.Confirm_your_email,
                                                      string.Format(Resource.Please_confirm_your_account_by_clicking_here,
-                                                                   HtmlEncoder.Default.Encode(callbackUrl)));
+                                                         HtmlEncoder.Default.Encode(callbackUrl)));
         }
 
         // Return the callback URL for the activation email.
@@ -296,7 +296,7 @@ public class ApplicationUserManager : UserManager<ApplicationUser>
         await _notificationService.SendEmailAsync(user.Email,
                                                   Resource.Reset_your_password,
                                                   string.Format(Resource.Please_reset_your_password_by_clicking_here,
-                                                                HtmlEncoder.Default.Encode(callbackUrl)));
+                                                      HtmlEncoder.Default.Encode(callbackUrl)));
 
         // Return the reset password code.
         return code;

@@ -4,7 +4,7 @@ public class UpdateAccountInfoCommand : IRequest<Envelope<string>>
 {
     #region Public Properties
 
-    public string CompanyName { get; set; }
+    public string ChannelName { get; set; }
     public string LicenseKey { get; set; }
     public string SubDomain { get; set; }
     public string CustomDomain { get; set; }
@@ -46,7 +46,7 @@ public class UpdateAccountInfoCommand : IRequest<Envelope<string>>
                 return Envelope<string>.Result.BadRequest("Account info not found");
             }
 
-            accountInfo.CompanyName = request.CompanyName;
+            accountInfo.ChannelName = request.ChannelName;
             accountInfo.LicenseKey = request.LicenseKey;
             accountInfo.SubDomain = request.SubDomain;
             accountInfo.CustomDomain = request.CustomDomain;

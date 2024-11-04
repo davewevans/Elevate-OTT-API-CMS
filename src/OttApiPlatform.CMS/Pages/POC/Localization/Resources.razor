@@ -10,7 +10,7 @@
                     <MudPopover Open="@IsTipsOpen" Class="px-4 pt-4">
                         <MudElement HtmlTag="h4">This page features multilingual resource strings displayed in the language selected by the current user.</MudElement>
                         <MudDivider />
-                        <MudElement HtmlTag="h4" Class="mt-4">The localized strings can be accessed directly by calling [ResourceName].[Key], which is automatically generated when you add a new .resx file.</MudElement>
+                        <MudElement HtmlTag="h4" Class="mt-4">The localized strings can be accessed directly by calling [ResourceFullName].[Key], which is automatically generated when you add a new .resx file.</MudElement>
                         <MudDivider />
                         <MudElement HtmlTag="h4" Class="mt-4">ASP.NET Core localization provides IStringLocalizer that uses .resx files to store localization resources.</MudElement>
                         <MudDivider />
@@ -26,7 +26,7 @@
     </MudCardHeader>
     <MudCardContent>
         <MudTabs Elevation="2" Rounded="true" ApplyEffectsToContainer="true" PanelClass="pa-6">
-            <MudTabPanel Style="text-transform:none" Text="[ResourceName].[Key]">
+            <MudTabPanel Style="text-transform:none" Text="[ResourceFullName].[Key]">
                 <MudText Align="Align.Justify">@Resource.Lorem</MudText>
                 <hr />
                 <MudElement><img style="width:100%" src="/images/code-screenshots/static-resource-class.png" /></MudElement>

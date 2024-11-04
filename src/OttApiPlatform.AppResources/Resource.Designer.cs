@@ -160,6 +160,15 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Account info creation failed..
+        /// </summary>
+        public static string Account_info_creation_failed {
+            get {
+                return ResourceManager.GetString("Account_info_creation_failed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Actions.
         /// </summary>
         public static string Actions {
@@ -889,6 +898,24 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Channel Name.
+        /// </summary>
+        public static string Channel_Name {
+            get {
+                return ResourceManager.GetString("Channel_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Channel name is required..
+        /// </summary>
+        public static string Channel_name_required {
+            get {
+                return ResourceManager.GetString("Channel_name_required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Chernobyl-1.
         /// </summary>
         public static string Chernobyl_1 {
@@ -1060,7 +1087,16 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Company/Organization name is required..
+        ///   Looks up a localized string similar to Company/Organization/Channel Name.
+        /// </summary>
+        public static string CompanyName {
+            get {
+                return ResourceManager.GetString("CompanyName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Company/Organization/Channel name is required..
         /// </summary>
         public static string CompanyName_is_required {
             get {
@@ -4146,6 +4182,15 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Start My Free Trial.
+        /// </summary>
+        public static string Register_button_text {
+            get {
+                return ResourceManager.GetString("Register_button_text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Register Confirmation.
         /// </summary>
         public static string Register_Confirmation {
@@ -4970,6 +5015,15 @@ namespace OttApiPlatform.AppResources {
         public static string Storage_type_is_required {
             get {
                 return ResourceManager.GetString("Storage_type_is_required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Subdomain.
+        /// </summary>
+        public static string SubDomain {
+            get {
+                return ResourceManager.GetString("SubDomain", resourceCulture);
             }
         }
         

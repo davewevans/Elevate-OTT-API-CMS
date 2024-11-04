@@ -27,6 +27,27 @@ public class SmtpOption
     public string Sender { get; set; }
 
     /// <summary>
+    /// Gets or sets the Postmark API key.
+    /// </summary>
+    public string PostmarkApiKey { get; set; }
+
+    /// <summary>
+    /// Gets or sets the Postmark API URL.
+    /// </summary>
+    public string PostmarkApiUrl { get; set; }
+
+    /// <summary>
+    /// Gets or sets the email address used as the "From" field in emails sent via Postmark.
+    /// </summary>
+    public string PostmarkFrom { get; set; }
+
+
+    /// <summary>
+    /// Gets or sets the email service.
+    /// </summary>
+    public EmailService EmailService { get; set; }
+
+    /// <summary>
     /// Gets or sets the email address used as the "From" field in emails sent via SMTP.
     /// </summary>
     public string From { get; set; }

@@ -2235,10 +2235,28 @@
   <data name="Tenant_creation_failed" xml:space="preserve">
     <value>فشل إنشاء المستأجر.</value>
   </data>
-  <data name="CompanyName_is_required" xml:space="preserve">
-    <value>اسم الشركة / المنظمة مطلوب.</value>
-  </data>
   <data name="SubDomain_should_only_contain_alphanumeric_characters_and_hyphens" xml:space="preserve">
     <value>يجب أن يحتوي النطاق الفرعي على أحرف أبجدية رقمية وواصلات فقط.</value>
+  </data>
+  <data name="Account_info_creation_failed" xml:space="preserve">
+    <value>فشل إنشاء معلومات الحساب.</value>
+  </data>
+  <data name="SubDomain" xml:space="preserve">
+    <value>النطاق الفرعي</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>اسم الشركة / المنظمة / القناة</value>
+  </data>
+  <data name="CompanyName_is_required" xml:space="preserve">
+    <value>اسم الشركة / المؤسسة / القناة مطلوب.</value>
+  </data>
+  <data name="Channel_Name" xml:space="preserve">
+    <value>اسم القناة</value>
+  </data>
+  <data name="Channel_name_required" xml:space="preserve">
+    <value>اسم القناة مطلوب.</value>
+  </data>
+  <data name="Register_button_text" xml:space="preserve">
+    <value>ابدأ تجربتي المجانية</value>
   </data>
 </root>

@@ -14,9 +14,9 @@
         public Guid Id { get; set; }
 
         /// <summary>
-        /// Gets or sets the company/organization name.
+        /// Gets or sets the channel name.
         /// </summary>
-        public string CompanyName { get; set; }
+        public string ChannelName { get; set; }
 
         /// <summary>
         /// Gets or sets the license key.

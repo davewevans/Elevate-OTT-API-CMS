@@ -2238,10 +2238,28 @@
   <data name="Tenant_creation_failed" xml:space="preserve">
     <value>Tenant creation failed.</value>
   </data>
-  <data name="CompanyName_is_required" xml:space="preserve">
-    <value>Company/Organization name is required.</value>
-  </data>
   <data name="SubDomain_should_only_contain_alphanumeric_characters_and_hyphens" xml:space="preserve">
     <value>Sub domain should only contain alphanumeric characters and hyphens.</value>
+  </data>
+  <data name="Account_info_creation_failed" xml:space="preserve">
+    <value>Account info creation failed.</value>
+  </data>
+  <data name="SubDomain" xml:space="preserve">
+    <value>Subdomain</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>Company/Organization/Channel Name</value>
+  </data>
+  <data name="CompanyName_is_required" xml:space="preserve">
+    <value>Company/Organization/Channel name is required.</value>
+  </data>
+  <data name="Channel_Name" xml:space="preserve">
+    <value>Channel Name</value>
+  </data>
+  <data name="Channel_name_required" xml:space="preserve">
+    <value>Channel name is required.</value>
+  </data>
+  <data name="Register_button_text" xml:space="preserve">
+    <value>Start My Free Trial</value>
   </data>
 </root>

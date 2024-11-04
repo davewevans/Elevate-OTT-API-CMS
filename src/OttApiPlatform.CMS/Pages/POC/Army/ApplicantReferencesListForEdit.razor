@@ -17,14 +17,14 @@
                 StartIcon="@Icons.Material.Filled.Add" OnClick="AddApplicantReference" />
     </ToolBarContent>
     <HeaderContent>
-        <MudTh><MudTableSortLabel SortLabel="Name" T="ApplicantReferenceItem">@Resource.Name</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortLabel="FullName" T="ApplicantReferenceItem">@Resource.Name</MudTableSortLabel></MudTh>
         <MudTh><MudTableSortLabel SortLabel="JobTitle" T="ApplicantReferenceItem">@Resource.Job_Title</MudTableSortLabel></MudTh>
         <MudTh><MudTableSortLabel SortLabel="Phone" T="ApplicantReferenceItem">@Resource.Phone_Number</MudTableSortLabel></MudTh>
         <MudTh><MudTableSortLabel SortLabel="CreatedOn" T="ApplicantReferenceItem">@Resource.Created_On</MudTableSortLabel></MudTh>
         <MudTh>@Resource.Options</MudTh>
     </HeaderContent>
     <RowTemplate>
-        <MudTd Style=@(context.IsAddedOrModified ? "color:crimson" : "" ) DataLabel="Name">@context.Name</MudTd>
+        <MudTd Style=@(context.IsAddedOrModified ? "color:crimson" : "" ) DataLabel="FullName">@context.Name</MudTd>
         <MudTd Style=@(context.IsAddedOrModified ? "color:crimson" : "" ) DataLabel="JobTitle">@context.JobTitle</MudTd>
         <MudTd Style=@(context.IsAddedOrModified ? "color:crimson" : "" ) DataLabel="Phone">@context.Phone</MudTd>
         <MudTd Style=@(context.IsAddedOrModified ? "color:crimson" : "" ) DataLabel="CreatedOn">@context.CreatedOn</MudTd>

@@ -137,7 +137,7 @@ public class AppSeederService : IAppSeederService
         // If seeding static roles fails, return false
         if (!seedStaticRolesResultSucceeded)
             return false;
-
+        
         // Seed the super admin for the tenant and assign the result to the
         // 'superAdminResultSucceeded' variable
         var seedSuperAdminResultSucceeded = await SeedSuperAdmin();

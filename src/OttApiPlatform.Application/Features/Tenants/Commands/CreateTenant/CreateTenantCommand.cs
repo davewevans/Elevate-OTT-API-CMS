@@ -8,14 +8,6 @@ public class CreateTenantCommand : IRequest<Envelope<CreateTenantResponse>>
 
     public string Name { get; set; }
 
-    public string LicenseKey { get; set; }
-
-    public string SubDomain { get; set; }
-
-    public string CustomDomain { get; set; }
-
-    public string StorageFileNamePrefix { get; set; }
-
     #endregion Public Properties
 
     #region Public Methods
@@ -25,11 +17,7 @@ public class CreateTenantCommand : IRequest<Envelope<CreateTenantResponse>>
         return new()
         {
             Id = Id == Guid.Empty ? Guid.NewGuid() : Id,
-            Name = Name,
-            //LicenseKey = LicenseKey,
-            //SubDomain = SubDomain,
-            //CustomDomain = CustomDomain,
-            //StorageFileNamePrefix = StorageFileNamePrefix,
+            Name = Name
         };
     }
 
@@ -112,11 +100,11 @@ public class CreateTenantCommand : IRequest<Envelope<CreateTenantResponse>>
                 SuccessMessage = Resource.Tenant_has_been_created_successfully
             };
 
-            var succeeded = await _appSeederService.SeedTenantWithSharedDatabaseStrategy();
+            //  var succeeded = await _appSeederService.SeedTenantWithSharedDatabaseStrategy();
 
             // Check if the identity result was successful.
-            if (!succeeded)
-                return Envelope<CreateTenantResponse>.Result.ServerError("Something went wrong upon seeding tenant's data.");
+            //if (!succeeded)
+            //    return Envelope<CreateTenantResponse>.Result.ServerError("Something went wrong upon seeding tenant's data.");
 
             // Return the create tenant response.
             return Envelope<CreateTenantResponse>.Result.Ok(createTenantResponse);

@@ -11,9 +11,9 @@ public class CreateAccountInfoCommandValidator : AbstractValidator<CreateAccount
 
     public CreateAccountInfoCommandValidator()
     {
-        RuleFor(v => v.CompanyName)
+        RuleFor(v => v.ChannelName)
             .NotEmpty()
-            .WithMessage(Resource.CompanyName_is_required);
+            .WithMessage(Resource.Channel_name_required);
 
         RuleFor(v => v.LicenseKey)
             .NotEmpty()
@@ -26,9 +26,9 @@ public class CreateAccountInfoCommandValidator : AbstractValidator<CreateAccount
             .WithMessage(Resource.SubDomain_should_only_contain_alphanumeric_characters_and_hyphens);
 
         RuleFor(v => v.CustomDomain)
-            .NotEmpty()
             .Matches(@"^[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*$")
-            .WithMessage("CustomDomain should be a valid domain name.");
+            .WithMessage("CustomDomain should be a valid domain name.")
+            .When(v => !string.IsNullOrEmpty(v.CustomDomain));
 
         RuleFor(v => v.StorageFileNamePrefix)
             .NotEmpty()
