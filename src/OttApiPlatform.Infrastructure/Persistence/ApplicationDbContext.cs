@@ -285,7 +285,7 @@ public sealed class ApplicationDbContext : IdentityDbContext<ApplicationUser,
     private void SetQueryFilterOnMultiTenantsEntities(ModelBuilder builder)
     {
         // Set the query filter for entities that may have a tenant ID.
-        builder.SetQueryFilter<IMayHaveTenant>(p => p.TenantId == _tenantResolver.GetTenantId());
+        //builder.SetQueryFilter<IMayHaveTenant>(p => p.TenantId == _tenantResolver.GetTenantId());
 
         // Set the query filter for entities that must have a tenant ID.
         builder.SetQueryFilter<IMustHaveTenant>(p => p.TenantId == _tenantResolver.GetTenantId());

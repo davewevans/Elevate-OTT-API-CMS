@@ -19,11 +19,11 @@
         </AuthorizeView>
     </ToolBarContent>
     <HeaderContent>
-        <MudTh><MudTableSortLabel SortLabel="FullName" T="TenantItem" InitialDirection="SortDirection.Ascending">@Resource.Name</MudTableSortLabel></MudTh>
+        <MudTh><MudTableSortLabel SortLabel="Name" T="TenantItem" InitialDirection="SortDirection.Ascending">@Resource.Name</MudTableSortLabel></MudTh>
         <MudTh>@Resource.Options</MudTh>
     </HeaderContent>
     <RowTemplate>
-        <MudTd DataLabel="FullName">@context.Name</MudTd>
+        <MudTd DataLabel="Name">@context.Name</MudTd>
         <MudTd>
             <MudButtonGroup Color="Color.Primary" Variant="Variant.Text">
 

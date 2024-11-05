@@ -58,9 +58,9 @@ public static class DependencyInjection
             .AddDefaultTokenProviders()
             .AddPasswordValidator<CustomPasswordValidator<ApplicationUser>>()
             .AddUserManager<ApplicationUserManager>()
-            .AddRoleManager<ApplicationRoleManager>()
-            .AddUserStore<CustomUserStore>()
-            .AddRoleStore<CustomRoleStore>();
+            .AddRoleManager<ApplicationRoleManager>();
+            //.AddUserStore<CustomUserStore>()
+            //.AddRoleStore<CustomRoleStore>();
 
         // Replace default validators with multi-tenant validators.
         services.Replace(ServiceDescriptor.Scoped<IUserValidator<ApplicationUser>, MultiTenantUserValidator>());

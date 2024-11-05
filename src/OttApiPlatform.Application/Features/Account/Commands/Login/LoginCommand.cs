@@ -41,8 +41,13 @@ public class LoginCommand : IRequest<Envelope<LoginResponse>>
             // Attempt to sign in the user with their email and password.
             var signInResult = await _signInManager.PasswordSignInAsync(request.Email,
                                                                         request.Password,
-                                                                        isPersistent:false,
+                                                                        isPersistent: false,
                                                                         lockoutOnFailure: true);
+
+
+            // TODO: Uncomment query in ApplicationDbContext and these two lines
+            var theUser = await _userManager.FindByEmailAsync(request.Email);
+            var result = _signInManager.SignInAsync(theUser, false);
 
             // If the sign-in is successful.
             if (signInResult.Succeeded)

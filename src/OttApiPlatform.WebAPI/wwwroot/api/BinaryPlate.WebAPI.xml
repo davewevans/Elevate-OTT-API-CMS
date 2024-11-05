@@ -190,7 +190,7 @@
             Represents an error in validation.
             </summary>
         </member>
-        <member name="P:OttApiPlatform.WebAPI.Models.ValidationError.FullName">
+        <member name="P:OttApiPlatform.WebAPI.Models.ValidationError.Name">
             <summary>
             Gets or sets the name of the property that failed validation.
             </summary>
