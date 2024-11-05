@@ -34,7 +34,8 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
             UserName = Email,
             Email = Email,
             Name = firstName,
-            Surname = lastName
+            Surname = lastName,
+            PhoneNumber = PhoneNumber,
         };
     }
 
@@ -137,12 +138,12 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
 
             // Attempt to register the new user as a super admin if they are not already registered
             // as one.
-            //var registerAsSuperAdminEnvelope = await RegisterAsSuperAdminIfNotExist(user);
+            var registerAsSuperAdminEnvelope = await RegisterAsSuperAdminIfNotExist(user);
 
-            //// If registration as super admin is not successful, return a server error response.
-            //if (registerAsSuperAdminEnvelope.IsError)
-            //    return Envelope<RegisterResponse>.Result.AddErrors(createUserResult.Errors.ToApplicationResult(),
-            //                                                       HttpStatusCode.InternalServerError);
+            // If registration as super admin is not successful, return a server error response.
+            if (registerAsSuperAdminEnvelope.IsError)
+                return Envelope<RegisterResponse>.Result.AddErrors(createUserResult.Errors.ToApplicationResult(),
+                                                                   HttpStatusCode.InternalServerError);
 
             // Check if email confirmation is required for registration.
             switch (_userManager.Options.SignIn.RequireConfirmedAccount)
