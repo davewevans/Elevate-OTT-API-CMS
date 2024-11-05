@@ -100,11 +100,11 @@ public class CreateTenantCommand : IRequest<Envelope<CreateTenantResponse>>
                 SuccessMessage = Resource.Tenant_has_been_created_successfully
             };
 
-            //  var succeeded = await _appSeederService.SeedTenantWithSharedDatabaseStrategy();
+            var succeeded = await _appSeederService.SeedTenantWithSharedDatabaseStrategy();
 
             // Check if the identity result was successful.
-            //if (!succeeded)
-            //    return Envelope<CreateTenantResponse>.Result.ServerError("Something went wrong upon seeding tenant's data.");
+            if (!succeeded)
+                return Envelope<CreateTenantResponse>.Result.ServerError("Something went wrong upon seeding tenant's data.");
 
             // Return the create tenant response.
             return Envelope<CreateTenantResponse>.Result.Ok(createTenantResponse);

@@ -43,12 +43,7 @@ public class LoginCommand : IRequest<Envelope<LoginResponse>>
                                                                         request.Password,
                                                                         isPersistent: false,
                                                                         lockoutOnFailure: true);
-
-
-            // TODO: Uncomment query in ApplicationDbContext and these two lines
-            var theUser = await _userManager.FindByEmailAsync(request.Email);
-            var result = _signInManager.SignInAsync(theUser, false);
-
+            
             // If the sign-in is successful.
             if (signInResult.Succeeded)
             {

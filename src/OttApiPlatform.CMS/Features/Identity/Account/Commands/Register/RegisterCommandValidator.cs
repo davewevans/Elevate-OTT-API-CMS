@@ -12,7 +12,7 @@ public class RegisterCommandValidator : AbstractValidator<RegisterCommand>
         // Rule for ChannelName: Only alphanumeric characters, spaces, and hyphens are allowed
         RuleFor(x => x.ChannelName)
             .NotEmpty().WithMessage("Channel Name is required.")
-            .Matches(@"^[a-zA-Z0-9\s'-]+$").WithMessage("Please enter valid characters only.");
+            .Matches(@"^[a-zA-Z0-9\s,'-]+$").WithMessage("Please enter valid characters only.");
 
         RuleFor(x => x.PhoneNumber)
             .NotEmpty().WithMessage("Phone Number is required.")
