@@ -24,7 +24,7 @@ public partial class Login
     protected override void OnInitialized()
     {
         LoginCommand.Email = "davewevans72+34@gmail.com";
-        LoginCommand.Password = "P@ssw0rd!";
+        LoginCommand.Password = "Passw0rd!";
     }
 
     #endregion Protected Methods

@@ -6,5 +6,7 @@ public sealed class Constants
 
     public static string TenantIdStorageKey => "TenantId";
 
+    public static string TenantNameStorageKey => "TenantName";
+
     #endregion Public Properties
 }

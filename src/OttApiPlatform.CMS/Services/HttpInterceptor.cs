@@ -87,10 +87,10 @@ public class HttpInterceptor : DelegatingHandler
         if (subDomain != null)
             request.Headers.Add("Subdmain", subDomain);
 
-        string tenantId = await _localStorageService.GetItemAsync<string>(Utils.Constants.TenantIdStorageKey);
+        string tenantName = await _localStorageService.GetItemAsync<string>(Utils.Constants.TenantNameStorageKey);
 
-        if (!string.IsNullOrWhiteSpace(tenantId))
-            request.Headers.Add("X-Tenant", tenantId);
+        if (!string.IsNullOrWhiteSpace(tenantName))
+            request.Headers.Add("X-Tenant", tenantName);
 
         var accessToken = await _accessTokenProvider.TryGetAccessToken();
 

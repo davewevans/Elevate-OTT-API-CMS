@@ -34,7 +34,8 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
             UserName = Email,
             Email = Email,
             Name = firstName,
-            Surname = lastName
+            Surname = lastName,
+            PhoneNumber = PhoneNumber,
         };
     }
 

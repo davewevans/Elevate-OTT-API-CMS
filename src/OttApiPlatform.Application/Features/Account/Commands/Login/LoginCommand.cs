@@ -43,7 +43,7 @@ public class LoginCommand : IRequest<Envelope<LoginResponse>>
                                                                         request.Password,
                                                                         isPersistent: false,
                                                                         lockoutOnFailure: true);
-            
+
             // If the sign-in is successful.
             if (signInResult.Succeeded)
             {
