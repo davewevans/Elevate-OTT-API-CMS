@@ -18,6 +18,8 @@ public class LoginCommand : IRequest<Envelope<LoginResponse>>
         private readonly ApplicationUserManager _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IAuthenticationService _authenticationService;
+        private readonly IApplicationDbContext _dbContext;
+        private readonly ITenantResolver _tenantResolver;
 
         #endregion Private Fields
 
@@ -25,11 +27,15 @@ public class LoginCommand : IRequest<Envelope<LoginResponse>>
 
         public LoginCommandHandler(ApplicationUserManager userManager,
                                    SignInManager<ApplicationUser> signInManager,
-                                   IAuthenticationService authenticationService)
+                                   IAuthenticationService authenticationService,
+                                   IApplicationDbContext dbContext,
+                                   ITenantResolver tenantResolver)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _authenticationService = authenticationService;
+            _dbContext = dbContext;
+            _tenantResolver = tenantResolver;
         }
 
         #endregion Public Constructors
@@ -38,6 +44,19 @@ public class LoginCommand : IRequest<Envelope<LoginResponse>>
 
         public async Task<Envelope<LoginResponse>> Handle(LoginCommand request, CancellationToken cancellationToken)
         {
+            // Find the user by email.
+            var userEntity = await _userManager.Users
+                .Include(u => u.Tenant)
+                .IgnoreQueryFilters()
+                .FirstOrDefaultAsync(u => u.Email.Equals(request.Email), cancellationToken);
+
+            // If the user has a tenant, set the tenant ID and name in the tenant resolver.
+            if (userEntity?.Tenant != null)
+            {
+                _tenantResolver.SetTenantId(userEntity.Tenant.Id);
+                _tenantResolver.SetTenantName(userEntity.Tenant.Name ?? string.Empty);
+            }
+
             // Attempt to sign in the user with their email and password.
             var signInResult = await _signInManager.PasswordSignInAsync(request.Email,
                                                                         request.Password,
