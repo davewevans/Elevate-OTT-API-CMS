@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Components.Authorization;
+using OttApiPlatform.CMS.Pages.Identity.Users;
 using Utils =  OttApiPlatform.CMS.Utilities;
 
 namespace OttApiPlatform.CMS.Services;
@@ -14,6 +16,7 @@ public class HttpInterceptor : DelegatingHandler
     private readonly IAppStateManager _appStateManager;
     private readonly IReturnUrlProvider _returnUrlProvider;
     private readonly ILocalStorageService _localStorageService;
+    private readonly AuthenticationStateProvider _authenticationStateProvider;
 
     private CancellationTokenSource _tokenSource;
 
@@ -26,7 +29,8 @@ public class HttpInterceptor : DelegatingHandler
                            IAccessTokenProvider accessTokenProvider,
                            IAppStateManager appStateManager,
                            IReturnUrlProvider returnUrlProvider,
-                           ILocalStorageService localStorageService)
+                           ILocalStorageService localStorageService,
+                           AuthenticationStateProvider authenticationStateProvider)
     {
         _navigationManager = navigationManager;
         _refreshTokenService = refreshTokenService;
@@ -38,6 +42,7 @@ public class HttpInterceptor : DelegatingHandler
 
         _appStateManager.TokenSourceChanged += OnAppStateManagerOnTokenSourceChanged;
         _returnUrlProvider = returnUrlProvider;
+        _authenticationStateProvider = authenticationStateProvider;
     }
 
     private void OnAppStateManagerOnTokenSourceChanged(object obj, EventArgs args)
@@ -87,7 +92,11 @@ public class HttpInterceptor : DelegatingHandler
         if (subDomain != null)
             request.Headers.Add("Subdmain", subDomain);
 
-        string tenantName = await _localStorageService.GetItemAsync<string>(Utils.Constants.TenantNameStorageKey);
+        var authState = await _authenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        // Get the TenantName claim
+        var tenantName = user.Claims.FirstOrDefault(c => c.Type == "TenantName")?.Value;
 
         if (!string.IsNullOrWhiteSpace(tenantName))
             request.Headers.Add("X-Tenant", tenantName);
