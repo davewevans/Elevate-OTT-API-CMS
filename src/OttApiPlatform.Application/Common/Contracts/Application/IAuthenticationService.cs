@@ -15,6 +15,13 @@ public interface IAuthenticationService
     Task<Envelope<LoginResponse>> Login(LoginCommand request);
 
     /// <summary>
+    /// Performs a login operation after email has been confirmed after registration.
+    /// </summary>
+    /// <param name="user"></param>
+    /// <returns></returns>
+    Task<AuthResponse> LoginUserAfterConfirmEmail(ApplicationUser user);
+
+    /// <summary>
     /// Generates access and refresh tokens for the specified user.
     /// </summary>
     /// <param name="user">The user for whom to generate tokens.</param>

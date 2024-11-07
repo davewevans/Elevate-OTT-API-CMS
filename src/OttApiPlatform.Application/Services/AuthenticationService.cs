@@ -1,4 +1,7 @@
-﻿namespace OttApiPlatform.Application.Services;
+﻿using Azure.Core;
+using OttApiPlatform.Application.Features.Account.Commands.ConfirmEmail;
+
+namespace OttApiPlatform.Application.Services;
 
 public class AuthenticationService : IAuthenticationService
 {
@@ -33,7 +36,7 @@ public class AuthenticationService : IAuthenticationService
         // Attempt to sign in the user with their email and password.
         var signInResult = await _signInManager.PasswordSignInAsync(request.Email,
                                                                     request.Password,
-                                                                    isPersistent:false,
+                                                                    isPersistent: false,
                                                                     lockoutOnFailure: true);
 
         // If the sign-in is successful.
@@ -78,6 +81,20 @@ public class AuthenticationService : IAuthenticationService
         // Otherwise, return an unsuccessful result with any sign-in errors.
         return Envelope<LoginResponse>.Result.AddErrors(signInResult.ToApplicationResult(),
                                                         HttpStatusCode.InternalServerError, rollbackDisabled: true);
+    }
+
+    public async Task<AuthResponse> LoginUserAfterConfirmEmail(ApplicationUser user)
+    {
+        if (!await _signInManager.CanSignInAsync(user)) return null;
+
+        // Attempt to sign in the user with the user object.
+        await _signInManager.SignInAsync(user, isPersistent: false);
+
+        // Generate access and refresh tokens for the user.
+        var (accessToken, refreshToken) = await GenerateAccessAndRefreshTokens(user);
+
+        // Create and return an authentication response with the access and refresh tokens.
+        return new AuthResponse { AccessToken = accessToken, RefreshToken = refreshToken };
     }
 
     public async Task<(string accessToken, string refreshToken)> GenerateAccessAndRefreshTokens(ApplicationUser user)

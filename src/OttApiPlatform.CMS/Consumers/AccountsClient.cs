@@ -49,9 +49,9 @@ public class AccountsClient : IAccountsClient
         return await _httpService.Post<ResetPasswordCommand, string>("account/ResetPassword", request);
     }
 
-    public async Task<ApiResponseWrapper<string>> ConfirmEmail(ConfirmEmailCommand request)
+    public async Task<ApiResponseWrapper<ConfirmEmailResponse>> ConfirmEmail(ConfirmEmailCommand request)
     {
-        return await _httpService.Post<ConfirmEmailCommand, string>("account/ConfirmEmail", request);
+        return await _httpService.Post<ConfirmEmailCommand, ConfirmEmailResponse>("account/ConfirmEmail", request);
     }
 
     public async Task<ApiResponseWrapper<ResendEmailConfirmationResponse>> ResendEmailConfirmation(ResendEmailConfirmationCommand request)
