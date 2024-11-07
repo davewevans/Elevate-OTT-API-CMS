@@ -134,9 +134,11 @@ public static class HttpContextExtensions
     /// <returns>The tenant name as a string, or an empty string if the header is not present or empty.</returns>
     public static string GetTenantFromRequestHeader(this IHttpContextAccessor httpContextAccessor)
     {
-        var tenantName = httpContextAccessor.HttpContext.Request.Headers["X-Tenant"];
+        string tenantName = string.Empty;
+        if (httpContextAccessor.HttpContext != null)
+            tenantName = httpContextAccessor.HttpContext.Request.Headers["X-Tenant"];
 
-        return (tenantName.Count == 0) ? string.Empty : tenantName;
+        return (tenantName.Length == 0) ? string.Empty : tenantName;
     }
 
     #endregion Public Methods
