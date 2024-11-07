@@ -107,13 +107,15 @@ public class MultiTenancyMiddleware
         {
             // Query the database for the user
             var user = await dbContext.Users
+                .Include(u => u.Tenant)
                 .IgnoreQueryFilters()
                 .FirstOrDefaultAsync(u => u.Id == confirmEmailRequest.UserId);
 
             if (user != null)
             {
                 // Set the TenantId to the user's TenantId
-                tenantResolver.SetTenantId(user.TenantId);
+                tenantResolver.SetTenantId(user.Tenant.Id);
+                tenantResolver.SetTenantName(user.Tenant.Name);
             }
         }
 

@@ -75,7 +75,7 @@ public class AccountController : ApiController
         return TryGetResult(response);
     }
 
-    [ProducesResponseType(typeof(ApiSuccessResponse<string>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ApiSuccessResponse<ConfirmEmailResponse>), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ApiErrorResponse), StatusCodes.Status500InternalServerError)]
     [HttpPost("ConfirmEmail")]
     public async Task<IActionResult> ConfirmEmail(ConfirmEmailCommand request)
