@@ -28,6 +28,7 @@
 	  <Compile Remove="Controllers\AuthorsController.cs" />
 	  <Compile Remove="Controllers\CategoriesController.cs" />
 	  <Compile Remove="Controllers\MuxWebhookController.cs" />
+	  <Compile Remove="Controllers\VideosController.cs" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -1,5 +1,4 @@
-﻿using OttApiPlatform.Application.Features.ContentManagement.Videos.Queries.GetSasToken;
-
+﻿
 namespace OttApiPlatform.Application.Common.Contracts.Infrastructure.Storage;
 
 /// <summary>
@@ -79,7 +78,7 @@ public interface IFileStorageService
     /// <returns>The state of the file.</returns>
     FileStatus GetFileState(IFormFile formFile, string oldUrl);
 
-    SasTokenResponse GetSasTokenForVideoContainer();
+    //SasTokenResponse GetSasTokenForVideoContainer();
 
     #endregion Public Methods
 }

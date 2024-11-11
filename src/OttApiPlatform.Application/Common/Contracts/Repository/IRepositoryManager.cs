@@ -2,7 +2,7 @@
 {
     public interface IRepositoryManager
     {
-        IVideoRepository Video { get; }
+        //IVideoRepository Video { get; }
         ILiveStreamRepository LiveStream { get; }
         IPodcastRepository Podcast { get; }
         IAssetImageRepository AssetImage { get; }

@@ -1,5 +1,4 @@
-﻿using OttApiPlatform.Application.Features.ContentManagement.Videos.Queries.GetSasToken;
-
+﻿
 namespace OttApiPlatform.Infrastructure.Services.Storage;
 
 public class OnPremisesStorageService : IFileStorageService
@@ -251,10 +250,10 @@ public class OnPremisesStorageService : IFileStorageService
         return !string.IsNullOrWhiteSpace(oldUrl) ? FileStatus.Unchanged : FileStatus.Deleted;
     }
 
-    public SasTokenResponse GetSasTokenForVideoContainer()
-    {
-        throw new NotImplementedException();
-    }
+    //public SasTokenResponse GetSasTokenForVideoContainer()
+    //{
+    //    throw new NotImplementedException();
+    //}
 
     #endregion Public Methods
 }

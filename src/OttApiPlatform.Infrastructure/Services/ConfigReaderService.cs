@@ -1,4 +1,6 @@
-﻿namespace OttApiPlatform.Infrastructure.Services;
+﻿using Microsoft.Extensions.Options;
+
+namespace OttApiPlatform.Infrastructure.Services;
 
 public class ConfigReaderService : IConfigReaderService
 {
@@ -23,8 +25,8 @@ public class ConfigReaderService : IConfigReaderService
                                IOptionsSnapshot<SmtpOption> smtpOptionSnapshot,
                                IOptionsSnapshot<LicenseInfoOptions> licenseInfoOptionsSnapshot,
                                IHttpContextAccessor httpContextAccessor,
-                               BlobOptions blobOptionsSnapshot,
-                               MuxOptions muxOptionsSnapshot)
+                               IOptionsSnapshot<BlobOptions> blobOptionsSnapshot,
+                               IOptionsSnapshot<MuxOptions> muxOptionsSnapshot)
     {
         _appOptionsSnapshot = appOptionsSnapshot.Value;
         _jwtOptionsSnapshot = jwtOptionsSnapshot.Value;
@@ -32,8 +34,8 @@ public class ConfigReaderService : IConfigReaderService
         _smtpOptionSnapshot = smtpOptionSnapshot.Value;
         _licenseInfoOptionsSnapshot = licenseInfoOptionsSnapshot.Value;
         _httpContextAccessor = httpContextAccessor;
-        _blobOptionsSnapshot = blobOptionsSnapshot;
-        _muxOptionsSnapshot = muxOptionsSnapshot;
+        _blobOptionsSnapshot = blobOptionsSnapshot.Value;
+        _muxOptionsSnapshot = muxOptionsSnapshot.Value;
 
     }
 

@@ -11,7 +11,7 @@ using OttApiPlatform.Application.Common.Contracts.Mux;
 using OttApiPlatform.Application.Common.Contracts.Repository;
 using OttApiPlatform.Application.Features.ContentManagement.Videos.Commands.CreateAssetAtMux;
 
-namespace ElevateOTT.Infrastructure.Services.Mux;
+namespace OttApiPlatform.Infrastructure.Services.Mux;
 
 public class MuxAssetService : IMuxAssetService
 {
@@ -27,12 +27,12 @@ public class MuxAssetService : IMuxAssetService
         _configReaderService = configReaderService;
         _muxOptions = _configReaderService.GetMuxOptions();
 
-        _muxConfig = new Configuration
-        {
-            BasePath = _muxOptions.BasePath,
-            Username = _muxOptions.Username,
-            Password = _muxOptions.Password
-        };
+        //_muxConfig = new Configuration
+        //{
+        //    BasePath = _muxOptions.BasePath,
+        //    Username = _muxOptions.Username,
+        //    Password = _muxOptions.Password
+        //};
     }
 
     //    list assets
