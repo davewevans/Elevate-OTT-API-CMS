@@ -1,4 +1,6 @@
-﻿namespace OttApiPlatform.Infrastructure.Services;
+﻿using Microsoft.Extensions.Options;
+
+namespace OttApiPlatform.Infrastructure.Services;
 
 public class ConfigReaderService : IConfigReaderService
 {
@@ -9,6 +11,8 @@ public class ConfigReaderService : IConfigReaderService
     private readonly SmtpOption _smtpOptionSnapshot;
     private readonly ClientAppOptions _clientAppOptionsSnapshot;
     private readonly LicenseInfoOptions _licenseInfoOptionsSnapshot;
+    private readonly BlobOptions _blobOptionsSnapshot;
+    private readonly MuxOptions _muxOptionsSnapshot;
     private readonly IHttpContextAccessor _httpContextAccessor;
 
     #endregion Private Fields
@@ -20,7 +24,9 @@ public class ConfigReaderService : IConfigReaderService
                                IOptionsSnapshot<ClientAppOptions> clientAppOptionsSnapshot,
                                IOptionsSnapshot<SmtpOption> smtpOptionSnapshot,
                                IOptionsSnapshot<LicenseInfoOptions> licenseInfoOptionsSnapshot,
-                               IHttpContextAccessor httpContextAccessor)
+                               IHttpContextAccessor httpContextAccessor,
+                               IOptionsSnapshot<BlobOptions> blobOptionsSnapshot,
+                               IOptionsSnapshot<MuxOptions> muxOptionsSnapshot)
     {
         _appOptionsSnapshot = appOptionsSnapshot.Value;
         _jwtOptionsSnapshot = jwtOptionsSnapshot.Value;
@@ -28,6 +34,9 @@ public class ConfigReaderService : IConfigReaderService
         _smtpOptionSnapshot = smtpOptionSnapshot.Value;
         _licenseInfoOptionsSnapshot = licenseInfoOptionsSnapshot.Value;
         _httpContextAccessor = httpContextAccessor;
+        _blobOptionsSnapshot = blobOptionsSnapshot.Value;
+        _muxOptionsSnapshot = muxOptionsSnapshot.Value;
+
     }
 
     #endregion Public Constructors
@@ -92,6 +101,16 @@ public class ConfigReaderService : IConfigReaderService
     public LicenseInfoOptions GetLicenseInfoOptions()
     {
         return _licenseInfoOptionsSnapshot;
+    }
+
+    public BlobOptions GetBlobOptions()
+    {
+        return _blobOptionsSnapshot;
+    }
+
+    public MuxOptions GetMuxOptions()
+    {
+        return _muxOptionsSnapshot;
     }
 
     #endregion Public Methods

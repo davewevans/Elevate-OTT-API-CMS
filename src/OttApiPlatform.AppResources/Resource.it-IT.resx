@@ -2259,4 +2259,43 @@
   <data name="Register_button_text" xml:space="preserve">
     <value>Inizia la mia prova gratuita</value>
   </data>
+  <data name="Invalid_author_Id" xml:space="preserve">
+    <value>ID autore non valido.</value>
+  </data>
+  <data name="Unable_to_load_author" xml:space="preserve">
+    <value>Impossibile caricare l'autore.</value>
+  </data>
+  <data name="Author_has_been_created_successfully" xml:space="preserve">
+    <value>L'autore è stato creato correttamente.</value>
+  </data>
+  <data name="Author_has_been_updated_successfully" xml:space="preserve">
+    <value>L'autore è stato aggiornato correttamente.</value>
+  </data>
+  <data name="The_author_is_not_found" xml:space="preserve">
+    <value>Autore non trovato.</value>
+  </data>
+  <data name="Author_has_been_deleted_successfully" xml:space="preserve">
+    <value>L'autore è stato eliminato correttamente.</value>
+  </data>
+  <data name="The_video_was_not_found" xml:space="preserve">
+    <value>Il video non è stato trovato.</value>
+  </data>
+  <data name="Video_has_been_deleted_successfully" xml:space="preserve">
+    <value>Il video è stato eliminato correttamente.</value>
+  </data>
+  <data name="Unable_to_load_video" xml:space="preserve">
+    <value>Impossibile caricare il video.</value>
+  </data>
+  <data name="Video_has_been_updated_successfully" xml:space="preserve">
+    <value>Il video è stato aggiornato correttamente.</value>
+  </data>
+  <data name="Unable_to_obtain_sas_token" xml:space="preserve">
+    <value>Impossibile ottenere il token di firma di accesso condiviso.</value>
+  </data>
+  <data name="Video_has_been_created_successfully" xml:space="preserve">
+    <value>Il video è stato creato con successo.</value>
+  </data>
+  <data name="Invalid_video_Id" xml:space="preserve">
+    <value>ID video non valido.</value>
+  </data>
 </root>

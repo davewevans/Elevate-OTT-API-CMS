@@ -19,6 +19,8 @@ public static class ServiceCollectionExtension
         services.Configure<SmtpOption>(configuration.GetSection(SmtpOption.Section));
         services.Configure<ClientAppOptions>(configuration.GetSection(ClientAppOptions.Section));
         services.Configure<LicenseInfoOptions>(configuration.GetSection(LicenseInfoOptions.Section));
+        services.Configure<BlobOptions>(configuration.GetSection(BlobOptions.Section));
+        services.Configure<MuxOptions>(configuration.GetSection(MuxOptions.Section));
         return services;
     }
 

@@ -2262,4 +2262,43 @@
   <data name="Register_button_text" xml:space="preserve">
     <value>Start My Free Trial</value>
   </data>
+  <data name="Invalid_author_Id" xml:space="preserve">
+    <value>Invalid author ID.</value>
+  </data>
+  <data name="Unable_to_load_author" xml:space="preserve">
+    <value>Unable to load author.</value>
+  </data>
+  <data name="Author_has_been_created_successfully" xml:space="preserve">
+    <value>Author has been created successfully.</value>
+  </data>
+  <data name="Author_has_been_updated_successfully" xml:space="preserve">
+    <value>Author has been updated successfully.</value>
+  </data>
+  <data name="The_author_is_not_found" xml:space="preserve">
+    <value>Author not found.</value>
+  </data>
+  <data name="Author_has_been_deleted_successfully" xml:space="preserve">
+    <value>Author has been deleted successfully.</value>
+  </data>
+  <data name="The_video_was_not_found" xml:space="preserve">
+    <value>The video was not found.</value>
+  </data>
+  <data name="Video_has_been_deleted_successfully" xml:space="preserve">
+    <value>The video has been deleted successfully.</value>
+  </data>
+  <data name="Unable_to_load_video" xml:space="preserve">
+    <value>Unable to load the video.</value>
+  </data>
+  <data name="Video_has_been_updated_successfully" xml:space="preserve">
+    <value>The video has been updated successfully.</value>
+  </data>
+  <data name="Unable_to_obtain_sas_token" xml:space="preserve">
+    <value>Unable to obtain the SAS token.</value>
+  </data>
+  <data name="Video_has_been_created_successfully" xml:space="preserve">
+    <value>The video has been created successfully.</value>
+  </data>
+  <data name="Invalid_video_Id" xml:space="preserve">
+    <value>Invalid video ID.</value>
+  </data>
 </root>

@@ -1,3 +1,6 @@
+using OttApiPlatform.Domain.Entities.Content;
+using OttApiPlatform.Domain.Entities.Mux;
+
 namespace OttApiPlatform.Infrastructure.Persistence;
 
 public sealed class ApplicationDbContext : IdentityDbContext<ApplicationUser,
@@ -59,10 +62,19 @@ public sealed class ApplicationDbContext : IdentityDbContext<ApplicationUser,
 
     // Application-generic entities.
     public DbSet<Report> Reports { get; set; }
-
     public DbSet<Tenant> Tenants { get; set; }
-
     public DbSet<Domain.Entities.AccountInfo> AccountInfo { get; set; }
+    public DbSet<MuxPlaybackIdModel> MuxPlaybackIds { get; set; }
+    public DbSet<AuthorModel> Authors { get; set; }
+    public DbSet<PodcastModel> Podcasts { get; set; }
+    public DbSet<ContentFeedModel> ContentFeeds { get; set; }
+    public DbSet<CategoryCollectionModel> CategoriesCollections { get; set; }
+    public DbSet<VideoCollectionModel> VideosCollections { get; set; }
+    public DbSet<CommentModel> Comments { get; set; }
+    public DbSet<LiveStreamCategoryModel> LiveStreamsCategories { get; set; }
+    public DbSet<CountryCodeModel> CountryCodes { get; set; }
+    public DbSet<VideoModel> Videos { get; set; }
+
 
     // DbContext-related properties.
     public DbContext Current { get; }

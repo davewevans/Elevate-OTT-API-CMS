@@ -1,4 +1,5 @@
-﻿namespace OttApiPlatform.Application.Common.Contracts.Infrastructure.Storage;
+﻿
+namespace OttApiPlatform.Application.Common.Contracts.Infrastructure.Storage;
 
 /// <summary>
 /// Defines a contract for a file storage service that can be used in multiple cloud storage
@@ -76,6 +77,8 @@ public interface IFileStorageService
     /// <param name="oldUrl">The URL of the old file.</param>
     /// <returns>The state of the file.</returns>
     FileStatus GetFileState(IFormFile formFile, string oldUrl);
+
+    //SasTokenResponse GetSasTokenForVideoContainer();
 
     #endregion Public Methods
 }

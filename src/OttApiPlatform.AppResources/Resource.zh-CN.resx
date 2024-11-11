@@ -2259,4 +2259,43 @@
   <data name="Register_button_text" xml:space="preserve">
     <value>开始免费试用</value>
   </data>
+  <data name="Invalid_author_Id" xml:space="preserve">
+    <value>作者 ID 无效。</value>
+  </data>
+  <data name="Unable_to_load_author" xml:space="preserve">
+    <value>无法加载作者。</value>
+  </data>
+  <data name="Author_has_been_created_successfully" xml:space="preserve">
+    <value>已成功创建作者。</value>
+  </data>
+  <data name="Author_has_been_updated_successfully" xml:space="preserve">
+    <value>作者已成功更新。</value>
+  </data>
+  <data name="The_author_is_not_found" xml:space="preserve">
+    <value>找不到作者。</value>
+  </data>
+  <data name="Author_has_been_deleted_successfully" xml:space="preserve">
+    <value>已成功删除作者。</value>
+  </data>
+  <data name="The_video_was_not_found" xml:space="preserve">
+    <value>未找到视频。</value>
+  </data>
+  <data name="Video_has_been_deleted_successfully" xml:space="preserve">
+    <value>视频已成功删除。</value>
+  </data>
+  <data name="Unable_to_load_video" xml:space="preserve">
+    <value>无法加载视频。</value>
+  </data>
+  <data name="Video_has_been_updated_successfully" xml:space="preserve">
+    <value>视频已成功更新。</value>
+  </data>
+  <data name="Unable_to_obtain_sas_token" xml:space="preserve">
+    <value>无法获取 SAS 令牌。</value>
+  </data>
+  <data name="Video_has_been_created_successfully" xml:space="preserve">
+    <value>视频创建成功。</value>
+  </data>
+  <data name="Invalid_video_Id" xml:space="preserve">
+    <value>视频 ID 无效。</value>
+  </data>
 </root>

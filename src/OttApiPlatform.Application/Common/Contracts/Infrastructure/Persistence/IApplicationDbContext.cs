@@ -1,3 +1,6 @@
+using OttApiPlatform.Domain.Entities.Content;
+using OttApiPlatform.Domain.Entities.Mux;
+
 namespace OttApiPlatform.Application.Common.Contracts.Infrastructure.Persistence;
 
 /// <summary>
@@ -76,7 +79,18 @@ public interface IApplicationDbContext : IDisposable
 
     DbSet<Tenant> Tenants { get; set; }
 
-    public DbSet<Domain.Entities.AccountInfo> AccountInfo { get; set; }
+    DbSet<Domain.Entities.AccountInfo> AccountInfo { get; set; }
+
+    DbSet<MuxPlaybackIdModel> MuxPlaybackIds { get; set; }
+    DbSet<AuthorModel> Authors { get; set; }
+    DbSet<PodcastModel> Podcasts { get; set; }
+    DbSet<ContentFeedModel> ContentFeeds { get; set; }
+    DbSet<CategoryCollectionModel> CategoriesCollections { get; set; }
+    DbSet<VideoCollectionModel> VideosCollections { get; set; }
+    DbSet<CommentModel> Comments { get; set; }
+    DbSet<LiveStreamCategoryModel> LiveStreamsCategories { get; set; }
+    DbSet<CountryCodeModel> CountryCodes { get; set; }
+    DbSet<VideoModel> Videos { get; set; }
 
     // DbContext-related properties.
     DbContext Current { get; }

@@ -13,5 +13,11 @@ public interface IStorageProvider
     /// <returns>An instance of the file storage service.</returns>
     Task<IFileStorageService> InvokeInstanceAsync();
 
+    /// <summary>
+    /// Invokes an instance of the Azure storage service.
+    /// </summary>
+    /// <returns></returns>
+    IFileStorageService InvokeInstanceForAzureStorage();
+
     #endregion Public Methods
 }

@@ -2259,4 +2259,43 @@
   <data name="Register_button_text" xml:space="preserve">
     <value>無料トライアルを開始</value>
   </data>
+  <data name="Invalid_author_Id" xml:space="preserve">
+    <value>作成者 ID が無効です。</value>
+  </data>
+  <data name="Unable_to_load_author" xml:space="preserve">
+    <value>著者を読み込めません。</value>
+  </data>
+  <data name="Author_has_been_created_successfully" xml:space="preserve">
+    <value>オーサーが正常に作成されました。</value>
+  </data>
+  <data name="Author_has_been_updated_successfully" xml:space="preserve">
+    <value>著者が正常に更新されました。</value>
+  </data>
+  <data name="The_author_is_not_found" xml:space="preserve">
+    <value>著者が見つかりませんでした。</value>
+  </data>
+  <data name="Author_has_been_deleted_successfully" xml:space="preserve">
+    <value>作成者は正常に削除されました。</value>
+  </data>
+  <data name="The_video_was_not_found" xml:space="preserve">
+    <value>ビデオが見つかりませんでした。</value>
+  </data>
+  <data name="Video_has_been_deleted_successfully" xml:space="preserve">
+    <value>ビデオは正常に削除されました。</value>
+  </data>
+  <data name="Unable_to_load_video" xml:space="preserve">
+    <value>ビデオを読み込めません。</value>
+  </data>
+  <data name="Video_has_been_updated_successfully" xml:space="preserve">
+    <value>ビデオは正常に更新されました。</value>
+  </data>
+  <data name="Unable_to_obtain_sas_token" xml:space="preserve">
+    <value>SAS トークンを取得できません。</value>
+  </data>
+  <data name="Video_has_been_created_successfully" xml:space="preserve">
+    <value>ビデオは正常に作成されました。</value>
+  </data>
+  <data name="Invalid_video_Id" xml:space="preserve">
+    <value>動画 ID が無効です。</value>
+  </data>
 </root>

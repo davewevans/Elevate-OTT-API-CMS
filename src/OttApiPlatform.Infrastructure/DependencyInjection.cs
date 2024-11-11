@@ -1,6 +1,8 @@
 using System.Configuration;
 using Microsoft.Extensions.Logging;
 using OttApiPlatform.Application.Common.Contracts;
+using OttApiPlatform.Application.Common.Contracts.Hub;
+using OttApiPlatform.Application.Common.Contracts.Reports;
 using OttApiPlatform.Infrastructure.Identity.Stores;
 using OttApiPlatform.Infrastructure.Service;
 
@@ -129,6 +131,12 @@ public static class DependencyInjection
         services.AddScoped<IOnDemandReportingService, OnDemandReportingService>();
         services.AddScoped<IHtmlReportBuilderService, HtmlReportBuilderService>();
         services.AddScoped<ILicenseService, LicenseService>();
+        //services.AddScoped<IMuxAssetService, MuxAssetService>();
+        //services.AddScoped<ICategoryUseCase, CategoryUseCase>();
+        //services.AddScoped<IAuthorUseCase, AuthorUseCase>();
+
+        //IRepositoryManager 
+        //services.AddScoped<IRepositoryManager, RepositoryManager>();
 
         return services;
     }
