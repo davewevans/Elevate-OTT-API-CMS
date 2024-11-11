@@ -2259,4 +2259,43 @@
   <data name="Register_button_text" xml:space="preserve">
     <value>Commencer mon essai gratuit</value>
   </data>
+  <data name="Invalid_author_Id" xml:space="preserve">
+    <value>ID d’auteur non valide.</value>
+  </data>
+  <data name="Unable_to_load_author" xml:space="preserve">
+    <value>Impossible de charger l’auteur.</value>
+  </data>
+  <data name="Author_has_been_created_successfully" xml:space="preserve">
+    <value>Author a été créé avec succès.</value>
+  </data>
+  <data name="Author_has_been_updated_successfully" xml:space="preserve">
+    <value>L’auteur a été mis à jour avec succès.</value>
+  </data>
+  <data name="The_author_is_not_found" xml:space="preserve">
+    <value>Auteur introuvable.</value>
+  </data>
+  <data name="Author_has_been_deleted_successfully" xml:space="preserve">
+    <value>L’auteur a été supprimé avec succès.</value>
+  </data>
+  <data name="The_video_was_not_found" xml:space="preserve">
+    <value>La vidéo n’a pas été retrouvée.</value>
+  </data>
+  <data name="Video_has_been_deleted_successfully" xml:space="preserve">
+    <value>La vidéo a été supprimée avec succès.</value>
+  </data>
+  <data name="Unable_to_load_video" xml:space="preserve">
+    <value>Impossible de charger la vidéo.</value>
+  </data>
+  <data name="Video_has_been_updated_successfully" xml:space="preserve">
+    <value>La vidéo a été mise à jour avec succès.</value>
+  </data>
+  <data name="Unable_to_obtain_sas_token" xml:space="preserve">
+    <value>Impossible d’obtenir le jeton SAS.</value>
+  </data>
+  <data name="Video_has_been_created_successfully" xml:space="preserve">
+    <value>La vidéo a été créée avec succès.</value>
+  </data>
+  <data name="Invalid_video_Id" xml:space="preserve">
+    <value>ID vidéo non valide.</value>
+  </data>
 </root>

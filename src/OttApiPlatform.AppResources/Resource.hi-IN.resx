@@ -2259,4 +2259,43 @@
   <data name="Register_button_text" xml:space="preserve">
     <value>मेरा नि: शुल्क परीक्षण शुरू करें</value>
   </data>
+  <data name="Invalid_author_Id" xml:space="preserve">
+    <value>अमान्य लेखक ID.</value>
+  </data>
+  <data name="Unable_to_load_author" xml:space="preserve">
+    <value>लेखक लोड करने में असमर्थ.</value>
+  </data>
+  <data name="Author_has_been_created_successfully" xml:space="preserve">
+    <value>लेखक सफलतापूर्वक बनाया गया है।</value>
+  </data>
+  <data name="Author_has_been_updated_successfully" xml:space="preserve">
+    <value>लेखक सफलतापूर्वक अद्यतन किया गया है.</value>
+  </data>
+  <data name="The_author_is_not_found" xml:space="preserve">
+    <value>लेखक नहीं मिला।</value>
+  </data>
+  <data name="Author_has_been_deleted_successfully" xml:space="preserve">
+    <value>लेखक सफलतापूर्वक हटा दिया गया है।</value>
+  </data>
+  <data name="The_video_was_not_found" xml:space="preserve">
+    <value>वीडियो नहीं मिला।</value>
+  </data>
+  <data name="Video_has_been_deleted_successfully" xml:space="preserve">
+    <value>वीडियो सफलतापूर्वक हटा दिया गया है।</value>
+  </data>
+  <data name="Unable_to_load_video" xml:space="preserve">
+    <value>वीडियो लोड करने में असमर्थ.</value>
+  </data>
+  <data name="Video_has_been_updated_successfully" xml:space="preserve">
+    <value>वीडियो सफलतापूर्वक अपडेट किया गया है।</value>
+  </data>
+  <data name="Unable_to_obtain_sas_token" xml:space="preserve">
+    <value>SAS टोकन प्राप्त करने में असमर्थ.</value>
+  </data>
+  <data name="Video_has_been_created_successfully" xml:space="preserve">
+    <value>वीडियो सफलतापूर्वक बनाया गया है।</value>
+  </data>
+  <data name="Invalid_video_Id" xml:space="preserve">
+    <value>अमान्य वीडियो आईडी.</value>
+  </data>
 </root>

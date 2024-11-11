@@ -619,6 +619,33 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Author has been created successfully..
+        /// </summary>
+        public static string Author_has_been_created_successfully {
+            get {
+                return ResourceManager.GetString("Author_has_been_created_successfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Author has been deleted successfully..
+        /// </summary>
+        public static string Author_has_been_deleted_successfully {
+            get {
+                return ResourceManager.GetString("Author_has_been_deleted_successfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Author has been updated successfully..
+        /// </summary>
+        public static string Author_has_been_updated_successfully {
+            get {
+                return ResourceManager.GetString("Author_has_been_updated_successfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Authorization.
         /// </summary>
         public static string Authorization {
@@ -2658,6 +2685,15 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Invalid author ID..
+        /// </summary>
+        public static string Invalid_author_Id {
+            get {
+                return ResourceManager.GetString("Invalid_author_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invalid client request..
         /// </summary>
         public static string Invalid_client_request {
@@ -2798,6 +2834,15 @@ namespace OttApiPlatform.AppResources {
         public static string Invalid_user_settings_Id {
             get {
                 return ResourceManager.GetString("Invalid_user_settings_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid video ID..
+        /// </summary>
+        public static string Invalid_video_Id {
+            get {
+                return ResourceManager.GetString("Invalid_video_Id", resourceCulture);
             }
         }
         
@@ -5190,6 +5235,15 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Author not found..
+        /// </summary>
+        public static string The_author_is_not_found {
+            get {
+                return ResourceManager.GetString("The_author_is_not_found", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The Host portal cannot be accessed while using a separate database per tenant as a data isolation strategy. Please reach out to the administrator for further assistance..
         /// </summary>
         public static string The_Host_portal_cannot_be_accessed {
@@ -5312,6 +5366,15 @@ namespace OttApiPlatform.AppResources {
         public static string The_user_has_no_2FA_enabled {
             get {
                 return ResourceManager.GetString("The_user_has_no_2FA_enabled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The video was not found..
+        /// </summary>
+        public static string The_video_was_not_found {
+            get {
+                return ResourceManager.GetString("The_video_was_not_found", resourceCulture);
             }
         }
         
@@ -5658,6 +5721,15 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unable to load author..
+        /// </summary>
+        public static string Unable_to_load_author {
+            get {
+                return ResourceManager.GetString("Unable_to_load_author", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unable to load report..
         /// </summary>
         public static string Unable_to_load_report {
@@ -5690,6 +5762,24 @@ namespace OttApiPlatform.AppResources {
         public static string Unable_to_load_user {
             get {
                 return ResourceManager.GetString("Unable_to_load_user", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unable to load the video..
+        /// </summary>
+        public static string Unable_to_load_video {
+            get {
+                return ResourceManager.GetString("Unable_to_load_video", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unable to obtain the SAS token..
+        /// </summary>
+        public static string Unable_to_obtain_sas_token {
+            get {
+                return ResourceManager.GetString("Unable_to_obtain_sas_token", resourceCulture);
             }
         }
         
@@ -6123,6 +6213,33 @@ namespace OttApiPlatform.AppResources {
         public static string Verify {
             get {
                 return ResourceManager.GetString("Verify", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The video has been created successfully..
+        /// </summary>
+        public static string Video_has_been_created_successfully {
+            get {
+                return ResourceManager.GetString("Video_has_been_created_successfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The video has been deleted successfully..
+        /// </summary>
+        public static string Video_has_been_deleted_successfully {
+            get {
+                return ResourceManager.GetString("Video_has_been_deleted_successfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The video has been updated successfully..
+        /// </summary>
+        public static string Video_has_been_updated_successfully {
+            get {
+                return ResourceManager.GetString("Video_has_been_updated_successfully", resourceCulture);
             }
         }
         

@@ -2,8 +2,8 @@
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
-using OttApiPlatform.Application.Common.Contracts;
 using Azure.Core;
+using OttApiPlatform.Application.Common.Contracts;
 using OttApiPlatform.Application.Features.AccountInfo.Commands.CreateAccountInfo;
 
 namespace OttApiPlatform.Application.Features.Account.Commands.Register;
@@ -288,7 +288,7 @@ public class RegisterCommand : IRequest<Envelope<RegisterResponse>>
                 LicenseKey = _licenseService.GenerateLicenseForTenant(tenantId.Value),
                 SubDomain = request.SubDomain,
                 TenantId = tenantId.Value,
-                StorageFileNamePrefix = tenantId.ToString().Replace("-", "")
+                StorageFileNamePrefix = tenantId.Value.GetStorageFileNamePrefix()
             };
 
             var createAccountInfoResponse = await _mediator.Send(createAccountInfoCommand, cancellationToken);

@@ -64,6 +64,18 @@ public interface IConfigReaderService
     LicenseInfoOptions GetLicenseInfoOptions();
 
     /// <summary>
+    /// Gets the options for the Azure Blob configurations.
+    /// </summary>
+    /// <returns></returns>
+    BlobOptions GetBlobOptions();
+
+    /// <summary>
+    /// Gets the configurations for Mux integration.
+    /// </summary>
+    /// <returns></returns>
+    MuxOptions GetMuxOptions();
+
+    /// <summary>
     /// Gets the subdomain.
     /// </summary>
     string GetSubDomain();

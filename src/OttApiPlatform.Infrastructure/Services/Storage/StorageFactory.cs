@@ -4,10 +4,10 @@ public class StorageFactory : IStorageFactory
 {
     #region Private Fields
 
-    // Defines a private readonly field to store the mapping of StorageTypes to IFileStorageService instances.
+    // Defines a private readonly field to store the mapping of StorageTypes to IAzureFileStorageService instances.
     private readonly Dictionary<StorageTypes, IFileStorageService> _storageServicesByType;
 
-    // Defines a private readonly field to store all available IFileStorageService instances.
+    // Defines a private readonly field to store all available IAzureFileStorageService instances.
     private readonly IEnumerable<IFileStorageService> _fileStorageServices;
 
     #endregion Private Fields
@@ -20,7 +20,7 @@ public class StorageFactory : IStorageFactory
         _fileStorageServices = fileStorageServices ?? throw new ArgumentNullException(nameof(fileStorageServices));
 
         // Initializes the _storageServicesByType field with a dictionary that maps StorageTypes to
-        // the corresponding IFileStorageService instances.
+        // the corresponding IAzureFileStorageService instances.
         _storageServicesByType = Enum.GetValues<StorageTypes>()
                                      .ToDictionary(
                                                    storageType => storageType,

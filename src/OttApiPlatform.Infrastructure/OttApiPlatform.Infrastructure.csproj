@@ -14,6 +14,11 @@
     <LangVersion>preview</LangVersion>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Services\Mux\MuxAssetService.cs" />
+    <Compile Remove="Services\Mux\MuxWebhookService.cs" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Azure.Communication.Email" Version="1.0.1" />
@@ -43,11 +48,16 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Mux.Csharp.Sdk" Version="0.15.0" />
     <PackageReference Include="Stubble.Core" Version="1.10.8" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\OttApiPlatform.Application\OttApiPlatform.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\Mux\" />
   </ItemGroup>
 
 </Project>

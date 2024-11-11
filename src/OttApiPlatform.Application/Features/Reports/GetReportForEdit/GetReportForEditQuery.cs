@@ -8,6 +8,24 @@ public class GetReportForEditQuery : IRequest<Envelope<ReportForEditResponse>>
 
     #endregion Public Properties
 
+    #region Public Methods
+
+    public static GetReportForEditQuery MapFromEntity(Report report)
+    {
+        return new()
+        {
+            Id = report.Id.ToString(),
+            //Title = report.Title,
+            //QueryString = report.QueryString,
+            //FileName = report.FileName,
+            //FileUri = report.FileUri,
+            //ContentType = report.ContentType,
+            //Status = report.Status,
+        };
+    }
+
+    #endregion
+
     public class GetReportForEditQueryHandler : IRequestHandler<GetReportForEditQuery, Envelope<ReportForEditResponse>>
     {
         #region Private Fields

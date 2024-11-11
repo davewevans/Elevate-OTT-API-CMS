@@ -1,4 +1,6 @@
-﻿namespace OttApiPlatform.Infrastructure.Services.Storage;
+﻿using OttApiPlatform.Application.Features.ContentManagement.Videos.Queries.GetSasToken;
+
+namespace OttApiPlatform.Infrastructure.Services.Storage;
 
 public class AzureStorageService : IFileStorageService
 {
@@ -179,6 +181,11 @@ public class AzureStorageService : IFileStorageService
 
         // If the old URL is not null or whitespace, the file is unchanged. Otherwise, it's deleted.
         return !string.IsNullOrWhiteSpace(oldUrl) ? FileStatus.Unchanged : FileStatus.Deleted;
+    }
+
+    public SasTokenResponse GetSasTokenForVideoContainer()
+    {
+        throw new NotImplementedException();
     }
 
     #endregion Public Methods

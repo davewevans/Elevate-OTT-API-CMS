@@ -2259,4 +2259,43 @@
   <data name="Register_button_text" xml:space="preserve">
     <value>Iniciar mi prueba gratuita</value>
   </data>
+  <data name="Invalid_author_Id" xml:space="preserve">
+    <value>ID de autor no válido.</value>
+  </data>
+  <data name="Unable_to_load_author" xml:space="preserve">
+    <value>No se puede cargar el autor.</value>
+  </data>
+  <data name="Author_has_been_created_successfully" xml:space="preserve">
+    <value>Author se ha creado correctamente.</value>
+  </data>
+  <data name="Author_has_been_updated_successfully" xml:space="preserve">
+    <value>El autor se ha actualizado correctamente.</value>
+  </data>
+  <data name="The_author_is_not_found" xml:space="preserve">
+    <value>Autor no encontrado.</value>
+  </data>
+  <data name="Author_has_been_deleted_successfully" xml:space="preserve">
+    <value>El autor se ha eliminado correctamente.</value>
+  </data>
+  <data name="The_video_was_not_found" xml:space="preserve">
+    <value>El video no fue encontrado.</value>
+  </data>
+  <data name="Video_has_been_deleted_successfully" xml:space="preserve">
+    <value>El video se ha eliminado con éxito.</value>
+  </data>
+  <data name="Unable_to_load_video" xml:space="preserve">
+    <value>No se puede cargar el video.</value>
+  </data>
+  <data name="Video_has_been_updated_successfully" xml:space="preserve">
+    <value>El video se ha actualizado con éxito.</value>
+  </data>
+  <data name="Unable_to_obtain_sas_token" xml:space="preserve">
+    <value>No se puede obtener el token de SAS.</value>
+  </data>
+  <data name="Video_has_been_created_successfully" xml:space="preserve">
+    <value>El video se ha creado con éxito.</value>
+  </data>
+  <data name="Invalid_video_Id" xml:space="preserve">
+    <value>ID de vídeo no válido.</value>
+  </data>
 </root>

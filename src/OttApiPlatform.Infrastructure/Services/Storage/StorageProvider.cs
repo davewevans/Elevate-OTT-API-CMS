@@ -28,5 +28,10 @@ public class StorageProvider : IStorageProvider
         return _storageFactory.CreateInstance((StorageTypes)storageType);
     }
 
+    public IFileStorageService InvokeInstanceForAzureStorage()
+    {
+        return _storageFactory.CreateInstance(StorageTypes.AzureStorageService);
+    }
+
     #endregion Public Methods
 }

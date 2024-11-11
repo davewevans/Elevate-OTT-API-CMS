@@ -65,5 +65,16 @@ public static class StringExtensions
         return $"{cleanedInput.Replace(" ", "")}";
     }
 
+    /// <summary>
+    /// Replaces spaces and special characters with dashes in the input string.
+    /// </summary>
+    /// <param name="str"></param>
+    /// <returns></returns>
+    public static string ReplaceSpaceAndSpecialCharsWithDashes(this string str)
+    {
+        var cleanedStr = Regex.Replace(str.Replace("@", "-"), "[^a-zA-Z0-9_.]+", "-", RegexOptions.Compiled).Replace(" ", "-");
+        return cleanedStr;
+    }
+
     #endregion Public Methods
 }

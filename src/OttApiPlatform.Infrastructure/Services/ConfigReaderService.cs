@@ -9,6 +9,8 @@ public class ConfigReaderService : IConfigReaderService
     private readonly SmtpOption _smtpOptionSnapshot;
     private readonly ClientAppOptions _clientAppOptionsSnapshot;
     private readonly LicenseInfoOptions _licenseInfoOptionsSnapshot;
+    private readonly BlobOptions _blobOptionsSnapshot;
+    private readonly MuxOptions _muxOptionsSnapshot;
     private readonly IHttpContextAccessor _httpContextAccessor;
 
     #endregion Private Fields
@@ -20,7 +22,9 @@ public class ConfigReaderService : IConfigReaderService
                                IOptionsSnapshot<ClientAppOptions> clientAppOptionsSnapshot,
                                IOptionsSnapshot<SmtpOption> smtpOptionSnapshot,
                                IOptionsSnapshot<LicenseInfoOptions> licenseInfoOptionsSnapshot,
-                               IHttpContextAccessor httpContextAccessor)
+                               IHttpContextAccessor httpContextAccessor,
+                               BlobOptions blobOptionsSnapshot,
+                               MuxOptions muxOptionsSnapshot)
     {
         _appOptionsSnapshot = appOptionsSnapshot.Value;
         _jwtOptionsSnapshot = jwtOptionsSnapshot.Value;
@@ -28,6 +32,9 @@ public class ConfigReaderService : IConfigReaderService
         _smtpOptionSnapshot = smtpOptionSnapshot.Value;
         _licenseInfoOptionsSnapshot = licenseInfoOptionsSnapshot.Value;
         _httpContextAccessor = httpContextAccessor;
+        _blobOptionsSnapshot = blobOptionsSnapshot;
+        _muxOptionsSnapshot = muxOptionsSnapshot;
+
     }
 
     #endregion Public Constructors
@@ -92,6 +99,16 @@ public class ConfigReaderService : IConfigReaderService
     public LicenseInfoOptions GetLicenseInfoOptions()
     {
         return _licenseInfoOptionsSnapshot;
+    }
+
+    public BlobOptions GetBlobOptions()
+    {
+        return _blobOptionsSnapshot;
+    }
+
+    public MuxOptions GetMuxOptions()
+    {
+        return _muxOptionsSnapshot;
     }
 
     #endregion Public Methods

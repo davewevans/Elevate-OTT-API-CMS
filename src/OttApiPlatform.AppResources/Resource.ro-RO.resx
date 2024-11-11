@@ -2259,4 +2259,43 @@
   <data name="Register_button_text" xml:space="preserve">
     <value>Începeți perioada de încercare gratuită</value>
   </data>
+  <data name="Invalid_author_Id" xml:space="preserve">
+    <value>ID autor nevalid.</value>
+  </data>
+  <data name="Unable_to_load_author" xml:space="preserve">
+    <value>Nu se poate încărca autorul.</value>
+  </data>
+  <data name="Author_has_been_created_successfully" xml:space="preserve">
+    <value>Autorul a fost creat cu succes.</value>
+  </data>
+  <data name="Author_has_been_updated_successfully" xml:space="preserve">
+    <value>Autorul a fost actualizat cu succes.</value>
+  </data>
+  <data name="The_author_is_not_found" xml:space="preserve">
+    <value>Autorul nu a fost găsit.</value>
+  </data>
+  <data name="Author_has_been_deleted_successfully" xml:space="preserve">
+    <value>Autorul a fost șters cu succes.</value>
+  </data>
+  <data name="The_video_was_not_found" xml:space="preserve">
+    <value>Videoclipul nu a fost găsit.</value>
+  </data>
+  <data name="Video_has_been_deleted_successfully" xml:space="preserve">
+    <value>Videoclipul a fost șters cu succes.</value>
+  </data>
+  <data name="Unable_to_load_video" xml:space="preserve">
+    <value>Nu se poate încărca videoclipul.</value>
+  </data>
+  <data name="Video_has_been_updated_successfully" xml:space="preserve">
+    <value>Videoclipul a fost actualizat cu succes.</value>
+  </data>
+  <data name="Unable_to_obtain_sas_token" xml:space="preserve">
+    <value>Nu se poate obține tokenul SAS.</value>
+  </data>
+  <data name="Video_has_been_created_successfully" xml:space="preserve">
+    <value>Videoclipul a fost creat cu succes.</value>
+  </data>
+  <data name="Invalid_video_Id" xml:space="preserve">
+    <value>ID video nevalid.</value>
+  </data>
 </root>
