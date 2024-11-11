@@ -76,6 +76,8 @@ public interface IApplicationDbContext : IDisposable
 
     DbSet<Tenant> Tenants { get; set; }
 
+    public DbSet<Domain.Entities.AccountInfo> AccountInfo { get; set; }
+
     // DbContext-related properties.
     DbContext Current { get; }
 

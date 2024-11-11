@@ -62,6 +62,8 @@ public sealed class ApplicationDbContext : IdentityDbContext<ApplicationUser,
 
     public DbSet<Tenant> Tenants { get; set; }
 
+    public DbSet<Domain.Entities.AccountInfo> AccountInfo { get; set; }
+
     // DbContext-related properties.
     public DbContext Current { get; }
 

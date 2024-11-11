@@ -1,4 +1,6 @@
-﻿namespace OttApiPlatform.WebAPI.Filters;
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace OttApiPlatform.WebAPI.Filters;
 
 /// <summary>
 /// Custom authorization attribute used to check if the current user has permission to access a resource.

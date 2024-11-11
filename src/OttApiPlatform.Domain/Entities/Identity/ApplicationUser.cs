@@ -74,7 +74,7 @@ public class ApplicationUser : IdentityUser, IAuditable, IMayHaveTenant
     /// Gets or sets the claims of the user.
     /// </summary>
     public List<ApplicationUserClaim> Claims { get; set; }
-
+    
     /// <summary>
     /// Gets or sets the logins of the user.
     /// </summary>
@@ -102,6 +102,12 @@ public class ApplicationUser : IdentityUser, IAuditable, IMayHaveTenant
     public string DeletedBy { get; set; }
     public DateTime? DeletedOn { get; set; }
     public Guid? TenantId { get; set; }
+
+    #region Navigational Properties
+
+    public Tenant Tenant { get; set; }
+
+    #endregion
 
     #endregion Public Properties
 }

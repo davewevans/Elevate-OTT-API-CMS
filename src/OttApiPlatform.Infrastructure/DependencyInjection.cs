@@ -1,4 +1,7 @@
+using System.Configuration;
+using Microsoft.Extensions.Logging;
 using OttApiPlatform.Application.Common.Contracts;
+using OttApiPlatform.Infrastructure.Identity.Stores;
 using OttApiPlatform.Infrastructure.Service;
 
 namespace OttApiPlatform.Infrastructure;
@@ -22,6 +25,12 @@ public static class DependencyInjection
     {
         // Add DbContext.
         services.AddDbContext<ApplicationDbContext>();
+
+        // Use ONLY for logging sql queries
+        //services.AddDbContext<ApplicationDbContext>(options =>
+        //    options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"))
+        //        .EnableSensitiveDataLogging()
+        //        .LogTo(Console.WriteLine, LogLevel.Information));
 
         // Add Hangfire.
         services.AddHangfire(globalConfiguration => globalConfiguration
@@ -50,8 +59,8 @@ public static class DependencyInjection
             .AddPasswordValidator<CustomPasswordValidator<ApplicationUser>>()
             .AddUserManager<ApplicationUserManager>()
             .AddRoleManager<ApplicationRoleManager>();
-        //.AddUserStore<CustomUserStore>()
-        //.AddRoleStore<CustomRoleStore>();
+            //.AddUserStore<CustomUserStore>()
+            //.AddRoleStore<CustomRoleStore>();
 
         // Replace default validators with multi-tenant validators.
         services.Replace(ServiceDescriptor.Scoped<IUserValidator<ApplicationUser>, MultiTenantUserValidator>());

@@ -2229,4 +2229,34 @@
   <data name="ExportAsPdfOnDemand" xml:space="preserve">
     <value>立即导出为 PDF</value>
   </data>
+  <data name="User_email_has_been_confirmed_successfully" xml:space="preserve">
+    <value>用户电子邮件已成功确认。</value>
+  </data>
+  <data name="Tenant_creation_failed" xml:space="preserve">
+    <value>租户创建失败。</value>
+  </data>
+  <data name="SubDomain_should_only_contain_alphanumeric_characters_and_hyphens" xml:space="preserve">
+    <value>子域应仅包含字母数字字符和连字符。</value>
+  </data>
+  <data name="Account_info_creation_failed" xml:space="preserve">
+    <value>帐户信息创建失败。</value>
+  </data>
+  <data name="SubDomain" xml:space="preserve">
+    <value>子域</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>公司/组织/频道名称</value>
+  </data>
+  <data name="CompanyName_is_required" xml:space="preserve">
+    <value>Company/Organization/Channel name 是必需的。</value>
+  </data>
+  <data name="Channel_Name" xml:space="preserve">
+    <value>频道名称</value>
+  </data>
+  <data name="Channel_name_required" xml:space="preserve">
+    <value>通道名称是必需的。</value>
+  </data>
+  <data name="Register_button_text" xml:space="preserve">
+    <value>开始免费试用</value>
+  </data>
 </root>

@@ -15,6 +15,8 @@ public partial class ConfirmEmail
     [Inject] private NavigationManager NavigationManager { get; set; }
     [Inject] private ISnackbar Snackbar { get; set; }
     [Inject] private IAccountsClient AccountsClient { get; set; }
+    [Inject] private IAuthenticationService AuthenticationService { get; set; }
+    [Inject] private IReturnUrlProvider ReturnUrlProvider { get; set; }
 
     private ConfirmEmailCommand ConfirmEmailCommand { get; set; } = new();
 
@@ -36,15 +38,21 @@ public partial class ConfirmEmail
 
         var responseWrapper = await AccountsClient.ConfirmEmail(ConfirmEmailCommand);
 
-        if (responseWrapper.IsSuccessStatusCode)
-        {
-            Snackbar.Add(responseWrapper.Payload, Severity.Success);
-            NavigationManager.NavigateTo("account/emailConfirmed");
-        }
-        else
+        if (!responseWrapper.IsSuccessStatusCode)
         {
             SnackbarApiExceptionProvider.ShowErrors(responseWrapper.ApiErrorResponse);
+            return;
         }
+
+        if (responseWrapper.Payload.AuthResponse != null)
+        {
+            await AuthenticationService.Login(responseWrapper.Payload.AuthResponse);
+            NavigationManager.NavigateTo("/");
+            return;
+        }
+
+        Snackbar.Add(responseWrapper.Payload.SuccessMessage, Severity.Success);
+        NavigationManager.NavigateTo("account/emailConfirmed");
     }
 
     #endregion Protected Methods

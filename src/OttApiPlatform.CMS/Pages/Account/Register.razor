@@ -1,50 +1,121 @@
-﻿@layout AccountLayout
+﻿@layout RegistrationLayout
 @page "/account/register"
 
-<EditForm Model="@RegisterCommand" OnValidSubmit="RegisterUser">
-    <EditContextApiExceptionFallback @ref="EditContextApiExceptionFallback" />
-    <FluentValidationValidator />
-    <MudText Typo="Typo.h4" GutterBottom="true">@Resource.Sign_up</MudText>
-    <MudText>
-        @Resource.Already_have_an_account <MudLink Href="/account/login">@Resource.Sign_in</MudLink>
-    </MudText>
+<MudGrid Spacing="0" Class="ma-0">
+    <!-- Image Column - Hidden on xs screens (below sm breakpoint) -->
+    <MudItem xs="12" sm="6" Class="d-none d-sm-flex align-center justify-center" Style="height: 100vh;">
+        <MudImage Src="https://picsum.photos/seed/picsum/400/500"
+                  Alt="Registration image"
+                  Elevation="0"
+                  ObjectFit="ObjectFit.Contain"
+                  Style="width:100%; height:100%;"></MudImage>
+    </MudItem>
 
-    <MudTextField Label="@Resource.Email"
-                  Variant="Variant.Outlined"
-                  @bind-Value="RegisterCommand.Email"
-                  For="@(() => RegisterCommand.Email)" />
+    <!-- Registration Form Column -->
+    <MudItem xs="12" sm="6" Class="pa-8 d-flex align-center justify-center" Style="height: 100vh;">
+        <!-- Centered Form Content -->
+        <MudPaper Class="pa-4" Elevation="2" Style="width: 100%; max-width: 500px;">
+            <MudText Typo="Typo.h4" Align="Align.Center" GutterBottom="true">Start your 30-Day Free Trial!</MudText>
+            <MudText Align="Align.Center" Color="Color.Info" Class="mb-4">No Credit Card Required</MudText>
 
-    <MudTextField Label="@Resource.Password"
-                  Variant="Variant.Outlined"
-                  @bind-Value="RegisterCommand.Password"
-                  For="@(() => RegisterCommand.Password)"
-                  InputType="@PasswordInput"
-                  Adornment="Adornment.End"
-                  AdornmentIcon="@PasswordInputIcon"
-                  OnAdornmentClick="TogglePasswordVisibility" />
+            <EditForm Model="@RegisterCommand" OnValidSubmit="RegisterUser">
+                <EditContextApiExceptionFallback @ref="EditContextApiExceptionFallback"></EditContextApiExceptionFallback>
+                <FluentValidationValidator></FluentValidationValidator>
 
-    <MudTextField Label="@Resource.Confirm_Password"
-                  Variant="Variant.Outlined"
-                  @bind-Value="RegisterCommand.ConfirmPassword"
-                  For="@(() => RegisterCommand.ConfirmPassword)"
-                  InputType="@PasswordInput"
-                  Adornment="Adornment.End"
-                  AdornmentIcon="@PasswordInputIcon"
-                  OnAdornmentClick="TogglePasswordVisibility" />
-    <MudDivider />
-    <MudButton ButtonType="ButtonType.Submit"
-               Style="margin-top:4px"
-               Variant="Variant.Filled"
-               Color="Color.Primary"
-               Size="Size.Large"
-               FullWidth="true">
-        @Resource.Register
-    </MudButton>
-    <MudExpansionPanels>
-        <MudExpansionPanel Text="@Resource.Validation_Summary" IsExpanded="true" Disabled="true" HideIcon="true">
-            <MudText Color="@Color.Error">
-                <ValidationSummary />
-            </MudText>
-        </MudExpansionPanel>
-    </MudExpansionPanels>
-</EditForm>
+                <MudStack Spacing="3">
+                    <MudTextField T="string"
+                                  Label="Full Name" 
+                                  Variant="Variant.Outlined" 
+                                  @bind-Value="RegisterCommand.FullName" 
+                                  For="@(() => RegisterCommand.FullName)" 
+                                  FullWidth="true"></MudTextField>
+                    <MudTextField T="string"
+                                  Label="@Resource.Channel_Name"
+                                  Variant="Variant.Outlined"
+                                  For="@(() => RegisterCommand.ChannelName)"
+                                  FullWidth="true"
+                                  ValueChanged="OnChannelNameChanged">
+                    </MudTextField>
+
+
+                    <MudGrid Spacing="1">
+                        <MudItem xs="3">
+                            <MudSelect T="string"
+                                       Label="Country"
+                                       Variant="Variant.Outlined"
+                                       @bind-Value="SelectedCountryCode"
+                                       FullWidth="true">
+                                @*  <MudSelectItem Value="+1">
+                                <MudStack Row="true" Spacing="1">
+                                    <MudImage Src="_content/YourApp/images/us-flag.png" Height="20" Width="30"></MudImage>
+                                    <MudText>+1</MudText>
+                                </MudStack>
+                            </MudSelectItem> *@
+                                <!-- Add Country Codes Here -->
+                            </MudSelect>
+                        </MudItem>
+                        <MudItem xs="9">
+                            <MudTextField Label="Phone Number" 
+                                          Variant="Variant.Outlined" 
+                                          @bind-Value="RegisterCommand.PhoneNumber" 
+                                          For="@(() => RegisterCommand.PhoneNumber)" 
+                                          FullWidth="true"></MudTextField>
+                        </MudItem>
+                    </MudGrid>
+
+                    <MudTextField Label="Email" 
+                                  HelperText="Use your work email address for best experience" 
+                                  Variant="Variant.Outlined" 
+                                  @bind-Value="RegisterCommand.Email" 
+                                  For="@(() => RegisterCommand.Email)" 
+                                  FullWidth="true"></MudTextField>
+                    <MudTextField Label="Password" 
+                                  Variant="Variant.Outlined" 
+                                  @bind-Value="RegisterCommand.Password" 
+                                  For="@(() => RegisterCommand.Password)" 
+                                  InputType="@PasswordInput" 
+                                  Adornment="Adornment.End" 
+                                  AdornmentIcon="@PasswordInputIcon" 
+                                  OnAdornmentClick="TogglePasswordVisibility" 
+                                  FullWidth="true"></MudTextField>
+
+                    <MudGrid Spacing="0">
+                        <MudItem xs="12">
+                            <MudTextField Label="Domain Name" 
+                                          Variant="Variant.Outlined" 
+                                          @bind-Value="RegisterCommand.SubDomain" 
+                                          For="@(() => RegisterCommand.SubDomain)" 
+                                          FullWidth="true" 
+                                          Adornment="Adornment.End" 
+                                          AdornmentText=".elevateott.com"></MudTextField>
+                        </MudItem>
+                        <MudItem xs="12">
+                            <MudText Typo="Typo.caption" Color="Color.Dark">
+                                Your website will be at https://yourname.elevateott.com, you can change this later.
+                            </MudText>
+                        </MudItem>
+                    </MudGrid>
+
+                    <MudCheckBox @bind-Checked="RegisterCommand.AcceptTerms" 
+                                 Label='@($"I agree to Elevate OTT\'s ")'
+                                 For="@(() => RegisterCommand.AcceptTerms)">
+                        <MudLink Href="/terms" 
+                                 Underline="Underline.Always">Terms</MudLink>
+                        <MudText Inline="true">&</MudText>
+                        <MudLink Href="/privacy" 
+                                 Underline="Underline.Always">Privacy Policy</MudLink>
+                    </MudCheckBox>
+
+                    <MudButton ButtonType="ButtonType.Submit" 
+                               Variant="Variant.Filled" 
+                               Color="Color.Primary" 
+                               Size="Size.Large" 
+                               FullWidth="true" 
+                               Class="mt-4">
+                        @Resource.Register_button_text
+                    </MudButton>
+                </MudStack>
+            </EditForm>
+        </MudPaper>
+    </MudItem>
+</MudGrid>

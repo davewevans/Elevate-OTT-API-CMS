@@ -54,7 +54,7 @@ public interface IAccountsClient
     /// </summary>
     /// <param name="request">The email confirmation details.</param>
     /// <returns>A success message.</returns>
-    Task<ApiResponseWrapper<string>> ConfirmEmail(ConfirmEmailCommand request);
+    Task<ApiResponseWrapper<ConfirmEmailResponse>> ConfirmEmail(ConfirmEmailCommand request);
 
     /// <summary>
     /// Resends the email confirmation email to the user.

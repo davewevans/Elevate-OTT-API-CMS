@@ -19,7 +19,8 @@ public interface INotificationService
     /// <param name="email">The recipient email address.</param>
     /// <param name="subject">The email subject.</param>
     /// <param name="htmlMessage">The HTML body of the email.</param>
-    Task SendEmailAsync(string email, string subject, string htmlMessage);
+    /// <param name="textMessage">The text message of the email.</param>
+    Task SendEmailAsync(string email, string subject, string htmlMessage, string textMessage = "");
 
     #endregion Public Methods
 }

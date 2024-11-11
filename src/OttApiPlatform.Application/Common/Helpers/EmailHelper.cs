@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OttApiPlatform.Application.Common.Helpers
+﻿namespace OttApiPlatform.Application.Common.Helpers
 {
-   public static class EmailHelper
+    public static class EmailHelper
     {
         public static string RemoveNonAlphanumericCharacters(string email)
         {
@@ -14,18 +8,17 @@ namespace OttApiPlatform.Application.Common.Helpers
                 throw new ArgumentException("Email cannot be null or empty", nameof(email));
 
             // Split the email into local part and domain part
-            var emailParts = email.Split('@');
-            if (emailParts.Length != 2)
+            var parts = email.Split('@');
+            if (parts.Length != 2)
                 throw new ArgumentException("Invalid email format", nameof(email));
 
-            var localPart = emailParts[0];
-            var domainPart = emailParts[1];
+            var localPart = parts[0];
 
             // Remove non-alphanumeric characters from the local part
             var cleanedLocalPart = Regex.Replace(localPart, "[^a-zA-Z0-9]", "");
 
             // Return the cleaned email
-            return $"{cleanedLocalPart}@{domainPart}";
+            return $"{ cleanedLocalPart }";
         }
     }
 }

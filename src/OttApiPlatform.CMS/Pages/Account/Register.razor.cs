@@ -1,5 +1,14 @@
 ﻿namespace OttApiPlatform.CMS.Pages.Account;
 
+// TODO check if email is already used
+// TODO add link to log in if user already has an account
+// TODO country flag icons
+// TODO check if channel name is already used
+// TODO add terms and conditions
+// TODO add privacy policy
+// TODO add recaptcha
+// TODO Replace text with Resources for localization
+
 public partial class Register
 {
     #region Private Properties
@@ -15,6 +24,7 @@ public partial class Register
     private InputType PasswordInput { get; set; } = InputType.Password;
     private EditContextApiExceptionFallback EditContextApiExceptionFallback { get; set; }
     private RegisterCommand RegisterCommand { get; } = new();
+    private string SelectedCountryCode { get; set; } = "+1";
 
     #endregion Private Properties
 
@@ -36,8 +46,24 @@ public partial class Register
         }
     }
 
+    private void OnChannelNameChanged(string channelName)
+    {
+        RegisterCommand.ChannelName = channelName;
+
+        // Remove non-alphanumeric characters and spaces
+        var sanitizedChannelName = new string(channelName
+                .Where(char.IsLetterOrDigit)
+                .ToArray())
+                .Replace(" ", "")
+                .ToLower();
+
+        RegisterCommand.SubDomain = sanitizedChannelName;
+    }
+
     private async Task RegisterUser()
     {
+        Console.WriteLine("RegisterUser called");
+
         var responseWrapper = await AccountsClient.Register(RegisterCommand);
 
         if (responseWrapper.IsSuccessStatusCode)
