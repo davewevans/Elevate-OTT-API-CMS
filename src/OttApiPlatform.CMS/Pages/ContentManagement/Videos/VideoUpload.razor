@@ -1,0 +1,66 @@
+
+<div class="d-flex flex-column flex-grow-1 gap-2">
+    <div>
+        <MudPaper @ondragenter="@SetDragClass"
+                @ondragleave="@ClearDragClass"
+                @ondragend="@ClearDragClass"                
+                Outlined="true"
+                Class="@_dragClass">
+            @if (!_clearing)
+            {
+                <InputFile OnChange="OnInputFileChanged" multiple class="absolute mud-width-full mud-height-full overflow-hidden z-2" style="opacity:0;" />
+            }
+            <MudText Align="Align.Center" Typo="Typo.h6">Drag and drop video files here or click</MudText>
+            <div class="d-flex justify-center">
+                <MudIcon Icon="@Icons.Filled.CloudUpload"
+                        Color="Color.Primary"
+                        Style="font-size: 6rem;"
+                        Title="Upload" />
+            </div>
+            @foreach (var file in _filesToUpload)
+            {
+                <MudChip Color="Color.Dark" Text="@file.FileName" />
+            }
+            
+            @if (_showMaxNumberReachedAlert) {
+                <MudAlert Severity="Severity.Warning" 
+                    Variant="Variant.Outlined">Maximum file upload count is @_maximumFileCount</MudAlert>
+            }
+        </MudPaper>
+    </div>
+
+    @if (_filesToUpload?.Count() > 0) {
+        <div class="d-flex flex-column ml-6 gap-2">        
+            @foreach (var file in _filesToUpload)
+            {
+                <div class="d-flex flex-row">                    
+                    @*<MudText Typo="Typo.body1">
+                        @file.FileName
+                    </MudText> *@               
+                 
+                    <MudProgressLinear
+                        Color="Color.Primary"
+                        Striped="false"
+                        Size="Size.Large"
+                        Rounded="true"
+                        Value="@(file.UploadProgress == null ? 0 : file.UploadProgress.Value)"
+                        Class="ml-4 my-2" />
+              
+                   <MudText Class="ml-2" Typo="Typo.body1">
+                        @file.UploadProgressPercent
+                    </MudText>                 
+                </div>
+            }
+        </div>
+    }
+
+    <div class="align-self-center">
+        <MudToolBar DisableGutters="true" Class="gap-4">
+            <MudButton OnClick="UploadAsync" Disabled="@(!_filesToUpload.Any())" Color="Color.Primary" Variant="Variant.Filled">Upload</MudButton>
+            <MudButton OnClick="Clear" Disabled="@(!_filesToUpload.Any())" Color="Color.Secondary" Variant="Variant.Filled">Clear</MudButton>
+            <MudButton OnClick="CancelUpload" Disabled="@(!_uploadInProgress)" Color="Color.Error" Variant="Variant.Filled">Cancel</MudButton>
+        </MudToolBar>
+    </div>  
+</div>
+
+

@@ -2298,4 +2298,217 @@
   <data name="Invalid_video_Id" xml:space="preserve">
     <value>ID vidéo non valide.</value>
   </data>
+  <data name="Slug_helper_text" xml:space="preserve">
+    <value>Le slug sera utilisé dans l’URL. Exemple : « john-doe » en https://example.com/people/john-doe</value>
+  </data>
+  <data name="Add_Author" xml:space="preserve">
+    <value>Ajouter un auteur</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Détails</value>
+  </data>
+  <data name="Author_name_label" xml:space="preserve">
+    <value>Nom de l’auteur</value>
+  </data>
+  <data name="Author_name_description" xml:space="preserve">
+    <value>Entrez le nom de l’auteur.</value>
+  </data>
+  <data name="Author_bio_label" xml:space="preserve">
+    <value>Biographie de l’auteur</value>
+  </data>
+  <data name="Author_bio_description" xml:space="preserve">
+    <value>Fournir une courte biographie de l’auteur.</value>
+  </data>
+  <data name="Author_image_label" xml:space="preserve">
+    <value>Image de l’auteur</value>
+  </data>
+  <data name="Author_image_description" xml:space="preserve">
+    <value>Téléchargez une image représentant l’auteur.</value>
+  </data>
+  <data name="Replace_image" xml:space="preserve">
+    <value>Remplacer l’image</value>
+  </data>
+  <data name="Upload_image" xml:space="preserve">
+    <value>Télécharger l’image</value>
+  </data>
+  <data name="Seo_title_label" xml:space="preserve">
+    <value>Titre SEO</value>
+  </data>
+  <data name="Seo_title_description" xml:space="preserve">
+    <value>Entrez le titre de l’optimisation des moteurs de recherche.</value>
+  </data>
+  <data name="Max" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="Characters" xml:space="preserve">
+    <value>Caractères</value>
+  </data>
+  <data name="Seo_description_label" xml:space="preserve">
+    <value>SEO Description</value>
+  </data>
+  <data name="Seo_description_description" xml:space="preserve">
+    <value>Fournissez une description de l’optimisation des moteurs de recherche.</value>
+  </data>
+  <data name="Slug_label" xml:space="preserve">
+    <value>Limace</value>
+  </data>
+  <data name="Slug_description" xml:space="preserve">
+    <value>Définissez une version du nom adaptée à l’URL.</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Catégories</value>
+  </data>
+  <data name="Authors" xml:space="preserve">
+    <value>Auteurs</value>
+  </data>
+  <data name="Edit_Author" xml:space="preserve">
+    <value>Modifier l’auteur</value>
+  </data>
+  <data name="Video_by_that_name_not_found" xml:space="preserve">
+    <value>Aucune vidéo de ce nom n’a été retrouvée.</value>
+  </data>
+  <data name="Videos" xml:space="preserve">
+    <value>Vidéos</value>
+  </data>
+  <data name="Author_by_that_name_not_found" xml:space="preserve">
+    <value>Aucun auteur de ce nom n’a été trouvé.</value>
+  </data>
+  <data name="Edit_Video" xml:space="preserve">
+    <value>Modifier la vidéo</value>
+  </data>
+  <data name="Add_Category" xml:space="preserve">
+    <value>Ajouter Cétegory</value>
+  </data>
+  <data name="Video_Trailer_Video_Description" xml:space="preserve">
+    <value>Fournissez une description pour la vidéo de la bande-annonce.</value>
+  </data>
+  <data name="Trailer_Video" xml:space="preserve">
+    <value>Bande-annonce Vidéo</value>
+  </data>
+  <data name="Video_Title_Description" xml:space="preserve">
+    <value>Entrez le titre de la vidéo.</value>
+  </data>
+  <data name="Video_Title" xml:space="preserve">
+    <value>Titre de la vidéo</value>
+  </data>
+  <data name="Full_Description" xml:space="preserve">
+    <value>Description complète</value>
+  </data>
+  <data name="Video_Full_Description_Description" xml:space="preserve">
+    <value>Fournissez une description détaillée de la vidéo.</value>
+  </data>
+  <data name="Short_Description" xml:space="preserve">
+    <value>Brève description</value>
+  </data>
+  <data name="Video_Short_Description_Description" xml:space="preserve">
+    <value>Fournissez une brève description de la vidéo.</value>
+  </data>
+  <data name="Video_Categories_Description" xml:space="preserve">
+    <value>Sélectionnez les catégories qui décrivent le mieux la vidéo.</value>
+  </data>
+  <data name="Try_entering_more_letters" xml:space="preserve">
+    <value>Essayez d’entrer plus de lettres.</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Auteur</value>
+  </data>
+  <data name="Video_Author_Description" xml:space="preserve">
+    <value>Sélectionnez ou attribuez un auteur à cette vidéo.</value>
+  </data>
+  <data name="No_authors_found" xml:space="preserve">
+    <value>Aucun auteur n’a été trouvé.</value>
+  </data>
+  <data name="More_authors_found" xml:space="preserve">
+    <value>Plus d’auteurs trouvés.</value>
+  </data>
+  <data name="Downloadable" xml:space="preserve">
+    <value>Téléchargeable</value>
+  </data>
+  <data name="Video_Downloadable_Description" xml:space="preserve">
+    <value>Indiquez si la vidéo peut être téléchargée.</value>
+  </data>
+  <data name="Subtitles" xml:space="preserve">
+    <value>Sous-titres</value>
+  </data>
+  <data name="Video_Subtitles_Description" xml:space="preserve">
+    <value>Fournissez des sous-titres pour la vidéo.</value>
+  </data>
+  <data name="Images_Multimedia" xml:space="preserve">
+    <value>Images et multimédia</value>
+  </data>
+  <data name="Player_Image" xml:space="preserve">
+    <value>Image du joueur</value>
+  </data>
+  <data name="Video_Player_Image_Description" xml:space="preserve">
+    <value>Téléchargez une image pour le lecteur vidéo.</value>
+  </data>
+  <data name="Catalog_Image" xml:space="preserve">
+    <value>Image du catalogue</value>
+  </data>
+  <data name="Video_Catalog_Image_Description" xml:space="preserve">
+    <value>Téléchargez une image pour représenter la vidéo dans les catalogues.</value>
+  </data>
+  <data name="No_videos_found" xml:space="preserve">
+    <value>Aucune vidéo n’a été trouvée.</value>
+  </data>
+  <data name="More_videos_found" xml:space="preserve">
+    <value>Plus de vidéos trouvées.</value>
+  </data>
+  <data name="Featured_Category_Image" xml:space="preserve">
+    <value>Image de catégorie en vedette</value>
+  </data>
+  <data name="Video_Featured_Category_Image_Description" xml:space="preserve">
+    <value>Téléchargez une image pour la catégorie en vedette.</value>
+  </data>
+  <data name="Featured_Category_Video" xml:space="preserve">
+    <value>Catégorie en vedette : Vidéo</value>
+  </data>
+  <data name="Video_Featured_Category_Video_Description" xml:space="preserve">
+    <value>Fournissez des détails sur la vidéo de la catégorie en vedette.</value>
+  </data>
+  <data name="Pricing" xml:space="preserve">
+    <value>Prisée</value>
+  </data>
+  <data name="Content_Access" xml:space="preserve">
+    <value>Accès au contenu</value>
+  </data>
+  <data name="Video_Content_Access_Description" xml:space="preserve">
+    <value>Définissez comment les utilisateurs peuvent accéder à cette vidéo.</value>
+  </data>
+  <data name="Subscription_Plan" xml:space="preserve">
+    <value>Plan d’abonnement</value>
+  </data>
+  <data name="One_time_Purchase_Price" xml:space="preserve">
+    <value>Prix d’achat unique</value>
+  </data>
+  <data name="Video_One_Time_Purchase_Price_Description" xml:space="preserve">
+    <value>Fixez le prix d’un achat unique de cette vidéo.</value>
+  </data>
+  <data name="Rental_Price" xml:space="preserve">
+    <value>Prix de location</value>
+  </data>
+  <data name="Video_Rental_Price_Description" xml:space="preserve">
+    <value>Fixez le prix de location de cette vidéo.</value>
+  </data>
+  <data name="Publication" xml:space="preserve">
+    <value>Publication</value>
+  </data>
+  <data name="Publication_Status" xml:space="preserve">
+    <value>Statut de la publication</value>
+  </data>
+  <data name="Video_Publication_Status_Description" xml:space="preserve">
+    <value>Spécifiez l’état de publication de cette vidéo.</value>
+  </data>
+  <data name="Seo" xml:space="preserve">
+    <value>Référencement</value>
+  </data>
+  <data name="Deleted" xml:space="preserve">
+    <value>Supprimé</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Erreur</value>
+  </data>
+  <data name="Uploaded_On" xml:space="preserve">
+    <value>Téléchargé le</value>
+  </data>
 </root>

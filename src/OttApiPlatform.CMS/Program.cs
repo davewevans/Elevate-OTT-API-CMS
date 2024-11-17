@@ -1,6 +1,16 @@
+using OttApiPlatform.CMS.Hubs;
+using Syncfusion.Blazor;
+using System.Reflection.PortableExecutable;
+
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
 builder.RootComponents.Add<App>("#app");
+
+Syncfusion.Licensing.SyncfusionLicenseProvider
+    .RegisterLicense(builder.Configuration["SyncfusionLicenseKey"]);
+
+// Syncfusion
+builder.Services.AddSyncfusionBlazor();
 
 builder.Services.AddHttpInterceptor(builder);
 
@@ -55,6 +65,18 @@ builder.Services.AddScoped<IReportsClient, ReportsClient>();
 builder.Services.AddScoped<IDashboardClient, DashboardClient>();
 
 builder.Services.AddScoped<IFileUploadClient, FileUploadClient>();
+
+builder.Services.AddScoped<IAuthorsClient, AuthorsClient>();
+
+builder.Services.AddScoped<IVideosClient, VideosClient>();
+
+builder.Services.AddScoped<ICategoriesClient, CategoriesClient>();
+
+builder.Services.AddScoped<VideoHub>();
+
+builder.Services.AddScoped<LiveStreamHub>();
+
+builder.Services.AddScoped<ChatHub>();
 
 builder.Services.AddLocalization();
 

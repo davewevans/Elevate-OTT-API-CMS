@@ -2298,4 +2298,217 @@
   <data name="Invalid_video_Id" xml:space="preserve">
     <value>動画 ID が無効です。</value>
   </data>
+  <data name="Slug_helper_text" xml:space="preserve">
+    <value>スラッグはURLで使用されます。例: https://example.com/people/john-doe の "john-doe"</value>
+  </data>
+  <data name="Add_Author" xml:space="preserve">
+    <value>著者を追加</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>細部</value>
+  </data>
+  <data name="Author_name_label" xml:space="preserve">
+    <value>著者名</value>
+  </data>
+  <data name="Author_name_description" xml:space="preserve">
+    <value>作成者の名前を入力します。</value>
+  </data>
+  <data name="Author_bio_label" xml:space="preserve">
+    <value>著者略歴</value>
+  </data>
+  <data name="Author_bio_description" xml:space="preserve">
+    <value>著者の簡単な伝記を提供してください。</value>
+  </data>
+  <data name="Author_image_label" xml:space="preserve">
+    <value>著者画像</value>
+  </data>
+  <data name="Author_image_description" xml:space="preserve">
+    <value>著者を表す画像をアップロードします。</value>
+  </data>
+  <data name="Replace_image" xml:space="preserve">
+    <value>イメージの置換</value>
+  </data>
+  <data name="Upload_image" xml:space="preserve">
+    <value>画像をアップロード</value>
+  </data>
+  <data name="Seo_title_label" xml:space="preserve">
+    <value>SEOタイトル</value>
+  </data>
+  <data name="Seo_title_description" xml:space="preserve">
+    <value>検索エンジン最適化のタイトルを入力します。</value>
+  </data>
+  <data name="Max" xml:space="preserve">
+    <value>マックス</value>
+  </data>
+  <data name="Characters" xml:space="preserve">
+    <value>文字</value>
+  </data>
+  <data name="Seo_description_label" xml:space="preserve">
+    <value>SEOの説明</value>
+  </data>
+  <data name="Seo_description_description" xml:space="preserve">
+    <value>検索エンジン最適化の説明を入力します。</value>
+  </data>
+  <data name="Slug_label" xml:space="preserve">
+    <value>蛞蝓</value>
+  </data>
+  <data name="Slug_description" xml:space="preserve">
+    <value>名前の URL に適したバージョンを定義します。</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>カテゴリ</value>
+  </data>
+  <data name="Authors" xml:space="preserve">
+    <value>著者</value>
+  </data>
+  <data name="Edit_Author" xml:space="preserve">
+    <value>著者の編集</value>
+  </data>
+  <data name="Video_by_that_name_not_found" xml:space="preserve">
+    <value>その名前のビデオは見つかりませんでした。</value>
+  </data>
+  <data name="Videos" xml:space="preserve">
+    <value>ビデオ</value>
+  </data>
+  <data name="Author_by_that_name_not_found" xml:space="preserve">
+    <value>その名前の著者は見つかりませんでした。</value>
+  </data>
+  <data name="Edit_Video" xml:space="preserve">
+    <value>ビデオの編集</value>
+  </data>
+  <data name="Add_Category" xml:space="preserve">
+    <value>セテゴリーを追加</value>
+  </data>
+  <data name="Video_Trailer_Video_Description" xml:space="preserve">
+    <value>予告編ビデオの説明を入力します。</value>
+  </data>
+  <data name="Trailer_Video" xml:space="preserve">
+    <value>予告編動画</value>
+  </data>
+  <data name="Video_Title_Description" xml:space="preserve">
+    <value>動画のタイトルを入力します。</value>
+  </data>
+  <data name="Video_Title" xml:space="preserve">
+    <value>ビデオタイトル</value>
+  </data>
+  <data name="Full_Description" xml:space="preserve">
+    <value>詳細</value>
+  </data>
+  <data name="Video_Full_Description_Description" xml:space="preserve">
+    <value>ビデオの詳細な説明を入力します。</value>
+  </data>
+  <data name="Short_Description" xml:space="preserve">
+    <value>簡単な説明</value>
+  </data>
+  <data name="Video_Short_Description_Description" xml:space="preserve">
+    <value>ビデオの簡単な説明を入力します。</value>
+  </data>
+  <data name="Video_Categories_Description" xml:space="preserve">
+    <value>動画に最も適したカテゴリを選択します。</value>
+  </data>
+  <data name="Try_entering_more_letters" xml:space="preserve">
+    <value>さらに文字を入力してみてください。</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>著者</value>
+  </data>
+  <data name="Video_Author_Description" xml:space="preserve">
+    <value>このビデオの作成者を選択または割り当てます。</value>
+  </data>
+  <data name="No_authors_found" xml:space="preserve">
+    <value>著者は見つかりませんでした。</value>
+  </data>
+  <data name="More_authors_found" xml:space="preserve">
+    <value>さらに多くの著者が見つかりました。</value>
+  </data>
+  <data name="Downloadable" xml:space="preserve">
+    <value>ダウンロード</value>
+  </data>
+  <data name="Video_Downloadable_Description" xml:space="preserve">
+    <value>ビデオをダウンロードできるかどうかを指定します。</value>
+  </data>
+  <data name="Subtitles" xml:space="preserve">
+    <value>字幕</value>
+  </data>
+  <data name="Video_Subtitles_Description" xml:space="preserve">
+    <value>ビデオに字幕を付けます。</value>
+  </data>
+  <data name="Images_Multimedia" xml:space="preserve">
+    <value>画像&amp;マルチメディア</value>
+  </data>
+  <data name="Player_Image" xml:space="preserve">
+    <value>プレイヤーイメージ</value>
+  </data>
+  <data name="Video_Player_Image_Description" xml:space="preserve">
+    <value>動画プレーヤーの画像をアップロードします。</value>
+  </data>
+  <data name="Catalog_Image" xml:space="preserve">
+    <value>カタログ画像</value>
+  </data>
+  <data name="Video_Catalog_Image_Description" xml:space="preserve">
+    <value>カタログでビデオを表す画像をアップロードします。</value>
+  </data>
+  <data name="No_videos_found" xml:space="preserve">
+    <value>ビデオが見つかりませんでした。</value>
+  </data>
+  <data name="More_videos_found" xml:space="preserve">
+    <value>他のビデオが見つかりました。</value>
+  </data>
+  <data name="Featured_Category_Image" xml:space="preserve">
+    <value>注目のカテゴリ画像</value>
+  </data>
+  <data name="Video_Featured_Category_Image_Description" xml:space="preserve">
+    <value>注目のカテゴリの画像をアップロードします。</value>
+  </data>
+  <data name="Featured_Category_Video" xml:space="preserve">
+    <value>注目のカテゴリー ビデオ</value>
+  </data>
+  <data name="Video_Featured_Category_Video_Description" xml:space="preserve">
+    <value>注目のカテゴリのビデオの詳細を提供します。</value>
+  </data>
+  <data name="Pricing" xml:space="preserve">
+    <value>プライシング</value>
+  </data>
+  <data name="Content_Access" xml:space="preserve">
+    <value>コンテンツアクセス</value>
+  </data>
+  <data name="Video_Content_Access_Description" xml:space="preserve">
+    <value>ユーザーがこのビデオにアクセスする方法を定義します。</value>
+  </data>
+  <data name="Subscription_Plan" xml:space="preserve">
+    <value>サブスクリプションプラン</value>
+  </data>
+  <data name="One_time_Purchase_Price" xml:space="preserve">
+    <value>1回限りの購入価格</value>
+  </data>
+  <data name="Video_One_Time_Purchase_Price_Description" xml:space="preserve">
+    <value>この動画の 1 回限りの購入の価格を設定します。</value>
+  </data>
+  <data name="Rental_Price" xml:space="preserve">
+    <value>レンタル料金</value>
+  </data>
+  <data name="Video_Rental_Price_Description" xml:space="preserve">
+    <value>このビデオをレンタルする価格を設定します。</value>
+  </data>
+  <data name="Publication" xml:space="preserve">
+    <value>出版</value>
+  </data>
+  <data name="Publication_Status" xml:space="preserve">
+    <value>出版状況</value>
+  </data>
+  <data name="Video_Publication_Status_Description" xml:space="preserve">
+    <value>このビデオの公開ステータスを指定します。</value>
+  </data>
+  <data name="Seo" xml:space="preserve">
+    <value>SEO対策</value>
+  </data>
+  <data name="Deleted" xml:space="preserve">
+    <value>削除</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>エラー</value>
+  </data>
+  <data name="Uploaded_On" xml:space="preserve">
+    <value>アップロード日</value>
+  </data>
 </root>

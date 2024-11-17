@@ -1,0 +1,66 @@
+﻿@page "/content/authors"
+@using OttApiPlatform.CMS.Features.ContentManagement.Authors.Queries.GetAuthors
+
+
+
+
+        <MudTable Context="author" 
+                  ServerData="@(new Func<TableState, Task<TableData<AuthorItem>>>(ServerReload))" 
+                  Dense="true" 
+                  Hover="true" 
+                  FixedHeader="true" 
+                  FixedFooter="true"
+                  Striped="true"
+                  @ref="Table">
+            <ToolBarContent>
+                <MudText Typo="Typo.h5" Color="Color.Primary">@Resource.Authors</MudText>
+                <MudSpacer />
+                <MudTextField T="string"
+                              Immediate="true"
+                              ValueChanged="@(FilterAuthors)"
+                              Placeholder="@Resource.Search"
+                              Adornment="Adornment.Start"
+                              AdornmentIcon="@Icons.Material.Filled.Search"
+                              IconSize="Size.Small" Class="mt-0"></MudTextField>
+                <MudFab Style="margin-left: 20px; margin-top: 10px"
+                        Color="Color.Primary"
+                        Size="Size.Small"
+                        Icon="@Icons.Material.Filled.Add" OnClick="AddAuthor" />
+            </ToolBarContent>
+            <HeaderContent>
+                <MudTh></MudTh>
+                <MudTh><MudTableSortLabel SortLabel="Name" T="AuthorItem" InitialDirection="SortDirection.Ascending">@Resource.Name</MudTableSortLabel></MudTh>
+                <MudTh><MudTableSortLabel SortLabel="CreatedOn" T="AuthorItem">@Resource.Created_On</MudTableSortLabel></MudTh>
+                <MudTh>@Resource.Options</MudTh>
+            </HeaderContent>
+            <RowTemplate>
+                <MudTd>
+                    <MudAvatar Image="@author.ImageUrl"
+                               Style="height: 64px; width: 64px;">
+                    </MudAvatar>
+                </MudTd>
+                <MudTd DataLabel="Title">@author.Name</MudTd>
+                <MudTd DataLabel="CreatedOn">@author.CreatedOn.ToShortDateString()</MudTd>
+                <MudTd>
+                    <MudButtonGroup OverrideStyles="false">
+                        <MudButton Variant="Variant.Filled"
+                                   StartIcon="@Icons.Material.Filled.Edit"
+                                   Size="Size.Small"
+                                   Color="Color.Primary"
+                                   OnClick="@(() => EditAuthor(author.Id))">@Resource.Edit</MudButton>
+
+                        <MudButton Variant="Variant.Filled"
+                                   StartIcon="@Icons.Material.Filled.Delete"
+                                   Size="Size.Small"
+                                   Color="Color.Error"
+                                   OnClick="@(() => DeleteAuthor(author.Id))">@Resource.Delete</MudButton>
+                    </MudButtonGroup>
+                </MudTd>
+            </RowTemplate>
+            <PagerContent>
+                <MudTablePager RowsPerPageString="@Resource.Rows_Per_Page" />
+            </PagerContent>
+        </MudTable>
+
+
+<div class="bottom-spacing"></div>

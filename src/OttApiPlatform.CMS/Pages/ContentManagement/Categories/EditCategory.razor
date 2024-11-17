@@ -1,0 +1,249 @@
+﻿@page "/content/category/{categoryId:guid}"
+
+@using Syncfusion.Blazor.RichTextEditor
+
+<h1>@CategoryId</h1>
+
+
+<MudText Typo="Typo.h5" Color="Color.Primary" Class="mb-4">Edit Category</MudText>
+@**@
+<EditForm Model="_updateCategoryCommand" OnValidSubmit="SubmitForm">
+    @**@
+    <FluentValidationValidator />
+    <MudCard>
+        <MudCardContent>
+            <MudTabs KeepPanelsAlive="true"
+                     Elevation="25"
+                     Color="Color.Transparent"
+                     Rounded="true"
+                     PanelClass="mt-6">
+                <MudTabPanel Text="@Resource.Details" Icon="@Icons.Material.Filled.Person">
+
+                    <!--TODO add resources -->
+
+                    <div class="mx-6 my-4">
+                        <!-- Title -->
+                        <MudGrid Justify="Justify.SpaceBetween" Class="mb-10">
+                            <MudItem xs="12" md="4">
+                                <div class="d-flex flex-column">
+                                    <MudText Typo="Typo.h5">Category Title</MudText>
+                                    <MudText Typo="Typo.body2">
+                                        This is the title of your new category and will be visible to your customers in the Catalog.
+                                    </MudText>
+                                </div>
+                            </MudItem>
+
+                            <MudItem xs="12" md="8">
+                                <MudTextField Label="Category Title" 
+                                              Variant="Variant.Outlined" 
+                                              Class="pl-md-12"
+                                              MaxLength="@_maxNameChars"
+                                              Counter="0"
+                                              Immediate="true"
+                                              @bind-Value="_updateCategoryCommand.Title" 
+                                              For="@(() => _updateCategoryCommand.Title)"/>
+                            </MudItem>
+                        </MudGrid>
+
+                        <!-- Description -->
+                        <MudGrid Justify="Justify.SpaceBetween" Class="mb-10">
+                            <MudItem xs="12" md="4">
+                                <div class="d-flex flex-column">
+                                    <MudText Typo="Typo.h5">Category Description</MudText>
+                                    <MudText Typo="Typo.body2">
+                                        This will appear on the Category page in the Catalog. Use it to help your users find exactly what they’re looking for.
+                                    </MudText>
+                                </div>
+                            </MudItem>
+
+                            <MudItem xs="12" md="8">
+
+                                <!--TODO set bootstrap primary color -->
+                                <!-- the  add link feature in rte uses bootstrap-->
+
+                                <div class="pl-md-12">
+                                    <RichTextEditor RteValue="@_updateCategoryCommand.Description" OnValueChangedCallback="@UpdateRteValue"/>
+                                </div>
+
+                            </MudItem>
+                        </MudGrid>
+                        
+                        <!-- Position -->
+                        <MudGrid Justify="Justify.SpaceBetween" Class="mb-10">
+                            <MudItem xs="12" md="4">
+                                <div class="d-flex flex-column">
+                                    <MudText Typo="Typo.h5">Positoion</MudText>
+                                    <MudText Typo="Typo.body2">
+                                        Pick a position for this category in the catalog. The position number will affect the order of the category listed on the page, starting at 1.
+                                    </MudText>
+                                </div>
+                            </MudItem>
+
+                            <MudItem xs="12" md="8">
+                                <div class="pl-md-12">
+                                    <MudNumericField @bind-Value="_updateCategoryCommand.Position" 
+                                                     Label="Outlined" 
+                                                     Variant="Variant.Outlined" 
+                                                     Step="1" 
+                                                     Min="1" 
+                                                     Max="100000" />
+                                </div>
+
+                            </MudItem>
+                        </MudGrid>
+
+                        <!-- Image Upload -->
+                        <MudGrid Justify="Justify.SpaceBetween" Class="mb-10">
+                            <MudItem xs="12" md="4">
+                                <div class="d-flex flex-column">
+                                    <MudText Typo="Typo.h5">Category Image</MudText>
+                                    <MudText Typo="Typo.body2">
+                                        Upload an image you want displayed on the Category page in the Catalog. Tip: choose an image that best represents the category. Recommended resolution: 1480x840px <span class="semi-bold-text">@_recommendedResolution</span>
+                                    </MudText>
+                                </div>
+                            </MudItem>
+
+                            <MudItem xs="12" md="8">
+                                <div class="pl-md-12">
+                                    <MudCard Elevation="25">
+                                        <MudCardContent>
+                                            @if (!string.IsNullOrWhiteSpace(_categoryImageSrc))
+                                            {
+                                                <MudPaper Class="pa-2" Outlined="true">
+                                                      <div class="d-flex flex-column justify-center align-center gap-6">
+                                                           <MudImage Src="@_categoryImageSrc"
+                                                                  Style="height: 200px; width: 200px;"
+                                                                  Alt="Category Image"/>
+                                                            
+                                                            <MudButton Variant="Variant.Filled" 
+                                                                StartIcon="@Icons.Material.Filled.Delete" 
+                                                                Color="Color.Error" 
+                                                                OnClick="RemoveCategoryImage">Remove Image
+                                                            </MudButton>
+                                                      </div>
+                                                </MudPaper>
+                                            }
+                                        </MudCardContent>
+                                        <MudCardActions Class="d-flex justify-center">
+                                            <div class="form-group">
+                                                <BpUploadFile ButtonId="imageInput"
+                                                              ButtonIcon="@Icons.Filled.PhotoCamera"
+                                                              ButtonName="@(HasUploadedImage() ? Resource.Replace_image : Resource.Upload_image)"
+                                                              AllowRename="false"
+                                                              AllowedExtensions=".jpg,.png,.jpeg,.bmp"
+                                                              MaxFileSize="10485760"
+                                                              OnFileSelected="ImageSelected"
+                                                              OnFileUnSelected="ImageUnSelected"
+                                                              OnImageUpload="GetBase64StringImageUrl"/>
+                                                <ValidationMessage For="@(() => _updateCategoryCommand.ImageUrl)"/>
+                                            </div>
+                                        </MudCardActions>
+                                    </MudCard>
+                                </div>
+                            </MudItem>
+                        </MudGrid>
+                    </div>
+                </MudTabPanel>
+
+                <MudTabPanel Text="@Resource.Seo" Icon="@Icons.Material.Filled.Public">
+                    <MudCard Elevation="25">
+                        <MudCardContent>
+                            <div class="mx-6 my-4">
+                                <!-- SEO Title -->
+                                <MudGrid Justify="Justify.SpaceBetween" Class="mb-10">
+                                    <MudItem xs="12" md="4">
+                                        <div class="d-flex flex-column">
+                                            <MudText Typo="Typo.h5">@Resource.Seo_title_label</MudText>
+                                            <MudText Typo="Typo.body2">
+                                                @Resource.Seo_title_description
+                                            </MudText>
+                                        </div>
+                                    </MudItem>
+
+                                    <MudItem xs="12" md="8">
+                                        <MudTextField Label="@Resource.Seo_title_label"
+                                                      Variant="Variant.Outlined"
+                                                      Class="pl-md-12"
+                                                      MaxLength="@_maxSeoTitleChars"
+                                                      Counter="0"
+                                                      Immediate="true"
+                                                      HelperText="@($"{Resource.Max} {_maxSeoTitleChars} {Resource.Characters}")"
+                                                      @bind-Value="_updateCategoryCommand.SeoTitle" 
+                                                      For="@(() => _updateCategoryCommand.SeoTitle)"/>
+                                    </MudItem>
+                                </MudGrid>
+
+                                <!-- SEO Description -->
+                                <MudGrid Justify="Justify.SpaceBetween" Class="mb-10">
+                                    <MudItem xs="12" md="4">
+                                        <div class="d-flex flex-column">
+                                            <MudText Typo="Typo.h5">@Resource.Seo_description_label</MudText>
+                                            <MudText Typo="Typo.body2">
+                                                @Resource.Seo_description_description
+                                            </MudText>
+                                        </div>
+                                    </MudItem>
+
+                                    <MudItem xs="12" md="8">
+                                        <MudTextField Label="@Resource.Seo_description_label" 
+                                                      Variant="Variant.Outlined" 
+                                                      Class="pl-md-12"
+                                                      MaxLength="@_maxSeoDescriptionChars"
+                                                      Counter="0"
+                                                      Immediate="true"
+                                                      HelperText="@($"{Resource.Max} {_maxSeoDescriptionChars} {Resource.Characters}")"
+                                                      @bind-Value="_updateCategoryCommand.SeoDescription" 
+                                                      For="@(() => _updateCategoryCommand.SeoDescription)"/>
+                                    </MudItem>
+                                </MudGrid>
+
+                                <!-- Slug -->
+                                <MudGrid Justify="Justify.SpaceBetween" Class="mb-10">
+                                    <MudItem xs="12" md="4">
+                                        <div class="d-flex flex-column">
+                                            <MudText Typo="Typo.h5">@Resource.Slug_label</MudText>
+                                            <MudText Typo="Typo.body2">
+                                                @Resource.Slug_description<span class="semi-bold-text">@_slugExampleName</span>
+                                            </MudText>
+                                        </div>
+                                    </MudItem>
+
+                                    <MudItem xs="12" md="8">
+                                        <MudTextField Label="@Resource.Slug_label"
+                                                      Variant="Variant.Outlined"
+                                                      Class="pl-md-12"
+                                                      MaxLength="@_maxSlugChars"
+                                                      Counter="0"
+                                                      Immediate="true"
+                                                      HelperText="@($"{Resource.Slug_helper_text} {Resource.Max} {_maxSlugChars} {Resource.Characters}")"
+                                                      Placeholder="@SlugPlaceholder"
+                                                      @bind-Value="_updateCategoryCommand.Slug" 
+                                                      For="@(() => _updateCategoryCommand.Slug)"/>
+                                    </MudItem>
+                                </MudGrid>
+                            </div>
+                        </MudCardContent>
+                    </MudCard>
+                </MudTabPanel>
+            </MudTabs>
+        </MudCardContent>
+        <MudCardActions Class="pb-4 pl-4">
+            <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto"
+                       FullWidth="true">@Resource.Save</MudButton>
+        </MudCardActions>
+        <MudDivider />
+        <MudExpansionPanels>
+            <MudExpansionPanel Text="@Resource.Validation_Summary" IsExpanded="true" Disabled="true" HideIcon="true">
+                <MudText Color="@Color.Error">
+                    <ValidationSummary />
+                </MudText>
+            </MudExpansionPanel>
+        </MudExpansionPanels>
+    </MudCard>
+</EditForm>
+
+<div class="bottom-spacing"></div>
+
+@code {
+
+}
