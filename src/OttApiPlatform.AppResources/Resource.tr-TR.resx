@@ -2298,4 +2298,217 @@
   <data name="Invalid_video_Id" xml:space="preserve">
     <value>Geçersiz video kimliği.</value>
   </data>
+  <data name="Slug_helper_text" xml:space="preserve">
+    <value>Bilgi, URL'de kullanılacaktır. Örnek: https://example.com/people/john-doe'da "john-doe"</value>
+  </data>
+  <data name="Add_Author" xml:space="preserve">
+    <value>Yazar Ekle</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Şey</value>
+  </data>
+  <data name="Author_name_label" xml:space="preserve">
+    <value>Yazar Adı</value>
+  </data>
+  <data name="Author_name_description" xml:space="preserve">
+    <value>Yazarın adını girin.</value>
+  </data>
+  <data name="Author_bio_label" xml:space="preserve">
+    <value>Yazar Biyografisi</value>
+  </data>
+  <data name="Author_bio_description" xml:space="preserve">
+    <value>Yazarın kısa bir biyografisini sağlayın.</value>
+  </data>
+  <data name="Author_image_label" xml:space="preserve">
+    <value>Yazar resmi</value>
+  </data>
+  <data name="Author_image_description" xml:space="preserve">
+    <value>Yazarı temsil eden bir resim yükleyin.</value>
+  </data>
+  <data name="Replace_image" xml:space="preserve">
+    <value>Resmi Değiştir</value>
+  </data>
+  <data name="Upload_image" xml:space="preserve">
+    <value>Resim Yükle</value>
+  </data>
+  <data name="Seo_title_label" xml:space="preserve">
+    <value>SEO Başlığı</value>
+  </data>
+  <data name="Seo_title_description" xml:space="preserve">
+    <value>Arama motoru optimizasyonu için başlığı girin.</value>
+  </data>
+  <data name="Max" xml:space="preserve">
+    <value>Max</value>
+  </data>
+  <data name="Characters" xml:space="preserve">
+    <value>Karakter</value>
+  </data>
+  <data name="Seo_description_label" xml:space="preserve">
+    <value>SEO Açıklaması</value>
+  </data>
+  <data name="Seo_description_description" xml:space="preserve">
+    <value>Arama motoru optimizasyonu için bir açıklama sağlayın.</value>
+  </data>
+  <data name="Slug_label" xml:space="preserve">
+    <value>Sümüklüböcek</value>
+  </data>
+  <data name="Slug_description" xml:space="preserve">
+    <value>Adın URL dostu bir sürümünü tanımlayın.</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Kategori</value>
+  </data>
+  <data name="Authors" xml:space="preserve">
+    <value>Yazar</value>
+  </data>
+  <data name="Edit_Author" xml:space="preserve">
+    <value>Yazarı Düzenle</value>
+  </data>
+  <data name="Video_by_that_name_not_found" xml:space="preserve">
+    <value>Bu isimde bir video bulunamadı.</value>
+  </data>
+  <data name="Videos" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="Author_by_that_name_not_found" xml:space="preserve">
+    <value>Bu isimde bir yazar bulunamadı.</value>
+  </data>
+  <data name="Edit_Video" xml:space="preserve">
+    <value>Videoyu düzenle</value>
+  </data>
+  <data name="Add_Category" xml:space="preserve">
+    <value>Cetegory ekle</value>
+  </data>
+  <data name="Video_Trailer_Video_Description" xml:space="preserve">
+    <value>Fragman videosu için bir açıklama sağlayın.</value>
+  </data>
+  <data name="Trailer_Video" xml:space="preserve">
+    <value>Fragman Videosu</value>
+  </data>
+  <data name="Video_Title_Description" xml:space="preserve">
+    <value>Videonun başlığını girin.</value>
+  </data>
+  <data name="Video_Title" xml:space="preserve">
+    <value>Video Başlığı</value>
+  </data>
+  <data name="Full_Description" xml:space="preserve">
+    <value>Tam Açıklama</value>
+  </data>
+  <data name="Video_Full_Description_Description" xml:space="preserve">
+    <value>Videonun ayrıntılı bir açıklamasını sağlayın.</value>
+  </data>
+  <data name="Short_Description" xml:space="preserve">
+    <value>Kısa Açıklama</value>
+  </data>
+  <data name="Video_Short_Description_Description" xml:space="preserve">
+    <value>Videonun kısa bir açıklamasını sağlayın.</value>
+  </data>
+  <data name="Video_Categories_Description" xml:space="preserve">
+    <value>Videoyu en iyi tanımlayan kategorileri seçin.</value>
+  </data>
+  <data name="Try_entering_more_letters" xml:space="preserve">
+    <value>Daha fazla harf girmeyi deneyin.</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Yaratıcı</value>
+  </data>
+  <data name="Video_Author_Description" xml:space="preserve">
+    <value>Bu video için bir yazar seçin veya atayın.</value>
+  </data>
+  <data name="No_authors_found" xml:space="preserve">
+    <value>Yazar bulunamadı.</value>
+  </data>
+  <data name="More_authors_found" xml:space="preserve">
+    <value>Daha fazla yazar bulundu.</value>
+  </data>
+  <data name="Downloadable" xml:space="preserve">
+    <value>Indirilebilir</value>
+  </data>
+  <data name="Video_Downloadable_Description" xml:space="preserve">
+    <value>Videonun indirilip indirilemeyeceğini belirtin.</value>
+  </data>
+  <data name="Subtitles" xml:space="preserve">
+    <value>Altyazı</value>
+  </data>
+  <data name="Video_Subtitles_Description" xml:space="preserve">
+    <value>Video için altyazı sağlayın.</value>
+  </data>
+  <data name="Images_Multimedia" xml:space="preserve">
+    <value>Görüntüler ve Multimedya</value>
+  </data>
+  <data name="Player_Image" xml:space="preserve">
+    <value>Oyuncu Görüntüsü</value>
+  </data>
+  <data name="Video_Player_Image_Description" xml:space="preserve">
+    <value>Video oynatıcı için bir resim yükleyin.</value>
+  </data>
+  <data name="Catalog_Image" xml:space="preserve">
+    <value>Katalog Görseli</value>
+  </data>
+  <data name="Video_Catalog_Image_Description" xml:space="preserve">
+    <value>Videoyu kataloglarda temsil edecek bir resim yükleyin.</value>
+  </data>
+  <data name="No_videos_found" xml:space="preserve">
+    <value>Video bulunamadı.</value>
+  </data>
+  <data name="More_videos_found" xml:space="preserve">
+    <value>Daha fazla video bulundu.</value>
+  </data>
+  <data name="Featured_Category_Image" xml:space="preserve">
+    <value>Öne Çıkan Kategori Resmi</value>
+  </data>
+  <data name="Video_Featured_Category_Image_Description" xml:space="preserve">
+    <value>Öne çıkan kategori için bir resim yükleyin.</value>
+  </data>
+  <data name="Featured_Category_Video" xml:space="preserve">
+    <value>Öne Çıkan Kategori Videosu</value>
+  </data>
+  <data name="Video_Featured_Category_Video_Description" xml:space="preserve">
+    <value>Öne çıkan kategori videosu hakkında ayrıntılı bilgi verin.</value>
+  </data>
+  <data name="Pricing" xml:space="preserve">
+    <value>Fiyatlandırma</value>
+  </data>
+  <data name="Content_Access" xml:space="preserve">
+    <value>İçerik Erişimi</value>
+  </data>
+  <data name="Video_Content_Access_Description" xml:space="preserve">
+    <value>Kullanıcıların bu videoya nasıl erişebileceğini tanımlayın.</value>
+  </data>
+  <data name="Subscription_Plan" xml:space="preserve">
+    <value>Abonelik Planı</value>
+  </data>
+  <data name="One_time_Purchase_Price" xml:space="preserve">
+    <value>Tek Seferlik Satın Alma Fiyatı</value>
+  </data>
+  <data name="Video_One_Time_Purchase_Price_Description" xml:space="preserve">
+    <value>Bu videonun tek seferlik satın alınması için fiyatı belirleyin.</value>
+  </data>
+  <data name="Rental_Price" xml:space="preserve">
+    <value>Kiralama Fiyatı</value>
+  </data>
+  <data name="Video_Rental_Price_Description" xml:space="preserve">
+    <value>Bu videoyu kiralamak için fiyatı belirleyin.</value>
+  </data>
+  <data name="Publication" xml:space="preserve">
+    <value>Yayın</value>
+  </data>
+  <data name="Publication_Status" xml:space="preserve">
+    <value>Yayın Durumu</value>
+  </data>
+  <data name="Video_Publication_Status_Description" xml:space="preserve">
+    <value>Bu videonun yayınlanma durumunu belirtin.</value>
+  </data>
+  <data name="Seo" xml:space="preserve">
+    <value>SEO Programlama Yolları</value>
+  </data>
+  <data name="Deleted" xml:space="preserve">
+    <value>Silin</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Hata</value>
+  </data>
+  <data name="Uploaded_On" xml:space="preserve">
+    <value>Yüklendi</value>
+  </data>
 </root>

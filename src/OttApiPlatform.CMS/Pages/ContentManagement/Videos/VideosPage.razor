@@ -1,0 +1,6 @@
+@page "/content/videos"
+
+<div class="d-flex flex-column gap-6 mb-12">
+    <VideoUpload OnVideoUploadComplete="VideoUploadCompleteHandler"/>
+    <VideoList @ref="videoListChild" />
+</div>

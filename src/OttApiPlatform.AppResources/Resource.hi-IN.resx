@@ -2298,4 +2298,217 @@
   <data name="Invalid_video_Id" xml:space="preserve">
     <value>अमान्य वीडियो आईडी.</value>
   </data>
+  <data name="Slug_helper_text" xml:space="preserve">
+    <value>URL में स्लग का उपयोग किया जाएगा। उदाहरण: https://example.com/people/john-doe में "जॉन-डो"</value>
+  </data>
+  <data name="Add_Author" xml:space="preserve">
+    <value>लेखक जोड़ें</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>ब्यौरा</value>
+  </data>
+  <data name="Author_name_label" xml:space="preserve">
+    <value>लेखक का नाम</value>
+  </data>
+  <data name="Author_name_description" xml:space="preserve">
+    <value>लेखक का नाम दर्ज करें.</value>
+  </data>
+  <data name="Author_bio_label" xml:space="preserve">
+    <value>लेखक जैव</value>
+  </data>
+  <data name="Author_bio_description" xml:space="preserve">
+    <value>लेखक की एक संक्षिप्त जीवनी प्रदान करें।</value>
+  </data>
+  <data name="Author_image_label" xml:space="preserve">
+    <value>लेखक छवि</value>
+  </data>
+  <data name="Author_image_description" xml:space="preserve">
+    <value>लेखक का प्रतिनिधित्व करने वाली एक छवि अपलोड करें।</value>
+  </data>
+  <data name="Replace_image" xml:space="preserve">
+    <value>छवि बदलें</value>
+  </data>
+  <data name="Upload_image" xml:space="preserve">
+    <value>छवि अपलोड करें</value>
+  </data>
+  <data name="Seo_title_label" xml:space="preserve">
+    <value>एसईओ शीर्षक</value>
+  </data>
+  <data name="Seo_title_description" xml:space="preserve">
+    <value>खोज इंजन अनुकूलन के लिए शीर्षक दर्ज करें।</value>
+  </data>
+  <data name="Max" xml:space="preserve">
+    <value>अधिकतम</value>
+  </data>
+  <data name="Characters" xml:space="preserve">
+    <value>वर्ण</value>
+  </data>
+  <data name="Seo_description_label" xml:space="preserve">
+    <value>एसईओ विवरण</value>
+  </data>
+  <data name="Seo_description_description" xml:space="preserve">
+    <value>खोज इंजन अनुकूलन के लिए एक विवरण प्रदान करें।</value>
+  </data>
+  <data name="Slug_label" xml:space="preserve">
+    <value>अलसाना</value>
+  </data>
+  <data name="Slug_description" xml:space="preserve">
+    <value>नाम का URL-अनुकूल वर्शन निर्धारित करें.</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>श्रेणियाँ</value>
+  </data>
+  <data name="Authors" xml:space="preserve">
+    <value>लेखकों</value>
+  </data>
+  <data name="Edit_Author" xml:space="preserve">
+    <value>लेखक संपादित करें</value>
+  </data>
+  <data name="Video_by_that_name_not_found" xml:space="preserve">
+    <value>इस नाम का कोई वीडियो नहीं मिला।</value>
+  </data>
+  <data name="Videos" xml:space="preserve">
+    <value>वीडियो</value>
+  </data>
+  <data name="Author_by_that_name_not_found" xml:space="preserve">
+    <value>इस नाम का कोई लेखक नहीं मिला।</value>
+  </data>
+  <data name="Edit_Video" xml:space="preserve">
+    <value>वीडियो संपादित करें</value>
+  </data>
+  <data name="Add_Category" xml:space="preserve">
+    <value>Cetegory जोड़ें</value>
+  </data>
+  <data name="Video_Trailer_Video_Description" xml:space="preserve">
+    <value>ट्रेलर वीडियो के लिए विवरण प्रदान करें।</value>
+  </data>
+  <data name="Trailer_Video" xml:space="preserve">
+    <value>ट्रेलर वीडियो</value>
+  </data>
+  <data name="Video_Title_Description" xml:space="preserve">
+    <value>वीडियो का शीर्षक डालें.</value>
+  </data>
+  <data name="Video_Title" xml:space="preserve">
+    <value>वीडियो शीर्षक</value>
+  </data>
+  <data name="Full_Description" xml:space="preserve">
+    <value>पूर्ण विवरण</value>
+  </data>
+  <data name="Video_Full_Description_Description" xml:space="preserve">
+    <value>वीडियो का विस्तृत विवरण प्रदान करें।</value>
+  </data>
+  <data name="Short_Description" xml:space="preserve">
+    <value>संक्षिप्त विवरण</value>
+  </data>
+  <data name="Video_Short_Description_Description" xml:space="preserve">
+    <value>वीडियो का संक्षिप्त विवरण प्रदान करें।</value>
+  </data>
+  <data name="Video_Categories_Description" xml:space="preserve">
+    <value>ऐसी श्रेणियां चुनें जो वीडियो का सबसे अच्छा वर्णन करती हैं.</value>
+  </data>
+  <data name="Try_entering_more_letters" xml:space="preserve">
+    <value>अधिक अक्षर दर्ज करने का प्रयास करें।</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>रचयिता</value>
+  </data>
+  <data name="Video_Author_Description" xml:space="preserve">
+    <value>इस वीडियो के लिए किसी लेखक का चयन करें या असाइन करें.</value>
+  </data>
+  <data name="No_authors_found" xml:space="preserve">
+    <value>कोई लेखक नहीं मिला।</value>
+  </data>
+  <data name="More_authors_found" xml:space="preserve">
+    <value>अधिक लेखक मिले।</value>
+  </data>
+  <data name="Downloadable" xml:space="preserve">
+    <value>डाउनलोड</value>
+  </data>
+  <data name="Video_Downloadable_Description" xml:space="preserve">
+    <value>निर्दिष्ट करें कि वीडियो डाउनलोड किया जा सकता है या नहीं।</value>
+  </data>
+  <data name="Subtitles" xml:space="preserve">
+    <value>उपशीर्षक</value>
+  </data>
+  <data name="Video_Subtitles_Description" xml:space="preserve">
+    <value>वीडियो के लिए उपशीर्षक प्रदान करें।</value>
+  </data>
+  <data name="Images_Multimedia" xml:space="preserve">
+    <value>छवियाँ और मल्टीमीडिया</value>
+  </data>
+  <data name="Player_Image" xml:space="preserve">
+    <value>खिलाड़ी की छवि</value>
+  </data>
+  <data name="Video_Player_Image_Description" xml:space="preserve">
+    <value>वीडियो प्लेयर के लिए एक छवि अपलोड करें।</value>
+  </data>
+  <data name="Catalog_Image" xml:space="preserve">
+    <value>कॅटलॉग प्रतिमा</value>
+  </data>
+  <data name="Video_Catalog_Image_Description" xml:space="preserve">
+    <value>कैटलॉग में वीडियो दिखाने के लिए एक छवि अपलोड करें।</value>
+  </data>
+  <data name="No_videos_found" xml:space="preserve">
+    <value>कोई वीडियो नहीं मिला.</value>
+  </data>
+  <data name="More_videos_found" xml:space="preserve">
+    <value>अधिक वीडियो मिले।</value>
+  </data>
+  <data name="Featured_Category_Image" xml:space="preserve">
+    <value>विशेष रुप से प्रदर्शित श्रेणी छवि</value>
+  </data>
+  <data name="Video_Featured_Category_Image_Description" xml:space="preserve">
+    <value>विशेष रुप से प्रदर्शित श्रेणी के लिए एक छवि अपलोड करें।</value>
+  </data>
+  <data name="Featured_Category_Video" xml:space="preserve">
+    <value>विशेष रुप से प्रदर्शित श्रेणी वीडियो</value>
+  </data>
+  <data name="Video_Featured_Category_Video_Description" xml:space="preserve">
+    <value>विशेष रुप से प्रदर्शित श्रेणी के वीडियो के बारे में विवरण प्रदान करें।</value>
+  </data>
+  <data name="Pricing" xml:space="preserve">
+    <value>मूल्य निर्धारण</value>
+  </data>
+  <data name="Content_Access" xml:space="preserve">
+    <value>सामग्री का उपयोग</value>
+  </data>
+  <data name="Video_Content_Access_Description" xml:space="preserve">
+    <value>परिभाषित करें कि उपयोगकर्ता इस वीडियो तक कैसे पहुँच सकते हैं.</value>
+  </data>
+  <data name="Subscription_Plan" xml:space="preserve">
+    <value>सदस्यता योजना</value>
+  </data>
+  <data name="One_time_Purchase_Price" xml:space="preserve">
+    <value>एकमुश्त खरीद मूल्य</value>
+  </data>
+  <data name="Video_One_Time_Purchase_Price_Description" xml:space="preserve">
+    <value>इस वीडियो की एकमुश्त खरीदारी का मूल्य निर्धारित करें।</value>
+  </data>
+  <data name="Rental_Price" xml:space="preserve">
+    <value>किराये की कीमत</value>
+  </data>
+  <data name="Video_Rental_Price_Description" xml:space="preserve">
+    <value>इस वीडियो को किराए पर लेने की कीमत सेट करें।</value>
+  </data>
+  <data name="Publication" xml:space="preserve">
+    <value>प्रकाशन</value>
+  </data>
+  <data name="Publication_Status" xml:space="preserve">
+    <value>प्रकाशन की स्थिति</value>
+  </data>
+  <data name="Video_Publication_Status_Description" xml:space="preserve">
+    <value>इस वीडियो के प्रकाशन की स्थिति निर्दिष्ट करें.</value>
+  </data>
+  <data name="Seo" xml:space="preserve">
+    <value>एसईओ</value>
+  </data>
+  <data name="Deleted" xml:space="preserve">
+    <value>हटाए गए</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>चूक</value>
+  </data>
+  <data name="Uploaded_On" xml:space="preserve">
+    <value>अपलोड किया गया</value>
+  </data>
 </root>

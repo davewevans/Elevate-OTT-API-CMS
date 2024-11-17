@@ -2298,4 +2298,217 @@
   <data name="Invalid_video_Id" xml:space="preserve">
     <value>معرف الفيديو غير صالح.</value>
   </data>
+  <data name="Slug_helper_text" xml:space="preserve">
+    <value>سيتم استخدام سبيكة في عنوان URL. مثال: "john-doe" في https://example.com/people/john-doe</value>
+  </data>
+  <data name="Add_Author" xml:space="preserve">
+    <value>إضافة مؤلف</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>التفاصيل</value>
+  </data>
+  <data name="Author_name_label" xml:space="preserve">
+    <value>اسم المؤلف</value>
+  </data>
+  <data name="Author_name_description" xml:space="preserve">
+    <value>أدخل اسم المؤلف.</value>
+  </data>
+  <data name="Author_bio_label" xml:space="preserve">
+    <value>كاتب السيرة الذاتية</value>
+  </data>
+  <data name="Author_bio_description" xml:space="preserve">
+    <value>تقديم سيرة ذاتية قصيرة للمؤلف.</value>
+  </data>
+  <data name="Author_image_label" xml:space="preserve">
+    <value>صورة المؤلف</value>
+  </data>
+  <data name="Author_image_description" xml:space="preserve">
+    <value>قم بتحميل صورة تمثل المؤلف.</value>
+  </data>
+  <data name="Replace_image" xml:space="preserve">
+    <value>استبدال الصورة</value>
+  </data>
+  <data name="Upload_image" xml:space="preserve">
+    <value>تحميل الصورة</value>
+  </data>
+  <data name="Seo_title_label" xml:space="preserve">
+    <value>عنوان سيو</value>
+  </data>
+  <data name="Seo_title_description" xml:space="preserve">
+    <value>أدخل عنوان تحسين محرك البحث.</value>
+  </data>
+  <data name="Max" xml:space="preserve">
+    <value>ماكس</value>
+  </data>
+  <data name="Characters" xml:space="preserve">
+    <value>الاحرف</value>
+  </data>
+  <data name="Seo_description_label" xml:space="preserve">
+    <value>وصف سيو</value>
+  </data>
+  <data name="Seo_description_description" xml:space="preserve">
+    <value>قدم وصفا لتحسين محرك البحث.</value>
+  </data>
+  <data name="Slug_label" xml:space="preserve">
+    <value>سبيكه</value>
+  </data>
+  <data name="Slug_description" xml:space="preserve">
+    <value>حدد نسخة مناسبة لعنوان URL من الاسم.</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>فئات</value>
+  </data>
+  <data name="Authors" xml:space="preserve">
+    <value>المؤلف</value>
+  </data>
+  <data name="Edit_Author" xml:space="preserve">
+    <value>تحرير المؤلف</value>
+  </data>
+  <data name="Video_by_that_name_not_found" xml:space="preserve">
+    <value>لم يتم العثور على فيديو بهذا الاسم.</value>
+  </data>
+  <data name="Videos" xml:space="preserve">
+    <value>الفيديوات</value>
+  </data>
+  <data name="Author_by_that_name_not_found" xml:space="preserve">
+    <value>لم يتم العثور على مؤلف بهذا الاسم.</value>
+  </data>
+  <data name="Edit_Video" xml:space="preserve">
+    <value>تحرير الفيديو</value>
+  </data>
+  <data name="Add_Category" xml:space="preserve">
+    <value>إضافة سيتيغوري</value>
+  </data>
+  <data name="Video_Trailer_Video_Description" xml:space="preserve">
+    <value>قدم وصفا للفيديو الدعائي.</value>
+  </data>
+  <data name="Trailer_Video" xml:space="preserve">
+    <value>فيديو مقطورة</value>
+  </data>
+  <data name="Video_Title_Description" xml:space="preserve">
+    <value>أدخل عنوان الفيديو.</value>
+  </data>
+  <data name="Video_Title" xml:space="preserve">
+    <value>عنوان الفيديو</value>
+  </data>
+  <data name="Full_Description" xml:space="preserve">
+    <value>الوصف الكامل</value>
+  </data>
+  <data name="Video_Full_Description_Description" xml:space="preserve">
+    <value>قدم وصفا تفصيليا للفيديو.</value>
+  </data>
+  <data name="Short_Description" xml:space="preserve">
+    <value>وصف قصير</value>
+  </data>
+  <data name="Video_Short_Description_Description" xml:space="preserve">
+    <value>قدم وصفا موجزا للفيديو.</value>
+  </data>
+  <data name="Video_Categories_Description" xml:space="preserve">
+    <value>حدد الفئات التي تصف الفيديو بشكل أفضل.</value>
+  </data>
+  <data name="Try_entering_more_letters" xml:space="preserve">
+    <value>حاول إدخال المزيد من الحروف.</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>كاتب</value>
+  </data>
+  <data name="Video_Author_Description" xml:space="preserve">
+    <value>حدد مؤلفا لهذا الفيديو أو عينه.</value>
+  </data>
+  <data name="No_authors_found" xml:space="preserve">
+    <value>لم يتم العثور على مؤلفين.</value>
+  </data>
+  <data name="More_authors_found" xml:space="preserve">
+    <value>تم العثور على المزيد من المؤلفين.</value>
+  </data>
+  <data name="Downloadable" xml:space="preserve">
+    <value>التحميل</value>
+  </data>
+  <data name="Video_Downloadable_Description" xml:space="preserve">
+    <value>حدد ما إذا كان يمكن تنزيل الفيديو أم لا.</value>
+  </data>
+  <data name="Subtitles" xml:space="preserve">
+    <value>ترجمات</value>
+  </data>
+  <data name="Video_Subtitles_Description" xml:space="preserve">
+    <value>توفير ترجمات للفيديو.</value>
+  </data>
+  <data name="Images_Multimedia" xml:space="preserve">
+    <value>الصور والوسائط المتعددة</value>
+  </data>
+  <data name="Player_Image" xml:space="preserve">
+    <value>صورة اللاعب</value>
+  </data>
+  <data name="Video_Player_Image_Description" xml:space="preserve">
+    <value>حمل صورة لمشغل الفيديو.</value>
+  </data>
+  <data name="Catalog_Image" xml:space="preserve">
+    <value>صورة الكتالوج</value>
+  </data>
+  <data name="Video_Catalog_Image_Description" xml:space="preserve">
+    <value>حمل صورة لتمثيل الفيديو في الكتالوجات.</value>
+  </data>
+  <data name="No_videos_found" xml:space="preserve">
+    <value>لم يتم العثور على مقاطع فيديو.</value>
+  </data>
+  <data name="More_videos_found" xml:space="preserve">
+    <value>تم العثور على المزيد من مقاطع الفيديو.</value>
+  </data>
+  <data name="Featured_Category_Image" xml:space="preserve">
+    <value>صورة الفئة المميزة</value>
+  </data>
+  <data name="Video_Featured_Category_Image_Description" xml:space="preserve">
+    <value>قم بتحميل صورة للفئة المميزة.</value>
+  </data>
+  <data name="Featured_Category_Video" xml:space="preserve">
+    <value>فيديو فئة مميزة</value>
+  </data>
+  <data name="Video_Featured_Category_Video_Description" xml:space="preserve">
+    <value>قدم تفاصيل حول فيديو الفئة المميزة.</value>
+  </data>
+  <data name="Pricing" xml:space="preserve">
+    <value>التسعير</value>
+  </data>
+  <data name="Content_Access" xml:space="preserve">
+    <value>الوصول إلى المحتوى</value>
+  </data>
+  <data name="Video_Content_Access_Description" xml:space="preserve">
+    <value>حدد كيف يمكن للمستخدمين الوصول إلى هذا الفيديو.</value>
+  </data>
+  <data name="Subscription_Plan" xml:space="preserve">
+    <value>خطة الاشتراك</value>
+  </data>
+  <data name="One_time_Purchase_Price" xml:space="preserve">
+    <value>سعر الشراء لمرة واحدة</value>
+  </data>
+  <data name="Video_One_Time_Purchase_Price_Description" xml:space="preserve">
+    <value>حدد سعر شراء هذا الفيديو لمرة واحدة.</value>
+  </data>
+  <data name="Rental_Price" xml:space="preserve">
+    <value>سعر الإيجار</value>
+  </data>
+  <data name="Video_Rental_Price_Description" xml:space="preserve">
+    <value>حدد سعر استئجار هذا الفيديو.</value>
+  </data>
+  <data name="Publication" xml:space="preserve">
+    <value>نشر</value>
+  </data>
+  <data name="Publication_Status" xml:space="preserve">
+    <value>حالة النشر</value>
+  </data>
+  <data name="Video_Publication_Status_Description" xml:space="preserve">
+    <value>حدد حالة نشر هذا الفيديو.</value>
+  </data>
+  <data name="Seo" xml:space="preserve">
+    <value>سيو</value>
+  </data>
+  <data name="Deleted" xml:space="preserve">
+    <value>محذوف</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>خطأ</value>
+  </data>
+  <data name="Uploaded_On" xml:space="preserve">
+    <value>تم الرفع في</value>
+  </data>
 </root>

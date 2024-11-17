@@ -2298,4 +2298,217 @@
   <data name="Invalid_video_Id" xml:space="preserve">
     <value>视频 ID 无效。</value>
   </data>
+  <data name="Slug_helper_text" xml:space="preserve">
+    <value>slug 将在 URL 中使用。示例：https://example.com/people/john-doe 中的 “john-doe”</value>
+  </data>
+  <data name="Add_Author" xml:space="preserve">
+    <value>添加作者</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>详</value>
+  </data>
+  <data name="Author_name_label" xml:space="preserve">
+    <value>作者姓名</value>
+  </data>
+  <data name="Author_name_description" xml:space="preserve">
+    <value>输入作者的姓名。</value>
+  </data>
+  <data name="Author_bio_label" xml:space="preserve">
+    <value>作者简介</value>
+  </data>
+  <data name="Author_bio_description" xml:space="preserve">
+    <value>提供作者的简短传记。</value>
+  </data>
+  <data name="Author_image_label" xml:space="preserve">
+    <value>作者图像</value>
+  </data>
+  <data name="Author_image_description" xml:space="preserve">
+    <value>上传代表作者的图像。</value>
+  </data>
+  <data name="Replace_image" xml:space="preserve">
+    <value>替换图像</value>
+  </data>
+  <data name="Upload_image" xml:space="preserve">
+    <value>上传图片</value>
+  </data>
+  <data name="Seo_title_label" xml:space="preserve">
+    <value>SEO 标题</value>
+  </data>
+  <data name="Seo_title_description" xml:space="preserve">
+    <value>输入 Search Engine Optimization 的标题。</value>
+  </data>
+  <data name="Max" xml:space="preserve">
+    <value>麦克斯</value>
+  </data>
+  <data name="Characters" xml:space="preserve">
+    <value>字符</value>
+  </data>
+  <data name="Seo_description_label" xml:space="preserve">
+    <value>SEO 描述</value>
+  </data>
+  <data name="Seo_description_description" xml:space="preserve">
+    <value>提供搜索引擎优化的描述。</value>
+  </data>
+  <data name="Slug_label" xml:space="preserve">
+    <value>鼻涕虫</value>
+  </data>
+  <data name="Slug_description" xml:space="preserve">
+    <value>定义名称的 URL 友好版本。</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>类别</value>
+  </data>
+  <data name="Authors" xml:space="preserve">
+    <value>作者</value>
+  </data>
+  <data name="Edit_Author" xml:space="preserve">
+    <value>编辑作者</value>
+  </data>
+  <data name="Video_by_that_name_not_found" xml:space="preserve">
+    <value>没有找到该名称的视频。</value>
+  </data>
+  <data name="Videos" xml:space="preserve">
+    <value>视频</value>
+  </data>
+  <data name="Author_by_that_name_not_found" xml:space="preserve">
+    <value>没有找到同名的作者。</value>
+  </data>
+  <data name="Edit_Video" xml:space="preserve">
+    <value>编辑视频</value>
+  </data>
+  <data name="Add_Category" xml:space="preserve">
+    <value>添加 Cetegory</value>
+  </data>
+  <data name="Video_Trailer_Video_Description" xml:space="preserve">
+    <value>提供预告片视频的描述。</value>
+  </data>
+  <data name="Trailer_Video" xml:space="preserve">
+    <value>预告片视频</value>
+  </data>
+  <data name="Video_Title_Description" xml:space="preserve">
+    <value>输入视频的标题。</value>
+  </data>
+  <data name="Video_Title" xml:space="preserve">
+    <value>视频标题</value>
+  </data>
+  <data name="Full_Description" xml:space="preserve">
+    <value>完整描述</value>
+  </data>
+  <data name="Video_Full_Description_Description" xml:space="preserve">
+    <value>提供视频的详细说明。</value>
+  </data>
+  <data name="Short_Description" xml:space="preserve">
+    <value>简短描述</value>
+  </data>
+  <data name="Video_Short_Description_Description" xml:space="preserve">
+    <value>提供视频的简要说明。</value>
+  </data>
+  <data name="Video_Categories_Description" xml:space="preserve">
+    <value>选择最能描述视频的类别。</value>
+  </data>
+  <data name="Try_entering_more_letters" xml:space="preserve">
+    <value>尝试输入更多字母。</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>作者</value>
+  </data>
+  <data name="Video_Author_Description" xml:space="preserve">
+    <value>为此视频选择或分配作者。</value>
+  </data>
+  <data name="No_authors_found" xml:space="preserve">
+    <value>未找到作者。</value>
+  </data>
+  <data name="More_authors_found" xml:space="preserve">
+    <value>找到更多作者。</value>
+  </data>
+  <data name="Downloadable" xml:space="preserve">
+    <value>下载</value>
+  </data>
+  <data name="Video_Downloadable_Description" xml:space="preserve">
+    <value>指定是否可以下载视频。</value>
+  </data>
+  <data name="Subtitles" xml:space="preserve">
+    <value>字幕</value>
+  </data>
+  <data name="Video_Subtitles_Description" xml:space="preserve">
+    <value>为视频提供字幕。</value>
+  </data>
+  <data name="Images_Multimedia" xml:space="preserve">
+    <value>图片和多媒体</value>
+  </data>
+  <data name="Player_Image" xml:space="preserve">
+    <value>播放器图像</value>
+  </data>
+  <data name="Video_Player_Image_Description" xml:space="preserve">
+    <value>上传视频播放器的图像。</value>
+  </data>
+  <data name="Catalog_Image" xml:space="preserve">
+    <value>目录图像</value>
+  </data>
+  <data name="Video_Catalog_Image_Description" xml:space="preserve">
+    <value>上传图像以在目录中表示视频。</value>
+  </data>
+  <data name="No_videos_found" xml:space="preserve">
+    <value>未找到视频。</value>
+  </data>
+  <data name="More_videos_found" xml:space="preserve">
+    <value>找到更多视频。</value>
+  </data>
+  <data name="Featured_Category_Image" xml:space="preserve">
+    <value>特色类别图片</value>
+  </data>
+  <data name="Video_Featured_Category_Image_Description" xml:space="preserve">
+    <value>上传特色类别的图片。</value>
+  </data>
+  <data name="Featured_Category_Video" xml:space="preserve">
+    <value>精选类别视频</value>
+  </data>
+  <data name="Video_Featured_Category_Video_Description" xml:space="preserve">
+    <value>提供有关精选类别视频的详细信息。</value>
+  </data>
+  <data name="Pricing" xml:space="preserve">
+    <value>定价</value>
+  </data>
+  <data name="Content_Access" xml:space="preserve">
+    <value>内容访问</value>
+  </data>
+  <data name="Video_Content_Access_Description" xml:space="preserve">
+    <value>定义用户如何访问此视频。</value>
+  </data>
+  <data name="Subscription_Plan" xml:space="preserve">
+    <value>订阅计划</value>
+  </data>
+  <data name="One_time_Purchase_Price" xml:space="preserve">
+    <value>一次性购买价格</value>
+  </data>
+  <data name="Video_One_Time_Purchase_Price_Description" xml:space="preserve">
+    <value>设置此视频的一次性购买价格。</value>
+  </data>
+  <data name="Rental_Price" xml:space="preserve">
+    <value>租赁价格</value>
+  </data>
+  <data name="Video_Rental_Price_Description" xml:space="preserve">
+    <value>设置租借此视频的价格。</value>
+  </data>
+  <data name="Publication" xml:space="preserve">
+    <value>出版</value>
+  </data>
+  <data name="Publication_Status" xml:space="preserve">
+    <value>出版状态</value>
+  </data>
+  <data name="Video_Publication_Status_Description" xml:space="preserve">
+    <value>指定此视频的发布状态。</value>
+  </data>
+  <data name="Seo" xml:space="preserve">
+    <value>搜索引擎优化</value>
+  </data>
+  <data name="Deleted" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="Uploaded_On" xml:space="preserve">
+    <value>上传时间</value>
+  </data>
 </root>
