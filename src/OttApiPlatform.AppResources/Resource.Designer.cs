@@ -214,6 +214,24 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add Author.
+        /// </summary>
+        public static string Add_Author {
+            get {
+                return ResourceManager.GetString("Add_Author", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Cetegory.
+        /// </summary>
+        public static string Add_Category {
+            get {
+                return ResourceManager.GetString("Add_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add New File.
         /// </summary>
         public static string Add_New_File {
@@ -619,6 +637,42 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Author.
+        /// </summary>
+        public static string Author {
+            get {
+                return ResourceManager.GetString("Author", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Provide a short biography of the author..
+        /// </summary>
+        public static string Author_bio_description {
+            get {
+                return ResourceManager.GetString("Author_bio_description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Author Bio.
+        /// </summary>
+        public static string Author_bio_label {
+            get {
+                return ResourceManager.GetString("Author_bio_label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No author by that name was found..
+        /// </summary>
+        public static string Author_by_that_name_not_found {
+            get {
+                return ResourceManager.GetString("Author_by_that_name_not_found", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Author has been created successfully..
         /// </summary>
         public static string Author_has_been_created_successfully {
@@ -646,6 +700,42 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Upload an image representing the author..
+        /// </summary>
+        public static string Author_image_description {
+            get {
+                return ResourceManager.GetString("Author_image_description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Author Image.
+        /// </summary>
+        public static string Author_image_label {
+            get {
+                return ResourceManager.GetString("Author_image_label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter the name of the author..
+        /// </summary>
+        public static string Author_name_description {
+            get {
+                return ResourceManager.GetString("Author_name_description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Author Name.
+        /// </summary>
+        public static string Author_name_label {
+            get {
+                return ResourceManager.GetString("Author_name_label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Authorization.
         /// </summary>
         public static string Authorization {
@@ -660,6 +750,15 @@ namespace OttApiPlatform.AppResources {
         public static string Authorizing {
             get {
                 return ResourceManager.GetString("Authorizing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Authors.
+        /// </summary>
+        public static string Authors {
+            get {
+                return ResourceManager.GetString("Authors", resourceCulture);
             }
         }
         
@@ -871,6 +970,24 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Catalog Image.
+        /// </summary>
+        public static string Catalog_Image {
+            get {
+                return ResourceManager.GetString("Catalog_Image", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Categories.
+        /// </summary>
+        public static string Categories {
+            get {
+                return ResourceManager.GetString("Categories", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cerium.
         /// </summary>
         public static string Cerium {
@@ -939,6 +1056,15 @@ namespace OttApiPlatform.AppResources {
         public static string Channel_name_required {
             get {
                 return ResourceManager.GetString("Channel_name_required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Characters.
+        /// </summary>
+        public static string Characters {
+            get {
+                return ResourceManager.GetString("Characters", resourceCulture);
             }
         }
         
@@ -1218,6 +1344,15 @@ namespace OttApiPlatform.AppResources {
         public static string Consider_switching_your_device_to_light_mode {
             get {
                 return ResourceManager.GetString("Consider_switching_your_device_to_light_mode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Content Access.
+        /// </summary>
+        public static string Content_Access {
+            get {
+                return ResourceManager.GetString("Content_Access", resourceCulture);
             }
         }
         
@@ -1564,6 +1699,15 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Deleted.
+        /// </summary>
+        public static string Deleted {
+            get {
+                return ResourceManager.GetString("Deleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Deleting this data will permanently remove your account, and this cannot be recovered..
         /// </summary>
         public static string Deleting_this_data_will_permanently_remove_your_account_and_this_cannot_be_recovered {
@@ -1579,6 +1723,15 @@ namespace OttApiPlatform.AppResources {
         public static string Deletion_of_entity_failed {
             get {
                 return ResourceManager.GetString("Deletion_of_entity_failed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string Details {
+            get {
+                return ResourceManager.GetString("Details", resourceCulture);
             }
         }
         
@@ -1691,6 +1844,15 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Downloadable.
+        /// </summary>
+        public static string Downloadable {
+            get {
+                return ResourceManager.GetString("Downloadable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Downloads.
         /// </summary>
         public static string Downloads {
@@ -1754,6 +1916,15 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Edit Author.
+        /// </summary>
+        public static string Edit_Author {
+            get {
+                return ResourceManager.GetString("Edit_Author", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit Reference.
         /// </summary>
         public static string Edit_Reference {
@@ -1786,6 +1957,15 @@ namespace OttApiPlatform.AppResources {
         public static string Edit_User {
             get {
                 return ResourceManager.GetString("Edit_User", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Video.
+        /// </summary>
+        public static string Edit_Video {
+            get {
+                return ResourceManager.GetString("Edit_Video", resourceCulture);
             }
         }
         
@@ -1970,6 +2150,15 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        public static string Error {
+            get {
+                return ResourceManager.GetString("Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error changing user name..
         /// </summary>
         public static string Error_changing_user_name {
@@ -2056,6 +2245,24 @@ namespace OttApiPlatform.AppResources {
         public static string FAQ {
             get {
                 return ResourceManager.GetString("FAQ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Featured Category Image.
+        /// </summary>
+        public static string Featured_Category_Image {
+            get {
+                return ResourceManager.GetString("Featured_Category_Image", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Featured Category Video.
+        /// </summary>
+        public static string Featured_Category_Video {
+            get {
+                return ResourceManager.GetString("Featured_Category_Video", resourceCulture);
             }
         }
         
@@ -2317,6 +2524,15 @@ namespace OttApiPlatform.AppResources {
         public static string Full_DateTime_Pattern {
             get {
                 return ResourceManager.GetString("Full_DateTime_Pattern", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Full Description.
+        /// </summary>
+        public static string Full_Description {
+            get {
+                return ResourceManager.GetString("Full_Description", resourceCulture);
             }
         }
         
@@ -2609,6 +2825,15 @@ namespace OttApiPlatform.AppResources {
         public static string Im_sorry_I_can_t_display_anything_until_you {
             get {
                 return ResourceManager.GetString("Im_sorry_I_can\'t_display_anything_until_you", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Images &amp; Multimedia.
+        /// </summary>
+        public static string Images_Multimedia {
+            get {
+                return ResourceManager.GetString("Images_Multimedia", resourceCulture);
             }
         }
         
@@ -3226,6 +3451,15 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Max.
+        /// </summary>
+        public static string Max {
+            get {
+                return ResourceManager.GetString("Max", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Max failed access attempt is required..
         /// </summary>
         public static string Max_failed_access_attempt_is_required {
@@ -3366,6 +3600,24 @@ namespace OttApiPlatform.AppResources {
         public static string Month_Names {
             get {
                 return ResourceManager.GetString("Month_Names", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to More authors found..
+        /// </summary>
+        public static string More_authors_found {
+            get {
+                return ResourceManager.GetString("More_authors_found", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to More videos found..
+        /// </summary>
+        public static string More_videos_found {
+            get {
+                return ResourceManager.GetString("More_videos_found", resourceCulture);
             }
         }
         
@@ -3523,6 +3775,15 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No authors found..
+        /// </summary>
+        public static string No_authors_found {
+            get {
+                return ResourceManager.GetString("No_authors_found", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No data available..
         /// </summary>
         public static string No_data_available {
@@ -3537,6 +3798,15 @@ namespace OttApiPlatform.AppResources {
         public static string No_keep_it {
             get {
                 return ResourceManager.GetString("No_keep_it", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No videos found..
+        /// </summary>
+        public static string No_videos_found {
+            get {
+                return ResourceManager.GetString("No_videos_found", resourceCulture);
             }
         }
         
@@ -3627,6 +3897,15 @@ namespace OttApiPlatform.AppResources {
         public static string Once_you_have_scanned_the_QR_code_or_input_the_key_above {
             get {
                 return ResourceManager.GetString("Once_you_have_scanned_the_QR_code_or_input_the_key_above", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to One-Time Purchase Price.
+        /// </summary>
+        public static string One_time_Purchase_Price {
+            get {
+                return ResourceManager.GetString("One_time_Purchase_Price", resourceCulture);
             }
         }
         
@@ -3894,6 +4173,15 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Player Image.
+        /// </summary>
+        public static string Player_Image {
+            get {
+                return ResourceManager.GetString("Player_Image", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please.
         /// </summary>
         public static string Please {
@@ -4002,6 +4290,15 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Pricing.
+        /// </summary>
+        public static string Pricing {
+            get {
+                return ResourceManager.GetString("Pricing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Profile.
         /// </summary>
         public static string Profile {
@@ -4052,6 +4349,24 @@ namespace OttApiPlatform.AppResources {
         public static string Property {
             get {
                 return ResourceManager.GetString("Property", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Publication.
+        /// </summary>
+        public static string Publication {
+            get {
+                return ResourceManager.GetString("Publication", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Publication Status.
+        /// </summary>
+        public static string Publication_Status {
+            get {
+                return ResourceManager.GetString("Publication_Status", resourceCulture);
             }
         }
         
@@ -4272,6 +4587,15 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Rental Price.
+        /// </summary>
+        public static string Rental_Price {
+            get {
+                return ResourceManager.GetString("Rental_Price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 111111111 is not a valid Social security number..
         /// </summary>
         public static string Repeated_Ones_are_not_valid_Social_security_number {
@@ -4286,6 +4610,15 @@ namespace OttApiPlatform.AppResources {
         public static string Repeated_Threes_are_not_valid_Social_security_number {
             get {
                 return ResourceManager.GetString("Repeated_Threes_are_not_valid_Social_security_number", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Replace Image.
+        /// </summary>
+        public static string Replace_image {
+            get {
+                return ResourceManager.GetString("Replace_image", resourceCulture);
             }
         }
         
@@ -4776,6 +5109,51 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SEO.
+        /// </summary>
+        public static string Seo {
+            get {
+                return ResourceManager.GetString("Seo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Provide a description for search engine optimization..
+        /// </summary>
+        public static string Seo_description_description {
+            get {
+                return ResourceManager.GetString("Seo_description_description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SEO Description.
+        /// </summary>
+        public static string Seo_description_label {
+            get {
+                return ResourceManager.GetString("Seo_description_label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter the title for search engine optimization..
+        /// </summary>
+        public static string Seo_title_description {
+            get {
+                return ResourceManager.GetString("Seo_title_description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SEO Title.
+        /// </summary>
+        public static string Seo_title_label {
+            get {
+                return ResourceManager.GetString("Seo_title_label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Septemper.
         /// </summary>
         public static string Septemper {
@@ -4857,6 +5235,15 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Short Description.
+        /// </summary>
+        public static string Short_Description {
+            get {
+                return ResourceManager.GetString("Short_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Short Time Pattern.
         /// </summary>
         public static string Short_Time_Pattern {
@@ -4925,6 +5312,33 @@ namespace OttApiPlatform.AppResources {
         public static string Sign_up {
             get {
                 return ResourceManager.GetString("Sign_up", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Define a URL-friendly version of the name..
+        /// </summary>
+        public static string Slug_description {
+            get {
+                return ResourceManager.GetString("Slug_description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The slug will be used in the URL. Example: &quot;john-doe&quot; in https://example.com/people/john-doe.
+        /// </summary>
+        public static string Slug_helper_text {
+            get {
+                return ResourceManager.GetString("Slug_helper_text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Slug.
+        /// </summary>
+        public static string Slug_label {
+            get {
+                return ResourceManager.GetString("Slug_label", resourceCulture);
             }
         }
         
@@ -5087,6 +5501,24 @@ namespace OttApiPlatform.AppResources {
         public static string Submit {
             get {
                 return ResourceManager.GetString("Submit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Subscription Plan.
+        /// </summary>
+        public static string Subscription_Plan {
+            get {
+                return ResourceManager.GetString("Subscription_Plan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Subtitles.
+        /// </summary>
+        public static string Subtitles {
+            get {
+                return ResourceManager.GetString("Subtitles", resourceCulture);
             }
         }
         
@@ -5577,6 +6009,24 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Trailer Video.
+        /// </summary>
+        public static string Trailer_Video {
+            get {
+                return ResourceManager.GetString("Trailer_Video", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Try entering more letters..
+        /// </summary>
+        public static string Try_entering_more_letters {
+            get {
+                return ResourceManager.GetString("Try_entering_more_letters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Two-Factor Authentication.
         /// </summary>
         public static string Two_Factor_Authentication {
@@ -5919,6 +6369,24 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Upload Image.
+        /// </summary>
+        public static string Upload_image {
+            get {
+                return ResourceManager.GetString("Upload_image", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uploaded On.
+        /// </summary>
+        public static string Uploaded_On {
+            get {
+                return ResourceManager.GetString("Uploaded_On", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Use a local account to log in..
         /// </summary>
         public static string Use_a_local_account_to_log_in {
@@ -6217,6 +6685,87 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select or assign an author for this video..
+        /// </summary>
+        public static string Video_Author_Description {
+            get {
+                return ResourceManager.GetString("Video_Author_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No video by that name was found..
+        /// </summary>
+        public static string Video_by_that_name_not_found {
+            get {
+                return ResourceManager.GetString("Video_by_that_name_not_found", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Upload an image to represent the video in catalogs..
+        /// </summary>
+        public static string Video_Catalog_Image_Description {
+            get {
+                return ResourceManager.GetString("Video_Catalog_Image_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select categories that best describe the video..
+        /// </summary>
+        public static string Video_Categories_Description {
+            get {
+                return ResourceManager.GetString("Video_Categories_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Define how users can access this video..
+        /// </summary>
+        public static string Video_Content_Access_Description {
+            get {
+                return ResourceManager.GetString("Video_Content_Access_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Specify if the video can be downloaded..
+        /// </summary>
+        public static string Video_Downloadable_Description {
+            get {
+                return ResourceManager.GetString("Video_Downloadable_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Upload an image for the featured category..
+        /// </summary>
+        public static string Video_Featured_Category_Image_Description {
+            get {
+                return ResourceManager.GetString("Video_Featured_Category_Image_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Provide details about the featured category video..
+        /// </summary>
+        public static string Video_Featured_Category_Video_Description {
+            get {
+                return ResourceManager.GetString("Video_Featured_Category_Video_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Provide a detailed description of the video..
+        /// </summary>
+        public static string Video_Full_Description_Description {
+            get {
+                return ResourceManager.GetString("Video_Full_Description_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The video has been created successfully..
         /// </summary>
         public static string Video_has_been_created_successfully {
@@ -6240,6 +6789,96 @@ namespace OttApiPlatform.AppResources {
         public static string Video_has_been_updated_successfully {
             get {
                 return ResourceManager.GetString("Video_has_been_updated_successfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set the price for a one-time purchase of this video..
+        /// </summary>
+        public static string Video_One_Time_Purchase_Price_Description {
+            get {
+                return ResourceManager.GetString("Video_One_Time_Purchase_Price_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Upload an image for the video player..
+        /// </summary>
+        public static string Video_Player_Image_Description {
+            get {
+                return ResourceManager.GetString("Video_Player_Image_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Specify the publication status of this video..
+        /// </summary>
+        public static string Video_Publication_Status_Description {
+            get {
+                return ResourceManager.GetString("Video_Publication_Status_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set the price for renting this video..
+        /// </summary>
+        public static string Video_Rental_Price_Description {
+            get {
+                return ResourceManager.GetString("Video_Rental_Price_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Provide a brief description of the video..
+        /// </summary>
+        public static string Video_Short_Description_Description {
+            get {
+                return ResourceManager.GetString("Video_Short_Description_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Provide subtitles for the video..
+        /// </summary>
+        public static string Video_Subtitles_Description {
+            get {
+                return ResourceManager.GetString("Video_Subtitles_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Video Title.
+        /// </summary>
+        public static string Video_Title {
+            get {
+                return ResourceManager.GetString("Video_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter the title of the video..
+        /// </summary>
+        public static string Video_Title_Description {
+            get {
+                return ResourceManager.GetString("Video_Title_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Provide a description for the trailer video..
+        /// </summary>
+        public static string Video_Trailer_Video_Description {
+            get {
+                return ResourceManager.GetString("Video_Trailer_Video_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Videos.
+        /// </summary>
+        public static string Videos {
+            get {
+                return ResourceManager.GetString("Videos", resourceCulture);
             }
         }
         

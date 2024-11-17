@@ -1,0 +1,116 @@
+@using OttApiPlatform.CMS.Features.ContentManagement.Videos.Queries.GetVideos
+@namespace OttApiPlatform.CMS.Pages.ContentManagement.Videos
+
+
+@*<div class="d-flex flex-row gap-1">
+    <MudIcon Icon="fas fa-cog fa-spin" Color="Color.Primary" />
+    <MudText Typo="Typo.body1">Preparing...</MudText>
+</div>*@
+
+        <MudTable Context="video" 
+                  ServerData="@(new Func<TableState, Task<TableData<VideoItem>>>(ServerReload))" 
+                  Dense="true" 
+                  Hover="true" 
+                  FixedHeader="true" 
+                  FixedFooter="true" 
+                  Striped="true"
+                  @ref="Table">
+            <ToolBarContent>
+                <MudText Typo="Typo.h5" Color="Color.Primary">@Resource.Videos</MudText>
+                <MudSpacer />
+                <MudTextField T="string"
+                              Immediate="true"
+                              ValueChanged="@FilterVideos"
+                              Placeholder="@Resource.Search"
+                              Adornment="Adornment.Start"
+                              AdornmentIcon="@Icons.Material.Filled.Search"
+                              IconSize="Size.Small" Class="mt-0"></MudTextField>
+            </ToolBarContent>
+            <HeaderContent>
+                <MudTh></MudTh>
+                <MudTh><MudTableSortLabel SortLabel="Title" T="VideoItem" InitialDirection="SortDirection.Ascending">@Resource.Title</MudTableSortLabel></MudTh>
+                <MudTh><MudTableSortLabel SortLabel="UploadedOn" T="VideoItem">@Resource.Uploaded_On</MudTableSortLabel></MudTh>
+                <MudTh>@Resource.Options</MudTh>
+            </HeaderContent>
+            <RowTemplate>
+                <MudTd>
+                    @switch (video.StreamCreationStatus)
+                    {
+                        case AssetCreationStatus.Ready:
+                            <MudImage Src="@video.ThumbnailUrl"
+                                      Width="140"
+                                      Height="64"
+                                      Alt="@video.Title"
+                                      Elevation="25"
+                                      Class="rounded-lg ma-4"/>
+                            break;
+                        case AssetCreationStatus.None:
+                        case AssetCreationStatus.Preparing:
+                        case AssetCreationStatus.Errored:
+                        case AssetCreationStatus.Deleted:
+                        default:
+                            <MudIcon Icon="@Icons.Filled.VideoFile" Color="Color.Primary" Size="Size.Large" />
+                            break;
+                    }
+                   
+                </MudTd>
+                <MudTd DataLabel="Title">@video.Title</MudTd>
+                <MudTd DataLabel="Uploaded On">
+                    @switch (video.StreamCreationStatus)
+                    {
+                        case AssetCreationStatus.None:
+                        case AssetCreationStatus.Preparing:
+                            <div class="d-flex flex-row gap-2">
+                                <MudIcon Size="Size.Small" Icon="fas fa-cog fa-spin" Color="Color.Primary"/>
+                                <MudText Typo="Typo.body1">Preparing...</MudText>
+                            </div>
+                            break;
+                        case AssetCreationStatus.Ready:
+                            @video.CreatedOn.ToShortDateString()
+                            break;
+                        case AssetCreationStatus.Errored:
+                            <MudAlert Severity="Severity.Error">@Resource.Error</MudAlert>
+                            break;
+                        case AssetCreationStatus.Deleted:
+                            <MudAlert Severity="Severity.Error">@Resource.Deleted</MudAlert>
+                            break;
+                        default:
+                            throw new ArgumentOutOfRangeException();
+                    }
+
+                </MudTd>
+                <MudTd>
+                    <MudButtonGroup OverrideStyles="false">
+                        <MudButton Variant="Variant.Filled"
+                                   StartIcon="@Icons.Material.Filled.Edit"
+                                   Size="Size.Small"
+                                   Color="Color.Primary"
+                                   OnClick="@(() => EditVideo(video.Id))">@Resource.Edit</MudButton>
+
+                        <MudButton Variant="Variant.Filled"
+                                   StartIcon="@Icons.Material.Filled.Delete"
+                                   Size="Size.Small"
+                                   Color="Color.Error"
+                                   OnClick="@(() => DeleteVideo(video.Id))">@Resource.Delete</MudButton>
+                    </MudButtonGroup>
+                </MudTd>
+            </RowTemplate>
+            <PagerContent>
+                <MudTablePager RowsPerPageString="@Resource.Rows_Per_Page" />
+            </PagerContent>
+        </MudTable>
+@*
+<MudTabs ActivePanelIndex="ActivePanelIndex" 
+         Elevation="2" 
+         Rounded="true" 
+         ApplyEffectsToContainer="true" 
+         PanelClass="pa-6">
+    <MudTabPanel Text="@Resource.Videos">
+        
+    </MudTabPanel>
+    <MudTabPanel Text="@Resource.Reporting">
+        <OttApiPlatform.CMS.Pages.Reporting.Reports></OttApiPlatform.CMS.Pages.Reporting.Reports>
+    </MudTabPanel>
+</MudTabs>*@
+
+

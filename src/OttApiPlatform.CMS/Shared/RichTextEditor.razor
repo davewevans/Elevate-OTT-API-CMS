@@ -1,0 +1,58 @@
+﻿@using Syncfusion.Blazor.RichTextEditor
+
+<SfRichTextEditor Value="@RteValue"
+                  MaxLength="@MaxLength" 
+                  ShowCharCount="@ShowCharCount" 
+                  EnableHtmlEncode="@EnableHtmlEncode"
+                  Enabled="@Enabled"
+                  Readonly="@ReadOnly" 
+                  ValueChanged="Callback">
+    <RichTextEditorToolbarSettings Items="@_tools"/>
+</SfRichTextEditor>
+
+@code {
+
+    [Parameter]
+    public EventCallback<string> OnValueChangedCallback { get; set; }
+
+    [Parameter]
+    public string RteValue { get; set; } = string.Empty;
+
+    [Parameter]
+    public bool Enabled { get; set; } = true;
+
+    [Parameter]
+    public bool ShowCharCount { get; set; } = true;
+
+    [Parameter]
+    public bool ReadOnly { get; set; } = false;
+
+    [Parameter]
+    public bool EnableHtmlEncode { get; set; } = true;
+
+    [Parameter]
+    public int MaxLength { get; set; } = 1500;
+
+    private List<ToolbarItemModel> _tools = new ()
+    {
+        new ToolbarItemModel() { Command = ToolbarCommand.Bold },
+        new ToolbarItemModel() { Command = ToolbarCommand.Italic },
+        new ToolbarItemModel() { Command = ToolbarCommand.Underline },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Formats },
+        new ToolbarItemModel() { Command = ToolbarCommand.Alignments },
+        new ToolbarItemModel() { Command = ToolbarCommand.OrderedList },
+        new ToolbarItemModel() { Command = ToolbarCommand.UnorderedList },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.CreateLink },
+        new ToolbarItemModel() { Command = ToolbarCommand.Separator },
+        new ToolbarItemModel() { Command = ToolbarCommand.Undo },
+        new ToolbarItemModel() { Command = ToolbarCommand.Redo },
+    };
+
+    private async Task Callback(string value)
+    {
+        RteValue = value;
+        await OnValueChangedCallback.InvokeAsync(value);
+    }
+}

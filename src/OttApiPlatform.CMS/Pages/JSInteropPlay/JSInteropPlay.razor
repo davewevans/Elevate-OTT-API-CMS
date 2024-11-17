@@ -1,0 +1,238 @@
+@page "/jsinterop"
+
+@inject IJSRuntime JSRuntime
+@implements IAsyncDisposable
+
+<h3>JS Interop Play</h3>
+
+
+<h2 class="my-4">Call JavaScript functions that return void</h2>
+
+<div class="d-flex flex-column mb-8">
+    <MudButton Class="my-2"
+               Variant="Variant.Filled"
+               Size="Size.Large"
+               Color="Color.Primary"
+               OnClick="ShowAlert">Show Alert</MudButton>
+
+    <MudButton Class="my-2"
+               Variant="Variant.Filled"
+               Size="Size.Large"
+               Color="Color.Primary"
+               OnClick="PassDotNetObjectToJs">Pass .NET Object to JS</MudButton>
+
+
+    <h2 class="my-4">Call JavaScript functions that return value</h2>
+
+    <MudButton Class="my-2"
+               Variant="Variant.Filled"
+               Size="Size.Large"
+               Color="Color.Primary"
+               OnClick="ShowPrompt">Show Prompt</MudButton>
+    <MudText Typo="Typo.h5">Prompt result: @_promptResult</MudText>
+
+    <MudButton Class="my-2"
+               Variant="Variant.Filled"
+               Size="Size.Large"
+               Color="Color.Primary"
+               OnClick="CreateDriver">Create Driver</MudButton>
+
+    <h2 class="my-4">Error handling</h2>
+
+    <MudButton Class="my-2"
+               Variant="Variant.Filled"
+               Size="Size.Large"
+               Color="Color.Primary"
+               OnClick="ThrowError">Throw Error</MudButton>
+    <MudText Typo="Typo.h5" Color="Color.Error">Error message: @_errMessage</MudText>
+
+
+
+    <h2 class="my-4">Invoke .NET methods from JavaScript</h2>
+
+    <MudButton Class="my-2"
+               Variant="Variant.Filled"
+               Size="Size.Large"
+               Color="Color.Primary"
+               OnClick="CallStaticDotNetMethodFromJS">Call Static .NET Method</MudButton>
+
+    <MudButton Class="my-2"
+            Variant="Variant.Filled"
+            Size="Size.Large"
+            Color="Color.Primary"
+            OnClick="CallStaticDotNetMethodFromJSWithIdentifier">Call Static .NET Method Using Identitfier Name</MudButton>
+
+
+    <MudButton Class="my-2"
+               Variant="Variant.Filled"
+               Size="Size.Large"
+               Color="Color.Primary"
+               OnClick="CallInstanceDotNetMethodFromJS">Call Instance .NET Method</MudButton>
+     <MudText Typo="Typo.h5" Color="Color.Error">Window size received from JavaScript: @_windowSize.Width X @_windowSize.Height</MudText>
+
+
+   <MudButton Class="my-2"
+               Variant="Variant.Filled"
+               Size="Size.Large"
+               Color="Color.Primary"
+               OnClick="RegisterWindowResizeEventHandler">Register Window Resize Event Handler</MudButton>
+     <MudText Typo="Typo.h5" Color="Color.Error">Window size received from JavaScript: @_windowSize.Width X @_windowSize.Height</MudText>
+
+
+
+    <h2 class="my-4">JavaScript Isolation</h2>
+    <MudButton Class="my-2"
+               Variant="Variant.Filled"
+               Size="Size.Large"
+               Color="Color.Primary"
+               OnClick="ShowAlertWithJSIsolation">Show Alert with JS Isolation</MudButton>
+
+</div>
+
+
+
+@code {
+    /*
+    JavaScript Interop in Blazor Applications
+    By Thomas Claudius Huber
+    Plural Sight Course
+    */
+
+    private string _promptResult;
+
+    private string _errMessage;
+
+    private IJSObjectReference? _jsModule;
+
+    private System.Drawing.Size _windowSize;
+
+
+    private async Task ShowAlert()
+    {
+        await JSRuntime.InvokeVoidAsync("blazorInterop.showAlert", "Hi, I'm Dave");
+    }
+
+    private async Task PassDotNetObjectToJs()
+    {
+        @* await JSRuntime.InvokeVoidAsync("blazorInterop.lotToConsoleTable", new DriverDto
+        {
+            FirstName = "Leah",
+            LastName = "Yannikov",
+            Email = "lyannikov1@usatoday.com"
+        }); *@
+    }
+
+    private async Task ShowPrompt()
+    {
+        var result = await JSRuntime.InvokeAsync<string>("blazorInterop.showPrompt", "What is your name?", _promptResult ?? "");
+
+        if (result is not null)
+        {
+            _promptResult = result;
+        }
+    }
+
+    private async Task CreateDriver()
+    {
+         // var driver = await JSRuntime.InvokeAsync<DriverDto>("blazorInterop.createDriver", "Elyse","McGing");
+
+        @* if (driver is not null)
+        {
+            await JSRuntime.InvokeVoidAsync("blazorInterop.lotToConsoleTable", driver);
+        }  *@
+    }
+
+    private async Task ThrowError()
+    {
+        try
+        {
+            await JSRuntime.InvokeVoidAsync("blazorInterop.throwError");
+        }
+        catch (JSException ex)
+        {
+            _errMessage = ex.Message;
+        }
+    }
+
+    private async Task ShowAlertWithJSIsolation()
+    {
+        if (_jsModule is null)
+        {
+            _jsModule = await JSRuntime
+                .InvokeAsync<IJSObjectReference>("import","./js/JSIsolation.js");
+        }
+
+        await _jsModule.InvokeVoidAsync("showAlertWithJSIsolation", "This is from JS Isolation!");
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        if (_jsModule is not null)
+        {
+            await _jsModule.DisposeAsync();
+        }
+    }
+
+    [JSInvokable]
+    public static string BuildEmail(string firstName) {
+        return $"{firstName}@jsinteropplay.com";
+
+        // can be called in browser console
+        // ex: DotNet.invokeMethodAsync("WiiTrakClient", "BuildEmail", "Dave")
+    }
+
+    [JSInvokable("BuildEmailWithLastName")]
+    public static string BuildEmail(string firstName, string lastName) {
+        return $"{firstName}.{lastName}@jsinteropplay.com";
+
+        // can be called in browser console
+        // ex: DotNet.invokeMethodAsync("WiiTrakClient", "BuildEmail", "Dave")
+    }
+
+    public async Task CallStaticDotNetMethodFromJS() {
+        if (_jsModule is null)
+        {
+            _jsModule = await JSRuntime
+                .InvokeAsync<IJSObjectReference>("import","./js/JSIsolation.js");
+        }
+
+        await _jsModule.InvokeVoidAsync("callStaticDotNetMethod", "Bobby");
+    }
+
+      public async Task CallStaticDotNetMethodFromJSWithIdentifier() {
+        if (_jsModule is null)
+        {
+            _jsModule = await JSRuntime
+                .InvokeAsync<IJSObjectReference>("import","./js/JSIsolation.js");
+        }
+
+        await _jsModule.InvokeVoidAsync("callStaticDotNetMethodWithIdentifier", "Bobby", "Jones");
+    }
+
+   public async Task CallInstanceDotNetMethodFromJS() {
+        if (_jsModule is null)
+        {
+            _jsModule = await JSRuntime
+                .InvokeAsync<IJSObjectReference>("import","./js/JSIsolation.js");
+        }
+        var dotNetObjectRef = DotNetObjectReference.Create(this);
+        await _jsModule.InvokeVoidAsync("callDotNetInstanceMethod", dotNetObjectRef);
+    }
+
+    [JSInvokable]
+    public void SetWindowSize(System.Drawing.Size windowSize) {
+        _windowSize = windowSize;
+        StateHasChanged();
+    }
+
+     public async Task RegisterWindowResizeEventHandler() {
+        if (_jsModule is null)
+        {
+            _jsModule = await JSRuntime
+                .InvokeAsync<IJSObjectReference>("import","./js/JSIsolation.js");
+        }
+        var dotNetObjectRef = DotNetObjectReference.Create(this);
+        await _jsModule.InvokeVoidAsync("registerResizeHandler", dotNetObjectRef);
+    }
+}
+
