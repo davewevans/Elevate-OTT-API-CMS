@@ -2,7 +2,7 @@
 
 namespace OttApiPlatform.Domain.DTOs;
 
-public class AuthorDto : AuditableDto
+public class PersonDto : AuditableDto
 {
     public Guid Id { get; set; }
 

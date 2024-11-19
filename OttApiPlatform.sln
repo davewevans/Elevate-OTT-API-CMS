@@ -27,7 +27,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OttApiPlatform.Gateway", "s
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{ADEE11C9-050F-48E3-B940-94083B20094A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OttApiPlatform.Tests", "OttApiPlatform.Tests\OttApiPlatform.Tests.csproj", "{80E3BFC4-038D-4436-8B0F-7979E1DC17EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OttApiPlatform.Tests", "OttApiPlatform.Tests\OttApiPlatform.Tests.csproj", "{80E3BFC4-038D-4436-8B0F-7979E1DC17EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

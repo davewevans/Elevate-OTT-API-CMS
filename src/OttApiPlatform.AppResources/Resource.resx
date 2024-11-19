@@ -2514,4 +2514,55 @@
   <data name="Uploaded_On" xml:space="preserve">
     <value>Uploaded On</value>
   </data>
+  <data name="Content" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="Live_Streams" xml:space="preserve">
+    <value>Live Streams</value>
+  </data>
+  <data name="Podcasts" xml:space="preserve">
+    <value>Podcasts</value>
+  </data>
+  <data name="Collections" xml:space="preserve">
+    <value>Collections</value>
+  </data>
+  <data name="Extras" xml:space="preserve">
+    <value>Extras</value>
+  </data>
+  <data name="Organize" xml:space="preserve">
+    <value>Organize</value>
+  </data>
+  <data name="Custom_Filters" xml:space="preserve">
+    <value>Custom Filters</value>
+  </data>
+  <data name="Content_Management" xml:space="preserve">
+    <value>Content Management</value>
+  </data>
+  <data name="Assets" xml:space="preserve">
+    <value>Assets</value>
+  </data>
+  <data name="Playlists" xml:space="preserve">
+    <value>Playlists</value>
+  </data>
+  <data name="Series" xml:space="preserve">
+    <value>Series</value>
+  </data>
+  <data name="Swim_Lanes" xml:space="preserve">
+    <value>Swim Lanes</value>
+  </data>
+  <data name="Content_Settings" xml:space="preserve">
+    <value>Content Settings</value>
+  </data>
+  <data name="Live_Stream_Management" xml:space="preserve">
+    <value>Live Stream Management</value>
+  </data>
+  <data name="Live_Stream" xml:space="preserve">
+    <value>Live Stream</value>
+  </data>
+  <data name="Content_Library" xml:space="preserve">
+    <value>Content Library</value>
+  </data>
+  <data name="Add_Content" xml:space="preserve">
+    <value>Add Content</value>
+  </data>
 </root>

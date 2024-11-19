@@ -232,6 +232,15 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add Content.
+        /// </summary>
+        public static string Add_Content {
+            get {
+                return ResourceManager.GetString("Add_Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add New File.
         /// </summary>
         public static string Add_New_File {
@@ -570,6 +579,15 @@ namespace OttApiPlatform.AppResources {
         public static string Army {
             get {
                 return ResourceManager.GetString("Army", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Assets.
+        /// </summary>
+        public static string Assets {
+            get {
+                return ResourceManager.GetString("Assets", resourceCulture);
             }
         }
         
@@ -1240,6 +1258,15 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Collections.
+        /// </summary>
+        public static string Collections {
+            get {
+                return ResourceManager.GetString("Collections", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Company/Organization/Channel Name.
         /// </summary>
         public static string CompanyName {
@@ -1348,11 +1375,47 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Content.
+        /// </summary>
+        public static string Content {
+            get {
+                return ResourceManager.GetString("Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Content Access.
         /// </summary>
         public static string Content_Access {
             get {
                 return ResourceManager.GetString("Content_Access", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Content Library.
+        /// </summary>
+        public static string Content_Library {
+            get {
+                return ResourceManager.GetString("Content_Library", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Content Management.
+        /// </summary>
+        public static string Content_Management {
+            get {
+                return ResourceManager.GetString("Content_Management", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Content Settings.
+        /// </summary>
+        public static string Content_Settings {
+            get {
+                return ResourceManager.GetString("Content_Settings", resourceCulture);
             }
         }
         
@@ -1506,6 +1569,15 @@ namespace OttApiPlatform.AppResources {
         public static string Current_Transcripts {
             get {
                 return ResourceManager.GetString("Current_Transcripts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Custom Filters.
+        /// </summary>
+        public static string Custom_Filters {
+            get {
+                return ResourceManager.GetString("Custom_Filters", resourceCulture);
             }
         }
         
@@ -2227,6 +2299,15 @@ namespace OttApiPlatform.AppResources {
         public static string Exporting_data_may_take_a_while {
             get {
                 return ResourceManager.GetString("Exporting_data_may_take_a_while", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Extras.
+        /// </summary>
+        public static string Extras {
+            get {
+                return ResourceManager.GetString("Extras", resourceCulture);
             }
         }
         
@@ -3280,6 +3361,33 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Live Stream.
+        /// </summary>
+        public static string Live_Stream {
+            get {
+                return ResourceManager.GetString("Live_Stream", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Live Stream Management.
+        /// </summary>
+        public static string Live_Stream_Management {
+            get {
+                return ResourceManager.GetString("Live_Stream_Management", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Live Streams.
+        /// </summary>
+        public static string Live_Streams {
+            get {
+                return ResourceManager.GetString("Live_Streams", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Loading on Demand.
         /// </summary>
         public static string Loading_On_Demand {
@@ -3975,6 +4083,15 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Organize.
+        /// </summary>
+        public static string Organize {
+            get {
+                return ResourceManager.GetString("Organize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to out of.
         /// </summary>
         public static string out_of {
@@ -4182,6 +4299,15 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Playlists.
+        /// </summary>
+        public static string Playlists {
+            get {
+                return ResourceManager.GetString("Playlists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please.
         /// </summary>
         public static string Please {
@@ -4277,6 +4403,15 @@ namespace OttApiPlatform.AppResources {
         public static string PM_Designator {
             get {
                 return ResourceManager.GetString("PM_Designator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Podcasts.
+        /// </summary>
+        public static string Podcasts {
+            get {
+                return ResourceManager.GetString("Podcasts", resourceCulture);
             }
         }
         
@@ -5163,6 +5298,15 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Series.
+        /// </summary>
+        public static string Series {
+            get {
+                return ResourceManager.GetString("Series", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Series 1.
         /// </summary>
         public static string Series_1 {
@@ -5582,6 +5726,15 @@ namespace OttApiPlatform.AppResources {
         public static string Sweden {
             get {
                 return ResourceManager.GetString("Sweden", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Swim Lanes.
+        /// </summary>
+        public static string Swim_Lanes {
+            get {
+                return ResourceManager.GetString("Swim_Lanes", resourceCulture);
             }
         }
         

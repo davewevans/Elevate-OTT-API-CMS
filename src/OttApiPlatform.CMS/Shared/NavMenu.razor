@@ -43,6 +43,43 @@
             }
         }
     </AuthorizeView>
+    
+    <MudNavGroup Title="@Resource.Content_Management" 
+                 Icon="@Icons.Material.Outlined.VideoFile" 
+                 IconColor="Color.Primary" 
+                 Expanded="true">
+        <MudNavLink Href="/content/videos">@Resource.Content</MudNavLink>
+        <MudNavLink Href="/content/videos">@Resource.Assets</MudNavLink>
+        <MudNavLink Href="/content/videos">@Resource.Playlists</MudNavLink>
+        <MudNavLink Href="/content/videos">@Resource.Series</MudNavLink>
+        <MudNavLink Href="/content/videos">@Resource.Swim_Lanes</MudNavLink>
+        <MudNavLink Href="/content/videos">@Resource.Content_Settings</MudNavLink>
+    </MudNavGroup>
+    
+    <MudNavGroup Title="@Resource.Live_Stream" 
+                 Icon="@Icons.Material.Outlined.LiveTv" 
+                 IconColor="Color.Primary" 
+                 Expanded="true">
+        <MudNavLink Href="/content/videos">@Resource.Content</MudNavLink>
+    </MudNavGroup>
+    
+
+    <MudNavGroup Title="@Resource.Content" Icon="@Icons.Material.Outlined.Folder" IconColor="Color.Primary" Expanded="false">
+        <MudNavGroup Title="@Resource.Content" Expanded="true">
+            <MudNavLink Href="/content/videos" Icon="@Icons.Material.Outlined.VideoFile">@Resource.Videos</MudNavLink>
+            <MudNavLink Href="/content/videos" Icon="@Icons.Material.Outlined.LiveTv">@Resource.Live_Streams</MudNavLink>
+            <MudNavLink Href="/content/videos" Icon="@Icons.Material.Outlined.Podcasts">@Resource.Podcasts</MudNavLink>
+            <MudNavLink Href="/content/videos" Icon="@Icons.Material.Outlined.FeaturedPlayList">@Resource.Collections</MudNavLink>
+            <MudNavLink Href="/content/videos" Icon="@Icons.Material.Outlined.AttachFile">@Resource.Extras</MudNavLink>
+        </MudNavGroup>
+
+        <MudNavGroup Title="@Resource.Organize" Expanded="true">
+            <MudNavLink Href="/content/categories" Icon="@Icons.Material.Outlined.GroupWork">@Resource.Categories</MudNavLink>
+            <MudNavLink Href="/content/authors" Icon="@Icons.Material.Outlined.PersonPin">@Resource.Authors</MudNavLink>
+            <MudNavLink Href="/content/videos" Icon="@Icons.Material.Outlined.FilterAlt">@Resource.Custom_Filters</MudNavLink>
+
+        </MudNavGroup>
+    </MudNavGroup>
     <MudNavGroup Title="@Resource.Users_Management" Icon="@Icons.Material.Outlined.Security" IconColor="Color.Primary" Expanded="true">
         <MudNavLink Href="identity/users" Icon="@Icons.Material.Outlined.Group">@Resource.Users</MudNavLink>
         <MudNavLink Href="identity/roles" Icon="@Icons.Material.Outlined.GroupWork">@Resource.Roles</MudNavLink>

@@ -2,10 +2,10 @@
 
 namespace OttApiPlatform.Domain.Entities.Content;
 
-[Table("Authors")]
-public class AuthorModel : BaseEntity, IMustHaveTenant
+[Table("People")]
+public class PersonModel : BaseEntity, IMustHaveTenant
 {
-    public AuthorModel()
+    public PersonModel()
     {
         Videos = new List<VideoModel>();
         LiveStreams = new List<LiveStreamModel>();
@@ -13,7 +13,7 @@ public class AuthorModel : BaseEntity, IMustHaveTenant
     }
     public Guid TenantId { get; set; }
 
-    [Required(ErrorMessage = "Author name is a required field.")]
+    [Required(ErrorMessage = "Person name is a required field.")]
     [MaxLength(50, ErrorMessage = "Maximum length for the Name is 50 characters.")]
     public string? Name { get; set; } 
 

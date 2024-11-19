@@ -3,7 +3,42 @@
 public enum ContentAccess
 {
     Free,
-    Premium
+    Premium,
+    Subscription,
+    PayPerView,
+    AdSupported,
+    Exclusive,
+    Trial
+}
+
+public enum ContentType
+{
+    Video,
+    Audio
+}
+
+public enum ContentCategory
+{
+    Movie,
+    Series,
+    Episode,
+    Clip,
+    Trailer,
+    LiveStream,
+    Playlist,
+    Channel,
+    Collection,
+    Bundle,
+    Season,
+    EpisodeGroup,
+    ClipGroup,
+    TrailerGroup,
+    LiveStreamGroup,
+    PlaylistGroup,
+    ChannelGroup,
+    CollectionGroup,
+    BundleGroup,
+    SeasonGroup
 }
 
 public enum PublicationStatus
@@ -97,18 +132,4 @@ public enum AssetImageStatus
     Deleted
 }
 
-public enum LiveStreamStatus
-{
-    None,
-    Preparing,
-    Ready,
-    Errored,
-    Deleted
-}
 
-public enum LatencyMode
-{
-    Low,
-    Reduced,
-    Standard
-}

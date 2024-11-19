@@ -35,12 +35,12 @@ public class LiveStreamModel : BaseAsset, IMustHaveTenant
     public string? TestLiveStreamPasscode { get; set; }
 
     #region foreign keys
-    [ForeignKey(nameof(AuthorModel))]
+    [ForeignKey(nameof(PersonModel))]
     public Guid? AuthorId { get; set; }
     #endregion
 
     #region Navigational Properties
-    public AuthorModel? Author { get; set; }
+    public PersonModel? Author { get; set; }
     //public ICollection<LiveStreamCategoryModel>? LiveStreamsCategories { get; set; }
 
     // public List<CommentModel>? Comments { get; set; }

@@ -2511,4 +2511,55 @@
   <data name="Uploaded_On" xml:space="preserve">
     <value>Yüklendi</value>
   </data>
+  <data name="Content" xml:space="preserve">
+    <value>İçerik</value>
+  </data>
+  <data name="Live_Streams" xml:space="preserve">
+    <value>Canlı Yayınlar</value>
+  </data>
+  <data name="Podcasts" xml:space="preserve">
+    <value>Podcast'ler</value>
+  </data>
+  <data name="Collections" xml:space="preserve">
+    <value>Koleksiyon</value>
+  </data>
+  <data name="Extras" xml:space="preserve">
+    <value>Ekstra</value>
+  </data>
+  <data name="Organize" xml:space="preserve">
+    <value>Düzenlemek</value>
+  </data>
+  <data name="Custom_Filters" xml:space="preserve">
+    <value>Özel Filtreler</value>
+  </data>
+  <data name="Content_Management" xml:space="preserve">
+    <value>İçerik Yönetimi</value>
+  </data>
+  <data name="Assets" xml:space="preserve">
+    <value>Varlık</value>
+  </data>
+  <data name="Playlists" xml:space="preserve">
+    <value>Çalma listeleri</value>
+  </data>
+  <data name="Series" xml:space="preserve">
+    <value>Silsile</value>
+  </data>
+  <data name="Swim_Lanes" xml:space="preserve">
+    <value>Yüzme Kulvarları</value>
+  </data>
+  <data name="Content_Settings" xml:space="preserve">
+    <value>İçerik Ayarları</value>
+  </data>
+  <data name="Live_Stream_Management" xml:space="preserve">
+    <value>Canlı Yayın Yönetimi</value>
+  </data>
+  <data name="Live_Stream" xml:space="preserve">
+    <value>Canlı Yayın</value>
+  </data>
+  <data name="Content_Library" xml:space="preserve">
+    <value>İçerik Kütüphanesi</value>
+  </data>
+  <data name="Add_Content" xml:space="preserve">
+    <value>İçerik Ekle</value>
+  </data>
 </root>

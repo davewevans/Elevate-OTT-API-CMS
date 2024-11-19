@@ -7,13 +7,13 @@ public class PodcastModel : BaseAsset, IMustHaveTenant
 
     #region foreign keys
 
-    [ForeignKey(nameof(AuthorModel))]
+    [ForeignKey(nameof(PersonModel))]
     public Guid? AuthorId { get; set; }
 
     #endregion
 
     #region Navigational Properties
-    public AuthorModel? Author { get; set; }
+    public PersonModel? Author { get; set; }
     //public ICollection<PodcastCollectionModel>? PodcastsCollections { get; set; }
     //public ICollection<PodcastCategoryModel>? PodcastsCategoriess { get; set; }
 

@@ -37,6 +37,12 @@
 
 	<ItemGroup>
 	  <Folder Include="Hubs\" />
+	  <Folder Include="Pages\ContentManagement\AssetLibrary\" />
+	  <Folder Include="Pages\ContentManagement\ContentSettings\" />
+	  <Folder Include="Pages\ContentManagement\SwimLanes\" />
+	  <Folder Include="Pages\ContentManagement\Series\" />
+	  <Folder Include="Pages\ContentManagement\PlaylistLibrary\" />
+	  <Folder Include="Pages\LiveStream\" />
 	</ItemGroup>
 
 </Project>

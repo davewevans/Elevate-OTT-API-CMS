@@ -2511,4 +2511,55 @@
   <data name="Uploaded_On" xml:space="preserve">
     <value>上传时间</value>
   </data>
+  <data name="Content" xml:space="preserve">
+    <value>内容</value>
+  </data>
+  <data name="Live_Streams" xml:space="preserve">
+    <value>直播流</value>
+  </data>
+  <data name="Podcasts" xml:space="preserve">
+    <value>播客</value>
+  </data>
+  <data name="Collections" xml:space="preserve">
+    <value>收集</value>
+  </data>
+  <data name="Extras" xml:space="preserve">
+    <value>额外</value>
+  </data>
+  <data name="Organize" xml:space="preserve">
+    <value>组织</value>
+  </data>
+  <data name="Custom_Filters" xml:space="preserve">
+    <value>自定义过滤器</value>
+  </data>
+  <data name="Content_Management" xml:space="preserve">
+    <value>内容管理</value>
+  </data>
+  <data name="Assets" xml:space="preserve">
+    <value>资产</value>
+  </data>
+  <data name="Playlists" xml:space="preserve">
+    <value>播放列表</value>
+  </data>
+  <data name="Series" xml:space="preserve">
+    <value>系列</value>
+  </data>
+  <data name="Swim_Lanes" xml:space="preserve">
+    <value>泳道</value>
+  </data>
+  <data name="Content_Settings" xml:space="preserve">
+    <value>内容设置</value>
+  </data>
+  <data name="Live_Stream_Management" xml:space="preserve">
+    <value>直播流管理</value>
+  </data>
+  <data name="Live_Stream" xml:space="preserve">
+    <value>直播流</value>
+  </data>
+  <data name="Content_Library" xml:space="preserve">
+    <value>内容库</value>
+  </data>
+  <data name="Add_Content" xml:space="preserve">
+    <value>添加内容</value>
+  </data>
 </root>

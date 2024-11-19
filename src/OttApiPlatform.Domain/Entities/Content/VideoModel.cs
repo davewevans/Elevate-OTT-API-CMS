@@ -36,7 +36,7 @@ public class VideoModel : BaseAsset, IMustHaveTenant
 
     #region foreign keys
 
-    [ForeignKey(nameof(AuthorModel))]
+    [ForeignKey(nameof(PersonModel))]
     public Guid? AuthorId { get; set; }
 
     #endregion
@@ -47,7 +47,7 @@ public class VideoModel : BaseAsset, IMustHaveTenant
     //public ICollection<VideoCollectionModel>? VideosCollections { get; set; }
     //public ICollection<VideoTagModel>? VideosTags { get; set; }
 
-    public AuthorModel? Author { get; set; }
+    public PersonModel? Author { get; set; }
 
     //public ICollection<ExtraModel>? Extras { get; set; }
     //public ICollection<CommentModel>? Comments { get; set; }
