@@ -1,6 +1,4 @@
-﻿using OttApiPlatform.Domain.Enums.DirectSubscribers;
-
-namespace OttApiPlatform.Domain.Entities.Products;
+﻿namespace OttApiPlatform.Domain.Entities.Products;
 
 [Table("ItemPrices")]
 public class ItemPriceModel : BaseEntity, IMustHaveTenant
@@ -33,7 +31,7 @@ public class ItemPriceModel : BaseEntity, IMustHaveTenant
 
     public int Period { get; set; }
 
-    public BillingPeriodUnit PeriodUnit { get; set; }
+    public BillingCycle Cycle { get; set; }
 
     public string? CurrencyCode { get; set; }
 

@@ -1,4 +1,6 @@
-﻿namespace OttApiPlatform.Domain.Entities.Identity;
+﻿using OttApiPlatform.Domain.Entities.ContentAccessManagement;
+
+namespace OttApiPlatform.Domain.Entities.Identity;
 
 /// <summary>
 /// Represents a user.
@@ -19,6 +21,9 @@ public class ApplicationUser : IdentityUser, IAuditable, IMayHaveTenant
     #endregion Public Constructors
 
     #region Public Properties
+
+    public Guid? TenantId { get; set; }
+
 
     /// <summary>
     /// Gets or sets the name of the user.
@@ -101,13 +106,15 @@ public class ApplicationUser : IdentityUser, IAuditable, IMayHaveTenant
     public DateTime? ModifiedOn { get; set; }
     public string DeletedBy { get; set; }
     public DateTime? DeletedOn { get; set; }
-    public Guid? TenantId { get; set; }
+
+    #endregion Public Properties
 
     #region Navigational Properties
 
     public Tenant Tenant { get; set; }
 
+    // public ICollection<UserSubscriptionModel> UserSubscriptions { get; set; }
+
     #endregion
 
-    #endregion Public Properties
 }

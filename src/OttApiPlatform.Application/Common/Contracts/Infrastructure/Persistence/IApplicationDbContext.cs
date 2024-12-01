@@ -1,4 +1,3 @@
-using OttApiPlatform.Domain.Entities.Content;
 using OttApiPlatform.Domain.Entities.Mux;
 
 namespace OttApiPlatform.Application.Common.Contracts.Infrastructure.Persistence;
@@ -79,7 +78,7 @@ public interface IApplicationDbContext : IDisposable
 
     DbSet<Tenant> Tenants { get; set; }
 
-    DbSet<Domain.Entities.AccountInfo> AccountInfo { get; set; }
+    DbSet<Domain.Entities.AccountInfoModel> AccountInfo { get; set; }
 
     //DbSet<MuxPlaybackIdModel> MuxPlaybackIds { get; set; }
     //DbSet<PersonModel> Authors { get; set; }

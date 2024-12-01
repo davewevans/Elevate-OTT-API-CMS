@@ -26,7 +26,7 @@ public class AccountInfoResponse
 
     #region Public Methods
 
-    public static AccountInfoResponse MapFromEntity(Domain.Entities.AccountInfo accountInfo)
+    public static AccountInfoResponse MapFromEntity(Domain.Entities.AccountInfoModel accountInfo)
     {
         return new AccountInfoResponse
         {

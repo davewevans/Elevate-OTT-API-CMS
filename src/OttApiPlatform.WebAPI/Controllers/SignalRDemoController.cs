@@ -1,6 +1,4 @@
-﻿using OttApiPlatform.Domain.Enums.Content;
-
-namespace OttApiPlatform.WebAPI.Controllers;
+﻿namespace OttApiPlatform.WebAPI.Controllers;
 
 [Route("api/signalr")]
 [ApiController]
