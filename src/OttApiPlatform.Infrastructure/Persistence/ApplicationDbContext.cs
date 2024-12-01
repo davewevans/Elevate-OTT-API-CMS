@@ -1,4 +1,4 @@
-using OttApiPlatform.Domain.Entities.Content;
+using OttApiPlatform.Domain.Entities.ContentManagement;
 using OttApiPlatform.Domain.Entities.Mux;
 
 namespace OttApiPlatform.Infrastructure.Persistence;
@@ -63,16 +63,34 @@ public sealed class ApplicationDbContext : IdentityDbContext<ApplicationUser,
     // Application-generic entities.
     public DbSet<Report> Reports { get; set; }
     public DbSet<Tenant> Tenants { get; set; }
-    public DbSet<Domain.Entities.AccountInfo> AccountInfo { get; set; }
-    public DbSet<MuxPlaybackIdModel> MuxPlaybackIds { get; set; }
-    public DbSet<AuthorModel> Authors { get; set; }
-    public DbSet<PodcastModel> Podcasts { get; set; }
-    public DbSet<ContentFeedModel> ContentFeeds { get; set; }
-    public DbSet<CategoryCollectionModel> CategoriesCollections { get; set; }
-    public DbSet<VideoCollectionModel> VideosCollections { get; set; }
-    public DbSet<CommentModel> Comments { get; set; }
-    public DbSet<LiveStreamCategoryModel> LiveStreamsCategories { get; set; }
-    public DbSet<CountryCodeModel> CountryCodes { get; set; }
+    public DbSet<Domain.Entities.AccountInfoModel> AccountInfo { get; set; }
+
+    public DbSet<AssetModel> Assets { get; set; }
+    public DbSet<AssetStorageModel> AssetStorages { get; set; }
+    public DbSet<AudioModel> Audios { get; set; }
+    public DbSet<CategoryModel> Categories { get; set; }
+    public DbSet<ContentCategoryModel> ContentCategories { get; set; }
+    public DbSet<ContentSettingsCountryModel> ContentCountryRestrictions { get; set; }
+    public DbSet<ContentModel> Contents { get; set; }
+    public DbSet<ContentPersonModel> ContentPeople { get; set; }
+    public DbSet<PlaylistAssetModel> ContentPlaylists { get; set; }
+    public DbSet<SeriesAssetModel> ContentSeries { get; set; }
+    public DbSet<ContentSettingsModel> ContentSettings { get; set; }
+    public DbSet<ContentTagModel> ContentTags { get; set; }
+    public DbSet<CountryModel> Countries { get; set; }
+    public DbSet<DocumentModel> Documents { get; set; }
+    public DbSet<ImageModel> Images { get; set; }
+    public DbSet<LanguageModel> Languages { get; set; }
+    public DbSet<LiveStreamModel> LiveStreams { get; set; }
+    public DbSet<PersonModel> People { get; set; }
+    public DbSet<PlaylistModel> Playlists { get; set; }
+    public DbSet<SeasonModel> Seasons { get; set; }
+    public DbSet<SeriesModel> Series { get; set; }
+    public DbSet<StorageLocation> StorageLocations { get; set; }
+    public DbSet<SubtitleModel> Subtitles { get; set; }
+    public DbSet<SwimLaneModel> SwimLanes { get; set; }
+    public DbSet<SwimLaneContentModel> SwimLaneContent { get; set; }
+    public DbSet<TagModel> Tags { get; set; }
     public DbSet<VideoModel> Videos { get; set; }
 
 
@@ -253,6 +271,16 @@ public sealed class ApplicationDbContext : IdentityDbContext<ApplicationUser,
 
         // Configures entities for storing settings in a separate schema.
         DbContextHelper.ConfigureSettingsSchemaEntities(modelBuilder);
+
+        DbContextHelper.ConfigureUniqueConstraints(modelBuilder);
+
+        DbContextHelper.ConfigureManyToManyRelationships(modelBuilder);
+
+        DbContextHelper.ConfigureOneToManyRelationships(modelBuilder);
+
+        DbContextHelper.ConfigureOneToOneRelationships(modelBuilder);
+
+        DbContextHelper.ConfigurePrecisionForDecimal(modelBuilder);
 
         // Calls the base method to continue with further configuration.
         base.OnModelCreating(modelBuilder);

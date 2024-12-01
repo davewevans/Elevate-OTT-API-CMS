@@ -41,7 +41,7 @@ public class CreateAccountInfoCommand : IRequest<Envelope<CreateAccountInfoRespo
 
         public async Task<Envelope<CreateAccountInfoResponse>> Handle(CreateAccountInfoCommand request, CancellationToken cancellationToken)
         {
-            var accountInfo = new Domain.Entities.AccountInfo
+            var accountInfo = new Domain.Entities.AccountInfoModel
             {
                 ChannelName = request.ChannelName,
                 LicenseKey = request.LicenseKey,

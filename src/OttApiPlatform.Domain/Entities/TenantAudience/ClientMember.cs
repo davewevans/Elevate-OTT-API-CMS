@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace OttApiPlatform.Domain.Entities.TenantAudience;
 
+// TODO rethink this
+
 [Table("ClientMembers")]
 public class ClientMember : BaseEntity, IMustHaveTenant
 {

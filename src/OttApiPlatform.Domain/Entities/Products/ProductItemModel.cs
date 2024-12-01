@@ -1,5 +1,4 @@
-﻿using OttApiPlatform.Domain.Enums.DirectSubscribers;
-
+﻿
 namespace OttApiPlatform.Domain.Entities.Products;
 
 [Table("ProductItems")]

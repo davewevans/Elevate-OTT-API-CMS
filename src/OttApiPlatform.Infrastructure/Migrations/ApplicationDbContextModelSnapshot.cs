@@ -22,7 +22,7 @@ namespace OttApiPlatform.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("OttApiPlatform.Domain.Entities.AccountInfo", b =>
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.AccountInfoModel", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -30,6 +30,9 @@ namespace OttApiPlatform.Infrastructure.Migrations
 
                     b.Property<string>("ChannelName")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("CountryId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
@@ -66,7 +69,1620 @@ namespace OttApiPlatform.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CountryId");
+
                     b.ToTable("AccountInfo");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("ClosedCaptions")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CreationStatus")
+                        .HasColumnType("int");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsTestAsset")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid?>("LanguageId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Passthrough")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PublicPlaybackId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SignedPlaybackId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LanguageId");
+
+                    b.ToTable("Assets");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.AssetStorageModel", b =>
+                {
+                    b.Property<Guid>("AssetId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("StorageLocationId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("AssetId", "StorageLocationId");
+
+                    b.HasIndex("Order")
+                        .IsUnique();
+
+                    b.HasIndex("StorageLocationId");
+
+                    b.ToTable("AssetStorage");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.AudioModel", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("AssetId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Bitrate")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Duration")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Encoded")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("FileName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("FileSize")
+                        .HasColumnType("float");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("PersonModelId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AssetId")
+                        .IsUnique();
+
+                    b.HasIndex("PersonModelId");
+
+                    b.ToTable("Audios");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.CategoryModel", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<Guid?>("ImageAssetId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SeoDescription")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("SeoTitle")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Slug")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ImageAssetId")
+                        .IsUnique()
+                        .HasFilter("[ImageAssetId] IS NOT NULL");
+
+                    b.HasIndex("Order")
+                        .IsUnique();
+
+                    b.ToTable("Categories");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.ContentCategoryModel", b =>
+                {
+                    b.Property<Guid>("ContentId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CategoryId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.Property<Guid?>("SwimLaneModelId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("ContentId", "CategoryId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("Order")
+                        .IsUnique();
+
+                    b.HasIndex("SwimLaneModelId");
+
+                    b.ToTable("ContentCategories");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.ContentModel", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("AllowDownload")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid?>("BannerMobileId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("BannerTvAppsId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("BannerWebsiteId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FullDescription")
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
+                    b.Property<string>("Language")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("PosterMobileId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("PosterTvAppsId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("PosterWebId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("PreviewMediaId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("PrimaryMediaId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("SeoDescription")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("SeoTitle")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<Guid?>("SeriesId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ShortDescription")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Slug")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BannerMobileId")
+                        .IsUnique()
+                        .HasFilter("[BannerMobileId] IS NOT NULL");
+
+                    b.HasIndex("BannerTvAppsId")
+                        .IsUnique()
+                        .HasFilter("[BannerTvAppsId] IS NOT NULL");
+
+                    b.HasIndex("BannerWebsiteId")
+                        .IsUnique()
+                        .HasFilter("[BannerWebsiteId] IS NOT NULL");
+
+                    b.HasIndex("PosterMobileId")
+                        .IsUnique()
+                        .HasFilter("[PosterMobileId] IS NOT NULL");
+
+                    b.HasIndex("PosterTvAppsId")
+                        .IsUnique()
+                        .HasFilter("[PosterTvAppsId] IS NOT NULL");
+
+                    b.HasIndex("PosterWebId")
+                        .IsUnique()
+                        .HasFilter("[PosterWebId] IS NOT NULL");
+
+                    b.HasIndex("PreviewMediaId")
+                        .IsUnique()
+                        .HasFilter("[PreviewMediaId] IS NOT NULL");
+
+                    b.HasIndex("PrimaryMediaId")
+                        .IsUnique()
+                        .HasFilter("[PrimaryMediaId] IS NOT NULL");
+
+                    b.HasIndex("SeriesId");
+
+                    b.ToTable("Asset");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.ContentPersonModel", b =>
+                {
+                    b.Property<Guid>("ContentId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("PersonId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("ContentId", "PersonId");
+
+                    b.HasIndex("Order")
+                        .IsUnique();
+
+                    b.HasIndex("PersonId");
+
+                    b.ToTable("ContentPeople");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.ContentSettingsCountryModel", b =>
+                {
+                    b.Property<Guid>("ContentSettingsId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CountryId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("ContentSettingsId", "CountryId");
+
+                    b.HasIndex("CountryId");
+
+                    b.ToTable("ContentSettingsCountries");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.ContentSettingsModel", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("AllowComments")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("AllowDislikes")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("AllowDownload")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("AllowEmbedding")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("AllowFavorites")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("AllowLikes")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("AllowMaturityRatings")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("AllowRatings")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("AllowReviews")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("AllowSharing")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("AllowUsersToCreatePlaylist")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("DislikesCount")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsGeoRestricted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("LikesCount")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("RequireUsersSignInToAccessFreeContent")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ContentSettings");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.ContentTagModel", b =>
+                {
+                    b.Property<Guid>("ContentId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("TagId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("ContentId", "TagId");
+
+                    b.HasIndex("Order")
+                        .IsUnique();
+
+                    b.HasIndex("TagId");
+
+                    b.ToTable("ContentTags");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.CountryModel", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DialCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("FlagAssetId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ISO2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ISO3")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("NumericCode")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Region")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SubRegion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FlagAssetId")
+                        .IsUnique()
+                        .HasFilter("[FlagAssetId] IS NOT NULL");
+
+                    b.ToTable("Countries");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.DocumentModel", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("AssetId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ContentType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FileName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("FileSize")
+                        .HasColumnType("float");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AssetId")
+                        .IsUnique();
+
+                    b.ToTable("Documents");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.ImageModel", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("AssetId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FileName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Height")
+                        .HasColumnType("int");
+
+                    b.Property<double>("ImageSize")
+                        .HasColumnType("float");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Width")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AssetId")
+                        .IsUnique();
+
+                    b.ToTable("Images");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.LanguageModel", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Code")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RegionCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Languages");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.LiveStreamModel", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ButtonPurchaseText")
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsMuxLiveStream")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("LatencyMode")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("LiveStreamCreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("LiveStreamEndedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("MaxContinuousDuration")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("MuxLiveStreamId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("PersonModelId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("PreRegistrationText")
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.Property<string>("Rating")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<float>("ReconnectWindow")
+                        .HasColumnType("real");
+
+                    b.Property<string>("RtmpUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RtmpsUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Sku")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StreamKey")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("StreamType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StreamUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("TestLiveStreamPasscode")
+                        .HasMaxLength(6)
+                        .HasColumnType("nvarchar(6)");
+
+                    b.Property<int>("VideoResolutionType")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PersonModelId");
+
+                    b.ToTable("LiveStreams");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.PersonModel", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Bio")
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("SeoDescription")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("SeoTitle")
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.Property<string>("Slug")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("People");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.PlaylistAssetModel", b =>
+                {
+                    b.Property<Guid>("AssetId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("PlaylistId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("AssetId", "PlaylistId");
+
+                    b.HasIndex("Order")
+                        .IsUnique();
+
+                    b.HasIndex("PlaylistId");
+
+                    b.ToTable("PlaylistAssets");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.PlaylistModel", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("BannerMobileId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("BannerTvAppsId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("BannerWebsiteId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<Guid?>("ImageAssetId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Language")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Permalink")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("PosterMobileId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("PosterTvAppsId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("PosterWebId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Rating")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SeoDescription")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("SeoTitle")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Slug")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BannerMobileId");
+
+                    b.HasIndex("BannerTvAppsId");
+
+                    b.HasIndex("BannerWebsiteId");
+
+                    b.HasIndex("ImageAssetId")
+                        .IsUnique()
+                        .HasFilter("[ImageAssetId] IS NOT NULL");
+
+                    b.HasIndex("PosterMobileId");
+
+                    b.HasIndex("PosterTvAppsId");
+
+                    b.HasIndex("PosterWebId");
+
+                    b.ToTable("Playlists");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.SeasonAssetModel", b =>
+                {
+                    b.Property<Guid>("AssetId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("SeasonId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("EpisodeNumber")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("AssetId", "SeasonId");
+
+                    b.HasIndex("EpisodeNumber")
+                        .IsUnique();
+
+                    b.HasIndex("SeasonId");
+
+                    b.ToTable("SeasonAssets");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.SeasonModel", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("ImageAssetId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SeasonNumber")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("SeriesId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ImageAssetId")
+                        .IsUnique()
+                        .HasFilter("[ImageAssetId] IS NOT NULL");
+
+                    b.HasIndex("SeasonNumber")
+                        .IsUnique();
+
+                    b.HasIndex("SeriesId");
+
+                    b.ToTable("Seasons");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.SeriesAssetModel", b =>
+                {
+                    b.Property<Guid>("AssetId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("SeriesId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("AssetId", "SeriesId");
+
+                    b.HasIndex("Order")
+                        .IsUnique();
+
+                    b.HasIndex("SeriesId");
+
+                    b.ToTable("SeriesAssets");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.SeriesModel", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ContentId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ContentId")
+                        .IsUnique();
+
+                    b.ToTable("Series");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.StorageLocation", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Details")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("StorageLocations");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.SubtitleModel", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("ClosedCaption")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("ContentId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("LanguageCodeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Passthrough")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("TrackId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ContentId");
+
+                    b.ToTable("Subtitles");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.SwimLaneContentModel", b =>
+                {
+                    b.Property<Guid>("ContentId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("SwimLaneId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.Property<Guid?>("SwimLaneModelId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("ContentId", "SwimLaneId");
+
+                    b.HasIndex("Order")
+                        .IsUnique();
+
+                    b.HasIndex("SwimLaneId");
+
+                    b.HasIndex("SwimLaneModelId");
+
+                    b.ToTable("SwimLaneContent");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.SwimLaneModel", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("ContentLimit")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ContentType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("SwimLaneCriteria")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SwimLaneType")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SwimLanes");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.TagModel", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tags");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.VideoModel", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("AssetId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("AudioBitrate")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Bitrate")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DeletedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<TimeSpan>("Duration")
+                        .HasColumnType("time");
+
+                    b.Property<bool>("Encoded")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("FileName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("FileSize")
+                        .HasColumnType("float");
+
+                    b.Property<string>("FrameRate")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("PersonModelId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Resolution")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("TenantId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("VideoBitrate")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("VideoCodec")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AssetId")
+                        .IsUnique();
+
+                    b.HasIndex("PersonModelId");
+
+                    b.ToTable("Videos");
                 });
 
             modelBuilder.Entity("OttApiPlatform.Domain.Entities.Identity.ApplicationPermission", b =>
@@ -285,6 +1901,8 @@ namespace OttApiPlatform.Infrastructure.Migrations
                     b.HasIndex("NormalizedUserName")
                         .HasDatabaseName("UserNameIndex");
 
+                    b.HasIndex("TenantId");
+
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
@@ -421,7 +2039,7 @@ namespace OttApiPlatform.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Height")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(10, 2)");
 
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
@@ -439,7 +2057,7 @@ namespace OttApiPlatform.Infrastructure.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<decimal>("Weight")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(10, 2)");
 
                     b.HasKey("Id");
 
@@ -709,6 +2327,433 @@ namespace OttApiPlatform.Infrastructure.Migrations
                     b.ToTable("Tenants");
                 });
 
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.AccountInfoModel", b =>
+                {
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.CountryModel", "Country")
+                        .WithMany()
+                        .HasForeignKey("CountryId");
+
+                    b.Navigation("Country");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", b =>
+                {
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.LanguageModel", "Language")
+                        .WithMany("Assets")
+                        .HasForeignKey("LanguageId");
+
+                    b.Navigation("Language");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.AssetStorageModel", b =>
+                {
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", "Asset")
+                        .WithMany("AssetStorages")
+                        .HasForeignKey("AssetId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.StorageLocation", "StorageLocation")
+                        .WithMany("AssetStorages")
+                        .HasForeignKey("StorageLocationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Asset");
+
+                    b.Navigation("StorageLocation");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.AudioModel", b =>
+                {
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", "Asset")
+                        .WithOne("Audio")
+                        .HasForeignKey("OttApiPlatform.Domain.Entities.ContentManagement.AudioModel", "AssetId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.PersonModel", null)
+                        .WithMany("Audios")
+                        .HasForeignKey("PersonModelId");
+
+                    b.Navigation("Asset");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.CategoryModel", b =>
+                {
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", "Image")
+                        .WithOne()
+                        .HasForeignKey("OttApiPlatform.Domain.Entities.ContentManagement.CategoryModel", "ImageAssetId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("Image");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.ContentCategoryModel", b =>
+                {
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.CategoryModel", "Category")
+                        .WithMany("ContentCategories")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.ContentModel", "Content")
+                        .WithMany("ContentCategories")
+                        .HasForeignKey("ContentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.SwimLaneModel", null)
+                        .WithMany("ContentCategories")
+                        .HasForeignKey("SwimLaneModelId");
+
+                    b.Navigation("Category");
+
+                    b.Navigation("Content");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.ContentModel", b =>
+                {
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", "BannerMobile")
+                        .WithOne()
+                        .HasForeignKey("OttApiPlatform.Domain.Entities.ContentManagement.ContentModel", "BannerMobileId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", "BannerTvApps")
+                        .WithOne()
+                        .HasForeignKey("OttApiPlatform.Domain.Entities.ContentManagement.ContentModel", "BannerTvAppsId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", "BannerWebsite")
+                        .WithOne()
+                        .HasForeignKey("OttApiPlatform.Domain.Entities.ContentManagement.ContentModel", "BannerWebsiteId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", "PosterMobile")
+                        .WithOne()
+                        .HasForeignKey("OttApiPlatform.Domain.Entities.ContentManagement.ContentModel", "PosterMobileId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", "PosterTvApps")
+                        .WithOne()
+                        .HasForeignKey("OttApiPlatform.Domain.Entities.ContentManagement.ContentModel", "PosterTvAppsId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", "PosterWeb")
+                        .WithOne()
+                        .HasForeignKey("OttApiPlatform.Domain.Entities.ContentManagement.ContentModel", "PosterWebId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", "PreviewMedia")
+                        .WithOne()
+                        .HasForeignKey("OttApiPlatform.Domain.Entities.ContentManagement.ContentModel", "PreviewMediaId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", "PrimaryMedia")
+                        .WithOne()
+                        .HasForeignKey("OttApiPlatform.Domain.Entities.ContentManagement.ContentModel", "PrimaryMediaId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.SeriesModel", "Series")
+                        .WithMany()
+                        .HasForeignKey("SeriesId");
+
+                    b.Navigation("BannerMobile");
+
+                    b.Navigation("BannerTvApps");
+
+                    b.Navigation("BannerWebsite");
+
+                    b.Navigation("PosterMobile");
+
+                    b.Navigation("PosterTvApps");
+
+                    b.Navigation("PosterWeb");
+
+                    b.Navigation("PreviewMedia");
+
+                    b.Navigation("PrimaryMedia");
+
+                    b.Navigation("Series");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.ContentPersonModel", b =>
+                {
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.ContentModel", "Content")
+                        .WithMany("ContentPeople")
+                        .HasForeignKey("ContentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.PersonModel", "Person")
+                        .WithMany("ContentPeople")
+                        .HasForeignKey("PersonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Content");
+
+                    b.Navigation("Person");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.ContentSettingsCountryModel", b =>
+                {
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.ContentSettingsModel", "ContentSettings")
+                        .WithMany("RestrictedCountries")
+                        .HasForeignKey("ContentSettingsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.CountryModel", "Country")
+                        .WithMany("RestrictedCountries")
+                        .HasForeignKey("CountryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ContentSettings");
+
+                    b.Navigation("Country");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.ContentTagModel", b =>
+                {
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.ContentModel", "Content")
+                        .WithMany("ContentTags")
+                        .HasForeignKey("ContentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.TagModel", "Tag")
+                        .WithMany("ContentTags")
+                        .HasForeignKey("TagId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Content");
+
+                    b.Navigation("Tag");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.CountryModel", b =>
+                {
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", "FlagAsset")
+                        .WithOne()
+                        .HasForeignKey("OttApiPlatform.Domain.Entities.ContentManagement.CountryModel", "FlagAssetId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("FlagAsset");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.DocumentModel", b =>
+                {
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", "Asset")
+                        .WithOne("Document")
+                        .HasForeignKey("OttApiPlatform.Domain.Entities.ContentManagement.DocumentModel", "AssetId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Asset");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.ImageModel", b =>
+                {
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", "Asset")
+                        .WithOne("Image")
+                        .HasForeignKey("OttApiPlatform.Domain.Entities.ContentManagement.ImageModel", "AssetId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Asset");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.LiveStreamModel", b =>
+                {
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.PersonModel", null)
+                        .WithMany("LiveStreams")
+                        .HasForeignKey("PersonModelId");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.PlaylistAssetModel", b =>
+                {
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", "Asset")
+                        .WithMany("PlaylistAssets")
+                        .HasForeignKey("AssetId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.PlaylistModel", "Playlist")
+                        .WithMany("PlaylistAssets")
+                        .HasForeignKey("PlaylistId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Asset");
+
+                    b.Navigation("Playlist");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.PlaylistModel", b =>
+                {
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", "BannerMobile")
+                        .WithMany()
+                        .HasForeignKey("BannerMobileId");
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", "BannerTvApps")
+                        .WithMany()
+                        .HasForeignKey("BannerTvAppsId");
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", "BannerWebsite")
+                        .WithMany()
+                        .HasForeignKey("BannerWebsiteId");
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", "Image")
+                        .WithOne()
+                        .HasForeignKey("OttApiPlatform.Domain.Entities.ContentManagement.PlaylistModel", "ImageAssetId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", "PosterMobile")
+                        .WithMany()
+                        .HasForeignKey("PosterMobileId");
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", "PosterTvApps")
+                        .WithMany()
+                        .HasForeignKey("PosterTvAppsId");
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", "PosterWeb")
+                        .WithMany()
+                        .HasForeignKey("PosterWebId");
+
+                    b.Navigation("BannerMobile");
+
+                    b.Navigation("BannerTvApps");
+
+                    b.Navigation("BannerWebsite");
+
+                    b.Navigation("Image");
+
+                    b.Navigation("PosterMobile");
+
+                    b.Navigation("PosterTvApps");
+
+                    b.Navigation("PosterWeb");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.SeasonAssetModel", b =>
+                {
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", "Asset")
+                        .WithMany("SeasonAssets")
+                        .HasForeignKey("AssetId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.SeasonModel", "Season")
+                        .WithMany("SeasonAssets")
+                        .HasForeignKey("SeasonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Asset");
+
+                    b.Navigation("Season");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.SeasonModel", b =>
+                {
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", "Image")
+                        .WithOne()
+                        .HasForeignKey("OttApiPlatform.Domain.Entities.ContentManagement.SeasonModel", "ImageAssetId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.SeriesModel", "Series")
+                        .WithMany("Seasons")
+                        .HasForeignKey("SeriesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Image");
+
+                    b.Navigation("Series");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.SeriesAssetModel", b =>
+                {
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", "Asset")
+                        .WithMany("SeriesAssets")
+                        .HasForeignKey("AssetId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.SeriesModel", "Series")
+                        .WithMany("SeriesAssets")
+                        .HasForeignKey("SeriesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Asset");
+
+                    b.Navigation("Series");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.SeriesModel", b =>
+                {
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.ContentModel", "Content")
+                        .WithOne()
+                        .HasForeignKey("OttApiPlatform.Domain.Entities.ContentManagement.SeriesModel", "ContentId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Content");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.SubtitleModel", b =>
+                {
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.ContentModel", "Content")
+                        .WithMany("Subtitles")
+                        .HasForeignKey("ContentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Content");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.SwimLaneContentModel", b =>
+                {
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.ContentModel", "Content")
+                        .WithMany("SwimLaneContent")
+                        .HasForeignKey("ContentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.CategoryModel", "SwimLane")
+                        .WithMany("SwimLaneContent")
+                        .HasForeignKey("SwimLaneId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.SwimLaneModel", null)
+                        .WithMany("SwimLaneContent")
+                        .HasForeignKey("SwimLaneModelId");
+
+                    b.Navigation("Content");
+
+                    b.Navigation("SwimLane");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.VideoModel", b =>
+                {
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", "Asset")
+                        .WithOne("Video")
+                        .HasForeignKey("OttApiPlatform.Domain.Entities.ContentManagement.VideoModel", "AssetId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OttApiPlatform.Domain.Entities.ContentManagement.PersonModel", null)
+                        .WithMany("Videos")
+                        .HasForeignKey("PersonModelId");
+
+                    b.Navigation("Asset");
+                });
+
             modelBuilder.Entity("OttApiPlatform.Domain.Entities.Identity.ApplicationPermission", b =>
                 {
                     b.HasOne("OttApiPlatform.Domain.Entities.Identity.ApplicationPermission", "Parent")
@@ -727,6 +2772,15 @@ namespace OttApiPlatform.Infrastructure.Migrations
                         .IsRequired();
 
                     b.Navigation("Role");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.Identity.ApplicationUser", b =>
+                {
+                    b.HasOne("OttApiPlatform.Domain.Entities.Tenant", "Tenant")
+                        .WithMany()
+                        .HasForeignKey("TenantId");
+
+                    b.Navigation("Tenant");
                 });
 
             modelBuilder.Entity("OttApiPlatform.Domain.Entities.Identity.ApplicationUserAttachment", b =>
@@ -801,6 +2855,105 @@ namespace OttApiPlatform.Infrastructure.Migrations
                         .IsRequired();
 
                     b.Navigation("Applicant");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.AssetModel", b =>
+                {
+                    b.Navigation("AssetStorages");
+
+                    b.Navigation("Audio");
+
+                    b.Navigation("Document");
+
+                    b.Navigation("Image");
+
+                    b.Navigation("PlaylistAssets");
+
+                    b.Navigation("SeasonAssets");
+
+                    b.Navigation("SeriesAssets");
+
+                    b.Navigation("Video");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.CategoryModel", b =>
+                {
+                    b.Navigation("ContentCategories");
+
+                    b.Navigation("SwimLaneContent");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.ContentModel", b =>
+                {
+                    b.Navigation("ContentCategories");
+
+                    b.Navigation("ContentPeople");
+
+                    b.Navigation("ContentTags");
+
+                    b.Navigation("Subtitles");
+
+                    b.Navigation("SwimLaneContent");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.ContentSettingsModel", b =>
+                {
+                    b.Navigation("RestrictedCountries");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.CountryModel", b =>
+                {
+                    b.Navigation("RestrictedCountries");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.LanguageModel", b =>
+                {
+                    b.Navigation("Assets");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.PersonModel", b =>
+                {
+                    b.Navigation("Audios");
+
+                    b.Navigation("ContentPeople");
+
+                    b.Navigation("LiveStreams");
+
+                    b.Navigation("Videos");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.PlaylistModel", b =>
+                {
+                    b.Navigation("PlaylistAssets");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.SeasonModel", b =>
+                {
+                    b.Navigation("SeasonAssets");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.SeriesModel", b =>
+                {
+                    b.Navigation("Seasons");
+
+                    b.Navigation("SeriesAssets");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.StorageLocation", b =>
+                {
+                    b.Navigation("AssetStorages");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.SwimLaneModel", b =>
+                {
+                    b.Navigation("ContentCategories");
+
+                    b.Navigation("SwimLaneContent");
+                });
+
+            modelBuilder.Entity("OttApiPlatform.Domain.Entities.ContentManagement.TagModel", b =>
+                {
+                    b.Navigation("ContentTags");
                 });
 
             modelBuilder.Entity("OttApiPlatform.Domain.Entities.Identity.ApplicationPermission", b =>

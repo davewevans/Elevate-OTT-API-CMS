@@ -121,7 +121,7 @@ public partial class VideoList : ComponentBase, IAsyncDisposable
             //}));
         }
 
-        await ConnectToVideoHub();
+        // await ConnectToVideoHub();
     }
     #endregion Protected Methods
 
@@ -220,6 +220,10 @@ public partial class VideoList : ComponentBase, IAsyncDisposable
     private async Task<TableData<VideoItem>> ServerReload(TableState state)
     {
         // TODO guard clause
+
+        return new TableData<VideoItem>();
+
+
 
         GetVideosQuery.SearchText = SearchString;
 

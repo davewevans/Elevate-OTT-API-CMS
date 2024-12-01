@@ -1,5 +1,4 @@
 ﻿using OttApiPlatform.Application.Common.Contracts.Hub;
-using OttApiPlatform.Domain.Enums.Content;
 
 namespace OttApiPlatform.WebAPI.Services.HubServices;
 

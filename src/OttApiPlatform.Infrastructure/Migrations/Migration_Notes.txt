@@ -4,6 +4,11 @@ dotnet ef commands:
 cd src/OttApiPlatform.Infrastructure
 dotnet ef migrations add --startup-project ..\OttApiPlatform.WebAPI\ MigrationName
 dotnet ef database update --startup-project ..\OttApiPlatform.WebAPI\
-
+dotnet ef migrations remove --startup-project ..\OttApiPlatform.WebAPI\ 
+dotnet ef migrations list --startup-project ..\OttApiPlatform.WebAPI\
 
 https://docs.microsoft.com/en-us/ef/core/cli/dotnet#update-the-tools
+
+
+
+dotnet ef migrations add --startup-project ..\OttApiPlatform.WebAPI\  

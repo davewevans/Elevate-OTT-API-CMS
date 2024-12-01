@@ -28,13 +28,16 @@
 	  <Compile Remove="Controllers\AuthorsController.cs" />
 	  <Compile Remove="Controllers\CategoriesController.cs" />
 	  <Compile Remove="Controllers\MuxWebhookController.cs" />
+	  <Compile Remove="Controllers\PeopleController.cs" />
 	  <Compile Remove="Controllers\VideosController.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Azure.Identity" Version="1.13.0" />
+		<PackageReference Include="Azure.Identity" Version="1.13.1" />
 		<PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
-		<PackageReference Include="Hangfire.AspNetCore" Version="1.8.12" />
+		<PackageReference Include="Hangfire" Version="1.8.15" />
+		<PackageReference Include="Hangfire.AspNetCore" Version="1.8.15" />
+		<PackageReference Include="Hangfire.SqlServer" Version="1.8.15" />
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.10" />
 		<PackageReference Include="Microsoft.Azure.SignalR" Version="1.28.0" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
@@ -43,11 +46,11 @@
 		</PackageReference>
 		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.6" />
 		<PackageReference Include="Nancy" Version="2.0.0" />
-		<PackageReference Include="NSwag.MSBuild" Version="14.1.0">
+		<PackageReference Include="NSwag.MSBuild" Version="14.2.0">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="7.1.0" />
 		<PackageReference Include="System.Text.Json" Version="8.0.5" />
 	</ItemGroup>
 
@@ -65,6 +68,10 @@
 	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
 	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
 	  </Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Controllers\TenantAudience\" />
 	</ItemGroup>
 
 </Project>

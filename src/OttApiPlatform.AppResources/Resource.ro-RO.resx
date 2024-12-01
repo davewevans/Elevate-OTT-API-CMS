@@ -2511,4 +2511,55 @@
   <data name="Uploaded_On" xml:space="preserve">
     <value>Încărcat pe</value>
   </data>
+  <data name="Content" xml:space="preserve">
+    <value>Conținut</value>
+  </data>
+  <data name="Live_Streams" xml:space="preserve">
+    <value>Fluxuri live</value>
+  </data>
+  <data name="Podcasts" xml:space="preserve">
+    <value>Podcasturi</value>
+  </data>
+  <data name="Collections" xml:space="preserve">
+    <value>Colecţii</value>
+  </data>
+  <data name="Extras" xml:space="preserve">
+    <value>Extra</value>
+  </data>
+  <data name="Organize" xml:space="preserve">
+    <value>Organiza</value>
+  </data>
+  <data name="Custom_Filters" xml:space="preserve">
+    <value>Filtre personalizate</value>
+  </data>
+  <data name="Content_Management" xml:space="preserve">
+    <value>Managementul conținutului</value>
+  </data>
+  <data name="Assets" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="Playlists" xml:space="preserve">
+    <value>Liste de redare</value>
+  </data>
+  <data name="Series" xml:space="preserve">
+    <value>Serie</value>
+  </data>
+  <data name="Swim_Lanes" xml:space="preserve">
+    <value>Culoare de înot</value>
+  </data>
+  <data name="Content_Settings" xml:space="preserve">
+    <value>Setări de conținut</value>
+  </data>
+  <data name="Live_Stream_Management" xml:space="preserve">
+    <value>Gestionarea fluxurilor live</value>
+  </data>
+  <data name="Live_Stream" xml:space="preserve">
+    <value>Transmitere live</value>
+  </data>
+  <data name="Content_Library" xml:space="preserve">
+    <value>Biblioteca de conținut</value>
+  </data>
+  <data name="Add_Content" xml:space="preserve">
+    <value>Adăugați conținut</value>
+  </data>
 </root>

@@ -24,8 +24,6 @@
 	<ItemGroup>
 	  <Folder Include="Common\DTOs\" />
 	  <Folder Include="ClientSubscribers\" />
-	  <Folder Include="Entities\Content\" />
-	  <Folder Include="Entities\Subscriptions\" />
 	  <Folder Include="Entities\Products\" />
 	</ItemGroup>
 

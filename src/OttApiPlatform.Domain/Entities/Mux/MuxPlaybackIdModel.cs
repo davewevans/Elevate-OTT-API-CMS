@@ -1,9 +1,9 @@
-﻿using OttApiPlatform.Domain.Entities.Content;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using OttApiPlatform.Domain.Entities.ContentManagement;
 
 namespace OttApiPlatform.Domain.Entities.Mux;
 

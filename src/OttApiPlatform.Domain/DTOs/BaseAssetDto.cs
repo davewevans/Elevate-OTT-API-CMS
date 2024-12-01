@@ -1,5 +1,4 @@
 ﻿using OttApiPlatform.Domain.Common.DTOs;
-using OttApiPlatform.Domain.Enums.Content;
 
 namespace OttApiPlatform.Domain.DTOs;
 public abstract class BaseAssetDto : AuditableDto
