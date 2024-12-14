@@ -73,7 +73,7 @@ public sealed class ApplicationDbContext : IdentityDbContext<ApplicationUser,
     public DbSet<ContentSettingsCountryModel> ContentCountryRestrictions { get; set; }
     public DbSet<ContentModel> Contents { get; set; }
     public DbSet<ContentPersonModel> ContentPeople { get; set; }
-    public DbSet<PlaylistAssetModel> ContentPlaylists { get; set; }
+    public DbSet<CollectionsAssetModel> ContentCollections { get; set; }
     public DbSet<SeriesAssetModel> ContentSeries { get; set; }
     public DbSet<ContentSettingsModel> ContentSettings { get; set; }
     public DbSet<ContentTagModel> ContentTags { get; set; }
@@ -82,16 +82,19 @@ public sealed class ApplicationDbContext : IdentityDbContext<ApplicationUser,
     public DbSet<ImageModel> Images { get; set; }
     public DbSet<LanguageModel> Languages { get; set; }
     public DbSet<LiveStreamModel> LiveStreams { get; set; }
+    public DbSet<MuxAssetModel> MuxAssets { get; set; }
+    public DbSet<MuxAssetTrackModel> MuxAssetTracks { get; set; }
+    public DbSet<MuxPlaybackIdModel> MuxPlaybackIds { get; set; }
+    public DbSet<MuxSettingsModel> MuxSettings { get; set; }
     public DbSet<PersonModel> People { get; set; }
-    public DbSet<PlaylistModel> Playlists { get; set; }
+    public DbSet<CollectionModel> Collections { get; set; }
     public DbSet<SeasonModel> Seasons { get; set; }
     public DbSet<SeriesModel> Series { get; set; }
-    public DbSet<StorageLocation> StorageLocations { get; set; }
+    public DbSet<StorageLocationModel> StorageLocations { get; set; }
     public DbSet<SubtitleModel> Subtitles { get; set; }
     public DbSet<SwimLaneModel> SwimLanes { get; set; }
     public DbSet<SwimLaneContentModel> SwimLaneContent { get; set; }
     public DbSet<TagModel> Tags { get; set; }
-    public DbSet<VideoModel> Videos { get; set; }
 
 
     // DbContext-related properties.

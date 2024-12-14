@@ -43,75 +43,20 @@ public class ConfigReaderService : IConfigReaderService
 
     #region Public Methods
 
-    public AppUserOptions GetAppUserOptions()
-    {
-        return _appOptionsSnapshot.AppIdentityOptions.AppUserOptions;
-    }
-
-    public AppPasswordOptions GetAppPasswordOptions()
-    {
-        return _appOptionsSnapshot.AppIdentityOptions.AppPasswordOptions;
-    }
-
-    public AppLockoutOptions GetAppLockoutOptions()
-    {
-        return _appOptionsSnapshot.AppIdentityOptions.AppLockoutOptions;
-    }
-
-    public AppSignInOptions GetAppSignInOptions()
-    {
-        return _appOptionsSnapshot.AppIdentityOptions.AppSignInOptions;
-    }
-
-    public AppTokenOptions GetAppTokenOptions()
-    {
-        return _appOptionsSnapshot.AppTokenOptions;
-    }
-
-    public AppFileStorageOptions GetAppFileStorageOptions()
-    {
-        return _appOptionsSnapshot.AppFileStorageOptions;
-    }
-
-    public JwtOptions GetJwtOptions()
-    {
-        return _jwtOptionsSnapshot;
-    }
-
-    public SmtpOption GetSmtpOption()
-    {
-        return _smtpOptionSnapshot;
-    }
-
-    public ClientAppOptions GetClientAppOptions()
-    {
-        return _clientAppOptionsSnapshot;
-    }
-
-    public AppTenantOptions GetAppTenantOptions()
-    {
-        return _appOptionsSnapshot.AppTenantOptions;
-    }
-
-    public string GetSubDomain()
-    {
-        return _httpContextAccessor.GetTenantName();
-    }
-
-    public LicenseInfoOptions GetLicenseInfoOptions()
-    {
-        return _licenseInfoOptionsSnapshot;
-    }
-
-    public BlobOptions GetBlobOptions()
-    {
-        return _blobOptionsSnapshot;
-    }
-
-    public MuxOptions GetMuxOptions()
-    {
-        return _muxOptionsSnapshot;
-    }
+    public AppUserOptions GetAppUserOptions() => _appOptionsSnapshot.AppIdentityOptions.AppUserOptions;
+    public AppPasswordOptions GetAppPasswordOptions() => _appOptionsSnapshot.AppIdentityOptions.AppPasswordOptions;
+    public AppLockoutOptions GetAppLockoutOptions() => _appOptionsSnapshot.AppIdentityOptions.AppLockoutOptions;
+    public AppSignInOptions GetAppSignInOptions() => _appOptionsSnapshot.AppIdentityOptions.AppSignInOptions;
+    public AppTokenOptions GetAppTokenOptions() => _appOptionsSnapshot.AppTokenOptions;
+    public AppFileStorageOptions GetAppFileStorageOptions() => _appOptionsSnapshot.AppFileStorageOptions;
+    public JwtOptions GetJwtOptions() => _jwtOptionsSnapshot;
+    public SmtpOption GetSmtpOption() => _smtpOptionSnapshot;
+    public ClientAppOptions GetClientAppOptions() => _clientAppOptionsSnapshot;
+    public AppTenantOptions GetAppTenantOptions() => _appOptionsSnapshot.AppTenantOptions;
+    public string GetSubDomain() => _httpContextAccessor.GetTenantName();
+    public LicenseInfoOptions GetLicenseInfoOptions() => _licenseInfoOptionsSnapshot;
+    public BlobOptions GetBlobOptions() => _blobOptionsSnapshot;
+    public MuxOptions GetMuxOptions() => _muxOptionsSnapshot;
 
     #endregion Public Methods
 }

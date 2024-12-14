@@ -1,3 +1,4 @@
+using OttApiPlatform.Domain.Entities.ContentManagement;
 using OttApiPlatform.Domain.Entities.Mux;
 
 namespace OttApiPlatform.Application.Common.Contracts.Infrastructure.Persistence;
@@ -80,16 +81,36 @@ public interface IApplicationDbContext : IDisposable
 
     DbSet<Domain.Entities.AccountInfoModel> AccountInfo { get; set; }
 
-    //DbSet<MuxPlaybackIdModel> MuxPlaybackIds { get; set; }
-    //DbSet<PersonModel> Authors { get; set; }
-    //DbSet<PodcastModel> Podcasts { get; set; }
-    //DbSet<ContentFeedModel> ContentFeeds { get; set; }
-    //DbSet<CategoryCollectionModel> CategoriesCollections { get; set; }
-    //DbSet<VideoCollectionModel> VideosCollections { get; set; }
-    //DbSet<CommentModel> Comments { get; set; }
-    //DbSet<LiveStreamCategoryModel> LiveStreamsCategories { get; set; }
-    //DbSet<CountryCodeModel> CountryCodes { get; set; }
-    //DbSet<VideoModel> Videos { get; set; }
+    public DbSet<AssetModel> Assets { get; set; }
+    public DbSet<AssetStorageModel> AssetStorages { get; set; }
+    public DbSet<AudioModel> Audios { get; set; }
+    public DbSet<CategoryModel> Categories { get; set; }
+    public DbSet<ContentCategoryModel> ContentCategories { get; set; }
+    public DbSet<ContentSettingsCountryModel> ContentCountryRestrictions { get; set; }
+    public DbSet<ContentModel> Contents { get; set; }
+    public DbSet<ContentPersonModel> ContentPeople { get; set; }
+    public DbSet<CollectionsAssetModel> ContentCollections { get; set; }
+    public DbSet<SeriesAssetModel> ContentSeries { get; set; }
+    public DbSet<ContentSettingsModel> ContentSettings { get; set; }
+    public DbSet<ContentTagModel> ContentTags { get; set; }
+    public DbSet<CountryModel> Countries { get; set; }
+    public DbSet<DocumentModel> Documents { get; set; }
+    public DbSet<ImageModel> Images { get; set; }
+    public DbSet<LanguageModel> Languages { get; set; }
+    public DbSet<LiveStreamModel> LiveStreams { get; set; }
+    public DbSet<MuxAssetModel> MuxAssets { get; set; }
+    public DbSet<MuxAssetTrackModel> MuxAssetTracks { get; set; }
+    public DbSet<MuxPlaybackIdModel> MuxPlaybackIds { get; set; }
+    public DbSet<MuxSettingsModel> MuxSettings { get; set; }
+    public DbSet<PersonModel> People { get; set; }
+    public DbSet<CollectionModel> Collections { get; set; }
+    public DbSet<SeasonModel> Seasons { get; set; }
+    public DbSet<SeriesModel> Series { get; set; }
+    public DbSet<StorageLocationModel> StorageLocations { get; set; }
+    public DbSet<SubtitleModel> Subtitles { get; set; }
+    public DbSet<SwimLaneModel> SwimLanes { get; set; }
+    public DbSet<SwimLaneContentModel> SwimLaneContent { get; set; }
+    public DbSet<TagModel> Tags { get; set; }
 
     // DbContext-related properties.
     DbContext Current { get; }

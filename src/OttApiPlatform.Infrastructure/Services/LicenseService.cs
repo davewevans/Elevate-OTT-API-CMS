@@ -8,18 +8,16 @@ using OttApiPlatform.Application.Common.Contracts;
 namespace OttApiPlatform.Infrastructure.Services;
 public class LicenseService : ILicenseService
 {
-    private readonly IConfigReaderService _configReaderService;
+    private readonly LicenseInfoOptions _licenseInfoOptions;
 
     public LicenseService(IConfigReaderService configReaderService)
     {
-        _configReaderService = configReaderService;
+        _licenseInfoOptions = configReaderService.GetLicenseInfoOptions();
     }
 
     public string GenerateLicenseForTenant(Guid tenantId)
     {
-        var licenseInfoOptions = _configReaderService.GetLicenseInfoOptions();
-
-        string productIdentifier = $"{licenseInfoOptions.ProductName}-{tenantId}-{licenseInfoOptions.Secret}";
+        string productIdentifier = $"{_licenseInfoOptions.ProductName}-{tenantId}-{_licenseInfoOptions.Secret}";
         string md5Sum = GetMd5Sum(productIdentifier);
         return FormatLicenseKey(md5Sum);
     }

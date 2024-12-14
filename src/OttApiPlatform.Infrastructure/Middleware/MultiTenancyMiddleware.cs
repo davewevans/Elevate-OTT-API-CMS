@@ -46,7 +46,17 @@ public class MultiTenancyMiddleware
                         await SetTenantIdForConfirmEmailRequest(httpContext, dbContext, tenantResolver);
                         break;
                     }
-                    
+
+                    // If 'webhooks' in path, then request is from a webhook.
+                    // In webhook callbacks, tenants are set in the services.
+                    if (httpContext.Request.Path.Value != null &&
+                        httpContext.Request.Path.Value.Contains("webhooks"))
+                    {
+                        // Enable buffering to allow the request body to be read multiple times
+                        httpContext.Request.EnableBuffering();
+                        break;
+                    }
+
                     // Get the tenant name value of the X-Tenant header from the request.
                     var tenantName = GetTenantName(httpContext);
 
@@ -59,7 +69,7 @@ public class MultiTenancyMiddleware
                     }
                     else
                     {
-                        // Try to retrieve the tenant ID from the cache, or retrieves it from the
+                        // Try to retrieve the tenant ID from the cache, or retrieve it from the
                         // database if not found.
                         var tenantId = TryGetCachedTenantId(dbContext, cacheService, tenantName);
 

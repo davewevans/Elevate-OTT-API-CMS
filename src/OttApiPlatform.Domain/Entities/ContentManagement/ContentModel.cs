@@ -4,7 +4,7 @@ using OttApiPlatform.Domain.Entities.TransactionManagement;
 
 namespace OttApiPlatform.Domain.Entities.ContentManagement;
 
-[Table("Asset")]
+[Table("Content")]
 public class ContentModel : BaseEntity, IMustHaveTenant
 {
     #region Public Properties
@@ -36,12 +36,10 @@ public class ContentModel : BaseEntity, IMustHaveTenant
 
     public bool AllowDownload { get; set; }
 
-    public string Language { get; set; }
-
     #endregion
 
     #region Foreign Key Properties
-
+    public Guid? LanguageId { get; set; }
     public Guid? PrimaryMediaId { get; set; }
     public Guid? PreviewMediaId { get; set; }
     public Guid? BannerWebsiteId { get; set; }
@@ -49,12 +47,14 @@ public class ContentModel : BaseEntity, IMustHaveTenant
     public Guid? BannerTvAppsId { get; set; }
     public Guid? PosterWebId { get; set; }
     public Guid? PosterMobileId { get; set; }
-    public Guid? PosterTvAppsId { get; set; } 
+    public Guid? PosterTvAppsId { get; set; }
 
     #endregion
 
 
     #region Navigational Properties
+
+    public LanguageModel Language { get; set; }
 
     public AssetModel PrimaryMedia { get; set; }
 
@@ -71,8 +71,6 @@ public class ContentModel : BaseEntity, IMustHaveTenant
     public AssetModel PosterMobile { get; set; } // 200X300
 
     public AssetModel PosterTvApps { get; set; } // 450X600
-
-    public SeriesModel Series { get; set; }
 
     public ICollection<ContentCategoryModel> ContentCategories { get; set; }
 

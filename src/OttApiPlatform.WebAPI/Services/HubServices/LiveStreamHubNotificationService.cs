@@ -1,6 +1,4 @@
-﻿using OttApiPlatform.Application.Common.Contracts.Hub;
-
-namespace OttApiPlatform.WebAPI.Services.HubServices;
+﻿namespace OttApiPlatform.WebAPI.Services.HubServices;
 
 public class LiveStreamHubNotificationService : ILiveStreamHubNotificationService
 {

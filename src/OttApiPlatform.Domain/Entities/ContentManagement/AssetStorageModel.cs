@@ -11,7 +11,7 @@ public class AssetStorageModel : BaseEntity, IMustHaveTenant
     #region Navigational Properties 
 
     public AssetModel Asset { get; set; }
-    public StorageLocation StorageLocation { get; set; } 
+    public StorageLocationModel StorageLocation { get; set; } 
 
     #endregion
 }

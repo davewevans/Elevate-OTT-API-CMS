@@ -1,0 +1,27 @@
+﻿Instructions to add configurations using the Options pattern:
+
+1. create a section in the appsettings.json file to hold the configuration values
+2. create a class in the Infrastructure project that will hold the configuration values
+-Folder location: OttApiPlatform.Application.Common.Models.ApplicationOptions
+-add a property for the app settings section: public string SectionName { get; set; }
+3. Add definition the the interface IConfigReaderService
+-Folder location: OttApiPlatform.Application.Common.Contracts.Infrastructure
+-ExampleOptions GetExampleOptions();
+4. Add to the ServiceCollectionExtension's AddAppSettings method
+- services.Configure<ExampleOptions>(configuration.GetSection(ExampleOptions.Section));
+5. Add the implementation to the ConfigReaderService
+- Folder location: OttApiPlatform.Infrastructure.Services
+- private readonly ExampleOptions _exampleOptionsSnapshot;
+- Add to constructor: 
+public ConfigReaderService(IOptionsSnapshot<ExampleOptions> exampleOptionsSnapshot)
+{
+	_exampleOptionsSnapshot = exampleOptionsSnapshot.Value;
+}
+- Add method: public ExampleOptions GetExampleOptions() => _exampleOptionsSnapshot;
+
+
+To inject the configuration values into a service:
+1. Add the IConfigReaderService to the service's constructor
+2. Add the ExampleOptions property to the service
+3. Add the implementation to the service's constructor:
+   _exampleOptions = configReaderService.GetExampleOptions();

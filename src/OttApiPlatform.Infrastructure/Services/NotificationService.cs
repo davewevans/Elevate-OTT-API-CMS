@@ -9,7 +9,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text.Json;
 
-namespace OttApiPlatform.Infrastructure.Service;
+namespace OttApiPlatform.Infrastructure.Services;
 
 public class NotificationService : INotificationService
 {
