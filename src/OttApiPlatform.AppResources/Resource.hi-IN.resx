@@ -2562,4 +2562,7 @@
   <data name="Add_Content" xml:space="preserve">
     <value>सामग्री जोड़ें</value>
   </data>
+  <data name="Asset_has_been_created_successfully" xml:space="preserve">
+    <value>संपत्ति सफलतापूर्वक बनाई गई है।</value>
+  </data>
 </root>

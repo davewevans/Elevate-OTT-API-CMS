@@ -1,43 +1,73 @@
 ﻿using OttApiPlatform.Application.Common.Contracts.Mux;
 using OttApiPlatform.Application.Common.Models.Mux;
+using System.Text;
+using Microsoft.EntityFrameworkCore;
 
 namespace OttApiPlatform.WebAPI.Controllers;
 
-[Route("api/mux-webhook")]
+[Route("api/webhooks/mux")]
 [ApiController]
 public class MuxWebhookController : ApiController
 {
-    private readonly IMuxWebhookService? _webhookService;
-
+    private readonly IMuxConfigurationFactory _muxConfigurationFactory;
+    private readonly IMuxWebHookHandler _muxWebHookHandler;
+    private readonly ITenantResolver _tenantResolver;
     private readonly IApplicationDbContext _dbContext;
+    private readonly ILogger<MuxWebhookController> _logger;
 
-    public MuxWebhookController(IMuxWebhookService? webhookService, IApplicationDbContext dbContext)
+    public MuxWebhookController(IMuxConfigurationFactory muxConfigurationFactory, IMuxWebHookHandler handler, 
+        IApplicationDbContext dbContext, ITenantResolver tenantResolver, ILogger<MuxWebhookController> logger)
     {
-        _webhookService = webhookService;
+        _muxConfigurationFactory = muxConfigurationFactory;
+        _muxWebHookHandler = handler;
         _dbContext = dbContext;
+        _tenantResolver = tenantResolver;
+        _logger = logger;
     }
 
-    [HttpPost("callback")]
-    public async Task<IActionResult> Post([FromBody] MuxWebhookRequest? hookRequest)
+    [HttpPost]
+    public async Task<IActionResult> HandleMuxWebhook([FromBody] MuxWebhookRequest hookRequest)
     {
-        string muxHeader = Request.Headers["mux-signature"];
-        (string timestamp, string muxSignature) =
-            _webhookService.GetMuxTimestampAndSignature(muxHeader);
+
+        // TODO: if no passthrough value, then check the environment id. 
+        // See ticket 88
+
+        if (hookRequest?.Data == null) return BadRequest();
+
+        var tenantId = !string.IsNullOrWhiteSpace(hookRequest.Data.Passthrough)
+            ? _muxWebHookHandler.ParseTenantIdFromPassthrough(hookRequest.Data.Passthrough)
+            : _muxWebHookHandler.FindTenantIdByEnvironmentId(hookRequest.Environment.Id);
+
+        var accountInfo = await _dbContext.AccountInfo
+           .FirstOrDefaultAsync(x => x.TenantId == tenantId);
+
+        var muxSettings = await _muxConfigurationFactory.GetMuxSettingsAsync(tenantId,
+            accountInfo.VodStreamingService == VodStreamingService.Managed);
+
+        _muxWebHookHandler.Configure(muxSettings);
 
         Request.Body.Seek(0, SeekOrigin.Begin);
-        var rawRequestBody = await new StreamReader(Request.Body).ReadToEndAsync();
 
-        bool requestFromMux =
-            _webhookService.VerifyRequestFromMux(timestamp, muxSignature, rawRequestBody);
+        // Retrieve the raw request body
+        string requestBody;
+        using (var reader = new StreamReader(Request.Body, Encoding.UTF8, leaveOpen: true))
+        {
+            requestBody = await reader.ReadToEndAsync();
+        }
 
-        if (!requestFromMux) return BadRequest();
+        // Retrieve the mux-signature header
+        if (!Request.Headers.TryGetValue("mux-signature", out var signatureHeader))
+        {
+            return Unauthorized("Missing mux-signature header.");
+        }
 
-        if (hookRequest?.Data == null) return Ok();
+        var signatureHeaderValue = signatureHeader.ToString();
+        if (!_muxWebHookHandler.VerifyMuxSignature(signatureHeaderValue, requestBody))
+        {
+            return Unauthorized("Invalid signature.");
+        }
 
-        // Get tenant ID from passthrough value and set tenant via tenant resolver 
-        _webhookService.SetTenantViaTenantResolver(hookRequest.Data.Passthrough);
-
-        var eventHandled = await _webhookService.HandleWebHookEvent(hookRequest);
+        var eventHandled = await _muxWebHookHandler.HandleWebHookEvent(hookRequest);
         if (!eventHandled) return BadRequest();
 
         return Ok();

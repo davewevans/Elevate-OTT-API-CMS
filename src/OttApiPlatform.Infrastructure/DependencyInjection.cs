@@ -1,10 +1,12 @@
 using System.Configuration;
 using Microsoft.Extensions.Logging;
 using OttApiPlatform.Application.Common.Contracts;
-using OttApiPlatform.Application.Common.Contracts.Hub;
+using OttApiPlatform.Application.Common.Contracts.Mux;
 using OttApiPlatform.Application.Common.Contracts.Reports;
 using OttApiPlatform.Infrastructure.Identity.Stores;
-using OttApiPlatform.Infrastructure.Service;
+using OttApiPlatform.Infrastructure.Services;
+using OttApiPlatform.Infrastructure.Services.Mux;
+using OttApiPlatform.Infrastructure.Services.Security;
 
 namespace OttApiPlatform.Infrastructure;
 
@@ -114,6 +116,9 @@ public static class DependencyInjection
         services.AddScoped<IApplicantsReaderService, ApplicantsReaderService>();
         services.AddScoped<IAppSettingsReaderService, AppSettingsReaderService>();
 
+        // Add HttpClient for services.
+        services.AddHttpClient<IMuxApiService, MuxApiService>();
+
         // Add infrastructure services.
         services.AddScoped<IUtcTimeService>(provider => new FrozenUtcTimeService(provider.GetRequiredService<UtcTimeService>()));
         services.AddScoped<IStorageProvider, StorageProvider>();
@@ -122,7 +127,7 @@ public static class DependencyInjection
         services.AddScoped<IConfigReaderService, ConfigReaderService>();
         services.AddScoped<IPermissionScanner, PermissionScanner>();
         services.AddScoped<IdentityErrorDescriber, LocalizedIdentityErrorDescriber>();
-        services.AddScoped<IFileStorageService, AzureStorageService>();
+        services.AddScoped<IFileStorageService, AzureBlobStorageService>();
         services.AddScoped<IFileStorageService, OnPremisesStorageService>();
         services.AddScoped<ITokenGeneratorService, TokenGeneratorService>();
         services.AddScoped<INotificationService, NotificationService>();
@@ -131,7 +136,13 @@ public static class DependencyInjection
         services.AddScoped<IOnDemandReportingService, OnDemandReportingService>();
         services.AddScoped<IHtmlReportBuilderService, HtmlReportBuilderService>();
         services.AddScoped<ILicenseService, LicenseService>();
-        //services.AddScoped<IMuxAssetService, MuxAssetService>();
+        services.AddScoped<ICryptoService, EncryptionService>();
+        services.AddScoped<IMuxConfigurationFactory, MuxConfigurationFactory>();
+        services.AddScoped<IMuxApiService, MuxApiService>();
+        services.AddScoped<IMuxWebHookHandler, MuxWebHookHandler>();
+        services.AddScoped<IAzureBlobStorageService, AzureBlobStorageService>();
+
+
         //services.AddScoped<ICategoryUseCase, CategoryUseCase>();
         //services.AddScoped<IAuthorUseCase, AuthorUseCase>();
 

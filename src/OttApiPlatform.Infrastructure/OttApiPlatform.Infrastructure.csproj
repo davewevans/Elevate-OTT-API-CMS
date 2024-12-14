@@ -60,7 +60,6 @@
   <ItemGroup>
     <Folder Include="Repository\" />
     <Folder Include="Services\ContentFeedServices\" />
-    <Folder Include="Services\Mux\" />
   </ItemGroup>
 
 </Project>

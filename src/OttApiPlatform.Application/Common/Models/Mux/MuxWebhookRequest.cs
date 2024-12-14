@@ -8,19 +8,19 @@ public class MuxWebhookRequest
     public string Type { get; set; } = string.Empty;
 
     [JsonPropertyName("passthrough")]
-    public Guid? Passthrough { get; set; }
+    public string Passthrough { get; set; }
 
     [JsonPropertyName("object")]
-    public Object? Object { get; set; }
+    public Object Object { get; set; }
 
     [JsonPropertyName("id")]
     public string Id { get; set; } = string.Empty;
 
     [JsonPropertyName("environment")]
-    public Environment? Environment { get; set; }
+    public Environment Environment { get; set; }
 
     [JsonPropertyName("data")]
-    public Data? Data { get; set; }
+    public Data Data { get; set; }
 
     [JsonPropertyName("created_at")]
     public string CreatedAt { get; set; } = string.Empty;
@@ -59,16 +59,31 @@ public class Data
     public string Id { get; set; } = string.Empty;
 
     [JsonPropertyName("tracks")]
-    public List<Track>? Tracks { get; set; }
+    public List<Track> Tracks { get; set; }
 
     [JsonPropertyName("status")]
     public string Status { get; set; } = string.Empty;
+
+    [JsonPropertyName("video_quality")]
+    public string VideoQuality { get; set; } = string.Empty;
+
+    [JsonPropertyName("master_access")]
+    public string MasterAccess { get; set; } = string.Empty;
+
+    [JsonPropertyName("encoding_tier")]
+    public string EncodingTier { get; set; } = string.Empty;
 
     [JsonPropertyName("max_stored_resolution")]
     public string MaxStoredResolution { get; set; } = string.Empty;
 
     [JsonPropertyName("max_stored_frame_rate")]
     public double MaxStoredFrameRate { get; set; }
+
+    [JsonPropertyName("max_resolution_tier")]
+    public string MaxResolutionTier { get; set; }
+
+    [JsonPropertyName("resolution_tier")]
+    public string ResolutionTier { get; set; }
 
     [JsonPropertyName("duration")]
     public double Duration { get; set; }
@@ -77,7 +92,7 @@ public class Data
     public string AspectRatio { get; set; } = string.Empty;
 
     [JsonPropertyName("new_asset_settings")]
-    public NewAssetSettings? NewAssetSettings { get; set; }
+    public NewAssetSettings NewAssetSettings { get; set; }
 
     [JsonPropertyName("cors_origin")]
     public string CorsOrigin { get; set; } = string.Empty;
@@ -92,13 +107,13 @@ public class Data
     public bool Test { get; set; }
 
     [JsonPropertyName("errors")]
-    public Error? Errors { get; set; }
+    public Error Errors { get; set; }
 
     [JsonPropertyName("playback_ids")]
-    public List<PlaybackId>? PlaybackIds { get; set; }
+    public List<PlaybackId> PlaybackIds { get; set; }
 
     [JsonPropertyName("static_renditions")]
-    public StaticRendition? StaticRenditions { get; set; }
+    public StaticRendition StaticRenditions { get; set; }
 
     [JsonPropertyName("passthrough")]
     public string Passthrough { get; set; } = string.Empty;
@@ -142,11 +157,18 @@ public class Track
     [JsonPropertyName("max_frame_rate")]
     public double MaxFrameRate { get; set; }
 
+    [JsonPropertyName("max_channels")]
+    public int MaxChannels { get; set; }
+
     [JsonPropertyName("id")]
     public string Id { get; set; } = string.Empty;
 
     [JsonPropertyName("duration")]
     public double Duration { get; set; }
+
+    [JsonPropertyName("language_code")]
+    public string LanguageCode { get; set; }
+    
 }
 
 public class NewAssetSettings
@@ -161,7 +183,7 @@ public class NewAssetSettings
     public string Passthrough { get; set; } = string.Empty;
 
     [JsonPropertyName("input")]
-    public Input[]? Input { get; set; }
+    public Input[] Input { get; set; }
 
     [JsonPropertyName("normalize_audio")]
     public bool NormalizeAudio { get; set; }
@@ -179,7 +201,7 @@ public class Input
     public string Url { get; set; } = string.Empty;
 
     [JsonPropertyName("overlay_settings")]
-    public OverlaySettings? OverlaySettings { get; set; }
+    public OverlaySettings OverlaySettings { get; set; }
 
     [JsonPropertyName("start_time")]
     public int StartTime { get; set; }
@@ -266,5 +288,5 @@ public class Error
     public string Type { get; set; } = string.Empty;
 
     [JsonPropertyName("messages")]
-    public List<string>? Messages { get; set; }
+    public List<string> Messages { get; set; }
 }

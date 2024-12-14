@@ -2562,4 +2562,7 @@
   <data name="Add_Content" xml:space="preserve">
     <value>Adăugați conținut</value>
   </data>
+  <data name="Asset_has_been_created_successfully" xml:space="preserve">
+    <value>Materialul a fost creat cu succes.</value>
+  </data>
 </root>

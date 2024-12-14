@@ -9,6 +9,8 @@ public class VideoModel : BaseEntity, IMustHaveTenant
 
     public string FileName { get; set; }
 
+    public string ContentType { get; set; }
+
     public string Resolution { get; set; }
 
     public string VideoCodec { get; set; }

@@ -583,6 +583,15 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Asset has been created successfully..
+        /// </summary>
+        public static string Asset_has_been_created_successfully {
+            get {
+                return ResourceManager.GetString("Asset_has_been_created_successfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Assets.
         /// </summary>
         public static string Assets {

@@ -6,7 +6,6 @@ public class ChatHub : Hub
 
     public override async Task OnConnectedAsync()
     {
-        Console.WriteLine("Connected");
 
         string username = Context.GetHttpContext().Request.Query["username"];
          Users.Add(Context.ConnectionId, username);
@@ -16,8 +15,6 @@ public class ChatHub : Hub
 
     public override async Task OnDisconnectedAsync(Exception? exception)
     {
-        Console.WriteLine("Disconnected");
-
         string username = Users.FirstOrDefault(u => u.Key == Context.ConnectionId).Value;
         await AddMessageToChat(string.Empty, $"{username} left!");
     }

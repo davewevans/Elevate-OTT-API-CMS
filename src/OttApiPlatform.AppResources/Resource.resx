@@ -2565,4 +2565,7 @@
   <data name="Add_Content" xml:space="preserve">
     <value>Add Content</value>
   </data>
+  <data name="Asset_has_been_created_successfully" xml:space="preserve">
+    <value>Asset has been created successfully.</value>
+  </data>
 </root>

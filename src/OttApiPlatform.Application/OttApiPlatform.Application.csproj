@@ -6,14 +6,17 @@
 
 	<ItemGroup>
 	  <Compile Remove="Common\Contracts\Repository\**" />
+	  <Compile Remove="Common\Contracts\Services\**" />
 	  <Compile Remove="Features\ContentManagement\Authors\**" />
 	  <Compile Remove="Features\ContentManagement\Categories\**" />
 	  <Compile Remove="Features\ContentManagement\Videos\Queries\**" />
 	  <EmbeddedResource Remove="Common\Contracts\Repository\**" />
+	  <EmbeddedResource Remove="Common\Contracts\Services\**" />
 	  <EmbeddedResource Remove="Features\ContentManagement\Authors\**" />
 	  <EmbeddedResource Remove="Features\ContentManagement\Categories\**" />
 	  <EmbeddedResource Remove="Features\ContentManagement\Videos\Queries\**" />
 	  <None Remove="Common\Contracts\Repository\**" />
+	  <None Remove="Common\Contracts\Services\**" />
 	  <None Remove="Features\ContentManagement\Authors\**" />
 	  <None Remove="Features\ContentManagement\Categories\**" />
 	  <None Remove="Features\ContentManagement\Videos\Queries\**" />
@@ -37,6 +40,7 @@
 	  <Compile Remove="Features\ContentManagement\Videos\Commands\UpdateVideo\UpdateVideoCommand.cs" />
 	  <Compile Remove="Features\ContentManagement\Videos\Commands\UpdateVideo\UpdateVideoCommandValidator.cs" />
 	  <Compile Remove="Features\ContentManagement\Videos\Commands\UpdateVideo\UpdateVideoResponse.cs" />
+	  <Compile Remove="Services\Content\VideoService.cs" />
 	  <Compile Remove="UseCases\Content\AuthorUseCase.cs" />
 	  <Compile Remove="UseCases\Content\CategoryUseCase.cs" />
 	  <Compile Remove="UseCases\Content\VideoUseCase.cs" />
@@ -57,6 +61,8 @@
 		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.5" />
 
 		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
+
+		<PackageReference Include="Mux.Csharp.Sdk" Version="0.15.0" />
 
 	</ItemGroup>
 
@@ -85,8 +91,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Common\Contracts\Mux\" />
-	  <Folder Include="Common\Contracts\Services\" />
 	  <Folder Include="Common\Contracts\UseCases\Content\" />
 	  <Folder Include="Common\Contracts\UseCases\Settings\" />
 	  <Folder Include="Features\ContentManagement\Collections\Commands\" />
@@ -100,7 +104,7 @@
 	  <Folder Include="Features\ContentManagement\Videos\Commands\DeleteVideo\" />
 	  <Folder Include="Features\ContentManagement\Videos\Commands\UpdateVideo\" />
 	  <Folder Include="Features\ContentManagement\Videos\Queries\" />
-	  <Folder Include="Services\" />
+	  <Folder Include="Services\Content\" />
 	  <Folder Include="UseCases\Content\" />
 	  <Folder Include="UseCases\Settings\" />
 	</ItemGroup>

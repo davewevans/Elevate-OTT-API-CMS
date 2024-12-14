@@ -160,13 +160,12 @@ public enum AssetImageSize
 
 public enum VodStreamingService
 {
+    Managed, // Managed by the platform
     UserProvided,
     Mux,
     DaCast,
     Wowza,
     Brightcove,
     Azure,
-    AWS,
-    Vimeo,
 }
 

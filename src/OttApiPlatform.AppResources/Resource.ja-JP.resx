@@ -2562,4 +2562,7 @@
   <data name="Add_Content" xml:space="preserve">
     <value>コンテンツを追加</value>
   </data>
+  <data name="Asset_has_been_created_successfully" xml:space="preserve">
+    <value>アセットが正常に作成されました。</value>
+  </data>
 </root>

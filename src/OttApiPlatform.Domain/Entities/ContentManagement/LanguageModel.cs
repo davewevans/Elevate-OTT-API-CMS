@@ -13,7 +13,8 @@ public class LanguageModel : BaseEntity
 
     #region Navigational Properties 
 
-    public ICollection<AssetModel> Assets { get; set; } 
+    public ICollection<AssetModel> Assets { get; set; }
+    public ICollection<ContentModel> Contents { get; set; }
 
     #endregion
 }

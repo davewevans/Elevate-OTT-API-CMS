@@ -2562,4 +2562,7 @@
   <data name="Add_Content" xml:space="preserve">
     <value>إضافة محتوى</value>
   </data>
+  <data name="Asset_has_been_created_successfully" xml:space="preserve">
+    <value>تم إنشاء الأصل بنجاح.</value>
+  </data>
 </root>

@@ -65,6 +65,7 @@ builder.Services.AddSingleton<TimerManager>();
 
 // Add scoped services for HubNotificationService and SignalRContextProvider to the service collection.
 builder.Services.AddScoped<IHubNotificationService, HubNotificationService>();
+builder.Services.AddScoped<IAssetHubNotificationService, AssetHubNotificationService>();
 builder.Services.AddScoped<ISignalRContextProvider, SignalRContextProvider>();
 
 // Configure Identity options.
@@ -171,6 +172,12 @@ app.MapHub<DashboardHub>("Hubs/DashboardHub");
 
 // Map the DataExportHub SignalR hub to the "Hubs/DataExportHub" URL path.
 app.MapHub<DataExportHub>("Hubs/DataExportHub");
+
+// Map the AssetHub SignalR hub to the "Hubs/AssetHub" URL path.
+app.MapHub<AssetHub>("Hubs/AssetHub");
+
+// Map the LiveStreamHub SignalR hub to the "Hubs/LiveStreamHub" URL path.
+app.MapHub<LiveStreamHub>("Hubs/LiveStreamHub");
 
 // Start the web application and listens for incoming requests.
 app.Run();

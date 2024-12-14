@@ -2562,4 +2562,7 @@
   <data name="Add_Content" xml:space="preserve">
     <value>添加内容</value>
   </data>
+  <data name="Asset_has_been_created_successfully" xml:space="preserve">
+    <value>已成功创建资产。</value>
+  </data>
 </root>

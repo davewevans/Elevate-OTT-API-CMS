@@ -37,6 +37,10 @@ namespace OttApiPlatform.Domain.Entities
         /// </summary>
         public string StorageFileNamePrefix { get; set; }
 
+        /// <summary>
+        /// Gets or sets the streaming service used.
+        /// </summary>
+        public VodStreamingService VodStreamingService { get; set; }
      
         #region Foreign Key Properties
 

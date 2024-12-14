@@ -1,6 +1,7 @@
 using Mux.Csharp.Sdk.Model;
 using OttApiPlatform.Domain.Entities.ContentAccessManagement;
 using OttApiPlatform.Domain.Entities.ContentManagement;
+using OttApiPlatform.Domain.Entities.Mux;
 using OttApiPlatform.Domain.Entities.TransactionManagement;
 
 namespace OttApiPlatform.Infrastructure.Persistence;
@@ -127,7 +128,7 @@ public sealed class DbContextHelper
             .HasIndex(c => c.Order)
             .IsUnique();
 
-        builder.Entity<PlaylistAssetModel>()
+        builder.Entity<CollectionsAssetModel>()
             .HasIndex(c => c.Order)
             .IsUnique();
 
@@ -205,18 +206,18 @@ public sealed class DbContextHelper
             .WithMany(p => p.ContentPeople)
             .HasForeignKey(cp => cp.PersonId);
 
-        builder.Entity<PlaylistAssetModel>()
-            .HasKey(pla => new { pla.AssetId, pla.PlaylistId });
+        builder.Entity<CollectionsAssetModel>()
+            .HasKey(pla => new { pla.AssetId, pla.CollectionId });
 
-        builder.Entity<PlaylistAssetModel>()
+        builder.Entity<CollectionsAssetModel>()
             .HasOne(cp => cp.Asset)
-            .WithMany(c => c.PlaylistAssets)
+            .WithMany(c => c.CollectionAssets)
             .HasForeignKey(cp => cp.AssetId);
 
-        builder.Entity<PlaylistAssetModel>()
-            .HasOne(cp => cp.Playlist)
-            .WithMany(p => p.PlaylistAssets)
-            .HasForeignKey(cp => cp.PlaylistId);
+        builder.Entity<CollectionsAssetModel>()
+            .HasOne(cp => cp.Collection)
+            .WithMany(p => p.CollectionAssets)
+            .HasForeignKey(cp => cp.CollectionId);
 
         builder.Entity<SeriesAssetModel>()
             .HasKey(t => new { t.AssetId, t.SeriesId });
@@ -329,44 +330,59 @@ public sealed class DbContextHelper
             .HasForeignKey(a => a.LanguageId);
 
         builder.Entity<ContentModel>()
-            .HasOne(c => c.PrimaryMedia)
-            .WithMany()
-            .HasForeignKey(c => c.PrimaryMediaId);
+            .HasOne(a => a.Language)
+            .WithMany(l => l.Contents)
+            .HasForeignKey(a => a.LanguageId);
 
-        builder.Entity<ContentModel>()
-            .HasOne(c => c.PreviewMedia)
-            .WithMany()
-            .HasForeignKey(c => c.PreviewMediaId);
+        builder.Entity<MuxPlaybackIdModel>()
+            .HasOne(plId => plId.MuxAsset)
+            .WithMany(ma => ma.PlaybackIds)
+            .HasForeignKey(plId => plId.MuxAssetId);
 
-        builder.Entity<ContentModel>()
-            .HasOne(c => c.BannerWebsite)
-            .WithMany()
-            .HasForeignKey(c => c.BannerWebsiteId);
+        builder.Entity<MuxAssetTrackModel>()
+            .HasOne(tr => tr.MuxAsset)
+            .WithMany(ma => ma.AssetTracks)
+            .HasForeignKey(tr => tr.MuxAssetId);
 
-        builder.Entity<ContentModel>()
-            .HasOne(c => c.BannerMobile)
-            .WithMany()
-            .HasForeignKey(c => c.BannerMobileId);
+        //builder.Entity<ContentModel>()
+        //    .HasOne(c => c.PrimaryMedia)
+        //    .WithMany()
+        //    .HasForeignKey(c => c.PrimaryMediaId);
 
-        builder.Entity<ContentModel>()
-            .HasOne(c => c.BannerTvApps)
-            .WithMany()
-            .HasForeignKey(c => c.BannerTvAppsId);
+        //builder.Entity<ContentModel>()
+        //    .HasOne(c => c.PreviewMedia)
+        //    .WithMany()
+        //    .HasForeignKey(c => c.PreviewMediaId);
 
-        builder.Entity<ContentModel>()
-            .HasOne(c => c.PosterWeb)
-            .WithMany()
-            .HasForeignKey(c => c.PosterWebId);
+        //builder.Entity<ContentModel>()
+        //    .HasOne(c => c.BannerWebsite)
+        //    .WithMany()
+        //    .HasForeignKey(c => c.BannerWebsiteId);
 
-        builder.Entity<ContentModel>()
-            .HasOne(c => c.PosterMobile)
-            .WithMany()
-            .HasForeignKey(c => c.PosterMobileId);
+        //builder.Entity<ContentModel>()
+        //    .HasOne(c => c.BannerMobile)
+        //    .WithMany()
+        //    .HasForeignKey(c => c.BannerMobileId);
 
-        builder.Entity<ContentModel>()
-            .HasOne(c => c.PosterTvApps)
-            .WithMany()
-            .HasForeignKey(c => c.PosterTvAppsId);
+        //builder.Entity<ContentModel>()
+        //    .HasOne(c => c.BannerTvApps)
+        //    .WithMany()
+        //    .HasForeignKey(c => c.BannerTvAppsId);
+
+        //builder.Entity<ContentModel>()
+        //    .HasOne(c => c.PosterWeb)
+        //    .WithMany()
+        //    .HasForeignKey(c => c.PosterWebId);
+
+        //builder.Entity<ContentModel>()
+        //    .HasOne(c => c.PosterMobile)
+        //    .WithMany()
+        //    .HasForeignKey(c => c.PosterMobileId);
+
+        //builder.Entity<ContentModel>()
+        //    .HasOne(c => c.PosterTvApps)
+        //    .WithMany()
+        //    .HasForeignKey(c => c.PosterTvAppsId);
 
         builder.Entity<SeasonModel>()
             .HasOne(c => c.Series)
@@ -446,18 +462,6 @@ public sealed class DbContextHelper
             .OnDelete(DeleteBehavior.Restrict);
 
         builder.Entity<AssetModel>()
-            .HasOne(a => a.Video)
-            .WithOne(v => v.Asset)
-            .HasForeignKey<VideoModel>(a => a.AssetId)
-            .OnDelete(DeleteBehavior.Cascade);
-
-        builder.Entity<AssetModel>()
-            .HasOne(a => a.Audio)
-            .WithOne(aud => aud.Asset)
-            .HasForeignKey<AudioModel>(a => a.AssetId)
-            .OnDelete(DeleteBehavior.Cascade);
-
-        builder.Entity<AssetModel>()
             .HasOne(a => a.Image)
             .WithOne(i => i.Asset)
             .HasForeignKey<ImageModel>(i => i.AssetId)
@@ -481,10 +485,10 @@ public sealed class DbContextHelper
             .HasForeignKey<CategoryModel>(c => c.ImageAssetId)
             .OnDelete(DeleteBehavior.Restrict);
 
-        builder.Entity<PlaylistModel>()
+        builder.Entity<CollectionModel>()
             .HasOne(c => c.Image)
             .WithOne()
-            .HasForeignKey<PlaylistModel>(c => c.ImageAssetId)
+            .HasForeignKey<CollectionModel>(c => c.ImageAssetId)
             .OnDelete(DeleteBehavior.Restrict);
 
         builder.Entity<SeasonModel>()
@@ -498,6 +502,12 @@ public sealed class DbContextHelper
             .WithOne()
             .HasForeignKey<SeriesModel>(c => c.ContentId)
             .OnDelete(DeleteBehavior.Restrict);
+
+        builder.Entity<AssetModel>()
+            .HasOne(c => c.MuxAsset)
+            .WithOne()
+            .HasForeignKey<AssetModel>(c => c.MuxAssetId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 
     /// <summary>

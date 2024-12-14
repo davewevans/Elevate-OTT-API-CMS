@@ -1,0 +1,68 @@
+﻿using Mux.Csharp.Sdk.Model;
+using OttApiPlatform.Application.Common.Models.Mux;
+using OttApiPlatform.Domain.Entities.Mux;
+using LiveStreamStatus = Mux.Csharp.Sdk.Model.LiveStreamStatus;
+
+namespace OttApiPlatform.Application.Common.Contracts.Mux;
+
+public interface IMuxApiService
+{
+    void Configure(MuxSettingsModel settings);
+    Task<AssetResponse> CreateAssetAsync(string inputUrl, CreateAssetRequest.VideoQualityEnum? videoQuality);
+    Task<AssetResponse> GetAssetAsync(string assetId);
+    Task<ListAssetsResponse> ListAssetsAsync(string liveStreamId, string uploadId, int limit = 25, int page = 1);
+    Task<AssetResponse> UpdateAssetAsync(string assetId, string newPassthrough);
+    Task DeleteAssetAsync(string assetId);
+    Task<CreatePlaybackIDResponse> CreatePlaybackIdAsync(string assetId, PlaybackPolicy policy = PlaybackPolicy.Public, string drmConfigurationId = null);
+    Task<GetAssetPlaybackIDResponse> GetAssetPlaybackIdAsync(string assetId, string playbackId);
+    Task DeletePlaybackIdAsync(string assetId, string playbackId);
+    Task<CreateTrackResponse> CreateAssetTrackAsync(string assetId);
+    Task DeleteAssetTrackAsync(string assetId, string trackId);
+    Task<GenerateTrackSubtitlesResponse> GenerateAssetTrackSubtitlesAsync(string assetId, string trackId, List<AssetGeneratedSubtitleSettings> subtitleSettings);
+    Task<GetAssetInputInfoResponse> GetAssetInputInfoAsync(string assetId);
+    Task<AssetResponse> UpdateAssetMasterAccessAsync(string assetId, UpdateAssetMasterAccessRequest.MasterAccessEnum masterAccess);
+    Task<AssetResponse> UpdateAssetMp4SupportAsync(string assetId, UpdateAssetMP4SupportRequest.Mp4SupportEnum mp4Support);
+    Task<LiveStreamResponse> CreateLiveStreamAsync(CreateLiveStreamRequest request);
+    Task<CreatePlaybackIDResponse> CreateLiveStreamPlaybackIdAsync(string liveStreamId, CreatePlaybackIDRequest request);
+    Task<LiveStreamResponse> GetLiveStreamAsync(string liveStreamId);
+    Task<ListLiveStreamsResponse> ListLiveStreamsAsync(int? limit = null, int? page = null, string streamKey = null, LiveStreamStatus? status = null);
+    Task<SimulcastTargetResponse> CreateLiveStreamSimulcastTargetAsync(string liveStreamId, CreateSimulcastTargetRequest request);
+    Task DeleteLiveStreamAsync(string liveStreamId);
+    Task<EnableLiveStreamResponse> EnableLiveStreamAsync(string liveStreamId);
+    Task<DisableLiveStreamResponse> DisableLiveStreamAsync(string liveStreamId);
+    Task<LiveStreamResponse> ResetStreamKeyAsync(string liveStreamId);
+    Task<SignalLiveStreamCompleteResponse> SignalLiveStreamCompleteAsync(string liveStreamId);
+    Task<LiveStreamResponse> UpdateLiveStreamAsync(string liveStreamId, UpdateLiveStreamRequest request);
+    Task<SigningKeyResponse> CreateSigningKeyAsync();
+    Task DeleteSigningKeyAsync(string signingKeyId);
+    Task<SigningKeyResponse> GetSigningKeyAsync(string signingKeyId);
+    Task<ListSigningKeysResponse> ListSigningKeysAsync(int? limit = null, int? page = null);
+    Task<ListDeliveryUsageResponse> ListDeliveryUsageAsync(string assetId, string liveStreamId, List<string> timeframe = null, int page = 1, int limit = 100);
+    Task<VideoViewResponse> GetVideoViewAsync(string videoViewId);
+    Task<ListVideoViewsResponse> ListVideoViewsAsync(int? limit = null, int? page = null, string viewerId = null, int? errorId = null, string orderDirection = null, List<string> filters = null, List<string> metricFilters = null, List<string> timeframe = null); Task<DRMConfigurationResponse> GetDrmConfigurationAsync(string drmConfigurationId);
+    Task<ListDRMConfigurationsResponse> ListDrmConfigurationsAsync(int? page = null, int? limit = null);
+    Task<ListErrorsResponse> ListErrorsAsync(List<string> filters = null, List<string> metricFilters = null, List<string> timeframe = null);
+    Task<GetMetricTimeseriesDataResponse> GetMetricTimeseriesDataAsync(string metricId, List<string> timeframe = null, List<string> filters = null, List<string> metricFilters = null, string measurement = null, string orderDirection = null, string groupBy = null);
+    Task<GetOverallValuesResponse> GetOverallValuesAsync(string metricId, List<string> timeframe = null, List<string> filters = null, List<string> metricFilters = null, string measurement = null);
+    Task<ListAllMetricValuesResponse> ListAllMetricValuesAsync(List<string> timeframe = null, List<string> filters = null, List<string> metricFilters = null, string dimension = null, string value = null);
+    Task<ListBreakdownValuesResponse> ListBreakdownValuesAsync(string metricId, string groupBy = null, string measurement = null, List<string> filters = null, List<string> metricFilters = null, int? limit = null, int? page = null, string orderBy = null, string orderDirection = null, List<string> timeframe = null);
+    Task<ListInsightsResponse> ListInsightsAsync(string metricId, string measurement = null, string orderDirection = null, List<string> timeframe = null, List<string> filters = null, List<string> metricFilters = null);
+    Task<GetAssetOrLiveStreamIdResponse> GetAssetOrLivestreamIdAsync(string playbackId);
+    Task<PlaybackRestrictionResponse> CreatePlaybackRestrictionAsync(CreatePlaybackRestrictionRequest request);
+    Task DeletePlaybackRestrictionAsync(string playbackRestrictionId);
+    Task<PlaybackRestrictionResponse> GetPlaybackRestrictionAsync(string playbackRestrictionId);
+    Task<ListPlaybackRestrictionsResponse> ListPlaybackRestrictionsAsync(int? page = null, int? limit = null);
+    Task<PlaybackRestrictionResponse> UpdateReferrerDomainRestrictionAsync(string playbackRestrictionId, UpdateReferrerDomainRestrictionRequest request);
+    Task<PlaybackRestrictionResponse> UpdateUserAgentRestrictionAsync(string playbackRestrictionId, UpdateUserAgentRestrictionRequest request);
+    Task<GetMonitoringBreakdownResponse> GetMonitoringBreakdownAsync(string monitoringMetricId, string dimension = null, int? timestamp = null, List<string> filters = null, string orderBy = null, string orderDirection = null);
+    Task<GetMonitoringBreakdownTimeseriesResponse> GetMonitoringBreakdownTimeseriesAsync(string monitoringMetricId, string dimension = null, List<string> timeframe = null, List<string> filters = null, int? limit = null, string orderBy = null, string orderDirection = null);
+    Task<GetMonitoringHistogramTimeseriesResponse> GetMonitoringHistogramTimeseriesAsync(string monitoringHistogramMetricId, List<string> filters = null);
+    Task<GetMonitoringTimeseriesResponse> GetMonitoringTimeseriesAsync(string monitoringMetricId, List<string> filters = null, int? timestamp = null);
+    Task<ListMonitoringDimensionsResponse> ListMonitoringDimensionsAsync();
+    Task<ListMonitoringMetricsResponse> ListMonitoringMetricsAsync();
+    Task<TranscriptionVocabularyResponse> CreateTranscriptionVocabularyAsync(CreateTranscriptionVocabularyRequest request);
+    Task DeleteTranscriptionVocabularyAsync(string vocabularyId);
+    Task<TranscriptionVocabularyResponse> GetTranscriptionVocabularyAsync(string vocabularyId);
+    Task<ListTranscriptionVocabulariesResponse> ListTranscriptionVocabulariesAsync(int? limit = null, int? page = null);
+    Task<TranscriptionVocabularyResponse> UpdateTranscriptionVocabularyAsync(string vocabularyId, UpdateTranscriptionVocabularyRequest request);
+}

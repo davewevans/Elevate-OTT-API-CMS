@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using OttApiPlatform.Infrastructure.Service;
+using OttApiPlatform.Infrastructure.Services;
 
 namespace OttApiPlatform.WebAPI.Controllers;
 
