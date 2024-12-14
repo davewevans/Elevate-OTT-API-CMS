@@ -28,15 +28,19 @@ public class MuxWebhookController : ApiController
     [HttpPost]
     public async Task<IActionResult> HandleMuxWebhook([FromBody] MuxWebhookRequest hookRequest)
     {
-
-        // TODO: if no passthrough value, then check the environment id. 
-        // See ticket 88
-
         if (hookRequest?.Data == null) return BadRequest();
 
         var tenantId = !string.IsNullOrWhiteSpace(hookRequest.Data.Passthrough)
             ? _muxWebHookHandler.ParseTenantIdFromPassthrough(hookRequest.Data.Passthrough)
             : _muxWebHookHandler.FindTenantIdByEnvironmentId(hookRequest.Environment.Id);
+
+        if (tenantId == Guid.Empty)
+        {
+            _logger.LogWarning("No valid tenant ID found for the webhook request.");
+            return Ok(); // Return 200 OK to Mux to avoid retries
+        }
+
+        _tenantResolver.SetTenantId(tenantId);
 
         var accountInfo = await _dbContext.AccountInfo
            .FirstOrDefaultAsync(x => x.TenantId == tenantId);
