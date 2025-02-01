@@ -1,3 +1,11 @@
+trigger:
+  branches:
+    include:
+      - develop  # Adjust this based on the branch you want to sync
+
+pool:
+  vmImage: Self-Host
+
 steps:
   - checkout: self
     persistCredentials: true
