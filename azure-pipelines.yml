@@ -18,8 +18,7 @@ steps:
       git config --global user.name "davewevans"
 
       git remote set-url origin "https://elevateott@dev.azure.com/elevateott/Elevate%20OTT%20API-CMS/_git/Elevate-OTT-API-CMS"
-
-      git remote remove github 2>nul || echo "No remote to remove"
+      
       git remote add github "https://$(GITHUB_PAT)@github.com/davewevans/Elevate-OTT-API-CMS.git"
 
       git remote -v      
@@ -27,8 +26,6 @@ steps:
       git fetch origin develop --prune
       
       git checkout develop || git checkout -b develop origin/develop
-
-      git reset --hard origin/develop
 
       git push github develop --force --verbose
     displayName: 'Mirror develop branch to GitHub'
