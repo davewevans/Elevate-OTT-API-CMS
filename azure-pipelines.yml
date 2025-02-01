@@ -25,12 +25,9 @@ steps:
 
       git remote -v      
 
-      # Fetch latest changes from Azure DevOps
       git fetch origin develop --prune      
     
-      git checkout develop || git checkout -b develop origin/develop
-    
-      git pull --rebase origin develop
+      git checkout develop || git checkout -b develop origin/develop   
    
       git push github develop --force --verbose
     displayName: 'Mirror develop branch to GitHub'
