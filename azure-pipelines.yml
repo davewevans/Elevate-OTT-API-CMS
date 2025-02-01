@@ -15,9 +15,7 @@ steps:
 
   - script: |
       git config --global user.email "davewevans72@gmail.com"
-      git config --global user.name "davewevans"
-    
-      #git remote set-url origin https://elevateott@dev.azure.com/elevateott/Elevate%20OTT%20API-CMS/_git/Elevate-OTT-API-CMS
+      git config --global user.name "davewevans"  
       
       git remote remove github 2>nul || echo "No remote to remove"
       git remote add github https://$(GITHUB_PAT)@github.com/davewevans/Elevate-OTT-API-CMS.git
