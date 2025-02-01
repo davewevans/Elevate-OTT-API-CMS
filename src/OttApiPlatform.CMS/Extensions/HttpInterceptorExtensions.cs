@@ -11,6 +11,9 @@ public static class HttpInterceptorExtensions
         {
             client.BaseAddress = new Uri(builder.Configuration.GetSection("BaseApiUrl").Value ?? throw new InvalidOperationException("Invalid BaseApiUrl."));
         }).AddHttpMessageHandler<HttpInterceptor>();
+
+        // Client without a Base URL
+        services.AddHttpClient("NoBaseUrlClient");
     }
 
     #endregion Public Methods

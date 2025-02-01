@@ -2565,4 +2565,19 @@
   <data name="Asset_has_been_created_successfully" xml:space="preserve">
     <value>संपत्ति सफलतापूर्वक बनाई गई है।</value>
   </data>
+  <data name="People" xml:space="preserve">
+    <value>लोग</value>
+  </data>
+  <data name="Asset_Library" xml:space="preserve">
+    <value>एसेट लाइब्रेरी</value>
+  </data>
+  <data name="A_Test" xml:space="preserve">
+    <value>एक परीक्षण</value>
+  </data>
+  <data name="AA_Test" xml:space="preserve">
+    <value>एए टेस्ट</value>
+  </data>
+  <data name="AAAAA_Test" xml:space="preserve">
+    <value>एएए टेस्ट</value>
+  </data>
 </root>

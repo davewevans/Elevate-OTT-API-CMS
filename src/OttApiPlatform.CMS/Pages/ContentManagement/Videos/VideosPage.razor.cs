@@ -1,4 +1,6 @@
-﻿namespace OttApiPlatform.CMS.Pages.ContentManagement.Videos
+﻿using OttApiPlatform.CMS.Components.ContentManagement.Videos;
+
+namespace OttApiPlatform.CMS.Pages.ContentManagement.Videos
 {
     public partial class VideosPage
     {

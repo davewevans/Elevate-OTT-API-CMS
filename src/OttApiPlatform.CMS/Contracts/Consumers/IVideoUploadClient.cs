@@ -8,24 +8,25 @@ using OttApiPlatform.CMS.Models.Videos;
 
 namespace OttApiPlatform.CMS.Contracts.Consumers;
 
-public interface IVideosClient
+public interface IVideoUploadClient
 {
     #region Public Methods
 
-    Task<ApiResponseWrapper<VideoForEdit>> GetVideo(Guid id);
-    Task<ApiResponseWrapper<VideosResponse>> GetVideos(GetVideosQuery request);
-    Task<ApiResponseWrapper<SasTokenResponse>> GetAzureBlobSasToken();
+    //Task<ApiResponseWrapper<VideoForEdit>> GetVideo(Guid id);
+    //Task<ApiResponseWrapper<VideosResponse>> GetVideos(GetVideosQuery request);
+    Task<ApiResponseWrapper<SasTokenResponse>> GetAzureBlobSasToken(string fileName);
+    Task UploadWithAzureBlobSasToken(Uri sasToken, UploadFileModel file, CancellationToken cancellationToken = default);
     Task<ApiResponseWrapper<NewStorageNameResponse>> GetNewStorageName();
-    Task<ApiResponseWrapper<VideosForAutoCompleteResponse>> GetVideosForAutoComplete(GetVideosForAutoCompleteQuery request);
+    //Task<ApiResponseWrapper<VideosForAutoCompleteResponse>> GetVideosForAutoComplete(GetVideosForAutoCompleteQuery request);
     Task DirectUploadToAzureStorageAsync(Uri uriSasToken, UploadFileModel file,
         CancellationToken cancellationToken = default);
     //Task StoreVideosForStreaming();
 
     //Task<ApiResponseWrapper<object>> CreateVideo(MultipartFormDataContent request);
-    Task<ApiResponseWrapper<CreateVideoResponse>> CreateVideo(CreateVideoCommand request);
-    Task<ApiResponseWrapper<string>> UpdateVideo(MultipartFormDataContent request);
-    //Task<ApiResponseWrapper<object>> UpdateVideo(UpdateVideoCommand request);
-    Task<ApiResponseWrapper<string>> DeleteVideo(Guid id);
+    //Task<ApiResponseWrapper<CreateVideoResponse>> CreateVideo(CreateVideoCommand request);
+    //Task<ApiResponseWrapper<string>> UpdateVideo(MultipartFormDataContent request);
+    ////Task<ApiResponseWrapper<object>> UpdateVideo(UpdateVideoCommand request);
+    //Task<ApiResponseWrapper<string>> DeleteVideo(Guid id);
 
     #endregion Public Methods
 }

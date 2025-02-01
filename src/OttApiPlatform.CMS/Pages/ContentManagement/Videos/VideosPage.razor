@@ -1,6 +1,7 @@
 @page "/content/videos"
 
+@using OttApiPlatform.CMS.Components.ContentManagement.Videos
 <div class="d-flex flex-column gap-6 mb-12">
-    <VideoUpload OnVideoUploadComplete="VideoUploadCompleteHandler"/>
+    @* <VideoUpload OnVideoUploadComplete="VideoUploadCompleteHandler"/> *@
     <VideoList @ref="videoListChild" />
 </div>

@@ -23,7 +23,7 @@ public partial class EditVideo : ComponentBase
     [Inject] private IDialogService? DialogService { get; set; }
     [Inject] private ISnackbar? Snackbar { get; set; }
     [Inject] private IBreadcrumbService? BreadcrumbService { get; set; }
-    [Inject] private IVideosClient? VideosClient { get; set; }    
+    [Inject] private IVideoUploadClient? VideosClient { get; set; }    
     [Inject] private IAuthorsClient? AuthorsClient { get; set; }
     [Inject] private ICategoriesClient? CategoriesClient { get; set; }
 
@@ -110,78 +110,78 @@ public partial class EditVideo : ComponentBase
             new(Resource.Edit_Video, "#", true)
         });
 
-        var responseWrapper = await VideosClient.GetVideo(VideoId);
+        //var responseWrapper = await VideosClient.GetVideo(VideoId);
 
-        if (responseWrapper.IsSuccessStatusCode)
-        {
-            _videoForEditVm = responseWrapper.Payload;
+        //if (responseWrapper.IsSuccessStatusCode)
+        //{
+        //    _videoForEditVm = responseWrapper.Payload;
 
-            SetImageSourcesIfExists();
+        //    SetImageSourcesIfExists();
 
-            if (_videoForEditVm?.Author is not null)
-            {
-                _selectedAuthor = new AuthorItemForAutoComplete
-                {
-                    Id = _videoForEditVm.Author.Id,
-                    Name = _videoForEditVm.Author.Name ?? string.Empty,
-                    ImageUrl = _videoForEditVm.Author.ImageUrl ?? string.Empty
-                };
-            }
+        //    if (_videoForEditVm?.Author is not null)
+        //    {
+        //        _selectedAuthor = new AuthorItemForAutoComplete
+        //        {
+        //            Id = _videoForEditVm.Author.Id,
+        //            Name = _videoForEditVm.Author.Name ?? string.Empty,
+        //            ImageUrl = _videoForEditVm.Author.ImageUrl ?? string.Empty
+        //        };
+        //    }
            
-            if (_videoForEditVm.CategoryIds is not null)
-            {
-                var categoriesResponseWrapper = await CategoriesClient.GetCategoriesForAutoComplete(
-                new GetCategoriesForAutoCompleteQuery
-                {
-                    PageNumber = 50,
-                    SearchText = string.Empty
-                });
+        //    if (_videoForEditVm.CategoryIds is not null)
+        //    {
+        //        var categoriesResponseWrapper = await CategoriesClient.GetCategoriesForAutoComplete(
+        //        new GetCategoriesForAutoCompleteQuery
+        //        {
+        //            PageNumber = 50,
+        //            SearchText = string.Empty
+        //        });
 
-                Console.WriteLine("categoriesResponseWrapper.Success" + categoriesResponseWrapper.IsSuccessStatusCode);
+        //        Console.WriteLine("categoriesResponseWrapper.Success" + categoriesResponseWrapper.IsSuccessStatusCode);
 
-                if (categoriesResponseWrapper.IsSuccessStatusCode)
-                {
-                    _selectedCategories = new List<CategoryItemForAutoComplete>();
-                    var categoriesSuccessResult = categoriesResponseWrapper.Payload;
-                    if (categoriesSuccessResult != null)
-                    {
-                        foreach (var categoryId in _videoForEditVm.CategoryIds)
-                        {
-                            Console.WriteLine("categoryId: " + categoryId);
+        //        if (categoriesResponseWrapper.IsSuccessStatusCode)
+        //        {
+        //            _selectedCategories = new List<CategoryItemForAutoComplete>();
+        //            var categoriesSuccessResult = categoriesResponseWrapper.Payload;
+        //            if (categoriesSuccessResult != null)
+        //            {
+        //                foreach (var categoryId in _videoForEditVm.CategoryIds)
+        //                {
+        //                    Console.WriteLine("categoryId: " + categoryId);
 
-                            var categoryForAutoComplete = categoriesSuccessResult?.Categories?.Items.SingleOrDefault(c => c.Id.Equals(categoryId));
-                            if (categoryForAutoComplete is not null)
-                            {
-                                _selectedCategories.Add(categoryForAutoComplete);
+        //                    var categoryForAutoComplete = categoriesSuccessResult?.Categories?.Items.SingleOrDefault(c => c.Id.Equals(categoryId));
+        //                    if (categoryForAutoComplete is not null)
+        //                    {
+        //                        _selectedCategories.Add(categoryForAutoComplete);
 
-                            }
-                        }
-                    }                    
-                }
-            }
+        //                    }
+        //                }
+        //            }                    
+        //        }
+        //    }
 
-            if (_videoForEditVm?.TrailerVideo is not null)
-            {
-                _selectedTrailerVideo = _videoForEditVm?.TrailerVideo;
-            }
-            if (_videoForEditVm?.FeaturedCategoryVideo is not null)
-            {
-                _selectedFeaturedCategoryVideo = _videoForEditVm?.FeaturedCategoryVideo;
-            }
+        //    if (_videoForEditVm?.TrailerVideo is not null)
+        //    {
+        //        _selectedTrailerVideo = _videoForEditVm?.TrailerVideo;
+        //    }
+        //    if (_videoForEditVm?.FeaturedCategoryVideo is not null)
+        //    {
+        //        _selectedFeaturedCategoryVideo = _videoForEditVm?.FeaturedCategoryVideo;
+        //    }
 
-            //_videoForEditVm.PropertyChanged += NameChangedHandler;
+        //    //_videoForEditVm.PropertyChanged += NameChangedHandler;
 
-            if (_videoForEditVm != null)
-            {
-                SetContentAccess((int)_videoForEditVm.ContentAccess);
-                SetPublicationStatus((int)_videoForEditVm.PublicationStatus);
-            }
-        }
-        else
-        {
-            EditContextApiExceptionFallback.PopulateFormErrors(responseWrapper.ApiErrorResponse);
-            SnackbarApiExceptionProvider.ShowErrors(responseWrapper.ApiErrorResponse);
-        }
+        //    if (_videoForEditVm != null)
+        //    {
+        //        SetContentAccess((int)_videoForEditVm.ContentAccess);
+        //        SetPublicationStatus((int)_videoForEditVm.PublicationStatus);
+        //    }
+        //}
+        //else
+        //{
+        //    EditContextApiExceptionFallback.PopulateFormErrors(responseWrapper.ApiErrorResponse);
+        //    SnackbarApiExceptionProvider.ShowErrors(responseWrapper.ApiErrorResponse);
+        //}
     }
 
     #endregion Protected Methods
@@ -384,36 +384,38 @@ public partial class EditVideo : ComponentBase
     {
         System.Console.WriteLine("video auto complete value: " + value ?? "value is null");
 
-        var responseWrapper = await VideosClient.GetVideosForAutoComplete(
-            new GetVideosForAutoCompleteQuery
-            {
-                PageNumber = 50,
-                SearchText = value ?? string.Empty
-            });
+        throw new NotImplementedException();
 
-        //if (responseWrapper.Success)
+        //var responseWrapper = await VideosClient.GetVideosForAutoComplete(
+        //    new GetVideosForAutoCompleteQuery
+        //    {
+        //        PageNumber = 50,
+        //        SearchText = value ?? string.Empty
+        //    });
+
+        ////if (responseWrapper.Success)
+        ////{
+        ////    var successResult = responseWrapper.Response as SuccessResult<VideosForAutoCompleteResponse>;
+        ////    if (successResult != null)
+        ////        _videosForAutoCompleteResponse = successResult.Result;
+        ////}
+        ////else
+        ////{
+        ////    var exceptionResult = responseWrapper.Response as ExceptionResult;
+        ////    _serverSideValidator.Validate(exceptionResult);
+        ////}
+
+        //if (responseWrapper.IsSuccessStatusCode)
         //{
-        //    var successResult = responseWrapper.Response as SuccessResult<VideosForAutoCompleteResponse>;
-        //    if (successResult != null)
-        //        _videosForAutoCompleteResponse = successResult.Result;
+        //    _videosForAutoCompleteResponse = responseWrapper.Payload;
         //}
         //else
         //{
-        //    var exceptionResult = responseWrapper.Response as ExceptionResult;
-        //    _serverSideValidator.Validate(exceptionResult);
+        //    EditContextApiExceptionFallback.PopulateFormErrors(responseWrapper.ApiErrorResponse);
+        //    SnackbarApiExceptionProvider.ShowErrors(responseWrapper.ApiErrorResponse);
         //}
 
-        if (responseWrapper.IsSuccessStatusCode)
-        {
-            _videosForAutoCompleteResponse = responseWrapper.Payload;
-        }
-        else
-        {
-            EditContextApiExceptionFallback.PopulateFormErrors(responseWrapper.ApiErrorResponse);
-            SnackbarApiExceptionProvider.ShowErrors(responseWrapper.ApiErrorResponse);
-        }
-
-        return _videosForAutoCompleteResponse.Videos.Items;
+        //return _videosForAutoCompleteResponse.Videos.Items;
     }
 
     private IEnumerable<string> ValidateVideo(string? value)
@@ -667,11 +669,11 @@ public partial class EditVideo : ComponentBase
             userFormData.Add(_animatedGifContent, "AnimatedGif", _animatedGifContent.Headers.GetValues("FileName").LastOrDefault());
 
 
-        var responseWrapper = await VideosClient.UpdateVideo(userFormData);
+        //var responseWrapper = await VideosClient.UpdateVideo(userFormData);
 
 
-        Console.WriteLine("httpResponse: " + responseWrapper);
-        Console.WriteLine("httpResponse.Success: " + responseWrapper.IsSuccessStatusCode);
+        //Console.WriteLine("httpResponse: " + responseWrapper);
+        //Console.WriteLine("httpResponse.Success: " + responseWrapper.IsSuccessStatusCode);
 
 
         //if (httpResponse.Success)
@@ -687,16 +689,16 @@ public partial class EditVideo : ComponentBase
         //    _serverSideValidator?.Validate(exceptionResult);
         //}
 
-        if (responseWrapper.IsSuccessStatusCode)
-        {
-            Snackbar.Add(responseWrapper.Payload, Severity.Success);
-            NavigationManager.NavigateTo("content/videos");
-        }
-        else
-        {
-            EditContextApiExceptionFallback.PopulateFormErrors(responseWrapper.ApiErrorResponse);
-            SnackbarApiExceptionProvider.ShowErrors(responseWrapper.ApiErrorResponse);
-        }
+        //if (responseWrapper.IsSuccessStatusCode)
+        //{
+        //    Snackbar.Add(responseWrapper.Payload, Severity.Success);
+        //    NavigationManager.NavigateTo("content/videos");
+        //}
+        //else
+        //{
+        //    EditContextApiExceptionFallback.PopulateFormErrors(responseWrapper.ApiErrorResponse);
+        //    SnackbarApiExceptionProvider.ShowErrors(responseWrapper.ApiErrorResponse);
+        //}
     }
 
 

@@ -2565,4 +2565,19 @@
   <data name="Asset_has_been_created_successfully" xml:space="preserve">
     <value>Varlık başarıyla oluşturuldu.</value>
   </data>
+  <data name="People" xml:space="preserve">
+    <value>Halk</value>
+  </data>
+  <data name="Asset_Library" xml:space="preserve">
+    <value>Varlık Kitaplığı</value>
+  </data>
+  <data name="A_Test" xml:space="preserve">
+    <value>Bir Test</value>
+  </data>
+  <data name="AA_Test" xml:space="preserve">
+    <value>AA Testi</value>
+  </data>
+  <data name="AAAAA_Test" xml:space="preserve">
+    <value>AAAAA Testi</value>
+  </data>
 </root>

@@ -8,3 +8,12 @@ public enum AssetCreationStatus
     Errored,
     Deleted
 }
+
+public enum StaticRenditionStatus
+{
+    None,
+    Preparing,
+    Ready,
+    Errored,
+    Deleted
+}

@@ -7,14 +7,11 @@ public class UploadProgressModel : INotifyPropertyChanged
 {
     private double value = 0;
 
-    public event PropertyChangedEventHandler? PropertyChanged;
+    public event PropertyChangedEventHandler PropertyChanged;
 
     private void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
     {
-        if (PropertyChanged != null)
-        {
-            PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-        }
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 
     public static UploadProgressModel CreateUploadProgress()
@@ -26,18 +23,17 @@ public class UploadProgressModel : INotifyPropertyChanged
 
     public double Value
     {
-        get
-        {
-            return this.value;
-        }
-
+        get => this.value;
         set
         {
-            if (value != this.value)
+            if (value < 0 || value > Maximum)
             {
-                this.value = value;
-                NotifyPropertyChanged();
+                throw new ArgumentOutOfRangeException(nameof(value), $"Value must be between 0 and {Maximum}.");
             }
+
+            if (!(Math.Abs(value - this.value) > double.Epsilon)) return;
+            this.value = value;
+            NotifyPropertyChanged();
         }
     }
 }

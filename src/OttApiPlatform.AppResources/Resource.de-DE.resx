@@ -2565,4 +2565,19 @@
   <data name="Asset_has_been_created_successfully" xml:space="preserve">
     <value>Das Asset wurde erfolgreich erstellt.</value>
   </data>
+  <data name="People" xml:space="preserve">
+    <value>Volk</value>
+  </data>
+  <data name="Asset_Library" xml:space="preserve">
+    <value>Asset-Bibliothek</value>
+  </data>
+  <data name="A_Test" xml:space="preserve">
+    <value>Ein Test</value>
+  </data>
+  <data name="AA_Test" xml:space="preserve">
+    <value>AA-Prüfung</value>
+  </data>
+  <data name="AAAAA_Test" xml:space="preserve">
+    <value>AAAAA-Test</value>
+  </data>
 </root>

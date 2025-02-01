@@ -1,0 +1,21 @@
+﻿@page "/content/assets"
+@using OttApiPlatform.CMS.Components.ContentManagement.Videos
+
+<MudTabs Elevation="2" Rounded="true" ApplyEffectsToContainer="true" PanelClass="pa-6">
+    <MudTabPanel Text="Video Library">
+        <div class="d-flex flex-column gap-6 mb-12">
+            @* <VideoUpload OnVideoUploadComplete="VideoUploadCompleteHandler"/> *@
+            <VideoList @ref="videoListChild" />
+        </div>
+    </MudTabPanel>
+    <MudTabPanel Text="Image Library">
+        <MudText>Images</MudText>
+    </MudTabPanel>
+    <MudTabPanel Text="Audio Library">
+        <MudText>Audio</MudText>
+    </MudTabPanel>
+    <MudTabPanel Text="Document Library">
+        <MudText>Documents</MudText>
+    </MudTabPanel>
+</MudTabs>
+

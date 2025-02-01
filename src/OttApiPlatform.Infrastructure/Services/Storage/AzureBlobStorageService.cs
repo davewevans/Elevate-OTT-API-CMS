@@ -3,6 +3,8 @@ using Azure.Core;
 using Azure.Storage.Sas;
 using OttApiPlatform.Application.Features.ContentManagement.Assets.Queries.GetSasToken;
 using System.ComponentModel;
+using IronPdf.Editing;
+using Microsoft.AspNetCore.Components.Forms;
 
 namespace OttApiPlatform.Infrastructure.Services.Storage;
 
@@ -33,7 +35,7 @@ public class AzureBlobStorageService : IAzureBlobStorageService
                                                CancellationToken cancellationToken = default)
     {
         // Check if file is null or empty.
-        if (formFile is not { Length: > 0 })
+        if (formFile is null or { Length: <= 0 })
             return null;
 
         try
@@ -43,10 +45,10 @@ public class AzureBlobStorageService : IAzureBlobStorageService
 
             // Rename file if allowed.
             if (fileRenameAllowed)
-                fileName = $"{formFile.FileName.ToUrlFriendlyString()}-{fileName}";
+                fileName = $"{formFile.Name.ToUrlFriendlyString()}-{fileName}";
 
             // Append file extension to the generated file name.
-            fileName = $"{fileName}{Path.GetExtension(formFile.FileName)}";
+            fileName = $"{fileName}{Path.GetExtension(formFile.Name)}";
 
             // Create a new BlobContainerClient instance with the specified connection string and
             // directory path.
@@ -92,41 +94,12 @@ public class AzureBlobStorageService : IAzureBlobStorageService
             return new List<FileMetaData>();
 
         // Upload each form file to the specified blob storage container.
-        foreach (var formFile in formFiles.Select((value, index) => new { Index = index, Value = value }))
-            if (formFile.Value.Length > 0)
-                try
-                {
-                    // Generate a unique file name using a Unix Time.
-                    var fileName = $"{_utcTimeService.GetUnixTimeMilliseconds()}";
-
-                    // Rename the uploaded file if necessary.
-                    if (fileRenameAllowed)
-                        fileName = $"{formFile.Value.FileName.ToUrlFriendlyString()}-{fileName}";
-
-                    fileName = $"{fileName}{Path.GetExtension(formFile.Value.FileName)}";
-
-                    // Create a new blob container client and upload the file to the container.
-                    var containerClient = new BlobContainerClient(_connectionString, directoryPath);
-                    await containerClient.CreateIfNotExistsAsync(cancellationToken: cancellationToken);
-                    await containerClient.SetAccessPolicyAsync(PublicAccessType.BlobContainer, cancellationToken: cancellationToken);
-                    var blobClient = containerClient.GetBlobClient(fileName);
-                    await blobClient.UploadAsync(formFile.Value.OpenReadStream(), cancellationToken: cancellationToken);
-
-                    // Add metadata for the uploaded file to the list of file paths.
-                    filePaths.Add(new FileMetaData
-                    {
-                        FileName = fileName,
-                        FileUri = blobClient.Uri.ToString(),
-                        IsDefault = defaultFileIndex == formFile.Index
-                    });
-                }
-                catch (Exception e)
-                {
-                    throw new Exception(e.ToString());
-                }
-            else
-                // Throw an exception if the form file is empty.
-                throw new Exception(Resource.File_is_empty);
+        foreach (var formFile in formFiles)
+        {
+            var metaData = await UploadFile(formFile, directoryPath, fileRenameAllowed = true, baseUrl,
+                cancellationToken);
+            filePaths.Add(metaData);
+        }
 
         return filePaths;
     }
@@ -194,7 +167,7 @@ public class AzureBlobStorageService : IAzureBlobStorageService
 
         // Generate unique file name
         var timestamp = $"{_utcTimeService.GetUnixTimeMilliseconds()}";
-        var uniqueFileName = $"{ fileName.ToUrlFriendlyString() }-{ timestamp }";
+        var uniqueFileName = $"{ fileName.ToUrlFriendlyString() }-{ timestamp }{ Path.GetExtension(fileName) }";
 
         var blobClient = containerClient.GetBlobClient(uniqueFileName);
 
