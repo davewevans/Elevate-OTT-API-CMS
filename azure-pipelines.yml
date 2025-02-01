@@ -4,7 +4,7 @@ trigger:
       - develop  # Adjust this based on the branch you want to sync
 
 pool:
-  name: Self-Hosted
+  vmImage: 'windows-latest'
 
 steps:
   - checkout: self
