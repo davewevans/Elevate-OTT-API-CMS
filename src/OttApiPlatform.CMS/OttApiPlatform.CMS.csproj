@@ -36,12 +36,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="Features\ContentManagement\Collections\Commands\" />
+	  <Folder Include="Features\ContentManagement\Collections\Queries\" />
 	  <Folder Include="Hubs\" />
-	  <Folder Include="Pages\ContentManagement\AssetLibrary\" />
+	  <Folder Include="Pages\ContentManagement\Collections\" />
 	  <Folder Include="Pages\ContentManagement\ContentSettings\" />
-	  <Folder Include="Pages\ContentManagement\SwimLanes\" />
-	  <Folder Include="Pages\ContentManagement\Series\" />
-	  <Folder Include="Pages\ContentManagement\PlaylistLibrary\" />
+	  <Folder Include="Pages\ContentManagement\People\" />
 	  <Folder Include="Pages\LiveStream\" />
 	</ItemGroup>
 

@@ -3,22 +3,22 @@ using OttApiPlatform.CMS.Hubs;
 using OttApiPlatform.CMS.Shared;
 using OttApiPlatform.CMS.Utilities;
 
-namespace OttApiPlatform.CMS.Pages.ContentManagement.Videos;
+namespace OttApiPlatform.CMS.Components.ContentManagement.Videos;
 
 public partial class VideoList : ComponentBase, IAsyncDisposable
 {
     #region Private Properties
     [Inject] private SnackbarApiExceptionProvider SnackbarApiExceptionProvider { get; set; }
-    [Inject] private IAccessTokenProvider? AccessTokenProvider { get; set; }
-    [Inject] private IApiUrlProvider? ApiUrlProvider { get; set; }
-    [Inject] private IVideosClient? VideosClient { get; set; }
-    [Inject] private IDialogService? DialogService { get; set; }
-    [Inject] private IJSRuntime? Js { get; set; }
-    [Inject] private ILocalStorageService? LocalStorage { get; set; }
-    [Inject] private ISnackbar? Snackbar { get; set; }
-    [Inject] private AuthenticationStateProvider? AuthenticationStateProvider { get; set; }
-    [Inject] private NavigationManager? NavigationManager { get; set; }
-    [Inject] public VideoHub? VideoHub { get; set; }
+    [Inject] private IAccessTokenProvider AccessTokenProvider { get; set; }
+    [Inject] private IApiUrlProvider ApiUrlProvider { get; set; }
+    [Inject] private IVideoUploadClient VideosClient { get; set; }
+    [Inject] private IDialogService DialogService { get; set; }
+    [Inject] private IJSRuntime Js { get; set; }
+    [Inject] private ILocalStorageService LocalStorage { get; set; }
+    [Inject] private ISnackbar Snackbar { get; set; }
+    [Inject] private AuthenticationStateProvider AuthenticationStateProvider { get; set; }
+    [Inject] private NavigationManager NavigationManager { get; set; }
+    [Inject] public VideoHub VideoHub { get; set; }
 
     [Parameter]
     public EventCallback OnVideoUploadComplete { get; set; }
@@ -26,15 +26,15 @@ public partial class VideoList : ComponentBase, IAsyncDisposable
     private EditContextApiExceptionFallback EditContextApiExceptionFallback { get; set; }
 
     private string SearchString { get; set; } = string.Empty;
-    private VideosResponse? VideosResponse { get; set; }
+    private VideosResponse VideosResponse { get; set; }
     //private ServerSideValidator? ServerSideValidator { get; set; }
     private GetVideosQuery GetVideosQuery { get; set; } = new();
-    private HubConnection? HubConnection { get; set; }
+    private HubConnection HubConnection { get; set; }
 
     private string _message;
     private bool _updateReceived;
 
-    private MudTable<VideoItem>? Table { get; set; }
+    private MudTable<VideoItem> Table { get; set; }
 
     #endregion Private Properties
 
@@ -46,6 +46,22 @@ public partial class VideoList : ComponentBase, IAsyncDisposable
         Table?.ReloadServerData();
         StateHasChanged();
     }
+
+    public async Task AddVideo()
+    {
+        var options = new DialogOptions
+        {
+            FullWidth = true,
+            MaxWidth = MaxWidth.Medium,
+            CloseOnEscapeKey = true,
+            NoHeader = true,
+            Position = DialogPosition.TopCenter,
+            DisableBackdropClick = false
+        };
+
+        var result = await DialogService.ShowAsync<VideoUploadDialog>("Add Video", options);
+    }
+    
 
     public async ValueTask DisposeAsync()
     {
@@ -170,11 +186,11 @@ public partial class VideoList : ComponentBase, IAsyncDisposable
     private async Task DeleteVideo(Guid id)
     {
         var parameters = new DialogParameters
-    {
-        {"ContentText", Resource.Do_you_really_want_to_delete_this_record},
-        {"ButtonText", Resource.Delete},
-        {"Color", Color.Error}
-    };
+        {
+            {"ContentText", Resource.Do_you_really_want_to_delete_this_record},
+            {"ButtonText", Resource.Delete},
+            {"Color", Color.Error}
+        };
 
         var options = new DialogOptions() { CloseButton = true, MaxWidth = MaxWidth.ExtraSmall };
 
@@ -184,18 +200,18 @@ public partial class VideoList : ComponentBase, IAsyncDisposable
 
         if (!result.Canceled)
         {
-            var responseWrapper = await VideosClient?.DeleteVideo(id);
+            //var responseWrapper = await VideosClient?.DeleteVideo(id);
 
-            if (responseWrapper.IsSuccessStatusCode)
-            {
-                Snackbar?.Add(responseWrapper.Payload, Severity.Success);
-                await Table?.ReloadServerData();
-            }
-            else
-            {
-                EditContextApiExceptionFallback.PopulateFormErrors(responseWrapper.ApiErrorResponse);
-                SnackbarApiExceptionProvider.ShowErrors(responseWrapper.ApiErrorResponse);
-            }
+            //if (responseWrapper.IsSuccessStatusCode)
+            //{
+            //    Snackbar?.Add(responseWrapper.Payload, Severity.Success);
+            //    await Table?.ReloadServerData();
+            //}
+            //else
+            //{
+            //    EditContextApiExceptionFallback.PopulateFormErrors(responseWrapper.ApiErrorResponse);
+            //    SnackbarApiExceptionProvider.ShowErrors(responseWrapper.ApiErrorResponse);
+            //}
 
             //if (ApiResponseWrapper.Success)
             //{
@@ -221,7 +237,7 @@ public partial class VideoList : ComponentBase, IAsyncDisposable
     {
         // TODO guard clause
 
-        return new TableData<VideoItem>();
+        //return new TableData<VideoItem>();
 
 
 
@@ -235,8 +251,9 @@ public partial class VideoList : ComponentBase, IAsyncDisposable
 
         Console.WriteLine("Server reload pre api call");
 
-        var responseWrapper = await VideosClient.GetVideos(GetVideosQuery);
-
+        // TODO: compare with applications list
+        //var responseWrapper = await VideosClient.GetVideos(GetVideosQuery);
+        
         Console.WriteLine("Server reload post api call");
 
         var tableData = new TableData<VideoItem>();
@@ -245,31 +262,36 @@ public partial class VideoList : ComponentBase, IAsyncDisposable
         //{
         //    var successResult = responseWrapper.Response as SuccessResult<VideosResponse>;
         //    if (successResult != null)
-        //        VideosResponse = successResult.Result;
+        //    {
+        //        VideosResponse = successResult.Payload;
 
-        //    tableData = new TableData<VideoItem>()
-        //    { TotalItems = VideosResponse.Videos.TotalRows, Items = VideosResponse.Videos.Items };
+        //        tableData = new TableData<VideoItem>()
+        //        {
+        //            TotalItems = VideosResponse.Videos.TotalRows,
+        //            Items = VideosResponse.Videos.Items
+        //        };
+        //    }
         //}
         //else
         //{
-        //    var exceptionResult = responseWrapper.Response as ExceptionResult;
-        //    ServerSideValidator.Validate(exceptionResult);
+        //    var exceptionResult = responseWrapper. as ExceptionResult;
+        //    //ServerSideValidator.Validate(exceptionResult);
         //}
 
 
-        if (responseWrapper.IsSuccessStatusCode)
-        {
-            tableData = new TableData<VideoItem>()
-            {
-                TotalItems = VideosResponse.Videos.TotalRows, 
-                Items = VideosResponse.Videos.Items
-            };
-        }
-        else
-        {
-            EditContextApiExceptionFallback.PopulateFormErrors(responseWrapper.ApiErrorResponse);
-            SnackbarApiExceptionProvider.ShowErrors(responseWrapper.ApiErrorResponse);
-        }
+        //if (responseWrapper.IsSuccessStatusCode)
+        //{
+        //    tableData = new TableData<VideoItem>()
+        //    {
+        //        TotalItems = VideosResponse.Videos.TotalRows,
+        //        Items = VideosResponse.Videos.Items
+        //    };
+        //}
+        //else
+        //{
+        //    EditContextApiExceptionFallback.PopulateFormErrors(responseWrapper.ApiErrorResponse);
+        //    SnackbarApiExceptionProvider.ShowErrors(responseWrapper.ApiErrorResponse);
+        //}
 
         return tableData;
     }
@@ -289,7 +311,7 @@ public partial class VideoList : ComponentBase, IAsyncDisposable
 
     var result = await dialog.Result;
 
-    if (!result.Cancelled)
+    if (!result.Canceled)
         await Js.InvokeVoidAsync("triggerFileDownload", fileMetaData.FileName, fileMetaData.FileUri);
 }
 

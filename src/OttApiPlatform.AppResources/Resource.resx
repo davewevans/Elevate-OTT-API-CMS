@@ -777,9 +777,6 @@
   <data name="here" xml:space="preserve">
     <value>here</value>
   </data>
-  <data name="Hi" xml:space="preserve">
-    <value />
-  </data>
   <data name="High" xml:space="preserve">
     <value>High</value>
   </data>
@@ -2164,76 +2161,76 @@
     <value>Enable Two-Factor Authentication</value>
   </data>
   <data name="Application_errors_occurred_while_processing_your_request" xml:space="preserve">
-	  <value>Application error(s) occurred while processing your request.</value>
+    <value>Application error(s) occurred while processing your request.</value>
   </data>
   <data name="Unauthorized_access_detected" xml:space="preserve">
-	  <value>Unauthorized access detected.</value>
+    <value>Unauthorized access detected.</value>
   </data>
   <data name="Access_to_the_requested_resource_is_forbidden" xml:space="preserve">
-	  <value>Access to the requested resource is forbidden.</value>
+    <value>Access to the requested resource is forbidden.</value>
   </data>
   <data name="The_request_was_not_processed_due_to_invalid_or_missing_parameters" xml:space="preserve">
-	  <value>The request was not processed due to invalid or missing parameters.</value>
+    <value>The request was not processed due to invalid or missing parameters.</value>
   </data>
   <data name="The_requested_resource_was_not_found" xml:space="preserve">
-	  <value>The requested resource was not found.</value>
+    <value>The requested resource was not found.</value>
   </data>
   <data name="An_internal_server_error_occurred_while_processing_your_request" xml:space="preserve">
-	  <value>An internal server error occurred while processing your request.</value>
+    <value>An internal server error occurred while processing your request.</value>
   </data>
   <data name="An_error_occurred_while_processing_your_request" xml:space="preserve">
-	  <value>An error occurred while processing your request.</value>
+    <value>An error occurred while processing your request.</value>
   </data>
   <data name="Model_validation_errors_occurred_while_processing_your_request" xml:space="preserve">
-	  <value>Model validation error(s) occurred while processing your request.</value>
+    <value>Model validation error(s) occurred while processing your request.</value>
   </data>
   <data name="You_are_forbidden" xml:space="preserve">
     <value>Access to {0} is prohibited due to insufficient permissions.</value>
   </data>
   <data name="The_time_provided_must_be_in_UTC_format" xml:space="preserve">
-	  <value>The time provided must be in UTC format.</value>
+    <value>The time provided must be in UTC format.</value>
   </data>
   <data name="On_Premises_File_Storage" xml:space="preserve">
     <value>On-Premises File Storage</value>
   </data>
   <data name="Reporting_Hub_is_closed" xml:space="preserve">
-	  <value>Reporting Hub is closed.</value>
+    <value>Reporting Hub is closed.</value>
   </data>
   <data name="Reporting_Hub_is_already_closed" xml:space="preserve">
-	  <value>Reporting Hub is already closed.</value>
+    <value>Reporting Hub is already closed.</value>
   </data>
   <data name="Dashboard_Hub_is_closed" xml:space="preserve">
-	  <value>Dashboard Hub is closed.</value>
+    <value>Dashboard Hub is closed.</value>
   </data>
   <data name="Dashboard_Hub_is_being_initialized" xml:space="preserve">
-	  <value>Dashboard Hub is being initialized.</value>
+    <value>Dashboard Hub is being initialized.</value>
   </data>
   <data name="Unable_to_connect_to_the_dashboard_hub_due_to_an_error" xml:space="preserve">
-	  <value>Unable to connect to the dashboard hub due to an error: {0}</value>
+    <value>Unable to connect to the dashboard hub due to an error: {0}</value>
   </data>
   <data name="Dashboard_Hub_is_now_connected" xml:space="preserve">
-	  <value>Dashboard Hub is now connected.</value>
+    <value>Dashboard Hub is now connected.</value>
   </data>
   <data name="Unable_to_connect_to_the_reporting_hub_due_to_an_error" xml:space="preserve">
-	  <value>Unable to connect to the reporting hub due to an error: {0}</value>
+    <value>Unable to connect to the reporting hub due to an error: {0}</value>
   </data>
   <data name="Reporting_Hub_is_now_connected" xml:space="preserve">
-	  <value>Reporting Hub is now connected.</value>
+    <value>Reporting Hub is now connected.</value>
   </data>
   <data name="Reporting_Hub_is_being_initialized" xml:space="preserve">
-	  <value>Reporting Hub is being initialized.</value>
+    <value>Reporting Hub is being initialized.</value>
   </data>
   <data name="Reporting_Hub_is_not_active" xml:space="preserve">
-	  <value>Reporting Hub is not active.</value>
+    <value>Reporting Hub is not active.</value>
   </data>
   <data name="You_are_not_authorized_to_access_resources_related_to_other_tenants" xml:space="preserve">
-	  <value>You are not authorized to access resources related to other tenants.</value>
+    <value>You are not authorized to access resources related to other tenants.</value>
   </data>
   <data name="ExportAsPdfOnDemand" xml:space="preserve">
     <value>Export as PDF Immediately</value>
   </data>
   <data name="User_email_has_been_confirmed_successfully" xml:space="preserve">
-	  <value>User email has been confirmed successfully.</value>
+    <value>User email has been confirmed successfully.</value>
   </data>
   <data name="Tenant_creation_failed" xml:space="preserve">
     <value>Tenant creation failed.</value>
@@ -2567,5 +2564,20 @@
   </data>
   <data name="Asset_has_been_created_successfully" xml:space="preserve">
     <value>Asset has been created successfully.</value>
+  </data>
+  <data name="People" xml:space="preserve">
+    <value>People</value>
+  </data>
+  <data name="Asset_Library" xml:space="preserve">
+    <value>Asset Library</value>
+  </data>
+  <data name="A_Test" xml:space="preserve">
+    <value>A Test</value>
+  </data>
+  <data name="AA_Test" xml:space="preserve">
+    <value>AA Test</value>
+  </data>
+  <data name="AAAAA_Test" xml:space="preserve">
+    <value>AAAa Test</value>
   </data>
 </root>

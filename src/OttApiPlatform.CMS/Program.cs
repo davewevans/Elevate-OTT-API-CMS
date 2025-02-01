@@ -68,7 +68,7 @@ builder.Services.AddScoped<IFileUploadClient, FileUploadClient>();
 
 builder.Services.AddScoped<IAuthorsClient, AuthorsClient>();
 
-builder.Services.AddScoped<IVideosClient, VideosClient>();
+builder.Services.AddScoped<IVideoUploadClient, VideoUploadClient>();
 
 builder.Services.AddScoped<ICategoriesClient, CategoriesClient>();
 

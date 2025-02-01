@@ -1,5 +1,5 @@
 @using OttApiPlatform.CMS.Features.ContentManagement.Videos.Queries.GetVideos
-@namespace OttApiPlatform.CMS.Pages.ContentManagement.Videos
+@namespace OttApiPlatform.CMS.Components.ContentManagement.Videos
 
 
 @*<div class="d-flex flex-row gap-1">
@@ -18,6 +18,7 @@
             <ToolBarContent>
                 <MudText Typo="Typo.h5" Color="Color.Primary">@Resource.Videos</MudText>
                 <MudSpacer />
+                <MudSpacer />
                 <MudTextField T="string"
                               Immediate="true"
                               ValueChanged="@FilterVideos"
@@ -25,6 +26,10 @@
                               Adornment="Adornment.Start"
                               AdornmentIcon="@Icons.Material.Filled.Search"
                               IconSize="Size.Small" Class="mt-0"></MudTextField>
+                <MudFab Style="margin-left: 20px; margin-top: 10px"
+                        Color="Color.Primary"
+                        Size="Size.Small"
+                        StartIcon="@Icons.Material.Filled.Add" OnClick="AddVideo" />
             </ToolBarContent>
             <HeaderContent>
                 <MudTh></MudTh>
@@ -40,7 +45,7 @@
                             <MudImage Src="@video.ThumbnailUrl"
                                       Width="140"
                                       Height="64"
-                                      Alt="@video.Title"
+                                      Alt="@video.FileName"
                                       Elevation="25"
                                       Class="rounded-lg ma-4"/>
                             break;
@@ -54,7 +59,7 @@
                     }
                    
                 </MudTd>
-                <MudTd DataLabel="Title">@video.Title</MudTd>
+        <MudTd DataLabel="Title">@video.FileName</MudTd>
                 <MudTd DataLabel="Uploaded On">
                     @switch (video.StreamCreationStatus)
                     {

@@ -70,11 +70,38 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A Test.
+        /// </summary>
+        public static string A_Test {
+            get {
+                return ResourceManager.GetString("A_Test", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A user with this login already exists..
         /// </summary>
         public static string A_user_with_this_login_already_exists {
             get {
                 return ResourceManager.GetString("A_user_with_this_login_already_exists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AA Test.
+        /// </summary>
+        public static string AA_Test {
+            get {
+                return ResourceManager.GetString("AA_Test", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AAAa Test.
+        /// </summary>
+        public static string AAAAA_Test {
+            get {
+                return ResourceManager.GetString("AAAAA_Test", resourceCulture);
             }
         }
         
@@ -588,6 +615,15 @@ namespace OttApiPlatform.AppResources {
         public static string Asset_has_been_created_successfully {
             get {
                 return ResourceManager.GetString("Asset_has_been_created_successfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Asset Library.
+        /// </summary>
+        public static string Asset_Library {
+            get {
+                return ResourceManager.GetString("Asset_Library", resourceCulture);
             }
         }
         
@@ -2799,15 +2835,6 @@ namespace OttApiPlatform.AppResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        public static string Hi {
-            get {
-                return ResourceManager.GetString("Hi", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to High.
         /// </summary>
         public static string High {
@@ -4241,6 +4268,15 @@ namespace OttApiPlatform.AppResources {
         public static string Pending {
             get {
                 return ResourceManager.GetString("Pending", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to People.
+        /// </summary>
+        public static string People {
+            get {
+                return ResourceManager.GetString("People", resourceCulture);
             }
         }
         

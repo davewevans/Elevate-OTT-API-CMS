@@ -2,4 +2,5 @@
 
 public class GetSasTokenQuery
 {
+    public string FileName { get; set; }
 }

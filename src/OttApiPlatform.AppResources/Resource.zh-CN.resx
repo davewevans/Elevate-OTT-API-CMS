@@ -2565,4 +2565,19 @@
   <data name="Asset_has_been_created_successfully" xml:space="preserve">
     <value>已成功创建资产。</value>
   </data>
+  <data name="People" xml:space="preserve">
+    <value>人</value>
+  </data>
+  <data name="Asset_Library" xml:space="preserve">
+    <value>资源库</value>
+  </data>
+  <data name="A_Test" xml:space="preserve">
+    <value>A 测试</value>
+  </data>
+  <data name="AA_Test" xml:space="preserve">
+    <value>AA 测试</value>
+  </data>
+  <data name="AAAAA_Test" xml:space="preserve">
+    <value>AAAAA 测试</value>
+  </data>
 </root>

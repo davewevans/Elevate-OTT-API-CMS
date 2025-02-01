@@ -2565,4 +2565,19 @@
   <data name="Asset_has_been_created_successfully" xml:space="preserve">
     <value>アセットが正常に作成されました。</value>
   </data>
+  <data name="People" xml:space="preserve">
+    <value>人</value>
+  </data>
+  <data name="Asset_Library" xml:space="preserve">
+    <value>アセットライブラリ</value>
+  </data>
+  <data name="A_Test" xml:space="preserve">
+    <value>テスト</value>
+  </data>
+  <data name="AA_Test" xml:space="preserve">
+    <value>AAテスト</value>
+  </data>
+  <data name="AAAAA_Test" xml:space="preserve">
+    <value>AAAAAテスト</value>
+  </data>
 </root>

@@ -110,6 +110,16 @@ public class HttpService : IHttpService
         return await ProcessResponse<TResponse>(response);
     }
 
+    public async Task<ApiResponseWrapper<TResponse>> PutRawContent<TResponse>(string url, HttpContent content, CancellationToken cancellationToken = default)
+    {
+        using var httpClient = _httpClientFactory.CreateClient("NoBaseUrlClient");
+        httpClient.DefaultRequestHeaders.Authorization = null;
+        using var response = await httpClient.PutAsync(url, content, cancellationToken).ConfigureAwait(false);
+
+        return await ProcessNoResponseBody<TResponse>(response);
+    }
+
+
     public async Task<ApiResponseWrapper<TResponse>> Delete<TResponse>(string url)
     {
         using var httpClient = _httpClientFactory.CreateClient("DefaultClient");
@@ -141,6 +151,24 @@ public class HttpService : IHttpService
             return new ApiResponseWrapper<TResponse>(responseDeserialized, response.IsSuccessStatusCode, response.StatusCode);
         }
     }
+
+    private async Task<ApiResponseWrapper<TResponse>> ProcessNoResponseBody<TResponse>(HttpResponseMessage response)
+    {
+        var responseContent = await response.Content.ReadAsStringAsync();
+
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new HttpRequestException($"Request failed with status code {response.StatusCode}. Response: {responseContent}");
+        }
+
+        if (string.IsNullOrWhiteSpace(responseContent))
+        {
+            return new ApiResponseWrapper<TResponse>(null, response.IsSuccessStatusCode, response.StatusCode);
+        }
+
+        return await ProcessResponse<TResponse>(response);
+    }
+
 
     #endregion Private Methods
 }

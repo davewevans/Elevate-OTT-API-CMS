@@ -2565,4 +2565,19 @@
   <data name="Asset_has_been_created_successfully" xml:space="preserve">
     <value>O ativo foi criado com êxito.</value>
   </data>
+  <data name="People" xml:space="preserve">
+    <value>Pessoas</value>
+  </data>
+  <data name="Asset_Library" xml:space="preserve">
+    <value>Biblioteca de ativos</value>
+  </data>
+  <data name="A_Test" xml:space="preserve">
+    <value>Um teste</value>
+  </data>
+  <data name="AA_Test" xml:space="preserve">
+    <value>Teste AA</value>
+  </data>
+  <data name="AAAAA_Test" xml:space="preserve">
+    <value>Teste AAAAA</value>
+  </data>
 </root>

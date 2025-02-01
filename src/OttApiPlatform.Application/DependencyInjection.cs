@@ -1,4 +1,6 @@
-﻿namespace OttApiPlatform.Application;
+﻿using OttApiPlatform.Application.Mappings;
+
+namespace OttApiPlatform.Application;
 
 public static class DependencyInjection
 {
@@ -35,6 +37,15 @@ public static class DependencyInjection
         // Adds a transient service for UnhandledExceptionBehaviour to the dependency injection
         // container. This is used as a pipeline behavior for MediatR requests.
         services.AddTransient(typeof(IPipelineBehavior<,>), typeof(UnhandledExceptionBehaviour<,>));
+
+        // Register AutoMapper and add profiles
+        services.AddAutoMapper(cfg =>
+        {
+            cfg.AddProfile<MappingProfiles.AssetProfile>();
+            cfg.AddProfile<MappingProfiles.GetAssetByIdResponseProfile>();
+            cfg.AddProfile<MappingProfiles.GetAssetsResponseProfile>();
+            cfg.AddProfile<MappingProfiles.CreateAssetResponseProfile>();
+        });
 
         // Returns the service collection.
         return services;

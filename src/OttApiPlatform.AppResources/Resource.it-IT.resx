@@ -2565,4 +2565,19 @@
   <data name="Asset_has_been_created_successfully" xml:space="preserve">
     <value>La risorsa è stata creata correttamente.</value>
   </data>
+  <data name="People" xml:space="preserve">
+    <value>Gente</value>
+  </data>
+  <data name="Asset_Library" xml:space="preserve">
+    <value>Libreria di risorse</value>
+  </data>
+  <data name="A_Test" xml:space="preserve">
+    <value>Un test</value>
+  </data>
+  <data name="AA_Test" xml:space="preserve">
+    <value>AA Test</value>
+  </data>
+  <data name="AAAAA_Test" xml:space="preserve">
+    <value>AAAAA Test</value>
+  </data>
 </root>

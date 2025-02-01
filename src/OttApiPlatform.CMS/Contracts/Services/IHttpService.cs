@@ -18,6 +18,8 @@ public interface IHttpService
 
     Task<ApiResponseWrapper<TResponse>> PutFormData<TRequest, TResponse>(string url, MultipartFormDataContent data, CancellationToken cancellationToken = default);
 
+    Task<ApiResponseWrapper<TResponse>> PutRawContent<TResponse>(string url, HttpContent content,
+        CancellationToken cancellationToken = default);
     Task<ApiResponseWrapper<TResponse>> Delete<TResponse>(string url);
 
     #endregion Public Methods
