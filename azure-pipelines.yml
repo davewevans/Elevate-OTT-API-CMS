@@ -18,9 +18,8 @@ steps:
 
       git remote add github https://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@github.com/davewevans/Elevate-OTT-API-CMS.git
       
-      git remote -v
+      git remote -v      
       
-      # Push branches one by one instead of --mirror
       git push github develop --force
       git push github master --force
       git push github staging --force
