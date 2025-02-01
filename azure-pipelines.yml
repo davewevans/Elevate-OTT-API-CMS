@@ -39,6 +39,6 @@ steps:
       git pull --rebase origin develop
 
       echo "🔹 Pushing updates to GitHub"
-      git push github develop --force --verbose
+      git push github --force-with-lease --verbose
     displayName: 'Mirror develop branch to GitHub'
 
