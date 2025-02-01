@@ -20,10 +20,8 @@ steps:
       
       git remote -v
       
-      git push --mirror github
+      # Push branches one by one instead of --mirror
+      git push github develop --force
+      git push github master --force
+      git push github staging --force
     displayName: 'Mirror to GitHub'
-
-
-
-
-
