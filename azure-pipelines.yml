@@ -20,7 +20,7 @@ steps:
       git config --global user.name "davewevans"
 
       echo "🔹 Setting remote origin to Azure DevOps"
-      git remote set-url origin "https://elevateott@dev.azure.com/elevateott/Elevate%20OTT%20API-CMS/_git/Elevate-OTT-API-CMS"
+      git remote set-url origin "https://elevateott@dev.azure.com/elevateott/Elevate-OTT-API-CMS/_git/Elevate-OTT-API-CMS"
 
       echo "🔹 Configuring GitHub remote"
       git remote remove github 2>nul || echo "No remote to remove"
