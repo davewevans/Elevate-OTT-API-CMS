@@ -1,18 +1,8 @@
-trigger:
-  branches:
-    include:
-      - develop
-
-pool:
-  name: Self-Hosted
-
-variables: 
-  - group: Secrets
-
 steps:
   - checkout: self
     persistCredentials: true
     clean: false
+    fetchDepth: 0  # Ensures full clone instead of shallow clone
 
   - script: |
       echo "🔹 Starting Git Configuration"
@@ -35,10 +25,15 @@ steps:
       echo "🔹 Checking out develop branch"
       git checkout develop || git checkout -b develop origin/develop
 
+      echo "🔹 Ensuring complete Git history is available"
+      git pull --unshallow
+
       echo "🔹 Pulling latest changes"
       git pull --rebase origin develop
 
-      echo "🔹 Pushing updates to GitHub"
-      git push github --force --verbose
-    displayName: 'Mirror develop branch to GitHub'
+      echo "🔹 Running Git Garbage Collection"
+      git gc --prune=now
 
+      echo "🔹 Pushing updates to GitHub"
+      git push github develop --force --verbose
+    displayName: 'Mirror develop branch to GitHub'
