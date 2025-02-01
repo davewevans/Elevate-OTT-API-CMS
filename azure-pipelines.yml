@@ -12,25 +12,33 @@ variables:
 steps:
   - checkout: self
     persistCredentials: true
-    clean: false  # Prevents the repo from being deleted
+    clean: false
 
   - script: |
+      echo "🔹 Starting Git Configuration"
       git config --global user.email "davewevans72@gmail.com"
       git config --global user.name "davewevans"
 
-      git remote set-url origin "https://elevateott@dev.azure.com/elevateott/Elevate-OTT-API-CMS/_git/Elevate-OTT-API-CMS"
+      echo "🔹 Setting remote origin to Azure DevOps"
+      git remote set-url origin "https://elevateott@dev.azure.com/elevateott/Elevate%20OTT%20API-CMS/_git/Elevate-OTT-API-CMS"
 
-      git remote remove github 2>nul || echo "No remote to remove"      
+      echo "🔹 Configuring GitHub remote"
+      git remote remove github 2>nul || echo "No remote to remove"
+      git remote add github "https://$(GITHUB_PAT)@github.com/davewevans/Elevate-OTT-API-CMS.git"
 
+      echo "🔹 Checking remotes:"
       git remote -v      
 
-      git fetch origin develop --prune      
-    
-      git checkout develop || git checkout -b develop origin/develop   
+      echo "🔹 Fetching latest changes from Azure DevOps"
+      git fetch origin develop --prune
+      
+      echo "🔹 Checking out develop branch"
+      git checkout develop || git checkout -b develop origin/develop
 
-      git remote add github "https://$(GITHUB_PAT)@github.com/davewevans/Elevate-OTT-API-CMS.git"
-      
+      echo "🔹 Pulling latest changes"
       git pull --rebase origin develop
-      
+
+      echo "🔹 Pushing updates to GitHub"
       git push github develop --force --verbose
     displayName: 'Mirror develop branch to GitHub'
+
