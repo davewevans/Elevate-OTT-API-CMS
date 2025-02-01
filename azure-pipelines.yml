@@ -28,6 +28,8 @@ steps:
     
       git checkout develop || git checkout -b develop origin/develop   
 
+      git remote add github "https://$(GITHUB_PAT)@github.com/davewevans/Elevate-OTT-API-CMS.git"
+      
       git pull --rebase origin develop
       
       git push github develop --force --verbose
