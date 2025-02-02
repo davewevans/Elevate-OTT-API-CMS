@@ -6,6 +6,9 @@ trigger:
 pool:
   name: Self-Hosted
 
+variables: 
+  - group: Secrets
+
 steps:
   - checkout: self
     persistCredentials: true
