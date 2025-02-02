@@ -12,12 +12,3 @@ https://docs.microsoft.com/en-us/ef/core/cli/dotnet#update-the-tools
 
 
 dotnet ef migrations add --startup-project ..\OttApiPlatform.WebAPI\  
-
-
-TODO: remove this
-
----------------------------------
-Test AzureDevOps CI/CD
----------------------------------
-
-deleted stuff here. testing azure devops ci/cd
