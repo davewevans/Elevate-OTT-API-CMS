@@ -1,35 +1,47 @@
 trigger:
   branches:
     include:
-      - develop
+      - develop  # Adjust this based on the branch you want to sync
 
 pool:
   name: Self-Hosted
 
-variables: 
-  - group: Secrets
-
 steps:
   - checkout: self
     persistCredentials: true
-    clean: false  # Prevents the repo from being deleted
+    clean: false
+    fetchDepth: 0  # Ensures full clone instead of shallow clone
 
   - script: |
+      echo "🔹 Starting Git Configuration"
       git config --global user.email "davewevans72@gmail.com"
       git config --global user.name "davewevans"
 
+      echo "🔹 Setting remote origin to Azure DevOps"
       git remote set-url origin "https://elevateott@dev.azure.com/elevateott/Elevate-OTT-API-CMS/_git/Elevate-OTT-API-CMS"
 
+      echo "🔹 Configuring GitHub remote"
       git remote remove github 2>nul || echo "No remote to remove"
       git remote add github "https://$(GITHUB_PAT)@github.com/davewevans/Elevate-OTT-API-CMS.git"
 
+      echo "🔹 Checking remotes:"
       git remote -v      
 
-      git fetch origin develop --prune      
-    
-      git checkout develop || git checkout -b develop origin/develop   
-
-      git pull --rebase origin develop
+      echo "🔹 Fetching latest changes from Azure DevOps"
+      git fetch origin develop --prune
       
+      echo "🔹 Checking out develop branch"
+      git checkout develop || git checkout -b develop origin/develop
+
+      echo "🔹 Ensuring complete Git history is available"
+      git pull --unshallow
+
+      echo "🔹 Pulling latest changes"
+      git pull --rebase origin develop
+
+      echo "🔹 Running Git Garbage Collection"
+      git gc --prune=now
+
+      echo "🔹 Pushing updates to GitHub"
       git push github develop --force --verbose
     displayName: 'Mirror develop branch to GitHub'
