@@ -3,6 +3,9 @@ trigger:
     include:
       - develop  # Adjust this based on the branch you want to sync
 
+pool:
+  name: Self-Hosted
+
 variables: 
   - group: Secrets
 
