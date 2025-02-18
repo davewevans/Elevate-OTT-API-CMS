@@ -12,5 +12,3 @@ https://docs.microsoft.com/en-us/ef/core/cli/dotnet#update-the-tools
 
 
 dotnet ef migrations add --startup-project ..\OttApiPlatform.WebAPI\  
-
-devops pipeline is finaly working!
